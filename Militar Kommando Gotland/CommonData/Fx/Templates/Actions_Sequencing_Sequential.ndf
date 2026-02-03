@@ -1,0 +1,15 @@
+template Template_Sequential
+[
+    LocalVariables              : LIST<TPinnableValue> = [],
+    Mobile                      : TMobileFactory = nil,
+    Actions                     : LIST<TActionDescriptor> = [],
+    Disabled                    : TEvaluable = nil,
+    TimeServer                  : TTimeServerWithVisibilityRange = nil,
+] is TSequentialAction
+(
+    Actions = <Actions>
+    Mobile = <Mobile>
+    Disabled = <Disabled>
+    LocalVariables = <LocalVariables>
+    TimeServer = <TimeServer>
+)

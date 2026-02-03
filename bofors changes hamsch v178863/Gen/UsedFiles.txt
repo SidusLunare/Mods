@@ -1,0 +1,5 @@
+GameData:/Localisation/bofors changes hamsch v178863/COMPANIES.csv
+GameData:/Localisation/bofors changes hamsch v178863/INTERFACE_INGAME.csv
+GameData:/Localisation/bofors changes hamsch v178863/INTERFACE_OUTGAME.csv
+GameData:/Localisation/bofors changes hamsch v178863/PLATOONS.csv
+GameData:/Localisation/bofors changes hamsch v178863/UNITS.csv

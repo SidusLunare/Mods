@@ -1,0 +1,13 @@
+template Template_FireAndForget
+[
+    Action                      : TActionDescriptor[required] = nil,
+    IntroduceNewCentroid        : boolean = false,
+    ForgetOrientation           : boolean = false,
+    LocalVariables              = [],
+] is TActionDescriptorFireAndForget
+(
+    EffetToLaunch = <Action>
+    IntroduceNewCentroid = <IntroduceNewCentroid>
+    ForgetOrientation = <ForgetOrientation>
+    LocalVariables = <LocalVariables>
+)

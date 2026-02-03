@@ -1,0 +1,211 @@
+// Ne pas éditer, ce fichier est généré
+
+export fx_binder_deplacement_roues_gauche is Simultaneous
+(
+    Actions = ActionList is
+    [
+        TSimultaneousAction
+        (
+            Mobile = TMobileWithLocalRepereMatrixFactory
+            (
+                Position = float3[-284,1,0]
+            )
+            Actions =
+            [
+                TActionCall
+                (
+                    Action = $/VFX_Bank/DarkSmoke_Simple
+                    NamedParams = MAP[
+                        ( 'parCloudsize', float3[100,100,150] ),
+                        ( 'parColor', float3[0.07843138,0.07843138,0.07843138] ),
+                        ( 'parCount', 20 ),
+                        ( 'parDecayLength', 1 ),
+                        ( 'parDecayStart', 0.2 ),
+                        ( 'parEmissive', 0.75 ),
+                        ( 'parOpacity', 0.1 ),
+                        ( 'parParticleSize', 800 ),
+                        ( 'parRandomPosition', 0 ),
+                        ( 'parSmokeDuration', 2.5 ),
+                        ( 'parSpawnerDuration', 0.5 ),
+                        ( 'parSpawnerSpeed', 1000 ),
+                    ]
+                ),
+            ]
+        ),
+        TSimultaneousAction
+        (
+            Mobile = TMobileWithLocalRepereMatrixFactory
+            (
+                Position = float3[787,10,0]
+            )
+            Actions =
+            [
+                TActionCall
+                (
+                    Action = $/VFX_Bank/BANK_Deplacement_Dust
+                    NamedParams = MAP[
+                        ( 'parAxeYMultiplier', 1 ),
+                        ( 'parDistanceBetweenParticles', 1 ),
+                        ( 'parDuration', 4 ),
+                        ( 'parEndSizeMultipler', 3 ),
+                        ( 'parOffsetPos', float3[0,0,0] ),
+                        ( 'parOpacity', 0.65 ),
+                        ( 'parRGBcolor', float3[0.2431373,0.2078432,0.1764706] ),
+                        ( 'parSize', 150 ),
+                        ( 'parSpeedMultiplier', 100 ),
+                    ]
+                ),
+            ]
+        ),
+        TSimultaneousAction
+        (
+            Mobile = TMobileWithLocalRepereMatrixFactory
+            (
+                Position = float3[367,-19,0]
+            )
+            Actions =
+            [
+                TActionCall
+                (
+                    Action = $/VFX_Bank/BANK_Deplacement_Dust
+                    NamedParams = MAP[
+                        ( 'parAxeYMultiplier', 1 ),
+                        ( 'parDistanceBetweenParticles', 1 ),
+                        ( 'parDuration', 4 ),
+                        ( 'parEndSizeMultipler', 4 ),
+                        ( 'parOffsetPos', float3[0,0,0] ),
+                        ( 'parOpacity', 0.65 ),
+                        ( 'parRGBcolor', float3[0.4588236,0.3882353,0.3333333] ),
+                        ( 'parSize', 200 ),
+                        ( 'parSpeedMultiplier', 100 ),
+                    ]
+                ),
+            ]
+        ),
+        TSimultaneousAction
+        (
+            Mobile = TMobileWithLocalRepereMatrixFactory
+            (
+                Position = float3[307,-48,0]
+            )
+            Actions =
+            [
+                TActionCall
+                (
+                    Action = $/VFX_Bank/BANK_Deplacement_Dust
+                    NamedParams = MAP[
+                        ( 'parAxeYMultiplier', 1 ),
+                        ( 'parDistanceBetweenParticles', 1 ),
+                        ( 'parDuration', 10 ),
+                        ( 'parEndSizeMultipler', 3 ),
+                        ( 'parOffsetPos', float3[0,0,0] ),
+                        ( 'parOpacity', 0.65 ),
+                        ( 'parRGBcolor', float3[0.1333333,0.1333333,0.1333333] ),
+                        ( 'parSize', 400 ),
+                        ( 'parSpeedMultiplier', 125 ),
+                    ]
+                ),
+            ]
+        ),
+        TSimultaneousAction
+        (
+            Mobile = TMobileWithLocalRepereMatrixFactory
+            (
+                Position = float3[842,0,0]
+            )
+            Actions =
+            [
+                TActionCall
+                (
+                    Action = $/VFX_Bank/BANK_Deplacement_Dust
+                    NamedParams = MAP[
+                        ( 'parAxeYMultiplier', 1 ),
+                        ( 'parDistanceBetweenParticles', 0.1 ),
+                        ( 'parDuration', 2 ),
+                        ( 'parEndSizeMultipler', 2 ),
+                        ( 'parOffsetPos', float3[0,0,0] ),
+                        ( 'parOpacity', 0.65 ),
+                        ( 'parRGBcolor', float3[0.2431373,0.2078432,0.1764706] ),
+                        ( 'parSize', 100 ),
+                        ( 'parSpeedMultiplier', 50 ),
+                    ]
+                ),
+            ]
+        ),
+        TSimultaneousAction
+        (
+            Mobile = TMobileWithLocalRepereMatrixFactory
+            (
+                Position = float3[390,-16,0]
+            )
+            Actions =
+            [
+                TActionCall
+                (
+                    Action = $/VFX_Bank/BANK_Deplacement_Mud
+                    NamedParams = MAP[
+                        ( 'parAxeYMultiplier', 1 ),
+                        ( 'parDistanceBetweenParticles', 1 ),
+                        ( 'parDuration', 1 ),
+                        ( 'parEndSizeMultipler', 4 ),
+                        ( 'parOffsetPos', float3[0,0,0] ),
+                        ( 'parOpacity', 1 ),
+                        ( 'parRGBcolor', float3[0.2509804,0.2313726,0.2156863] ),
+                        ( 'parSize', 50 ),
+                        ( 'parSpeedMultiplier', 150 ),
+                    ]
+                ),
+            ]
+        ),
+        TSimultaneousAction
+        (
+            Mobile = TMobileWithLocalRepereMatrixFactory
+            (
+                Position = float3[46,-3,0]
+            )
+            Actions =
+            [
+                TActionCall
+                (
+                    Action = $/VFX_Bank/BANK_Deplacement_Mud
+                    NamedParams = MAP[
+                        ( 'parAxeYMultiplier', -1 ),
+                        ( 'parDistanceBetweenParticles', 1 ),
+                        ( 'parDuration', 1 ),
+                        ( 'parEndSizeMultipler', 2.5 ),
+                        ( 'parOffsetPos', float3[0,0,0] ),
+                        ( 'parOpacity', 1 ),
+                        ( 'parRGBcolor', float3[0.1333333,0.1333333,0.1333333] ),
+                        ( 'parSize', 75 ),
+                        ( 'parSpeedMultiplier', 150 ),
+                    ]
+                ),
+            ]
+        ),
+        TSimultaneousAction
+        (
+            Mobile = TMobileWithLocalRepereMatrixFactory
+            (
+                Position = float3[-20,-51,0]
+            )
+            Actions =
+            [
+                TActionCall
+                (
+                    Action = $/VFX_Bank/BANK_Deplacement_Mud
+                    NamedParams = MAP[
+                        ( 'parAxeYMultiplier', 1 ),
+                        ( 'parDistanceBetweenParticles', 1 ),
+                        ( 'parDuration', 1 ),
+                        ( 'parEndSizeMultipler', 2.5 ),
+                        ( 'parOffsetPos', float3[0,0,0] ),
+                        ( 'parOpacity', 1 ),
+                        ( 'parRGBcolor', float3[0.2509804,0.2313726,0.2156863] ),
+                        ( 'parSize', 150 ),
+                        ( 'parSpeedMultiplier', 150 ),
+                    ]
+                ),
+            ]
+        ),
+    ]
+)

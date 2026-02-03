@@ -1,0 +1,19 @@
+template ParticleBombSpawner
+[
+    Count                           : TEvaluable[GroupBy = "Spawn parameters"] = TConstantInteger(Value = 10),
+    CountMultiplier                 : TEugBFloat = $/GraphicOption/ParticleMultiplier,
+    Position                        : TEvaluable[GroupBy = "Spawn parameters"] = nil,
+    Spawner                         : TParticleSpawner[required] = ParticleSpawner(),
+    Disabled                        : TEvaluable = nil,
+    TimeServer                      : TTimeServerWithVisibilityRange = nil,
+    ParticleMaxDurationForSpawnSkip : TEvaluable = nil
+] is TParticleSpawnerActionBomb
+(
+    Count = <Count>
+    CountMultiplier = <CountMultiplier>
+    Position = <Position>
+    Spawner = <Spawner>
+    Disabled = <Disabled>
+    TimeServer = <TimeServer>
+    ParticleMaxDurationForSpawnSkip = <ParticleMaxDurationForSpawnSkip>
+)

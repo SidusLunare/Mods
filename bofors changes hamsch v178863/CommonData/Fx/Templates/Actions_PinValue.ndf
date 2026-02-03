@@ -1,0 +1,10 @@
+template Template_PinValue
+[
+    ValueToPin  : TPinnableValue[required] = nil,
+    Value       : TEvaluable[required] = TConstantFloat(Value = 0.0),
+] is TActionPinValue
+(
+    ValueToPin = <ValueToPin>
+    Value = <Value>
+)
+

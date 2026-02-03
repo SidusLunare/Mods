@@ -1,0 +1,163 @@
+// GameData:/Fx/Bank/Basics/AoA_BANK_SmokeTrail.ndf
+// Call Test_Smoky_Trail in FX Tester
+// Nice smoke trail for missile and others
+
+SmokeTrailDeclaration is SimultaneousActionDeclaration
+(
+    Params =
+    [
+        private parDistance         is Template_Param_Float (),
+        private parLifeDuration     is Template_Param_Float (),
+        private parDispersion       is Template_Param_Float3(),
+        private parSize1            is Template_Param_Float (),
+        private parSize2            is Template_Param_Float (),
+        private parOpacity          is Template_Param_Float (),
+        private parColor1           is Template_Param_Float3(),
+        private parColor2           is Template_Param_Float3(),
+        private parColor3           is Template_Param_Float3(),
+        private parColorKey1        is Template_Param_Float (),
+        private parColorKey2        is Template_Param_Float (),
+        private parSpawnerDuration  is Template_Param_Float (),
+    ]
+    LocalVariables = []
+    Actions =
+    [
+        ParticleBombSpawner
+        (
+            ParticleMaxDurationForSpawnSkip = nil
+            Count = 1
+            Spawner = ParticleSpawner
+            (
+                ParticleLifetime = parSpawnerDuration
+                Initialisers =
+                [
+                    Initialiser_SetMobileWrapper(),
+                    ParticleInitialiserList
+                    (
+                        CustomFloat_1 = parDispersion
+                        CustomFloat_2 = parSize1
+                        CustomFloat_3 = parSize2
+                        CustomFloat_4 = parOpacity * Decay[ParticleLifeRatio, 0.9]
+                        CustomFloat_5 = parColorKey1
+                        CustomFloat_6 = parColorKey2
+                        CustomFloat_7 = parLifeDuration
+                        CustomFloat_8 = parDistance
+                        CustomFloat3_1 = parColor1
+                        CustomFloat3_2 = parColor2
+                        CustomFloat3_3 = parColor3
+                    )
+                ]
+                PostTransformInitialisers =
+                [
+                    ParticleInitialiserList
+                    (
+                        Position = ParticleMobileWrapperPosition
+                    )
+                ]
+                ParticleDescriptor = ParticleDescriptor
+                (
+                    ParticleRenderer =  $/VFX_Bank/NullRenderer
+                    RenderInfo = $/VFX_Bank/NullRenderInfo
+                    Evolvers = ParticleStandardEvolverList
+                    (
+                        Position = ParticleMobileWrapperPosition
+                        AdditionnalEvolvers =
+                        [
+                            TrailSpawner
+                            (
+                                UseGameEngineUnits = true
+                                DistanceBetweenSpawn = ParticleCustomFloat_8 * RandomRange[0.75, 1.25]
+                                Spawner = ParticleSpawner
+                                (
+                                    ParticleLifetime = SpawningParticleCustomFloat_7 * RandomRange[0.8, 1.2]
+                                    Initialisers =
+                                    [
+                                        ParticleInitialiserList
+                                        (
+                                            Rotation = RandomUnit
+                                            EmissivePower = 1 //3
+                                            CustomFloat_1 = SpawningParticleCustomFloat_2 * RandomRange[0.8, 1.2]
+                                            CustomFloat_2 = SpawningParticleCustomFloat_3 * RandomRange[0.8, 1.2]
+                                            CustomFloat_3 = SpawningParticleCustomFloat_4 * RandomRange[0.9, 1.1]
+                                            CustomFloat_4 = min[( SpawningParticleCustomFloat_5 + RandomRange[-0.1, 0.1] ) div ParticleDuration, 0.999999]
+                                            CustomFloat_5 = min[( SpawningParticleCustomFloat_6 + RandomRange[-0.1, 0.1] ) div ParticleDuration, 0.999999]
+                                            CustomFloat3_1 = SpawningParticleCustomFloat3_1
+                                            CustomFloat3_2 = SpawningParticleCustomFloat3_2
+                                            CustomFloat3_3 = SpawningParticleCustomFloat3_3
+                                            Speed = float3[0,0,0]
+                                        ),
+                                    ]
+                                    PostTransformInitialisers =
+                                    [
+                                        ParticleInitialiserList
+                                        (
+                                            Position = ParticlePosition + SpawningParticleCustomFloat_1 * MinusOneToOneRandomSphereVolume
+                                        )
+                                    ]
+                                    ParticleDescriptor = ParticleDescriptor
+                                    (
+                                        ParticleRenderer = $/VFX_Bank/LitParticleRendererNoCentroidPositioning
+                                        RenderInfo = DeferredParticleRenderInfo
+                                        (
+                                            TextureName = 'GameData:/Assets/2D/Fx/anim_smoke_02_000.png'   //anim_canon_smoke_01.png'
+                                        )
+                                        Evolvers = ParticleStandardEvolverListWithPhysic
+                                        (
+                                            FluidFriction = 1
+                                            PhysicAccelerationField = float3[0.00, 0.00, 50.00]
+                                            PhysicWindField = $/VFX_Bank/MapWind
+                                            Animation = ParticleRotation * 0.5 + ParticleLifeRatio * 0.5
+                                            Size = lerp[sqr[ParticleLifeRatio], ParticleCustomFloat_1, ParticleCustomFloat_2]
+                                            Opacity = Attack[ParticleLifeRatio, 0.1] * Decay[ParticleLifeRatio, 0.5] * ParticleCustomFloat_3
+
+                                            ColorModifier = ParticleCustomFloat_6 * ParticleCustomFloat3_1 + ParticleCustomFloat_8 * ParticleCustomFloat3_2 + ParticleCustomFloat_7 * ParticleCustomFloat3_3
+                                            CustomFloat_6 = 1 - Attack[ParticleLifeRatio, ParticleCustomFloat_4]
+                                            CustomFloat_7 = 1 - Decay[ParticleLifeRatio, ParticleCustomFloat_5]
+                                            CustomFloat_8 = 1 - (ParticleCustomFloat_6 + ParticleCustomFloat_7)
+                                        )
+                                    )
+                                )
+                            )
+                        ]
+                    )
+                )
+            )
+        )
+    ]
+)
+
+export Smoke_Trail_Simple is ActionCallWithParameters
+(
+    Action = SmokeTrailDeclaration
+    Params =
+    [
+        private parDistance             is Template_Param_Float(),
+        private parLifeDuration         is Template_Param_Float(),
+        private parDispersion           is Template_Param_Float(),
+        private parSize1                is Template_Param_Float(),
+        private parSize2                is Template_Param_Float(),
+        private parOpacity              is Template_Param_Float(),
+        private parColor1               is Template_Param_Float3(),
+        private parColor2               is Template_Param_Float3(),
+        private parColor3               is Template_Param_Float3(),
+        private parColorKey1            is Template_Param_Float(),
+        private parColorKey2            is Template_Param_Float(),
+        private DurationInSec           is Template_Param_Float ( DefaultValue = 666),
+        private parStopSpawnerRatio     is Template_Param_Float ( DefaultValue = 1),
+    ]
+    NamedParameters = MAP
+    [
+        ( 'parDistance',                parDistance ),
+        ( 'parLifeDuration',            parLifeDuration ),
+        ( 'parDispersion',              parDispersion ),
+        ( 'parSize1',                   parSize1 ),
+        ( 'parSize2',                   parSize2 ),
+        ( 'parOpacity',                 parOpacity ),
+        ( 'parColor1',                  LinearColor[parColor1] ),
+        ( 'parColor2',                  LinearColor[parColor2] ),
+        ( 'parColor3',                  LinearColor[parColor3] ),
+        ( 'parColorKey1',               parColorKey1 ),
+        ( 'parColorKey2',               parColorKey2 ),
+        ( 'parSpawnerDuration',         DurationInSec * parStopSpawnerRatio),
+    ]
+)

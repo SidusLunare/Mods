@@ -1,0 +1,17 @@
+template Initialiser_SetMobileWrapper
+[
+] is TParticleInitialiserWithEvaluable
+(
+    InitFunction = $/VFX_Bank/MobileWrapper
+    Field = $/Particle/MobileWrapper
+)
+
+
+template Initialiser_SetSpawningParticleMobileWrapper
+[
+] is TParticleInitialiserWithEvaluable
+(
+    InitFunction = $/VFX_Bank/SpawningParticleMobileWrapper
+    Field = $/Particle/MobileWrapper
+)
+

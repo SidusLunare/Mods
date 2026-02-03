@@ -1,0 +1,10 @@
+template Template_ActionDescriptorDestroySceneryCircle
+[
+    Radius                  : TEvaluable = TConstantFloat(Value = 100.0),
+] is TActionDescriptorModifyGeoStateDatabaseCircle
+(
+    Value = 2
+    Radius = <Radius>
+    LevelBuildStateGeoDatabaseProxy = $/M3D/Scene/LevelBuildStateGeoDatabaseProxy
+    MaskDestroyed = SDMask_Destroy
+)

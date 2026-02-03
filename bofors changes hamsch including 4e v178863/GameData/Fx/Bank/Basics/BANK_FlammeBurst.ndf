@@ -1,0 +1,193 @@
+// GameData:/Fx/Bank/Basics/AoA_BANK_FlammeBurst.ndf
+// Call Test_BANK_FlammeBurst in FX Tester
+// Random flamme burst
+
+
+export Test_BANK_FlammeBurst is Simultaneous
+(
+    Mobile = MobileUnCentroid()
+    Actions =
+    [
+        Template_ActionCall
+        (
+            Action = ~/BANK_FlammeBurst
+            NamedParameters = MAP[
+            ]
+        ),
+    ]
+    MaxDuration = 3
+)
+
+export BANK_FlammeBurst is SimultaneousActionDeclaration
+(
+    Params =
+    [
+        private parMinDuration          is Template_Param_Float ( DefaultValue = 0.5 ),
+        private parMaxDuration          is Template_Param_Float ( DefaultValue = 1 ),
+        private parMinParticlePerSecond is Template_Param_Float ( DefaultValue = 0.01 ),
+        private parMaxParticlePerSecond is Template_Param_Float ( DefaultValue = 0.5 ),
+        private parSmokeSize            is Template_Param_Float ( DefaultValue = 2000 ),
+        private parColor                is Template_Param_Float3( DefaultValue = float3[1,1,1] ),
+    ]
+    Actions =
+    [
+        Template_WaitForEver(),
+        ParticleBombSpawner
+        (
+            ParticleMaxDurationForSpawnSkip = parMaxDuration * 1.1
+            Count = 1
+            Spawner = ParticleSpawner
+            (
+                ParticleLifetime = 666
+                Initialisers =
+                [
+                    Initialiser_SetMobileWrapper(),
+                    ParticleInitialiserList
+                    (
+                        CustomFloat_1 = parMinDuration
+                        CustomFloat_2 = Max[0.01, parMaxDuration - parMinDuration]
+                        CustomFloat_3 = parMinParticlePerSecond
+                        CustomFloat_4 = Max[0.01, parMaxParticlePerSecond - parMinParticlePerSecond]
+                        CustomFloat_5 = parSmokeSize
+                        CustomFloat3_1 = parColor
+                    ),
+                ]
+                ParticleDescriptor = ParticleDescriptor
+                (
+                    InfiniteParticles = true
+                    ParticleRenderer = $/VFX_Bank/NullRenderer
+                    RenderInfo = $/VFX_Bank/NullRenderInfo
+                    Evolvers = ParticleStandardEvolverList
+                    (
+                        Position = ParticleMobileWrapperPositionUnScaled
+                        AdditionnalEvolvers =
+                        [
+                            EvolverSpraySpawner
+                            (
+                                Frequency = ParticleCustomFloat_3 + RandomUnit * ParticleCustomFloat_4
+                                MaxSpawnedParticleLifetime = ParticleCustomFloat_1 + ParticleCustomFloat_2
+                                Spawner = ParticleSpawner
+                                (
+                                    ParticleLifetime = SpawningParticleCustomFloat_1 + RandomUnit * SpawningParticleCustomFloat_2
+                                    Initialisers =
+                                    [
+                                        ParticleInitialiserList
+                                        (
+                                            Position = ParticleSize * 0.45 * ParticleDirection
+                                            Size = SpawningParticleCustomFloat_5 div ParticleStretching * RandomRange[0.8,1.25]
+                                            ColorModifier = SpawningParticleCustomFloat3_1
+                                            Opacity = 1
+                                            EmissivePower = 0.15
+                                            Rotation = 0.765
+                                            Direction = float3[0,0,1] + 0.2 * PositiveUnitRandomDisc
+                                            Stretching = 0.3
+                                            CustomFloat3_1 = SpawnerPosition + ParticlePosition
+                                        ),
+                                    ]
+                                    ParticleDescriptor = ParticleDescriptor
+                                    (
+                                        ParticleRenderer = $/VFX_Bank/LitParticleRenderer
+                                        RenderInfo = ParticleRenderInfo
+                                        (
+                                            SortTriangles = True
+                                            ZTest = True
+                                            ZWrite = False
+                                            TextureName = 'GameData:/Assets/2D/Fx/anim_flameburst2_01.png'
+                                            Calque = 'Particles'
+                                            EmissiveParticle = true
+                                            Use3DRotation = false
+                                        )
+                                        Evolvers = ParticleStandardEvolverList
+                                        (
+                                            Position = ParticleCustomFloat3_1 + ParticleSize * 0.15 * ParticleStretching * CameraAxeX
+                                            Animation = ParticleLifeRatio
+                                        )
+                                    )
+                                )
+                            )
+                        ]
+                    )
+                )
+            )
+        )
+    ]
+)
+
+export BANK_FlammeBurst_Once_Simple is ActionCallWithParameters
+(
+    Action = BANK_FlammeBurst_Once
+    Params =
+    [
+        private parParticleDuration is Template_Param_Float(DefaultValue = 0.5),
+        private parSmokeSize        is Template_Param_Float(DefaultValue = 2000),
+        private parColor            is Template_Param_Float3(DefaultValue = float3[1,1,1])
+    ]
+    NamedParameters = MAP
+    [
+        ( 'parParticleDuration' , parParticleDuration * RandomRange[0.95, 1.05] ),
+        ( 'parSmokeSize'        , parSmokeSize * RandomRange[0.9, 1.11]),
+        ( 'parColor'            , parColor ),
+    ]
+)
+
+export BANK_FlammeBurst_Once is SimultaneousActionDeclaration
+(
+    Params =
+    [
+        private parParticleDuration     is Template_Param_Float ( DefaultValue = 0.5 ),
+        private parSmokeSize            is Template_Param_Float ( DefaultValue = 2000 ),
+        private parColor                is Template_Param_Float3( DefaultValue = float3[1,1,1] ),
+    ]
+    LocalVariables =
+    [
+        // pour pas réappliquer le random a chaque référence de parParticleDuration
+        private pinnedDuration is TPinnableValue(ExpectedType = 'float' InitialValue = parParticleDuration),
+    ]
+    Actions =
+    [
+        WaitInSec(Duration = pinnedDuration),
+        ParticleBombSpawner
+        (
+            ParticleMaxDurationForSpawnSkip = pinnedDuration
+            Count = 1
+            Spawner = ParticleSpawner
+            (
+                ParticleLifetime = pinnedDuration
+                Initialisers =
+                [
+                    ParticleInitialiserList
+                    (
+                        Position = ParticleSize * 0.45 * ParticleDirection
+                        Size = parSmokeSize div ParticleStretching * RandomRange[0.8,1.25]
+                        ColorModifier = parColor
+                        Opacity = 1
+                        EmissivePower = 0.15
+                        Rotation = 0.765
+                        Direction = float3[0,0,1] + 0.2 * PositiveUnitRandomDisc
+                        Stretching = 0.3
+                        CustomFloat3_1 = SpawnerPosition + ParticlePosition
+                    ),
+                ]
+                ParticleDescriptor = ParticleDescriptor
+                (
+                    ParticleRenderer = $/VFX_Bank/LitParticleRenderer
+                    RenderInfo = ParticleRenderInfo
+                    (
+                        SortTriangles = True
+                        ZTest = True
+                        ZWrite = False
+                        TextureName = 'GameData:/Assets/2D/Fx/anim_flameburst2_01.png'
+                        Calque = 'Particles'
+                        EmissiveParticle = true
+                        Use3DRotation = false
+                    )
+                    Evolvers = ParticleStandardEvolverList
+                    (
+                        Position = ParticleCustomFloat3_1 + ParticleSize * 0.15 * ParticleStretching * CameraAxeX
+                        Animation = ParticleLifeRatio
+                    )
+                )
+            )
+        )
+    ]
+)

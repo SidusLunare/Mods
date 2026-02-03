@@ -1,0 +1,10 @@
+template Template_EventHandlerRunAction
+[
+    Action      : TActionDescriptor[required] = nil,
+    Condition   : TEvaluable = nil,
+] is TParticleEventHandlerRunAction
+(
+    Action = <Action>
+    World = $/M3D/Scene/DefaultWorld
+    Condition = <Condition>
+)

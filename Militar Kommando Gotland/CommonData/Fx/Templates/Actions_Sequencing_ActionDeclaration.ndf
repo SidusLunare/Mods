@@ -1,0 +1,56 @@
+template SimultaneousActionDeclaration
+[
+    Params          : LIST<TActionAlias> = [],
+    LocalVariables  : LIST<TPinnableValue> = [],
+    Mobile          : TMobileFactory = nil,
+    Actions         : LIST<TActionDescriptor>[required],
+    MaxDuration     : single = 0,
+    TimeServer      : TTimeServerProvider = nil
+] is TSimultaneousActionForActionCallTemplate
+(
+    Actions = <Actions>
+    Mobile = <Mobile>
+    InputParameters = <Params>
+    LocalVariables = <LocalVariables>
+    MaxDuration = <MaxDuration>
+    TimeServer = <TimeServer>
+)
+
+template ActionCallWithParameters
+[
+    Params                          : LIST<TActionAlias>[required],
+    Action                          : TActionDescriptor[required],
+    NamedParameters                 : MAP<string, TEvaluable> = MAP[], // paramètres nommé
+    LocalVariables                  : LIST<TPinnableValue> = [],
+    Disabled                        : TEvaluable = nil,
+    TimeServer                      : TTimeServerWithVisibilityRange = nil,
+] is SimultaneousActionDeclaration
+(
+    Params = <Params>
+    Actions =
+    [
+        Template_ActionCall
+        (
+            Action = <Action>
+            NamedParameters = <NamedParameters>
+            Disabled = <Disabled>
+            TimeServer = <TimeServer>
+            LocalVariables = <LocalVariables>
+        )
+    ]
+)
+
+template Template_ActionWithParameters
+[
+    Params                          : LIST<TActionAlias>[required],
+    Action                          : TActionDescriptor[required],
+] is SimultaneousActionDeclaration
+(
+    Params = <Params>
+    Actions =
+    [
+        <Action>
+    ]
+)
+
+

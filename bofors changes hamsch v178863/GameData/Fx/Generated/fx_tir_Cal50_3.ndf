@@ -1,0 +1,180 @@
+// Ne pas éditer, ce fichier est généré
+
+export fx_tir_Cal50_3 is SimultaneousActionDeclaration
+(
+    Params =
+    [
+        private parInitialShotDelay is TActionAlias( ExpectedType = 'float' DefaultValue = 0 ),
+        private parPower is TActionAlias( ExpectedType = 'float' DefaultValue = 10 ),
+        private parShotCount is TActionAlias( ExpectedType = 'int' DefaultValue = 1 ),
+        private parShotOnGround is TActionAlias( ExpectedType = 'bool' DefaultValue = false ),
+        private parWaitBetweenShot is TActionAlias( ExpectedType = 'float' DefaultValue = 0.05 ),
+        private parPosition is TActionAlias( ExpectedType = 'float3' DefaultValue = float3[47,-16,0] ),
+    ]
+    Actions = ActionList is
+    [
+        TSimultaneousAction
+        (
+            Mobile = nil
+            Actions =
+            [
+                TSequentialAction
+                (Actions =
+                    [
+                        TWaitInSec( Duration = 0.5 ),
+                        TActionCall
+                        (
+                            Action = $/VFX_Bank/CanonSmoke_Simple
+                            NamedParams = MAP[
+                                ( 'parDuration', 0.35 ),
+                                ( 'parInitialDelay', parInitialShotDelay ),
+                                ( 'parOpacity', 0.15 ),
+                                ( 'parRepeatCount', parShotCount ),
+                                ( 'parRepeatTime', parWaitBetweenShot ),
+                                ( 'parSize', 450 ),
+                            ]
+                        ),
+                    ]
+                ),
+                TActionCall
+                (
+                    Action = $/VFX_Bank/CanonSmoke_Simple
+                    NamedParams = MAP[
+                        ( 'parDuration', 0.1 ),
+                        ( 'parInitialDelay', parInitialShotDelay ),
+                        ( 'parOpacity', 0.5 ),
+                        ( 'parRepeatCount', parShotCount ),
+                        ( 'parRepeatTime', parWaitBetweenShot ),
+                        ( 'parSize', 500 ),
+                    ]
+                ),
+                TActionCall
+                (
+                    Action = $/VFX_Bank/BANK_Dynamic_Flash_Repeat_Simple
+                    NamedParams = MAP[
+                        ( 'parColorEnd', float3[0.8980393,0.3529412,0.02745098] ),
+                        ( 'parColorStart', float3[0.8980393,0.3529412,0.02745098] ),
+                        ( 'parDuration', 0.05 ),
+                        ( 'parHeight', 0 ),
+                        ( 'parInitialDelay', parInitialShotDelay ),
+                        ( 'parOpacity', 0.2 ),
+                        ( 'parRepeatCount', parShotCount ),
+                        ( 'parRepeatTime', parWaitBetweenShot ),
+                        ( 'parSizeLBU', 16.27907 ),
+                    ]
+                ),
+                TSequentialAction
+                (Actions =
+                    [
+                        TWaitInSec( Duration = 0.45 ),
+                        TActionCall
+                        (
+                            Action = $/VFX_Bank/Small_Canon_Flash_Simple
+                            NamedParams = MAP[
+                                ( 'parColor', float3[0.9960785,0.7058824,0.4352942] ),
+                                ( 'parDuration', 0.14 ),
+                                ( 'parInitialDelay', parInitialShotDelay ),
+                                ( 'parLuminosity', 0.75 ),
+                                ( 'parOpacity', 0.2 ),
+                                ( 'parRepeatCount', parShotCount ),
+                                ( 'parRepeatTime', parWaitBetweenShot ),
+                                ( 'parSize', 80 ),
+                                ( 'parStretching', 4 ),
+                            ]
+                        ),
+                    ]
+                ),
+                TActionCall
+                (
+                    Action = $/VFX_Bank/Small_Canon_Flash_Simple
+                    NamedParams = MAP[
+                        ( 'parColor', float3[0.9843138,0.7490196,0.5294118] ),
+                        ( 'parDuration', 0.12 ),
+                        ( 'parInitialDelay', parInitialShotDelay ),
+                        ( 'parLuminosity', 0.6 ),
+                        ( 'parOpacity', 0.2 ),
+                        ( 'parRepeatCount', parShotCount ),
+                        ( 'parRepeatTime', parWaitBetweenShot ),
+                        ( 'parSize', 90 ),
+                        ( 'parStretching', 5 ),
+                    ]
+                ),
+                TSequentialAction
+                (Actions =
+                    [
+                        TWaitInSec( Duration = 0.3 ),
+                        TActionCall
+                        (
+                            Action = $/VFX_Bank/Small_Canon_Flash_Simple
+                            NamedParams = MAP[
+                                ( 'parColor', float3[0.9960785,0.7058824,0.4352942] ),
+                                ( 'parDuration', 0.12 ),
+                                ( 'parInitialDelay', parInitialShotDelay ),
+                                ( 'parLuminosity', 0.7 ),
+                                ( 'parOpacity', 0.15 ),
+                                ( 'parRepeatCount', parShotCount ),
+                                ( 'parRepeatTime', parWaitBetweenShot ),
+                                ( 'parSize', 100 ),
+                                ( 'parStretching', 5.5 ),
+                            ]
+                        ),
+                    ]
+                ),
+                TSequentialAction
+                (Actions =
+                    [
+                        TWaitInSec( Duration = 0.15 ),
+                        TActionCall
+                        (
+                            Action = $/VFX_Bank/Small_Canon_Flash_Simple
+                            NamedParams = MAP[
+                                ( 'parColor', float3[0.764706,0.5137255,0.2784314] ),
+                                ( 'parDuration', 0.14 ),
+                                ( 'parInitialDelay', parInitialShotDelay ),
+                                ( 'parLuminosity', 0.8 ),
+                                ( 'parOpacity', 0.2 ),
+                                ( 'parRepeatCount', parShotCount ),
+                                ( 'parRepeatTime', parWaitBetweenShot ),
+                                ( 'parSize', 70 ),
+                                ( 'parStretching', 3 ),
+                            ]
+                        ),
+                    ]
+                ),
+                TActionCall
+                (
+                    Action = $/VFX_Bank/BANK_Bomb_NewSparks_Spray_Omni_Simple
+                    NamedParams = MAP[
+                        ( 'Position', parPosition ),
+                        ( 'ShotCount', parShotCount ),
+                        ( 'parColor', float3[1,0.2509804,0] ),
+                        ( 'parColorMultiplier', 10 ),
+                        ( 'parCount', 20 ),
+                        ( 'parDirection', float3[1,0,0] ),
+                        ( 'parFluidFriction', 1 ),
+                        ( 'parGravity', 2000 ),
+                        ( 'parInitialDelay', parInitialShotDelay ),
+                        ( 'parLifetime', 0.25 ),
+                        ( 'parNarrowness', 2 ),
+                        ( 'parRepeatTime', parWaitBetweenShot ),
+                        ( 'parSize', 4 ),
+                        ( 'parSpeed', 8000 ),
+                        ( 'parStretch', 1 ),
+                        ( 'parWindFactor', 0.5 ),
+                    ]
+                ),
+                TActionCall
+                (
+                    Action = $/VFX_Bank/Dummy_Tir
+                    NamedParams = MAP[
+                        ( 'parDummyInitialShotDelay', parInitialShotDelay ),
+                        ( 'parDummyPower', parPower ),
+                        ( 'parDummyShotCount', parShotCount ),
+                        ( 'parDummyShotOnGround', parShotOnGround ),
+                        ( 'parDummyWaitBetweenShot', parWaitBetweenShot ),
+                    ]
+                ),
+            ]
+        ),
+    ]
+)

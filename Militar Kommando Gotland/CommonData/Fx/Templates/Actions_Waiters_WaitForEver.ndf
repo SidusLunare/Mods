@@ -1,0 +1,5 @@
+template Template_WaitForEver
+[
+] is TWaitForEver
+(
+)

@@ -1,0 +1,405 @@
+//FX_Binder_Feedback.ndf
+
+FX_Feedback_Calque is 'PostUI'
+
+ParticleRendererViewPort is TParticleRenderer_Viewport
+(
+    SceneProjector = $/M3D/Misc/CameraPrincipale
+)
+
+// ----------------------------------------------------------------------
+
+export FX_Feedback_Move is Template_FX_Feedback_CenterTextureAndCross
+(
+    CenterLifeTime = 0.8
+    CenterTexture = 'GameData:/Assets/2D/FxFeedback2D/fx_cross.png'
+    CenterColor = LinearColor[0,1,0]
+    EndCenterSize = 0.00
+    StartCenterSize = 0.08
+    StartColorMultiplier = 1
+
+    StartLineSize = 0.01
+    EndLineSize = 0.75
+    LineWidth = 0.0025
+    LineLifeTime = 0.7
+    LineColor = LinearColor[0,1,0]
+    StartLineColorMultiplier = 1
+)
+
+// ----------------------------------------------------------------------
+
+export FX_Feedback_Attack is Template_FX_Feedback_CenterTextureAndCross
+(
+    CenterLifeTime = 0.8
+    EndCenterSize = 0.00
+    StartCenterSize = 0.08
+    StartColorMultiplier = 3
+    CenterTexture = 'GameData:/Assets/2D/FxFeedback2D/COC_Anneau_Onde_01.png'
+    CenterColor = LinearColor[1,0.1,0.1]
+
+    StartLineSize = 0.01
+    EndLineSize = 0.75
+    LineWidth = 0.0025
+    LineColor = LinearColor[1,0.1,0.1]
+    LineLifeTime = 0.7
+    StartLineColorMultiplier = 1
+)
+
+export FX_Feedback_WaitUntilNextTurn is Template_FX_Feedback_Screenspace_GoUp
+(
+    TextureName = "GameData:/Assets/2D/Interface/UseStrategic/Feedback/icone_nextTurn.png"
+)
+
+export FX_Feedback_WakeUpThisTurn is Template_FX_Feedback_Screenspace_GoUp
+(
+    TextureName = "GameData:/Assets/2D/Interface/UseStrategic/Feedback/icone_wakeup.png"
+)
+
+template Template_FX_Feedback_Screenspace_GoUp
+[
+    TextureName : string = nil
+] is TSimultaneousAction
+(
+    LocalVariables =
+    [
+        private parInitialSize is TPinnableValue(ExpectedType = 'float'    InitialValue = 0.03),
+        private parStartZ      is TPinnableValue(ExpectedType = 'float'    InitialValue = 0.04),
+        private parEndZ        is TPinnableValue(ExpectedType = 'float'    InitialValue = 0.06)
+    ]
+
+    Mobile = TMobileFactoryTransWorldScene2D
+    (
+        DoNotInheritCentroid = False
+        WorldToObserve = $/M3D/Scene/WorldInterface2D
+    )
+
+    Actions =
+    [
+        ParticleBombSpawner
+        (
+            TimeServer = Zoom_1_2_3_4_RenderTime
+            Count = 1
+            Spawner = ParticleSpawner
+            (
+                ParticleLifetime = 0.5
+                ParticleDescriptor = ParticleDescriptor
+                (
+                    RenderInfo = ParticleRenderInfo
+                    (
+                        TextureName = <TextureName>
+                        Calque = FX_Feedback_Calque
+                        EmissiveParticle = true
+                        ZTest = false
+                    )
+                    Evolvers = ParticleStandardEvolverList
+                    (
+                        Position = ParticleCustomFloat3_1 + (lerp[ParticleLifeRatio, ParticleCustomFloat_1, ParticleCustomFloat_2] * dot[(ParticleCustomFloat3_1 - CameraPosition), CameraDirection]) * CameraAxeY
+                        ColorMultiplier = ParticleRemainingLifeRatio * ParticleRemainingLifeRatio * ParticleRemainingLifeRatio
+                    )
+                    ParticleRenderer = ~/ParticleRendererViewPort
+                )
+                Initialisers =
+                [
+                    ParticleInitialiserList
+                    (
+                        ColorRGB = LinearColor[1,1,0.2]
+                        ColorMultiplier = 1
+                        Opacity = 1
+                        Size = parInitialSize
+
+                        CustomFloat3_1 = SpawnerPosition
+                        CustomFloat_1 = parStartZ
+                        CustomFloat_2 = parEndZ
+                    )
+                ]
+            )
+        )
+    ]
+)
+
+export FX_Feedback_AIAttack is Template_FX_Feedback_CenterTextureAndCross
+(
+    CenterLifeTime = 0.8
+    EndCenterSize = 0.00
+    StartCenterSize = 0.08
+    StartColorMultiplier = 1
+    CenterTexture = 'GameData:/Assets/2D/FxFeedback2D/aiSeize_validation.png'
+    CenterColor = LinearColor[1,1,1]
+
+    StartLineSize = 0.01
+    EndLineSize = 0.75
+    LineWidth = 0.0025
+    LineColor = LinearColor[1,0.1,0.1]
+    LineLifeTime = 0.7
+    StartLineColorMultiplier = 1
+)
+
+export FX_Feedback_AIArtillery_Focus is Template_FX_Feedback_CenterTextureAndCross
+(
+    CenterLifeTime = 0.8
+    EndCenterSize = 0.00
+    StartCenterSize = 0.08
+    StartColorMultiplier = 1
+    CenterTexture = 'GameData:/Assets/2D/FxFeedback2D/aiDefensiveFire_validation.png'
+    CenterColor = LinearColor[1,1,1]
+
+    StartLineSize = 0.01
+    EndLineSize = 0.75
+    LineWidth = 0.0025
+    LineColor = LinearColor[1,0.1,0.1]
+    LineLifeTime = 0.7
+    StartLineColorMultiplier = 1
+)
+
+// ----------------------------------------------------------------------
+
+template Template_FX_Feedback_CenterTexture
+[
+    CenterLifeTime = 0.8,
+    StartCenterSize = 0.03,
+    EndCenterSize = 0.12,
+    CenterTexture = 'GameData:/Assets/2D/FxFeedback2D/squaretarget.png',
+    CenterRotation = 0,
+    StartColorMultiplier = 1,
+    Color = LinearColor[1,1,1],
+] is ParticleBombSpawner
+(
+    ParticleMaxDurationForSpawnSkip = <CenterLifeTime> * 1.1
+    Count = 1
+    Spawner = ParticleSpawner
+    (
+        ParticleDescriptor = ParticleDescriptor
+        (
+            RenderInfo = ParticleRenderInfo
+            (
+                OpaqueParticle = True
+                //TextureName = 'GameData:/Assets/2D/FxFeedback2D/squaretarget.png'
+                TextureName = <CenterTexture>
+                Calque = 'Particles'
+                ZTest = False
+            )
+            Evolvers = Template_List
+            (
+                Evolvers =
+                [
+                    Template_EvolverSize( EvolveFunction = lerp[ sat[ParticleLifeRatio*2], <StartCenterSize>, <EndCenterSize> ] ),
+                    Template_EvolverAlpha( EvolveFunction = ParticleRemainingLifeRatio*ParticleRemainingLifeRatio ),
+                ]
+            )
+            InfiniteParticles = false
+            ParticleRenderer = ~/ParticleRendererViewPort
+        )
+        Initialisers =
+        [
+            Initialiser_SetMobileWrapper(),
+            Initialiser_ColorRGB( InitFunction = <Color> ),
+            Initialiser_Alpha( InitFunction = 1 ),
+            Initialiser_ColorMultiplier( InitFunction = <StartColorMultiplier> ),
+            Initialiser_Rotation( InitFunction = <CenterRotation> ),
+        ]
+        PostTransformInitialisers =
+        [
+            Initialiser_Position( InitFunction = ParticleMobileWrapperPositionUnScaled ),
+        ]
+        ParticleLifetime = <CenterLifeTime>
+    )
+)
+
+// ----------------------------------------------------------------------
+
+template Template_FX_Feedback_CrossLine
+    [
+    LineLifeTime = 0.5,
+    StartLineSize = 20,
+    EndLineSize = 250,
+    LineWidth = 0.003,
+    StartColorMultiplier = 1,
+    Color = LinearColor[1,1,1],
+    ] is Simultaneous
+(
+     Actions =
+    [
+        HorizontalLines is ParticleBombSpawner
+        (
+            ParticleMaxDurationForSpawnSkip = <LineLifeTime> * 1.1
+            Count = 1
+            Spawner = ParticleSpawner
+            (
+                ParticleDescriptor = ParticleDescriptor
+                (
+                    RenderInfo = ParticleRenderInfo
+                    (
+                        OpaqueParticle = True
+                        TextureName = 'GameData:/Assets/2D/FxFeedback2D/square_background.png'
+                        Calque = FX_Feedback_Calque
+                        ZTest = False
+                    )
+                    Evolvers = Template_List
+                    (
+                        Evolvers =
+                        [
+                            Template_EvolverAlpha( EvolveFunction = ParticleRemainingLifeRatio*ParticleRemainingLifeRatio ),
+                            Template_EvolverSize( EvolveFunction = <LineWidth> ),
+                            Template_EvolverStretching( EvolveFunction = lerp[ParticleLifeRatio*ParticleLifeRatio, <StartLineSize> div <LineWidth>, <EndLineSize> div <LineWidth>] ),
+                        ]
+                    )
+                    InfiniteParticles = false
+                    ParticleRenderer = ~/ParticleRendererViewPort
+                )
+                Initialisers =
+                [
+                    Initialiser_SetMobileWrapper(),
+                    Initialiser_ColorRGB( InitFunction = <Color> ),
+                    Initialiser_Alpha( InitFunction = 1 ),
+                    Initialiser_ColorMultiplier( InitFunction = <StartColorMultiplier> ),
+                ]
+
+                PostTransformInitialisers =
+                [
+                    Initialiser_Position( InitFunction = ParticleMobileWrapperPositionUnScaled ),
+                ]
+                ParticleLifetime = <LineLifeTime>
+            )
+        ),
+        VerticalLines is ParticleBombSpawner
+        (
+            ParticleMaxDurationForSpawnSkip = <LineLifeTime> * 1.1
+            Count = 1
+            Spawner = ParticleSpawner
+            (
+                ParticleDescriptor = ParticleDescriptor
+                (
+                    RenderInfo = ParticleRenderInfo
+                    (
+                        OpaqueParticle = True
+                        TextureName = 'GameData:/Assets/2D/FxFeedback2D/square_background.png'
+                        Calque = FX_Feedback_Calque
+                        ZTest = False
+                    )
+                    Evolvers = Template_List
+                    (
+                        Evolvers =
+                        [
+                            Template_EvolverAlpha( EvolveFunction = ParticleRemainingLifeRatio*ParticleRemainingLifeRatio ),
+                            Template_EvolverSize( EvolveFunction = <LineWidth>),
+                            Template_EvolverStretching( EvolveFunction = lerp[ParticleLifeRatio*ParticleLifeRatio, <StartLineSize> div <LineWidth>, <EndLineSize> div <LineWidth>] ),
+                        ]
+                    )
+                    InfiniteParticles = false
+                    ParticleRenderer = ~/ParticleRendererViewPort
+                )
+                Initialisers =
+                [
+                    Initialiser_SetMobileWrapper(),
+                    Initialiser_ColorRGB( InitFunction = <Color> ),
+                    Initialiser_Alpha( InitFunction = 1 ),
+                    Initialiser_ColorMultiplier( InitFunction = <StartColorMultiplier> ),
+                    Initialiser_Rotation( InitFunction = 0.25 ),
+                ]
+                PostTransformInitialisers =
+                [
+                    Initialiser_Position( InitFunction = ParticleMobileWrapperPositionUnScaled ),
+                ]
+                ParticleLifetime = <LineLifeTime>
+            )
+        ),
+    ]
+)
+
+// ----------------------------------------------------------------------
+
+template Template_FX_Feedback_CenterTextureAndCross
+    [
+    CenterLifeTime = 0.8,
+    StartCenterSize = 0.03,
+    EndCenterSize = 0.12,
+    CenterTexture = 'GameData:/Assets/2D/FxFeedback2D/squaretarget.png',
+    CenterRotation = 0,
+    CenterColor = LinearColor[1,1,1],
+    StartColorMultiplier = 10,
+
+    LineLifeTime = 0.5,
+    StartLineSize = 20,
+    EndLineSize = 250,
+    LineWidth = 0.003,
+
+    StartLineColorMultiplier = 10,
+    LineColor = LinearColor[1,1,1],
+    ] is Simultaneous
+(
+    Mobile = MobileUnCentroid()
+    LocalVariables =
+    [
+        posmobile is Template_Pinnable(InitialValue = MobilePosition)
+    ]
+    Actions =
+    [
+        Simultaneous
+        (
+            Mobile = TMobileFactoryTransWorldScene2D
+            (
+                DoNotInheritCentroid = True
+                WorldToObserve = $/M3D/Scene/WorldInterface2D
+            )
+
+            Actions =
+            [
+                Template_FX_Feedback_CenterTexture
+                (
+                    CenterLifeTime = <CenterLifeTime>
+                    StartCenterSize = <StartCenterSize>
+                    EndCenterSize = <EndCenterSize>
+                    CenterTexture = <CenterTexture>
+                    CenterRotation = <CenterRotation>
+                    Color = <CenterColor>
+                    StartColorMultiplier = <StartColorMultiplier>
+                ),
+                Template_FX_Feedback_CrossLine
+                (
+                    LineLifeTime = <LineLifeTime>
+                    StartLineSize = <StartLineSize>
+                    EndLineSize = <EndLineSize>
+                    LineWidth = <LineWidth>
+                    Color = <LineColor>
+                    StartColorMultiplier = <StartLineColorMultiplier>
+                ),
+                // Pour que le mobile reste vivant jusqu'a la fin de particules
+                WaitInSec( Duration = 2 )
+            ]
+        ),
+    ]
+)
+
+// ----------------------------------------------------------------------
+
+export FX_Steelman_Combat_Binder is Template_ActionCall
+(
+    Action = ~/fx_steelman_combat_2
+    NamedParameters = MAP[
+        ('parPosition', parPosition),
+    ]
+    LocalVariables =
+    [
+        private parPosition is Template_Pinnable
+        (
+            InitialValue = float3[0,0,0]
+            ExpectedType = 'float3'
+        )
+    ]
+)
+
+export FX_Steelman_Combat_Interception_Binder is Template_ActionCall
+(
+    Action = ~/fx_steelman_air_interception
+    NamedParameters = MAP[
+        ('parPosition', parPosition),
+    ]
+    LocalVariables =
+    [
+        private parPosition is Template_Pinnable
+        (
+            InitialValue = float3[0,0,0]
+            ExpectedType = 'float3'
+        )
+    ]
+)

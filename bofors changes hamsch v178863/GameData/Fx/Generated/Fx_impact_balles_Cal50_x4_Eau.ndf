@@ -1,0 +1,728 @@
+// Ne pas éditer, ce fichier est généré
+
+export Fx_impact_balles_Cal50_x4_Eau is SimultaneousActionDeclaration
+(
+    Params =
+    [
+        private parDirection is TActionAlias( ExpectedType = 'float3' DefaultValue = float3[0,0,0] ),
+        private parRadiusPhysical is TActionAlias( ExpectedType = 'float' DefaultValue = 0 ),
+        private parRadiusSuppress is TActionAlias( ExpectedType = 'float' DefaultValue = 0 ),
+        private parPosition is TActionAlias( ExpectedType = 'float3' DefaultValue = float3[0,0,0] ),
+    ]
+    Actions = ActionList is
+    [
+        TSimultaneousAction
+        (
+            Mobile = nil
+            Actions =
+            [
+                TActionCall
+                (
+                    Action = $/GFX/GameFx/dummy_impact_for_exporter_hack
+                    NamedParams = MAP[
+                        ( 'Dir', parDirection ),
+                        ( 'Pos', parPosition ),
+                        ( 'RadPhy', parRadiusPhysical ),
+                        ( 'RadSupr', parRadiusSuppress ),
+                    ]
+                ),
+            ]
+        ),
+        TSimultaneousAction
+        (
+            Mobile = TMobileWithLocalRepereMatrixFactory
+            (
+                Position = float3[2980,179,0]
+            )
+            Actions =
+            [
+                TSequentialAction
+                (Actions =
+                    [
+                        TWaitInSec( Duration = 0.4 ),
+                        TActionCall
+                        (
+                            Action = $/VFX_Bank/BANK_SmallWater_Projection_Simple
+                            NamedParams = MAP[
+                                ( 'parColor', float3[1,1,1] ),
+                                ( 'parCount', 14 ),
+                                ( 'parFluidFriction', 0 ),
+                                ( 'parGravity', 1500 ),
+                                ( 'parGrowFactor', 10 ),
+                                ( 'parLifetime', 1 ),
+                                ( 'parSize', 40 ),
+                                ( 'parSpeed', 400 ),
+                            ]
+                        ),
+                    ]
+                ),
+            ]
+        ),
+        TSimultaneousAction
+        (
+            Mobile = TMobileWithLocalRepereMatrixFactory
+            (
+                Position = float3[2180,-212,0]
+            )
+            Actions =
+            [
+                TSequentialAction
+                (Actions =
+                    [
+                        TWaitInSec( Duration = 0.32 ),
+                        TActionCall
+                        (
+                            Action = $/VFX_Bank/BANK_SmallWater_Projection_Simple
+                            NamedParams = MAP[
+                                ( 'parColor', float3[1,1,1] ),
+                                ( 'parCount', 14 ),
+                                ( 'parFluidFriction', 0 ),
+                                ( 'parGravity', 1500 ),
+                                ( 'parGrowFactor', 10 ),
+                                ( 'parLifetime', 1 ),
+                                ( 'parSize', 40 ),
+                                ( 'parSpeed', 400 ),
+                            ]
+                        ),
+                    ]
+                ),
+            ]
+        ),
+        TSimultaneousAction
+        (
+            Mobile = TMobileWithLocalRepereMatrixFactory
+            (
+                Position = float3[1375,82,0]
+            )
+            Actions =
+            [
+                TSequentialAction
+                (Actions =
+                    [
+                        TWaitInSec( Duration = 0.24 ),
+                        TActionCall
+                        (
+                            Action = $/VFX_Bank/BANK_SmallWater_Projection_Simple
+                            NamedParams = MAP[
+                                ( 'parColor', float3[1,1,1] ),
+                                ( 'parCount', 14 ),
+                                ( 'parFluidFriction', 0 ),
+                                ( 'parGravity', 1500 ),
+                                ( 'parGrowFactor', 10 ),
+                                ( 'parLifetime', 1 ),
+                                ( 'parSize', 40 ),
+                                ( 'parSpeed', 400 ),
+                            ]
+                        ),
+                    ]
+                ),
+            ]
+        ),
+        TSimultaneousAction
+        (
+            Mobile = TMobileWithLocalRepereMatrixFactory
+            (
+                Position = float3[586,20,0]
+            )
+            Actions =
+            [
+                TSequentialAction
+                (Actions =
+                    [
+                        TWaitInSec( Duration = 0.16 ),
+                        TActionCall
+                        (
+                            Action = $/VFX_Bank/BANK_SmallWater_Projection_Simple
+                            NamedParams = MAP[
+                                ( 'parColor', float3[1,1,1] ),
+                                ( 'parCount', 14 ),
+                                ( 'parFluidFriction', 0 ),
+                                ( 'parGravity', 1500 ),
+                                ( 'parGrowFactor', 10 ),
+                                ( 'parLifetime', 1 ),
+                                ( 'parSize', 40 ),
+                                ( 'parSpeed', 400 ),
+                            ]
+                        ),
+                    ]
+                ),
+            ]
+        ),
+        TSimultaneousAction
+        (
+            Mobile = TMobileWithLocalRepereMatrixFactory
+            (
+                Position = float3[-258,272,0]
+            )
+            Actions =
+            [
+                TSequentialAction
+                (Actions =
+                    [
+                        TWaitInSec( Duration = 0.08 ),
+                        TActionCall
+                        (
+                            Action = $/VFX_Bank/BANK_SmallWater_Projection_Simple
+                            NamedParams = MAP[
+                                ( 'parColor', float3[1,1,1] ),
+                                ( 'parCount', 14 ),
+                                ( 'parFluidFriction', 0 ),
+                                ( 'parGravity', 1500 ),
+                                ( 'parGrowFactor', 10 ),
+                                ( 'parLifetime', 1 ),
+                                ( 'parSize', 40 ),
+                                ( 'parSpeed', 400 ),
+                            ]
+                        ),
+                    ]
+                ),
+            ]
+        ),
+        TSimultaneousAction
+        (
+            Mobile = TMobileWithLocalRepereMatrixFactory
+            (
+                Position = float3[-1123,-113,0]
+            )
+            Actions =
+            [
+                TActionCall
+                (
+                    Action = $/VFX_Bank/BANK_SmallWater_Projection_Simple
+                    NamedParams = MAP[
+                        ( 'parColor', float3[1,1,1] ),
+                        ( 'parCount', 14 ),
+                        ( 'parFluidFriction', 0 ),
+                        ( 'parGravity', 1500 ),
+                        ( 'parGrowFactor', 10 ),
+                        ( 'parLifetime', 1 ),
+                        ( 'parSize', 40 ),
+                        ( 'parSpeed', 400 ),
+                    ]
+                ),
+            ]
+        ),
+        TSimultaneousAction
+        (
+            Mobile = TMobileWithLocalRepereMatrixFactory
+            (
+                Position = float3[2980,-594,0]
+            )
+            Actions =
+            [
+                TSequentialAction
+                (Actions =
+                    [
+                        TWaitInSec( Duration = 0.4 ),
+                        TActionCall
+                        (
+                            Action = $/VFX_Bank/BANK_SmallWater_Projection_Simple
+                            NamedParams = MAP[
+                                ( 'parColor', float3[1,1,1] ),
+                                ( 'parCount', 14 ),
+                                ( 'parFluidFriction', 0 ),
+                                ( 'parGravity', 1500 ),
+                                ( 'parGrowFactor', 10 ),
+                                ( 'parLifetime', 1 ),
+                                ( 'parSize', 40 ),
+                                ( 'parSpeed', 400 ),
+                            ]
+                        ),
+                    ]
+                ),
+            ]
+        ),
+        TSimultaneousAction
+        (
+            Mobile = TMobileWithLocalRepereMatrixFactory
+            (
+                Position = float3[2180,-985,0]
+            )
+            Actions =
+            [
+                TSequentialAction
+                (Actions =
+                    [
+                        TWaitInSec( Duration = 0.32 ),
+                        TActionCall
+                        (
+                            Action = $/VFX_Bank/BANK_SmallWater_Projection_Simple
+                            NamedParams = MAP[
+                                ( 'parColor', float3[1,1,1] ),
+                                ( 'parCount', 14 ),
+                                ( 'parFluidFriction', 0 ),
+                                ( 'parGravity', 1500 ),
+                                ( 'parGrowFactor', 10 ),
+                                ( 'parLifetime', 1 ),
+                                ( 'parSize', 40 ),
+                                ( 'parSpeed', 400 ),
+                            ]
+                        ),
+                    ]
+                ),
+            ]
+        ),
+        TSimultaneousAction
+        (
+            Mobile = TMobileWithLocalRepereMatrixFactory
+            (
+                Position = float3[1375,-691,0]
+            )
+            Actions =
+            [
+                TSequentialAction
+                (Actions =
+                    [
+                        TWaitInSec( Duration = 0.24 ),
+                        TActionCall
+                        (
+                            Action = $/VFX_Bank/BANK_SmallWater_Projection_Simple
+                            NamedParams = MAP[
+                                ( 'parColor', float3[1,1,1] ),
+                                ( 'parCount', 14 ),
+                                ( 'parFluidFriction', 0 ),
+                                ( 'parGravity', 1500 ),
+                                ( 'parGrowFactor', 10 ),
+                                ( 'parLifetime', 1 ),
+                                ( 'parSize', 40 ),
+                                ( 'parSpeed', 400 ),
+                            ]
+                        ),
+                    ]
+                ),
+            ]
+        ),
+        TSimultaneousAction
+        (
+            Mobile = TMobileWithLocalRepereMatrixFactory
+            (
+                Position = float3[587,-753,0]
+            )
+            Actions =
+            [
+                TSequentialAction
+                (Actions =
+                    [
+                        TWaitInSec( Duration = 0.16 ),
+                        TActionCall
+                        (
+                            Action = $/VFX_Bank/BANK_SmallWater_Projection_Simple
+                            NamedParams = MAP[
+                                ( 'parColor', float3[1,1,1] ),
+                                ( 'parCount', 14 ),
+                                ( 'parFluidFriction', 0 ),
+                                ( 'parGravity', 1500 ),
+                                ( 'parGrowFactor', 10 ),
+                                ( 'parLifetime', 1 ),
+                                ( 'parSize', 40 ),
+                                ( 'parSpeed', 400 ),
+                            ]
+                        ),
+                    ]
+                ),
+            ]
+        ),
+        TSimultaneousAction
+        (
+            Mobile = TMobileWithLocalRepereMatrixFactory
+            (
+                Position = float3[-258,-501,0]
+            )
+            Actions =
+            [
+                TSequentialAction
+                (Actions =
+                    [
+                        TWaitInSec( Duration = 0.08 ),
+                        TActionCall
+                        (
+                            Action = $/VFX_Bank/BANK_SmallWater_Projection_Simple
+                            NamedParams = MAP[
+                                ( 'parColor', float3[1,1,1] ),
+                                ( 'parCount', 14 ),
+                                ( 'parFluidFriction', 0 ),
+                                ( 'parGravity', 1500 ),
+                                ( 'parGrowFactor', 10 ),
+                                ( 'parLifetime', 1 ),
+                                ( 'parSize', 40 ),
+                                ( 'parSpeed', 400 ),
+                            ]
+                        ),
+                    ]
+                ),
+            ]
+        ),
+        TSimultaneousAction
+        (
+            Mobile = TMobileWithLocalRepereMatrixFactory
+            (
+                Position = float3[-1123,-886,0]
+            )
+            Actions =
+            [
+                TActionCall
+                (
+                    Action = $/VFX_Bank/BANK_SmallWater_Projection_Simple
+                    NamedParams = MAP[
+                        ( 'parColor', float3[1,1,1] ),
+                        ( 'parCount', 14 ),
+                        ( 'parFluidFriction', 0 ),
+                        ( 'parGravity', 1500 ),
+                        ( 'parGrowFactor', 10 ),
+                        ( 'parLifetime', 1 ),
+                        ( 'parSize', 40 ),
+                        ( 'parSpeed', 400 ),
+                    ]
+                ),
+            ]
+        ),
+        TSimultaneousAction
+        (
+            Mobile = TMobileWithLocalRepereMatrixFactory
+            (
+                Position = float3[3694,892,0]
+            )
+            Actions =
+            [
+                TSequentialAction
+                (Actions =
+                    [
+                        TWaitInSec( Duration = 0.4 ),
+                        TActionCall
+                        (
+                            Action = $/VFX_Bank/BANK_SmallWater_Projection_Simple
+                            NamedParams = MAP[
+                                ( 'parColor', float3[1,1,1] ),
+                                ( 'parCount', 14 ),
+                                ( 'parFluidFriction', 0 ),
+                                ( 'parGravity', 1500 ),
+                                ( 'parGrowFactor', 10 ),
+                                ( 'parLifetime', 1 ),
+                                ( 'parSize', 40 ),
+                                ( 'parSpeed', 400 ),
+                            ]
+                        ),
+                    ]
+                ),
+            ]
+        ),
+        TSimultaneousAction
+        (
+            Mobile = TMobileWithLocalRepereMatrixFactory
+            (
+                Position = float3[2894,500,0]
+            )
+            Actions =
+            [
+                TSequentialAction
+                (Actions =
+                    [
+                        TWaitInSec( Duration = 0.32 ),
+                        TActionCall
+                        (
+                            Action = $/VFX_Bank/BANK_SmallWater_Projection_Simple
+                            NamedParams = MAP[
+                                ( 'parColor', float3[1,1,1] ),
+                                ( 'parCount', 14 ),
+                                ( 'parFluidFriction', 0 ),
+                                ( 'parGravity', 1500 ),
+                                ( 'parGrowFactor', 10 ),
+                                ( 'parLifetime', 1 ),
+                                ( 'parSize', 40 ),
+                                ( 'parSpeed', 400 ),
+                            ]
+                        ),
+                    ]
+                ),
+            ]
+        ),
+        TSimultaneousAction
+        (
+            Mobile = TMobileWithLocalRepereMatrixFactory
+            (
+                Position = float3[2089,794,0]
+            )
+            Actions =
+            [
+                TSequentialAction
+                (Actions =
+                    [
+                        TWaitInSec( Duration = 0.24 ),
+                        TActionCall
+                        (
+                            Action = $/VFX_Bank/BANK_SmallWater_Projection_Simple
+                            NamedParams = MAP[
+                                ( 'parColor', float3[1,1,1] ),
+                                ( 'parCount', 14 ),
+                                ( 'parFluidFriction', 0 ),
+                                ( 'parGravity', 1500 ),
+                                ( 'parGrowFactor', 10 ),
+                                ( 'parLifetime', 1 ),
+                                ( 'parSize', 40 ),
+                                ( 'parSpeed', 400 ),
+                            ]
+                        ),
+                    ]
+                ),
+            ]
+        ),
+        TSimultaneousAction
+        (
+            Mobile = TMobileWithLocalRepereMatrixFactory
+            (
+                Position = float3[1300,732,0]
+            )
+            Actions =
+            [
+                TSequentialAction
+                (Actions =
+                    [
+                        TWaitInSec( Duration = 0.16 ),
+                        TActionCall
+                        (
+                            Action = $/VFX_Bank/BANK_SmallWater_Projection_Simple
+                            NamedParams = MAP[
+                                ( 'parColor', float3[1,1,1] ),
+                                ( 'parCount', 14 ),
+                                ( 'parFluidFriction', 0 ),
+                                ( 'parGravity', 1500 ),
+                                ( 'parGrowFactor', 10 ),
+                                ( 'parLifetime', 1 ),
+                                ( 'parSize', 40 ),
+                                ( 'parSpeed', 400 ),
+                            ]
+                        ),
+                    ]
+                ),
+            ]
+        ),
+        TSimultaneousAction
+        (
+            Mobile = TMobileWithLocalRepereMatrixFactory
+            (
+                Position = float3[456,984,0]
+            )
+            Actions =
+            [
+                TSequentialAction
+                (Actions =
+                    [
+                        TWaitInSec( Duration = 0.08 ),
+                        TActionCall
+                        (
+                            Action = $/VFX_Bank/BANK_SmallWater_Projection_Simple
+                            NamedParams = MAP[
+                                ( 'parColor', float3[1,1,1] ),
+                                ( 'parCount', 14 ),
+                                ( 'parFluidFriction', 0 ),
+                                ( 'parGravity', 1500 ),
+                                ( 'parGrowFactor', 10 ),
+                                ( 'parLifetime', 1 ),
+                                ( 'parSize', 40 ),
+                                ( 'parSpeed', 400 ),
+                            ]
+                        ),
+                    ]
+                ),
+            ]
+        ),
+        TSimultaneousAction
+        (
+            Mobile = TMobileWithLocalRepereMatrixFactory
+            (
+                Position = float3[-409,600,0]
+            )
+            Actions =
+            [
+                TActionCall
+                (
+                    Action = $/VFX_Bank/BANK_SmallWater_Projection_Simple
+                    NamedParams = MAP[
+                        ( 'parColor', float3[1,1,1] ),
+                        ( 'parCount', 14 ),
+                        ( 'parFluidFriction', 0 ),
+                        ( 'parGravity', 1500 ),
+                        ( 'parGrowFactor', 10 ),
+                        ( 'parLifetime', 1 ),
+                        ( 'parSize', 40 ),
+                        ( 'parSpeed', 400 ),
+                    ]
+                ),
+            ]
+        ),
+        TSimultaneousAction
+        (
+            Mobile = TMobileWithLocalRepereMatrixFactory
+            (
+                Position = float3[3694,119,0]
+            )
+            Actions =
+            [
+                TSequentialAction
+                (Actions =
+                    [
+                        TWaitInSec( Duration = 0.4 ),
+                        TActionCall
+                        (
+                            Action = $/VFX_Bank/BANK_SmallWater_Projection_Simple
+                            NamedParams = MAP[
+                                ( 'parColor', float3[1,1,1] ),
+                                ( 'parCount', 14 ),
+                                ( 'parFluidFriction', 0 ),
+                                ( 'parGravity', 1500 ),
+                                ( 'parGrowFactor', 10 ),
+                                ( 'parLifetime', 1 ),
+                                ( 'parSize', 40 ),
+                                ( 'parSpeed', 400 ),
+                            ]
+                        ),
+                    ]
+                ),
+            ]
+        ),
+        TSimultaneousAction
+        (
+            Mobile = TMobileWithLocalRepereMatrixFactory
+            (
+                Position = float3[2894,-273,0]
+            )
+            Actions =
+            [
+                TSequentialAction
+                (Actions =
+                    [
+                        TWaitInSec( Duration = 0.32 ),
+                        TActionCall
+                        (
+                            Action = $/VFX_Bank/BANK_SmallWater_Projection_Simple
+                            NamedParams = MAP[
+                                ( 'parColor', float3[1,1,1] ),
+                                ( 'parCount', 14 ),
+                                ( 'parFluidFriction', 0 ),
+                                ( 'parGravity', 1500 ),
+                                ( 'parGrowFactor', 10 ),
+                                ( 'parLifetime', 1 ),
+                                ( 'parSize', 40 ),
+                                ( 'parSpeed', 400 ),
+                            ]
+                        ),
+                    ]
+                ),
+            ]
+        ),
+        TSimultaneousAction
+        (
+            Mobile = TMobileWithLocalRepereMatrixFactory
+            (
+                Position = float3[2089,21,0]
+            )
+            Actions =
+            [
+                TSequentialAction
+                (Actions =
+                    [
+                        TWaitInSec( Duration = 0.24 ),
+                        TActionCall
+                        (
+                            Action = $/VFX_Bank/BANK_SmallWater_Projection_Simple
+                            NamedParams = MAP[
+                                ( 'parColor', float3[1,1,1] ),
+                                ( 'parCount', 14 ),
+                                ( 'parFluidFriction', 0 ),
+                                ( 'parGravity', 1500 ),
+                                ( 'parGrowFactor', 10 ),
+                                ( 'parLifetime', 1 ),
+                                ( 'parSize', 40 ),
+                                ( 'parSpeed', 400 ),
+                            ]
+                        ),
+                    ]
+                ),
+            ]
+        ),
+        TSimultaneousAction
+        (
+            Mobile = TMobileWithLocalRepereMatrixFactory
+            (
+                Position = float3[1301,-41,0]
+            )
+            Actions =
+            [
+                TSequentialAction
+                (Actions =
+                    [
+                        TWaitInSec( Duration = 0.16 ),
+                        TActionCall
+                        (
+                            Action = $/VFX_Bank/BANK_SmallWater_Projection_Simple
+                            NamedParams = MAP[
+                                ( 'parColor', float3[1,1,1] ),
+                                ( 'parCount', 14 ),
+                                ( 'parFluidFriction', 0 ),
+                                ( 'parGravity', 1500 ),
+                                ( 'parGrowFactor', 10 ),
+                                ( 'parLifetime', 1 ),
+                                ( 'parSize', 40 ),
+                                ( 'parSpeed', 400 ),
+                            ]
+                        ),
+                    ]
+                ),
+            ]
+        ),
+        TSimultaneousAction
+        (
+            Mobile = TMobileWithLocalRepereMatrixFactory
+            (
+                Position = float3[456,211,0]
+            )
+            Actions =
+            [
+                TSequentialAction
+                (Actions =
+                    [
+                        TWaitInSec( Duration = 0.08 ),
+                        TActionCall
+                        (
+                            Action = $/VFX_Bank/BANK_SmallWater_Projection_Simple
+                            NamedParams = MAP[
+                                ( 'parColor', float3[1,1,1] ),
+                                ( 'parCount', 14 ),
+                                ( 'parFluidFriction', 0 ),
+                                ( 'parGravity', 1500 ),
+                                ( 'parGrowFactor', 10 ),
+                                ( 'parLifetime', 1 ),
+                                ( 'parSize', 40 ),
+                                ( 'parSpeed', 400 ),
+                            ]
+                        ),
+                    ]
+                ),
+            ]
+        ),
+        TSimultaneousAction
+        (
+            Mobile = TMobileWithLocalRepereMatrixFactory
+            (
+                Position = float3[-409,-173,0]
+            )
+            Actions =
+            [
+                TActionCall
+                (
+                    Action = $/VFX_Bank/BANK_SmallWater_Projection_Simple
+                    NamedParams = MAP[
+                        ( 'parColor', float3[1,1,1] ),
+                        ( 'parCount', 14 ),
+                        ( 'parFluidFriction', 0 ),
+                        ( 'parGravity', 1500 ),
+                        ( 'parGrowFactor', 10 ),
+                        ( 'parLifetime', 1 ),
+                        ( 'parSize', 40 ),
+                        ( 'parSpeed', 400 ),
+                    ]
+                ),
+            ]
+        ),
+    ]
+)

@@ -1,0 +1,134 @@
+
+template Template_BinaryOpWrapperAdd
+[
+    ParamA : TEvaluable[required],
+    ParamB : TEvaluable[required]
+] is TIntrinsicCall_2Param
+(
+    Intrinsic = $/System/EvaluableIntrinsics/IntrinsicOperatorAdd
+    Param0 = <ParamA>
+    Param1 = <ParamB>
+)
+
+template Template_BinaryOpWrapperSub
+[
+    ParamA : TEvaluable[required],
+    ParamB : TEvaluable[required]
+] is TIntrinsicCall_2Param
+(
+    Intrinsic = $/System/EvaluableIntrinsics/IntrinsicOperatorSub
+    Param0 = <ParamA>
+    Param1 = <ParamB>
+)
+
+template Template_BinaryOpWrapperMul
+[
+    ParamA : TEvaluable[required],
+    ParamB : TEvaluable[required]
+] is TIntrinsicCall_2Param
+(
+    Intrinsic = $/System/EvaluableIntrinsics/IntrinsicOperatorMul
+    Param0 = <ParamA>
+    Param1 = <ParamB>
+)
+
+
+
+template Template_BinaryOpWrapperDiv
+[
+    ParamA : TEvaluable[required],
+    ParamB : TEvaluable[required]
+] is TIntrinsicCall_2Param
+(
+    Intrinsic = $/System/EvaluableIntrinsics/IntrinsicOperatorDiv
+    Param0 = <ParamA>
+    Param1 = <ParamB>
+)
+
+template Template_BinaryOpWrapperLesser
+[
+    ParamA : TEvaluable[required],
+    ParamB : TEvaluable[required]
+] is TIntrinsicCall_2Param
+(
+    Intrinsic = $/System/EvaluableIntrinsics/IntrinsicOperatorLesser
+    Param0 = <ParamA>
+    Param1 = <ParamB>
+)
+
+template Template_BinaryOpWrapperLesserEqual
+[
+    ParamA : TEvaluable[required],
+    ParamB : TEvaluable[required]
+] is TIntrinsicCall_2Param
+(
+    Intrinsic = $/System/EvaluableIntrinsics/IntrinsicOperatorLesserEqual
+    Param0 = <ParamA>
+    Param1 = <ParamB>
+)
+
+template Template_BinaryOpWrapperGreater
+[
+    ParamA : TEvaluable[required],
+    ParamB : TEvaluable[required]
+] is TIntrinsicCall_2Param
+(
+    Intrinsic = $/System/EvaluableIntrinsics/IntrinsicOperatorGreater
+    Param0 = <ParamA>
+    Param1 = <ParamB>
+)
+
+template Template_BinaryOpWrapperGreaterEqual
+[
+    ParamA : TEvaluable[required],
+    ParamB : TEvaluable[required]
+] is TIntrinsicCall_2Param
+(
+    Intrinsic = $/System/EvaluableIntrinsics/IntrinsicOperatorGreaterEqual
+    Param0 = <ParamA>
+    Param1 = <ParamB>
+)
+
+template Template_BinaryOpWrapperEqual
+[
+    ParamA : TEvaluable[required],
+    ParamB : TEvaluable[required]
+] is TIntrinsicCall_2Param
+(
+    Intrinsic = $/System/EvaluableIntrinsics/IntrinsicOperatorEqual
+    Param0 = <ParamA>
+    Param1 = <ParamB>
+)
+
+template Template_BinaryOpWrapperNotEqual
+[
+    ParamA : TEvaluable[required],
+    ParamB : TEvaluable[required]
+] is TIntrinsicCall_2Param
+(
+    Intrinsic = $/System/EvaluableIntrinsics/IntrinsicOperatorNotEqual
+    Param0 = <ParamA>
+    Param1 = <ParamB>
+)
+
+template Template_BinaryOpWrapperAnd
+[
+    ParamA : TEvaluable[required],
+    ParamB : TEvaluable[required]
+] is TIntrinsicCall_2Param
+(
+    Intrinsic = $/System/EvaluableIntrinsics/IntrinsicOperatorAnd
+    Param0 = <ParamA>
+    Param1 = <ParamB>
+)
+
+template Template_BinaryOpWrapperOr
+[
+    ParamA : TEvaluable[required],
+    ParamB : TEvaluable[required]
+] is TIntrinsicCall_2Param
+(
+    Intrinsic = $/System/EvaluableIntrinsics/IntrinsicOperatorOr
+    Param0 = <ParamA>
+    Param1 = <ParamB>
+)

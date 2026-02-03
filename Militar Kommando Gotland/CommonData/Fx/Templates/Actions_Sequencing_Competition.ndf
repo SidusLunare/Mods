@@ -1,0 +1,13 @@
+template Competition
+[
+    Mobile                      : TMobileFactory = nil,
+    Actions                     : LIST<TActionDescriptor> = [],
+    Disabled                    : TEvaluable = nil,
+    TimeServer                  : TTimeServerWithVisibilityRange = nil,
+] is TCompetitionAction
+(
+    Actions = <Actions>
+    Mobile = <Mobile>
+    Disabled = <Disabled>
+    TimeServer = <TimeServer>
+)

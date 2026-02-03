@@ -1,0 +1,281 @@
+export BANK_Bomb_Smoke_MGS_original_Test is Template_ActionCall
+(
+    private _family is 'Fx/BANK/Bomb Smoke MGS'
+    Action = BANK_Bomb_Smoke_MGS_original_Simple
+    NamedParameters = MAP
+    [
+        ('parColor'              , float3[255, 253, 204] * 0.00392),
+        ('parLifetimeMul'        , 20),
+        ('parCount'              , 30),
+        ('parAlphaMul'           , 1.0),
+        ('parColormultiplierMul' , 0.4),
+        ('parFluidFriction'      , 10.0),
+        ('parSpeed'              , 30000),
+        ('parAccelerationField'  , 5000),
+        ('parStartSize'          , 500),
+        ('parEndSize'            , 4000),
+        ('parBottomGrowFactor'   , 1),
+        ('parTopGrowFactor'      , 3),
+        ('parRotationMul'        , 5.0),
+        ('parRadius'             , 1.0),
+    ]
+)
+
+export BANK_Bomb_Smoke_MGS_original_Simple is ActionCallWithParameters
+(
+    Action = BANK_Bomb_Smoke_MGS_original
+    Params =
+    [
+        private parColor                    is Template_Param_Float3 (),
+        private parLifetimeMul              is Template_Param_Float (),
+        private parCount                    is Template_Param_Int (),
+        private parAlphaMul                 is Template_Param_Float (),
+        private parColormultiplierMul       is Template_Param_Float (),
+        private parFluidFriction            is Template_Param_Float (),
+        private parSpeed                    is Template_Param_Float (),
+        private parAccelerationField        is Template_Param_Float (),
+        private parStartSize                is Template_Param_Float (),
+        private parEndSize                  is Template_Param_Float (),
+        private parBottomGrowFactor         is Template_Param_Float (),
+        private parTopGrowFactor            is Template_Param_Float (),
+        private parRotationMul              is Template_Param_Float (),
+        private parRadius                   is Template_Param_Float (),
+    ]
+    NamedParameters = MAP
+    [
+        ( 'BANK_Color'                      , LinearColor[parColor] ),
+        ( 'BANK_Lifetime_Mul'               , parLifetimeMul ),
+        ( 'BANK_Count'                      , parCount ),
+        ( 'BANK_Alpha_Mul'                  , parAlphaMul ),
+        ( 'BANK_Colormultiplier_Mul'        , parColormultiplierMul ),
+        ( 'BANK_Orientation'                , float3[0.0, 0.0, 0.0] ),
+        ( 'BANK_Fluid_Friction'             , parFluidFriction ),
+        ( 'BANK_Speed'                      , parSpeed * RandomRange[0.8, 1.25] ),
+        ( 'BANK_AccelerationFiled'          , parAccelerationField ),
+        ( 'BANK_StartSize'                  , parStartSize * RandomRange[0.8, 1.25] ),
+        ( 'BANK_EndSize'                    , parEndSize * RandomRange[0.8, 1.25] ),
+        ( 'BANK_BottomGrowFactor'           , parBottomGrowFactor ),
+        ( 'BANK_TopGrowFactor'              , parTopGrowFactor ),
+        ( 'BANK_Rotation_Mul'               , parRotationMul ),
+        ( 'BANK_Radius'                     , parRadius * RandomRange[0.8, 1.25] ),
+    ]
+)
+
+export BANK_Bomb_Smoke_MGS_original is SimultaneousActionDeclaration
+(
+    Params =
+    [
+        private BANK_Color is Template_ActionAlias
+        (
+            ExpectedType = 'any'
+            DefaultValue = float3[1.00, 0.98, 0.80]
+        ),
+        private BANK_Lifetime_Mul is Template_ActionAlias
+        (
+            ExpectedType = 'any'
+            DefaultValue = 20
+        ),
+        private BANK_Count is Template_ActionAlias
+        (
+            ExpectedType = 'any'
+            DefaultValue = 30
+        ),
+        private BANK_Alpha_Mul is Template_ActionAlias
+        (
+            ExpectedType = 'any'
+            DefaultValue = 1
+        ),
+        private BANK_Colormultiplier_Mul is Template_ActionAlias
+        (
+            ExpectedType = 'any'
+            DefaultValue = 0.4
+        ),
+        private BANK_Orientation is Template_ActionAlias
+        (
+            ExpectedType = 'any'
+            DefaultValue = float3[0.00, 0.00, 0.00]
+        ),
+        private BANK_Fluid_Friction is Template_ActionAlias
+        (
+            ExpectedType = 'any'
+            DefaultValue = 10
+        ),
+        private BANK_Speed is Template_ActionAlias
+        (
+            ExpectedType = 'any'
+            DefaultValue = 30000
+        ),
+        private BANK_AccelerationFiled is Template_ActionAlias
+        (
+            ExpectedType = 'any'
+            DefaultValue = 5000
+        ),
+        private BANK_StartSize is Template_ActionAlias
+        (
+            ExpectedType = 'any'
+            DefaultValue = 500
+        ),
+        private BANK_EndSize is Template_ActionAlias
+        (
+            ExpectedType = 'any'
+            DefaultValue = 4000
+        ),
+        private BANK_BottomGrowFactor is Template_ActionAlias
+        (
+            ExpectedType = 'any'
+            DefaultValue = 1
+        ),
+        private BANK_TopGrowFactor is Template_ActionAlias
+        (
+            ExpectedType = 'any'
+            DefaultValue = 3
+        ),
+        private BANK_Rotation_Mul is Template_ActionAlias
+        (
+            ExpectedType = 'any'
+            DefaultValue = 5
+        ),
+
+        private BANK_Radius is Template_ActionAlias
+        (
+            ExpectedType = 'any'
+            DefaultValue = 1
+        ),
+        private BANK_DistanceToFade is Template_ActionAlias
+        (
+            ExpectedType = 'float'
+            DefaultValue = 1000
+        )
+    ]
+    Mobile = private Orientation is Template_MobileWithLocalRepereMatrixFactory
+    (
+        EulerAngles = BANK_Orientation
+        MaxScale = 11
+    )
+    Actions =
+    [
+        private bomb_fumees00 is ParticleBombSpawner
+        (
+            Count = 0.75 * BANK_Count
+            Spawner = private Flammes is ParticleSpawner
+            (
+                ParticleLifetime = RandomRange[0.5, 1] * BANK_Lifetime_Mul
+                Initialisers =
+                [
+                    ParticleInitialiserList
+                    (
+                        Alpha = 1.0
+
+                        CustomFloat3_2 = $/VFX_Bank/MinusOneToOneRandomHemisphereVolume * float3[0.08, 0.08, 1.00]
+                        Position = $/VFX_Bank/MinusOneToOneRandomDisc * BANK_Radius
+                        Speed = RandomRange[0.5, 1.5] * BANK_Speed * ParticleCustomFloat3_2
+                        Size = 300
+                        Opacity = 1
+                        ColorModifier = BANK_Color
+                        Rotation = RandomRange[0.2, 0.3]
+                        CustomFloat_1 = RandomRange[0.5, 1.5] * lerp[sqr[getZ[ParticleCustomFloat3_2]], BANK_StartSize, BANK_EndSize]
+                        CustomFloat_2 = BANK_Fluid_Friction
+                        CustomFloat_3 = BANK_Alpha_Mul
+                        CustomFloat_4 = BANK_Colormultiplier_Mul
+                        CustomFloat_5 = BANK_AccelerationFiled
+                        CustomFloat3_1 = Cross[ParticleCustomFloat3_2, float3[0.00, 0.00, -1.00]]
+                        CustomFloat3_3 = GenFloat3[BANK_BottomGrowFactor, BANK_TopGrowFactor, BANK_Rotation_Mul]
+
+                        //une valeur aléatoire qui indique a quelle distance la particule doit disparaitre.
+                        CustomFloat_6 = BANK_DistanceToFade
+                    ),
+                ]
+                ParticleDescriptor = ParticleDescriptor
+                (
+                    ParticleRenderer = $/VFX_Bank/StandardRenderer
+                    RenderInfo = DeferredParticleRenderInfo
+                    (
+                        TextureName = 'GameData:/Assets/2D/Fx/nuage_00.png'
+                    )
+                    Evolvers = Template_List
+                    (
+                        Evolvers =
+                        [
+                        ParticleStandardEvolverListWithPhysic
+                        (
+                            FluidFriction = $/VFX_Bank/ParticleCustomFloat_2
+                            PhysicAccelerationField = $/VFX_Bank/ParticleCustomFloat3_2 * $/VFX_Bank/ParticleCustomFloat_5 * float3[0.10, 0.10, 1.00]
+                            PhysicWindField = $/VFX_Bank/MapWind
+                            Size = $/VFX_Bank/ParticleCustomFloat_1 * lerp[$/VFX_Bank/ParticleLifeRatio, getX[$/VFX_Bank/ParticleCustomFloat3_3], getY[$/VFX_Bank/ParticleCustomFloat3_3]]
+                            Opacity = ( ( 1 - getZ[$/VFX_Bank/ParticleCustomFloat3_2] ) * $/VFX_Bank/ParticleRemainingLifeRatio * $/VFX_Bank/ParticleCustomFloat_3 ) * AttackDecay[$/VFX_Bank/ParticleLifeRatio, 0.01]
+                                // pour faire disparaitre les particules qui sont trop pres de la caméra.
+                                * ( sat[  ( length[ ParticlePosition - CameraPosition ] - ParticleCustomFloat_6  ) div 1000 ] )
+                            ColorMultiplier = Max[$/VFX_Bank/ParticleRemainingLifeRatio, 0.75] * $/VFX_Bank/ParticleCustomFloat_4
+                            ZBias = 0.25 * $/VFX_Bank/ParticleCustomFloat_1
+                            RotationSpeed = getZ[$/VFX_Bank/ParticleCustomFloat3_3] * $/VFX_Bank/ParticleCustomFloat3_1 * lerp[( getZ[$/VFX_Bank/ParticleCustomFloat3_2] ), 0.5, 1]
+                            UseHardCodedRotation = True
+                        )
+                        ]
+                    )
+                )
+            )
+        ),
+        private bomb_fumees01 is ParticleBombSpawner
+        (
+            Count = 0.25 * BANK_Count
+            Spawner = private Flammes is ParticleSpawner
+            (
+                ParticleLifetime = RandomRange[0.5, 1] * BANK_Lifetime_Mul
+                Initialisers =
+                [
+                    ParticleInitialiserList
+                    (
+                        Alpha = 1.0
+                        ColorMultiplier = 1.0
+
+                        CustomFloat3_2 = $/VFX_Bank/MinusOneToOneRandomHemisphereVolume * float3[0.08, 0.08, 1.00]
+                        Position = $/VFX_Bank/MinusOneToOneRandomDisc * BANK_Radius
+                        Speed = RandomRange[0.5, 1.5] * BANK_Speed * ParticleCustomFloat3_2
+                        Size = 300
+                        Opacity = 1
+                        ColorModifier = BANK_Color
+                        Rotation = RandomRange[0.2, 0.3]
+                        CustomFloat_1 = RandomRange[0.5, 1.5] * lerp[sqr[getZ[ParticleCustomFloat3_2]], BANK_StartSize, BANK_EndSize]
+                        CustomFloat_2 = BANK_Fluid_Friction
+                        CustomFloat_3 = BANK_Alpha_Mul
+                        CustomFloat_4 = BANK_Colormultiplier_Mul
+                        CustomFloat_5 = BANK_AccelerationFiled
+                        CustomFloat3_1 = Cross[ParticleCustomFloat3_2, float3[0.00, 0.00, -1.00]]
+                        CustomFloat3_3 = GenFloat3[BANK_BottomGrowFactor, BANK_TopGrowFactor, BANK_Rotation_Mul]
+
+                        //une valeur aléatoire qui indique a quelle distance la particule doit disparaitre.
+                        CustomFloat_6 = BANK_DistanceToFade
+                    ),
+                ]
+                ParticleDescriptor = ParticleDescriptor
+                (
+                    ParticleRenderer = $/VFX_Bank/StandardRenderer
+                    RenderInfo = DeferredParticleRenderInfo
+                    (
+                        TextureName = 'GameData:/Assets/2D/Fx/nuage_01.png'
+                    )
+                    Evolvers = Template_List
+                    (
+                        Evolvers =
+                        [
+                        ParticleStandardEvolverListWithPhysic
+                        (
+                            FluidFriction = $/VFX_Bank/ParticleCustomFloat_2
+                            PhysicAccelerationField = $/VFX_Bank/ParticleCustomFloat3_2 * $/VFX_Bank/ParticleCustomFloat_5 * float3[0.10, 0.10, 1.00]
+                            PhysicWindField = $/VFX_Bank/MapWind
+                            Size = $/VFX_Bank/ParticleCustomFloat_1 * lerp[$/VFX_Bank/ParticleLifeRatio, getX[$/VFX_Bank/ParticleCustomFloat3_3], getY[$/VFX_Bank/ParticleCustomFloat3_3]]
+                            Opacity = ( ( 1 - getZ[$/VFX_Bank/ParticleCustomFloat3_2] ) * $/VFX_Bank/ParticleRemainingLifeRatio * $/VFX_Bank/ParticleCustomFloat_3 ) * AttackDecay[$/VFX_Bank/ParticleLifeRatio, 0.01]
+                                // pour faire disparaitre les particules qui sont trop pres de la caméra.
+                                * ( sat[  ( length[ ParticlePosition - CameraPosition ] - ParticleCustomFloat_6  ) div 1000 ] )
+                            ColorMultiplier = Max[$/VFX_Bank/ParticleRemainingLifeRatio, 0.75] * $/VFX_Bank/ParticleCustomFloat_4
+                            ZBias = 0.25 * $/VFX_Bank/ParticleCustomFloat_1
+                            RotationSpeed = getZ[$/VFX_Bank/ParticleCustomFloat3_3] * $/VFX_Bank/ParticleCustomFloat3_1 * lerp[( getZ[$/VFX_Bank/ParticleCustomFloat3_2] ), 0.5, 1]
+                            UseHardCodedRotation = True
+                        )
+                        ]
+                    )
+                )
+            )
+        ),
+    ]
+)

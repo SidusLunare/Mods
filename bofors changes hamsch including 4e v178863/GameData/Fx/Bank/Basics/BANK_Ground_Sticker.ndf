@@ -1,0 +1,255 @@
+export Test_BANK_Ground_Sticker is Simultaneous
+(
+    Mobile = MobileUnCentroid()
+    Actions =
+    [
+        Template_ActionCall
+        (
+            Action = BANK_Ground_Sticker
+            NamedParameters = MAP[
+                ( 'BANK_position'       , float3[0.0, 0.0, 0.0] ),
+                ( 'BANK_size'           , 1000 * RandomRange[0.8, 1.25]),
+                ( 'BANK_lifetime'       , 10 ),
+                ( 'BANK_color'          , float3[1.0, 1.0, 1.0] ),
+                ( 'Bank_FadeInTime'     , 0.25 * RandomRange[0.9, 1.1]),
+            ]
+        ),
+    ]
+)
+
+export BANK_Ground_Sticker_Simple is Template_BANK_Ground_Sticker_Simple ( Sticker = BANK_Ground_Sticker )
+export BANK_Ground_Sticker_impact_explo is Template_BANK_Ground_Sticker_Simple ( Sticker = BANK_Ground_Sticker_impact )
+export BANK_Ground_Sticker_Big_Simple is Template_BANK_Ground_Sticker_Simple ( Sticker = BANK_Ground_Sticker_Big )
+export BANK_Ground_Sticker_Burned_Simple is Template_BANK_Ground_Sticker_Simple ( Sticker = BANK_Ground_Sticker_Burned )
+export BANK_Ground_Sticker_destruction_Simple is Template_BANK_Ground_Sticker_Simple ( Sticker = BANK_Ground_Sticker_destruction )
+export BANK_Ground_Sticker_Burned_No_Displace_Simple is Template_BANK_Ground_Sticker_Simple ( Sticker = BANK_Ground_Sticker_Burned_No_Displace )
+
+template Template_BANK_Ground_Sticker_Simple
+[
+    Sticker = ''
+] is ActionCallWithParameters
+(
+    Action = <Sticker>
+    Params =
+    [
+        private parDeltaPosition is Template_Param_Float (),
+        private parSize          is Template_Param_Float (),
+        private parLifetime      is Template_Param_Float (),
+        private parColor         is Template_Param_Float3 (),
+        private parFadeInTime    is Template_Param_Float (),
+    ]
+    NamedParameters = MAP
+    [
+        ( 'BANK_position'       , parDeltaPosition * MinusOneToOneRandomDisc ),
+        ( 'BANK_size'           , parSize * RandomRange[0.9, 1.1]),
+        ( 'BANK_lifetime'       , parLifetime * RandomRange[0.8, 1.2] * $/VFX_Bank/FxLodLevel_from_05to1 ),
+        ( 'BANK_color'          , LinearColor[parColor] ),
+        ( 'Bank_FadeInTime'     , parFadeInTime * RandomRange[0.9, 1.1]),
+    ]
+)
+
+export BANK_Ground_Sticker is template_BANK_Ground_Sticker
+(
+    TextureName                = 'GameData:/Assets/2D/Stikers_Impact/Impact_Big_01.png'
+    NormalMap                  = 'GameData:/Assets/2D/Stikers_Impact/Impact_Big_01_P.png'
+    SeparateAlphaTexture       = 'GameData:/Assets/2D/Stikers_Impact/Impact_Big_01_A.png'
+    ORSMap                     = 'GameData:/Assets/2D/Stikers_Impact/Impact_Big_01_ORS.png'
+
+    DisplacementAmplitudeLBU = 0.05 // 0.1
+    SizeMultiplier =  0.5
+    DisplacementMapZero = 0.8 //0.8
+    Calque = 'Bottom'
+    MinimalFxPreset = $/GraphicOption/FxPresetLow
+)
+export BANK_Ground_Sticker_Big is template_BANK_Ground_Sticker
+(
+    TextureName                = 'GameData:/Assets/2D/Stikers_Impact/Impact_Big_01.png'
+    NormalMap                  = 'GameData:/Assets/2D/Stikers_Impact/Impact_Big_01_P.png'
+    SeparateAlphaTexture       = 'GameData:/Assets/2D/Stikers_Impact/Impact_Big_01_A.png'
+    ORSMap                     = 'GameData:/Assets/2D/Stikers_Impact/Impact_Big_01_ORS.png'
+
+
+
+    DisplacementAmplitudeLBU = 0.3 // 0.2
+    SizeMultiplier =  0.5
+    DisplacementMapZero = 0.8 //0.8
+    Calque = 'Bottom'
+
+    MaxParticleCount = 1000
+    MinimalFxPreset = $/GraphicOption/FxPresetVeryLow
+)
+
+export BANK_Ground_Sticker_Nuke is template_BANK_Ground_Sticker
+(
+    TextureName                = 'GameData:/Assets/2D/Stikers_Impact/ground_impact_D.png'
+    NormalMap                  = 'GameData:/Assets/2D/Stikers_Impact/ground_impact_NM.png'
+    SeparateAlphaTexture       = 'GameData:/Assets/2D/Stikers_Impact/ground_impact_2_A.png'
+
+
+    DisplacementAmplitudeLBU = 2 // 0.2
+    SizeMultiplier =  1
+    DisplacementMapZero = 1
+    Calque = 'Bottom'
+
+    MinimalFxPreset = $/GraphicOption/FxPresetVeryLow
+)
+
+export BANK_Ground_Sticker_Burned is template_BANK_Ground_Sticker //MAJ de Franckie
+(
+    TextureName                = 'GameData:/Assets/2D/Stikers_Impact/Napalm.png'
+    NormalMap                  = 'GameData:/Assets/2D/Stikers_Impact/Napalm_NM.png'
+    SeparateAlphaTexture       = 'GameData:/Assets/2D/Stikers_Impact/Napalm_A.png'
+    ORSMap                     = 'GameData:/Assets/2D/Stikers_Impact/Napalm_ORS.png'
+
+    DisplacementAmplitudeLBU = 0.2 //0.2
+    SizeMultiplier = 1
+    NoSkip = true
+    DisplacementMapZero = 0.8
+    Calque = 'Top'
+    MinimalFxPreset = $/GraphicOption/FxPresetVeryLow
+)
+
+export BANK_Ground_Sticker_Burned_No_Displace is template_BANK_Ground_Sticker //MAJ de Panzer pour MLRS
+(
+    TextureName                = 'GameData:/Assets/2D/Stikers_Impact/Napalm.png'
+    NormalMap                  = 'GameData:/Assets/2D/Stikers_Impact/Napalm_NM.png'
+    SeparateAlphaTexture       = 'GameData:/Assets/2D/Stikers_Impact/Napalm_MLRS_A.png'
+    ORSMap                     = 'GameData:/Assets/2D/Stikers_Impact/Napalm_ORS.png'
+
+    DisplacementAmplitudeLBU = 0 // pas de displace pour cause FX de MLRS, trop d'impacts sur meme zone
+    SizeMultiplier = 1
+    NoSkip = true
+    DisplacementMapZero = 0.8
+    Calque = 'Top'
+    MinimalFxPreset = $/GraphicOption/FxPresetVeryLow
+)
+
+export BANK_Ground_Sticker_destruction is template_BANK_Ground_Sticker //MAJ de Franckie
+(
+    TextureName                = 'GameData:/Assets/2D/Stikers_Impact/Burned.png'
+    NormalMap                  = 'GameData:/Assets/2D/Stikers_Impact/Burned_P.png'
+    SeparateAlphaTexture       = 'GameData:/Assets/2D/Stikers_Impact/Burned_A.png'
+    ORSMap                     = 'GameData:/Assets/2D/Stikers_Impact/Burned_ORS.png'
+
+
+    DisplacementAmplitudeLBU = 0.1 //0.6
+    SizeMultiplier =  0.4 //0.7
+    DisplacementMapZero = 0.8
+    Calque = 'Top'
+    MinimalFxPreset = $/GraphicOption/FxPresetMid
+)
+export BANK_Ground_Sticker_impact is template_BANK_Ground_Sticker
+(
+    TextureName                = 'GameData:/Assets/2D/Stikers_Impact/Impact_Big_01.png'
+    NormalMap                  = 'GameData:/Assets/2D/Stikers_Impact/Impact_Big_01_P.png'
+    SeparateAlphaTexture       = 'GameData:/Assets/2D/Stikers_Impact/Impact_Big_01_A.png'
+
+    DisplacementAmplitudeLBU = 0.2 // 0.2
+    SizeMultiplier =  0.5
+    DisplacementMapZero = 0.8 //0.8
+    Calque = 'Top'
+    MinimalFxPreset = $/GraphicOption/FxPresetVeryLow
+)
+
+template template_BANK_Ground_Sticker
+[
+    NoSkip  = false,
+    TextureName                = 'GameData:/Assets/2D/Stikers_Impact/ImpactClusterBomb_01.png',
+    NormalMap                  = 'GameData:/Assets/2D/Stikers_Impact/ImpactClusterBomb_01_NM.png',
+    ORSMap                     = 'VirtualData:/ToutJaune',
+
+    SeparateAlphaTexture = '',
+
+    DisplacementAmplitudeLBU,
+    SizeMultiplier = 1,
+    DisplacementMapZero = 1,
+    Calque = 'Top',
+    MinimalFxPreset = $/GraphicOption/FxPresetVeryLow,
+    MaxParticleCount = 400
+] is SimultaneousActionDeclaration
+(
+    Params =
+    [
+        public BANK_position    is Template_Param_Float3 (DefaultValue = float3[0.00, 0.00, 0.00]),
+        public BANK_size        is Template_Param_Float  (DefaultValue = 1000),
+        public BANK_lifetime    is Template_ActionAlias  (DefaultValue = 10),
+        public BANK_color       is Template_Param_Float3 (DefaultValue = LinearColor[1.00, 1.00, 1.00]),
+        public Bank_FadeInTime  is Template_Param_Float  (DefaultValue = 0.25),
+    ]
+    LocalVariables =
+    [
+        DurationUnRandomized is Template_Pinnable (ExpectedType = 'float' InitialValue = 9090)
+    ]
+    private Bomb_Sticker is ParticleBombSpawner
+    (
+        ParticleMaxDurationForSpawnSkip = DurationUnRandomized
+        Count = 1
+        Position = BANK_position
+        Spawner = private Spawner is ParticleSpawner
+        (
+            ParticleLifetime = DurationUnRandomized * RandomRange[ 0.9, 1.1 ]
+            ParticleDescriptor = ParticleDescriptor
+            (
+                RenderInfo =  ParticleRenderInfoSticker
+                (
+                    TextureName = <TextureName>
+                    NormalMap = <NormalMap>
+                    ORSMap = <ORSMap>
+                    SeparateAlphaTexture = <SeparateAlphaTexture>
+
+                    DisplacementAmplitudeLBU = <DisplacementAmplitudeLBU>
+                    DisplacementMapZero = <DisplacementMapZero>
+
+                    Calque = <Calque>
+
+                    MinimalFxPreset = <MinimalFxPreset>
+                    MaxParticleCount = <MaxParticleCount>
+                )
+                Evolvers = ParticleStandardEvolverList
+                (
+                    Alpha = Attack[ParticleElapsedTime, 0.1] * Decay[ParticleLifeRatio, 0.99]
+                    UseHardCodedRotation = false
+                )
+                ParticleRenderer = $/VFX_Bank/RealSticker
+                InfiniteParticles = False
+            )
+            Initialisers =
+            [
+                ParticleInitialiserList
+                (
+                    ColorModifier = float3[1, 1, 1]
+
+                    Size = <SizeMultiplier> *  BANK_size
+                    ColorRGB = BANK_color
+                    Alpha = 1
+                    ColorMultiplier = 1
+                    Rotation = $/VFX_Bank/RandomUnit
+                    CustomFloat_2 = Bank_FadeInTime + 0.01
+                    Position = float3[0,0,0]
+                ),
+            ]
+
+        )
+    )
+
+    Actions =
+    ( <NoSkip> ?
+    [
+    Bomb_Sticker
+    ] :
+    [
+        private SkipMultiLaunch is TSimultaneousActionWithMultiLaunchLimit
+        (
+            RadiusForMultiLaunchSkip     = BANK_size * 0.15 // uniquement pour filtrer des impacts a peu pres au même endroit.
+            DurationForMultiLaunchSkip   = 3
+            MaxLaunchInFrame  = 50
+            MaxLaunchInRadius = 1
+            Actions =
+            [
+            Bomb_Sticker
+            ]
+        )
+    ]
+    )
+    MaxDuration = 60
+)

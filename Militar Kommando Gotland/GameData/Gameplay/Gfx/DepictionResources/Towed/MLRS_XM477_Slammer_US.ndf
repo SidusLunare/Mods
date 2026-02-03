@@ -1,0 +1,3 @@
+export Modele_MLRS_XM477_Slammer_US is TResourceMesh( Mesh="GameData:/Assets/3D/Units/US/Canon/MLRS_XM477_SLAMMER/MLRS_XM477_SLAMMER.fbx")
+export Modele_MLRS_XM477_Slammer_US_MID is TResourceMesh( Mesh="GameData:/Assets/3D/Units/US/Canon/MLRS_XM477_SLAMMER_MID/MLRS_XM477_SLAMMER_MID.fbx")
+export Modele_MLRS_XM477_Slammer_US_LOW is TResourceMesh( Mesh="GameData:/Assets/3D/Units/US/Canon/MLRS_XM477_SLAMMER_LOW/MLRS_XM477_SLAMMER_LOW.fbx")

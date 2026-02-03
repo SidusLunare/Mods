@@ -1,0 +1,131 @@
+
+export Test_Fx_Flare is Simultaneous
+(
+    Actions =
+    [
+        WaitInSec(Duration = 30),
+        Template_ActionCall(
+
+            NamedParameters = MAP[
+                    ('parInitialSpeed',     float3[0,0,0]),
+                    ('parTimeBetweenFlare', 0.5),]
+            Action = Fx_Flare
+         ),
+        Template_ActionCall(
+
+            NamedParameters = MAP[
+                    ('parInitialSpeed',     float3[100000,0,0]),
+                    ('parTimeBetweenFlare', 0.5),
+                    ]
+            Action = Fx_Flare
+         )
+    ]
+)
+
+export Launch_FX_Flare is TActionCall
+(
+    LocalVariables =
+    [
+        parInitialSpeed is TPinnableValue ( ExpectedType : float3 InitialValue = GenFloat3[10000, 0, 0]),
+    ]
+    NamedParams = MAP[('parInitialSpeed', parInitialSpeed),]
+    Action = Fx_Flare
+)
+
+
+export Fx_Flare_Double_Sinusoidal is SimultaneousActionDeclaration
+(
+    Params =
+    [
+        private parInitialSpeed is Template_Param_Float3 (),
+        private parTimeBetweenFlare is Template_Param_Float (),
+    ]
+    Actions =
+        [
+            TActionCall
+            (
+                NamedParams = MAP[
+                                    ('parInitialSpeed',     parInitialSpeed),
+                                    ('parTimeBetweenFlare', parTimeBetweenFlare),
+                                    ('parVerticalSpeed',    float3[0,0,7000]),]
+                Action = Fx_Flare
+            ),
+            TActionCall
+            (
+                NamedParams = MAP[
+                                    ('parInitialSpeed',     parInitialSpeed),
+                                    ('parTimeBetweenFlare', parTimeBetweenFlare),
+                                    ('parVerticalSpeed',    float3[0,0,7000]),]
+                Action = Fx_Flare
+            ),
+
+        ]
+)
+
+export Fx_Flare is SimultaneousActionDeclaration
+(
+    Params =
+    [
+        private parInitialSpeed     is Template_Param_Float3 ( DefaultValue = float3[0, 0, 0] ),
+        private parTimeBetweenFlare is Template_Param_Float  ( DefaultValue = 1 ),
+        private parVerticalSpeed    is Template_Param_Float3 ( DefaultValue = float3[0,0,-3500]),
+        private parLateralSpeed     is Template_Param_Float3 ( DefaultValue = float3[0,0,0]),
+    ]
+    LocalVariables =
+    [
+        lateralSpeed is Template_Pinnable(InitialValue = MobileDirection * parLateralSpeed),
+    ]
+
+    Actions =
+    [
+        Template_RepeatSimultaneous
+        (
+            IterationCount = 100
+            WaitBetweenRepeats = parTimeBetweenFlare
+            Actions =
+            [
+                Template_PinValue
+                (
+                    ValueToPin = lateralSpeed
+                    Value = MobileDirection  * parLateralSpeed
+                ),
+                Template_FireAndForget
+                (
+                    ForgetOrientation = true
+                    Action = TCompetitionAction
+                    (
+                        LocalVariables =
+                        [
+                            speed is Template_Pinnable(InitialValue = lateralSpeed + parInitialSpeed * (1 + 0.3 * MinusOneToOneRandomSphereVolume)), // random vitesse initale
+                            friction is Template_Pinnable(InitialValue = RandomRange[0.8, 1.25]), // random friction
+                            acceleration is Template_Pinnable(InitialValue = parVerticalSpeed + MapWind * RandomRange[0.8, 1.25]), // random acceleration
+                        ]
+                        Mobile = Template_MobileWithLocalRepereMatrixFactory
+                        (
+                            Position = MinusOneToOneRandomSphereVolume * 500 // 500, random position
+                            DoNotInheritCentroid = true
+                            CentroidRelative = false
+                        )
+                        Actions =
+                        [
+                            TActionDescriptorTranslateMobile
+                            (
+                                exponential is (exp[-friction * $/VFX_Bank/ActionElapsedTime])
+                                coef is (acceleration - friction * speed)
+                                Function = (acceleration * (friction * $/VFX_Bank/ActionElapsedTime + exponential) - friction * speed * exponential - acceleration + friction * speed) div sqr[friction]
+                                PeriodInSec = 0.001
+                                Relative = true
+                                DurationInSec = RandomRange[2.5, 5] //4
+                                Slice = false
+                            ),
+                            TActionCall
+                            (
+                                Action = fx_defensive_flare
+                            ),
+                        ]
+                    )
+                )
+            ]
+        )
+    ]
+)

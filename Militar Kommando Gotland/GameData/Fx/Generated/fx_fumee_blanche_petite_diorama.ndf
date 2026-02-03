@@ -1,0 +1,34 @@
+// Ne pas éditer, ce fichier est généré
+
+export fx_fumee_blanche_petite_diorama is Simultaneous
+(
+    Actions = ActionList is
+    [
+        TSimultaneousAction
+        (
+            Mobile = nil
+            Actions =
+            [
+                TActionCall
+                (
+                    Action = $/VFX_Bank/AoA_FX_BANK_FireAndDarkSmoke_with_wind_simple
+                    NamedParams = MAP[
+                        ( 'Feu_Size_Mul', 0 ),
+                        ( 'FireCountMul', 0.5 ),
+                        ( 'FireDuration', 0 ),
+                        ( 'Ground_Size', 0.75 ),
+                        ( 'SmokeColor', float3[0.2705882,0.2705882,0.2705882] ),
+                        ( 'SmokeCountMul', 6 ),
+                        ( 'SmokeDuration', 10 ),
+                        ( 'SmokeOpacity', 0.75 ),
+                        ( 'SmokeSpeed', 0.15 ),
+                        ( 'SmokeWindFactor', 10 ),
+                        ( 'Smoke_Size_Mul', 1 ),
+                        ( 'SparksCountMul', 0 ),
+                        ( 'SparksDuration', 0 ),
+                    ]
+                ),
+            ]
+        ),
+    ]
+)

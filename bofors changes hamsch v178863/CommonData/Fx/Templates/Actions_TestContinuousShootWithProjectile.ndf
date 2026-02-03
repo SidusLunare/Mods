@@ -1,0 +1,35 @@
+template Template_TestContinuousProjectileShot
+[
+    parDestination      : TEvaluable = nil,
+    parTravelDuration   : TEvaluable = nil,
+    parTirTendu         : boolean = false,
+    parTirPhysic        : boolean = false,
+    parFluidFriction    : TEvaluable = nil,
+    parInitialSpeed     : TEvaluable = nil,
+    parTActionShotToCall: TActionDescriptor
+]is TCompetitionAction
+(
+    Actions =
+    [
+        TSimultaneousAction
+        (
+            Actions =
+            [
+                TActionCall
+                (
+                    Action = <parTActionShotToCall>
+                    NamedParams =
+                    MAP[
+                        ('parDestination', <parDestination>),
+                        ('parTravelDuration', <parTravelDuration>),
+                        ('parTirTendu', <parTirTendu>),
+                        ('parTirPhysic', <parTirPhysic>),
+                        ('parFluidFriction', <parFluidFriction>),
+                        ('parInitialSpeed', <parInitialSpeed>),
+                    ]
+                ),
+                TWaitInSec(Duration = 1)
+            ]
+        )
+    ]
+)

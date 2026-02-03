@@ -1,0 +1,6 @@
+GameData:/Localisation/Database/Translations.csv
+GameData:/Localisation/Militar Kommando Gotland/COMPANIES.csv
+GameData:/Localisation/Militar Kommando Gotland/INTERFACE_INGAME.csv
+GameData:/Localisation/Militar Kommando Gotland/INTERFACE_OUTGAME.csv
+GameData:/Localisation/Militar Kommando Gotland/PLATOONS.csv
+GameData:/Localisation/Militar Kommando Gotland/UNITS.csv

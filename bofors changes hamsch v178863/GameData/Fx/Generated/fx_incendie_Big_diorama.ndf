@@ -1,0 +1,152 @@
+// Ne pas éditer, ce fichier est généré
+
+export fx_incendie_Big_diorama is Simultaneous
+(
+    Actions = ActionList is
+    [
+        TSimultaneousAction
+        (
+            Mobile = TMobileWithLocalRepereMatrixFactory
+            (
+                Position = float3[0,0,-250]
+            )
+            Actions =
+            [
+                TActionCall
+                (
+                    Action = $/VFX_Bank/AoA_FX_BANK_FireAndDarkSmoke_Simple
+                    NamedParams = MAP[
+                        ( 'Feu_Size_Mul', 0 ),
+                        ( 'FireCountMul', 0 ),
+                        ( 'FireDuration', 0 ),
+                        ( 'Ground_Size', 8 ),
+                        ( 'SmokeCountMul', 1 ),
+                        ( 'SmokeDuration', 6 ),
+                        ( 'SmokeOpacity', 0.25 ),
+                        ( 'SmokeSpeed', 0.25 ),
+                        ( 'Smoke_Size_Mul', 10 ),
+                        ( 'SparksCountMul', 0 ),
+                        ( 'SparksDuration', 0 ),
+                    ]
+                ),
+                TActionCall
+                (
+                    Action = $/VFX_Bank/AoA_FX_BANK_FireAndDarkSmoke_Simple
+                    NamedParams = MAP[
+                        ( 'Feu_Size_Mul', 2 ),
+                        ( 'FireCountMul', 4 ),
+                        ( 'FireDuration', 2 ),
+                        ( 'Ground_Size', 6 ),
+                        ( 'SmokeCountMul', 1 ),
+                        ( 'SmokeDuration', 25 ),
+                        ( 'SmokeOpacity', 0.5 ),
+                        ( 'SmokeSpeed', 3 ),
+                        ( 'Smoke_Size_Mul', 8 ),
+                        ( 'SparksCountMul', 6 ),
+                        ( 'SparksDuration', 15 ),
+                    ]
+                ),
+                TActionCall
+                (
+                    Action = $/VFX_Bank/AoA_FX_BANK_FireAndDarkSmoke_Simple
+                    NamedParams = MAP[
+                        ( 'Feu_Size_Mul', 1 ),
+                        ( 'FireCountMul', 0 ),
+                        ( 'FireDuration', 0 ),
+                        ( 'Ground_Size', 8 ),
+                        ( 'SmokeCountMul', 1 ),
+                        ( 'SmokeDuration', 7 ),
+                        ( 'SmokeOpacity', 0.25 ),
+                        ( 'SmokeSpeed', 2 ),
+                        ( 'Smoke_Size_Mul', 8 ),
+                        ( 'SparksCountMul', 0 ),
+                        ( 'SparksDuration', 0 ),
+                    ]
+                ),
+            ]
+        ),
+        TSimultaneousAction
+        (
+            Mobile = TMobileWithLocalRepereMatrixFactory
+            (
+                Position = float3[0,0,-246]
+                EulerAngles = float3[1.570522,0,0]
+            )
+            Actions =
+            [
+                TActionCall
+                (
+                    Action = $/VFX_Bank/AoA_FX_BANK_FireAndDarkSmoke_Simple
+                    NamedParams = MAP[
+                        ( 'Feu_Size_Mul', 1.5 ),
+                        ( 'FireCountMul', 6 ),
+                        ( 'FireDuration', 2 ),
+                        ( 'Ground_Size', 6 ),
+                        ( 'SmokeCountMul', 2 ),
+                        ( 'SmokeDuration', 25 ),
+                        ( 'SmokeOpacity', 0.3 ),
+                        ( 'SmokeSpeed', 2 ),
+                        ( 'Smoke_Size_Mul', 4 ),
+                        ( 'SparksCountMul', 4 ),
+                        ( 'SparksDuration', 15 ),
+                    ]
+                ),
+            ]
+        ),
+        TSimultaneousAction
+        (
+            Mobile = nil
+            Actions =
+            [
+                TActionCall
+                (
+                    Action = $/VFX_Bank/BANK_Light_Follow_Mobile_Random_Flash_Infinite_Simple
+                    NamedParams = MAP[
+                        ( 'parColor', float3[0.4313726,0.1176471,0] ),
+                        ( 'parHeight', 500 ),
+                        ( 'parOpacity', 0.8 ),
+                        ( 'parSizeLBU', 186.0465 ),
+                    ]
+                ),
+                TActionCall
+                (
+                    Action = $/VFX_Bank/SFXAction_FireLoop
+                    NamedParams = MAP[
+                    ]
+                ),
+                TActionCall
+                (
+                    Action = $/VFX_Bank/BANK_VerticalSmoke_Simple
+                    NamedParams = MAP[
+                        ( 'parColor', float3[0.1647059,0.1647059,0.1647059] ),
+                        ( 'parDensity', 8 ),
+                        ( 'parFluidFriction', 0.1 ),
+                        ( 'parLifetime', 10 ),
+                        ( 'parOpacity', 1 ),
+                        ( 'parSize', 1400 ),
+                        ( 'parSizeMultiplier', 12 ),
+                        ( 'parSpeed', 800 ),
+                        ( 'parVerticalAcceleration', 600 ),
+                        ( 'parWindFactor', 2.5 ),
+                    ]
+                ),
+                TActionCall
+                (
+                    Action = $/VFX_Bank/BANK_VerticalSmoke_Simple
+                    NamedParams = MAP[
+                        ( 'parColor', float3[0.1882353,0.1882353,0.1882353] ),
+                        ( 'parDensity', 3 ),
+                        ( 'parFluidFriction', 0.25 ),
+                        ( 'parLifetime', 25 ),
+                        ( 'parOpacity', 0.6 ),
+                        ( 'parSize', 1400 ),
+                        ( 'parSizeMultiplier', 14 ),
+                        ( 'parSpeed', 800 ),
+                        ( 'parVerticalAcceleration', 650 ),
+                        ( 'parWindFactor', 2.5 ),
+                    ]
+                ),
+            ]
+        ),
+    ]
+)

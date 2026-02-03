@@ -1,0 +1,563 @@
+// GameData:/Fx/Bank/Basics/AoA_BANK_FireBalls.ndf
+// Call Test_FireBalls in FX Tester
+// ! FireBalls !
+
+export BANK_FireBalls_HQTex_Orientable_Simple_Test is Competition
+(
+    Mobile = MobileUnCentroid()
+    Actions =
+    [
+        Template_ActionCall
+        (
+            Action = BANK_FireBalls_HQTex_Orientable_Simple
+            NamedParameters = MAP[
+            ]
+        ),
+    ]
+)
+
+
+export BANK_FireBalls_Simple is ActionCallWithParameters
+(
+    Action = BANK_FireBalls
+    Params =
+    [
+        private parColor                        is Template_Param_Float3 (),
+        private parCount                        is Template_Param_Float  (),
+        private parDispersion                   is Template_Param_Float  (),
+        private parDuration                     is Template_Param_Float  (),
+        private parLuminosite                   is Template_Param_Float  (),
+        private parOpacity                      is Template_Param_Float  (),
+        private parSize                         is Template_Param_Float  (),
+        private parDeltaPositionMobileDirection is Template_Param_Float  ( DefaultValue = 0.),
+        private parDeltaPositionAdditif         is Template_Param_Float3 ( DefaultValue = float3[0., 0., 0.]),
+        private parInitialDelay          is Template_Param_Float  ( DefaultValue = 0 ), //*
+    ]
+    NamedParameters = MAP
+    [
+        ( 'parColor'            , LinearColor[parColor] ),
+        ( 'parCount'            , parCount ),
+        ( 'parDeltaPosition'    , float3[0.,0.,1.0] * parDeltaPositionMobileDirection + parDeltaPositionAdditif ),
+        ( 'parDuration'         , parDuration * RandomRange[0.8, 1.2] ),
+        ( 'parLuminosite'       , parLuminosite * 0.1),
+        ( 'parOpacity'          , parOpacity ),
+        ( 'parSize'             , parSize ),
+        ( 'parStartPosition'    , parDispersion * MinusOneToOneRandomDisc ),
+        ( 'parInitialDelay', parInitialDelay ), //*
+    ]
+)
+
+export BANK_FireBalls is SimultaneousActionDeclaration
+(
+    Params =
+    [
+        parCount    is Template_Param_Float( DefaultValue = 10 ),
+        parDuration is Template_Param_Float (  DefaultValue = RandomRange[0.8,1.4] ),
+        parSize     is Template_Param_Float ( DefaultValue = 1300 ),
+        parStartPosition is Template_Param_Float3 ( DefaultValue = MinusOneToOneRandomDisc * 700 ),
+        parDeltaPosition    is Template_Param_Float3 ( DefaultValue = 0 ),
+        parSpeed    is Template_Param_Float3 ( DefaultValue = 0 ),
+        parColor    is Template_Param_Float3 ( DefaultValue = LinearColor[1,0.9,0.5] ),
+        parLuminosite     is Template_Param_Float ( DefaultValue = 0.5),
+        parOpacity     is Template_Param_Float ( DefaultValue = 0.0),
+        parInitialDelay          is Template_Param_Float  ( DefaultValue = 0 ), //*
+    ]
+    Actions =
+    [
+        WaitInSec(Duration = parInitialDelay),
+        ParticleBombSpawner
+        (
+            ParticleMaxDurationForSpawnSkip = parDuration
+            Count = parCount
+            Spawner = ParticleSpawner
+            (
+                ParticleLifetime = parDuration
+                Initialisers =
+                [
+                    ParticleInitialiserList
+                    (
+                        Alpha = 1.0
+
+                        Position = float3[0,0,1] * ParticleSize * 0.4 + parStartPosition
+                        Size = parSize
+                        Opacity = parOpacity
+                        EmissivePower = parLuminosite * 2
+                        ColorModifier = parColor
+                        CustomFloat_1 = RandomUnit
+                        CustomFloat_2 = ParticleEmissivePower
+                        CustomFloat_3 = ParticleOpacity
+                        //Rotation = RandomUnit
+                        CustomFloat3_1 = ParticlePosition + SpawnerPosition
+                        CustomFloat3_2 = parDeltaPosition + (ParticleCustomFloat3_1 - SpawnerPosition) * parSpeed
+                        ZBias = 255
+                    ),
+                ]
+                ParticleDescriptor = ParticleDescriptor
+                (
+                    RenderInfo = ParticleRenderInfo
+                    (
+                        ZTest = True
+                        ZWrite = False
+                        SortTriangles = True
+                        Use3DRotation = True
+                        TextureName = 'GameData:/Assets/2D/Fx/anim_explosion_03_002.png'
+                        Calque = 'Particles'
+                        EmissiveParticle = true
+                    )
+                    Evolvers = ParticleStandardEvolverList
+                    (
+                        Position = ParticleCustomFloat3_1 + ParticleCustomFloat3_2 * ParticleLifeRatio
+                        Animation = ParticleLifeRatio
+                        EmissivePower = sqr[ParticleRemainingLifeRatio] * ParticleCustomFloat_2
+                        Opacity = sqr[ParticleRemainingLifeRatio] * ParticleCustomFloat_3
+                    )
+                    ParticleRenderer = $/VFX_Bank/LitParticleRenderer
+                )
+                PositionIndependentFromEmitter = False
+            )
+        ),
+    ]
+)
+
+export BANK_FireBalls_HQTex_Simple is ActionCallWithParameters
+(
+    Action = BANK_FireBalls_HQTex
+    Params =
+    [
+        private parCount         is Template_Param_Float ( DefaultValue = 5 ),
+        private parDuration      is Template_Param_Float ( DefaultValue = 4 ),
+        private parSize          is Template_Param_Float ( DefaultValue = 2000 ),
+        private parStartPosition is Template_Param_Float3( DefaultValue = float3[0,0,400]),
+        private parDeltaPosition is Template_Param_Float3( DefaultValue = float3[0, 0, 0]),
+        private parSpeed         is Template_Param_Float ( DefaultValue = 0 ),
+        private parColor         is Template_Param_Float3( DefaultValue = float3[1,0.8,0.7] ),
+        private parLuminosite    is Template_Param_Float ( DefaultValue = 1),
+        private parOpacity       is Template_Param_Float ( DefaultValue = 0.3),
+    ]
+    NamedParameters = MAP
+    [
+        ( 'parCount'            , parCount ),
+        ( 'parDuration'         , parDuration * RandomRange[0.6, 1.2] ),
+        ( 'parSize'             , parSize ),
+        ( 'parStartPosition'    , parStartPosition ),
+        ( 'parDeltaPosition'    , parDeltaPosition  ),
+        ( 'parSpeed'            , parSpeed ),
+        ( 'parColor'            , LinearColor[parColor] ),
+        ( 'parLuminosite'       , parLuminosite * 0.1),
+        ( 'parOpacity'          , parOpacity ),
+    ]
+)
+
+export BANK_FireBalls_HQTex is SimultaneousActionDeclaration
+(
+    Params =
+    [
+        private parCount         is Template_Param_Float ( DefaultValue = 10 ),
+        private parDuration      is Template_Param_Float ( DefaultValue = RandomRange[0.8,1.4] ),
+        private parSize          is Template_Param_Float ( DefaultValue = 1300 ),
+        private parStartPosition is Template_Param_Float3( DefaultValue = MinusOneToOneRandomDisc * 700 ),
+        private parDeltaPosition is Template_Param_Float3( DefaultValue = 0 ),
+        private parSpeed         is Template_Param_Float ( DefaultValue = 0 ),
+        private parColor         is Template_Param_Float3( DefaultValue = LinearColor[1,0.9,0.5] ),
+        private parLuminosite    is Template_Param_Float ( DefaultValue = 2),
+        private parOpacity       is Template_Param_Float ( DefaultValue = 0.0),
+    ]
+    Actions =
+    [
+        ParticleBombSpawner
+        (
+            ParticleMaxDurationForSpawnSkip = parDuration
+            Count = parCount
+            Spawner = ParticleSpawner
+            (
+                ParticleLifetime = parDuration
+                Initialisers =
+                [
+                    ParticleInitialiserList
+                    (
+                        Alpha = 1.0
+
+                        Position = float3[0,0,1] * ParticleSize * 0.4 + parStartPosition
+                        Size = parSize
+                        Opacity = parOpacity
+                        EmissivePower = parLuminosite
+                        ColorModifier = parColor
+                        CustomFloat_1 = RandomUnit
+                        CustomFloat_2 = ParticleEmissivePower
+                        CustomFloat_3 = parOpacity
+                        Rotation = mod[RandomRange[0.40,0.55]+0.5,1]
+                        CustomFloat3_2 = parDeltaPosition + parSpeed * MobileDirection
+                        ZBias = 0
+                    ),
+                ]
+                PostTransformInitialisers =
+                [
+                    Initialiser_CustomFloat3_1(InitFunction = ParticlePosition)
+                ]
+                ParticleDescriptor = ParticleDescriptor
+                (
+                    RenderInfo = LitParticleRenderInfo
+                    (
+                        TextureName = 'GameData:/Assets/2D/Fx/anim_explosion_swaggy_00004.png'
+                    )
+                    Evolvers = ParticleStandardEvolverList
+                    (
+                        Position = ParticleCustomFloat3_1 + ParticleCustomFloat3_2 * ParticleLifeRatio
+                        Animation = ParticleLifeRatio
+                        EmissivePower = MapToLinearSmoothRect[ParticleLifeRatio, 0, 0.1, 0.1, 0.2] * ParticleCustomFloat_2
+                        Opacity =  MapToLinearSmoothRect[ParticleLifeRatio, 0, 0.1, 0.9, 1] * ParticleCustomFloat_3
+                    )
+                    ParticleRenderer = $/VFX_Bank/LitParticleRenderer
+                )
+                PositionIndependentFromEmitter = False
+            )
+        ),
+    ]
+)
+
+export BANK_FireBalls_HQTex_Orientable_Simple is ActionCallWithParameters
+(
+    Action = BANK_FireBalls_HQTex_Orientable
+    Params =
+    [
+        private parCount         is Template_Param_Float ( DefaultValue = 5 ),
+        private parDuration      is Template_Param_Float ( DefaultValue = 1 ),
+        private parSize          is Template_Param_Float ( DefaultValue = 1000 ),
+        private parSizeEnd       is Template_Param_Float ( DefaultValue = 2500 ),
+        private parStartPosition is Template_Param_Float ( DefaultValue = 500),
+        private parDeltaPosition is Template_Param_Float3( DefaultValue = float3[0, 0, 0]),
+        private parSpeed         is Template_Param_Float ( DefaultValue = 1000 ),
+        private parColor         is Template_Param_Float3( DefaultValue = float3[1,0.8,0.7] ),
+        private parLuminosite    is Template_Param_Float ( DefaultValue = 1),
+        private parOpacity       is Template_Param_Float ( DefaultValue = 0.3),
+        private parNarowness     is Template_Param_Float ( DefaultValue = 1.0),
+    ]
+    NamedParameters = MAP
+    [
+        ( 'parCount'            , parCount ),
+        ( 'parDuration'         , parDuration * RandomRange[0.6, 1.2] ),
+        ( 'parSize'             , parSize ),
+        ( 'parSizeEnd'          , parSizeEnd ),
+        ( 'parStartPosition'    , MinusOneToOneRandomDisc * parStartPosition ),
+        ( 'parDeltaPosition'    , parDeltaPosition  ),
+        ( 'parSpeed'            , parSpeed ),
+        ( 'parColor'            , LinearColor[parColor] ),
+        ( 'parLuminosite'       , parLuminosite * 0.1),
+        ( 'parOpacity'          , parOpacity ),
+        ( 'parNarowness'        , parNarowness ),
+    ]
+)
+
+export BANK_FireBalls_HQTex_Orientable is SimultaneousActionDeclaration
+(
+    Params =
+    [
+        private parCount         is Template_Param_Float ( DefaultValue = 10 ),
+        private parDuration      is Template_Param_Float ( DefaultValue = RandomRange[0.8,1.4] ),
+        private parSize          is Template_Param_Float ( DefaultValue = 1300 ),
+        private parSizeEnd       is Template_Param_Float ( DefaultValue = 1300 ),
+        private parStartPosition is Template_Param_Float3( DefaultValue = MinusOneToOneRandomDisc * 700 ),
+        private parDeltaPosition is Template_Param_Float3( DefaultValue = 0 ),
+        private parSpeed         is Template_Param_Float ( DefaultValue = 0 ),
+        private parColor         is Template_Param_Float3( DefaultValue = LinearColor[1,0.9,0.5] ),
+        private parLuminosite    is Template_Param_Float ( DefaultValue = 2),
+        private parOpacity       is Template_Param_Float ( DefaultValue = 0.0),
+        private parNarowness     is Template_Param_Float ( DefaultValue = 1.0),
+    ]
+    Actions =
+    [
+        ParticleBombSpawner
+        (
+            ParticleMaxDurationForSpawnSkip = parDuration
+            Count = parCount
+            Spawner = ParticleSpawner
+            (
+                ParticleLifetime = parDuration
+                Initialisers =
+                [
+                    ParticleInitialiserList
+                    (
+                        Position =  MobileDirection * ParticleSize * 0.4 + parStartPosition
+                        Alpha = 1.0
+
+                        Size = parSize
+                        Rotation = RandomUnit
+                        Opacity = parOpacity
+                        EmissivePower = parLuminosite
+                        ColorModifier = parColor
+                        CustomFloat_1 = parSize
+                        CustomFloat_2 = ParticleEmissivePower
+                        CustomFloat_3 = parOpacity
+                        CustomFloat_4 = parSizeEnd - parSize
+                        CustomFloat3_1 = ParticlePosition + SpawnerPosition
+                        CustomFloat3_2 = parDeltaPosition + parSpeed * OrientAndNarrowRandomValue[MinusOneToOneRandomSphereVolume, MobileDirection, parNarowness]
+                    ),
+                ]
+                ParticleDescriptor = ParticleDescriptor
+                (
+                    RenderInfo = ParticleRenderInfo
+                    (
+                        ZTest = True
+                        ZWrite = False
+                        SortTriangles = True
+                        Use3DRotation = True
+                        TextureName = 'GameData:/Assets/2D/Fx/anim_explosion_03_002.png'
+                        Calque = 'Particles'
+                        EmissiveParticle = true
+                    )
+                    Evolvers = ParticleStandardEvolverList
+                    (
+                        Size = ParticleCustomFloat_1 + ParticleLifeRatio * ParticleCustomFloat_4
+                        Position = ParticleCustomFloat3_1 + ParticleCustomFloat3_2 * sqrt[ParticleLifeRatio]
+                        Animation = ParticleLifeRatio
+                        EmissivePower = MapToLinearSmoothRect[ParticleLifeRatio, 0, 0.1, 0.1, 1] * ParticleCustomFloat_2
+                        // Opacity =  MapToLinearSmoothRect[ParticleLifeRatio, 0, 0.1, 0.9, 1] * ParticleCustomFloat_3
+                    )
+                    ParticleRenderer = $/VFX_Bank/LitParticleRenderer
+                )
+                PositionIndependentFromEmitter = False
+            )
+        ),
+        WaitInSec(Duration = 2),
+    ]
+)
+
+export BANK_FireBalls_Alt_Simple is ActionCallWithParameters
+(
+    Action = BANK_FireBalls_Alt
+    Params =
+    [
+        private parColor      is Template_Param_Float3 (),
+        private parCount      is Template_Param_Float  (),
+        private parDispersion is Template_Param_Float  (),
+        private parDuration   is Template_Param_Float  (),
+        private parLuminosite is Template_Param_Float  (),
+        private parSize       is Template_Param_Float  (),
+        private parDeltaMin   is Template_Param_Float ( DefaultValue = 0),
+        private parDeltaMax   is Template_Param_Float ( DefaultValue = 0),
+    ]
+    NamedParameters = MAP
+    [
+        ( 'parColor'            , LinearColor[parColor] ),
+        ( 'parCount'            , parCount ),
+        ( 'parDeltaPosition'    , RandomRange[parDeltaMin,parDeltaMax] ),
+        ( 'parDuration'         , parDuration * RandomRange[0.8, 1.4] ),
+        ( 'parLuminosite'       , parLuminosite * 0.1),
+        ( 'parSize'             , parSize ),
+        ( 'parStartPosition'    , parDispersion * MinusOneToOneRandomDisc ),
+    ]
+)
+
+export BANK_FireBalls_Oriented_Simple is ActionCallWithParameters
+(
+    Action = BANK_FireBalls_Oriented
+    Params =
+    [
+        parCount         is Template_Param_Float ( DefaultValue = 10 ),
+        parDuration      is Template_Param_Float ( DefaultValue = RandomRange[0.8,1.4] ),
+        parSize          is Template_Param_Float ( DefaultValue = 1300 ),
+        parStartPosition is Template_Param_Float3( DefaultValue = MinusOneToOneRandomDisc * 700 ),
+        parDeltaPosition is Template_Param_Float3( DefaultValue = 0 ),
+        parSpeed         is Template_Param_Float3( DefaultValue = 0 ),
+        parColor         is Template_Param_Float3( DefaultValue = LinearColor[1,0.9,0.5] ),
+        parLuminosite    is Template_Param_Float ( DefaultValue = 0.5),
+        parOpacity       is Template_Param_Float ( DefaultValue = 0.0),
+    ]
+    NamedParameters = MAP
+    [
+        ( 'parCount'         , parCount),
+        ( 'parDuration'      , parDuration),
+        ( 'parSize'          , parSize),
+        ( 'parStartPosition' , parStartPosition),
+        ( 'parDeltaPosition' , parDeltaPosition),
+        ( 'parSpeed'         , parSpeed),
+        ( 'parColor'         , parColor),
+        ( 'parLuminosite'    , parLuminosite * 0.1),
+        ( 'parOpacity'       , parOpacity),
+    ]
+)
+
+export BANK_FireBalls_Oriented is SimultaneousActionDeclaration
+(
+    Params =
+    [
+        parCount    is Template_Param_Float( DefaultValue = 10 ),
+        parDuration is Template_Param_Float (  DefaultValue = RandomRange[0.8,1.4] ),
+        parSize     is Template_Param_Float ( DefaultValue = 1300 ),
+        parStartPosition is Template_Param_Float3 ( DefaultValue = MinusOneToOneRandomDisc * 700 ),
+        parDeltaPosition    is Template_Param_Float3 ( DefaultValue = 0 ),
+        parSpeed    is Template_Param_Float3 ( DefaultValue = 0 ),
+        parColor    is Template_Param_Float3 ( DefaultValue = LinearColor[1,0.9,0.5] ),
+        parLuminosite     is Template_Param_Float ( DefaultValue = 0.5),
+        parOpacity     is Template_Param_Float ( DefaultValue = 0.0),
+    ]
+    Actions =
+    [
+        ParticleBombSpawner
+        (
+            ParticleMaxDurationForSpawnSkip = parDuration
+            Count = parCount
+            Spawner = ParticleSpawner
+            (
+                ParticleLifetime = parDuration
+                Initialisers =
+                [
+                    ParticleInitialiserList
+                    (
+                        Alpha = 1.0
+
+                        Position = parStartPosition + ParticleSize * 1.25 * $/VFX_Bank/MobileDirection
+                        Size = parSize
+                        Opacity = parOpacity
+                        EmissivePower = parLuminosite * 2
+                        ColorModifier = parColor
+                        CustomFloat_1 = RandomUnit
+                        CustomFloat_2 = ParticleEmissivePower
+                        CustomFloat_3 = ParticleOpacity
+                        CustomFloat3_1 = ParticlePosition + SpawnerPosition
+                        CustomFloat3_2 = parDeltaPosition + (ParticleCustomFloat3_1 - SpawnerPosition) * parSpeed
+                        ZBias = 255
+                        Direction = $/VFX_Bank/MobileDirection
+                        Stretching = 2.5
+                    ),
+                ]
+                ParticleDescriptor = ParticleDescriptor
+                (
+                    RenderInfo = ParticleRenderInfo
+                    (
+                        ZTest = True
+                        ZWrite = False
+                        SortTriangles = True
+                        Use3DRotation = True
+                        TextureName = 'GameData:/Assets/2D/Fx/anim_explosion_01_003.png'
+                        Calque = 'Particles'
+                        EmissiveParticle = true
+                    )
+                    Evolvers = ParticleStandardEvolverList
+                    (
+                        Position = ParticleCustomFloat3_1 + ParticleCustomFloat3_2 * ParticleLifeRatio
+                        Animation = ParticleLifeRatio
+                        EmissivePower = sqr[ParticleRemainingLifeRatio] * ParticleCustomFloat_2
+                        Opacity = sqrt[ParticleRemainingLifeRatio] * ParticleCustomFloat_3
+                    )
+                    ParticleRenderer = $/VFX_Bank/LitParticleRenderer
+                )
+                PositionIndependentFromEmitter = False
+            )
+        ),
+        ParticleBombSpawner
+        (
+            ParticleMaxDurationForSpawnSkip = parDuration
+            Count = parCount
+            Spawner = ParticleSpawner
+            (
+                ParticleLifetime = parDuration
+                Initialisers =
+                [
+                    ParticleInitialiserList
+                    (
+                        Alpha = 1.0
+
+                        Position = parStartPosition + ParticleSize * 0.25 * $/VFX_Bank/MobileDirection
+                        Size = parSize * 0.9
+                        Opacity = parOpacity
+                        EmissivePower = parLuminosite * 2
+                        ColorModifier = parColor
+                        CustomFloat_1 = RandomUnit
+                        CustomFloat_2 = ParticleEmissivePower
+                        CustomFloat_3 = ParticleOpacity
+                        Rotation = RandomUnit
+                        CustomFloat3_1 = ParticlePosition + SpawnerPosition
+                        CustomFloat3_2 = float3[0,0,1] * parDeltaPosition + (ParticleCustomFloat3_1 - SpawnerPosition) * parSpeed
+                        ZBias = 255
+                    ),
+                ]
+                ParticleDescriptor = ParticleDescriptor
+                (
+                    RenderInfo = ParticleRenderInfo
+                    (
+                        ZTest = True
+                        ZWrite = False
+                        SortTriangles = True
+                        Use3DRotation = True
+                        TextureName = 'GameData:/Assets/2D/Fx/anim_explosion_03_002.png'
+                        Calque = 'Particles'
+                        EmissiveParticle = true
+                    )
+                    Evolvers = ParticleStandardEvolverList
+                    (
+                        Position = ParticleCustomFloat3_1 + ParticleCustomFloat3_2 * ParticleLifeRatio
+                        Animation = ParticleLifeRatio
+                        EmissivePower = sqr[ParticleRemainingLifeRatio] * ParticleCustomFloat_2
+                        Opacity = sqrt[ParticleRemainingLifeRatio] * ParticleCustomFloat_3
+                    )
+                    ParticleRenderer = $/VFX_Bank/LitParticleRenderer
+                )
+                PositionIndependentFromEmitter = False
+            )
+        ),
+    ]
+)
+
+export BANK_FireBalls_Alt is SimultaneousActionDeclaration
+(
+    Params = [
+        parCount    is Template_Param_Float( DefaultValue = 10 ),
+        parDuration is Template_Param_Float (  DefaultValue = RandomRange[0.8,1.4] ),
+        parSize     is Template_Param_Float ( DefaultValue = 1300 ),
+        parStartPosition is Template_Param_Float3 ( DefaultValue = MinusOneToOneRandomDisc * 700 ),
+        parDeltaPosition    is Template_Param_Float3 ( DefaultValue = 0 ),
+        parColor    is Template_Param_Float3 ( DefaultValue = LinearColor[1,0.9,0.5] ),
+        parLuminosite     is Template_Param_Float ( DefaultValue = 0.5),
+    ]
+    Actions =
+    [
+        ParticleSpraySpawnerWithEvaluable
+        (
+            Frequency = parCount div parDuration
+            DurationInSec = parDuration
+            //Count = parCount
+            Spawner = ParticleSpawner
+            (
+                ParticleLifetime = parDuration * 0.5
+                Initialisers =
+                [
+                    ParticleInitialiserList
+                    (
+                        Alpha = 1.0
+
+                        CustomFloat_1 = RandomUnit
+                        Position = parStartPosition + parDeltaPosition * float3[1.00, 1.00, 0.0] * Clamp[ActionLifeRatio*2,0,1]
+                        Size = parSize
+                        Opacity = 0
+                        EmissivePower = parLuminosite
+                        ColorModifier = parColor
+                        CustomFloat3_2 = parDeltaPosition
+                        Rotation = RandomUnit
+                        CustomFloat_2 = parSize
+                    ),
+                ]
+                ParticleDescriptor = ParticleDescriptor
+                (
+                    ParticleRenderer = $/VFX_Bank/LitParticleRenderer
+                    RenderInfo = ParticleRenderInfo
+                    (
+                        ZTest = True
+                        ZWrite = False
+                        SortTriangles = True
+                        Use3DRotation = True
+                        TextureName = 'GameData:/Assets/2D/Fx/anim_explosion_03_002.png'
+                        Calque = 'Particles'
+                        EmissiveParticle = true
+                    )
+
+                    Evolvers = ParticleStandardEvolverList
+                    (
+                        Size = ParticleLifeRatio * ParticleCustomFloat_2
+                        Animation = ParticleLifeRatio
+                    )
+                )
+            )
+        )
+    ]
+)

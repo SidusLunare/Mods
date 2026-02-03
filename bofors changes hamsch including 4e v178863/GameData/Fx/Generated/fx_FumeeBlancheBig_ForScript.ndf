@@ -1,0 +1,242 @@
+// Ne pas éditer, ce fichier est généré
+
+export fx_FumeeBlancheBig_ForScript is Simultaneous
+(
+    Actions = ActionList is
+    [
+        TSimultaneousAction
+        (
+            Mobile = TMobileWithLocalRepereMatrixFactory
+            (
+                Position = float3[2226,-2013,-246]
+                EulerAngles = float3[1.570522,0,0]
+            )
+            Actions =
+            [
+                TActionCall
+                (
+                    Action = $/VFX_Bank/AoA_FX_BANK_FireAndDarkSmoke_Simple
+                    NamedParams = MAP[
+                        ( 'Feu_Size_Mul', 0 ),
+                        ( 'FireCountMul', 0 ),
+                        ( 'FireDuration', 2 ),
+                        ( 'Ground_Size', 10 ),
+                        ( 'SmokeCountMul', 2 ),
+                        ( 'SmokeDuration', 60 ),
+                        ( 'SmokeOpacity', 0.25 ),
+                        ( 'SmokeSpeed', 2 ),
+                        ( 'Smoke_Size_Mul', 10 ),
+                        ( 'SparksCountMul', 0 ),
+                        ( 'SparksDuration', 0 ),
+                    ]
+                ),
+            ]
+        ),
+        TSimultaneousAction
+        (
+            Mobile = TMobileWithLocalRepereMatrixFactory
+            (
+                Position = float3[-2225,2464,-246]
+                EulerAngles = float3[1.570522,0,0]
+            )
+            Actions =
+            [
+                TActionCall
+                (
+                    Action = $/VFX_Bank/AoA_FX_BANK_FireAndDarkSmoke_Simple
+                    NamedParams = MAP[
+                        ( 'Feu_Size_Mul', 0 ),
+                        ( 'FireCountMul', 0 ),
+                        ( 'FireDuration', 0 ),
+                        ( 'Ground_Size', 12 ),
+                        ( 'SmokeCountMul', 2 ),
+                        ( 'SmokeDuration', 65 ),
+                        ( 'SmokeOpacity', 0.25 ),
+                        ( 'SmokeSpeed', 1.5 ),
+                        ( 'Smoke_Size_Mul', 8 ),
+                        ( 'SparksCountMul', 0 ),
+                        ( 'SparksDuration', 0 ),
+                    ]
+                ),
+            ]
+        ),
+        TSimultaneousAction
+        (
+            Mobile = TMobileWithLocalRepereMatrixFactory
+            (
+                Position = float3[2236,2127,-246]
+                EulerAngles = float3[1.570522,0,0]
+            )
+            Actions =
+            [
+                TActionCall
+                (
+                    Action = $/VFX_Bank/AoA_FX_BANK_FireAndDarkSmoke_Simple
+                    NamedParams = MAP[
+                        ( 'Feu_Size_Mul', 0 ),
+                        ( 'FireCountMul', 0 ),
+                        ( 'FireDuration', 2 ),
+                        ( 'Ground_Size', 12 ),
+                        ( 'SmokeCountMul', 2 ),
+                        ( 'SmokeDuration', 70 ),
+                        ( 'SmokeOpacity', 0.25 ),
+                        ( 'SmokeSpeed', 2 ),
+                        ( 'Smoke_Size_Mul', 9 ),
+                        ( 'SparksCountMul', 0 ),
+                        ( 'SparksDuration', 0 ),
+                    ]
+                ),
+            ]
+        ),
+        TSimultaneousAction
+        (
+            Mobile = TMobileWithLocalRepereMatrixFactory
+            (
+                Position = float3[0,0,-246]
+                EulerAngles = float3[1.570522,0,0]
+            )
+            Actions =
+            [
+                TActionCall
+                (
+                    Action = $/VFX_Bank/AoA_FX_BANK_FireAndDarkSmoke_Simple
+                    NamedParams = MAP[
+                        ( 'Feu_Size_Mul', 0 ),
+                        ( 'FireCountMul', 0 ),
+                        ( 'FireDuration', 0 ),
+                        ( 'Ground_Size', 25 ),
+                        ( 'SmokeCountMul', 2 ),
+                        ( 'SmokeDuration', 400 ),
+                        ( 'SmokeOpacity', 0.05 ),
+                        ( 'SmokeSpeed', 2 ),
+                        ( 'Smoke_Size_Mul', 20 ),
+                        ( 'SparksCountMul', 0 ),
+                        ( 'SparksDuration', 0 ),
+                    ]
+                ),
+            ]
+        ),
+        TSimultaneousAction
+        (
+            Mobile = TMobileWithLocalRepereMatrixFactory
+            (
+                Position = float3[0,0,-250]
+            )
+            Actions =
+            [
+                TActionCall
+                (
+                    Action = $/VFX_Bank/AoA_FX_BANK_FireAndDarkSmoke_Simple
+                    NamedParams = MAP[
+                        ( 'Feu_Size_Mul', 0 ),
+                        ( 'FireCountMul', 0 ),
+                        ( 'FireDuration', 0 ),
+                        ( 'Ground_Size', 8 ),
+                        ( 'SmokeCountMul', 1 ),
+                        ( 'SmokeDuration', 6 ),
+                        ( 'SmokeOpacity', 0.5 ),
+                        ( 'SmokeSpeed', 0.25 ),
+                        ( 'Smoke_Size_Mul', 10 ),
+                        ( 'SparksCountMul', 0 ),
+                        ( 'SparksDuration', 0 ),
+                    ]
+                ),
+            ]
+        ),
+        TSimultaneousAction
+        (
+            Mobile = TMobileWithLocalRepereMatrixFactory
+            (
+                Position = float3[46,-3,-250]
+            )
+            Actions =
+            [
+                TActionCall
+                (
+                    Action = $/VFX_Bank/AoA_FX_BANK_FireAndDarkSmoke_Simple
+                    NamedParams = MAP[
+                        ( 'Feu_Size_Mul', 0 ),
+                        ( 'FireCountMul', 0 ),
+                        ( 'FireDuration', 2 ),
+                        ( 'Ground_Size', 6 ),
+                        ( 'SmokeCountMul', 1 ),
+                        ( 'SmokeDuration', 50 ),
+                        ( 'SmokeOpacity', 0.5 ),
+                        ( 'SmokeSpeed', 3 ),
+                        ( 'Smoke_Size_Mul', 8 ),
+                        ( 'SparksCountMul', 0 ),
+                        ( 'SparksDuration', 0 ),
+                    ]
+                ),
+            ]
+        ),
+        TSimultaneousAction
+        (
+            Mobile = TMobileWithLocalRepereMatrixFactory
+            (
+                Position = float3[46,-3,-246]
+                EulerAngles = float3[1.570522,0,0]
+            )
+            Actions =
+            [
+                TActionCall
+                (
+                    Action = $/VFX_Bank/AoA_FX_BANK_FireAndDarkSmoke_Simple
+                    NamedParams = MAP[
+                        ( 'Feu_Size_Mul', 0 ),
+                        ( 'FireCountMul', 0 ),
+                        ( 'FireDuration', 2 ),
+                        ( 'Ground_Size', 12 ),
+                        ( 'SmokeCountMul', 2 ),
+                        ( 'SmokeDuration', 80 ),
+                        ( 'SmokeOpacity', 0.75 ),
+                        ( 'SmokeSpeed', 2 ),
+                        ( 'Smoke_Size_Mul', 4 ),
+                        ( 'SparksCountMul', 0 ),
+                        ( 'SparksDuration', 0 ),
+                    ]
+                ),
+            ]
+        ),
+        TSimultaneousAction
+        (
+            Mobile = TMobileWithLocalRepereMatrixFactory
+            (
+                Position = float3[-1913,-1260,-250]
+            )
+            Actions =
+            [
+                TActionCall
+                (
+                    Action = $/VFX_Bank/AoA_FX_BANK_FireAndDarkSmoke_Simple
+                    NamedParams = MAP[
+                        ( 'Feu_Size_Mul', 0 ),
+                        ( 'FireCountMul', 0 ),
+                        ( 'FireDuration', 0 ),
+                        ( 'Ground_Size', 8 ),
+                        ( 'SmokeCountMul', 1 ),
+                        ( 'SmokeDuration', 7 ),
+                        ( 'SmokeOpacity', 0.5 ),
+                        ( 'SmokeSpeed', 2 ),
+                        ( 'Smoke_Size_Mul', 8 ),
+                        ( 'SparksCountMul', 0 ),
+                        ( 'SparksDuration', 0 ),
+                    ]
+                ),
+            ]
+        ),
+        TSimultaneousAction
+        (
+            Mobile = nil
+            Actions =
+            [
+                TActionCall
+                (
+                    Action = $/VFX_Bank/SFXAction_FireLoop
+                    NamedParams = MAP[
+                    ]
+                ),
+            ]
+        ),
+    ]
+)

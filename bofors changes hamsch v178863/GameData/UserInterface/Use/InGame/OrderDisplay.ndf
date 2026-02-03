@@ -1,0 +1,633 @@
+
+private MaxMeter is 500
+private CerclePositionAir is 2000
+private alpha is 160
+
+//------------------------------------------------------------------------------
+export OrderDisplayDrawer is TOrderDisplayDrawer
+(
+    OrderDisplayDrawInfos = [
+                                //MOVE
+                                OrderDisplayMove,
+                                OrderDisplayFollow,
+                                OrderDisplayAirplaneMoveAndEngage,
+                                OrderDisplayAirplanePatrol,
+                                OrderDisplayQuickMove,
+                                OrderDisplayReverse,
+                                OrderDisplayAirplaneEvacuate,
+                                //HUNT
+                                OrderDisplayMoveAndAttack,
+                                OrderDisplayEnterDistrict,
+                                OrderDisplayFastMoveAndAttack,
+                                //ATTACK
+                                OrderDisplayAssaultDistrict,
+                                OrderDisplayAttack,
+                                OrderDisplayAirplaneAttack,
+                                OrderDisplayShoot,
+                                OrderDisplayShootOnPosition,
+                                OrderDisplayShootOnPositionSmoke,
+                                OrderDisplayShootDefensiveSmoke,
+                                OrderDisplayAirplaneShoot,
+                                //UNLOAD
+                                OrderDisplayUnload,
+                                OrderDisplayUnloadAtPosition,
+                                OrderDisplayLoad,
+                                //???
+                                OrderDisplayUseCapacite,
+                                //HELICOPTERS
+                                OrderDisplayLand,
+                                OrderDisplayGoDown,
+                                OrderDisplayGoUp,
+
+                                OrderDisplayAIDefend,
+                                OrderDisplayAIAttack,
+                                OrderDisplayAIManageArtillery_Focus,
+                                OrderDisplayAIManageArtillery_CounterBattery,
+                                OrderDisplayAIManageArtillery_Auto,
+                                OrderDisplayAIAirplaneAutoManage,
+                                OrderDisplayAISupply,
+
+                                OrderDisplaySell,
+                                OrderDisplaySupply,
+                            ]
+    DefaultOrderDisplayDrawInfo = OrderDisplayNotFound
+    AltitudeMinToDrawDashLine = 100.0
+    WorldFloorProxy = $/M3D/Scene/WorldFloorForIAProxy
+)
+
+//------------------------------------------------------------------------------
+//******************************************************************************
+//------------------------------------------------------------------------------
+export OrderDisplayNotFound is TOrderDisplayDrawInfo
+(
+    OrderType                   = EOrderType/None
+    ColorLineStart              = [127, 0, 255, 50]
+    ColorLineEnd                = [127, 0, 255, alpha]
+    MaxDistanceBetweenColorsGRU = MaxMeter
+    LineThickness               = 2000.0
+    DisplayWaypoints            = true
+    HideNextOrders              = false
+    MustDrawCircle              = false
+    MustDrawArrow               = true
+)
+
+export OrderDisplaySell is TOrderDisplayDrawInfo
+(
+    OrderType                   = EOrderType/Sell
+    ColorLineStart              = [240, 0, 0, 50]
+    ColorLineEnd                = [240, 0, 0, alpha]
+    MaxDistanceBetweenColorsGRU = MaxMeter
+    LineThickness               = 2000.0
+    DisplayWaypoints            = true
+    HideNextOrders              = false
+    MustDrawCircle              = false
+    MustDrawArrow               = true
+)
+
+//---------------------MOVE----------------------------------------------
+
+export OrderDisplayMove is TOrderDisplayDrawInfo
+(
+    OrderType                   = EOrderType/Move
+    ColorLineStart              = [128, 187, 255, 50]
+    ColorLineEnd                = [128, 187, 255, alpha] //Light blue
+    MaxDistanceBetweenColorsGRU = MaxMeter
+    LineThickness               = 2000.0
+    DisplayWaypoints            = true
+    HideNextOrders              = false
+    MustDrawCircle              = false
+    MustDrawArrow               = true
+
+    AerialDashLineThickness     = 500.0
+    AerialDashLineDashLength    = 5.0
+    MustDrawDashLineForAerialOrderDestination = true
+    AerialDashLineDrawCircleAtBase = true
+    AerialDashLineBaseCircleThickness     = 500.0
+    AerialDashLineBaseCircleRadius     = CerclePositionAir
+)
+
+export OrderDisplaySupply is TOrderDisplayDrawInfo
+(
+    OrderType                   = EOrderType/SupplyUnit
+    ColorLineStart              = [128, 187, 255, 50]
+    ColorLineEnd                = [128, 187, 255, alpha] //Light blue
+    MaxDistanceBetweenColorsGRU = MaxMeter
+    LineThickness               = 2000.0
+    DisplayWaypoints            = true
+    HideNextOrders              = false
+    MustDrawCircle              = false
+    MustDrawArrow               = true
+
+    AerialDashLineThickness     = 500.0
+    AerialDashLineDashLength    = 5.0
+    MustDrawDashLineForAerialOrderDestination = true
+    AerialDashLineDrawCircleAtBase = true
+    AerialDashLineBaseCircleThickness     = 500.0
+    AerialDashLineBaseCircleRadius     = CerclePositionAir
+)
+
+export OrderDisplayFollow is TOrderDisplayDrawInfo
+(
+    OrderType                   = EOrderType/FollowUnit
+    ColorLineStart              = [128, 187, 255, 50]
+    ColorLineEnd                = [128, 187, 255, alpha] //Light blue
+    MaxDistanceBetweenColorsGRU = MaxMeter
+    LineThickness               = 2000.0
+    DisplayWaypoints            = true
+    HideNextOrders              = false
+    MustDrawCircle              = false
+    MustDrawArrow               = true
+
+    AerialDashLineThickness     = 500.0
+    AerialDashLineDashLength    = 5.0
+    MustDrawDashLineForAerialOrderDestination = true
+    AerialDashLineDrawCircleAtBase = true
+    AerialDashLineBaseCircleThickness     = 500.0
+    AerialDashLineBaseCircleRadius     = CerclePositionAir
+)
+
+export OrderDisplayAirplanePatrol is TOrderDisplayDrawInfo
+(
+    OrderType                   = EOrderType/AirplanePatrol
+    ColorLineStart              = [128, 187, 255, 50]
+    ColorLineEnd                = [128, 187, 255, alpha] //Light blue
+    MaxDistanceBetweenColorsGRU = MaxMeter
+    LineThickness               = 2000.0
+    DisplayWaypoints            = true
+    HideNextOrders              = false
+    MustDrawCircle              = false
+    MustDrawArrow               = true
+
+    AerialDashLineThickness     = 500.0
+    AerialDashLineDashLength    = 5.0
+    MustDrawDashLineForAerialOrderDestination = true
+    AerialDashLineDrawCircleAtBase = true
+    AerialDashLineBaseCircleThickness     = 500.0
+    AerialDashLineBaseCircleRadius     = CerclePositionAir
+)
+
+export OrderDisplayAirplaneMoveAndEngage is TOrderDisplayDrawInfo
+(
+    OrderType                   = EOrderType/AirplaneMoveAndEngage
+    ColorLineStart              = [128, 187, 255, 0]
+    ColorLineEnd                = [128, 187, 255, alpha] //Light blue
+    MaxDistanceBetweenColorsGRU = 0
+    LineThickness               = 2000.0
+    DisplayWaypoints            = true
+    HideNextOrders              = false
+    MustDrawCircle              = false
+    MustDrawArrow               = true
+)
+
+export OrderDisplayQuickMove is TOrderDisplayDrawInfo //Move Fast
+(
+    OrderType                   = EOrderType/QuickMove
+    ColorLineStart              = [0, 119, 255, 50]
+    ColorLineEnd                = [0, 119, 255, alpha] //Dark blue
+    MaxDistanceBetweenColorsGRU = MaxMeter
+    LineThickness               = 2000.0
+    DisplayWaypoints            = true
+    HideNextOrders              = false
+    MustDrawCircle              = false
+    MustDrawArrow               = true
+)
+
+export OrderDisplayReverse is TOrderDisplayDrawInfo //Reverse
+(
+    OrderType                   = EOrderType/Reverse
+    ColorLineStart              = [204, 228, 255, 50]
+    ColorLineEnd                = [204, 228, 255, alpha] //Very light blue
+    MaxDistanceBetweenColorsGRU = MaxMeter
+    LineThickness               = 2000.0
+    ColorCircleDestination      = [0, 0, 0, 0]
+    CircleDestinationThickness  = 0
+    CircleDestinationRadius     = 0
+    DashLengthInMeters          = 0
+    DisplayWaypoints            = true
+    HideNextOrders              = false
+    MustDrawCircle              = false
+    MustDrawArrow               = true
+    ReverseArrow                = true
+)
+
+export OrderDisplayAirplaneEvacuate is TOrderDisplayDrawInfo
+(
+    OrderType                   = EOrderType/AirplaneEvacuate
+    LineThickness               = 2000.0
+    ColorCircleDestination      = [255, 204, 0, alpha] //Gold
+    CircleDestinationThickness  = 1000.0
+    CircleDestinationRadius     = 4000.0
+    DisplayWaypoints            = true
+    HideNextOrders              = false
+    MustDrawCircle              = true
+    MustDrawArrow               = false
+)
+
+//---------------------HUNT----------------------------------------------
+
+export OrderDisplayMoveAndAttack is TOrderDisplayDrawInfo //Hunt
+(
+    OrderType                   = EOrderType/MoveAndAttack
+    ColorLineStart              = [255, 153, 51, 50]
+    ColorLineEnd                = [255, 153, 51, alpha] //Orange
+    MaxDistanceBetweenColorsGRU = MaxMeter
+    LineThickness               = 2000.0
+    ColorCircleDestination      = [0, 0, 0, 0]
+    CircleDestinationThickness  = 0
+    CircleDestinationRadius     = 0
+    DashLengthInMeters          = 100
+    DisplayWaypoints            = true
+    HideNextOrders              = false
+    MustDrawCircle              = false
+    MustDrawArrow               = true
+    Hatched                     = true
+
+    AerialDashLineThickness     = 500.0
+    AerialDashLineDashLength    = 5.0
+    MustDrawDashLineForAerialOrderDestination = true
+    AerialDashLineDrawCircleAtBase = true
+    AerialDashLineBaseCircleThickness     = 500.0
+    AerialDashLineBaseCircleRadius     = CerclePositionAir
+)
+
+export OrderDisplayEnterDistrict is TOrderDisplayDrawInfo //Move on a district
+(
+    OrderType                   = EOrderType/EnterDistrict
+    ColorLineStart              = [128, 187, 255, 50]
+    ColorLineEnd                = [128, 187, 255, alpha] //Light blue
+    MaxDistanceBetweenColorsGRU = MaxMeter
+    LineThickness               = 2000.0
+    DisplayWaypoints            = true
+    HideNextOrders              = false
+    MustDrawCircle              = false
+    MustDrawArrow               = true
+)
+
+export OrderDisplayFastMoveAndAttack is TOrderDisplayDrawInfo //Quick Hunt
+(
+    OrderType                   = EOrderType/FastMoveAndAttack
+    ColorLineStart              = [255, 102, 0, 50]
+    ColorLineEnd                = [255, 102, 0, alpha] //Dark Orange
+    MaxDistanceBetweenColorsGRU = MaxMeter
+    LineThickness               = 2000.0
+    ColorCircleDestination      = [0, 0, 0, 0]
+    CircleDestinationThickness  = 0
+    CircleDestinationRadius     = 0
+    DashLengthInMeters          = 100
+    DisplayWaypoints            = true
+    HideNextOrders              = false
+    MustDrawCircle              = false
+    MustDrawArrow               = true
+    Hatched                     = true
+)
+
+//---------------------ATTACK----------------------------------------------
+
+export OrderDisplayAttack is TOrderDisplayDrawInfo
+(
+    OrderType                   = EOrderType/Attack
+    ColorLineStart              = [240, 0, 0, 50]
+    ColorLineEnd                = [240, 0, 0, alpha] //Red
+    MaxDistanceBetweenColorsGRU = MaxMeter
+    LineThickness               = 2000.0
+    ColorCircleDestination      = [240, 0, 0, 180]
+    CircleDestinationThickness  = 1000.0
+    CircleDestinationRadius     = 2000.0
+    DashLengthInMeters          = 0
+    DisplayWaypoints            = false
+    HideNextOrders              = false
+    MustDrawCircle              = true
+    MustDrawArrow               = false
+)
+
+export OrderDisplayAssaultDistrict is TOrderDisplayDrawInfo
+(
+    OrderType                   = EOrderType/AssaultDistrict
+    ColorLineStart              = [240, 0, 0, 50]
+    ColorLineEnd                = [240, 0, 0, alpha] //Red
+    MaxDistanceBetweenColorsGRU = MaxMeter
+    LineThickness               = 2000.0
+    DisplayWaypoints            = true
+    HideNextOrders              = false
+    MustDrawCircle              = false
+    MustDrawArrow               = true
+)
+
+export OrderDisplayAirplaneAttack is TOrderDisplayDrawInfo
+(
+    OrderType                   = EOrderType/AirplaneAttack
+    ColorLineStart              = [240, 0, 0, 0]
+    ColorLineEnd                = [240, 0, 0, alpha] //Red
+    MaxDistanceBetweenColorsGRU = 0
+    LineThickness               = 2000.0
+    ColorCircleDestination      = [240, 0, 0, 180]
+    CircleDestinationThickness  = 1000.0
+    CircleDestinationRadius     = 2000.0
+    DashLengthInMeters          = 0
+    DisplayWaypoints            = false
+    HideNextOrders              = false
+    MustDrawCircle              = true
+    MustDrawArrow               = false
+)
+
+export OrderDisplayShoot is TOrderDisplayDrawInfo //Fire Pos Direct Fire
+(
+    OrderType                   = EOrderType/Shoot
+    ColorLineStart              = [240, 0, 0, 50]
+    ColorLineEnd                = [240, 0, 0, alpha] //Red
+    MaxDistanceBetweenColorsGRU = MaxMeter
+    LineThickness               = 2000.0
+    ColorCircleDestination      = [240, 0, 0, 180]
+    CircleDestinationThickness  = 1000.0
+    CircleDestinationRadius     = 2000.0
+    DashLengthInMeters          = 0
+    DisplayWaypoints            = false
+    HideNextOrders              = false
+    MustDrawCircle              = true
+    MustDrawArrow               = false
+)
+
+export OrderDisplayShootOnPosition is TOrderDisplayDrawInfo //Fire Pos Indirect Fire
+(
+    OrderType                   = EOrderType/ShootOnPosition
+    ColorLineStart              = [240, 0, 0, 0]
+    ColorLineEnd                = [240, 0, 0, alpha]
+    MaxDistanceBetweenColorsGRU = MaxMeter
+    LineThickness               = 2000.0
+    ColorCircleDestination      = [240, 0, 0, 180]
+    CircleDestinationThickness  = 1000.0
+    CircleDestinationRadius     = 2000.0
+    DashLengthInMeters          = 0
+    DisplayWaypoints            = false
+    HideNextOrders              = false
+    MustDrawCircle              = true
+    MustDrawArrow               = false
+)
+
+export OrderDisplayShootOnPositionSmoke is TOrderDisplayDrawInfo //Fire Pos Indirect Fire
+(
+    OrderType                   = EOrderType/ShootOnPositionSmoke
+    ColorLineStart              = [255, 255, 255, 50]
+    ColorLineEnd                = [255, 255, 255, alpha]
+    MaxDistanceBetweenColorsGRU = MaxMeter
+    LineThickness               = 2000.0
+    ColorCircleDestination      = [255, 255, 255, 200]
+    CircleDestinationThickness  = 1000.0
+    CircleDestinationRadius     = 2000.0
+    DashLengthInMeters          = 0
+    DisplayWaypoints            = false
+    HideNextOrders              = false
+    MustDrawCircle              = true
+    MustDrawArrow               = false
+)
+
+export OrderDisplayShootDefensiveSmoke is TOrderDisplayDrawInfo //Fire Pos Indirect Fire
+(
+    OrderType                   = EOrderType/ShootDefensiveSmoke
+    LineThickness               = 2000.0
+    ColorCircleDestination      = [255, 255, 255, 200]
+    CircleDestinationThickness  = 1000.0
+    CircleDestinationRadius     = 2000.0
+    DashLengthInMeters          = 0
+    DisplayWaypoints            = false
+    HideNextOrders              = false
+    MustDrawCircle              = true
+    MustDrawArrow               = false
+)
+
+export OrderDisplayAirplaneShoot is TOrderDisplayDrawInfo //Fire Pos Direct Fire
+(
+    OrderType                   = EOrderType/AirplaneShoot
+    ColorLineStart              = [240, 0, 0, 50]
+    ColorLineEnd                = [240, 0, 0, alpha] //Red
+    MaxDistanceBetweenColorsGRU = 0
+    LineThickness               = 2000.0
+    ColorCircleDestination      = [240, 0, 0, 180]
+    CircleDestinationThickness  = 1000.0
+    CircleDestinationRadius     = 2000.0
+    DashLengthInMeters          = 0
+    DisplayWaypoints            = false
+    HideNextOrders              = false
+    MustDrawCircle              = true
+    MustDrawArrow               = false
+)
+
+//---------------------UNLOAD----------------------------------------------
+
+export OrderDisplayUnload is TOrderDisplayDrawInfo
+(
+    OrderType                   = EOrderType/UnloadFromTransport
+    LineThickness               = 2000.0
+    ColorCircleDestination      = [150, 209, 79, alpha] //Green
+    CircleDestinationThickness  = 1000.0
+    CircleDestinationRadius     = 2000.0
+    DisplayWaypoints            = true
+    HideNextOrders              = false
+    MustDrawCircle              = true
+    MustDrawArrow               = false
+)
+
+export OrderDisplayUnloadAtPosition is TOrderDisplayDrawInfo
+(
+    OrderType                   = EOrderType/UnloadAtPosition
+    ColorLineStart              = [150, 209, 79, 50]
+    ColorLineEnd                = [150, 209, 79, alpha] //Green
+    MaxDistanceBetweenColorsGRU = MaxMeter
+    LineThickness               = 2000.0
+    ColorCircleDestination      = [150, 209, 79, 225]
+    CircleDestinationThickness  = 1000.0
+    CircleDestinationRadius     = 2000.0
+    DisplayWaypoints            = true
+    HideNextOrders              = false
+    MustDrawCircle              = true
+    MustDrawArrow               = false
+)
+
+export OrderDisplayLoad is TOrderDisplayDrawInfo
+(
+    OrderType                   = EOrderType/Load
+    ColorLineStart              = [204, 255, 153, 50]
+    ColorLineEnd                = [204, 255, 153, alpha] //Light Green
+    MaxDistanceBetweenColorsGRU = MaxMeter
+    LineThickness               = 2000.0
+    ColorCircleDestination      = [204, 255, 153, 225]
+    CircleDestinationThickness  = 1000.0
+    CircleDestinationRadius     = 2000.0
+    ColorCircleStart            = [204, 255, 153, 225]
+    CircleStartThickness        = 1000.0
+    DashLengthInMeters          = 0
+    DisplayWaypoints            = true
+    HideNextOrders              = false
+    MustDrawCircle              = true
+    MustDrawCircleStart         = true
+    MustDrawArrow               = false
+)
+
+//---------------------???----------------------------------------------
+
+export OrderDisplayUseCapacite is TOrderDisplayDrawInfo
+(
+    OrderType                   = EOrderType/UseCapacite
+    ColorLineStart              = [0, 0, 0, 0]
+    ColorLineEnd                = [0, 0, 0, 0]
+    MaxDistanceBetweenColorsGRU = 0
+    LineThickness               = 1000.0
+    ColorCircleDestination      = [0, 0, 0, 0]
+    CircleDestinationThickness  = 2000.0
+    CircleDestinationRadius     = 2000.0
+    DashLengthInMeters          = 0
+    DisplayWaypoints            = false
+    HideNextOrders              = false
+    MustDrawCircle              = true
+    MustDrawArrow               = false
+)
+
+//---------------------HELICOPTERS----------------------------------------------
+
+export OrderDisplayLand is TOrderDisplayDrawInfo
+(
+    OrderType                   = EOrderType/Land
+    ColorLineStart              = [128, 187, 255, 50]
+    ColorLineEnd                = [128, 187, 255, alpha] //Light blue
+    MaxDistanceBetweenColorsGRU = MaxMeter
+    LineThickness               = 2000.0
+    ColorCircleDestination      = [128, 187, 255, 220] //Light blue
+    CircleDestinationThickness  = 1000.0
+    CircleDestinationRadius     = 3000.0
+    DisplayWaypoints            = true
+    HideNextOrders              = false
+    MustDrawCircle              = true
+    MustDrawArrow               = false
+)
+
+export OrderDisplayGoDown is TOrderDisplayDrawInfo
+(
+    OrderType                   = EOrderType/GoDown
+    ColorLineStart              = [128, 187, 255, 50]
+    ColorLineEnd                = [128, 187, 255, alpha] //Light blue
+    MaxDistanceBetweenColorsGRU = MaxMeter
+    LineThickness               = 2000.0
+    ColorCircleDestination      = [128, 187, 255, 220] //Light blue
+    CircleDestinationThickness  = 1000.0
+    CircleDestinationRadius     = 3000.0
+    DisplayWaypoints            = true
+    HideNextOrders              = false
+    MustDrawCircle              = true
+    MustDrawArrow               = false
+)
+
+export OrderDisplayGoUp is TOrderDisplayDrawInfo
+(
+    OrderType                   = EOrderType/GoUp
+    ColorLineStart              = [128, 187, 255, 50]
+    ColorLineEnd                = [128, 187, 255, alpha] //Light blue
+    MaxDistanceBetweenColorsGRU = MaxMeter
+    LineThickness               = 2000.0
+    ColorCircleDestination      = [128, 187, 255, 220] //Light blue
+    CircleDestinationThickness  = 1000.0
+    CircleDestinationRadius     = 3000.0
+    DisplayWaypoints            = true
+    HideNextOrders              = false
+    MustDrawCircle              = true
+    MustDrawArrow               = false
+)
+
+export OrderDisplayAIAttack is TOrderDisplayDrawInfo
+(
+    OrderType                   = EOrderType/AIAttack
+    ColorLineStart              = [240, 0, 0, 50]
+    ColorLineEnd                = [240, 0, 0, alpha]
+    MaxDistanceBetweenColorsGRU = MaxMeter
+    LineThickness               = 2000.0
+    ColorCircleDestination      = [0, 0, 0, 0]
+    CircleDestinationThickness  = 0
+    CircleDestinationRadius     = 0
+    DashLengthInMeters          = 100
+    DisplayWaypoints            = true
+    HideNextOrders              = true
+    MustDrawCircle              = false
+    MustDrawArrow               = true
+    Hatched                     = true
+)
+
+export OrderDisplayAIDefend is TOrderDisplayDrawInfo
+(
+    OrderType                   = EOrderType/AIDefend
+    LineThickness               = 2000.0
+    ColorCircleDestination      = [30, 30, 222, 180]
+    CircleDestinationThickness  = 1000.0
+    CircleDestinationRadius     = 2000.0
+    DisplayWaypoints            = false
+    HideNextOrders              = true
+    MustDrawCircle              = true
+    MustDrawArrow               = false
+)
+
+export OrderDisplayAIManageArtillery_Focus is TOrderDisplayDrawInfo
+(
+    OrderType                   = EOrderType/AIManageArtillery_Focus
+    ColorLineStart              = [240, 0, 0, 0]
+    ColorLineEnd                = [240, 0, 0, alpha]
+    MaxDistanceBetweenColorsGRU = MaxMeter
+    LineThickness               = 2000.0
+    ColorCircleDestination      = [240, 0, 0, alpha]
+    CircleDestinationThickness  = 1000.0
+    CircleDestinationRadius     = 2000.0
+    DashLengthInMeters          = 0
+    DisplayWaypoints            = false
+    HideNextOrders              = true
+    MustDrawCircle              = true
+    MustDrawArrow               = false
+)
+
+export OrderDisplayAIManageArtillery_CounterBattery is TOrderDisplayDrawInfo
+(
+    OrderType                   = EOrderType/AIManageArtillery_CounterBattery
+    LineThickness               = 2000.0
+    ColorCircleDestination      = [240, 0, 0, alpha]
+    CircleDestinationThickness  = 1000.0
+    CircleDestinationRadius     = 2000.0
+    DisplayWaypoints            = false
+    HideNextOrders              = true
+    MustDrawCircle              = true
+    MustDrawArrow               = false
+)
+
+export OrderDisplayAIManageArtillery_Auto is TOrderDisplayDrawInfo
+(
+    OrderType                   = EOrderType/AIManageArtillery_Auto
+    LineThickness               = 2000.0
+    ColorCircleDestination      = [240, 0, 0, alpha]
+    CircleDestinationThickness  = 1000.0
+    CircleDestinationRadius     = 2000.0
+    DisplayWaypoints            = false
+    HideNextOrders              = true
+    MustDrawCircle              = true
+    MustDrawArrow               = false
+)
+
+export OrderDisplayAIAirplaneAutoManage is TOrderDisplayDrawInfo
+(
+    OrderType                   = EOrderType/AIAirplaneAutoManage
+    LineThickness               = 2000.0
+    ColorCircleDestination      = [240, 0, 0, alpha]
+    CircleDestinationThickness  = 1000.0
+    CircleDestinationRadius     = 2000.0
+    DisplayWaypoints            = false
+    HideNextOrders              = true
+    MustDrawCircle              = true
+    MustDrawArrow               = false
+)
+
+export OrderDisplayAISupply is TOrderDisplayDrawInfo
+(
+    OrderType                   = EOrderType/AISupply
+    LineThickness               = 2000.0
+    ColorCircleDestination      = [244, 187, 50, alpha]
+    CircleDestinationThickness  = 1000.0
+    CircleDestinationRadius     = 2000.0
+    DisplayWaypoints            = false
+    HideNextOrders              = true
+    MustDrawCircle              = true
+    MustDrawArrow               = false
+)

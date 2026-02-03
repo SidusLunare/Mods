@@ -1,0 +1,67 @@
+Texture_STRATEGIC_front is TUIResourceTexture_Common
+(
+    FileName = 'GameData:/Assets/2D/Interface/UseStrategic/LabelIcons/BattleOrder/front.png'
+)
+
+Texture_STRATEGIC_brigade is TUIResourceTexture_Common
+(
+    FileName = 'GameData:/Assets/2D/Interface/UseStrategic/LabelIcons/BattleOrder/brigade.png'
+)
+
+Texture_STRATEGIC_corps is TUIResourceTexture_Common
+(
+    FileName = 'GameData:/Assets/2D/Interface/UseStrategic/LabelIcons/BattleOrder/corps.png'
+)
+
+Texture_STRATEGIC_division is TUIResourceTexture_Common
+(
+    FileName = 'GameData:/Assets/2D/Interface/UseStrategic/LabelIcons/BattleOrder/division.png'
+)
+
+Texture_STRATEGIC_regiment is TUIResourceTexture_Common
+(
+    FileName = 'GameData:/Assets/2D/Interface/UseStrategic/LabelIcons/BattleOrder/regiment.png'
+)
+
+unnamed TBUCKToolAdditionalTextureBank
+(
+    Textures = MAP
+    [
+        ("Texture_STRATEGIC_front", MAP [(~/ComponentState/Normal, ~/Texture_STRATEGIC_front)]),
+        ("Texture_STRATEGIC_brigade", MAP [(~/ComponentState/Normal, ~/Texture_STRATEGIC_brigade)]),
+        ("Texture_STRATEGIC_corps", MAP [(~/ComponentState/Normal, ~/Texture_STRATEGIC_corps)]),
+        ("Texture_STRATEGIC_division", MAP [(~/ComponentState/Normal, ~/Texture_STRATEGIC_division)]),
+        ("Texture_STRATEGIC_regiment", MAP [(~/ComponentState/Normal, ~/Texture_STRATEGIC_regiment)]),
+    ]
+)
+
+
+UIBackgroundTexture_front is TBUCKToolAlternativeValues_TUIValueTextureNameConstant
+(
+    CommandNameTrigger = ~/SpecificCommandName/UpdateGUIFromStrategicIconType
+    Value = "Texture_STRATEGIC_front"
+)
+
+UIBackgroundTexture_corps is TBUCKToolAlternativeValues_TUIValueTextureNameConstant
+(
+    CommandNameTrigger = ~/SpecificCommandName/UpdateGUIFromStrategicIconType
+    Value = "Texture_STRATEGIC_corps"
+)
+
+UIBackgroundTexture_division is TBUCKToolAlternativeValues_TUIValueTextureNameConstant
+(
+    CommandNameTrigger = ~/SpecificCommandName/UpdateGUIFromStrategicIconType
+    Value = "Texture_STRATEGIC_division"
+)
+
+UIBackgroundTexture_brigade is TBUCKToolAlternativeValues_TUIValueTextureNameConstant
+(
+    CommandNameTrigger = ~/SpecificCommandName/UpdateGUIFromStrategicIconType
+    Value = "Texture_STRATEGIC_brigade"
+)
+
+UIBackgroundTexture_regiment is TBUCKToolAlternativeValues_TUIValueTextureNameConstant
+(
+    CommandNameTrigger = ~/SpecificCommandName/UpdateGUIFromStrategicIconType
+    Value = "Texture_STRATEGIC_regiment"
+)

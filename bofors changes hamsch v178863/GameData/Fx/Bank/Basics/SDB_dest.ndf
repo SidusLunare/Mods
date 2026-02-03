@@ -1,0 +1,14 @@
+export DestroyVegetAndLB is SimultaneousActionDeclaration
+(
+    Params =
+    [
+        private parRadius is Template_Param_Float (),
+    ]
+    Actions =
+    [
+        Template_ActionDescriptorDestroySceneryRandom
+        (
+            Radius = parRadius
+        )
+    ]
+)

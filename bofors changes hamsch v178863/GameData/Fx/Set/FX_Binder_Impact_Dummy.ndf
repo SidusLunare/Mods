@@ -1,0 +1,12 @@
+export dummy_impact_for_exporter_hack is SimultaneousActionDeclaration
+(
+    Params =
+    [
+        private Pos is Template_ActionAlias( ExpectedType = 'float3' ),
+        private Dir is Template_ActionAlias( ExpectedType = 'float3' ),
+        private RadPhy is Template_ActionAlias( ExpectedType = 'float' ),
+        private RadSupr is Template_ActionAlias( ExpectedType = 'float' ),
+    ]
+    Actions = [ Simultaneous( Disabled = true) ]
+)
+

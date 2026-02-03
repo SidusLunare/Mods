@@ -1,0 +1,9 @@
+//A maintenir synchro avec EnumAllianceStyle.h
+EAllianceStyle is TBaseClass
+(
+    Neutral       is 0
+    AlliedWithAll is 1
+    EnemyWithAll  is 2
+    BLUFOR        is 3
+    REDFOR        is 4
+)
