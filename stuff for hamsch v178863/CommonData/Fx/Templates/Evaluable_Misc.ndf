@@ -1,0 +1,17 @@
+
+
+template Template_GenFloat3
+[
+    X : TEvaluable[required] = TConstantFloat(Value = 0.0),
+    Y : TEvaluable[required] = TConstantFloat(Value = 0.0),
+    Z : TEvaluable[required] = TConstantFloat(Value = 0.0),
+
+] is TIntrinsicCall_3Param
+(
+    Intrinsic   = $/System/EvaluableIntrinsics/GenFloat3
+    Param0      = <X>
+    Param1      = <Y>
+    Param2      = <Z>
+)
+
+

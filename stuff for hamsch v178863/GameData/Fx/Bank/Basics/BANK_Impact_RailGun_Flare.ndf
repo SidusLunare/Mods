@@ -1,0 +1,50 @@
+export BANK_Impact_RailGun_Flare is SimultaneousActionDeclaration(
+    Params =
+    [
+    ]
+
+    Actions =
+    [
+        ParticleBombSpawner
+        (
+            Count = 1
+            ParticleMaxDurationForSpawnSkip = 0.15
+            Spawner = ParticleSpawner
+            (
+                ParticleLifetime = 0.15
+                Initialisers =
+                [
+                    ParticleInitialiserList
+                    (
+                        ColorModifier = float3[1, 1, 1]
+                        Alpha = 1.0
+
+                        Size = 1000
+                        Stretching = 1
+                        Opacity = 0
+                        EmissivePower = 1
+                        Rotation = RandomUnit
+                        Position = float3[0,0,200]
+                    )
+                ]
+                ParticleDescriptor = ParticleDescriptor
+                (
+                    ParticleRenderer = $/VFX_Bank/LitParticleRenderer
+                    RenderInfo = ParticleRenderInfo
+                    (
+                        TextureName = 'GameData:/Assets/2D/Fx/flare_bleu_00.png'
+                        SortTriangles = true
+                        ZTest = true
+                        Calque = 'Particles'
+                        EmissiveParticle = True
+                    )
+                    Evolvers = ParticleStandardEvolverList
+                    (
+                        EmissivePower = 0.4 * AttackDecay[ParticleLifeRatio, 0.5]
+                        Opacity = 0
+                    )
+                )
+            )
+        )
+        ]
+)

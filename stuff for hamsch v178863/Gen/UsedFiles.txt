@@ -1,0 +1,6 @@
+GameData:/Localisation/Database/Translations.csv
+GameData:/Localisation/stuff for hamsch v178863/COMPANIES.csv
+GameData:/Localisation/stuff for hamsch v178863/INTERFACE_INGAME.csv
+GameData:/Localisation/stuff for hamsch v178863/INTERFACE_OUTGAME.csv
+GameData:/Localisation/stuff for hamsch v178863/PLATOONS.csv
+GameData:/Localisation/stuff for hamsch v178863/UNITS.csv

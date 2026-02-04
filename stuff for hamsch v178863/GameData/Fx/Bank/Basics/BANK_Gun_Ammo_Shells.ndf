@@ -1,0 +1,111 @@
+export Ammo_Shells_Simple is ActionCallWithParameters
+(
+    Action = Ammo_Shells
+    Params =
+    [
+        private parSize         is Template_Param_Float (),
+        private parLuminosity   is Template_Param_Float (),
+        private parDuration     is Template_Param_Float (),
+        private parColor        is Template_Param_Float3(),
+        private parRepeatTime   is Template_Param_Float (),
+        private parRepeatCount  is Template_Param_Int (),
+        private parInitialDelay is Template_Param_Float(),
+        private parInitialSpeed is Template_Param_Float(),
+    ]
+    NamedParameters = MAP
+    [
+        ( 'parSize'             , parSize),
+        ( 'parLuminosity'       , parLuminosity * RandomRange[0.8, 1.2] * 0.1 ),
+        ( 'parDuration'         , parDuration * RandomRange[0.8, 1.2] ),
+        ( 'parColor'            , LinearColor[parColor] ),
+        ( 'RepeatTime'          , parRepeatTime ),
+        ( 'ShotCount'           , parRepeatCount ),
+        ( 'parInitialDelay'     , parInitialDelay ),
+        ( 'BANK_speed'          , parInitialSpeed * RandomRange[0.75, 1.33] ),
+    ]
+)
+
+
+export Ammo_Shells is SimultaneousActionDeclaration
+(
+    Params =
+    [
+        private parSize         is Template_Param_Float  (),
+        private parLuminosity   is Template_Param_Float  (),
+        private parDuration     is Template_Param_Float  (),
+        private parColor        is Template_Param_Float3 (),
+        private RepeatTime      is Template_Param_Float  (DefaultValue = 0),
+        private ShotCount       is Template_Param_Float  (DefaultValue = 0),
+        private parInitialDelay is Template_Param_Float  (DefaultValue = 0), //*
+        public BANK_lifetime                 is Template_Param_Float (DefaultValue = 5 ),
+        public BANK_InitPosition             is Template_Param_Float3(DefaultValue = $/VFX_Bank/MinusOneToOneRandomDisc * 0 ),
+        public BANK_speed                    is Template_Param_Float (DefaultValue = 100 * RandomRange[0.75, 1.33] ),
+        public BANK_Debrits_size_mul         is Template_Param_Float (DefaultValue = RandomRange[0.5, 1.5] ),
+        public BANK_FluidFriction            is Template_Param_Float (DefaultValue = 0.5 ),
+        public BANK_SmokeDensity             is Template_Param_Float (DefaultValue = 50),
+    ]
+    LocalVariables =[]
+    Actions =
+    [
+        private Shell is ParticleSpraySpawnerWithEvaluable
+        (
+            Frequency = RepeatTime == 0 ? 10 : (1.0 div RepeatTime)
+            DurationInSec = ifte[RepeatTime == 0, 0.1, ifte[ShotCount == 0, 10, RepeatTime * (ShotCount-0.9) ]]
+            InitialDelayInSec = parInitialDelay //*
+            SpawnFirstParticleAtStart = true
+            WaitAtLeastBetweenFrame = 0.05
+            // PeriodInSec = RepeatTime == 0 ? 0.1 : RepeatTime
+            Spawner = ParticleSpawner
+            (
+                ParticleLifetime = parDuration
+                Initialisers =
+                [
+                    ParticleInitialiserList
+                    (
+                        Position = BANK_InitPosition
+                        Size = parSize
+                        Opacity = 1
+                        CustomFloat_1 =  RandomUnit // décalage random de début d'anim
+                        CustomFloat_2 =  RandomRangeSymetric[0.8, 3] // vitesse random de l'anim
+                        CustomFloat_3 =  ParticleSize
+                        EmissivePower = parLuminosity
+                        ColorModifier = parColor
+                        Rotation = RandomRange[-0.5,0.5]
+                        Speed = BANK_speed * float3[1,0,0]
+                        Alpha = 1
+                        ColorMultiplier = 1
+                        CustomFloat_4 = BANK_SmokeDensity
+                        CustomFloat_8 = BANK_FluidFriction
+                    ),
+                ]
+                PostTransformInitialisers =
+                [
+                    ParticleInitialiserList
+                    (
+                        Speed = ParticleSpeed + SpawnerSpeed
+                    )
+                ]
+                ParticleDescriptor = ParticleDescriptor
+                (
+                    RenderInfo = ParticleRenderInfo
+                    (
+                        ZTest = True
+                        ZWrite = False
+                        SortTriangles = True
+                        TextureName = 'GameData:/Assets/2D/Fx/anim_shell_0000.png'
+                        OpaqueParticle = true
+                    )
+                    ParticleRenderer = $/VFX_Bank/LitParticleRenderer
+
+                    Evolvers = ParticleStandardEvolverListWithPhysic
+                    (
+                        FluidFriction = ParticleCustomFloat_8
+                        PhysicAccelerationField = float3[0.00, 0.00, -3000.00]
+                        PhysicWindField = $/VFX_Bank/MapWind
+                        Animation = triangle[ParticleElapsedTime * ParticleCustomFloat_2 + ParticleCustomFloat_1]
+                    )
+                )
+            )
+        ),
+    ]
+)

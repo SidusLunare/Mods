@@ -1,0 +1,27 @@
+// Effectue une opération sur la taille de la particule en appliquant un facteur de scale permettant de s'assurer qu'elle va faire au moins PixelSize pixels.
+// Applique en retour une diminution de l'alpha ou du color multiplier pour compenser le grossissement.
+// Dans certain cas on veut obtenir le facteur d'echelle utilisé, pour cela il faut remplir "OutputField". Par convention il est préférable d'utiliser CustomFloat_9 pour cela.
+// Le facteur peut s'appliquer au carré ou non, respectivement pour les particules face cam et trail.
+template ParticleEvolverAntialiasingHelper_Alpha
+        [
+        Size : TEvaluable[GroupBy = "Standard fields"] = nil,
+        Alpha : TEvaluable[GroupBy = "Standard fields"] = nil,
+        OutputField =  nil
+        ] is ParticleStandardEvolverList
+(
+    Size = <Size>
+    Alpha = <Alpha>
+    AdditionnalEvolvers = <OutputField> == nil ? [] :[TVersatileParticleEvolver(Field=<OutputField>  EvolveFunction=1 )]
+)
+
+template ParticleEvolverAntialiasingHelper_ColorMultiplier
+        [
+        Size : TEvaluable[GroupBy = "Standard fields"] = nil,
+        ColorMultiplier : TEvaluable[GroupBy = "Standard fields"] = nil,
+        OutputField =  nil
+        ] is ParticleStandardEvolverList
+(
+    Size = <Size>
+    ColorMultiplier = <ColorMultiplier>
+    AdditionnalEvolvers = <OutputField> == nil ? [] :[TVersatileParticleEvolver(Field=<OutputField>  EvolveFunction=1 )]
+)

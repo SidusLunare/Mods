@@ -1,0 +1,17 @@
+
+unnamed TResourcePackLoader
+(
+    Packs =
+    [
+        TResourceDescriptorMeshPack
+        (
+            PackName = "Base"
+            PackRelativePath = "MeshPack/stuff for hamsch v178863/Mesh_All.spk"
+        ),
+        TResourceDescriptorProxyPack
+        (
+            PackName = "Base"
+            PackRelativePath = "TextureProxy/stuff for hamsch v178863/Mesh_All.ndfbin"
+        ),
+    ]
+)

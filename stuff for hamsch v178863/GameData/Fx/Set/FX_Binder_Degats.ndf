@@ -1,0 +1,210 @@
+// FX_Binder_Degats.ndf
+// FX_Binder_Degats.ndf
+export FX_Binder_Degats is SimultaneousActionDeclaration
+(
+    LocalVariables =
+    [
+        private OldPosition is Template_Pinnable
+        (
+            InitialValue = float3[0.00, 0.00, 0.00]
+            ExpectedType = 'float3'
+        ),
+    ]
+    Params =
+    [
+        private parScale is Template_ActionAlias
+        (
+            ExpectedType = 'any'
+            DefaultValue = 1
+        )
+    ]
+    Actions =
+    [
+        private Fire_N_BurnedSmoke is ParticleBombSpawner
+        (
+            Count = 1
+            Spawner = private Spawner is ParticleSpawner
+            (
+                ParticleLifetime = 666
+                Initialisers =
+                [
+                    Initialiser_SetMobileWrapper(),
+                    ParticleInitialiserList
+                    (
+                        ColorModifier = float3[1, 1, 1]
+
+                        Size = 250
+                        ColorRGB = float3[1.00, 1.00, 1.00]
+                        Alpha = 1
+                        ColorMultiplier = 1
+                    ),
+                ]
+                ParticleDescriptor = ParticleDescriptor
+                (
+                    InfiniteParticles = True
+                    ParticleRenderer = $/VFX_Bank/NullRenderer
+                    RenderInfo = $/VFX_Bank/NullRenderInfo
+                    Evolvers = ParticleStandardEvolverList
+                    (
+                        Position = ParticleMobileWrapperPosition
+                        AdditionnalEvolvers =
+                        [
+                            Template_StandardComputeSpeed(),
+                            private SmokeDark is EvolverSpraySpawner
+                            (
+                                Frequency = Min[100, Max[length[ParticleSpeed] div 128, 3] ]
+                                // Baptiste Delestre je met 2 pour pas dépasser la limite des 200 particules par spawn.
+                                MaxSpawnedParticleLifetime = 1
+                                Spawner = ParticleSpawner
+                                (
+                                    ParticleLifetime = 1
+                                    Initialisers =
+                                    [
+                                        ParticleInitialiserList
+                                        (
+                                            Speed = float3[0.00, 0.00, 1000.00] + MinusOneToOneRandomSphereVolume * 1000
+                                            Size = 666
+                                            ColorModifier = float3[0, 0, 0]
+                                            Alpha = 0
+                                            ColorMultiplier = 0
+                                            EmissivePower = 1
+                                            RotationSpeed = RandomRange[-0.02, 0.02]
+                                            Rotation = RandomRange[-0.5, 0.5]
+                                            CustomFloat_1 = RandomRange[0, 1]
+                                            CustomFloat_2 = SpawningParticleSize * 2
+                                            CustomFloat_3 = lerp[MapToLinearSmoothStep[length[SpawningParticleSpeed], 1 * GameUnitsPerLBU, 20 * GameUnitsPerLBU], 1, 5]
+                                        ),
+                                    ]
+                                    ParticleDescriptor = ParticleDescriptor
+                                    (
+                                        RenderInfo = DeferredParticleRenderInfo
+                                        (
+                                            Use3DRotation = True
+                                            TextureName = 'GameData:/Assets/2D/Fx/anim_smoke_02_000.png'
+                                        )
+                                        ParticleRenderer = $/VFX_Bank/LitParticleRendererNoCentroidPositioning
+                                        Evolvers = ParticleStandardEvolverListWithPhysic
+                                        (
+                                            FluidFriction = 1
+                                            PhysicWindField = $/VFX_Bank/MapWind * 2
+                                            Size = ParticleCustomFloat_2 + ( 300 * ParticleElapsedTime * ParticleCustomFloat_3 )
+                                            Opacity = Attack[ParticleLifeRatio, 0.01] * sqr[Decay[sqrt[ParticleLifeRatio], 0.05]] * 1  //*0.2
+                                            // EmissivePower = lerp[sat[ParticleElapsedTime], 2, 0.25]
+                                            UseHardCodedRotation = True
+                                            Animation = ParticleLifeRatio + ParticleCustomFloat_1
+                                        )
+                                    )
+                                )
+                            ),
+                        ]
+                    )
+                )
+            )
+        ),
+        private SmokeDarkBomb is ParticleBombSpawner
+        (
+            Count = 1
+            Spawner = private Spawner is ParticleSpawner
+            (
+                ParticleLifetime = 666
+                Initialisers =
+                [
+                    Initialiser_SetMobileWrapper(),
+                    ParticleInitialiserList
+                    (
+                        ColorModifier = float3[1, 1, 1]
+
+                        Size = 600
+                        ColorRGB = float3[1.00, 1.00, 1.00]
+                        Alpha = 1
+                        ColorMultiplier = 1
+                    ),
+                ]
+                ParticleDescriptor = ParticleDescriptor
+                (
+                    InfiniteParticles = True
+                    ParticleRenderer = $/VFX_Bank/NullRenderer
+                    RenderInfo = $/VFX_Bank/NullRenderInfo
+                    Evolvers = ParticleStandardEvolverList
+                    (
+                        Position = ParticleMobileWrapperPosition
+                        AdditionnalEvolvers =
+                        [
+                            Template_StandardComputeSpeed(),
+                            private SmokeDark is EvolverSpraySpawner
+                            (
+                                Frequency = Min[100, Max[length[ParticleSpeed] div 256, 3] ]
+                                // Baptiste Delestre je met 2 pour pas dépasser la limite des 200 particules par spawn.
+                                MaxSpawnedParticleLifetime = 2
+                                Spawner = ParticleSpawner
+                                (
+                                    ParticleLifetime = 2
+                                    Initialisers =
+                                    [
+                                        ParticleInitialiserList
+                                        (
+                                            Speed = float3[0.00, 0.00, 1000.00] + MinusOneToOneRandomSphereVolume * 1500
+                                            Size = 666
+                                            ColorModifier = float3[0.50, 0.25, 0.13]
+                                            Alpha = 0
+                                            ColorMultiplier = 0
+                                            EmissivePower = 1
+                                            RotationSpeed = RandomRange[-0.02, 0.02]
+                                            Rotation = RandomRange[-0.5, 0.5]
+                                            CustomFloat_1 = RandomRange[0, 1]
+                                            CustomFloat_2 = SpawningParticleSize * 2
+                                            CustomFloat_3 = lerp[MapToLinearSmoothStep[length[SpawningParticleSpeed], 1 * GameUnitsPerLBU, 20 * GameUnitsPerLBU], 1, 5]
+                                        ),
+                                    ]
+                                    ParticleDescriptor = ParticleDescriptor
+                                    (
+                                        RenderInfo = DeferredParticleRenderInfo
+                                        (
+                                            TextureName = 'GameData:/Assets/2D/Fx/anim_smoke_02_000.png'
+                                        )
+                                        ParticleRenderer = $/VFX_Bank/LitParticleRendererNoCentroidPositioning
+                                        Evolvers = Template_List
+                                        (
+                                            Evolvers =
+                                            [
+                                                ParticleStandardEvolverListWithPhysic
+                                                (
+                                                    FluidFriction = 1
+                                                    PhysicWindField = $/VFX_Bank/MapWind * 2
+                                                    Size = ParticleCustomFloat_2 + ( 300 * ParticleElapsedTime * ParticleCustomFloat_3 )
+                                                    Opacity = Attack[ParticleLifeRatio, 0.01] * sqr[Decay[sqrt[ParticleLifeRatio], 0.05]] * 0.8  //*0.2
+                                                    Animation = ParticleLifeRatio + ParticleCustomFloat_1
+                                                    UseHardCodedRotation = True
+                                                ),
+                                            ]
+                                        )
+                                    )
+                                )
+                            ),
+                        ]
+                    )
+                )
+            )
+        ),
+        Template_WaitForEver(),
+    ]
+)
+public Degats_Fire_Textures_Anim_Table is Template_EvaluableTable
+(
+    Values =
+    [
+        private Feu01 is TConstantTexture (TextureName = 'GameData:/Assets/2D/Fx/anim_flame_03_000.png' ),
+        private Feu02 is TConstantTexture (TextureName = 'GameData:/Assets/2D/Fx/anim_flame_04_000.png' ),
+    ]
+)
+export FX_Binder_Deplacement_Char_fumee_noire is Simultaneous
+(
+    Actions =
+    [
+        Template_ActionCall
+        (
+            Action = ~/FX_Binder_Degats
+            NamedParameters = MAP [ ( 'parScale', 1 ), ]
+        ),
+    ]
+)
