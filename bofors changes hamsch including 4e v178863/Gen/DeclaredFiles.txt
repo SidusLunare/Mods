@@ -7,5 +7,6 @@ ZZ:/AllPlatforms/Localisation/SPA/Localisation/bofors changes hamsch including 4
 ZZ:/AllPlatforms/Localisation/US/Localisation/bofors changes hamsch including 4e v178863/UNITS.dic
 ZZ:/MeshPack/bofors changes hamsch including 4e v178863/Mesh_All.spk
 ZZ:/MeshPack/bofors changes hamsch v178863/Mesh_All.spk
+ZZ:/PC/Texture/Assets/2D/Interface/UseOutGame/Division/Emblem/Ausbildungszentrum_Heeresflugabwehrtruppe.tgv
 ZZ:/TextureProxy/bofors changes hamsch including 4e v178863/Mesh_All.ndfbin
 ZZ:/TextureProxy/bofors changes hamsch v178863/Mesh_All.ndfbin

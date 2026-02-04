@@ -1,3 +1,5 @@
+GameData:/Assets/2D/Interface/UseOutGame/Division/Emblem/Ausbildungszentrum_Heeresflugabwehrtruppe.png
+GameData:/Localisation/Database/Translations.csv
 GameData:/Localisation/bofors changes hamsch including 4e v178863/COMPANIES.csv
 GameData:/Localisation/bofors changes hamsch including 4e v178863/INTERFACE_INGAME.csv
 GameData:/Localisation/bofors changes hamsch including 4e v178863/INTERFACE_OUTGAME.csv

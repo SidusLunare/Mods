@@ -5452,3 +5452,21 @@ export Descriptor_Deck_Division_US_8th_Inf_challenge is TDeckDivisionDescriptor
     PortraitTexture   = "Texture_Division_Portrait_default"
     TypeTexture       = ""
 )
+export Descriptor_Deck_Division_RFA_Ausbildungszentrum_Heeresflugabwehrtruppe_multi is TDeckDivisionDescriptor
+(
+    DescriptorId = GUID:{e3f82567-0bf4-461d-8a4f-3460019e7ae1}
+    CfgName = 'RFA_Ausbildungszentrum_Heeresflugabwehrtruppe_multi'
+    DivisionName = 'ABZ_HFLAT'
+    InterfaceOrder = 15.0
+    DivisionPowerClassification = 'DC_PWR1'
+    DivisionCoalition = ECoalition/NATO
+    DivisionTags = ['DEFAULT', 'RFA', 'NATO', 'DC_PWR1']
+    DescriptionHintTitleToken = 'WOEQADLOKM'
+    MaxActivationPoints = 50
+    DivisionRule = Descriptor_Deck_Division_RFA_Ausbildungszentrum_Heeresflugabwehrtruppe_multi_Rule
+    CostMatrix = MatrixCostName_RFA_Division_Ausbildungszentrum_Heeresflugabwehrtruppe_multi
+    EmblemTexture     = "Texture_Division_Emblem_Ausbildungszentrum_Heeresflugabwehrtruppe_RFA"
+    PortraitTexture   = "Texture_Division_Portrait_default"
+    TypeTexture       = "Texture_Division_Type_default"
+    CountryId = "RFA"
+)

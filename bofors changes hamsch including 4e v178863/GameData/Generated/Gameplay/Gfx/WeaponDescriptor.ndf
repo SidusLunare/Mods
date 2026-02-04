@@ -30859,6 +30859,53 @@ export WeaponDescriptor_Bofors_40mm_RFA is TWeaponManagerModuleDescriptor
         ),
     ]
 )
+export WeaponDescriptor_Bofors_40mm_autoloader_RFA is TWeaponManagerModuleDescriptor
+(
+    AlwaysOrientArmorTowardsThreat = False
+    Salves = 
+    [
+        30,
+    ]
+    TurretDescriptorList = 
+    [
+        TTurretTwoAxisDescriptor
+        (
+            AngleRotationBase = 0
+            AngleRotationBasePitch = 0
+            AngleRotationMax = 6.283185307179586
+            AngleRotationMaxPitch = 1.3089969389957472
+            AngleRotationMinPitch = -0.2617993877991494
+            MountedWeaponDescriptorList = 
+            [
+                TMountedWeaponDescriptor
+                (
+                    Ammunition = $/GFX/Weapon/Ammo_DCA_1_canon_Bofors_upgrade_40mm_autoloader
+                    AnimateOnlyOneSoldier = False
+                    DispersionRadiusOffColor = RGBA[0,0,0,0]
+                    DispersionRadiusOffThickness = -0.1
+                    DispersionRadiusOnColor = RGBA[0,0,0,0]
+                    DispersionRadiusOnThickness = -0.1
+                    EffectTag = "FireEffect_DCA_1_canon_Bofors_40mm"
+                    HandheldEquipmentKey = "WeaponAlternative_1"
+                    NbWeapons = 1
+                    SalvoStockIndex = 0
+                    ShowDispersion = False
+                    WeaponActiveAndCanShootPropertyName = "WeaponActiveAndCanShoot_1"
+                    WeaponIgnoredPropertyName = "WeaponIgnored_1"
+                    WeaponShootDataPropertyName = 
+                    [
+                        "WeaponShootData_0_1",
+                    ]
+                ),
+            ]
+            OutOfRangeTrackingDuration = 3.5
+            Tag = "tourelle1"
+            TurretIdleBehaviourDescriptor = ~/TurretIdle_DCAAutoMoteur
+            VitesseRotation = 2.0943951023931953
+            YulBoneOrdinal = 1
+        ),
+    ]
+)
 export WeaponDescriptor_Bofors_40mm_capture_DDR is TWeaponManagerModuleDescriptor
 (
     AlwaysOrientArmorTowardsThreat = False

@@ -11,6 +11,10 @@ Texture_Division_Emblem_BEL_DivMob is TUIResourceTexture_Common
 (
     FileName = "GameData:/Assets/2D/Interface/UseOutGame/Division/Emblem/BEL_DivMob.png"
 )
+Texture_Division_Emblem_Ausbildungszentrum_Heeresflugabwehrtruppe_RFA is TUIResourceTexture_Common
+(
+    FileName = "GameData:/Assets/2D/Interface/UseOutGame/Division/Emblem/Ausbildungszentrum_Heeresflugabwehrtruppe.png"
+)
 Texture_Division_Emblem_CAN_1st_division is TUIResourceTexture_Common
 (
     FileName = "GameData:/Assets/2D/Interface/UseOutGame/Division/Emblem/CAN_1st_division.png"
