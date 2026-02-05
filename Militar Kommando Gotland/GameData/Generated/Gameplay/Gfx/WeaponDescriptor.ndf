@@ -198750,7 +198750,7 @@ export WeaponDescriptor_StabsTgb_m42A_CMD_SWE is TWeaponManagerModuleDescriptor
     AlwaysOrientArmorTowardsThreat = True
     Salves = 
     [
-        50,
+        1,
         1,
     ]
     TurretDescriptorList = 
@@ -198833,7 +198833,7 @@ export WeaponDescriptor_Tgb_m42A_CMD_SWE is TWeaponManagerModuleDescriptor
     AlwaysOrientArmorTowardsThreat = True
     Salves = 
     [
-        50,
+        1,
         1,
     ]
     TurretDescriptorList = 
@@ -198916,8 +198916,8 @@ export WeaponDescriptor_Pltgb_903_Ksp_SWE is TWeaponManagerModuleDescriptor
     AlwaysOrientArmorTowardsThreat = True
     Salves = 
     [
-        100,
-        100,
+        2,
+        2,
         1,
     ]
     TurretDescriptorList = 
@@ -199034,7 +199034,7 @@ export WeaponDescriptor_81mm_Mortar_Grk_m2939 is TWeaponManagerModuleDescriptor
     AlwaysOrientArmorTowardsThreat = False
     Salves = 
     [
-        22,
+        20,
     ]
     TurretDescriptorList = 
     [
@@ -199167,7 +199167,7 @@ export WeaponDescriptor_Mortar_Minrojningsorm_1_SWE is TWeaponManagerModuleDescr
     AlwaysOrientArmorTowardsThreat = False
     Salves = 
     [
-        22,
+        4,
     ]
     TurretDescriptorList = 
     [
@@ -199214,7 +199214,8 @@ export WeaponDescriptor_Kapjas_m65_SWE is TWeaponManagerModuleDescriptor
     AlwaysOrientArmorTowardsThreat = False
     Salves = 
     [
-        40,
+        8,
+        8
     ]
     TurretDescriptorList = 
     [
@@ -199223,19 +199224,19 @@ export WeaponDescriptor_Kapjas_m65_SWE is TWeaponManagerModuleDescriptor
             AngleRotationBase = 0
             AngleRotationBasePitch = 0
             AngleRotationMax = 6.283185307179586
-            AngleRotationMaxPitch = 0.4363323129985824
+            AngleRotationMaxPitch = 1.3089969389957472
             AngleRotationMinPitch = -0.17453292519943295
             MountedWeaponDescriptorList = 
             [
                 TMountedWeaponDescriptor
                 (
-                    Ammunition = $/GFX/Weapon/Ammo_Canon_AP_Kapjas_m65_SWE
+                    Ammunition = $/GFX/Weapon/Ammo_Howz_Canon_Kapjas_m65_SWE
                     AnimateOnlyOneSoldier = False
                     DispersionRadiusOffColor = RGBA[0,0,0,0]
                     DispersionRadiusOffThickness = -0.1
                     DispersionRadiusOnColor = RGBA[0,0,0,0]
                     DispersionRadiusOnThickness = -0.1
-                    EffectTag = "FireEffect_Canon_AP_KSM25_100mm"
+                    EffectTag = "FireEffect_Howz_Canon_M118_Howitzer_105mm"
                     HandheldEquipmentKey = "WeaponAlternative_1"
                     NbWeapons = 1
                     SalvoStockIndex = 0
@@ -199249,13 +199250,13 @@ export WeaponDescriptor_Kapjas_m65_SWE is TWeaponManagerModuleDescriptor
                 ),
                 TMountedWeaponDescriptor
                 (
-                    Ammunition = $/GFX/Weapon/Ammo_Canon_HE_Kapjas_m65_SWE
+                    Ammunition = $/GFX/Weapon/Ammo_Howz_Canon_Kapjas_m65_SWE_SMOKE
                     AnimateOnlyOneSoldier = False
                     DispersionRadiusOffColor = RGBA[0,0,0,0]
                     DispersionRadiusOffThickness = -0.1
                     DispersionRadiusOnColor = RGBA[0,0,0,0]
                     DispersionRadiusOnThickness = -0.1
-                    EffectTag = "FireEffect_Canon_HE__KSM25_100mm"
+                    EffectTag = "FireEffect_Howz_Canon_M118_Howitzer_105mm_SMOKE"
                     HandheldEquipmentKey = "WeaponAlternative_2"
                     NbWeapons = 1
                     SalvoStockIndex = 0
@@ -199265,6 +199266,198 @@ export WeaponDescriptor_Kapjas_m65_SWE is TWeaponManagerModuleDescriptor
                     WeaponShootDataPropertyName = 
                     [
                         "WeaponShootData_0_2",
+                    ]
+                ),
+                TMountedWeaponDescriptor
+                (
+                    Ammunition = $/GFX/Weapon/Ammo_Howz_Canon_Kapjas_m65_SWE_Direct
+                    AnimateOnlyOneSoldier = False
+                    DispersionRadiusOffColor = RGBA[0,0,0,0]
+                    DispersionRadiusOffThickness = -0.1
+                    DispersionRadiusOnColor = RGBA[0,0,0,0]
+                    DispersionRadiusOnThickness = -0.1
+                    EffectTag = "FireEffect_Howz_Canon_M118_105mm_Direct"
+                    HandheldEquipmentKey = "WeaponAlternative_3"
+                    NbWeapons = 1
+                    SalvoStockIndex = 0
+                    ShowDispersion = False
+                    WeaponActiveAndCanShootPropertyName = "WeaponActiveAndCanShoot_3"
+                    WeaponIgnoredPropertyName = "WeaponIgnored_3"
+                    WeaponShootDataPropertyName = 
+                    [
+                        "WeaponShootData_0_3",
+                    ]
+                ),
+                TMountedWeaponDescriptor
+                (
+                    Ammunition = $/GFX/Weapon/Ammo_Howz_Canon_Kapjas_m65_SWE_AA
+                    AnimateOnlyOneSoldier = False
+                    DispersionRadiusOffColor = RGBA[0,0,0,0]
+                    DispersionRadiusOffThickness = -0.1
+                    DispersionRadiusOnColor = RGBA[0,0,0,0]
+                    DispersionRadiusOnThickness = -0.1
+                    EffectTag = "FireEffect_Howz_Canon_M118_105mm_Direct"
+                    HandheldEquipmentKey = "WeaponAlternative_3"
+                    NbWeapons = 1
+                    SalvoStockIndex = 1
+                    ShowDispersion = False
+                    WeaponActiveAndCanShootPropertyName = "WeaponActiveAndCanShoot_3"
+                    WeaponIgnoredPropertyName = "WeaponIgnored_3"
+                    WeaponShootDataPropertyName = 
+                    [
+                        "WeaponShootData_0_3",
+                    ]
+                ),
+            ]
+            OutOfRangeTrackingDuration = 3.5
+            Tag = "tourelle1"
+            VitesseRotation = 1.0471975511965976
+            YulBoneOrdinal = 1
+        ),
+    ]
+)
+export WeaponDescriptor_Howz_Haubits_m40_SWE is TWeaponManagerModuleDescriptor
+(
+    AlwaysOrientArmorTowardsThreat = False
+    Salves = 
+    [
+        10,
+    ]
+    TurretDescriptorList = 
+    [
+        TTurretTwoAxisDescriptor
+        (
+            AngleRotationBase = 0
+            AngleRotationBasePitch = 0.17453292519943275
+            AngleRotationMax = 0.2617993877991494
+            AngleRotationMaxPitch = 1.3089969389957472
+            AngleRotationMinPitch = -0.17453292519943295
+            MountedWeaponDescriptorList = 
+            [
+                TMountedWeaponDescriptor
+                (
+                    Ammunition = $/GFX/Weapon/Ammo_Howz_Canon_Haubits_m40
+                    AnimateOnlyOneSoldier = False
+                    DispersionRadiusOffColor = RGBA[255,0,0,0]
+                    DispersionRadiusOffThickness = 0
+                    DispersionRadiusOnColor = RGBA[90,180,180,255]
+                    DispersionRadiusOnThickness = 0.8
+                    EffectTag = "FireEffect_Howz_Canon_M101_Howitzer_105mm"
+                    HandheldEquipmentKey = "WeaponAlternative_1"
+                    NbWeapons = 1
+                    SalvoStockIndex = 0
+                    ShowDispersion = True
+                    WeaponActiveAndCanShootPropertyName = "WeaponActiveAndCanShoot_1"
+                    WeaponIgnoredPropertyName = "WeaponIgnored_1"
+                    WeaponShootDataPropertyName = 
+                    [
+                        "WeaponShootData_0_1",
+                    ]
+                ),
+                TMountedWeaponDescriptor
+                (
+                    Ammunition = $/GFX/Weapon/Ammo_Howz_Canon_Haubits_m40_SMOKE
+                    AnimateOnlyOneSoldier = False
+                    DispersionRadiusOffColor = RGBA[0,0,0,0]
+                    DispersionRadiusOffThickness = -0.1
+                    DispersionRadiusOnColor = RGBA[0,0,0,0]
+                    DispersionRadiusOnThickness = -0.1
+                    EffectTag = "FireEffect_Howz_Canon_M101_Howitzer_105mm_SMOKE"
+                    HandheldEquipmentKey = "WeaponAlternative_2"
+                    NbWeapons = 1
+                    SalvoStockIndex = 0
+                    ShowDispersion = False
+                    WeaponActiveAndCanShootPropertyName = "WeaponActiveAndCanShoot_2"
+                    WeaponIgnoredPropertyName = "WeaponIgnored_2"
+                    WeaponShootDataPropertyName = 
+                    [
+                        "WeaponShootData_0_2",
+                    ]
+                ),
+            ]
+            OutOfRangeTrackingDuration = 3.5
+            Tag = "tourelle1"
+            VitesseRotation = 1.0471975511965976
+            YulBoneOrdinal = 1
+        ),
+    ]
+)
+export WeaponDescriptor_Howz_Haubits_m4140_SWE is TWeaponManagerModuleDescriptor
+(
+    AlwaysOrientArmorTowardsThreat = False
+    Salves = 
+    [
+        10,
+    ]
+    TurretDescriptorList = 
+    [
+        TTurretTwoAxisDescriptor
+        (
+            AngleRotationBase = 0
+            AngleRotationBasePitch = 0.17453292519943275
+            AngleRotationMax = 0.2617993877991494
+            AngleRotationMaxPitch = 1.3089969389957472
+            AngleRotationMinPitch = -0.17453292519943295
+            MountedWeaponDescriptorList = 
+            [
+                TMountedWeaponDescriptor
+                (
+                    Ammunition = $/GFX/Weapon/Ammo_Howz_Canon_Haubits_m4140_SWE
+                    AnimateOnlyOneSoldier = False
+                    DispersionRadiusOffColor = RGBA[255,0,0,0]
+                    DispersionRadiusOffThickness = 0
+                    DispersionRadiusOnColor = RGBA[90,180,180,255]
+                    DispersionRadiusOnThickness = 0.8
+                    EffectTag = "FireEffect_Howz_Canon_D30_Howitzer_122mm"
+                    HandheldEquipmentKey = "WeaponAlternative_1"
+                    NbWeapons = 1
+                    SalvoStockIndex = 0
+                    ShowDispersion = True
+                    WeaponActiveAndCanShootPropertyName = "WeaponActiveAndCanShoot_1"
+                    WeaponIgnoredPropertyName = "WeaponIgnored_1"
+                    WeaponShootDataPropertyName = 
+                    [
+                        "WeaponShootData_0_1",
+                    ]
+                ),
+                TMountedWeaponDescriptor
+                (
+                    Ammunition = $/GFX/Weapon/Ammo_Howz_Canon_Haubits_m4140_SWE_SMOKE
+                    AnimateOnlyOneSoldier = False
+                    DispersionRadiusOffColor = RGBA[0,0,0,0]
+                    DispersionRadiusOffThickness = -0.1
+                    DispersionRadiusOnColor = RGBA[0,0,0,0]
+                    DispersionRadiusOnThickness = -0.1
+                    EffectTag = "FireEffect_Howz_Canon_D30_Howitzer_122mm_SMOKE"
+                    HandheldEquipmentKey = "WeaponAlternative_2"
+                    NbWeapons = 1
+                    SalvoStockIndex = 0
+                    ShowDispersion = False
+                    WeaponActiveAndCanShootPropertyName = "WeaponActiveAndCanShoot_2"
+                    WeaponIgnoredPropertyName = "WeaponIgnored_2"
+                    WeaponShootDataPropertyName = 
+                    [
+                        "WeaponShootData_0_2",
+                    ]
+                ),
+                TMountedWeaponDescriptor
+                (
+                    Ammunition = $/GFX/Weapon/Ammo_Canon_Haubits_m4140_SWE_Direct
+                    AnimateOnlyOneSoldier = False
+                    DispersionRadiusOffColor = RGBA[0,0,0,0]
+                    DispersionRadiusOffThickness = -0.1
+                    DispersionRadiusOnColor = RGBA[0,0,0,0]
+                    DispersionRadiusOnThickness = -0.1
+                    EffectTag = "FireEffect_Canon_AP_D30_122mm"
+                    HandheldEquipmentKey = "WeaponAlternative_3"
+                    NbWeapons = 1
+                    SalvoStockIndex = 0
+                    ShowDispersion = False
+                    WeaponActiveAndCanShootPropertyName = "WeaponActiveAndCanShoot_3"
+                    WeaponIgnoredPropertyName = "WeaponIgnored_3"
+                    WeaponShootDataPropertyName = 
+                    [
+                        "WeaponShootData_0_3",
                     ]
                 ),
             ]

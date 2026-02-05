@@ -376,6 +376,7 @@ unnamed TDeckSerializerEntries
         (Descriptor_Deck_Division_FR_Chasse3_solo, 400),
         (Descriptor_Deck_Division_ESP_Division_Guzman_multi, 407),
         (Descriptor_Deck_Division_TCH_2_MSD_multi, 408),
+        (Descriptor_Deck_Division_RFA_Ausbildungszentrum_Heeresflugabwehrtruppe_multi, 409),
     ]
 
     UnitIds = MAP
@@ -2843,5 +2844,6 @@ unnamed TDeckSerializerEntries
         ($/GFX/Unit/Descriptor_Unit_Su_22_KMGU_TCH, 3319),
         ($/GFX/Unit/Descriptor_Unit_Su_22_nplm2_TCH, 3350),
         ($/GFX/Unit/Descriptor_Unit_DCA_Bofors_NL, 3351),
+        ($/GFX/Unit/Descriptor_Unit_Bofors_40mm_MFG_RFA, 3352),
     ]   
 )

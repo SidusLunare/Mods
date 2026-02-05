@@ -5454,7 +5454,7 @@ export Descriptor_Deck_Division_US_8th_Inf_challenge is TDeckDivisionDescriptor
 )
 export Descriptor_Deck_Division_RFA_Ausbildungszentrum_Heeresflugabwehrtruppe_multi is TDeckDivisionDescriptor
 (
-    DescriptorId = GUID:{e3f82567-0bf4-461d-8a4f-3460019e7ae1}
+    DescriptorId = GUID:{b512c51d-a845-4693-8a55-d583a734c0f3}
     CfgName = 'RFA_Ausbildungszentrum_Heeresflugabwehrtruppe_multi'
     DivisionName = 'ABZ_HFLAT'
     InterfaceOrder = 15.0
