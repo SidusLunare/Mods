@@ -30879,7 +30879,7 @@ export WeaponDescriptor_Bofors_40mm_autoloader_RFA is TWeaponManagerModuleDescri
             [
                 TMountedWeaponDescriptor
                 (
-                    Ammunition = $/GFX/Weapon/Ammo_DCA_1_canon_Bofors_upgrade_40mm_autoloader
+                    Ammunition = $/GFX/Weapon/Ammo_DCA_1_canon_Bofors_40mm_autoloader
                     AnimateOnlyOneSoldier = False
                     DispersionRadiusOffColor = RGBA[0,0,0,0]
                     DispersionRadiusOffThickness = -0.1

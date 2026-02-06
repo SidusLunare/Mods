@@ -23662,7 +23662,7 @@ Descriptor_Deck_Division_TCH_303_Tank_multi_Rule is TDeckDivisionRule
             AvailableWithoutTransport = False
             AvailableTransportList = [ $/GFX/Unit/Descriptor_Unit_Praga_V3S_TCH ]
             MaxPackNumber = 1
-            NumberOfUnitInPack = 6
+            NumberOfUnitInPack = 8
             NumberOfUnitInPackXPMultiplier = [1.0, 0.6, 0.34, 0.0]
         ),
         TDeckUniteRule
@@ -32956,12 +32956,21 @@ Descriptor_Deck_Division_RFA_Ausbildungszentrum_Heeresflugabwehrtruppe_multi_Rul
         ),
         TDeckUniteRule
         (
-            UnitDescriptor = $/GFX/Unit/Descriptor_Unit_Bofors_40mm_MFG_RFA
+            UnitDescriptor = $/GFX/Unit/Descriptor_Unit_DCA_Bofors_ESP
             AvailableWithoutTransport = False
             AvailableTransportList = [ $/GFX/Unit/Descriptor_Unit_MAN_Kat_6x6_trans_RFA ]
             MaxPackNumber = 2
             NumberOfUnitInPack = 8
             NumberOfUnitInPackXPMultiplier = [1.0, 0.6, 0.34, 0.0]
+        ),
+        TDeckUniteRule
+        (
+            UnitDescriptor = $/GFX/Unit/Descriptor_Unit_Bofors_40mm_MFG_RFA
+            AvailableWithoutTransport = False
+            AvailableTransportList = [ $/GFX/Unit/Descriptor_Unit_MAN_Kat_6x6_trans_RFA ]
+            MaxPackNumber = 2
+            NumberOfUnitInPack = 7
+            NumberOfUnitInPackXPMultiplier = [1.0, 0.68, 0.49, 0.0]
         ),
         TDeckUniteRule
         (
@@ -33001,11 +33010,29 @@ Descriptor_Deck_Division_RFA_Ausbildungszentrum_Heeresflugabwehrtruppe_multi_Rul
         ),
         TDeckUniteRule
         (
+            UnitDescriptor = $/GFX/Unit/Descriptor_Unit_DCA_AZP_S60_DDR
+            AvailableWithoutTransport = False
+            AvailableTransportList = [ $/GFX/Unit/Descriptor_Unit_MAN_Kat_6x6_trans_RFA ]
+            MaxPackNumber = 2
+            NumberOfUnitInPack = 8
+            NumberOfUnitInPackXPMultiplier = [1.0, 0.6, 0.34, 0.0]
+        ),
+        TDeckUniteRule
+        (
+            UnitDescriptor = $/GFX/Unit/Descriptor_Unit_DCA_AZP_S60_SOV
+            AvailableWithoutTransport = False
+            AvailableTransportList = [ $/GFX/Unit/Descriptor_Unit_MAN_Kat_6x6_trans_RFA ]
+            MaxPackNumber = 2
+            NumberOfUnitInPack = 8
+            NumberOfUnitInPackXPMultiplier = [1.0, 0.6, 0.34, 0.0]
+        ),        
+        TDeckUniteRule
+        (
             UnitDescriptor = $/GFX/Unit/Descriptor_Unit_DCA_PLK_57mm_TCH
             AvailableWithoutTransport = False
             AvailableTransportList = [ $/GFX/Unit/Descriptor_Unit_MAN_Kat_6x6_trans_RFA ]
             MaxPackNumber = 2
-            NumberOfUnitInPack = 6
+            NumberOfUnitInPack = 8
             NumberOfUnitInPackXPMultiplier = [1.0, 0.6, 0.34, 0.0]
         ),
         TDeckUniteRule

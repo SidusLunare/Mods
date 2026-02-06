@@ -25628,13 +25628,13 @@ Ammo_DCA_1_canon_Bofors_upgrade_40mm is TAmmunitionDescriptor
     DistanceForSpeedGRU               = 0.0
     DamageTypeEvolutionOverRangeDescriptor  = ~/DamageTypeEvolutionOverRangeDescriptor_DCA
 )
-Ammo_DCA_1_canon_Bofors_upgrade_40mm_autoloader is TAmmunitionDescriptor
+Ammo_DCA_1_canon_Bofors_40mm_autoloader is TAmmunitionDescriptor
 (
-    DescriptorId                      = GUID:{c98de9c0-568e-45a2-aa96-14bccd6ede61}
-    Name                              = 'XDPWJLDACG'
-    TypeCategoryName                  = 'SDZXYUYRYN'
+    DescriptorId                      = GUID:{72c56dbc-faad-4e00-bf35-5dd62b21c0e2}
+    Name                              = 'EGYWVNTJSH'
+    TypeCategoryName                  = 'YNDLJFDBIK'
     Caliber                           = 'SSSIABNVRC'
-    WeaponDescriptionToken            = 'PEDZWHWPYI'
+    WeaponDescriptionToken            = 'BGKHTMZYRF'
     TraitsToken                       = [ 'MOTION', 'autoloader', 'RADAR' ]
     WeaponCursorType                  = Weapon_Cursor_FastCanon
     MinMaxCategory                    = MinMax_DCA
@@ -25665,19 +25665,19 @@ Ammo_DCA_1_canon_Bofors_upgrade_40mm_autoloader is TAmmunitionDescriptor
     DisplaySalveAccuracy              = False
     TirIndirect                       = False
     TirReflexe                        = True
-    SpeedGRU                   = 2079
+    SpeedGRU                          = 2079
     FluidFriction                     = 0.0
     NoiseDissimulationMalus           = 2.5
     ShotsBeforeMaxNoise               = 5
     TargetOnlyOneUnitInDistrict       = True
     HitRollRuleDescriptor = TDiceHitRollRuleDescriptor
     (
-        DescriptorId          = GUID:{3536e25a-d66f-405f-b998-268f20f10e65}
+        DescriptorId          = GUID:{88978ed0-bb8d-4399-a0f0-764a86d3d345}
         BaseCriticModifier = 25
         BaseHitValueModifiers =
         [
             (EBaseHitValueModifier/Base, 0),
-            (EBaseHitValueModifier/Idling, 20),
+            (EBaseHitValueModifier/Idling, 15),
             (EBaseHitValueModifier/Moving, 0),
             (EBaseHitValueModifier/Targeted, 0.0),
         ]
@@ -25685,16 +25685,16 @@ Ammo_DCA_1_canon_Bofors_upgrade_40mm_autoloader is TAmmunitionDescriptor
     )
     Guidance                          = Guidance_Radar
     AimingTime                        = 1.5
-    TimeBetweenTwoSalvos              = 3.0
-    TimeBetweenTwoSalvos_Min          = 2.8
-    TimeBetweenTwoSalvos_Max          = 2.8
-    ShotsCountPerSalvo                = 18
+    TimeBetweenTwoSalvos              = 1.0
+    TimeBetweenTwoSalvos_Min          = -1.0
+    TimeBetweenTwoSalvos_Max          = -1.0
+    ShotsCountPerSalvo                = 10
     SupplyCost                        = 12.0
-    NbSalvosShootOnPosition           = 6
+    NbSalvosShootOnPosition           = 2
     CanShootOnPosition                = True
     CanShootWhileMoving               = False
     SimultaneousShotsCount            = 1
-    AffichageMunitionParSalve         = 12
+    AffichageMunitionParSalve         = 6
     InterfaceWeaponTexture            = "Texture_Interface_Weapon_Bofors_L70"
     SmokeDescriptor                   = nil
     FireDescriptor                    = $/GFX/Weapon/Descriptor_Fire_Incendie
@@ -26674,7 +26674,7 @@ Ammo_DCA_2_canon_Bofors_40mm is TAmmunitionDescriptor
         DistanceToTarget = True
     )
     AimingTime                        = 2.0
-    TimeBetweenTwoSalvos              = 3.0
+    TimeBetweenTwoSalvos              = 1.0
     TimeBetweenTwoSalvos_Min          = -1.0
     TimeBetweenTwoSalvos_Max          = -1.0
     ShotsCountPerSalvo                = 8
