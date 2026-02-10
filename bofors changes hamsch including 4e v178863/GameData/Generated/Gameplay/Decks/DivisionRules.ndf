@@ -33055,9 +33055,17 @@ Descriptor_Deck_Division_RFA_Ausbildungszentrum_Heeresflugabwehrtruppe_multi_Rul
         (
             UnitDescriptor = $/GFX/Unit/Descriptor_Unit_Mi_8TV_DDR
             AvailableWithoutTransport = True
-            MaxPackNumber = 2
+            MaxPackNumber = 3
             NumberOfUnitInPack = 2
             NumberOfUnitInPackXPMultiplier = [0.0, 1.0, 0.4, 0.0]
+        ),
+        TDeckUniteRule
+        (
+            UnitDescriptor = $/GFX/Unit/Descriptor_Unit_Mi_24D_s8_AT_DDR
+            AvailableWithoutTransport = True
+            MaxPackNumber = 3
+            NumberOfUnitInPack = 2
+            NumberOfUnitInPackXPMultiplier = [0.0, 1.0, 0.0, 0.0]
         ),
         TDeckUniteRule
         (
