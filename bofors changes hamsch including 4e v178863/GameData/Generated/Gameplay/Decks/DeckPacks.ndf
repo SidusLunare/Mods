@@ -3155,14 +3155,6 @@ Descriptor_Deck_Pack_DCA_Bofors_upgrade_NL_DAF_YA_4400_NL_0_1 is DeckPackDescrip
     Number = 1
 )
 
-Descriptor_Deck_Pack_DCA_Bofors_NL_DAF_YA_4400_NL_1_1 is DeckPackDescriptor
-(
-    Xp = 1
-    Transport = $/GFX/Unit/Descriptor_Unit_DAF_YA_4400_NL
-    Unit = $/GFX/Unit/Descriptor_Unit_DCA_Bofors_NL
-    Number = 1
-)
-
 Descriptor_Deck_Pack_DCA_CETME_306_20mm_twin_ESP_Pegaso_3055_ESP_1_1 is DeckPackDescriptor
 (
     Xp = 1
