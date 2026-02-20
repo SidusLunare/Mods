@@ -1641,8 +1641,8 @@ Descriptor_Deck_Division_ESP_Division_Brunete_multi_Rule is TDeckDivisionRule
             AvailableWithoutTransport = False
             AvailableTransportList = [ $/GFX/Unit/Descriptor_Unit_Pegaso_3046_ESP ]
             MaxPackNumber = 1
-            NumberOfUnitInPack = 8
-            NumberOfUnitInPackXPMultiplier = [1.0, 0.6, 0.34, 0.0]
+            NumberOfUnitInPack = 7
+            NumberOfUnitInPackXPMultiplier = [1.0, 0.68, 0.49, 0.0]
         ),
         TDeckUniteRule
         (
@@ -2103,8 +2103,8 @@ Descriptor_Deck_Division_ESP_Division_Guzman_multi_Rule is TDeckDivisionRule
             AvailableWithoutTransport = False
             AvailableTransportList = [ $/GFX/Unit/Descriptor_Unit_Pegaso_3046_ESP ]
             MaxPackNumber = 2
-            NumberOfUnitInPack = 8
-            NumberOfUnitInPackXPMultiplier = [1.0, 0.6, 0.34, 0.0]
+            NumberOfUnitInPack = 7
+            NumberOfUnitInPackXPMultiplier = [1.0, 0.68, 0.49, 0.0]
         ),
         TDeckUniteRule
         (
@@ -13240,8 +13240,8 @@ Descriptor_Deck_Division_RFA_TerrKdo_Sud_multi_Rule is TDeckDivisionRule
             AvailableWithoutTransport = False
             AvailableTransportList = [ $/GFX/Unit/Descriptor_Unit_MAN_Kat_6x6_trans_RFA ]
             MaxPackNumber = 2
-            NumberOfUnitInPack = 8
-            NumberOfUnitInPackXPMultiplier = [1.0, 0.6, 0.34, 0.0]
+            NumberOfUnitInPack = 7
+            NumberOfUnitInPackXPMultiplier = [1.0, 0.68, 0.49, 0.0]
         ),
         TDeckUniteRule
         (
@@ -32896,6 +32896,15 @@ Descriptor_Deck_Division_RFA_Ausbildungszentrum_Heeresflugabwehrtruppe_multi_Rul
         ),
         TDeckUniteRule
         (
+            UnitDescriptor = $/GFX/Unit/Descriptor_Unit_Security_RFA
+            AvailableWithoutTransport = False
+            AvailableTransportList = [ $/GFX/Unit/Descriptor_Unit_Unimog_trans_RFA ]
+            MaxPackNumber = 2
+            NumberOfUnitInPack = 10
+            NumberOfUnitInPackXPMultiplier = [1.0, 0.0, 0.0, 0.0]
+        ),
+        TDeckUniteRule
+        (
             UnitDescriptor = $/GFX/Unit/Descriptor_Unit_Feldgendarmerie_RFA
             AvailableWithoutTransport = False
             AvailableTransportList = [ $/GFX/Unit/Descriptor_Unit_VW_T2b_MP_RFA ]
@@ -32951,8 +32960,8 @@ Descriptor_Deck_Division_RFA_Ausbildungszentrum_Heeresflugabwehrtruppe_multi_Rul
             AvailableWithoutTransport = False
             AvailableTransportList = [ $/GFX/Unit/Descriptor_Unit_MAN_Kat_6x6_trans_RFA ]
             MaxPackNumber = 2
-            NumberOfUnitInPack = 8
-            NumberOfUnitInPackXPMultiplier = [1.0, 0.6, 0.34, 0.0]
+            NumberOfUnitInPack = 7
+            NumberOfUnitInPackXPMultiplier = [1.0, 0.68, 0.49, 0.0]
         ),
         TDeckUniteRule
         (
@@ -32960,8 +32969,8 @@ Descriptor_Deck_Division_RFA_Ausbildungszentrum_Heeresflugabwehrtruppe_multi_Rul
             AvailableWithoutTransport = False
             AvailableTransportList = [ $/GFX/Unit/Descriptor_Unit_MAN_Kat_6x6_trans_RFA ]
             MaxPackNumber = 2
-            NumberOfUnitInPack = 8
-            NumberOfUnitInPackXPMultiplier = [1.0, 0.6, 0.34, 0.0]
+            NumberOfUnitInPack = 7
+            NumberOfUnitInPackXPMultiplier = [1.0, 0.68, 0.49, 0.0]
         ),
         TDeckUniteRule
         (
@@ -32988,6 +32997,15 @@ Descriptor_Deck_Division_RFA_Ausbildungszentrum_Heeresflugabwehrtruppe_multi_Rul
             AvailableTransportList = [ $/GFX/Unit/Descriptor_Unit_MAN_Kat_6x6_trans_RFA ]
             MaxPackNumber = 2
             NumberOfUnitInPack = 8
+            NumberOfUnitInPackXPMultiplier = [1.0, 0.6, 0.34, 0.0]
+        ),
+        TDeckUniteRule
+        (
+            UnitDescriptor = $/GFX/Unit/Descriptor_Unit_DCA_Oerlikon_GDF_005_35mm_CAN
+            AvailableWithoutTransport = False
+            AvailableTransportList = [ $/GFX/Unit/Descriptor_Unit_M35_trans_CAN ]
+            MaxPackNumber = 2
+            NumberOfUnitInPack = 5
             NumberOfUnitInPackXPMultiplier = [1.0, 0.6, 0.34, 0.0]
         ),
         TDeckUniteRule
