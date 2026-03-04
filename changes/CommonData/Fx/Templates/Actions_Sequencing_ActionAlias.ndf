@@ -1,0 +1,63 @@
+template Template_ActionAlias
+[
+    ExpectedType : string[Values = ['float', 'float2', 'float3', 'float4', 'int', 'bool', 'any']] = 'any',
+    DefaultValue : TEvaluable = nil
+] is TActionAlias
+(
+    ExpectedType = <ExpectedType>
+    DefaultValue = <DefaultValue>
+)
+
+template Template_Param_Float
+[
+    DefaultValue : TEvaluable = nil
+] is Template_ActionAlias
+(
+    ExpectedType = "float"
+    DefaultValue = <DefaultValue>
+)
+
+template Template_Param_Float2
+[
+    DefaultValue : TEvaluable = nil
+] is Template_ActionAlias
+(
+    ExpectedType = "float2"
+    DefaultValue = <DefaultValue>
+)
+
+template Template_Param_Float3
+[
+    DefaultValue : TEvaluable = nil
+] is Template_ActionAlias
+(
+    ExpectedType = "float3"
+    DefaultValue = <DefaultValue>
+)
+
+template Template_Param_Float4
+[
+    DefaultValue : TEvaluable = nil
+] is Template_ActionAlias
+(
+    ExpectedType = "float4"
+    DefaultValue = <DefaultValue>
+)
+
+template Template_Param_Int
+[
+    DefaultValue : TEvaluable = nil
+] is Template_ActionAlias
+(
+    ExpectedType = "int"
+    DefaultValue = <DefaultValue>
+)
+
+template Template_Param_Bool
+[
+    DefaultValue : TEvaluable = nil
+] is Template_ActionAlias
+(
+    ExpectedType = "bool"
+    DefaultValue = <DefaultValue>
+)

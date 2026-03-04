@@ -1,0 +1,18 @@
+// Ne pas éditer, ce fichier est généré par DivisionTypesFileWriter
+
+
+
+
+DivisionTypeDescriptions is TDivisionTypeDescriptions
+(
+    DivisionTypes = MAP [
+        ('MECHANIZ', 'Texture_Division_Type_MECHANIZ'),
+        ('INFANREG', 'Texture_Division_Type_INFANREG'),
+        ('MOTORIZD', 'Texture_Division_Type_MOTORIZD'),
+        ('AIRBORNE', 'Texture_Division_Type_AIRBORNE'),
+        ('ARMORED', 'Texture_Division_Type_ARMORED'),
+        ('DIVNAVAL', 'Texture_Division_Type_DIVNAVAL'),
+        ('AIRMOBIL', 'Texture_Division_Type_AIRMOBIL'),
+        ('ARMORREC', 'Texture_Division_Type_ARMORREC'),
+    ]
+)

@@ -1,0 +1,124 @@
+// Ne pas éditer, ce fichier est généré
+
+export Tank_AP_Wall is SimultaneousActionDeclaration
+(
+    Params =
+    [
+        private parDirection is TActionAlias( ExpectedType = 'float3' DefaultValue = float3[0,0,1] ),
+    ]
+    Actions = ActionList is
+    [
+        TSimultaneousAction
+        (
+            Mobile = nil
+            Actions =
+            [
+                TSequentialAction
+                (Actions =
+                    [
+                        TWaitInSec( Duration = 0.02 ),
+                        TActionCall
+                        (
+                            Action = $/VFX_Bank/BANK_Bomb_Flash
+                            NamedParams = MAP[
+                                ( 'parCount', 1 ),
+                                ( 'parDuration', 0.1 ),
+                                ( 'parFinalSize', 400 ),
+                                ( 'parInitialSize', 0 ),
+                                ( 'parZBias', 0 ),
+                                ( 'parPositionRelative', float3[0,0,160] ),
+                            ]
+                        ),
+                    ]
+                ),
+            ]
+        ),
+        TSimultaneousAction
+        (
+            Mobile = TMobileWithLocalRepereMatrixFactory
+            (
+                Position = float3[0,0,100]
+            )
+            Actions =
+            [
+                TSequentialAction
+                (Actions =
+                    [
+                        TWaitInSec( Duration = 0.02 ),
+                        TActionCall
+                        (
+                            Action = $/VFX_Bank/BANK_Bomb_Smoke_MGS_homogeneous_Simple
+                            NamedParams = MAP[
+                                ( 'parAccelerationField', 4000 ),
+                                ( 'parAlphaMul', 1 ),
+                                ( 'parBottomGrowFactor', 8.399997 ),
+                                ( 'parColor', float3[0.6901961,0.5960785,0.4980392] ),
+                                ( 'parColormultiplierMul', 0.8400001 ),
+                                ( 'parCount', 2 ),
+                                ( 'parEndSize', 600 ),
+                                ( 'parFluidFriction', 20 ),
+                                ( 'parLifetimeMul', 4 ),
+                                ( 'parRotationMul', 3.5 ),
+                                ( 'parSpeed', 10000 ),
+                                ( 'parStartSize', 260 ),
+                                ( 'parTopGrowFactor', 4.999997 ),
+                            ]
+                        ),
+                    ]
+                ),
+            ]
+        ),
+        TSimultaneousAction
+        (
+            Mobile = TMobileWithLocalRepereMatrixFactory
+            (
+                Position = float3[0,0,150]
+            )
+            Actions =
+            [
+                TActionCall
+                (
+                    Action = $/VFX_Bank/BANK_Bomb_Sparks_2_Simple
+                    NamedParams = MAP[
+                        ( 'parColor', float3[0.2862745,0.2196079,0.2] ),
+                        ( 'parCount', 10 ),
+                        ( 'parFluidFriction', 2.500001 ),
+                        ( 'parGravity', 500 ),
+                        ( 'parLifetime', 1 ),
+                        ( 'parSize', 40 ),
+                        ( 'parSpeed', 10000 ),
+                        ( 'parStretchMul', 0.2000006 ),
+                        ( 'parTemperature', 10 ),
+                    ]
+                ),
+            ]
+        ),
+        TSimultaneousAction
+        (
+            Mobile = TMobileWithLocalRepereMatrixFactory
+            (
+                Position = float3[0,0,200]
+            )
+            Actions =
+            [
+                TActionCall
+                (
+                    Action = $/VFX_Bank/Smoky_Dust_Projections_Simple
+                    NamedParams = MAP[
+                        ( 'parColor', float3[0.6352941,0.5019608,0.3843138] ),
+                        ( 'parCount', 4 ),
+                        ( 'parDir', parDirection ),
+                        ( 'parDuration', 2 ),
+                        ( 'parFlatness', 0.8000001 ),
+                        ( 'parGravity', 1 ),
+                        ( 'parInitSpeed', 5.000001 ),
+                        ( 'parNarrowness', 0.9999999 ),
+                        ( 'parOpacity', 1 ),
+                        ( 'parRadius', 0 ),
+                        ( 'parSize', 2000 ),
+                    ]
+                ),
+            ]
+        ),
+    ]
+)

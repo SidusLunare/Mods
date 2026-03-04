@@ -1,0 +1,51 @@
+
+export Descriptor_Unit_TestAirport is TEntityDescriptor
+(
+    DescriptorId       = GUID:{ccffdf1a-1ace-4ad7-8b0d-816327e1e54c}
+    ClassNameForDebug  = 'Pawn_TestAirport'
+    ModulesDescriptors = [
+        TTypeUnitModuleDescriptor
+        (
+            Coalition                        = ECoalition/NATO
+            MotherCountry                    = 'HON'
+        ),
+        DefaultFlagsModuleDescriptor,
+        ~/BuildingPositionModuleDescriptor,
+        ~/LinkTeamModuleDescriptor,
+        TInfluenceMapModuleDescriptor
+        (
+            InfluenceStrength = 1.0
+            MinimumInfluenceStrength = 1.0
+            StrengthDecayPerSecond = 0.0
+            PreventsDecayInZone = True
+        ),
+        ~/InfluencePositionModuleDescriptor,
+        ~/InfluenceDataModuleDescriptor,
+        TTagsModuleDescriptor
+        (
+            TagSet = [
+                "AllUnits",
+            ]
+        ),
+        TIAStratModuleDescriptor
+        (
+            DatabaseId = 0
+            GameplayBehavior = EGameplayBehavior/Nothing
+        ),
+        ~/EffectApplierModuleDescriptor,
+        TVisibilityModuleDescriptor
+        (
+            UnitConcealmentBonus = 1.0
+        ),
+        ~/PawnBuildingScannerConfigurationDescriptor,
+        TReverseScannerWithIdentificationDescriptor
+        (
+            IdentifyBaseProbability     = 1.0
+            TimeBetweenEachIdentifyRoll = 0.0
+            VisibilityRuleDescriptor    = $/GFX/VisionRules/StandardWargameVisibilityRollRule
+        ),
+        ~/StrategicBuildingModuleDescriptor,
+        TStrategicAirportModuleDescriptor(),
+        TStrategicPositionModuleDescriptor( KernelRadius = 1 ),
+    ]
+)

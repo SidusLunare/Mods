@@ -1,0 +1,82 @@
+export FX_Binder_Rotor is SimultaneousActionDeclaration
+(
+    Params =
+    [
+        private parPaleCount is Template_ActionAlias( ExpectedType = 'int' ),
+        private parPaleLength is Template_ActionAlias( ExpectedType = 'float' ),
+        private parRotationAxis is Template_ActionAlias( ExpectedType = 'float3' ),
+    ]
+    LocalVariables = []
+    Actions =
+    [
+        Template_WaitForEver(), // Duree de vie mobile wrapper
+        RotorBomb is ParticleBombSpawner
+        (
+            ParticleMaxDurationForSpawnSkip = 0
+            Count = TConstantInteger(Value = 1)
+            Spawner = ParticleSpawner
+            (
+                ParticleDescriptor = ParticleDescriptor
+                (
+                    RenderInfo = ~/RotorParticleRenderInfo
+                    Evolvers = Template_List
+                    (
+                        Evolvers =
+                        [
+                            Template_EvolverField
+                            (
+                                EvolveFunction =
+                                    (ParticleCustomFloat3_1 == float3[1, 0, 0] ? normalized[ParticleMobileWrapperAxeZ] :
+                                    (ParticleCustomFloat3_1 == float3[0, 1, 0] ? normalized[ParticleMobileWrapperAxeX] :
+                                    (ParticleCustomFloat3_1 == float3[0, 0, 1] ? normalized[ParticleMobileWrapperAxeY] :
+                                    float3[0, 0, 0] // Si c'est cette option qui est choisie, c'est que l'argument parRotationAxis est invalide. On met alors un vecteur nul pour que ça assert aussitôt.
+                                    )))
+                                Field = 'Direction'
+                            ),
+                            Template_EvolverField
+                            (
+                                EvolveFunction =
+                                    (ParticleCustomFloat3_1 == float3[1, 0, 0] ? normalized[ParticleMobileWrapperAxeX] :
+                                    (ParticleCustomFloat3_1 == float3[0, 1, 0] ? normalized[ParticleMobileWrapperAxeY] :
+                                    (ParticleCustomFloat3_1 == float3[0, 0, 1] ? normalized[ParticleMobileWrapperAxeZ] :
+                                    float3[0, 0, 0] // Si c'est cette option qui est choisie, c'est que l'argument parRotationAxis est invalide. On met alors un vecteur nul pour que ça assert aussitôt.
+                                    )))
+                                Field = 'UpVector'
+                            ),
+                            Template_EvolverField
+                            (
+                                EvolveFunction = ParticleMobileWrapperPositionUnScaled
+                                Field = 'Position'
+                            ),
+                        ]
+                    )
+                    ParticleRenderer = ParticleRendererRotor()
+                    InfiniteParticles = True
+                )
+                PositionIndependentFromEmitter = False
+                Initialisers =
+                [
+                    ParticleInitialiserList
+                    (
+                        ColorModifier = float3[1, 1, 1]
+
+                        Size = ~/FX_Binder_Rotor/parPaleLength
+                        ColorRGB = LinearColor[0.00, 0.00, 0.00]
+                        Alpha = TConstantFloat(Value = 1.0)
+                        ColorMultiplier = TConstantFloat(Value = 1)
+                        Count = ~/FX_Binder_Rotor/parPaleCount
+                        CustomFloat3_1 = ~/FX_Binder_Rotor/parRotationAxis
+                    ),
+                    Initialiser_SetMobileWrapper(),
+                ]
+                PostTransformInitialisers = []
+                ParticleLifetime = TConstantFloat(Value = 5)
+            )
+        ),
+        Template_WaitToKillBombParticle
+        (
+            Forever = true
+            BombSpawner = RotorBomb
+        ),
+    ]
+)

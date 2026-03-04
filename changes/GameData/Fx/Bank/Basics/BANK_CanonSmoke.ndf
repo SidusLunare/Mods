@@ -1,0 +1,105 @@
+// GameData:/Fx/Bank/Basics/AoA_BANK_CanonSmoke.ndf
+// Call Test_CanonSmoke in FX Tester
+// Ground dust projection from blast
+
+export Test_CanonSmoke is Simultaneous
+(
+    Mobile = MobileUnCentroid()
+    Actions =
+    [
+        Template_ActionCall
+        (
+            Action = CanonSmoke
+            NamedParameters = MAP[
+                ( 'parSize', 2500 * RandomRange[0.5, 1] ),
+                ( 'parDuration', RandomRange[0.8, 1.25] ),
+                ( 'parDirection', GenFloat3[sin[0], cos[0]] ),
+                ( 'parOpacity', 0.8 ),
+            ]
+        ),
+    ]
+)
+
+export CanonSmoke_Simple is ActionCallWithParameters
+(
+    Action = CanonSmoke
+    Params =
+    [
+        private parSize        is Template_Param_Float (),
+        private parDuration    is Template_Param_Float (),
+        private parOpacity     is Template_Param_Float (),
+        private parRepeatCount is Template_Param_Float ( DefaultValue = 1),
+        private parRepeatTime  is Template_Param_Float ( DefaultValue = 10),
+        private parInitialDelay          is Template_Param_Float  ( DefaultValue = 0 ), //*
+    ]
+    NamedParameters = MAP
+    [
+        ( 'parSize'        , parSize * RandomRange[0.5, 1] ),
+        ( 'parDuration'    , parDuration ),
+        ( 'parDirection'   , MobileDirection ),
+        ( 'parOpacity'     , parOpacity ),
+        ( 'parRepeatCount' , parRepeatCount ),
+        ( 'parRepeatTime'  , parRepeatTime ),
+        ( 'parInitialDelay', parInitialDelay ), //*
+    ]
+)
+
+export CanonSmoke is SimultaneousActionDeclaration
+(
+    Params =
+    [
+        private parSize        is Template_Param_Float (),
+        private parDuration    is Template_Param_Float (),
+        private parDirection   is Template_Param_Float3 (),
+        private parOpacity     is Template_Param_Float (),
+        private parRepeatCount is Template_Param_Float ( DefaultValue = 1),
+        private parRepeatTime  is Template_Param_Float ( DefaultValue = 10),
+        private parInitialDelay          is Template_Param_Float  ( DefaultValue = 0 ), //*
+    ]
+    Actions =
+    [
+        private Smoke is ParticleSpraySpawnerWithEvaluable
+        (
+            Frequency = parRepeatTime == 0 ? 10.0 : 1.0 div parRepeatTime
+            DurationInSec = parRepeatTime == 0 ? parDuration : (parRepeatCount == 0 ? 666 : parRepeatTime * (parRepeatCount - 0.9))
+            PeriodInSec = parRepeatTime
+            InitialDelayInSec = parInitialDelay //*
+            SpawnFirstParticleAtStart = true
+            Spawner = ParticleSpawner
+            (
+                PositionIndependentFromEmitter = true
+                ParticleLifetime = parDuration
+                Initialisers =
+                [
+                    ParticleInitialiserList
+                    (
+                        Alpha = 1.0
+
+                        Position = SpawnerPosition + 0.5 * ParticleSize * parDirection * ParticleStretching
+                        ColorModifier = LinearColor[1]
+                        EmissivePower = 1
+                        Opacity = parOpacity
+                        CustomFloat_1 = parOpacity
+                        Stretching = 2
+                        Direction = -parDirection
+                        Size = parSize
+                    ),
+                ]
+                ParticleDescriptor = ParticleDescriptor
+                (
+                    RenderInfo = DeferredParticleRenderInfo
+                    (
+                        TextureName = 'GameData:/Assets/2D/Fx/anim_canon_smoke_01.png'
+                    )
+                    ParticleRenderer = $/VFX_Bank/LitParticleRenderer
+                    Evolvers = ParticleStandardEvolverList
+                    (
+                        Opacity = ParticleCustomFloat_1 * AttackSustainDecay[ParticleLifeRatio, 0.01,0.7]// * (1-abs[dot[CameraDirection, ParticleDirection]])
+                        Animation = ParticleLifeRatio
+                    )
+                )
+            )
+        ),
+    ]
+)
+

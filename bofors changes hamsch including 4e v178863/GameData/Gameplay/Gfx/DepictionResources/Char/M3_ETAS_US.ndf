@@ -1,0 +1,14 @@
+export Modele_M3_ETAS_US is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/US/Char/M3_ETAS/M3_ETAS.fbx"
+)
+
+export Modele_M3_ETAS_US_MID is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/US/Char/M3_ETAS_MID/M3_ETAS_MID.fbx"
+)
+
+export Modele_M3_ETAS_US_LOW is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/US/Char/M3_ETAS_LOW/M3_ETAS_LOW.fbx"
+)

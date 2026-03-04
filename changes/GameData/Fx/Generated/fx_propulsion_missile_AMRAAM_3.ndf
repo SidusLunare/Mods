@@ -1,0 +1,94 @@
+// Ne pas éditer, ce fichier est généré
+
+export fx_propulsion_missile_AMRAAM_3 is Simultaneous
+(
+    Actions = ActionList is
+    [
+        TSimultaneousAction
+        (
+            Mobile = nil
+            Actions =
+            [
+                TActionCall
+                (
+                    Action = $/VFX_Bank/BANK_Propulsion_Missile_Simple
+                    NamedParams = MAP[
+                        ( 'parDisableFlame', false ),
+                        ( 'parDisableLight', false ),
+                        ( 'parDisableSFX', false ),
+                        ( 'parFlameColorMultiplier', 20 ),
+                        ( 'parFlameFrequency', 20 ),
+                        ( 'parFlameIntensity', 5 ),
+                        ( 'parFlameOffset', -380 ),
+                        ( 'parFlameOpacity', 0 ),
+                        ( 'parFlameSize', 750 ),
+                        ( 'parFlameStretch', 20 ),
+                        ( 'parLightColor', float3[1,0.7529413,0.5019608] ),
+                        ( 'parLightPower', 5 ),
+                        ( 'parLightPowerJittering', 0.1 ),
+                        ( 'parLightSize', 400 ),
+                        ( 'parLightSizeJittering', 0.5 ),
+                        ( 'parSFXId', 2 ),
+                    ]
+                ),
+                TActionCall
+                (
+                    Action = $/VFX_Bank/Smoke_Trail_Simple
+                    NamedParams = MAP[
+                        ( 'DurationInSec', 2 ),
+                        ( 'parColor1', float3[0.9882354,0.654902,0.3176471] ),
+                        ( 'parColor2', float3[1,0.8745099,0.7725491] ),
+                        ( 'parColor3', float3[1,1,1] ),
+                        ( 'parColorKey1', 0.5 ),
+                        ( 'parColorKey2', 0.5 ),
+                        ( 'parDispersion', 100 ),
+                        ( 'parDistance', 100 ),
+                        ( 'parLifeDuration', 0.04 ),
+                        ( 'parOpacity', 1 ),
+                        ( 'parSize1', 500 ),
+                        ( 'parSize2', 1100 ),
+                        ( 'parStopSpawnerRatio', 0.35 ),
+                    ]
+                ),
+                TActionCall
+                (
+                    Action = $/VFX_Bank/Smoke_Trail_Simple
+                    NamedParams = MAP[
+                        ( 'DurationInSec', 2 ),
+                        ( 'parColor1', float3[0.3411765,0.3411765,0.3411765] ),
+                        ( 'parColor2', float3[0.6,0.6,0.6] ),
+                        ( 'parColor3', float3[0.454902,0.454902,0.454902] ),
+                        ( 'parColorKey1', 0.5 ),
+                        ( 'parColorKey2', 0.5 ),
+                        ( 'parDispersion', 300 ),
+                        ( 'parDistance', 200 ),
+                        ( 'parLifeDuration', 0.5 ),
+                        ( 'parOpacity', 0.15 ),
+                        ( 'parSize1', 500 ),
+                        ( 'parSize2', 3000 ),
+                        ( 'parStopSpawnerRatio', 0.35 ),
+                    ]
+                ),
+                TActionCall
+                (
+                    Action = $/VFX_Bank/Smoke_Trail_Simple
+                    NamedParams = MAP[
+                        ( 'parColor1', float3[0.282353,0.2784314,0.2784314] ),
+                        ( 'parColor2', float3[0.3803922,0.3803922,0.3803922] ),
+                        ( 'parColor3', float3[0.5137255,0.5137255,0.5137255] ),
+                        ( 'parColorKey1', 0.5 ),
+                        ( 'parColorKey2', 0.5 ),
+                        ( 'parDispersion', 400 ),
+                        ( 'parDistance', 400 ),
+                        ( 'parLifeDuration', 2 ),
+                        ( 'parOpacity', 0.1 ),
+                        ( 'parSize1', 2000 ),
+                        ( 'parSize2', 5000 ),
+                        ( 'parStopSpawnerRatio', 1 ),
+                    ]
+                ),
+                TWaitInSec( Duration = 2),
+            ]
+        ),
+    ]
+)

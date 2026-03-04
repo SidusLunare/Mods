@@ -1,0 +1,17 @@
+export Modele_Howz_M115_203mm_ESP is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/BEL/Canon/Howz_M115_203mm/Howz_M115_203mm.fbx"
+    Textures="GameData:/Assets/3D/Units/ESP/Canon/Howz_M115_203mm"
+)
+
+export Modele_Howz_M115_203mm_ESP_MID is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/BEL/Canon/Howz_M115_203mm_MID/Howz_M115_203mm_MID.fbx"
+    Textures="GameData:/Assets/3D/Units/ESP/Canon/Howz_M115_203mm_MID"
+)
+
+export Modele_Howz_M115_203mm_ESP_LOW is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/BEL/Canon/Howz_M115_203mm_LOW/Howz_M115_203mm_LOW.fbx"
+    Textures="GameData:/Assets/3D/Units/ESP/Canon/Howz_M115_203mm_LOW"
+)

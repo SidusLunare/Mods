@@ -1,0 +1,27 @@
+template Template_ParticleTrailSpawner
+[
+    DistanceBetweenSpawns       : TEvaluable[GroupBy = "Spawn parameters"] = TConstantFloat(Value = 100.0),
+    Spawner                     : TParticleSpawner[required] = ParticleSpawner(),
+    Position                    : TEvaluable[GroupBy = "Spawn parameters"] = nil,
+    Forever                     : boolean[GroupBy = "Timer parameters"] = false,
+    InitialDelayInSec           : TEvaluable[GroupBy = "Timer parameters"] = nil,
+    PeriodInSec                 : TEvaluable[GroupBy = "Timer parameters"] = nil,
+    WaitAtLeastBetweenFrame     : TEvaluable[GroupBy = "Timer parameters"] = nil,
+    DurationInSec               : TEvaluable[required, GroupBy = "Timer parameters"] = TConstantFloat(Value = 5.0),
+    Disabled                    : TEvaluable = nil,
+    TimeServer                  : TTimeServerWithVisibilityRange = nil,
+    RecomputeOffsetFromCentroid : boolean = false,
+] is TParticleSpawnerActionTrail
+(
+    DistanceBetweenSpawns = <DistanceBetweenSpawns>
+    Spawner = <Spawner>
+    Position = <Position>
+    Forever = <Forever>
+    InitialDelayInSec = <InitialDelayInSec>
+    PeriodInSec = <PeriodInSec>
+    WaitAtLeastBetweenFrame = <WaitAtLeastBetweenFrame>
+    DurationInSec = <DurationInSec>
+    Disabled = <Disabled>
+    TimeServer = <TimeServer>
+    RecomputeOffsetFromCentroid = <RecomputeOffsetFromCentroid>
+)

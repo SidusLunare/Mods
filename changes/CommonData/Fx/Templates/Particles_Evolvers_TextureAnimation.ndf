@@ -1,0 +1,9 @@
+template Template_TextureAnimation
+[
+    EvolveFunction  : TEvaluable[required] = nil,
+    Disabled        : boolean = false
+] is TParticleEvolver_TextureAnimation
+(
+    EvolveFunction = <EvolveFunction>
+    Disabled = <Disabled>
+)

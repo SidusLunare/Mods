@@ -1,0 +1,6 @@
+export ModelFile_HMGteam_NSV_SOV is "GameData:/Assets/3D/Units/URSS/Canon/HMGTeam_NSV/HMGTeam_NSV.fbx"
+export ModelFile_HMGteam_NSV_SOV_MID is "GameData:/Assets/3D/Units/URSS/Canon/HMGTeam_NSV_MID/HMGTeam_NSV_MID.fbx"
+export ModelFile_HMGteam_NSV_SOV_LOW is "GameData:/Assets/3D/Units/URSS/Canon/HMGTeam_NSV_LOW/HMGTeam_NSV_LOW.fbx"
+export Modele_HMGteam_NSV_SOV is TResourceMesh( Mesh=ModelFile_HMGteam_NSV_SOV)
+export Modele_HMGteam_NSV_SOV_MID is TResourceMesh( Mesh=ModelFile_HMGteam_NSV_SOV_MID)
+export Modele_HMGteam_NSV_SOV_LOW is TResourceMesh( Mesh=ModelFile_HMGteam_NSV_SOV_LOW)

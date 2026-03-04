@@ -1,0 +1,239 @@
+// Dust and mud projected by tracked and wheeled vehicles
+
+export BANK_Deplacement_Mud is SimultaneousActionDeclaration
+(
+    Params =
+    [
+        private parOffsetPos                    is Template_Param_Float3(),
+        private parDistanceBetweenParticles     is Template_Param_Float(),
+        private parDuration                     is Template_Param_Float(DefaultValue = 0.5),
+        private parRGBcolor                     is Template_Param_Float3(),
+        private parSpeedMultiplier              is Template_Param_Float(),
+        private parOpacity                      is Template_Param_Float(),
+        private parSize                         is Template_Param_Float(),
+        private parEndSizeMultipler             is Template_Param_Float(),
+        private parAxeYMultiplier               is Template_Param_Float(),
+    ]
+    Actions =
+    [
+        Template_WaitForEver(),
+        private Mud_Spawner_Particle is ParticleBombSpawner
+        (
+            Count = 1
+            Spawner = ParticleSpawner
+            (
+                ParticleLifetime = 666 // InfiniteParticles
+                Initialisers =
+                [
+                    Initialiser_SetMobileWrapper(),
+                    ParticleInitialiserList
+                    (
+                        ColorModifier = parRGBcolor
+                        Opacity = parOpacity
+                        Size = parSize
+                        CustomFloat_1 = parDistanceBetweenParticles
+                        CustomFloat_2 = parSpeedMultiplier
+                        CustomFloat_3 = parEndSizeMultipler
+                        CustomFloat_4 = parDuration
+                        CustomFloat_9 = parAxeYMultiplier
+                        CustomFloat3_1 = parOffsetPos
+                    ),
+                ]
+                PostTransformInitialisers =
+                [
+                    Template_Post_Initialiser_For_EvolverTrailSpawner
+                    (
+                        SpawnStartedField = $/Particle/SpawnStarted2
+                        PreviousEvolverSpawnPositionField = $/Particle/CustomFloat3_9
+                    ),
+                ]
+                ParticleDescriptor = ParticleDescriptor
+                (
+                    InfiniteParticles = true
+                    ParticleRenderer = $/VFX_Bank/NullRenderer
+                    RenderInfo = $/VFX_Bank/NullRenderInfo
+                    Evolvers = ParticleStandardEvolverList
+                    (
+                        Position = ParticleMobileWrapperPositionUnScaled + ParticleCustomFloat3_1
+                        // Direction of the mobile to know the direction of the dust projections
+                        CustomFloat3_2 = ParticleMobileWrapperAxeZ + 0.5 * ParticleCustomFloat_9 * ParticleMobileWrapperAxeY //parAxeYMultiplier
+                        CustomFloat3_3 = ParticleSpeed * ParticleCustomFloat_6
+                        CustomFloat3_4 = ParticleMobileWrapperAxeY * ParticleCustomFloat_9 //parAxeYMultiplier
+                        // pas de particules de fumée quand on recule
+                        CustomFloat_6 = sat[dot[normalized[ParticleSpeed], ParticleMobileWrapperAxeX]] * ParticleCustomFloat_7
+                        // vitesse max 1680, après on réduit la durée des particules
+                        CustomFloat_7 = sat[1680 div Max[length[ParticleSpeed], 1]]
+                        AdditionnalEvolvers =
+                        [
+                            Template_StandardComputeSpeed(),
+                            private Mud_Trail_Spawner is TrailSpawner
+                            (
+                                DistanceBetweenSpawn = ParticleCustomFloat_1 * RandomRange[1, 6]
+                                Spawner = Mud is ParticleSpawner
+                                (
+                                    ParticleLifetime = 0.01 + SpawningParticleCustomFloat_4 * SpawningParticleCustomFloat_6
+                                    Initialisers =
+                                    [
+                                        ParticleInitialiserList
+                                        (
+                                            Position = ParticleSize * float3[0,0,0.5] + SpawningParticleCustomFloat3_4 * ParticleSize * 0.25
+                                            ColorModifier = SpawningParticleColorModifier
+                                            Alpha = SpawningParticleOpacity
+                                            Size = SpawningParticleSize * RandomRange[0.25, 1]
+                                            CustomFloat_2 = SpawningParticleCustomFloat_3
+                                            CustomFloat_3 = ParticleSize
+                                            CustomFloat_4 = RandomUnit * 0.5
+                                            Rotation = RandomUnit
+                                            Speed = (SpawningParticleCustomFloat3_2 * RandomRange[1,4] + SpawningParticleCustomFloat3_4 * RandomRange[-2,4] ) * SpawningParticleCustomFloat_2  - 0.1 * SpawningParticleCustomFloat3_3
+                                        ),
+                                    ]
+                                    ParticleDescriptor = ParticleDescriptor
+                                    (
+                                        RenderInfo = ParticleRenderInfo
+                                        (
+                                            ZTest = True
+                                            ZWrite = False
+                                            SortTriangles = True
+                                            Use3DRotation = False
+                                            TextureName = 'GameData:/Assets/2D/Fx/fx_terre_02_v2.png'
+                                            Calque = 'Particles'
+                                            OpaqueParticle = True
+                                        )
+                                        Evolvers = ParticleStandardEvolverListWithPhysic
+                                        (
+                                            PhysicAccelerationField = float3[0,0,-3000]
+                                            Size = ParticleCustomFloat_3 * (1 + ParticleLifeRatio * ParticleCustomFloat_2)
+                                            Opacity = AttackSustainDecay[ParticleLifeRatio, 0.05, 0.8] * ParticleAlpha
+                                            RotationSpeed = ParticleCustomFloat_4 - 1
+                                            UseHardCodedRotation = true
+                                        )
+                                        ParticleRenderer = $/VFX_Bank/LitParticleRendererNoCentroidPositioning
+                                    )
+                                )
+                            ),
+                        ]
+                    )
+                )
+            )
+        ),
+    ]
+)
+
+export BANK_Deplacement_Dust is SimultaneousActionDeclaration
+(
+    Params =
+    [
+        private parOffsetPos                    is Template_Param_Float3(),
+        private parDistanceBetweenParticles     is Template_Param_Float(),
+        private parDuration                     is Template_Param_Float(),
+        private parRGBcolor                     is Template_Param_Float3(),
+        private parSpeedMultiplier              is Template_Param_Float(),
+        private parOpacity                      is Template_Param_Float(),
+        private parSize                         is Template_Param_Float(),
+        private parEndSizeMultipler             is Template_Param_Float(),
+        private parAxeYMultiplier               is Template_Param_Float(),
+    ]
+    Actions =
+    [
+        Template_WaitForEver(),
+        private Dust_Spawner_Particle is ParticleBombSpawner
+        (
+            Count = 1
+            Spawner = ParticleSpawner
+            (
+                ParticleLifetime = 666 // InfiniteParticles
+                Initialisers =
+                [
+                    Initialiser_SetMobileWrapper(),
+                    ParticleInitialiserList
+                    (
+                        ColorModifier = parRGBcolor
+                        Opacity = parOpacity
+                        Size = parSize
+                        CustomFloat_1 = parDistanceBetweenParticles
+                        CustomFloat_2 = parSpeedMultiplier
+                        CustomFloat_3 = parEndSizeMultipler
+                        CustomFloat_4 = parDuration
+                        CustomFloat_9 = parAxeYMultiplier
+                        CustomFloat3_1 = parOffsetPos
+                    ),
+                ]
+                PostTransformInitialisers =
+                [
+                    Template_Post_Initialiser_For_EvolverTrailSpawner
+                    (
+                        SpawnStartedField = $/Particle/SpawnStarted2
+                        PreviousEvolverSpawnPositionField = $/Particle/CustomFloat3_9
+                    ),
+                ]
+                ParticleDescriptor = ParticleDescriptor
+                (
+                    InfiniteParticles = true
+                    ParticleRenderer = $/VFX_Bank/NullRenderer
+                    RenderInfo = $/VFX_Bank/NullRenderInfo
+                    Evolvers = ParticleStandardEvolverList
+                    (
+                        Position = ParticleMobileWrapperPositionUnScaled + ParticleCustomFloat3_1
+                        // Direction of the mobile to know the direction of the dust projections
+                        CustomFloat3_2 = ParticleMobileWrapperAxeZ + 0.5 * ParticleCustomFloat_9 * ParticleMobileWrapperAxeY
+                        CustomFloat3_3 = ParticleSpeed * ParticleCustomFloat_6
+                        CustomFloat3_4 = ParticleMobileWrapperAxeY * ParticleCustomFloat_9
+                        // pas de particules de fumée quand on recule
+                        CustomFloat_6 = sat[dot[normalized[ParticleSpeed], ParticleMobileWrapperAxeX]] * ParticleCustomFloat_7
+                        // vitesse max 1680, après on réduit la durée des particules
+                        CustomFloat_7 = sat[1680 div Max[length[ParticleSpeed], 1]]
+                        AdditionnalEvolvers =
+                        [
+                            Template_StandardComputeSpeed(),
+                            private Dust_Trail_Spawner is TrailSpawner
+                            (
+                                DistanceBetweenSpawn = ParticleCustomFloat_1
+                                Spawner = Dust is ParticleSpawner
+                                (
+                                    ParticleLifetime = 0.01 + SpawningParticleCustomFloat_4 * SpawningParticleCustomFloat_6
+                                    Initialisers =
+                                    [
+                                        ParticleInitialiserList
+                                        (
+                                            Position = ParticleSize * float3[0,0,0.5]
+                                            ColorModifier = SpawningParticleColorModifier
+                                            Alpha = SpawningParticleOpacity
+                                            Size = SpawningParticleSize  * RandomRange[0.5, 2]
+                                            CustomFloat_2 = SpawningParticleCustomFloat_3
+                                            CustomFloat_3 = ParticleSize
+                                            CustomFloat_4 = RandomUnit * 0.5
+                                            Rotation = RandomUnit
+                                            Speed = (SpawningParticleCustomFloat3_2 * RandomRange[0.5,2] + SpawningParticleCustomFloat3_4 * RandomRange[0.5,2]) * SpawningParticleCustomFloat_2
+                                            EmissivePower = 1
+                                        ),
+                                    ]
+                                    ParticleDescriptor = ParticleDescriptor
+                                    (
+                                        RenderInfo = DeferredParticleRenderInfo
+                                        (
+                                            Use3DRotation = false
+                                            TextureName = 'GameData:/Assets/2D/Fx/anim_smoke_01_001.png'
+                                        )
+                                        Evolvers = ParticleStandardEvolverListWithPhysic
+                                        (
+                                            PhysicWindField = MapWind * 0.1
+                                            FluidFriction = 1
+                                            Size = ParticleCustomFloat_3 * (1 + ParticleLifeRatio * ParticleCustomFloat_2)
+                                            Opacity = AttackSustainDecay[ParticleLifeRatio, 0.05, 0.5] * ParticleAlpha
+                                            Animation = lerp[ParticleCustomFloat_4, 1, ParticleLifeRatio]
+                                            RotationSpeed = ParticleCustomFloat_4 - 0.5
+                                            UseHardCodedRotation = true
+                                        )
+                                        ParticleRenderer = $/VFX_Bank/LitParticleRendererNoCentroidPositioning
+                                    )
+                                )
+                                SpawnStartedField = $/Particle/SpawnStarted2
+                                PreviousEvolverSpawnPositionField = $/Particle/CustomFloat3_9
+                            ),
+                        ]
+                    )
+                )
+            )
+        ),
+    ]
+)

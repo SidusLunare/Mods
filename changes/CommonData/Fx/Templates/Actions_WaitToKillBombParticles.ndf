@@ -1,0 +1,13 @@
+template Template_WaitToKillBombParticle
+[
+    MaxWaitDuration         : TEvaluable[GroupBy = "Spawn parameters"] = TConstantInteger(Value = 10),
+    BombSpawner             : TParticleSpawnerActionBomb[required] = nil,
+    Forever                 : boolean = false,
+    Disabled                : TEvaluable = nil,
+] is TWaitToKillBombParticles
+(
+    MaxWaitDuration = <MaxWaitDuration>
+    BombSpawner = <BombSpawner>
+    Forever = <Forever>
+    Disabled = <Disabled>
+)
