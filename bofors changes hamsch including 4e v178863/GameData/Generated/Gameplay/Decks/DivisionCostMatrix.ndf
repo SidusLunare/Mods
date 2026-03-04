@@ -14,6 +14,19 @@ MatrixCostName_BEL_16e_Mecanisee_multi is MAP
     (EFactory/Tanks, [1, 1, 1, 2, 3, 3, 3]),
 ]
 
+MatrixCostName_RFA_Division_Ausbildungszentrum_Heeresflugabwehrtruppe_multi is MAP
+[
+    (EFactory/Art, []),
+    (EFactory/DCA, [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]),
+    (EFactory/Defense, []),
+    (EFactory/Helis, [1, 1, 1, 1, 1, 1]),
+    (EFactory/Infantry, [1, 1]),
+    (EFactory/Logistic, [1, 1, 1, 1, 1]),
+    (EFactory/Planes, [1, 1, 1, 1, 1]),
+    (EFactory/Recons, [1, 1, 1, 1, 1, 1, 1, 1]),
+    (EFactory/Tanks, []),
+]
+
 MatrixCostName_BEL_Division_Mobilisation_multi is MAP
 [
     (EFactory/Art, [1, 1, 1, 1, 2, 3, 3, 3]),

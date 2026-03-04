@@ -2843,7 +2843,6 @@ unnamed TDeckSerializerEntries
         ($/GFX/Unit/Descriptor_Unit_Mirage_F1_C_HE_CLU_ESP, 3318),
         ($/GFX/Unit/Descriptor_Unit_Su_22_KMGU_TCH, 3319),
         ($/GFX/Unit/Descriptor_Unit_Su_22_nplm2_TCH, 3350),
-        ($/GFX/Unit/Descriptor_Unit_DCA_Bofors_NL, 3351),
-        ($/GFX/Unit/Descriptor_Unit_Bofors_40mm_MFG_RFA, 3352),
+        ($/GFX/Unit/Descriptor_Unit_Bofors_40mm_MFG_RFA, 3351),
     ]   
 )

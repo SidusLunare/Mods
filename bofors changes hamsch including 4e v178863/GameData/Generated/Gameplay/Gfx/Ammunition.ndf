@@ -21612,7 +21612,7 @@ Ammo_DCA_1_canon_KS30_130mm is TAmmunitionDescriptor
     TypeCategoryName                  = 'YNDLJFDBIK'
     Caliber                           = 'PELGTHCREA'
     WeaponDescriptionToken            = 'BGKHTMZYRF'
-    TraitsToken                       = [ 'STAT', ]
+    TraitsToken                       = [ 'STAT', 'RADAR' ]
     WeaponCursorType                  = Weapon_Cursor_FastCanon
     MinMaxCategory                    = MinMax_DCA
     Arme                              = TDamageTypeRTTI(Family=DamageFamily_he_dca Index=1)
@@ -21626,7 +21626,7 @@ Ammo_DCA_1_canon_KS30_130mm is TAmmunitionDescriptor
     MinimumRangeHelicopterGRU         = 35
     MaximumRangeHelicopterGRU         = 2650
     MinimumRangeAirplaneGRU           = 35
-    MaximumRangeAirplaneGRU           = 3525
+    MaximumRangeAirplaneGRU           = 3725
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
     AngleDispersion                   = 0.0
@@ -21637,7 +21637,7 @@ Ammo_DCA_1_canon_KS30_130mm is TAmmunitionDescriptor
     PhysicalDamages                   = 2.565
     ShowDamageInUI                    = True
     RadiusSplashSuppressDamagesGRU    = 51
-    SuppressDamages                   = 154.0
+    SuppressDamages                   = 200.0
     AllowSuppressDamageWhenNoImpact   = True
     DisplaySalveAccuracy              = False
     TirIndirect                       = False
@@ -21653,13 +21653,14 @@ Ammo_DCA_1_canon_KS30_130mm is TAmmunitionDescriptor
         BaseHitValueModifiers =
         [
             (EBaseHitValueModifier/Base, 0),
-            (EBaseHitValueModifier/Idling, 10),
+            (EBaseHitValueModifier/Idling, 15),
             (EBaseHitValueModifier/Moving, 0),
             (EBaseHitValueModifier/Targeted, 0),
         ]
         DistanceToTarget = True
     )
-    AimingTime                        = 2.0
+    Guidance                          = Guidance_Radar
+    AimingTime                        = 1.5
     TimeBetweenTwoSalvos              = 6.0
     TimeBetweenTwoSalvos_Min          = -1.0
     TimeBetweenTwoSalvos_Max          = -1.0
