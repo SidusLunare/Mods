@@ -469,7 +469,8 @@ WargameConstantes is TWargameTunableConstante
         (0, 'Value_3'),
         (5301, 'Value_4'),
         (10601, 'Value_5'),
-        (13250, 'Value_6'),
+        (13250, 'VLUEVG'),
+        (16250, 'Value_6'),
 
     ]
 

@@ -1,0 +1,4 @@
+--- Generation times (total: 0.366394 s) --
+                  Read catalog: 0.287 s
+                        Assets: 0.000 s
+                         Packs: 0.080 s

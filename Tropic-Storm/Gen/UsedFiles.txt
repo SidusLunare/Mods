@@ -1,0 +1,5 @@
+GameData:/Localisation/Tropic-Storm/COMPANIES.csv
+GameData:/Localisation/Tropic-Storm/INTERFACE_INGAME.csv
+GameData:/Localisation/Tropic-Storm/INTERFACE_OUTGAME.csv
+GameData:/Localisation/Tropic-Storm/PLATOONS.csv
+GameData:/Localisation/Tropic-Storm/UNITS.csv

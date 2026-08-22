@@ -1,0 +1,16 @@
+ZZ:/Localisation/Localisation/Tropic-Storm/INTERFACE_INGAME-FR.dic
+ZZ:/Localisation/Localisation/Tropic-Storm/INTERFACE_INGAME-GER.dic
+ZZ:/Localisation/Localisation/Tropic-Storm/INTERFACE_INGAME-POL.dic
+ZZ:/Localisation/Localisation/Tropic-Storm/INTERFACE_INGAME-RU.dic
+ZZ:/Localisation/Localisation/Tropic-Storm/INTERFACE_INGAME-SC.dic
+ZZ:/Localisation/Localisation/Tropic-Storm/INTERFACE_INGAME-SPA.dic
+ZZ:/Localisation/Localisation/Tropic-Storm/INTERFACE_INGAME-US.dic
+ZZ:/Localisation/Localisation/Tropic-Storm/UNITS-FR.dic
+ZZ:/Localisation/Localisation/Tropic-Storm/UNITS-GER.dic
+ZZ:/Localisation/Localisation/Tropic-Storm/UNITS-POL.dic
+ZZ:/Localisation/Localisation/Tropic-Storm/UNITS-RU.dic
+ZZ:/Localisation/Localisation/Tropic-Storm/UNITS-SC.dic
+ZZ:/Localisation/Localisation/Tropic-Storm/UNITS-SPA.dic
+ZZ:/Localisation/Localisation/Tropic-Storm/UNITS-US.dic
+ZZ:/MeshPack/Tropic-Storm/Mesh_All.spk
+ZZ:/TextureProxy/Tropic-Storm/Mesh_All.ndfbin
