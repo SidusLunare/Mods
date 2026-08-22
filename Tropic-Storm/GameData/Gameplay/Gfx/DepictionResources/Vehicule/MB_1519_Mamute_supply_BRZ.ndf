@@ -1,0 +1,14 @@
+export Modele_MB_1519_Mamute_supply_BRZ is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/BRZ/Vehicule/MB_1519_Mamute_supply/MB_1519_Mamute_supply.fbx"
+)
+
+export Modele_MB_1519_Mamute_supply_BRZ_MID is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/BRZ/Vehicule/MB_1519_Mamute_supply/MB_1519_Mamute_supply.fbx"
+)
+
+export Modele_MB_1519_Mamute_supply_BRZ_LOW is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/BRZ/Vehicule/MB_1519_Mamute_supply/MB_1519_Mamute_supply.fbx"
+)

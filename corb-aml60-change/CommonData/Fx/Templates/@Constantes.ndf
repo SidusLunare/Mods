@@ -1,0 +1,6 @@
+export CaseSizeForMediums is 16384 * 300 // 16384 = taille d'une petite case sur flat
+
+//A maintenir synchro avec Engine\Code\Eugen\CPP\Visibility\Headers\TimeServer.h
+UpdateTimeModeUseIATime             is 0
+UpdateTimeModeUseRenderTime         is 1
+

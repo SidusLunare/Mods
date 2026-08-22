@@ -1,0 +1,17 @@
+export Modele_M48_Chaparral_MIM72F_NG_US is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/US/DCA/M48A1_Chaparral/M48A1_Chaparral.fbx"
+    Textures="GameData:/Assets/3D/Units/US/DCA/M48A1_Chaparral_NG"
+)
+
+export Modele_M48_Chaparral_MIM72F_NG_US_MID is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/US/DCA/M48A1_Chaparral_MID/M48A1_Chaparral_MID.fbx"
+    Textures="GameData:/Assets/3D/Units/US/DCA/M48A1_Chaparral_NG_MID"
+)
+
+export Modele_M48_Chaparral_MIM72F_NG_US_LOW is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/US/DCA/M48A1_Chaparral_LOW/M48A1_Chaparral_LOW.fbx"
+    Textures="GameData:/Assets/3D/Units/US/DCA/M48A1_Chaparral_NG_LOW"
+)

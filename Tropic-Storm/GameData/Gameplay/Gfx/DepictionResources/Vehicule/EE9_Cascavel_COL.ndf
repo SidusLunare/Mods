@@ -1,0 +1,19 @@
+export Modele_EE9_Cascavel_COL is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/CYP/Vehicule/EE9_Cascavel/EE9_Cascavel.fbx"
+)
+
+export Modele_EE9_Cascavel_COL_MID is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/CYP/Vehicule/EE9_Cascavel_MID/EE9_Cascavel_MID.fbx"
+)
+
+export Modele_EE9_Cascavel_COL_LOW is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/CYP/Vehicule/EE9_Cascavel_LOW/EE9_Cascavel_LOW.fbx"
+)
+
+export Modele_EE9_Cascavel_COL_Tourelle_02 is TResourceMesh
+(
+    Mesh=ModelFile_M2HB_12_7mm_no_ammo
+)

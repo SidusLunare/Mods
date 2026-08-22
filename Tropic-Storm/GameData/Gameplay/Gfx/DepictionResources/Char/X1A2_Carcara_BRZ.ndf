@@ -1,0 +1,19 @@
+export Modele_X1A2_Carcara_BRZ is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/BRZ/Char/X1A2_Carcara/X1A2_Carcara.fbx"
+)
+
+export Modele_X1A2_Carcara_BRZ_MID is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/BRZ/Char/X1A2_Carcara_MID/X1A2_Carcara_MID.fbx"
+)
+
+export Modele_X1A2_Carcara_BRZ_LOW is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/BRZ/Char/X1A2_Carcara_LOW/X1A2_Carcara_LOW.fbx"
+)
+
+export Modele_X1A2_Carcara_BRZ_Tourelle_02 is TResourceMesh
+(
+    Mesh=ModelFile_M2HB_12_7mm_t2
+)

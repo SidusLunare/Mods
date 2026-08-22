@@ -1,0 +1,20 @@
+export Modele_M38A1_RCL_DK is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/NL/Vehicule/M38A1_RCL/M38A1_RCL.fbx"
+    Textures="GameData:/Assets/3D/Units/DK/Vehicule/M38A1_RCL"
+)
+
+export Modele_M38A1_RCL_DK_MID is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/NL/Vehicule/M38A1_RCL_MID/M38A1_RCL_MID.fbx"
+    Textures="GameData:/Assets/3D/Units/DK/Vehicule/M38A1_RCL_MID"
+)
+
+export Modele_M38A1_RCL_DK_LOW is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/NL/Vehicule/M38A1_RCL_LOW/M38A1_RCL_LOW.fbx"
+    Textures="GameData:/Assets/3D/Units/DK/Vehicule/M38A1_RCL_LOW"
+)
+
+
+

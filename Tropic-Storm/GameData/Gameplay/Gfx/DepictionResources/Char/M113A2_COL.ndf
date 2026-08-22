@@ -1,0 +1,14 @@
+export Modele_M113A2_COL is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/COL/Char/M113A2/M113A2.fbx"
+)
+
+export Modele_M113A2_COL_MID is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/COL/Char/M113A2/M113A2.fbx"
+)
+
+export Modele_M113A2_COL_LOW is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/COL/Char/M113A2/M113A2.fbx"
+)

@@ -1,0 +1,14 @@
+export Modele_Kubelwagen_181_MP_RFA is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/RFA/Vehicule/Kubelwagen_181_MP/Kubelwagen_181_MP.fbx"
+)
+
+export Modele_Kubelwagen_181_MP_RFA_MID is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/RFA/Vehicule/Kubelwagen_181_MP_MID/Kubelwagen_181_MP_MID.fbx"
+)
+
+export Modele_Kubelwagen_181_MP_RFA_LOW is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/RFA/Vehicule/Kubelwagen_181_MP_LOW/Kubelwagen_181_MP_LOW.fbx"
+)

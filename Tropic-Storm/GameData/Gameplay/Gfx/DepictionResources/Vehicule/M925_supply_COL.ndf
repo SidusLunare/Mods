@@ -1,0 +1,14 @@
+export Modele_M925_supply_COL is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/COL/Vehicule/M925_supply/M925_supply.fbx"
+)
+
+export Modele_M925_supply_COL_MID is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/COL/Vehicule/M925_supply_MID/M925_supply_MID.fbx"
+)
+
+export Modele_M925_supply_COL_LOW is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/COL/Vehicule/M925_supply_LOW/M925_supply_LOW.fbx"
+)

@@ -1,0 +1,95 @@
+export BANK_Bomb_Sparks_2_Simple is ActionCallWithParameters
+(
+    Action = BANK_Bomb_Sparks_02_WG
+    Params =
+    [
+        private parCount                is Template_Param_Int (),
+        private parLifetime             is Template_Param_Float (),
+        private parSize                 is Template_Param_Float (),
+        private parSpeed                is Template_Param_Float (),
+        private parColor                is Template_Param_Float3 (),
+        private parTemperature          is Template_Param_Float (),
+        private parGravity              is Template_Param_Float (),
+        private parFluidFriction        is Template_Param_Float (),
+        private parStretchMul           is Template_Param_Float (),
+    ]
+    NamedParameters = MAP
+    [
+        ( 'BANK_Count'                  , parCount ),
+        ( 'BANK_Position'               , float3[0.00, 0.00, 0.00] ),
+        ( 'BANK_Lifetime'               , parLifetime * RandomRange[0.8, 1.25] ),
+        ( 'BANK_Size'                   , parSize * RandomRange[0.8, 1.25] ),
+        ( 'BANK_Speed'                  , $/VFX_Bank/MinusOneToOneRandomHemisphereVolume * parSpeed ),
+        ( 'BANK_Color'                  , parColor ),
+        ( 'BANK_Temperature'            , parTemperature * RandomRange[0.8, 1.25] * 0.1 ),
+        ( 'BANK_Gravity'                , - parGravity ),
+        ( 'BANK_Fluidfriction'          , parFluidFriction ),
+        ( 'BANK_Stretch_Mul'            , parStretchMul ),
+    ]
+)
+
+export BANK_Bomb_Sparks_02_WG is SimultaneousActionDeclaration
+(
+    Params =
+    [
+        private BANK_Count          is Template_Param_Int   (DefaultValue = 20),
+        private BANK_Position       is Template_Param_Float3(DefaultValue = float3[0.00, 0.00, 0.00] ),
+        private BANK_Lifetime       is Template_Param_Float (DefaultValue = 10 ),
+        private BANK_Size           is Template_Param_Float (DefaultValue = 50 ),
+        private BANK_Speed          is Template_Param_Float3(DefaultValue = $/VFX_Bank/MinusOneToOneRandomHemisphereVolume * 2000 ),
+        private BANK_Color          is Template_Param_Float3(DefaultValue =  float3[1.00, 0.55, 0.45] ),
+        private BANK_Temperature    is Template_Param_Int   (DefaultValue = 10 ),
+        private BANK_Gravity        is Template_Param_Float (DefaultValue = -500 ),
+        private BANK_Fluidfriction  is Template_Param_Float (DefaultValue = 1 ),
+        private BANK_Stretch_Mul    is Template_Param_Float (DefaultValue = 1 ),
+    ]
+    Actions =
+    [
+        private Bomb_Sparks is ParticleBombSpawner
+        (
+            Count = BANK_Count
+            Position = BANK_Position
+            Spawner = private Sparks_Spawner is ParticleSpawner
+            (
+                ParticleLifetime = BANK_Lifetime * RandomRange[0.5, 1.5]
+                Initialisers =
+                [
+                    private particules_sparks is ParticleInitialiserList
+                    (
+                        Speed = BANK_Speed
+                        Size = BANK_Size * RandomRange[0.5, 1.5]
+                        Opacity = 1
+                        ColorMultiplier = 1
+                        ColorModifier = BANK_Color
+                        CustomFloat_1 = BANK_Gravity
+                        CustomFloat_2 = BANK_Fluidfriction
+                        CustomFloat_3 = BANK_Temperature
+                        CustomFloat_4 = BANK_Stretch_Mul * 0.1
+                    ),
+                ]
+                ParticleDescriptor = ParticleDescriptor
+                (
+                    ParticleRenderer = $/VFX_Bank/StandardRenderer
+                    RenderInfo = ParticleRenderInfo
+                    (
+                        SortTriangles = True
+                        Use3DRotation = True
+                        TextureName = 'GameData:/Assets/2D/Fx/flare_gris.png'
+                        Calque = 'Particles'
+                        EmissiveParticle = true
+                    )
+                    Evolvers = ParticleStandardEvolverListWithPhysic
+                    (
+                        FluidFriction = $/VFX_Bank/ParticleCustomFloat_2
+                        PhysicAccelerationField = GenFloat3[0, 0, ParticleCustomFloat_1]
+                        PhysicWindField = MapWind * 2
+                        Opacity = ParticleRemainingLifeRatio * 0.25
+                        ColorMultiplier = ParticleCustomFloat_3 * ParticleRemainingLifeRatio
+                        Direction = ParticleSpeed
+                        Stretching = $/VFX_Bank/ParticleCustomFloat_4 * length[ParticleSpeed] * 0.04
+                    )
+                )
+            )
+        ),
+    ]
+)

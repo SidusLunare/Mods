@@ -1,0 +1,14 @@
+export Modele_M60A1_RISE_Passive_USMC_ERA_US is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/US/Char/M60A1_RISE_Passive_USMC_ERA/M60A1_RISE_Passive_USMC_ERA.fbx"
+)
+
+export Modele_M60A1_RISE_Passive_USMC_ERA_US_MID is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/US/Char/M60A1_RISE_Passive_USMC_ERA_MID/M60A1_RISE_Passive_USMC_ERA_MID.fbx"
+)
+
+export Modele_M60A1_RISE_Passive_USMC_ERA_US_LOW is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/US/Char/M60A1_RISE_Passive_USMC_ERA_LOW/M60A1_RISE_Passive_USMC_ERA_LOW.fbx"
+)

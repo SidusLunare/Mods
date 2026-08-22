@@ -1,0 +1,20 @@
+export ModelFile_Leopard_1A3A1_Instructor_RFA is "GameData:/Assets/3D/Units/RFA/Char/Leopard_1A3A1_Instructor/Leopard_1A3A1_Instructor.fbx"
+export Modele_Leopard_1A3A1_Instructor_RFA is TResourceMesh
+(
+    Mesh=ModelFile_Leopard_1A3A1_Instructor_RFA
+)
+export ModelFile_Leopard_1A3A1_Instructor_RFA_MID is "GameData:/Assets/3D/Units/RFA/Char/Leopard_1A3A1_Instructor_MID/Leopard_1A3A1_Instructor_MID.fbx"
+export Modele_Leopard_1A3A1_Instructor_RFA_MID is TResourceMesh
+(
+    Mesh=ModelFile_Leopard_1A3A1_Instructor_RFA_MID
+)
+export ModelFile_Leopard_1A3A1_Instructor_RFA_LOW is "GameData:/Assets/3D/Units/RFA/Char/Leopard_1A3A1_Instructor_LOW/Leopard_1A3A1_Instructor_LOW.fbx"
+export Modele_Leopard_1A3A1_Instructor_RFA_LOW is TResourceMesh
+(
+    Mesh=ModelFile_Leopard_1A3A1_Instructor_RFA_LOW
+)
+
+export Modele_Leopard_1A3A1_Instructor_RFA_Tourelle_02 is TResourceMesh
+(
+    Mesh=ModelFile_MG3_t2
+)

@@ -1,0 +1,30 @@
+export FX_Dam_Foam_RandomLoop is SimultaneousActionDeclaration
+(
+    Params = []
+    Actions =
+    [
+        FX_Dam_Foam_Loop,
+    ]
+)
+
+export FX_Dam_Foam_Loop is Template_RepeatSequential
+(
+    TimeServer = Zoom_1_2_3_4_RenderTime
+    Actions =
+    [
+        TActionCall
+        (
+            Action = $/VFX_Bank/BANK_Dam_Foam_Sheet
+            NamedParams = MAP[
+                ( 'parSize', 1800 ),
+                ( 'parOpacity', 0.08 ),
+                ( 'parAnimSpeed', 0.15),
+            ]
+        ),
+        WaitInSec
+        (
+            Duration = 5.0
+        ),
+    ]
+    Forever = true
+)

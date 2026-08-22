@@ -1,0 +1,59 @@
+// Ne pas éditer, ce fichier est généré
+
+export Tank_AP_Ground is Simultaneous
+(
+    Actions = ActionList is
+    [
+        TSimultaneousAction
+        (
+            Mobile = nil
+            Actions =
+            [
+                TSequentialAction
+                (Actions =
+                    [
+                        TWaitInSec( Duration = 0.02 ),
+                        TActionCall
+                        (
+                            Action = $/VFX_Bank/BANK_Bomb_Flash
+                            NamedParams = MAP[
+                                ( 'parCount', 1 ),
+                                ( 'parDuration', 0.1 ),
+                                ( 'parFinalSize', 400 ),
+                                ( 'parInitialSize', 0 ),
+                                ( 'parZBias', 0 ),
+                                ( 'parPositionRelative', float3[0,0,0] ),
+                            ]
+                        ),
+                    ]
+                ),
+                TActionCall
+                (
+                    Action = $/VFX_Bank/BANK_Bomb_Sparks_2_Simple
+                    NamedParams = MAP[
+                        ( 'parColor', float3[0.2862745,0.2196079,0.2] ),
+                        ( 'parCount', 10 ),
+                        ( 'parFluidFriction', 2.500001 ),
+                        ( 'parGravity', 500 ),
+                        ( 'parLifetime', 1 ),
+                        ( 'parSize', 40 ),
+                        ( 'parSpeed', 10000 ),
+                        ( 'parStretchMul', 0.2000006 ),
+                        ( 'parTemperature', 10 ),
+                    ]
+                ),
+                TActionCall
+                (
+                    Action = $/VFX_Bank/Ground_Dust_Projections_Simple
+                    NamedParams = MAP[
+                        ( 'parColor', float3[1,1,1] ),
+                        ( 'parCount', 20 ),
+                        ( 'parDuration', 1.000002 ),
+                        ( 'parOpacity', 0.6 ),
+                        ( 'parSize', 3000 ),
+                    ]
+                ),
+            ]
+        ),
+    ]
+)

@@ -1,0 +1,84 @@
+// Ne pas éditer, ce fichier est généré
+
+export fx_traine_obus_M230_HEDP_7 is SimultaneousActionDeclaration
+(
+    Params =
+    [
+        private parBombTrajectory is TActionAlias( ExpectedType = 'bool' DefaultValue = false ),
+        private parDestination is TActionAlias( ExpectedType = 'float3' DefaultValue = float3[18000,0,0] ),
+        private parFlyDuration is TActionAlias( ExpectedType = 'float' DefaultValue = 0.2 ),
+        private parImpactOnGround is TActionAlias( ExpectedType = 'bool' DefaultValue = true ),
+        private parInitialShotDelay is TActionAlias( ExpectedType = 'float' DefaultValue = 0 ),
+        private parInitialSpeed is TActionAlias( ExpectedType = 'float3' DefaultValue = float3[1000,0,0] ),
+        private parPower is TActionAlias( ExpectedType = 'float' DefaultValue = 1 ),
+        private parShotCount is TActionAlias( ExpectedType = 'int' DefaultValue = 1 ),
+        private parShotOnGround is TActionAlias( ExpectedType = 'bool' DefaultValue = false ),
+        private parTirPhysic is TActionAlias( ExpectedType = 'bool' DefaultValue = true ),
+        private parTirTendu is TActionAlias( ExpectedType = 'bool' DefaultValue = false ),
+        private parWaitBetweenShot is TActionAlias( ExpectedType = 'float' DefaultValue = 0.5 ),
+    ]
+    Actions = ActionList is
+    [
+        TSimultaneousAction
+        (
+            Mobile = nil
+            Actions =
+            [
+                TActionCall
+                (
+                    Action = $/GFX/GameFx/BANK_Traine_Autocanon_Simple
+                    NamedParams = MAP[
+                        ( 'AbsoluteEndPosition', parDestination ),
+                        ( 'ColorModifier', float3[0.9960785,0.5686275,0.1803922] ),
+                        ( 'DurationInSec', parFlyDuration ),
+                        ( 'EmissivePowerScale', 1 ),
+                        ( 'FlameTipScale', 1 ),
+                        ( 'InitialSpeed', parInitialSpeed ),
+                        ( 'Opacity', 1 ),
+                        ( 'RadiusRandom', 0.01 ),
+                        ( 'TrailWidthScale', 0.5 ),
+                        ( 'parCurveHeight', 0.35 ),
+                        ( 'parInitialDelay', parInitialShotDelay ),
+                        ( 'parPinImpactOnGround', parImpactOnGround ),
+                        ( 'parPinPower', parPower ),
+                        ( 'parPinShotCount', 1 ),
+                        ( 'parPinShotOnGround', true ),
+                        ( 'parPinWaitBetweenShot', 1 ),
+                        ( 'parPojectileSpeedMult', 1 ),
+                        ( 'parRandomFrequency', 0 ),
+                        ( 'parRandomSize', 0 ),
+                        ( 'parRebondExplosion', 0 ),
+                    ]
+                ),
+            ]
+        ),
+        TSimultaneousAction
+        (
+            Mobile = TMobileWithLocalRepereMatrixFactory
+            (
+                Position = float3[0,-87,0]
+            )
+            Actions =
+            [
+                TActionCall
+                (
+                    Action = $/VFX_Bank/Dummy_Traine
+                    NamedParams = MAP[
+                        ( 'parDummyBombTrajectory', parBombTrajectory ),
+                        ( 'parDummyDestination', parDestination ),
+                        ( 'parDummyFlyDuration', parFlyDuration ),
+                        ( 'parDummyImpactOnGround', parImpactOnGround ),
+                        ( 'parDummyInitialSpeed', parInitialSpeed ),
+                        ( 'parDummyPower', parPower ),
+                        ( 'parDummyShotCount', parShotCount ),
+                        ( 'parDummyShotOnGround', parShotOnGround ),
+                        ( 'parDummyTirPhysic', parTirPhysic ),
+                        ( 'parDummyTirTendu', parTirTendu ),
+                        ( 'parDummyTraineInitialShotDelay', parInitialShotDelay ),
+                        ( 'parDummyWaitBetweenShot', parWaitBetweenShot ),
+                    ]
+                ),
+            ]
+        ),
+    ]
+)

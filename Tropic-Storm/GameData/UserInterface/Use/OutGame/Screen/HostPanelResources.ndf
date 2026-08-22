@@ -1,0 +1,29 @@
+
+private ModalWindowHost is SpecificModalWindow
+(
+    UniqueName = "ModalWindowHostOrAutoMatch"
+    TitleToken = "T_HOST"
+
+    ButtonList =
+    [
+        BUCKListElementDescriptor
+        (
+            ComponentDescriptor = SpecificModalButton
+            (
+                ElementName = "CreateButton"
+                TextToken = "BTN_CREATE"
+                Mapping = TEugBMutablePBaseClass( Value = TUserInputMapping( KeyboardEventID = UserInputKeyboard/KEY_ENTER ) )
+                IsFilled = true
+            )
+        ),
+        BUCKListElementDescriptor(ComponentDescriptor = SpecificModalCancelButton)
+    ]
+
+    // envoie BUCKSpecificOutGameHostPanelMainComponentDescriptor
+)
+
+export HostPanelResources is TUISpecificOutGameHostPanelResources
+(
+    ModalWindowHost                         = ~/ModalWindowHost
+    ContentDescriptor                       = ~/UISpecificOutGameHostPanelViewDescriptor
+)

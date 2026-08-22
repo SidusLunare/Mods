@@ -1,0 +1,19 @@
+export Modele_Mirage_2000_C_CASCAD_FR is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/FR/Avion/Mirage_2000_C_CASCAD/Mirage_2000_C_CASCAD.fbx"
+)
+
+export Modele_Mirage_2000_C_CASCAD_FR_MID is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/FR/Avion/Mirage_2000_C_CASCAD_MID/Mirage_2000_C_CASCAD_MID.fbx"
+)
+
+export Modele_Mirage_2000_C_CASCAD_FR_LOW is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/FR/Avion/Mirage_2000_C_CASCAD_LOW/Mirage_2000_C_CASCAD_LOW.fbx"
+)
+
+export Modele_Mirage_2000_C_CASCAD_FR_train is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/FR/Avion/Mirage_2000_C_CASCAD/Mirage_2000_C_CASCAD_train.fbx"
+)

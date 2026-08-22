@@ -1,0 +1,82 @@
+template OrientationWrapper
+[
+    Action,
+    Params = MAP[],
+    Angle,
+    InputParameters = [],
+]
+is Template_ActionWithParameters
+(
+    Params =
+    [
+        private parDirection is TActionAlias( ExpectedType = 'float3' DefaultValue = float3[0,0,0] ),
+        private parPosition is TActionAlias( ),
+        private parRadiusPhysical is TActionAlias( ExpectedType = 'float' DefaultValue = 0 ),
+        private parRadiusSuppress is TActionAlias( ExpectedType = 'float' DefaultValue = 0 ),
+    ] + <InputParameters>
+    Action = TSimultaneousAction
+    (
+        Mobile = TMobileWithLocalRepereMatrixFactory
+        (
+            Orientation = <Angle>
+            UsePreviousMobileAsCenterOfScale = true
+        )
+        Actions =
+        [
+            Template_ActionCall
+            (
+                Action = <Action>
+                NamedParameters = MAP
+                [
+                    ('parDirection', parDirection),
+                    ('parPosition', parPosition),
+                    ('parRadiusPhysical', parRadiusPhysical),
+                    ('parRadiusSuppress', parRadiusSuppress),
+                ] + <Params>
+            ),
+        ]
+    )
+)
+export OrientationWrapper_Fx_impact_M197_Gatling is OrientationWrapper
+(
+    Action = ~/Fx_impact_M197_Gatling
+    Angle = float3[1, 0, 0]
+)
+export OrientationWrapper_Fx_impact_Vehicule_M197_Gatling is OrientationWrapper
+(
+    Action = ~/Fx_impact_Vehicule_M197_Gatling
+    Angle = float3[1, 0, 0]
+)
+export OrientationWrapper_Fx_impact_Vehicule_2A38_Autocanon is OrientationWrapper
+(
+    Action = ~/Fx_impact_Vehicule_2A38_Autocanon
+    Angle = float3[1, 0, 0]
+)
+export OrientationWrapper_Fx_impact_M168_Gatling is OrientationWrapper
+(
+    Action = ~/Fx_impact_M168_Gatling
+    Angle = float3[1, 0, 0]
+)
+export OrientationWrapper_Fx_impact_Vehicule_M168_Gatling is OrientationWrapper
+(
+    Action = ~/Fx_impact_Vehicule_M68_Gatling
+    Angle = float3[1, 0, 0]
+)
+
+export OrientationWrapper_fx_impact_sol_avion is OrientationWrapper
+(
+    Action = ~/fx_impact_sol_avion
+    Angle = float3[-1, 0, 0]
+)
+
+export OrientationWrapper_fx_impact_sol_avion_gros is OrientationWrapper
+(
+    Action = ~/fx_impact_sol_avion_gros
+    Angle = float3[-1, 0, 0]
+)
+
+export OrientationWrapper_fx_impact_sol_avion_petit is OrientationWrapper
+(
+    Action = ~/fx_impact_sol_avion_petit
+    Angle = float3[-1, 0, 0]
+)

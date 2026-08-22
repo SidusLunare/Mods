@@ -1,0 +1,20 @@
+export Modele_PT76B_Naval_SOV is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/URSS/Char/PT_76B/PT_76B.fbx"
+    Textures="GameData:/Assets/3D/Units/URSS/Char/PT_76B_Naval"
+)
+
+export Modele_PT76B_Naval_SOV_MID is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/URSS/Char/PT_76B_MID/PT_76B_MID.fbx"
+    Textures="GameData:/Assets/3D/Units/URSS/Char/PT_76B_Naval_MID"
+)
+
+export Modele_PT76B_Naval_SOV_LOW is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/URSS/Char/PT_76B_LOW/PT_76B_LOW.fbx"
+    Textures="GameData:/Assets/3D/Units/URSS/Char/PT_76B_Naval_LOW"
+)
+
+
+

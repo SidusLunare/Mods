@@ -1,0 +1,20 @@
+export Modele_M151C_RCL_VEN is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/US/Vehicule/M151C_RCL_NG/M151C_RCL_NG.fbx"
+    Textures="GameData:/Assets/3D/Units/VEN/Vehicule/M151C_RCL_NG"
+)
+
+export Modele_M151C_RCL_VEN_MID is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/US/Vehicule/M151C_RCL_NG_MID/M151C_RCL_NG_MID.fbx"
+    Textures="GameData:/Assets/3D/Units/VEN/Vehicule/M151C_RCL_NG_MID"
+)
+
+export Modele_M151C_RCL_VEN_LOW is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/US/Vehicule/M151C_RCL_NG_LOW/M151C_RCL_NG_LOW.fbx"
+    Textures="GameData:/Assets/3D/Units/VEN/Vehicule/M151C_RCL_NG_LOW"
+)
+
+
+

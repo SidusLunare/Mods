@@ -1,0 +1,127 @@
+EffectApplierModuleDescriptor is TEffectApplierModuleDescriptor()
+EmptyTagsModuleDescriptor is TTagsModuleDescriptor()
+InfluenceDataModuleDescriptor is TInfluenceDataModuleDescriptor()
+InfluencePositionModuleDescriptor is TInfluencePositionModuleDescriptor()
+LinkTeamModuleDescriptor is TLinkTeamModuleDescriptor()
+SimpleTypeUnitModuleDescriptor is TTypeUnitModuleDescriptor()
+TargetDataModuleDescriptor is TTargetDataModuleDescriptor()
+
+BuildingPositionModuleDescriptor is TPositionModuleDescriptor
+(
+    InitialCollisionPlane      = TCollisionPlane/Ground
+    InGeoDb                    = True
+    ClampInWorld               = True
+    ClampOutMap                = False
+)
+
+FirePositionModuleDescriptor is TPositionModuleDescriptor
+(
+    InitialCollisionPlane      = TCollisionPlane/Ground
+    InGeoDb                    = False
+    ClampInWorld               = True
+    ClampOutMap                = False
+)
+
+MissilePositionModuleDescriptor is TPositionModuleDescriptor
+(
+    InitialCollisionPlane      = TCollisionPlane/ProjectileAltitude
+    InGeoDb                    = True
+    ClampInWorld               = False
+    ClampOutMap                = True
+)
+
+IAStratZoneIndexModuleDescriptor is TIAStratZoneIndexModuleDescriptor()
+
+SmokePositionModuleDescriptor is TPositionModuleDescriptor
+(
+    InitialCollisionPlane      = TCollisionPlane/Ground
+    InGeoDb                    = False
+    ClampInWorld               = True
+    ClampOutMap                = False
+)
+
+template Descriptor_Unit_MimeticUnit[ DescriptorId, BlackHoleKey ] is TEntityDescriptor
+(
+    DescriptorId      = <DescriptorId>
+    ClassNameForDebug = 'Unit_MimeticUnit_' + <BlackHoleKey>
+    World = WorldIndices_Mimetic_Units
+    ModulesDescriptors = [
+        // Position
+            TMimeticTransformModuleDescriptor(),
+            TMimeticSteeringModuleDescriptor(),
+            TLinkTeamModuleDescriptor(),
+            TLinkToOwnerModuleDescriptor(),
+            TApparenceModuleDescriptor
+            (
+                PickableObject = True
+                Depiction      = TTimelyDepictionReceiverFactory( BlackHoleKey = <BlackHoleKey> )
+            ),
+            TSoldierAnimationModuleDescriptor
+            (
+                SoldierAnimationDataDescriptor = ~/SoldierAnimationDataDescriptor
+            ),
+            TSoldierStatusModuleDescriptor(),
+            TMimeticFXManagerModuleDescriptor(),
+    ]
+)
+
+MissileFlagsModuleDescriptor is TFlagsModuleDescriptor
+(
+)
+
+BuildingFlagsModuleDescriptor is TFlagsModuleDescriptor
+(
+    InitialFlagSet =
+    [
+        Flag_Batiment,
+        Flag_LdDetectable,
+    ]
+)
+
+DistrictFlagsModuleDescriptor is TFlagsModuleDescriptor
+(
+    InitialFlagSet =
+    [
+        Flag_Batiment,
+    ]
+)
+
+TankFlagsModuleDescriptor is TFlagsModuleDescriptor
+(
+    InitialFlagSet =
+    [
+        Flag_LdDetectable,
+        Flag_Tank,
+    ]
+)
+
+AirplaneFlagsModuleDescriptor is TFlagsModuleDescriptor
+(
+    InitialFlagSet =
+    [
+        Flag_LdDetectable,
+        Flag_Avion,
+    ]
+)
+
+InfantryFlagsModuleDescriptor is TFlagsModuleDescriptor
+(
+    InitialFlagSet =
+    [
+        Flag_LdDetectable,
+        Flag_Infanterie,
+    ]
+)
+
+DefaultFlagsModuleDescriptor is TFlagsModuleDescriptor
+(
+    InitialFlagSet =
+    [
+        Flag_LdDetectable,
+    ]
+)
+
+LinkToDistrictModuleDescriptor is TLinkToDistrictModuleDescriptor()
+
+SellModuleDescriptor is TSellModuleDescriptor(AllowAutosell = True)
+SellNoAutoSellModuleDescriptor is TSellModuleDescriptor(AllowAutosell = False)

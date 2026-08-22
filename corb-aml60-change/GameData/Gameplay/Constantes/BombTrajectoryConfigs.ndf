@@ -1,0 +1,8 @@
+export DefaultBombTrajectory is TRTTIBombTrajectoryConfig
+(
+    ReferenceAltitudeGRU = 700
+    ReferenceSpeedKmph = 600
+    ShootingDistanceGRUFromReferenceAltitudeAndSpeed = 1370
+    FlyingTimeFromReferenceAltitudeAndSpeed = 4.3
+)
+

@@ -1,0 +1,22 @@
+export Modele_M151A2_MAG_VEN is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/US/Vehicule/M151A2_Scout/M151A2_Scout.fbx"
+    Textures="GameData:/Assets/3D/Units/VEN/Vehicule/M151A2_MAG_VEN"
+)
+
+export Modele_M151A2_MAG_VEN_MID is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/US/Vehicule/M151A2_Scout_MID/M151A2_Scout_MID.fbx"
+    Textures="GameData:/Assets/3D/Units/VEN/Vehicule/M151A2_MAG_VEN_MID"
+)
+
+export Modele_M151A2_MAG_VEN_LOW is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/US/Vehicule/M151A2_Scout_LOW/M151A2_Scout_LOW.fbx"
+    Textures="GameData:/Assets/3D/Units/VEN/Vehicule/M151A2_MAG_VEN_LOW"
+)
+
+export Modele_M151A2_MAG_VEN_Tourelle_01 is TResourceMesh
+(
+    Mesh=ModelFile_MAG_t1
+)

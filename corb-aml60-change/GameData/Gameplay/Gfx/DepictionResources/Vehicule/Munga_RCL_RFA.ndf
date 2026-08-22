@@ -1,0 +1,14 @@
+export Modele_Munga_RCL_RFA is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/RFA/Vehicule/Munga_RCL/Munga_RCL.fbx"
+)
+
+export Modele_Munga_RCL_RFA_MID is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/RFA/Vehicule/Munga_RCL_MID/Munga_RCL_MID.fbx"
+)
+
+export Modele_Munga_RCL_RFA_LOW is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/RFA/Vehicule/Munga_RCL_LOW/Munga_RCL_LOW.fbx"
+)

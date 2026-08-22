@@ -1,0 +1,7 @@
+// Sync with GDBrickStatus.h
+EGDBrickStatus is TBaseClass
+(
+    Default is 0
+    ForceHide is 1
+    ForceShow is 2
+)

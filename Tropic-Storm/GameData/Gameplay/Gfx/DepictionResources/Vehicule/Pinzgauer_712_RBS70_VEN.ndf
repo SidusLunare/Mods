@@ -1,0 +1,14 @@
+export Modele_Pinzgauer_712_RBS70_VEN is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/VEN/Vehicule/Pinzgauer_712_RBS70/Pinzgauer_712_RBS70.fbx"
+)
+
+export Modele_Pinzgauer_712_RBS70_VEN_MID is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/VEN/Vehicule/Pinzgauer_712_RBS70_MID/Pinzgauer_712_RBS70_MID.fbx"
+)
+
+export Modele_Pinzgauer_712_RBS70_VEN_LOW is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/VEN/Vehicule/Pinzgauer_712_RBS70_LOW/Pinzgauer_712_RBS70_LOW.fbx"
+)

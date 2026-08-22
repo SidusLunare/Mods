@@ -1,0 +1,14 @@
+export Modele_GAZ_69_CMD_CUB is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/URSS/Vehicule/UAZ_3151_CMD/UAZ_3151_CMD.fbx"
+)
+
+export Modele_GAZ_69_CMD_CUB_MID is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/URSS/Vehicule/UAZ_3151_CMD_MID/UAZ_3151_CMD_MID.fbx"
+)
+
+export Modele_GAZ_69_CMD_CUB_LOW is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/URSS/Vehicule/UAZ_3151_CMD_LOW/UAZ_3151_CMD_LOW.fbx"
+)

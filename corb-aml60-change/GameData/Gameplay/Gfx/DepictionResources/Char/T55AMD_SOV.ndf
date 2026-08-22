@@ -1,0 +1,19 @@
+export Modele_T55AMD_SOV is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/URSS/Char/T55AMD/T55AMD.fbx"
+)
+
+export Modele_T55AMD_SOV_MID is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/URSS/Char/T55AMD_MID/T55AMD_MID.fbx"
+)
+
+export Modele_T55AMD_SOV_LOW is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/URSS/Char/T55AMD_LOW/T55AMD_LOW.fbx"
+)
+
+export Modele_T55AMD_SOV_Tourelle_02 is TResourceMesh
+(
+    Mesh=ModelFile_DShK_127mm_t2
+)

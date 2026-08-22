@@ -1,0 +1,20 @@
+export SFX_Ambiance_Dam is SimultaneousActionDeclaration
+(
+    Params = []
+    Actions =
+    [
+        Ambiance_Dam_OneShot,
+    ]
+)
+
+export Ambiance_Dam_OneShot is Template_RepeatSimultaneous
+(
+    Actions =
+    [
+        TActionDescriptorPlaySoundList
+        (
+            SoundDescriptor = $/GFX/Sound/Sound_DamAmbiance
+            Looped = true
+        ),
+    ]
+)

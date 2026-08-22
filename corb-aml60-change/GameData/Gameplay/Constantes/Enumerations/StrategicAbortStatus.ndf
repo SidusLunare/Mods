@@ -1,0 +1,7 @@
+// Sync with StrategicBattleState.h
+EStrategicAbortStatus is TBaseClass
+(
+    NotAborted is 0
+    AbortAttackerIntercept is 1
+    AbortDefenserSurrender is 2
+)

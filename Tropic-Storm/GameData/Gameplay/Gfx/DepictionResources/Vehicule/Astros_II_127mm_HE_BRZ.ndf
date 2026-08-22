@@ -1,0 +1,19 @@
+export Modele_Astros_II_127mm_HE_BRZ is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/BRZ/Vehicule/Astros_II_127mm_HE/Astros_II_127mm_HE.fbx"
+)
+
+export Modele_Astros_II_127mm_HE_BRZ_MID is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/BRZ/Vehicule/Astros_II_127mm_HE_MID/Astros_II_127mm_HE_MID.fbx"
+)
+
+export Modele_Astros_II_127mm_HE_BRZ_LOW is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/BRZ/Vehicule/Astros_II_127mm_HE_LOW/Astros_II_127mm_HE_LOW.fbx"
+)
+
+export Modele_Astros_II_127mm_HE_BRZ_Tourelle_02 is TResourceMesh
+(
+    Mesh=ModelFile_M2HB_12_7mm_cosmetic
+)

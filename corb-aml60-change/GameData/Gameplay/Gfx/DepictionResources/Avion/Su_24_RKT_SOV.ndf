@@ -1,0 +1,19 @@
+export Modele_Su_24_RKT_SOV is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/URSS/Avion/Su_24_RKT/Su_24_RKT.fbx"
+)
+
+export Modele_Su_24_RKT_SOV_MID is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/URSS/Avion/Su_24_RKT_MID/Su_24_RKT_MID.fbx"
+)
+
+export Modele_Su_24_RKT_SOV_LOW is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/URSS/Avion/Su_24_RKT_LOW/Su_24_RKT_LOW.fbx"
+)
+
+export Modele_Su_24_RKT_SOV_train is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/URSS/Avion/Su_24_RKT/Su_24_RKT_train.fbx"
+)

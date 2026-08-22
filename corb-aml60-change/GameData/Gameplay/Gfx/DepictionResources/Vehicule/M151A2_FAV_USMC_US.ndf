@@ -1,0 +1,24 @@
+export Modele_M151A2_FAV_USMC_US is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/US/Vehicule/M151A2_FAV_USMC/M151A2_FAV_USMC.fbx"
+)
+
+export Modele_M151A2_FAV_USMC_US_MID is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/US/Vehicule/M151A2_FAV_USMC_MID/M151A2_FAV_USMC_MID.fbx"
+)
+
+export Modele_M151A2_FAV_USMC_US_LOW is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/US/Vehicule/M151A2_FAV_USMC_LOW/M151A2_FAV_USMC_LOW.fbx"
+)
+
+export Modele_M151A2_FAV_USMC_US_Tourelle_01 is TResourceMesh
+(
+    Mesh=ModelFile_M2HB_12_7mm_cosmetic
+)
+
+export Modele_M151A2_FAV_USMC_US_Tourelle_02 is TResourceMesh
+(
+    Mesh=ModelFile_M60_cosmetic
+)

@@ -1,0 +1,3 @@
+export Modele_DCA_I_Hawk_capture_DDR is TResourceMesh( Mesh=ModelFile_DCA_I_Hawk_US)
+export Modele_DCA_I_Hawk_capture_DDR_MID is TResourceMesh( Mesh=ModelFile_DCA_I_Hawk_US_MID)
+export Modele_DCA_I_Hawk_capture_DDR_LOW is TResourceMesh( Mesh=ModelFile_DCA_I_Hawk_US_LOW)

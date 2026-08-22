@@ -1,0 +1,8 @@
+// /!\ A maintenir a jour avec l'enum du fichier WarGame/Code/Eugen/CPP/EugIA_Specific/UnitHelpers.cpp
+
+ComparisonOperator_Equal is 0
+ComparisonOperator_Different is 1
+ComparisonOperator_MoreOrEqual is 2
+ComparisonOperator_LessOrEqual is 3
+ComparisonOperator_StrictlyMore is 4
+ComparisonOperator_StrictlyLess is 5

@@ -1,0 +1,14 @@
+export Modele_A109A_reco_VEN is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/VEN/Helico/A109A_reco/A109A_reco.fbx"
+)
+
+export Modele_A109A_reco_VEN_MID is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/VEN/Helico/A109A_reco/A109A_reco.fbx"
+)
+
+export Modele_A109A_reco_VEN_LOW is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/VEN/Helico/A109A_reco/A109A_reco.fbx"
+)

@@ -1,0 +1,10 @@
+// Sync with DeathCause.h
+EDeathCause is TBaseClass
+(
+    Vanished is 0
+    TeamDefeated is 1
+    Penetration is 2
+    DieDieDie is 3
+    Effect is 4
+    Length is 5
+)

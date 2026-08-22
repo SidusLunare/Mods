@@ -1,0 +1,30 @@
+export FX_Jet_Cascade_RandomLoop is SimultaneousActionDeclaration
+(
+    Params = []
+    Actions =
+    [
+        FX_Jet_Cascade_OneShot,
+    ]
+)
+
+export FX_Jet_Cascade_OneShot is Template_RepeatSequential
+(
+    TimeServer = Zoom_1_2_3_4_RenderTime
+    Actions =
+    [
+        WaitInSec
+        (
+            Duration = RandomRange [0,5]
+        ),
+        TActionCall
+        (
+            Action = $/GFX/GameFx/fx_jet_cascade_diorama
+            NamedParams = MAP[
+                ( 'parInitialShotDelay', 0 ),
+                ( 'parShotCount', 10 ),
+                ( 'parWaitBetweenShot', 0.5 ),
+            ]
+        ),
+    ]
+    Forever = true
+)

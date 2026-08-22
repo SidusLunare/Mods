@@ -1,0 +1,5 @@
+unnamed TSpecificResourcesAccesser
+(
+    CommandPointResource = $/GFX/Resources/Resource_CommandPoints
+    TicketResource = $/GFX/Resources/Resource_Tickets
+)

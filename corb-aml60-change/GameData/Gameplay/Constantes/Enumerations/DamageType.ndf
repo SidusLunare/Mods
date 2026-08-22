@@ -1,0 +1,8 @@
+// Sync with ModernWarfareArmeArmure.h
+EDamageType is TBaseClass
+(
+    Suppress  is 0
+    Physical  is 1
+    Stun      is 2
+    Length    is 3
+)

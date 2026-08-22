@@ -1,0 +1,18 @@
+export Modele_AMX_13_mod56_VCI_VEN is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/BEL/APC/AMX_13_mod56_VCI/AMX_13_mod56_VCI.fbx"
+    Textures='GameData:/Assets/3D/Units/VEN/APC/AMX_13_mod56_VCI'
+)
+
+export Modele_AMX_13_mod56_VCI_VEN_MID is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/BEL/APC/AMX_13_mod56_VCI_MID/AMX_13_mod56_VCI_MID.fbx"
+    Textures='GameData:/Assets/3D/Units/VEN/APC/AMX_13_mod56_VCI_MID'
+)
+
+export Modele_AMX_13_mod56_VCI_VEN_LOW is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/BEL/APC/AMX_13_mod56_VCI_LOW/AMX_13_mod56_VCI_LOW.fbx"
+    Textures='GameData:/Assets/3D/Units/VEN/APC/AMX_13_mod56_VCI_LOW'
+)
+

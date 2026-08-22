@@ -1,0 +1,17 @@
+template Simultaneous
+[
+    LocalVariables              : LIST<TPinnableValue> = [],
+    Mobile                      : TMobileFactory = nil,
+    Actions                     : LIST<TActionDescriptor> = [],
+    Disabled                    : TEvaluable = nil,
+    TimeServer                  : TTimeServerWithVisibilityRange = nil,
+    MaxDuration                 : single = 0,
+] is TSimultaneousAction
+(
+    LocalVariables = <LocalVariables>
+    Mobile = <Mobile>
+    Actions = <Actions>
+    Disabled = <Disabled>
+    TimeServer = <TimeServer>
+    MaxDuration = <MaxDuration>
+)

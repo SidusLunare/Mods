@@ -1,0 +1,17 @@
+export Modele_PTS_M_SOV is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/DDR/Vehicule/PTS_M_supply/PTS_M_supply.fbx"
+    Textures="GameData:/Assets/3D/Units/URSS/Vehicule/PTS_M"
+)
+
+export Modele_PTS_M_SOV_MID is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/DDR/Vehicule/PTS_M_supply_MID/PTS_M_supply_MID.fbx"
+    Textures="GameData:/Assets/3D/Units/URSS/Vehicule/PTS_M_MID"
+)
+
+export Modele_PTS_M_SOV_LOW is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/DDR/Vehicule/PTS_M_supply_LOW/PTS_M_supply_LOW.fbx"
+    Textures="GameData:/Assets/3D/Units/URSS/Vehicule/PTS_M_LOW"
+)

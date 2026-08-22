@@ -1,0 +1,14 @@
+export Modele_BM21_1_Grad_Naval_SOV is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/URSS/Artillerie/ZIL_131_Grad1/ZIL_131_Grad1.fbx"
+)
+
+export Modele_BM21_1_Grad_Naval_SOV_MID is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/URSS/Artillerie/ZIL_131_Grad1_MID/ZIL_131_Grad1_MID.fbx"
+)
+
+export Modele_BM21_1_Grad_Naval_SOV_LOW is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/URSS/Artillerie/ZIL_131_Grad1_LOW/ZIL_131_Grad1_LOW.fbx"
+)

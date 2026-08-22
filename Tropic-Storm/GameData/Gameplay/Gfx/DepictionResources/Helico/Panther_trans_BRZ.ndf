@@ -1,0 +1,19 @@
+export Modele_Panther_trans_BRZ is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/BRZ/Helico/Panther_trans/Panther_trans.fbx"
+)
+
+export Modele_Panther_trans_BRZ_MID is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/BRZ/Helico/Panther_trans/Panther_trans.fbx"
+)
+
+export Modele_Panther_trans_BRZ_LOW is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/BRZ/Helico/Panther_trans/Panther_trans.fbx"
+)
+
+export Modele_Panther_trans_BRZ_Tourelle_01 is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/US/Helico/UH_1H_Huey/MAG_t1.fbx"
+)

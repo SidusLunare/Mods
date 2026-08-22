@@ -1,0 +1,14 @@
+export Modele_F85_Rural_trans_BRZ is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/BRZ/Vehicule/F85_Rural_trans/F85_Rural_trans.fbx"
+)
+
+export Modele_F85_Rural_trans_BRZ_MID is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/BRZ/Vehicule/F85_Rural_trans_MID/F85_Rural_trans_MID.fbx"
+)
+
+export Modele_F85_Rural_trans_BRZ_LOW is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/BRZ/Vehicule/F85_Rural_trans_LOW/F85_Rural_trans_LOW.fbx"
+)

@@ -1,0 +1,19 @@
+export Modele_AC_130_EW_US is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/US/Avion/AC_130_EW/AC_130_EW.fbx"
+)
+
+export Modele_AC_130_EW_US_MID is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/US/Avion/AC_130_EW_MID/AC_130_EW_MID.fbx"
+)
+
+export Modele_AC_130_EW_US_LOW is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/US/Avion/AC_130_EW_LOW/AC_130_EW_LOW.fbx"
+)
+
+export Modele_AC_130_EW_US_train is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/US/Avion/AC_130_EW/AC_130_EW_train.fbx"
+)

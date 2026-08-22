@@ -1,0 +1,14 @@
+export Modele_UH1B_supply_COL is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/COL/Helico/UH1B_supply/UH1B_supply.fbx"
+)
+
+export Modele_UH1B_supply_COL_MID is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/COL/Helico/UH1B_supply_MID/UH1B_supply_MID.fbx"
+)
+
+export Modele_UH1B_supply_COL_LOW is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/COL/Helico/UH1B_supply_LOW/UH1B_supply_LOW.fbx"
+)

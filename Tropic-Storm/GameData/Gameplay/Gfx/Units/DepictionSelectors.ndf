@@ -1,0 +1,88 @@
+LodHighNoneLimit_Missile is 400
+
+LodHighNoneLimit_SoldierWeapon is 40
+
+SpecificPylonDepictionSelector is TDepictionPylonSelector
+(
+    HighLimitInMeter = 100
+    Camera = $/M3D/Misc/CameraPrincipale
+)
+
+SpecificMechanicalDepictionSelector is TLodSelector
+(
+    HighMidLimitInMeter = 100
+    MidLowLimitInMeter = 200
+    CameraMoverManager = $/Camera/CameraMoverManager
+    OptionalLimit = $/GraphicOption/ModelQuality
+)
+
+SpecificFlyingScaler is TCameraScaler
+(
+    ScaleFactor = PixelConstantValuesSpecific/AirplaneFactor
+    ScaleMax = PixelConstantValuesSpecific/AirplaneScaleMax
+    ScaleMinReferenceAltitude = PixelConstantValuesSpecific/AirplaneMinReferenceAltitude
+    Camera = $/M3D/Misc/CameraPrincipale
+    ScaleOption = $/GUIOption/UnitScalingEnabled
+)
+
+template HumanSelectorTemplate
+[
+    DisplayCondition,
+]
+is THumanWithConditionSelector
+(
+    HighLowLimitInMeter = LodHighLowLimit_Infantry
+    LowNoneLimitInMeter = LodLowNoneLimit_Infantry
+    CameraMoverManager = $/Camera/CameraMoverManager
+    OptionalLimit = $/GraphicOption/ModelQuality
+    DisplayCondition = <DisplayCondition>
+)
+
+HumanAlwaysVisibleSelector is HumanSelectorTemplate
+(
+    DisplayCondition = nil
+)
+
+HumanVisibleWhenAliveSelector is HumanSelectorTemplate
+(
+    DisplayCondition = TVisibleWhenAliveCondition()
+)
+
+HumanVisibleWhenDeployedSelector is HumanSelectorTemplate
+(
+    DisplayCondition = TVisibleWhenAliveAndDeployedCondition()
+)
+
+HumanVisibleWhenUndeployedSelector is HumanSelectorTemplate
+(
+    DisplayCondition = TVisibleWhenUndeployedCondition()
+)
+
+HumanVisibleWhenDeadOrUndeployedSelector is HumanSelectorTemplate
+(
+    DisplayCondition = TVisibleWhenDeadOrUndeployedCondition()
+)
+
+TowedUnitSubDepictionSelector is TTowedUnitSelector
+(
+    HighMidLimitInMeter = 100
+    MidLowLimitInMeter = 200
+    CameraMoverManager = $/Camera/CameraMoverManager
+    OptionalLimit = $/GraphicOption/ModelQuality
+)
+
+SoldierDynamicWeaponSubDepictionSelector is TInfantryWeaponSelector
+(
+    NoneLimitInMeter = LodHighNoneLimit_SoldierWeapon
+    CameraMoverManager = $/Camera/CameraMoverManager
+    MeshAlternativeKey = 'mesh_alternative'
+    PrincipalDepiction = ['WeaponAlternative_1'] // On verra bien si y'a besoin de gérer un truc ici si ça crash parce que y'a pas d'arme 1
+)
+
+SoldierDynamicBackpackWeaponSubDepictionSelector is TInfantryBackpackWeaponSelector
+(
+    NoneLimitInMeter = LodHighNoneLimit_SoldierWeapon
+    CameraMoverManager = $/Camera/CameraMoverManager
+    MeshAlternativeKey = 'mesh_alternative_backpack'
+    PrincipalDepiction = ['WeaponAlternative_1'] // On verra bien si y'a besoin de gérer un truc ici si ça crash parce que y'a pas d'arme 1
+)

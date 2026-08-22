@@ -1,0 +1,3 @@
+export Modele_AH1W_SuperCobra_AA_US     is TResourceMesh( Mesh="GameData:/Assets/3D/Units/US/Helico/AH1W_SuperCobra_AA/AH1W_SuperCobra_AA.fbx" )
+export Modele_AH1W_SuperCobra_AA_US_MID is TResourceMesh( Mesh="GameData:/Assets/3D/Units/US/Helico/AH1W_SuperCobra_AA_MID/AH1W_SuperCobra_AA_MID.fbx" )
+export Modele_AH1W_SuperCobra_AA_US_LOW is TResourceMesh( Mesh="GameData:/Assets/3D/Units/US/Helico/AH1W_SuperCobra_AA_LOW/AH1W_SuperCobra_AA_LOW.fbx" )

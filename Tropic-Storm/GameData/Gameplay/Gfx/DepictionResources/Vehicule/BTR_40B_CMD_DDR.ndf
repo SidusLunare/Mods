@@ -1,0 +1,20 @@
+export Modele_BTR_40B_CMD_DDR is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/URSS/CMD/BTR_40B_CMD/BTR_40B_CMD.fbx"
+    Textures="GameData:/Assets/3D/Units/DDR/CMD/BTR_40B_CMD"
+)
+
+export Modele_BTR_40B_CMD_DDR_MID is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/URSS/CMD/BTR_40B_CMD_MID/BTR_40B_CMD_MID.fbx"
+    Textures="GameData:/Assets/3D/Units/DDR/CMD/BTR_40B_CMD_MID"
+)
+
+export Modele_BTR_40B_CMD_DDR_LOW is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/URSS/CMD/BTR_40B_CMD_LOW/BTR_40B_CMD_LOW.fbx"
+    Textures="GameData:/Assets/3D/Units/DDR/CMD/BTR_40B_CMD_LOW"
+)
+
+
+

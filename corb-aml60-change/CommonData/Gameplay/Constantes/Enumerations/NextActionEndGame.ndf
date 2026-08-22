@@ -1,0 +1,8 @@
+// Sync with EnumNextActionEndGame.h
+TNextActionEndGame is TBaseClass
+(
+    BriefingPopUp is 0
+    NextChapter is 1
+    OutGame is 2
+    Restart is 3
+)

@@ -1,0 +1,14 @@
+export Modele_SeaKing_S61_supply_DK is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/DK/Helico/SeaKing_S61_trans/SeaKing_S61_trans.fbx"
+)
+
+export Modele_SeaKing_S61_supply_DK_MID is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/DK/Helico/SeaKing_S61_trans_MID/SeaKing_S61_trans_MID.fbx"
+)
+
+export Modele_SeaKing_S61_supply_DK_LOW is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/DK/Helico/SeaKing_S61_trans_LOW/SeaKing_S61_trans_LOW.fbx"
+)

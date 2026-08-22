@@ -1,0 +1,20 @@
+export Modele_M42_Duster_VEN is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/US/DCA/M42_Duster/M42_Duster.fbx"
+    Textures="GameData:/Assets/3D/Units/VEN/DCA/M42_Duster"
+)
+
+export Modele_M42_Duster_VEN_MID is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/US/DCA/M42_Duster_MID/M42_Duster_MID.fbx"
+    Textures="GameData:/Assets/3D/Units/VEN/DCA/M42_Duster_MID"
+)
+
+export Modele_M42_Duster_VEN_LOW is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/US/DCA/M42_Duster_LOW/M42_Duster_LOW.fbx"
+    Textures="GameData:/Assets/3D/Units/VEN/DCA/M42_Duster_LOW"
+)
+
+
+

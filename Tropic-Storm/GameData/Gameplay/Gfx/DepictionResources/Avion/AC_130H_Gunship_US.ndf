@@ -1,0 +1,19 @@
+export Modele_AC_130H_Gunship_US is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/US/Avion/AC_130H_Gunship/AC_130H_Gunship.fbx"
+)
+
+export Modele_AC_130H_Gunship_US_MID is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/US/Avion/AC_130H_Gunship/AC_130H_Gunship.fbx"
+)
+
+export Modele_AC_130H_Gunship_US_LOW is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/US/Avion/AC_130H_Gunship/AC_130H_Gunship.fbx"
+)
+
+export Modele_AC_130H_Gunship_US_train is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/US/Avion/AC_130H_Gunship/AC_130H_Gunship_train.fbx"
+)

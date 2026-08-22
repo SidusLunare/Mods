@@ -1,0 +1,23 @@
+export Modele_Mirage_5_V_VEN is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/FR/Avion/Mirage_5_F/Mirage_5_F.fbx"
+    Textures='GameData:/Assets/3D/Units/VEN/Avion/Mirage_5_F'
+)
+
+export Modele_Mirage_5_V_VEN_MID is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/FR/Avion/Mirage_5_F_MID/Mirage_5_F_MID.fbx"
+    Textures='GameData:/Assets/3D/Units/VEN/Avion/Mirage_5_F_MID'
+)
+
+export Modele_Mirage_5_V_VEN_LOW is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/FR/Avion/Mirage_5_F_LOW/Mirage_5_F_LOW.fbx"
+    Textures='GameData:/Assets/3D/Units/VEN/Avion/Mirage_5_F_LOW'
+)
+
+export Modele_Mirage_5_V_VEN_train is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/FR/Avion/Mirage_5_F/Mirage_5_F_train.fbx"
+    Textures='GameData:/Assets/3D/Units/VEN/Avion/Mirage_5_F'
+)

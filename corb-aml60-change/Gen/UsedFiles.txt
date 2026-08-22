@@ -1,0 +1,6 @@
+GameData:/Localisation/Database/Translations.csv
+GameData:/Localisation/corb-aml60-change/COMPANIES.csv
+GameData:/Localisation/corb-aml60-change/INTERFACE_INGAME.csv
+GameData:/Localisation/corb-aml60-change/INTERFACE_OUTGAME.csv
+GameData:/Localisation/corb-aml60-change/PLATOONS.csv
+GameData:/Localisation/corb-aml60-change/UNITS.csv

@@ -1,0 +1,119 @@
+// Ne pas éditer, ce fichier est généré
+
+export fx_splash_water_diorama is SimultaneousActionDeclaration
+(
+    Params =
+    [
+        private parDirection is TActionAlias( ExpectedType = 'float3' DefaultValue = float3[0,0,1] ),
+        private parPosition is TActionAlias( ExpectedType = 'float3' DefaultValue = float3[0,0,0] ),
+    ]
+    Actions = ActionList is
+    [
+        TSimultaneousAction
+        (
+            Mobile = TMobileWithLocalRepereMatrixFactory
+            (
+                Position = float3[-10,-21,0] + parPosition
+                EulerAngles = float3[3.141593,0,0]
+            )
+            Actions =
+            [
+                TActionCall
+                (
+                    Action = $/VFX_Bank/BANK_Bomb_ShockWave
+                    NamedParams = MAP[
+                        ( 'parCount', 1 ),
+                        ( 'parDuration', 15 ),
+                        ( 'parFinalSize', 200000 ),
+                        ( 'parInitialSize', 500 ),
+                        ( 'parZBias', 1000 ),
+                    ]
+                ),
+            ]
+        ),
+        TSimultaneousAction
+        (
+            Mobile = TMobileWithLocalRepereMatrixFactory
+            (
+                Position = float3[-10,-21,2222]
+                EulerAngles = float3[1.570796,0,0]
+            )
+            Actions =
+            [
+                TActionCall
+                (
+                    Action = $/VFX_Bank/BANK_SmallWater_Projection_Simple
+                    NamedParams = MAP[
+                        ( 'parColor', float3[1,1,1] ),
+                        ( 'parCount', 20 ),
+                        ( 'parFluidFriction', 2.1 ),
+                        ( 'parGravity', 5280 ),
+                        ( 'parGrowFactor', 12 ),
+                        ( 'parLifetime', 4 ),
+                        ( 'parSize', 800 ),
+                        ( 'parSpeed', 372 ),
+                    ]
+                ),
+            ]
+        ),
+        TSimultaneousAction
+        (
+            Mobile = TMobileWithLocalRepereMatrixFactory
+            (
+                Position = float3[58,89,2222]
+                EulerAngles = float3[1.570796,0,0]
+            )
+            Actions =
+            [
+                TSequentialAction
+                (Actions =
+                    [
+                        TWaitInSec( Duration = 1 ),
+                        TActionCall
+                        (
+                            Action = $/VFX_Bank/BANK_SmallWater_Projection_Simple
+                            NamedParams = MAP[
+                                ( 'parColor', float3[1,1,1] ),
+                                ( 'parCount', 20 ),
+                                ( 'parFluidFriction', 1.08 ),
+                                ( 'parGravity', 3480 ),
+                                ( 'parGrowFactor', 12 ),
+                                ( 'parLifetime', 4 ),
+                                ( 'parSize', 600 ),
+                                ( 'parSpeed', 372 ),
+                            ]
+                        ),
+                    ]
+                ),
+            ]
+        ),
+        TSimultaneousAction
+        (
+            Mobile = TMobileWithLocalRepereMatrixFactory
+            (
+                Position = float3[-10,-21,0] + parPosition
+                EulerAngles = float3[1.570796,0,0]
+            )
+            Actions =
+            [
+                TActionCall
+                (
+                    Action = $/VFX_Bank/Smoky_Dust_Projections_Simple
+                    NamedParams = MAP[
+                        ( 'parColor', float3[1,1,1] ),
+                        ( 'parCount', 10 ),
+                        ( 'parDir', parDirection ),
+                        ( 'parDuration', 2 ),
+                        ( 'parFlatness', 0.06 ),
+                        ( 'parGravity', -0.2 ),
+                        ( 'parInitSpeed', 0.75 ),
+                        ( 'parNarrowness', 0.78 ),
+                        ( 'parOpacity', 0.3 ),
+                        ( 'parRadius', 0 ),
+                        ( 'parSize', 12000 ),
+                    ]
+                ),
+            ]
+        ),
+    ]
+)

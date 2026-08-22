@@ -1,0 +1,17 @@
+export Modele_BRDM_2_CUB is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/DDR/Vehicule/BRDM2/BRDM2.fbx"
+    Textures="GameData:/Assets/3D/Units/CUBA/Vehicule/BRDM2"
+)
+
+export Modele_BRDM_2_CUB_MID is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/DDR/Vehicule/BRDM2_MID/BRDM2_MID.fbx"
+    Textures="GameData:/Assets/3D/Units/CUBA/Vehicule/BRDM2_MID"
+)
+
+export Modele_BRDM_2_CUB_LOW is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/DDR/Vehicule/BRDM2_LOW/BRDM2_LOW.fbx"
+    Textures="GameData:/Assets/3D/Units/CUBA/Vehicule/BRDM2_LOW"
+)

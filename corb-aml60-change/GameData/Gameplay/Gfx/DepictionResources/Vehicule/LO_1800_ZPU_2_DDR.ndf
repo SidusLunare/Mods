@@ -1,0 +1,14 @@
+export Modele_LO_1800_ZPU_2_DDR is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/DDR/DCA/LO_1800_ZPU2/LO_1800_ZPU2.fbx"
+)
+
+export Modele_LO_1800_ZPU_2_DDR_MID is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/DDR/DCA/LO_1800_ZPU2_MID/LO_1800_ZPU2_MID.fbx"
+)
+
+export Modele_LO_1800_ZPU_2_DDR_LOW is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/DDR/DCA/LO_1800_ZPU2_LOW/LO_1800_ZPU2_LOW.fbx"
+)

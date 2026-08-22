@@ -1,0 +1,8 @@
+// Sync with EnumZoneManagerType.h
+EZoneManagerType is TBaseClass
+(
+    DeploiementZoneManager is 0
+    CommandementZoneManager is 1
+    IAStratZoneManager is 2
+    Length is 3
+)

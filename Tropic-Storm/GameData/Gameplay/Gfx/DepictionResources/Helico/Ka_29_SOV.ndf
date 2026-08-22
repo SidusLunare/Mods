@@ -1,0 +1,14 @@
+export Modele_Ka_29_SOV is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/URSS/Helico/Ka_29/Ka_29.fbx"
+)
+
+export Modele_Ka_29_SOV_MID is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/URSS/Helico/Ka_29_MID/Ka_29_MID.fbx"
+)
+
+export Modele_Ka_29_SOV_LOW is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/URSS/Helico/Ka_29_LOW/Ka_29_LOW.fbx"
+)

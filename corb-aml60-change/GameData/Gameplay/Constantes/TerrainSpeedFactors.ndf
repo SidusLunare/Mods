@@ -1,0 +1,61 @@
+
+export InfantryTerrainSpeedFactors is TRTTIGameplayTerrainSpeedFactors
+(
+    SpeedFactorPerTerrainType = MAP [
+        (~/ETerrainType/ForetDense, 1),
+        (~/ETerrainType/ForetLegere, 0.75),
+        (~/ETerrainType/PetitBatiment, 0.5),
+        (~/ETerrainType/Batiment, 0.5),
+        (~/ETerrainType/Ruin, 0.5),
+        (~/ETerrainType/Rocher, 1),
+        (~/ETerrainType/EauPeuProfonde, 0.8),
+        (~/ETerrainType/EauProfonde, 0.8),
+    ]
+)
+
+export MountaineerTerrainSpeedFactors is TRTTIGameplayTerrainSpeedFactors
+(
+    SpeedFactorPerTerrainType = MAP [] // "mountainer" annule tous les coefficients de vitesse de terrain (on garde la valeur par défaut 1)
+)
+
+export WheelVehicleTerrainSpeedFactors is TRTTIGameplayTerrainSpeedFactors
+(
+    SpeedFactorPerTerrainType = MAP [
+        (~/ETerrainType/ForetDense, 0),
+        (~/ETerrainType/ForetLegere, 0.4),
+        (~/ETerrainType/PetitBatiment, 0),
+        (~/ETerrainType/Batiment, 0),
+        (~/ETerrainType/Ruin, 0),
+        (~/ETerrainType/Rocher, 0),
+        (~/ETerrainType/EauPeuProfonde, 1),
+        (~/ETerrainType/EauProfonde, 0.3),
+    ]
+)
+
+export TrackVehicleTerrainSpeedFactors is TRTTIGameplayTerrainSpeedFactors
+(
+    SpeedFactorPerTerrainType = MAP [
+        (~/ETerrainType/ForetDense, 0),
+        (~/ETerrainType/ForetLegere, 0.5),
+        (~/ETerrainType/PetitBatiment, 0),
+        (~/ETerrainType/Batiment, 0),
+        (~/ETerrainType/Ruin, 0),
+        (~/ETerrainType/Rocher, 0),
+        (~/ETerrainType/EauPeuProfonde, 0.4),
+        (~/ETerrainType/EauProfonde, 0.4),
+    ]
+)
+
+export HovercraftTerrainSpeedFactors is TRTTIGameplayTerrainSpeedFactors
+(
+    SpeedFactorPerTerrainType = MAP [
+        (~/ETerrainType/ForetDense, 0),
+        (~/ETerrainType/ForetLegere, 0.5),
+        (~/ETerrainType/PetitBatiment, 0),
+        (~/ETerrainType/Batiment, 0),
+        (~/ETerrainType/Ruin, 0),
+        (~/ETerrainType/Rocher, 0),
+        (~/ETerrainType/EauPeuProfonde, 1),
+        (~/ETerrainType/EauProfonde, 1),
+    ]
+)

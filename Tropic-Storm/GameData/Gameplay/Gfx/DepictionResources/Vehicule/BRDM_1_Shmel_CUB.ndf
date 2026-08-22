@@ -1,0 +1,17 @@
+export Modele_BRDM_1_Shmel_CUB is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/CUBA/Antichar/BRDM_1_Shmel/BRDM_1_Shmel.fbx"
+)
+
+export Modele_BRDM_1_Shmel_CUB_MID is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/CUBA/Antichar/BRDM_1_Shmel_MID/BRDM_1_Shmel_MID.fbx"
+)
+
+export Modele_BRDM_1_Shmel_CUB_LOW is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/CUBA/Antichar/BRDM_1_Shmel_LOW/BRDM_1_Shmel_LOW.fbx"
+)
+
+
+

@@ -1,0 +1,166 @@
+export FX_BANK_Binder_Construction_Spark is Simultaneous
+(
+    Actions =
+    [
+        private WeldingBurst_Spawner is Template_RepeatSequential
+        (
+            Forever = true
+            Actions =
+            [
+                WaitInSec(Duration = RandomRange[0, 2]),
+                Template_RepeatSimultaneous
+                (
+                    Forever = false
+                    WaitBetweenRepeats = RandomRange[0.15, 0.2]
+                    IterationCount = RandomRange[10,12]
+                    Actions =
+                    [
+                        Flash is ParticleBombSpawner
+                        (
+                            ParticleMaxDurationForSpawnSkip = 0.2
+                            Count = 1
+                            Spawner = ParticleSpawner
+                            (
+                                ParticleLifetime = 0.1
+                                Initialisers =
+                                [
+                                    ParticleInitialiserList
+                                    (
+                                        Alpha = 1.0
+                                        ColorMultiplier = 1.0
+
+                                        Size = RandomRange[1200, 3000]
+                                        Stretching = 900 div ParticleSize
+                                        Opacity = 0
+                                        EmissivePower = 1
+                                    )
+                                ]
+                                ParticleDescriptor = ParticleDescriptor
+                                (
+                                    ParticleRenderer = $/VFX_Bank/LitParticleRenderer
+                                    RenderInfo = ParticleRenderInfo
+                                    (
+                                        TextureName = 'GameData:/Assets/2D/Fx/flare_bleu_00.png'
+                                        SortTriangles = true
+                                        ZTest = true
+                                        Calque = 'Particles'
+                                        EmissiveParticle = True
+                                    )
+                                    Evolvers = ParticleStandardEvolverList
+                                    (
+                                        EmissivePower = 1.5 * ParticleRemainingLifeRatio
+                                        Opacity = 0
+                                    )
+                                )
+                            )
+                        ),
+                        Sparks is ParticleBombSpawner
+                        (
+                            SizeModifier is 0.6
+                            Count = 40 * SizeModifier
+                            // Pour pas en spawner 50 000 si on à une frame de 4s...
+                            ParticleMaxDurationForSpawnSkip = 0.7 * SizeModifier
+                            Spawner = ParticleSpawner
+                            (
+                                ParticleLifetime = RandomRange[0.3, 0.6] * SizeModifier
+                                Initialisers =
+                                [
+                                    ParticleInitialiserList
+                                    (
+                                        Alpha = 1.0
+
+                                        Speed = ( MinusOneToOneRandomSphereVolume + float3[0,0,1]) * 1250
+                                        ColorModifier = LinearColor[float3[237,55,2] * 0.00392]
+                                        CustomFloat3_2 = ParticleColorModifier
+                                        EmissivePower = RandomRange[7, 15]
+                                        CustomFloat_1 = ParticleEmissivePower
+                                        Size = RandomRange[25,85] * 0.6
+                                        Stretching = RandomRange[0.8,4]
+                                    )
+                                ]
+                                PostTransformInitialisers =
+                                [
+                                    Initialiser_CustomFloat3_1(InitFunction = ParticlePosition),
+                                ]
+                                ParticleDescriptor = ParticleDescriptor
+                                (
+                                    ParticleRenderer = $/VFX_Bank/LitParticleRenderer
+                                    RenderInfo = ParticleRenderInfo
+                                    (
+                                        ZTest = true
+                                        TextureName = 'GameData:/Assets/2D/Fx/sparks_01.png'
+                                        SortTriangles = True
+                                        Calque = 'Particles'
+                                        EmissiveParticle = True
+                                    )
+                                    Evolvers = ParticleStandardEvolverList
+                                    (
+                                        Position = EvolverDt * ParticleSpeed + ParticlePosition
+                                        Speed = ParticleSpeed + (EvolverDt * float3[0,0,-300 * 2.5] + ParticleLifeRatio * ParticleLifeRatio * MinusOneToOneRandomSphereVolume * min[1500 * 2.5, length[ParticleSpeed]*0.2])
+                                        EmissivePower = Decay[ParticleLifeRatio, 0.7] * ParticleCustomFloat_1
+                                        Direction = ParticleSpeed
+                                        ColorModifier = Max[lerp[sqrt[ParticleLifeRatio], float3[1,1,1.0], ParticleCustomFloat3_2],0]
+                                    )
+                                )
+                            )
+                        ),
+                    ]
+                ),
+                WaitInSec(Duration = RandomRange[2, 3]),
+            ]
+        ),
+        Template_WaitForEver(),
+    ]
+)
+
+export BANK_Construction_Smoke is Simultaneous
+(
+    Actions =
+    [
+        ParticleSpraySpawnerWithEvaluable
+        (
+            StabilisationTime = 6
+            Frequency = 8
+            Forever = true
+            Spawner = ParticleSpawner
+            (
+                ParticleLifetime = 5
+                Initialisers =
+                [
+                    ParticleInitialiserList
+                    (
+                        Alpha = 1.0
+
+                        Position = MinusOneToOneRandomBoxVolume * 3000 + ParticleSize * float3[0,0,0.5]
+                        Speed = 0
+                        ColorModifier = LinearColor[1]// PositiveUnitRandomSphereVolume
+                        EmissivePower = RandomRange[0.4, 0.9]
+                        Opacity = 0.4
+                        Size = 1000
+                        CustomFloat_1 = RandomUnit
+                        CustomFloat3_1 = 0
+                        Rotation = RandomUnit
+                    )
+                ]
+                ParticleDescriptor = ParticleDescriptor
+                (
+                    ParticleRenderer = $/VFX_Bank/LitParticleRenderer
+                    RenderInfo = DeferredParticleRenderInfo
+                    (
+                        TextureName = 'GameData:/Assets/2D/Fx/anim_smoke_02_000.png'
+                    )
+                    Evolvers = ParticleStandardEvolverListWithPhysic
+                    (
+                        PhysicWindField = MapWind
+                        FluidFriction = 5
+                        PhysicAccelerationField = MinusOneToOneRandomSphereVolume * 1500
+                        CustomFloat3_1 = ParticleCustomFloat3_1 + MinusOneToOneRandomSphereVolume
+                        Animation = (ParticleLifeRatio + ParticleCustomFloat_1) * 0.5
+                        Opacity = 0.4 * AttackDecay[ParticleLifeRatio, 0.5]
+                        Size = ParticleCustomFloat_1 * ParticleLifeRatio * 1000 + 2000
+                    )
+                )
+            )
+        ),
+    ]
+)

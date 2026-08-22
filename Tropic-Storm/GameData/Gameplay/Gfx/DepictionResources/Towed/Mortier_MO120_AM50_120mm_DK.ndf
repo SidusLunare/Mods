@@ -1,0 +1,3 @@
+export Modele_Mortier_MO120_AM50_120mm_DK is TResourceMesh( Mesh="GameData:/Assets/3D/Units/DK/Canon/MO120_AM50_120mm/MO120_AM50_120mm.fbx")
+export Modele_Mortier_MO120_AM50_120mm_DK_MID is TResourceMesh( Mesh="GameData:/Assets/3D/Units/DK/Canon/MO120_AM50_120mm_MID/MO120_AM50_120mm_MID.fbx")
+export Modele_Mortier_MO120_AM50_120mm_DK_LOW is TResourceMesh( Mesh="GameData:/Assets/3D/Units/DK/Canon/MO120_AM50_120mm_LOW/MO120_AM50_120mm_LOW.fbx")

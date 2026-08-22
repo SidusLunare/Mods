@@ -1,0 +1,14 @@
+export Modele_BTS_4A_ZU_SOV is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/URSS/DCA/BTS_4A_ZU/BTS_4A_ZU.fbx"
+)
+
+export Modele_BTS_4A_ZU_SOV_MID is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/URSS/DCA/BTS_4A_ZU/BTS_4A_ZU.fbx"
+)
+
+export Modele_BTS_4A_ZU_SOV_LOW is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/URSS/DCA/BTS_4A_ZU/BTS_4A_ZU.fbx"
+)

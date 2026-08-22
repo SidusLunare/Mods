@@ -1,0 +1,26 @@
+// Sync with StrategicBattleState.h
+EStrategicBattleState is TBaseClass
+(
+    WaitingPlayersNotReady is 0
+    ProcessUnitsActions is 1
+    PrepareFighting is 2
+    AutoresolveMovementStart is 3
+    AutoresolveMovementExec is 4
+    AutoresolvePrepare is 5
+    AutoresolveComputeForCurrentPhase is 6
+    AutoresolvePostPhaseMovementExec is 7
+    AutoresolvePostPhaseMovementPending is 8
+    AutoresolvePostPhaseMovementEnding is 9
+    WaitingBattlegroupsPlayedByHumanForTacticalBattle is 10
+    WaitingTacticResult is 11
+    PostFightingSynchro is 12
+    FightingResolutionStart is 13
+    FightingPhaseResolutionExec is 14
+    PostFightingResolutionExec is 15
+    PostFightingResolutionPending is 16
+    PostFightingMovementExec is 17
+    PostFightingMovementPending is 18
+    PostFightingResolutionEnded is 19
+    FightingResolutionEnded is 20
+    Ended is 21
+)

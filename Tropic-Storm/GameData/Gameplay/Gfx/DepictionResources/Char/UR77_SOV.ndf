@@ -1,0 +1,14 @@
+export Modele_UR77_SOV is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/URSS/Artillerie/UR77/UR77.fbx"
+)
+
+export Modele_UR77_SOV_MID is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/URSS/Artillerie/UR77_MID/UR77_MID.fbx"
+)
+
+export Modele_UR77_SOV_LOW is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/URSS/Artillerie/UR77_LOW/UR77_LOW.fbx"
+)

@@ -1,0 +1,20 @@
+export ModelFile_AAVC_7A1_CMD_USMC_US is "GameData:/Assets/3D/Units/US/APC/LVTC_7/LVTC_7.fbx"
+export Modele_AAVC_7A1_CMD_USMC_US is TResourceMesh
+(
+    Mesh=ModelFile_AAVC_7A1_CMD_USMC_US
+)
+export ModelFile_AAVC_7A1_CMD_USMC_US_MID is "GameData:/Assets/3D/Units/US/APC/LVTC_7_MID/LVTC_7_MID.fbx"
+export Modele_AAVC_7A1_CMD_USMC_US_MID is TResourceMesh
+(
+    Mesh=ModelFile_AAVC_7A1_CMD_USMC_US_MID
+)
+export ModelFile_AAVC_7A1_CMD_USMC_US_LOW is "GameData:/Assets/3D/Units/US/APC/LVTC_7_LOW/LVTC_7_LOW.fbx"
+export Modele_AAVC_7A1_CMD_USMC_US_LOW is TResourceMesh
+(
+    Mesh=ModelFile_AAVC_7A1_CMD_USMC_US_LOW
+)
+
+export Modele_AAVC_7A1_CMD_USMC_US_Tourelle_01 is TResourceMesh
+(
+    Mesh=ModelFile_MAG_t1
+)

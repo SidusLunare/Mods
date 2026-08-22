@@ -1,0 +1,14 @@
+export Modele_CUCV_SIGINT_US is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/US/Vehicule/CUCV_SIGINT/CUCV_SIGINT.fbx"
+)
+
+export Modele_CUCV_SIGINT_US_MID is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/US/Vehicule/CUCV_SIGINT_MID/CUCV_SIGINT_MID.fbx"
+)
+
+export Modele_CUCV_SIGINT_US_LOW is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/US/Vehicule/CUCV_SIGINT_LOW/CUCV_SIGINT_LOW.fbx"
+)

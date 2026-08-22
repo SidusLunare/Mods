@@ -1,0 +1,18 @@
+export Modele_AMX_13_75mm_reco_VEN is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/FR/Char/AMX_13_75mm_CMD/AMX_13_75mm_CMD.fbx"
+    Textures="GameData:/Assets/3D/Units/VEN/Char/AMX_13_75mm"
+)
+
+export Modele_AMX_13_75mm_reco_VEN_MID is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/FR/Char/AMX_13_75mm_CMD_MID/AMX_13_75mm_CMD_MID.fbx"
+    Textures="GameData:/Assets/3D/Units/VEN/Char/AMX_13_75mm_MID"
+)
+
+export Modele_AMX_13_75mm_reco_VEN_LOW is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/FR/Char/AMX_13_75mm_CMD_LOW/AMX_13_75mm_CMD_LOW.fbx"
+    Textures="GameData:/Assets/3D/Units/VEN/Char/AMX_13_75mm_LOW"
+)
+

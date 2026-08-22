@@ -1,0 +1,17 @@
+export Modele_Super_Puma_supply_VEN is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/FR/Helico/Puma/Puma.fbx"
+    Textures="GameData:/Assets/3D/Units/VEN/Helico/Puma"
+)
+
+export Modele_Super_Puma_supply_VEN_MID is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/FR/Helico/Puma_MID/Puma_MID.fbx"
+    Textures="GameData:/Assets/3D/Units/VEN/Helico/Puma_MID"
+)
+
+export Modele_Super_Puma_supply_VEN_LOW is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/FR/Helico/Puma_LOW/Puma_LOW.fbx"
+    Textures="GameData:/Assets/3D/Units/VEN/Helico/Puma_LOW"
+)

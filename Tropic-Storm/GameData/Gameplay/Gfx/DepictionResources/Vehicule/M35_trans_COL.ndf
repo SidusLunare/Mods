@@ -1,0 +1,17 @@
+export Modele_M35_trans_COL is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/CAN/Vehicule/M35_supply/M35_Supply.fbx"
+    Textures="GameData:/Assets/3D/Units/COL/Vehicule/M35_Supply"
+)
+
+export Modele_M35_trans_COL_MID is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/CAN/Vehicule/M35_supply/M35_Supply.fbx"
+    Textures="GameData:/Assets/3D/Units/COL/Vehicule/M35_Supply_MID"
+)
+
+export Modele_M35_trans_COL_LOW is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/CAN/Vehicule/M35_supply/M35_Supply.fbx"
+    Textures="GameData:/Assets/3D/Units/COL/Vehicule/M35_Supply_LOW"
+)

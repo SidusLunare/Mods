@@ -1,0 +1,14 @@
+export Modele_UH1B_gunship_VEN is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/VEN/Helico/UH1B_gunship/UH1B_gunship.fbx"
+)
+
+export Modele_UH1B_gunship_VEN_MID is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/VEN/Helico/UH1B_gunship_MID/UH1B_gunship_MID.fbx"
+)
+
+export Modele_UH1B_gunship_VEN_LOW is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/VEN/Helico/UH1B_gunship_LOW/UH1B_gunship_LOW.fbx"
+)

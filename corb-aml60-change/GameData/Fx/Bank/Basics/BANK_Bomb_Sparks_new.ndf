@@ -1,0 +1,359 @@
+// GameData:/Fx/Bank/Basics/AoA_BANK_Bomb_Sparks.ndf
+// Call Test_BANK_Bomb_NewSparks in FX Tester
+// Standard Sparks
+
+
+export Test_BANK_Bomb_NewSparks is Simultaneous
+(
+    Mobile = MobileUnCentroid()
+    Actions =
+    [
+        Template_ActionCall
+        (
+            Action = ~/BANK_Bomb_NewSparks
+            NamedParameters = MAP[
+                ( 'parCount', 20 ),
+                ( 'parPosition', float3[0.00, 0.00, 0.00] ),
+                ( 'parSize', 50 ),
+                ( 'parLifetime', 1.0 ),
+                ( 'parSpeed', 2000 ),
+                ( 'parGravity', 500 ),
+                ( 'parFluidFriction', 1.0 ),
+                ( 'parStretch', 1.0),
+                ( 'parColorMultiplier', 1.0),
+                ( 'parNarrowness', 0.5),
+            ]
+            TimeServer = $/VFX_Bank/Zoom_1_2_3_4_IATime
+        ),
+    ]
+    MaxDuration = 3
+)
+
+export BANK_Bomb_NewSparks is template_BANK_Bomb_NewSparks
+(
+    Omnidirection = false
+)
+
+export BANK_Bomb_NewSparks_Omni is template_BANK_Bomb_NewSparks
+(
+    Omnidirection = true
+)
+
+export BANK_Bomb_SpraySparks_Omni is template_BANK_Bomb_NewSparks_Spray
+(
+    Omnidirection = true
+)
+
+
+template template_BANK_Bomb_NewSparks
+[
+    Omnidirection : boolean,
+]is Template_ActionWithParameters
+(
+    Params =
+    [
+        private parCount is Template_Param_Int( DefaultValue = 20 ),
+        private parPosition is Template_Param_Float3( DefaultValue = float3[0.00, 0.00, 0.00] ),
+        private parLifetime is Template_Param_Float( DefaultValue = 1 ),
+        private parSize is Template_Param_Float( DefaultValue = 50 ),
+        private parSpeed is Template_Param_Float( DefaultValue = 2000 ),
+        private parColor is Template_Param_Float3( DefaultValue = LinearColor[1.00, 0.25, 0] ),
+        private parColorMultiplier is Template_Param_Float( DefaultValue = 1.0 ),
+        private parGravity is Template_Param_Float( DefaultValue = 500 ),
+        private parFluidFriction is Template_Param_Float( DefaultValue = 1 ),
+        private parStretch is Template_Param_Float( DefaultValue = 1 ),
+        private parNarrowness is Template_Param_Float( DefaultValue = 0.5 ),
+        private parDirection is Template_Param_Float3( DefaultValue = float3[0,0,1] ),
+        private parWindFactor is Template_Param_Float( DefaultValue = 1 ),
+        private parRepeatTime is Template_Param_Float( DefaultValue = 0 ),
+        private parRepeatCount is Template_Param_Float( DefaultValue = 1 ),
+        private parInitialDelay is Template_Param_Float( DefaultValue = 0 ),
+    ]
+    Action = TSequentialAction
+    (
+        Actions =
+        [
+            WaitInSec(Duration = parInitialDelay),
+            Template_RepeatSimultaneous
+            (
+                Forever = parRepeatCount == 0
+                IterationCount = parRepeatCount
+                WaitBetweenRepeats = parRepeatTime
+                Actions =
+                [
+                    ParticleBombSpawner
+                    (
+                        ParticleMaxDurationForSpawnSkip = parLifetime * 1.43
+                        Count = parCount
+                        Spawner = ParticleSpawner
+                        (
+                            ParticleLifetime = RandomRange[0.66, 1.33] * parLifetime
+                            Initialisers =
+                            [
+                                ParticleInitialiserList
+                                (
+                                    ColorModifier = float3[1, 1, 1]
+                                    Alpha = 1.0
+
+                                    Position = parPosition
+                                    Speed = OrientAndNarrowRandomValue[ ( <Omnidirection> ? $/VFX_Bank/MinusOneToOneRandomBoxSurface : $/VFX_Bank/MinusOneToOneRandomHemisphereSurface  ), parDirection, parNarrowness] * parSpeed * RandomRange[0.5, 1.33]
+                                    Size = 1
+                                    CustomFloat_1 = - parGravity
+                                    CustomFloat_2 = parFluidFriction
+                                    CustomFloat_3 = 0.004 * parStretch
+                                    CustomFloat_4 = parColorMultiplier * 10
+                                    CustomFloat_5 = RandomRange[0.66, 1.33] * parSize
+                                    CustomFloat_6 = parWindFactor
+                                    CustomFloat3_1 = parColor
+                                ),
+                            ]
+                            ParticleDescriptor = ParticleDescriptor
+                            (
+                                ParticleRenderer = $/VFX_Bank/LitParticleRenderer
+                                RenderInfo = ParticleRenderInfo
+                                (
+                                    SortTriangles = True
+                                    TextureName = 'GameData:/Assets/2D/Fx/fx_etincelle_00.png'
+                                    Calque = 'Particles'
+                                    EmissiveParticle = True
+                                )
+
+                                Evolvers = Template_List
+                                (
+                                    Evolvers =
+                                    [
+                                        ParticleStandardEvolverListWithPhysic
+                                        (
+                                            FluidFriction = $/VFX_Bank/ParticleCustomFloat_2
+                                            PhysicAccelerationField = GenFloat3[0, 0, $/VFX_Bank/ParticleCustomFloat_1]
+                                            PhysicWindField = $/VFX_Bank/MapWind * 2 * ParticleCustomFloat_6
+                                            ForceSlicing = False
+                                            EmissivePower = $/VFX_Bank/ParticleCustomFloat_4 * $/VFX_Bank/ParticleRemainingLifeRatio
+                                            Size = $/VFX_Bank/ParticleCustomFloat_5
+                                            Opacity = 0
+                                            // on ajoute un peu de la camera direction pour aplatir légerement les sparks qui viennent de face, car sinon elles sont trop fine et peuvent anti aliaser.
+                                            Direction = normalized[$/VFX_Bank/ParticleSpeed] + 0.5* CameraDirection
+                                            // le facteur de grossisement antialiasing n'est pas compensé en revanche le facteur de grossisement pour que ca reste visible oui.
+                                            Stretching = $/VFX_Bank/ParticleCustomFloat_3 * length[ParticleSpeed]
+                                            ColorModifier = lerp[ParticleLifeRatio, Clamp[ParticleCustomFloat3_1+ float3[0.2,0.2,0.2], 0,1], ParticleCustomFloat3_1]
+                                        ),
+                                    ]
+                                )
+                            )
+                        )
+                    )
+                ]
+            )
+
+        ]
+    )
+)
+
+template template_BANK_Bomb_NewSparks_Spray
+[
+    Omnidirection : boolean,
+]is SimultaneousActionDeclaration
+(
+    Params =
+    [
+        private parCount is Template_Param_Int( DefaultValue = 20 ),
+        private parPosition is Template_Param_Float3( DefaultValue = float3[0.00, 0.00, 0.00] ),
+        private parLifetime is Template_Param_Float( DefaultValue = 1 ),
+        private parSize is Template_Param_Float( DefaultValue = 50 ),
+        private parSpeed is Template_Param_Float( DefaultValue = 2000 ),
+        private parColor is Template_Param_Float3( DefaultValue = LinearColor[1.00, 0.25, 0] ),
+        private parColorMultiplier is Template_Param_Float( DefaultValue = 1.0 ),
+        private parGravity is Template_Param_Float( DefaultValue = 500 ),
+        private parFluidFriction is Template_Param_Float( DefaultValue = 1 ),
+        private parStretch is Template_Param_Float( DefaultValue = 1 ),
+        private parNarrowness is Template_Param_Float( DefaultValue = 0.5 ),
+        private parDirection is Template_Param_Float3( DefaultValue = float3[0,0,1] ),
+        private parWindFactor is Template_Param_Float( DefaultValue = 1 ),
+        private parRepeatTime      is Template_Param_Float  (DefaultValue = 0), //*
+        private ShotCount       is Template_Param_Float  (DefaultValue = 0),
+        private parInitialDelay      is Template_Param_Float( DefaultValue = 0 ), //*
+    ]
+
+    Actions =
+    [
+         ParticleSpraySpawnerWithEvaluable
+        (
+            Frequency = parRepeatTime == 0 ? 10 : (1.0 div parRepeatTime)
+            DurationInSec = ifte[parRepeatTime == 0, 0.1, ifte[ShotCount == 0, 666, parRepeatTime * (ShotCount-0.9) ]]
+            SpawnFirstParticleAtStart = true
+            InitialDelayInSec = parInitialDelay //*
+            PeriodInSec = parRepeatTime
+            Spawner = ParticleSpawner
+            (
+                ParticleLifetime = RandomRange[0.66, 1.33] * parLifetime
+                Initialisers =
+                [
+                    ParticleInitialiserList
+                    (
+                        ColorModifier = float3[1, 1, 1]
+                        Alpha = 1.0
+
+                        Position = parPosition
+                        Speed = OrientAndNarrowRandomValue[ ( <Omnidirection> ? $/VFX_Bank/MinusOneToOneRandomBoxSurface : $/VFX_Bank/MinusOneToOneRandomHemisphereSurface  ), parDirection, parNarrowness] * parSpeed * RandomRange[0.5, 1.33]
+                        Size = 1
+                        CustomFloat_1 = - parGravity
+                        CustomFloat_2 = parFluidFriction
+                        CustomFloat_3 = 0.004 * parStretch
+                        CustomFloat_4 = parColorMultiplier * 10
+                        CustomFloat_5 = RandomRange[0.66, 1.33] * parSize
+                        CustomFloat_6 = parWindFactor
+                        CustomFloat3_1 = parColor
+                    ),
+                ]
+                ParticleDescriptor = ParticleDescriptor
+                (
+                    ParticleRenderer = $/VFX_Bank/LitParticleRenderer
+                    RenderInfo = ParticleRenderInfo
+                    (
+                        SortTriangles = True
+                        TextureName = 'GameData:/Assets/2D/Fx/fx_etincelle_00.png'
+                        Calque = 'Particles'
+                        EmissiveParticle = True
+                    )
+
+                    Evolvers = Template_List
+                    (
+                        Evolvers =
+                        [
+                            ParticleStandardEvolverListWithPhysic
+                            (
+                                FluidFriction = $/VFX_Bank/ParticleCustomFloat_2
+                                PhysicAccelerationField = GenFloat3[0, 0, $/VFX_Bank/ParticleCustomFloat_1]
+                                PhysicWindField = $/VFX_Bank/MapWind * 2 * ParticleCustomFloat_6
+                                ForceSlicing = False
+                                EmissivePower = $/VFX_Bank/ParticleCustomFloat_4 * $/VFX_Bank/ParticleRemainingLifeRatio
+                                Size = $/VFX_Bank/ParticleCustomFloat_5
+                                Opacity = 0
+                                // on ajoute un peu de la camera direction pour aplatir légerement les sparks qui viennent de face, car sinon elles sont trop fine et peuvent anti aliaser.
+                                Direction = normalized[$/VFX_Bank/ParticleSpeed] + 0.5* CameraDirection
+                                // le facteur de grossisement antialiasing n'est pas compensé en revanche le facteur de grossisement pour que ca reste visible oui.
+                                Stretching = $/VFX_Bank/ParticleCustomFloat_3 * length[ParticleSpeed]
+                                ColorModifier = lerp[ParticleLifeRatio, Clamp[ParticleCustomFloat3_1+ float3[0.2,0.2,0.2], 0,1], ParticleCustomFloat3_1]
+                            ),
+                        ]
+                    )
+                )
+            )
+        )
+    ]
+)
+
+template template_BANK_Bomb_NewSparks_Simple
+[
+    Omnidirection : boolean,
+    InverseDir = false,
+]is ActionCallWithParameters
+(
+    Action = <Omnidirection> ? BANK_Bomb_NewSparks_Omni : BANK_Bomb_NewSparks
+    Params =
+    [
+        private parCount             is Template_Param_Int( DefaultValue = 20 ),
+        private parPositionRelative  is Template_Param_Float3( DefaultValue = float3[0, 0, 0] ),
+        private parPositionRadius    is Template_Param_Float( DefaultValue = 0 ),
+        private parLifetime          is Template_Param_Float( DefaultValue = 1 ),
+        private parSize              is Template_Param_Float( DefaultValue = 50 ),
+        private parSpeedMin          is Template_Param_Float( DefaultValue = 3000 ),
+        private parSpeedMax          is Template_Param_Float( DefaultValue = 5000 ),
+        private parColor             is Template_Param_Float3( DefaultValue = LinearColor[1.00, 0.25, 0] ),
+        private parColorMultiplier   is Template_Param_Float( DefaultValue = 1.0 ),
+        private parGravity           is Template_Param_Float( DefaultValue = 500 ),
+        private parFluidFriction     is Template_Param_Float( DefaultValue = 1 ),
+        private parStretch           is Template_Param_Float( DefaultValue = 1 ),
+        private parNarrowness        is Template_Param_Float( DefaultValue = 0.5 ),
+        private parDir               is Template_Param_Float3( DefaultValue = float3[0,0,1] ),
+        private parWindFactor        is Template_Param_Float( DefaultValue = 1 ),
+        private parRepeatTime        is Template_Param_Float( DefaultValue = 0 ),
+        private parRepeatCount       is Template_Param_Float( DefaultValue = 1 ),
+        private parInitialDelay      is Template_Param_Float( DefaultValue = 0 ),
+    ]
+    NamedParameters = MAP[
+        ( 'parCount'                , parCount ),
+        ( 'parPosition'             , parPositionRelative + parPositionRadius * MinusOneToOneRandomDisc),
+        ( 'parLifetime'             , parLifetime ),
+        ( 'parSize'                 , parSize ),
+        ( 'parSpeed'                , RandomRange[parSpeedMin, parSpeedMax] ),
+        ( 'parColor'                , LinearColor[parColor] ),
+        ( 'parColorMultiplier'      , parColorMultiplier * 0.1),
+        ( 'parGravity'              , parGravity ),
+        ( 'parFluidFriction'        , parFluidFriction),
+        ( 'parStretch'              , parStretch),
+        ( 'parNarrowness'           , parNarrowness),
+        ( 'parDirection'            , <InverseDir> ? -parDir : parDir ),
+        ( 'parWindFactor'           , parWindFactor),
+        ( 'parRepeatTime'           , parRepeatTime ),
+        ( 'parRepeatCount'          , parRepeatCount ),
+        ( 'parInitialDelay'         , parInitialDelay ),
+
+    ]
+)
+
+export BANK_Bomb_NewSparks_Simple is template_BANK_Bomb_NewSparks_Simple
+(
+    Omnidirection = false
+)
+
+export BANK_Bomb_NewSparks_Simple_Reverse is template_BANK_Bomb_NewSparks_Simple
+(
+    Omnidirection = false
+    InverseDir = true
+)
+
+export BANK_Bomb_NewSparks_Omni_Simple is template_BANK_Bomb_NewSparks_Simple
+(
+    Omnidirection = true
+)
+
+template template_BANK_Bomb_NewSparks_Spray_Simple
+[
+    Omnidirection : boolean,
+]is ActionCallWithParameters
+(
+    Action = <Omnidirection> ? BANK_Bomb_SpraySparks_Omni : nil
+    Params =
+    [
+        private parCount           is Template_Param_Int   ( DefaultValue = 20 ),
+        private Position           is Template_Param_Float3( DefaultValue = float3[0.00, 0.00, 0.00] ),
+        private parLifetime        is Template_Param_Float ( DefaultValue = 1 ),
+        private parSize            is Template_Param_Float ( DefaultValue = 50 ),
+        private parSpeed           is Template_Param_Float ( DefaultValue = 2000 ),
+        private parColor           is Template_Param_Float3( DefaultValue = LinearColor[1.00, 0.25, 0] ),
+        private parColorMultiplier is Template_Param_Float ( DefaultValue = 1.0 ),
+        private parGravity         is Template_Param_Float ( DefaultValue = 500 ),
+        private parFluidFriction   is Template_Param_Float ( DefaultValue = 1 ),
+        private parStretch         is Template_Param_Float ( DefaultValue = 1 ),
+        private parNarrowness      is Template_Param_Float ( DefaultValue = 0.5 ),
+        private parDirection       is Template_Param_Float3( DefaultValue = float3[0,0,1] ),
+        private parWindFactor      is Template_Param_Float ( DefaultValue = 1 ),
+        private parRepeatTime      is Template_Param_Float ( DefaultValue = 0),
+        private parInitialDelay    is Template_Param_Float ( DefaultValue = 0),
+        private ShotCount          is Template_Param_Float ( DefaultValue = 0),
+    ]
+    NamedParameters = MAP[
+        ( 'parCount'                , parCount ),
+        ( 'parPosition'             , Position),
+        ( 'parLifetime'             , parLifetime ),
+        ( 'parSize'                 , parSize ),
+        ( 'parSpeed'                , parSpeed ),
+        ( 'parColor'                , parColor ),
+        ( 'parColorMultiplier'      , parColorMultiplier * 0.1 ),
+        ( 'parGravity'              , parGravity ),
+        ( 'parFluidFriction'        , parFluidFriction),
+        ( 'parStretch'              , parStretch),
+        ( 'parNarrowness'           , parNarrowness),
+        ( 'parDirection'            , parDirection),
+        ( 'parWindFactor'           , parWindFactor),
+        ( 'parRepeatTime'           , parRepeatTime),
+        ( 'parInitialDelay'         , parInitialDelay),
+        ( 'ShotCount'               , ShotCount),
+    ]
+)
+
+export BANK_Bomb_NewSparks_Spray_Omni_Simple is template_BANK_Bomb_NewSparks_Spray_Simple
+(
+    Omnidirection = true
+)

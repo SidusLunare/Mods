@@ -1,0 +1,19 @@
+export Modele_MB3_Tamoyo_I_BRZ is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/BRZ/Char/MB3_Tamoyo_I/MB3_Tamoyo_I.fbx"
+)
+
+export Modele_MB3_Tamoyo_I_BRZ_MID is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/BRZ/Char/MB3_Tamoyo_I_MID/MB3_Tamoyo_I_MID.fbx"
+)
+
+export Modele_MB3_Tamoyo_I_BRZ_LOW is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/BRZ/Char/MB3_Tamoyo_I_LOW/MB3_Tamoyo_I_LOW.fbx"
+)
+
+export Modele_MB3_Tamoyo_I_BRZ_Tourelle_02 is TResourceMesh
+(
+    Mesh=ModelFile_MAG_cosmetic
+)

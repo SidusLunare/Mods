@@ -1,0 +1,14 @@
+export Modele_Ecureuil_TOW_DK is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/DK/Helico/Ecureuil_TOW/Ecureuil_TOW.fbx"
+)
+
+export Modele_Ecureuil_TOW_DK_MID is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/DK/Helico/Ecureuil_TOW_MID/Ecureuil_TOW_MID.fbx"
+)
+
+export Modele_Ecureuil_TOW_DK_LOW is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/DK/Helico/Ecureuil_TOW_LOW/Ecureuil_TOW_LOW.fbx"
+)

@@ -1,0 +1,14 @@
+export Modele_TPZ_Fuchs_1_M2HB_VEN is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/VEN/APC/TPZ_Fuchs_1_M2HB/TPZ_Fuchs_1_M2HB.fbx"
+)
+
+export Modele_TPZ_Fuchs_1_M2HB_VEN_MID is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/VEN/APC/TPZ_Fuchs_1_M2HB/TPZ_Fuchs_1_M2HB.fbx"
+)
+
+export Modele_TPZ_Fuchs_1_M2HB_VEN_LOW is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/VEN/APC/TPZ_Fuchs_1_M2HB/TPZ_Fuchs_1_M2HB.fbx"
+)

@@ -1,0 +1,3 @@
+export Modele_LAV_L_US     is TResourceMesh( Mesh="GameData:/Assets/3D/Units/US/APC/LAV_L/LAV_L.fbx" )
+export Modele_LAV_L_US_MID is TResourceMesh( Mesh="GameData:/Assets/3D/Units/US/APC/LAV_L_MID/LAV_L_MID.fbx" )
+export Modele_LAV_L_US_LOW is TResourceMesh( Mesh="GameData:/Assets/3D/Units/US/APC/LAV_L_LOW/LAV_L_LOW.fbx" )

@@ -1,0 +1,14 @@
+export Modele_M8_Greyhound_MP_BRZ is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/BRZ/Vehicule/M8_Greyhound_MP/M8_Greyhound_MP.fbx"
+)
+
+export Modele_M8_Greyhound_MP_BRZ_MID is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/BRZ/Vehicule/M8_Greyhound_MP_MID/M8_Greyhound_MP_MID.fbx"
+)
+
+export Modele_M8_Greyhound_MP_BRZ_LOW is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/BRZ/Vehicule/M8_Greyhound_MP_LOW/M8_Greyhound_MP_LOW.fbx"
+)

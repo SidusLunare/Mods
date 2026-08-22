@@ -1,0 +1,14 @@
+export Modele_Bedford_MJ_4t_supply_DK is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/DK/Vehicule/BEDFORD_MJ/BEDFORD_MJ.fbx"
+)
+
+export Modele_Bedford_MJ_4t_supply_DK_MID is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/DK/Vehicule/BEDFORD_MJ_MID/BEDFORD_MJ_MID.fbx"
+)
+
+export Modele_Bedford_MJ_4t_supply_DK_LOW is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/DK/Vehicule/BEDFORD_MJ_LOW/BEDFORD_MJ_LOW.fbx"
+)

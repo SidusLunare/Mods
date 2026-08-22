@@ -1,0 +1,14 @@
+export Modele_Mi_8MTV_Berkut_SOV is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/URSS/Helico/Mi_8MTV_BERKUT/Mi_8MTV_BERKUT.fbx"
+)
+
+export Modele_Mi_8MTV_Berkut_SOV_MID is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/URSS/Helico/Mi_8MTV_BERKUT_MID/Mi_8MTV_BERKUT_MID.fbx"
+)
+
+export Modele_Mi_8MTV_Berkut_SOV_LOW is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/URSS/Helico/Mi_8MTV_BERKUT_LOW/Mi_8MTV_BERKUT_LOW.fbx"
+)

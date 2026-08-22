@@ -1,0 +1,81 @@
+export BANK_Dam_Foam_Sheet_Test is Template_ActionCall
+(
+    Action = ~/BANK_Dam_Foam_Sheet
+)
+
+export BANK_Dam_Foam_Sheet is SimultaneousActionDeclaration
+(
+    Params =
+    [
+        private parSize is Template_ActionAlias
+        (
+            ExpectedType = 'float'
+            DefaultValue = 1800
+        ),
+        private parOpacity is Template_ActionAlias
+        (
+            ExpectedType = 'float'
+            DefaultValue = 0.8
+        ),
+        private parAnimSpeed is Template_ActionAlias
+        (
+            ExpectedType = 'float'
+            DefaultValue = 0.6
+        ),
+    ]
+    Actions =
+    [
+        ParticleSpraySpawnerWithEvaluable
+        (
+            Frequency = 1
+            DurationInSec = 1
+            Spawner = ParticleSpawner
+            (
+                ParticleLifetime = 1 div parAnimSpeed
+                Initialisers =
+                [
+                    Initialiser_SetMobileWrapper(),
+                    ParticleInitialiserList
+                    (
+                        ColorRGB = float3[1, 1, 1]
+                        ColorModifier = float3[1, 1, 1]
+                        ColorMultiplier = 1
+                        Alpha = 1
+                        Opacity = parOpacity
+                        CustomFloat_1 = parOpacity
+                        Size = parSize * getX[ParticleMobileWrapperScale]
+                        Stretching = 1
+                        Speed = float3[0, 0, 0]
+                        ZBias = 350
+                        Rotation = 0
+                        RotationSpeed = float3[0, 0, 0]
+                    ),
+                    Initialiser_UpVector(InitFunction = float3[0, 0, 1]),
+                ]
+                ParticleDescriptor = ParticleDescriptor
+                (
+                    RenderInfo = ParticleRenderInfo
+                    (
+                        OpaqueParticle = True
+                        ZTest = True
+                        SortTriangles = True
+                        Use3DRotation = false
+                        // Prototype barrage: premiere frame de la texture animee.
+                        // Si tu remplaces les PNG, garder ce chemin synchronise avec dam_foam_sheet[0]:
+                        // GameData:/Assets/2D/Fx/DamFoam/dam_foam_sheet_000.png
+                        TextureName = 'GameData:/Assets/2D/Fx/DamFoam/dam_foam_sheet_000.png'
+                        Calque = 'Particles'
+                    )
+                    ParticleRenderer = Template_ParticleRendererPlane()
+                    Evolvers = ParticleStandardEvolverList
+                    (
+                        Opacity = ParticleCustomFloat_1 * AttackSustainDecay[ParticleLifeRatio, 0.25, 0.75]
+                        Animation = ParticleLifeRatio
+                        UseHardCodedRotation = true
+                    )
+                )
+            )
+        )
+    ]
+    MaxDuration = 7
+)

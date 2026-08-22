@@ -1,0 +1,45 @@
+
+TacticCubeActionResources is TUICommonCubeActionResources
+(
+    CubeActionMenuDescriptor = ~/CubeAction_Menu_Ordres_Tactic
+)
+
+// Cube action menu
+// If several actions are available for a slot (in a multiple selection), the last one is displayed
+CubeAction_Menu_Ordres_Tactic is TCubeActionMenuDescriptor
+(
+    CubeActionName               = "Ordres_default"
+    CubeActionContent            = MAP[
+        ( 0, [ CubeAction_Order_Stop ] ),
+        ( 1, [ CubeAction_Order_ShootOnPosition ] ),
+        ( 2, [
+                ~/CubeAction_Order_ChangeAltitude,
+                ~/CubeAction_Order_ShootOnPositionSmoke,
+                ~/CubeAction_Order_ShootDefensiveSmoke,
+             ]),
+        ( 3, [ CubeAction_Order_Move ] ),
+        ( 4, [ CubeAction_Order_Attack ] ),
+        ( 5, [
+                ~/CubeAction_Order_UnloadAtPosition,
+                ~/CubeAction_Order_Evacuate,
+             ]),
+        ( 6, [ CubeAction_Order_QuickMove ] ),
+        ( 7, [ CubeAction_Order_FastMoveAndAttack ] ),
+        ( 8, [ CubeAction_Order_UnloadFromTransport ] ),
+        ( 9, [
+                ~/CubeAction_Order_Land,
+                ~/CubeAction_Order_Reverse,
+              ]),
+        ( 10, [ CubeAction_Functionality_RiposteStance ] ),
+        ( 11, [ CubeAction_Order_Sell ] ),
+        ( 12, [ CubeAction_Order_AIAttack ] ),
+        ( 13, [ CubeAction_Order_AIDefend ] ),
+        ( 14, [ CubeAction_Order_AIManageArtillery_Focus ] ),
+        ( 15, [ CubeAction_Order_AIManageArtillery_CounterBattery ] ),
+        ( 16, [ CubeAction_Order_AIManageArtillery_Auto ] ),
+        ( 17, [
+                ~/CubeAction_Order_AIAirplaneAutoManage,
+                ~/CubeAction_Order_AISupply,
+              ]),
+    ]
+)

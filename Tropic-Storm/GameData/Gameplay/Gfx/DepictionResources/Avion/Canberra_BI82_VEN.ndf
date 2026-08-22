@@ -1,0 +1,19 @@
+export Modele_Canberra_BI82_VEN is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/VEN/Avion/Canberra_BI82/Canberra_BI82.fbx"
+)
+
+export Modele_Canberra_BI82_VEN_MID is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/VEN/Avion/Canberra_BI82_MID/Canberra_BI82_MID.fbx"
+)
+
+export Modele_Canberra_BI82_VEN_LOW is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/VEN/Avion/Canberra_BI82_LOW/Canberra_BI82_LOW.fbx"
+)
+
+export Modele_Canberra_BI82_VEN_train is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/VEN/Avion/Canberra_BI82/Canberra_BI82_train.fbx"
+)

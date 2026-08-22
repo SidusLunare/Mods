@@ -1,0 +1,70 @@
+
+template RecoUnitMatcherTemplate
+[
+    HasMaxVision: bool = True,
+
+    MinGroundVisionValue: int = 0,
+    MaxGroundVisionValue: int = 0,
+
+    MinAerialVisionValue: int = 0,
+    MaxAerialVisionValue: int = 0,
+
+] is TAnyUnitMatchers
+(
+    Matchers = [
+        // Ground Units
+        TAllUnitMatchers(Matchers = [
+            TTagsMatcher(Tags = ["Reco"]),
+            TOpticalStrengthUnitMatcher (
+                OpticalStrengthType=EOpticalStrength/Standard
+                Operator=ComparisonOperator_MoreOrEqual
+                OpticalValue=<MinGroundVisionValue>
+            ),
+        ]
+        +
+        ( <HasMaxVision> ?
+            [
+                TOpticalStrengthUnitMatcher(
+                    OpticalStrengthType=EOpticalStrength/Standard
+                    Operator=ComparisonOperator_StrictlyLess
+                    OpticalValue=<MaxGroundVisionValue>
+                )
+            ]
+            :
+            []
+        )),
+
+        // AerialUnits
+        TAllUnitMatchers(Matchers = [
+            TTagsMatcher(Tags = ["Avion_Reco"]),
+            TOpticalStrengthUnitMatcher (
+                OpticalStrengthType=EOpticalStrength/HighAltitude
+                Operator=ComparisonOperator_MoreOrEqual
+                OpticalValue=<MinAerialVisionValue>
+            ),
+        ]
+        +
+        ( <HasMaxVision> ?
+            [
+                TOpticalStrengthUnitMatcher(
+                    OpticalStrengthType=EOpticalStrength/HighAltitude
+                    Operator=ComparisonOperator_StrictlyLess
+                    OpticalValue=<MaxAerialVisionValue>
+                )
+            ]
+            :
+            []
+        )),
+    ]
+)
+
+UICommonUnitNameResources is TUICommonUnitNameResources
+(
+    UnitMatchersForTFS = [
+         ("#CMD", THasInfluenceMapStrengthUnitMatcher()),
+         ("#RECO1", RecoUnitMatcherTemplate(MinGroundVisionValue=3535 MaxGroundVisionValue=5301 MinAerialVisionValue=5300 MaxAerialVisionValue=10600)),
+         ("#RECO2", RecoUnitMatcherTemplate(MinGroundVisionValue=5301 MaxGroundVisionValue=7068 MinAerialVisionValue=10600 MaxAerialVisionValue=13250)),
+         ("#RECO3", RecoUnitMatcherTemplate(HasMaxVision=False MinGroundVisionValue=7068 MinAerialVisionValue=13250)),
+        ("#INSTRUCTOR", TTagsMatcher(Tags=["Instructor"])),
+    ]
+)

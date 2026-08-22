@@ -1,0 +1,20 @@
+export ModelFile_Harrier_AV8B_thermo_US is "GameData:/Assets/3D/Units/US/Avion/HARRIER_AV8B/HARRIER_AV8B_Thermo.fbx"
+export Modele_Harrier_AV8B_thermo_US is TResourceMesh
+(
+    Mesh=ModelFile_Harrier_AV8B_thermo_US
+)
+export ModelFile_Harrier_AV8B_thermo_US_MID is "GameData:/Assets/3D/Units/US/Avion/HARRIER_AV8B_MID/HARRIER_AV8B_Thermo_MID.fbx"
+export Modele_Harrier_AV8B_thermo_US_MID is TResourceMesh
+(
+    Mesh=ModelFile_Harrier_AV8B_thermo_US_MID
+)
+export ModelFile_Harrier_AV8B_thermo_US_LOW is "GameData:/Assets/3D/Units/US/Avion/HARRIER_AV8B_LOW/HARRIER_AV8B_Thermo_LOW.fbx"
+export Modele_Harrier_AV8B_thermo_US_LOW is TResourceMesh
+(
+    Mesh=ModelFile_Harrier_AV8B_thermo_US_LOW
+)
+
+export Modele_Harrier_AV8B_thermo_US_train is TResourceMesh
+(
+    Mesh=ModelFile_Harrier_AV8B_US_train
+)

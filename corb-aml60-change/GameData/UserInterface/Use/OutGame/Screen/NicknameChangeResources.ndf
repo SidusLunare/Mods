@@ -1,0 +1,48 @@
+NicknameMaximumLength is 50
+
+private NicknameChangePanel is SpecificModalWindow
+(
+    UniqueName = "NicknameChangePanel"
+    TitleToken = 'T_CHGPSUDO'
+
+    ButtonList =
+    [
+        BUCKListElementDescriptor(ComponentDescriptor = SpecificModalConfirmButton),
+        BUCKListElementDescriptor(ComponentDescriptor = SpecificModalCancelButton)
+    ]
+
+    ElementsList =
+    [
+        BUCKListElementDescriptor
+        (
+            ComponentDescriptor = AnimatedWaitingComponent
+            (
+                ComponentFrame = TUIFramePropertyRTTI
+                (
+                    MagnifiableWidthHeight = [45.0, 45.0]
+                    AlignementToAnchor = [0.5, 0.0]
+                    AlignementToFather = [0.5, 0.0]
+                )
+            )
+        ),
+        BUCKListElementDescriptor
+        (
+            ComponentDescriptor = SpecificModalEditableText
+            (
+                TextToken = "pseudo"
+                HasText = true
+                EditableTextElementName = "NicknameEditableText"
+                MaxChars = ~/NicknameMaximumLength
+            )
+        ),
+        BUCKListElementDescriptor
+        (
+            ComponentDescriptor = SpecificModalErrorText
+        )
+    ]
+)
+
+NicknameChangeResource is TUISpecificOutGameNicknameChangeResource
+(
+    NicknameChangePanel = ~/NicknameChangePanel
+)

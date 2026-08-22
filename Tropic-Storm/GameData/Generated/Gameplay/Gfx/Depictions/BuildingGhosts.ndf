@@ -1,0 +1,27 @@
+// Ne pas éditer, ce fichier est généré par DepictionBuildingGhostsFileWriter
+
+
+unnamed TGhostBuildingMimeticRegistration
+(
+    GfxProperties = $/DepictionCore/GfxProperties
+    GhostBuildingMimetics = MAP
+    [
+        ( 'FOB_BEL', 'FOB_Nato_03' ),
+        ( 'FOB_BRZ', 'FOB_Nato_03' ),
+        ( 'FOB_CAN', 'FOB_Nato_03' ),
+        ( 'FOB_COL', 'FOB_Nato_03' ),
+        ( 'FOB_CUB', 'FOB_Nato_03' ),
+        ( 'FOB_DDR', 'FOB_Pact_03' ),
+        ( 'FOB_DK', 'FOB_Nato_03' ),
+        ( 'FOB_ESP', 'FOB_Nato_03' ),
+        ( 'FOB_FR', 'FOB_Nato_03' ),
+        ( 'FOB_NL', 'FOB_Nato_03' ),
+        ( 'FOB_POL', 'FOB_Pact_03' ),
+        ( 'FOB_RFA', 'FOB_Nato_03' ),
+        ( 'FOB_SOV', 'FOB_Pact_03' ),
+        ( 'FOB_TCH', 'FOB_Pact_03' ),
+        ( 'FOB_UK', 'FOB_Nato_03' ),
+        ( 'FOB_US', 'FOB_Nato_03' ),
+        ( 'FOB_VEN', 'FOB_Nato_03' ),
+    ]
+)

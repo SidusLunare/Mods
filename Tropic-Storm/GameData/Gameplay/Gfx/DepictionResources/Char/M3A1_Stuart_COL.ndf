@@ -1,0 +1,14 @@
+export Modele_M3A1_Stuart_COL is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/COL/Char/M3A1_Stuart/M3A1_Stuart.fbx"
+)
+
+export Modele_M3A1_Stuart_COL_MID is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/COL/Char/M3A1_Stuart_MID/M3A1_Stuart_MID.fbx"
+)
+
+export Modele_M3A1_Stuart_COL_LOW is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/COL/Char/M3A1_Stuart_LOW/M3A1_Stuart_LOW.fbx"
+)

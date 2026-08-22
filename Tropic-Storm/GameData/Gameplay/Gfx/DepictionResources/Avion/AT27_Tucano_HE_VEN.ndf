@@ -1,0 +1,20 @@
+export ModelFile_AT27_Tucano_HE_VEN is "GameData:/Assets/3D/Units/VEN/Avion/AT27_Tucano/AT27_Tucano.fbx"
+export Modele_AT27_Tucano_HE_VEN is TResourceMesh
+(
+    Mesh=ModelFile_AT27_Tucano_HE_VEN
+)
+export ModelFile_AT27_Tucano_HE_VEN_MID is "GameData:/Assets/3D/Units/VEN/Avion/AT27_Tucano_MID/AT27_Tucano_MID.fbx"
+export Modele_AT27_Tucano_HE_VEN_MID is TResourceMesh
+(
+    Mesh=ModelFile_AT27_Tucano_HE_VEN_MID
+)
+export ModelFile_AT27_Tucano_HE_VEN_LOW is "GameData:/Assets/3D/Units/VEN/Avion/AT27_Tucano_LOW/AT27_Tucano_LOW.fbx"
+export Modele_AT27_Tucano_HE_VEN_LOW is TResourceMesh
+(
+    Mesh=ModelFile_AT27_Tucano_HE_VEN_LOW
+)
+export ModelFile_AT27_Tucano_HE_VEN_train is "GameData:/Assets/3D/Units/VEN/Avion/AT27_Tucano/AT27_Tucano_train.fbx"
+export Modele_AT27_Tucano_HE_VEN_train is TResourceMesh
+(
+    Mesh=ModelFile_AT27_Tucano_HE_VEN_train
+)

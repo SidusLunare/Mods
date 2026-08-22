@@ -1,0 +1,14 @@
+export Modele_ZIL_157_SIGINT_CUB is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/CUBA/CMD/ZIL_157_SIGINT/ZIL_157_SIGINT.fbx"
+)
+
+export Modele_ZIL_157_SIGINT_CUB_MID is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/CUBA/CMD/ZIL_157_SIGINT/ZIL_157_SIGINT.fbx"
+)
+
+export Modele_ZIL_157_SIGINT_CUB_LOW is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/CUBA/CMD/ZIL_157_SIGINT/ZIL_157_SIGINT.fbx"
+)

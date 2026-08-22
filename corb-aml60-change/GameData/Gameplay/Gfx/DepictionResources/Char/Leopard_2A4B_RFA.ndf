@@ -1,0 +1,19 @@
+export Modele_Leopard_2A4B_RFA is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/RFA/Char/Leopard_2A4B/Leopard_2A4B.fbx"
+)
+
+export Modele_Leopard_2A4B_RFA_MID is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/RFA/Char/Leopard_2A4B/Leopard_2A4B.fbx"
+)
+
+export Modele_Leopard_2A4B_RFA_LOW is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/RFA/Char/Leopard_2A4B/Leopard_2A4B.fbx"
+)
+
+export Modele_Leopard_2A4B_RFA_Tourelle_02 is TResourceMesh
+(
+    Mesh=ModelFile_MG3_cosmetic_no_ammo
+)

@@ -1,0 +1,14 @@
+export Modele_EE15_trans_BRZ is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/BRZ/Vehicule/EE15_trans/EE15_trans.fbx"
+)
+
+export Modele_EE15_trans_BRZ_MID is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/BRZ/Vehicule/EE15_trans/EE15_trans.fbx"
+)
+
+export Modele_EE15_trans_BRZ_LOW is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/BRZ/Vehicule/EE15_trans/EE15_trans.fbx"
+)

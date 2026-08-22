@@ -1,0 +1,20 @@
+export Modele_PT76_CUB is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/DDR/Char/PT_76B/PT_76B.fbx"
+    Textures="GameData:/Assets/3D/Units/CUBA/Char/PT_76B"
+)
+
+export Modele_PT76_CUB_MID is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/DDR/Char/PT_76B_MID/PT_76B_MID.fbx"
+    Textures="GameData:/Assets/3D/Units/CUBA/Char/PT_76B_MID"
+)
+
+export Modele_PT76_CUB_LOW is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/DDR/Char/PT_76B_LOW/PT_76B_LOW.fbx"
+    Textures="GameData:/Assets/3D/Units/CUBA/Char/PT_76B_LOW"
+)
+
+
+

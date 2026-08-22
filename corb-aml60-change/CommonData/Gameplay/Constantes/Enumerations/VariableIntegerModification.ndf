@@ -1,0 +1,10 @@
+// Sync with GDDescriptor.h and _enum_for_gameplay.sip
+EVariableIntegerModification is TBaseClass
+(
+    Set is 0
+    Add is 1
+    Substract is 2
+    Multiply is 3
+    Divide is 4
+    Modulo is 5
+)

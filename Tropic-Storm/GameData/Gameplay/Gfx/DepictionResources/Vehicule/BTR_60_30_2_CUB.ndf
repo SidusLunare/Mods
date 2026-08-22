@@ -1,0 +1,17 @@
+export Modele_BTR_60_30_2_CUB is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/FR/DCA/VAB_T20/VAB_T20.fbx"
+)
+
+export Modele_BTR_60_30_2_CUB_MID is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/FR/DCA/VAB_T20_MID/VAB_T20_MID.fbx"
+)
+
+export Modele_BTR_60_30_2_CUB_LOW is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/FR/DCA/VAB_T20_LOW/VAB_T20_LOW.fbx"
+)
+
+
+

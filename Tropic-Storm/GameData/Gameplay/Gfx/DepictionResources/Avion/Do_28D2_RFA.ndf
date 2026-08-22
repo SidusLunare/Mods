@@ -1,0 +1,19 @@
+export Modele_Do_28D2_RFA is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/RFA/Avion/Do_28D2/Do_28D2.fbx"
+)
+
+export Modele_Do_28D2_RFA_MID is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/RFA/Avion/Do_28D2_MID/Do_28D2_MID.fbx"
+)
+
+export Modele_Do_28D2_RFA_LOW is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/RFA/Avion/Do_28D2_LOW/Do_28D2_LOW.fbx"
+)
+
+export Modele_Do_28D2_RFA_train is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/RFA/Avion/Do_28D2/Do_28D2_train.fbx"
+)

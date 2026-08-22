@@ -1,0 +1,14 @@
+export Modele_OH6_trans_DK is TResourceMesh
+(
+    Mesh=ModelFile_OH6_DK
+)
+
+export Modele_OH6_trans_DK_MID is TResourceMesh
+(
+    Mesh=ModelFile_OH6_DK_MID
+)
+
+export Modele_OH6_trans_DK_LOW is TResourceMesh
+(
+    Mesh=ModelFile_OH6_DK_LOW
+)

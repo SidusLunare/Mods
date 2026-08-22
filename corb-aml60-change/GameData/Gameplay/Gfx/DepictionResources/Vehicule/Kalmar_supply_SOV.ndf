@@ -1,0 +1,74 @@
+export Modele_Kalmar_supply_SOV is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/URSS/Vehicule/Kalmar_supply/Kalmar_supply.fbx"
+)
+
+export Modele_Kalmar_supply_SOV_MID is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/URSS/Vehicule/Kalmar_supply_MID/Kalmar_supply_MID.fbx"
+)
+
+export Modele_Kalmar_supply_SOV_LOW is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/URSS/Vehicule/Kalmar_supply_LOW/Kalmar_supply_LOW.fbx"
+)
+
+template Kalmar_Rotor
+[
+    PaleLength   : float,
+    PaleCount    : int,
+    RotationAxis : float3,
+    SousMobile   : string,
+] is TIntroduceMobileHappening
+(
+
+    Anchor = <SousMobile>
+    Happening = TSequencingActionHappening(ActionDescriptor = TActionCall
+    (
+        Action = $/GFX/GameFx/FX_Binder_Rotor
+        NamedParams = MAP
+        [
+            ('parPaleLength', <PaleLength>),
+            ('parPaleCount', <PaleCount>),
+            ('parRotationAxis', <RotationAxis>),
+        ]
+    ))
+)
+
+export HandWritten_Kalmar_supply_SOV is TDepictionHandWrittenPart
+(
+    Operators = [
+        TCosmeticAirCushionRotorOperatorDesc
+        (
+            OperatorId = 'Rotors'
+            DecelerationAfterDeath = 40.0
+            HelixList =
+            [
+                THelix
+                (
+                    BladeCount = 4
+                    BladesBoneName = "helice_ls_1"
+                    BlurActionId = "FX_Helice_1"
+                    Clockwise = False
+                    HelixBoneName = "bloc_moteur_1"
+                    RotationAxis = 1
+                    RotationSpeed = 200
+                ),
+                THelix
+                (
+                    BladeCount = 4
+                    BladesBoneName = "helice_ls_2"
+                    BlurActionId = "FX_Helice_2"
+                    Clockwise = False
+                    HelixBoneName = "bloc_moteur_2"
+                    RotationAxis = 1
+                    RotationSpeed = 200
+                ),
+            ]
+        )
+    ]
+    Actions = MAP[
+        ('FX_Helice_1', Kalmar_Rotor( PaleLength = 365 PaleCount = 4 RotationAxis = float3[0, 1, 0] SousMobile = "bloc_moteur_1" )),
+        ('FX_Helice_2', Kalmar_Rotor( PaleLength = 365 PaleCount = 4 RotationAxis = float3[0, 1, 0] SousMobile = "bloc_moteur_2" ))
+    ]
+)

@@ -1,0 +1,32 @@
+export Modele_F5A_FreedomFighter_VEN is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/VEN/Avion/F5A_FreedomFighter/F5A_FreedomFighter.fbx"
+)
+
+export Modele_F5A_FreedomFighter_VEN_MID is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/VEN/Avion/F5A_FreedomFighter_MID/F5A_FreedomFighter_MID.fbx"
+)
+
+export Modele_F5A_FreedomFighter_VEN_LOW is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/VEN/Avion/F5A_FreedomFighter_LOW/F5A_FreedomFighter_LOW.fbx"
+)
+
+export Modele_F5A_FreedomFighter_VEN_train is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/VEN/Avion/F5A_FreedomFighter/F5A_FreedomFighter_train.fbx"
+)
+
+//-------------------------------------------------------------------------------
+//-----------------------------------SOLDATS VEN---------------------------------
+//-------------------------------------------------------------------------------
+// Ces données sont ici temporairement pour qu'elles ne soient pas envoyés avec le mauvais DLC (voir FUL-10037)
+
+//Engineers_Flam_VEN
+POL_WSW_1 is 'GameData:/Assets/3D/Units/POL/Infanterie/WSW/WSW_1.fbx'
+POL_WSW_2 is 'GameData:/Assets/3D/Units/POL/Infanterie/WSW/WSW_2.fbx'
+POL_Niebieskie_1_LOW is 'GameData:/Assets/3D/Units/POL/Infanterie/Niebieskie/Niebieskie_1_LOW.fbx'
+export Modele_Engineers_Flam_VEN is TResourceMesh( Mesh=POL_WSW_1 )
+export Modele_Engineers_Flam_VEN_02 is TResourceMesh( Mesh=POL_WSW_2 )
+export Modele_Engineers_Flam_VEN_LOW is TResourceMesh( Mesh=POL_Niebieskie_1_LOW )

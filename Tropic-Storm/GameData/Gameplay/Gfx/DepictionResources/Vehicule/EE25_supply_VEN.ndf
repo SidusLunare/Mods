@@ -1,0 +1,15 @@
+export ModelFile_EE25_supply_VEN is "GameData:/Assets/3D/Units/VEN/Vehicule/EE25_supply/EE25_supply.fbx"
+export Modele_EE25_supply_VEN is TResourceMesh
+(
+    Mesh=ModelFile_EE25_supply_VEN
+)
+export ModelFile_EE25_supply_VEN_MID is "GameData:/Assets/3D/Units/VEN/Vehicule/EE25_supply/EE25_supply.fbx"
+export Modele_EE25_supply_VEN_MID is TResourceMesh
+(
+    Mesh=ModelFile_EE25_supply_VEN_MID
+)
+export ModelFile_EE25_supply_VEN_LOW is "GameData:/Assets/3D/Units/VEN/Vehicule/EE25_supply/EE25_supply.fbx"
+export Modele_EE25_supply_VEN_LOW is TResourceMesh
+(
+    Mesh=ModelFile_EE25_supply_VEN_LOW
+)

@@ -1,0 +1,15 @@
+export ModelFile_MAN_630_L2AE_supply_RFA is "GameData:/Assets/3D/Units/RFA/Vehicule/MAN_630_L2AE_supply/MAN_630_L2AE_supply.fbx"
+export Modele_MAN_630_L2AE_supply_RFA is TResourceMesh
+(
+    Mesh=ModelFile_MAN_630_L2AE_supply_RFA
+)
+export ModelFile_MAN_630_L2AE_supply_RFA_MID is "GameData:/Assets/3D/Units/RFA/Vehicule/MAN_630_L2AE_supply_MID/MAN_630_L2AE_supply_MID.fbx"
+export Modele_MAN_630_L2AE_supply_RFA_MID is TResourceMesh
+(
+    Mesh=ModelFile_MAN_630_L2AE_supply_RFA_MID
+)
+export ModelFile_MAN_630_L2AE_supply_RFA_LOW is "GameData:/Assets/3D/Units/RFA/Vehicule/MAN_630_L2AE_supply_LOW/MAN_630_L2AE_supply_LOW.fbx"
+export Modele_MAN_630_L2AE_supply_RFA_LOW is TResourceMesh
+(
+    Mesh=ModelFile_MAN_630_L2AE_supply_RFA_LOW
+)

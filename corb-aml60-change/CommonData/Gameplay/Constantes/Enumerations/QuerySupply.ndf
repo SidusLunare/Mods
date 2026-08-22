@@ -1,0 +1,10 @@
+// Sync with EnumQuerySupply.h and _enum_for_gameplay.sip
+EQuerySupply is TBaseClass
+(
+    Fuel is 0
+    Bullet is 1
+    Missile is 2
+    Shell is 3
+    Health is 4
+    Length is 5
+)

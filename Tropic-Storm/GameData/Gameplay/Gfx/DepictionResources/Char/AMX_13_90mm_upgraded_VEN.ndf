@@ -1,0 +1,15 @@
+export Modele_AMX_13_90mm_upgraded_VEN is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/VEN/Char/AMX_13_90mm_upgraded/AMX_13_90mm_upgraded.fbx"
+)
+
+export Modele_AMX_13_90mm_upgraded_VEN_MID is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/VEN/Char/AMX_13_90mm_upgraded/AMX_13_90mm_upgraded.fbx"
+)
+
+export Modele_AMX_13_90mm_upgraded_VEN_LOW is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/VEN/Char/AMX_13_90mm_upgraded/AMX_13_90mm_upgraded.fbx"
+)
+

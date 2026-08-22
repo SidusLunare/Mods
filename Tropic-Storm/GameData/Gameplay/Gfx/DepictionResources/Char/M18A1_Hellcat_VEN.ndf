@@ -1,0 +1,20 @@
+export Modele_M18A1_Hellcat_VEN is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/VEN/Char/M18_Hellcat/M18_Hellcat.fbx"
+)
+
+export Modele_M18A1_Hellcat_VEN_MID is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/VEN/Char/M18_Hellcat_MID/M18_Hellcat_MID.fbx"
+)
+
+export Modele_M18A1_Hellcat_VEN_LOW is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/VEN/Char/M18_Hellcat_LOW/M18_Hellcat_LOW.fbx"
+)
+
+export Modele_M18A1_Hellcat_VEN_Tourelle_02 is TResourceMesh
+(
+    Mesh=ModelFile_M2HB_12_7mm_no_ammo
+)
+

@@ -1,0 +1,38 @@
+export SFX_Ambiance_HLM is SimultaneousActionDeclaration
+(
+    Params = []
+    Actions =
+    [
+        Ambiance_HLM_OneShot,
+    ]
+)
+
+export Ambiance_HLM_OneShot is Template_RepeatSimultaneous
+(
+    Actions =
+    [
+        TActionDescriptorPlaySoundList
+        (
+            SoundDescriptor = $/GFX/Sound/Sound_CityAmbianceHLM
+            Looped = true
+        ),
+
+        Template_RepeatSequential
+        (
+           TimeServer = Zoom_1_2_3_4_RenderTime
+           Actions =
+           [
+              WaitInSec
+              (
+                  Duration = RandomRange [10,20]
+              ),
+              TActionDescriptorPlaySoundList
+              (
+                  SoundDescriptor = $/GFX/Sound/Sound_CityAmbianceHLM_Evenements
+              ),
+
+           ]
+           Forever = true
+        )
+    ]
+)

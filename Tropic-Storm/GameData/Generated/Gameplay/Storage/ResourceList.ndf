@@ -1,0 +1,14 @@
+// Ne pas éditer, ce fichier est généré par ResourceListNDFFileWriter
+
+export Resource_Invalid is 0
+export Resource_CommandPoints is 1
+export Resource_Tickets is 2
+
+export Generated_ResourceList_Enum is TEnumResourceList
+(
+    Values = [
+        "Resource_Invalid",
+        "Resource_CommandPoints",
+        "Resource_Tickets",
+    ]
+)

@@ -1,0 +1,14 @@
+export Modele_GAZ_69_MP_CUB is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/URSS/Vehicule/UAZ_469_MP/UAZ_469_MP.fbx"
+)
+
+export Modele_GAZ_69_MP_CUB_MID is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/URSS/Vehicule/UAZ_469_MP_MID/UAZ_469_MP_MID.fbx"
+)
+
+export Modele_GAZ_69_MP_CUB_LOW is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/URSS/Vehicule/UAZ_469_MP_LOW/UAZ_469_MP_LOW.fbx"
+)

@@ -1,0 +1,14 @@
+export Modele_MTLBu_PIRAMIDA_EW_SOV is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/URSS/APC/MTLBu_PIRAMIDA_EW/MTLBu_PIRAMIDA_EW.fbx"
+)
+
+export Modele_MTLBu_PIRAMIDA_EW_SOV_MID is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/URSS/APC/MTLBu_PIRAMIDA_EW_MID/MTLBu_PIRAMIDA_EW_MID.fbx"
+)
+
+export Modele_MTLBu_PIRAMIDA_EW_SOV_LOW is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/URSS/APC/MTLBu_PIRAMIDA_EW_LOW/MTLBu_PIRAMIDA_EW_LOW.fbx"
+)

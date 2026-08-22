@@ -1,0 +1,14 @@
+export Modele_Pinzgauer_712_MAPATS_VEN is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/VEN/Vehicule/Pinzgauer_712_MAPATS/Pinzgauer_712_MAPATS.fbx"
+)
+
+export Modele_Pinzgauer_712_MAPATS_VEN_MID is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/VEN/Vehicule/Pinzgauer_712_MAPATS_MID/Pinzgauer_712_MAPATS_MID.fbx"
+)
+
+export Modele_Pinzgauer_712_MAPATS_VEN_LOW is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/VEN/Vehicule/Pinzgauer_712_MAPATS_LOW/Pinzgauer_712_MAPATS_LOW.fbx"
+)

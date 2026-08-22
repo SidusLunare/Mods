@@ -1,0 +1,14 @@
+export Modele_M106A1_HOWZ_DK is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/DK/Artillerie/M106_Howz/M106_Howz.fbx"
+)
+
+export Modele_M106A1_HOWZ_DK_MID is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/DK/Artillerie/M106_Howz_MID/M106_Howz_MID.fbx"
+)
+
+export Modele_M106A1_HOWZ_DK_LOW is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/DK/Artillerie/M106_Howz_LOW/M106_Howz_LOW.fbx"
+)

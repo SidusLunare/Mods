@@ -1,0 +1,6 @@
+// Sync with EugIA_Common/WargameCoalition.h
+TWargameCoalition is TBaseClass
+(
+    NATO is 0
+    PACT is 1
+)

@@ -1,0 +1,8 @@
+export Modele_M3A1_APC_COL     is TResourceMesh( Mesh="GameData:/Assets/3D/Units/COL/Vehicule/M3A1_APC/M3A1_APC.fbx" )
+export Modele_M3A1_APC_COL_MID is TResourceMesh( Mesh="GameData:/Assets/3D/Units/COL/Vehicule/M3A1_APC/M3A1_APC.fbx" )
+export Modele_M3A1_APC_COL_LOW is TResourceMesh( Mesh="GameData:/Assets/3D/Units/COL/Vehicule/M3A1_APC/M3A1_APC.fbx" )
+
+export Modele_M3A1_APC_COL_Tourelle_01 is TResourceMesh
+(
+    Mesh=ModelFile_M2HB_12_7mm_no_ammo
+)

@@ -1,0 +1,19 @@
+export Modele_Su_24_SEAD_SOV is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/URSS/Avion/Su_24_SEAD/Su_24_SEAD.fbx"
+)
+
+export Modele_Su_24_SEAD_SOV_MID is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/URSS/Avion/Su_24_SEAD/Su_24_SEAD.fbx"
+)
+
+export Modele_Su_24_SEAD_SOV_LOW is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/URSS/Avion/Su_24_SEAD/Su_24_SEAD.fbx"
+)
+
+export Modele_Su_24_SEAD_SOV_train is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/URSS/Avion/Su_24_SEAD/Su_24_SEAD_train.fbx"
+)

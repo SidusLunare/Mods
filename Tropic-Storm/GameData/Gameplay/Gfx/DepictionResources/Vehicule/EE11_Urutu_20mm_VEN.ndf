@@ -1,0 +1,3 @@
+export Modele_EE11_Urutu_20mm_VEN     is TResourceMesh( Mesh="GameData:/Assets/3D/Units/VEN/Vehicule/EE11_Urutu_20mm/EE11_Urutu_20mm.fbx" )
+export Modele_EE11_Urutu_20mm_VEN_MID is TResourceMesh( Mesh="GameData:/Assets/3D/Units/VEN/Vehicule/EE11_Urutu_20mm_MID/EE11_Urutu_20mm_MID.fbx" )
+export Modele_EE11_Urutu_20mm_VEN_LOW is TResourceMesh( Mesh="GameData:/Assets/3D/Units/VEN/Vehicule/EE11_Urutu_20mm_LOW/EE11_Urutu_20mm_LOW.fbx" )

@@ -1,0 +1,213 @@
+// GameData:/Fx/Bank/Basics/AoA_BANK_ClusterMunitionAnim.ndf
+// Call Test_ClusterMunitionAnim in FX Tester
+// Anim flame explosion de munition de type cluster
+
+export Test_ClusterMunitionAnim is Competition
+(
+    Mobile = MobileUnCentroid()
+    Actions =
+    [
+        Template_ActionCall
+        (
+            Action = ClusterMunitionAnim
+            NamedParameters = MAP[
+                ( 'parDuration', RandomRange[0.5,1] ),
+                ( 'parSize', 5000 ),
+                ( 'parStartPosition', float3[0,0,3000]),
+                ( 'parDirection', float3[0,0,1] ), // la direction est pas modifiée en fonction de la position du mobile (seulement la vitesse et la position sont modifiée)
+                ( 'parColor', LinearColor[1,0.9,0.9] ),
+                ( 'parLuminosite', 0.5 ),
+            ]
+        ),
+    ]
+)
+
+export ClusterMunitionAnim_Simple is ActionCallWithParameters
+(
+    Action = ClusterMunitionAnim
+    Params =
+    [
+        private parDuration             is Template_Param_Float (),
+        private parSize                 is Template_Param_Float (),
+        private parSpawnRadius          is Template_Param_Float (),
+        private parPositionInit         is Template_Param_Float3 ( DefaultValue = float3[0.0, 0.0, 1.0]),
+        private parImpactPos            is Template_Param_Float3 ( DefaultValue = float3[0.0, 0.0, 0.0]),
+        private parColor                is Template_Param_Float3 (),
+        private parLuminosite           is Template_Param_Float (),
+    ]
+    NamedParameters = MAP
+    [
+        ( 'parDuration'                 , parDuration * RandomRange[0.8, 1.4] ),
+        ( 'parSize'                     , parSize * RandomRange[0.8, 1.2] ),
+        ( 'parStartPosition'            , parSpawnRadius * MinusOneToOneRandomDisc ),
+        ( 'parDirection'                , normalized[parImpactPos - parPositionInit] ),
+        ( 'parColor'                    , LinearColor[parColor] ),
+        ( 'parLuminosite'               , parLuminosite * RandomRange[0.8, 1.2] * 0.1),
+    ]
+)
+
+export ClusterMunitionAnimOnPosition_Simple is ActionCallWithParameters
+(
+    Action = ClusterMunitionAnim
+    Params =
+    [
+        private parDuration             is Template_Param_Float (),
+        private parSize                 is Template_Param_Float (),
+        private parSpawnRadius          is Template_Param_Float (),
+        private parPos                  is Template_Param_Float3 ( DefaultValue = float3[0.0, 0.0, 0.0]),
+        private parDir                  is Template_Param_Float3 ( DefaultValue = float3[0.0, 0.0, 1.0]),
+        private parColor                is Template_Param_Float3 (),
+        private parLuminosite           is Template_Param_Float (),
+    ]
+    NamedParameters = MAP
+    [
+        ( 'parDuration'                 , parDuration * RandomRange[0.8, 1.4] ),
+        ( 'parSize'                     , parSize * RandomRange[0.8, 1.2] ),
+        ( 'parStartPosition'            , parPos + parSpawnRadius * MinusOneToOneRandomDisc ),
+        ( 'parDirection'                , parDir ),
+        ( 'parColor'                    , LinearColor[parColor] ),
+        ( 'parLuminosite'               , parLuminosite * RandomRange[0.8, 1.2] * 0.1),
+    ]
+)
+
+export ClusterMunitionAnim is SimultaneousActionDeclaration
+(
+    Params = [
+        parDuration is Template_Param_Float (  DefaultValue = RandomRange[0.8,1.4] ),
+        parSize     is Template_Param_Float ( DefaultValue = 1300 ),
+        parStartPosition is Template_Param_Float3 ( DefaultValue = MinusOneToOneRandomDisc * 700 ),
+        parDirection    is Template_Param_Float3 ( DefaultValue = 0 ),
+        parColor    is Template_Param_Float3 ( DefaultValue = LinearColor[1,0.9,0.5] ),
+        parLuminosite     is Template_Param_Float ( DefaultValue = 0.5),
+    ]
+    Actions =
+    [
+        ParticleBombSpawner
+        (
+            ParticleMaxDurationForSpawnSkip = parDuration
+            Count = 1
+            Spawner = ParticleSpawner
+            (
+                ParticleLifetime = parDuration
+                Initialisers =
+                [
+                    ParticleInitialiserList
+                    (
+                        Alpha = 1.0
+
+                        Position = parStartPosition
+                        Size = parSize
+                        Opacity = 0
+                        EmissivePower = parLuminosite
+                        ColorModifier = parColor
+                        Rotation = RandomRange[-0.05,0.05] + 0.07
+                        Direction = normalized[parDirection]
+                        CustomFloat3_1 = ParticleDirection
+                    ),
+                ]
+                ParticleDescriptor = ParticleDescriptor
+                (
+                    RenderInfo = ParticleRenderInfo
+                    (
+                        ZTest = True
+                        ZWrite = False
+                        SortTriangles = True
+                        Use3DRotation = True
+                        TextureName = 'GameData:/Assets/2D/Fx/anim_cluster_01.png'
+                        Calque = 'Particles'
+                        EmissiveParticle = true
+                    )
+                    Evolvers = ParticleStandardEvolverList
+                    (
+                        Animation = ParticleLifeRatio
+                        Direction = lerp[abs[dot[ParticleCustomFloat3_1, normalized[ParticlePosition - CameraPosition]]], ParticleCustomFloat3_1, getXY0[ParticleCustomFloat3_1]]
+                    )
+                    ParticleRenderer = $/VFX_Bank/LitParticleRenderer
+                )
+                PositionIndependentFromEmitter = False
+            )
+        ),
+    ]
+)
+
+export DirectedFireAnim_Simple is ActionCallWithParameters
+(
+    Action = DirectedFireAnim
+    Params =
+    [
+        private parDuration             is Template_Param_Float (),
+        private parSize                 is Template_Param_Float (),
+        private parSpawnRadius          is Template_Param_Float (),
+        private parDir                  is Template_Param_Float3 ( DefaultValue = float3[0.0, 0.0, 1.0] ),
+        private parColor                is Template_Param_Float3 (),
+        private parLuminosite           is Template_Param_Float (),
+    ]
+    NamedParameters = MAP
+    [
+        ( 'parDuration'                 , parDuration * RandomRange[0.8, 1.4] ),
+        ( 'parSize'                     , parSize * RandomRange[0.8, 1.2] ),
+        ( 'parStartPosition'            , parSpawnRadius * MinusOneToOneRandomDisc ),
+        ( 'parDirection'                , parDir + abs[dot[ParticlePosition - CameraPosition, float3[0,0,1]]] * float3[0,0,1]),
+        ( 'parColor'                    , LinearColor[parColor] ),
+        ( 'parLuminosite'               , parLuminosite * RandomRange[0.8, 1.2] *0.1),
+    ]
+)
+
+export DirectedFireAnim is SimultaneousActionDeclaration
+(
+    Params = [
+        parDuration is Template_Param_Float (  DefaultValue = RandomRange[0.8,1.4] ),
+        parSize     is Template_Param_Float ( DefaultValue = 1300 ),
+        parStartPosition is Template_Param_Float3 ( DefaultValue = MinusOneToOneRandomDisc * 700 ),
+        parDirection    is Template_Param_Float3 ( DefaultValue = 0 ),
+        parColor    is Template_Param_Float3 ( DefaultValue = LinearColor[1,0.9,0.5] ),
+        parLuminosite     is Template_Param_Float ( DefaultValue = 0.5),
+    ]
+    Actions =
+    [
+        ParticleBombSpawner
+        (
+            ParticleMaxDurationForSpawnSkip = parDuration
+            Count = 1
+            Spawner = ParticleSpawner
+            (
+                ParticleLifetime = parDuration
+                Initialisers =
+                [
+                    ParticleInitialiserList
+                    (
+                        Alpha = 1.0
+
+                        Position = parStartPosition
+                        Size = parSize
+                        Opacity = 0
+                        EmissivePower = parLuminosite
+                        ColorModifier = parColor
+                        Rotation = RandomRange[-0.05,0.05] + 0.07
+                        Direction = normalized[parDirection]
+                        CustomFloat3_1 = ParticleDirection
+                    ),
+                ]
+                ParticleDescriptor = ParticleDescriptor
+                (
+                    RenderInfo = ParticleRenderInfo
+                    (
+                        ZTest = True
+                        ZWrite = False
+                        SortTriangles = True
+                        Use3DRotation = True
+                        TextureName = 'GameData:/Assets/2D/Fx/anim_cluster_01.png'
+                        Calque = 'Particles'
+                        EmissiveParticle = true
+                    )
+                    Evolvers = ParticleStandardEvolverList
+                    (
+                        Animation = 0.3 + ParticleLifeRatio * 0.7
+                    )
+                    ParticleRenderer = $/VFX_Bank/LitParticleRenderer
+                )
+                PositionIndependentFromEmitter = False
+            )
+        ),
+    ]
+)

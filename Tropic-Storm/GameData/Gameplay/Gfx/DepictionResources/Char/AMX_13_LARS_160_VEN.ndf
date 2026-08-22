@@ -1,0 +1,14 @@
+export Modele_AMX_13_LARS_160_VEN is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/VEN/Char/AMX_13_LARS_160/AMX_13_LARS_160.fbx"
+)
+
+export Modele_AMX_13_LARS_160_VEN_MID is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/VEN/Char/AMX_13_LARS_160/AMX_13_LARS_160.fbx"
+)
+
+export Modele_AMX_13_LARS_160_VEN_LOW is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/VEN/Char/AMX_13_LARS_160/AMX_13_LARS_160.fbx"
+)

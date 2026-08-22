@@ -1,0 +1,19 @@
+export Modele_Broussard_MG_1521_FR is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/FR/Avion/Broussard_MH_1521/Broussard_MH_1521.fbx"
+)
+
+export Modele_Broussard_MG_1521_FR_MID is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/FR/Avion/Broussard_MH_1521_MID/Broussard_MH_1521_MID.fbx"
+)
+
+export Modele_Broussard_MG_1521_FR_LOW is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/FR/Avion/Broussard_MH_1521_LOW/Broussard_MH_1521_LOW.fbx"
+)
+
+export Modele_Broussard_MG_1521_FR_train is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/FR/Avion/Broussard_MH_1521/Broussard_MH_1521_train.fbx"
+)

@@ -1,0 +1,12 @@
+export Modele_MD_Jupiter_trans_DK is TResourceMesh
+(
+    Mesh=ModelFile_MD_Jupiter_supply_DK
+)
+export Modele_MD_Jupiter_trans_DK_MID is TResourceMesh
+(
+    Mesh=ModelFile_MD_Jupiter_supply_DK_MID
+)
+export Modele_MD_Jupiter_trans_DK_LOW is TResourceMesh
+(
+    Mesh=ModelFile_MD_Jupiter_supply_DK_LOW
+)

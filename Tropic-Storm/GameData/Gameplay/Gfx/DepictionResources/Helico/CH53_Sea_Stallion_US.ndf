@@ -1,0 +1,14 @@
+export Modele_CH53_Sea_Stallion_US is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/US/Helico/CH53E_Super_Stallion/CH53E_Super_Stallion.fbx"
+)
+
+export Modele_CH53_Sea_Stallion_US_MID is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/US/Helico/CH53E_Super_Stallion_MID/CH53E_Super_Stallion_MID.fbx"
+)
+
+export Modele_CH53_Sea_Stallion_US_LOW is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/US/Helico/CH53E_Super_Stallion_LOW/CH53E_Super_Stallion_LOW.fbx"
+)

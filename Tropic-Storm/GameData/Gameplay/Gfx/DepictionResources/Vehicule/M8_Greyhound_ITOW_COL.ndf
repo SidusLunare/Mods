@@ -1,0 +1,14 @@
+export Modele_M8_Greyhound_ITOW_COL is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/COL/Vehicule/M8_Greyhound_TOW/M8_Greyhound_TOW.fbx"
+)
+
+export Modele_M8_Greyhound_ITOW_COL_MID is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/COL/Vehicule/M8_Greyhound_TOW_MID/M8_Greyhound_TOW_MID.fbx"
+)
+
+export Modele_M8_Greyhound_ITOW_COL_LOW is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/COL/Vehicule/M8_Greyhound_TOW_LOW/M8_Greyhound_TOW_LOW.fbx"
+)

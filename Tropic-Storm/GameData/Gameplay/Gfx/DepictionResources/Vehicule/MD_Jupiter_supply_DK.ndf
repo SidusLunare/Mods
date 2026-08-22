@@ -1,0 +1,15 @@
+export ModelFile_MD_Jupiter_supply_DK is "GameData:/Assets/3D/Units/DK/Vehicule/MD_Jupiter_supply/MD_Jupiter_supply.fbx"
+export Modele_MD_Jupiter_supply_DK is TResourceMesh
+(
+    Mesh=ModelFile_MD_Jupiter_supply_DK
+)
+export ModelFile_MD_Jupiter_supply_DK_MID is "GameData:/Assets/3D/Units/DK/Vehicule/MD_Jupiter_supply_MID/MD_Jupiter_supply_MID.fbx"
+export Modele_MD_Jupiter_supply_DK_MID is TResourceMesh
+(
+    Mesh=ModelFile_MD_Jupiter_supply_DK_MID
+)
+export ModelFile_MD_Jupiter_supply_DK_LOW is "GameData:/Assets/3D/Units/DK/Vehicule/MD_Jupiter_supply_LOW/MD_Jupiter_supply_LOW.fbx"
+export Modele_MD_Jupiter_supply_DK_LOW is TResourceMesh
+(
+    Mesh=ModelFile_MD_Jupiter_supply_DK_LOW
+)

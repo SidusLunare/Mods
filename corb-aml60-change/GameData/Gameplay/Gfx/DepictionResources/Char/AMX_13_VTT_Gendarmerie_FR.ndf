@@ -1,0 +1,5 @@
+export Modele_AMX_13_VTT_Gendarmerie_FR             is TResourceMesh( Mesh="GameData:/Assets/3D/Units/BEL/APC/AMX_13_mod56_VCI/AMX_13_mod56_VCI_no_gun.fbx" Textures="GameData:/Assets/3D/Units/FR/APC/AMX_13_mod56_VCI" )
+export Modele_AMX_13_VTT_Gendarmerie_FR_MID         is TResourceMesh( Mesh="GameData:/Assets/3D/Units/BEL/APC/AMX_13_mod56_VCI_MID/AMX_13_mod56_VCI_no_gun_MID.fbx" Textures="GameData:/Assets/3D/Units/FR/APC/AMX_13_mod56_VCI_MID" )
+export Modele_AMX_13_VTT_Gendarmerie_FR_LOW         is TResourceMesh( Mesh="GameData:/Assets/3D/Units/BEL/APC/AMX_13_mod56_VCI_LOW/AMX_13_mod56_VCI_no_gun_LOW.fbx" Textures="GameData:/Assets/3D/Units/FR/APC/AMX_13_mod56_VCI_LOW" )
+
+export Modele_AMX_13_VTT_Gendarmerie_FR_Tourelle_01 is TResourceMesh( Mesh=ModelFile_AANF1_no_ammo_AMX13 )

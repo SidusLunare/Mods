@@ -1,0 +1,63 @@
+// Ne pas éditer, ce fichier est généré
+
+export fx_cascade_diorama is Simultaneous
+(
+    Actions = ActionList is
+    [
+        TSimultaneousAction
+        (
+            Mobile = nil
+            Actions =
+            [
+                TActionCall
+                (
+                    Action = $/VFX_Bank/AoA_FX_BANK_FireAndDarkSmoke_with_wind_simple
+                    NamedParams = MAP[
+                        ( 'Feu_Size_Mul', 0 ),
+                        ( 'FireCountMul', 0 ),
+                        ( 'FireDuration', 0 ),
+                        ( 'Ground_Size', 65 ),
+                        ( 'SmokeColor', float3[0.8745099,0.8745099,0.8745099] ),
+                        ( 'SmokeCountMul', 8 ),
+                        ( 'SmokeDuration', 5 ),
+                        ( 'SmokeOpacity', 1 ),
+                        ( 'SmokeSpeed', -32 ),
+                        ( 'SmokeWindFactor', 2 ),
+                        ( 'Smoke_Size_Mul', 30 ),
+                        ( 'SparksCountMul', 0 ),
+                        ( 'SparksDuration', 0 ),
+                    ]
+                ),
+            ]
+        ),
+        TSimultaneousAction
+        (
+            Mobile = TMobileWithLocalRepereMatrixFactory
+            (
+                Position = float3[0,-3508,0]
+            )
+            Actions =
+            [
+                TActionCall
+                (
+                    Action = $/VFX_Bank/AoA_FX_BANK_FireAndDarkSmoke_with_wind_simple
+                    NamedParams = MAP[
+                        ( 'Feu_Size_Mul', 0 ),
+                        ( 'FireCountMul', 0 ),
+                        ( 'FireDuration', 0 ),
+                        ( 'Ground_Size', 50 ),
+                        ( 'SmokeColor', float3[0.7019608,0.7019608,0.7019608] ),
+                        ( 'SmokeCountMul', 6 ),
+                        ( 'SmokeDuration', 3 ),
+                        ( 'SmokeOpacity', 0.5 ),
+                        ( 'SmokeSpeed', -16 ),
+                        ( 'SmokeWindFactor', 6 ),
+                        ( 'Smoke_Size_Mul', 30 ),
+                        ( 'SparksCountMul', 0 ),
+                        ( 'SparksDuration', 0 ),
+                    ]
+                ),
+            ]
+        ),
+    ]
+)

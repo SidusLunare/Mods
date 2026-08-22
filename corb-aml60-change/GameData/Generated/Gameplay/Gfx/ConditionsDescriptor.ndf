@@ -1,0 +1,157 @@
+// Ne pas éditer, ce fichier est généré par ConditionFileWriter
+
+ConditionTagRaisedInUnit_IFV_ok is TConditionTagRaisedInUnit
+(
+    DescriptorId = GUID:{5874c8f9-d9a9-42c5-bb55-d88d1937fbcb}
+    Tag = "IFV_ok"
+)
+
+ConditionTagNotRaisedInUnit_IFV_ok is TConditionNot
+(
+    ConditionToInverse = ConditionTagRaisedInUnit_IFV_ok
+    DescriptorId = GUID:{dc33e94e-f4ad-45f5-93fe-7684050b128c}
+)
+
+ConditionTagRaisedInUnit_Instructor_immune is TConditionTagRaisedInUnit
+(
+    DescriptorId = GUID:{9f7e313e-d63d-4697-ad66-a13414412f5a}
+    Tag = "Instructor_immune"
+)
+
+ConditionTagNotRaisedInUnit_Instructor_immune is TConditionNot
+(
+    ConditionToInverse = ConditionTagRaisedInUnit_Instructor_immune
+    DescriptorId = GUID:{94e145bd-e99e-485a-8c22-c4170772e77b}
+)
+
+ConditionTagRaisedInUnit_RadioJammed is TConditionTagRaisedInUnit
+(
+    DescriptorId = GUID:{198c1719-3072-49c8-a06c-ffee56edefa9}
+    Tag = "RadioJammed"
+)
+
+ConditionTagNotRaisedInUnit_RadioJammed is TConditionNot
+(
+    ConditionToInverse = ConditionTagRaisedInUnit_RadioJammed
+    DescriptorId = GUID:{8707e750-7176-4a05-a893-52af1e430125}
+)
+
+ConditionTagRaisedInUnit_RadioJammed_gsr is TConditionTagRaisedInUnit
+(
+    DescriptorId = GUID:{a947b38c-36cd-4f47-8afd-75ff9bb27055}
+    Tag = "RadioJammed_gsr"
+)
+
+ConditionTagNotRaisedInUnit_RadioJammed_gsr is TConditionNot
+(
+    ConditionToInverse = ConditionTagRaisedInUnit_RadioJammed_gsr
+    DescriptorId = GUID:{533a30c9-fcb1-468d-a18e-31a2efbcf789}
+)
+
+ConditionTagRaisedInUnit_Retraite is TConditionTagRaisedInUnit
+(
+    DescriptorId = GUID:{cefbc687-d712-4997-9611-83b6d2c70b9f}
+    Tag = "Retraite"
+)
+
+ConditionTagNotRaisedInUnit_Retraite is TConditionNot
+(
+    ConditionToInverse = ConditionTagRaisedInUnit_Retraite
+    DescriptorId = GUID:{192f436e-70fd-413b-ac5f-af3a17019fb4}
+)
+
+ConditionTagRaisedInUnit_choc_ok is TConditionTagRaisedInUnit
+(
+    DescriptorId = GUID:{c7d1fa82-e3ae-4f9e-953f-eef9a02f6bdc}
+    Tag = "choc_ok"
+)
+
+ConditionTagNotRaisedInUnit_choc_ok is TConditionNot
+(
+    ConditionToInverse = ConditionTagRaisedInUnit_choc_ok
+    DescriptorId = GUID:{0575a67e-b094-44c9-b5ca-2498fbe51df0}
+)
+
+ConditionTagRaisedInUnit_reserviste_immune is TConditionTagRaisedInUnit
+(
+    DescriptorId = GUID:{15f5d1da-6f8a-401e-946b-01627f8e1934}
+    Tag = "reserviste_immune"
+)
+
+ConditionTagNotRaisedInUnit_reserviste_immune is TConditionNot
+(
+    ConditionToInverse = ConditionTagRaisedInUnit_reserviste_immune
+    DescriptorId = GUID:{a8ac3a17-7212-42cd-b0b8-63f00f86e613}
+)
+
+ConditionTagRaisedInUnit_sigint_close is TConditionTagRaisedInUnit
+(
+    DescriptorId = GUID:{b119d076-cf6b-46cf-ad08-40eea6d1111f}
+    Tag = "sigint_close"
+)
+
+ConditionTagNotRaisedInUnit_sigint_close is TConditionNot
+(
+    ConditionToInverse = ConditionTagRaisedInUnit_sigint_close
+    DescriptorId = GUID:{5322bcfd-e2dd-449c-870e-e0b6afb0cd67}
+)
+
+ConditionTagRaisedInUnit_sigint_far is TConditionTagRaisedInUnit
+(
+    DescriptorId = GUID:{ba052f0a-c947-4d4f-8652-ecc0de468a14}
+    Tag = "sigint_far"
+)
+
+ConditionTagNotRaisedInUnit_sigint_far is TConditionNot
+(
+    ConditionToInverse = ConditionTagRaisedInUnit_sigint_far
+    DescriptorId = GUID:{f4653a12-7172-4820-a3c3-74f4c73db0d9}
+)
+
+ConditionTagRaisedInUnit_snipe_ok is TConditionTagRaisedInUnit
+(
+    DescriptorId = GUID:{065c476d-9428-43e1-9380-51b5086cb621}
+    Tag = "snipe_ok"
+)
+
+ConditionTagNotRaisedInUnit_snipe_ok is TConditionNot
+(
+    ConditionToInverse = ConditionTagRaisedInUnit_snipe_ok
+    DescriptorId = GUID:{38566e49-7df6-44ff-a7a7-956e516dde12}
+)
+
+ConditionTagRaisedInUnit_GroundUnit_Engaged is TConditionTagRaisedInUnit
+(
+    DescriptorId = GUID:{1f8d4697-c6c5-460d-b52c-b15b1e293a12}
+    Tag = "GroundUnit_Engaged"
+)
+
+ConditionTagRaisedInUnit_Infanterie_Cowering is TConditionTagRaisedInUnit
+(
+    DescriptorId = GUID:{0d362677-254a-49c1-8e83-d6e0d55aa8e8}
+    Tag = "Infanterie_Cowering"
+)
+
+ConditionTagRaisedInUnit_Trepied_ok is TConditionTagRaisedInUnit
+(
+    DescriptorId = GUID:{e9f62471-5f85-49f2-808c-36d3564481a0}
+    Tag = "Trepied_ok"
+)
+
+ConditionInMovement is TConditionInMovement
+(
+    DescriptorId = GUID:{91ef51ae-d041-4e75-ae33-40e444f90eab}
+)
+
+ConditionNotInMovement is TConditionNot
+(
+    ConditionToInverse = ConditionInMovement
+    DescriptorId = GUID:{959966e6-de27-4d31-b6de-4bd51244d355}
+)
+
+ConditionTimeAfterShot_15000 is TConditionTimeAfterShot
+(
+    DescriptorId = GUID:{d9bd5d8f-487e-4bc1-a986-3c2beeedbbfe}
+    Duration = 15
+)
+

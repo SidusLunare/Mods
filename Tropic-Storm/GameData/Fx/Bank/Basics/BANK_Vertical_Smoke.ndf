@@ -1,0 +1,225 @@
+// GameData:/Fx/Bank/Basics/AoA_BANK_Vertical_Smoke.ndf
+// Call Test_BANK_VerticalSmoke in FX Tester
+// Standard vertical smoke following random wind
+
+
+export Test_BANK_VerticalSmoke is Simultaneous
+(
+    Mobile = MobileUnCentroid()
+    Actions =
+    [
+        Template_ActionCall
+        (
+            Action = ~/BANK_VerticalSmoke
+            NamedParameters = MAP[
+                ( 'parSmokeDensity', 10 ),
+                ( 'parSmokeOpacity', 0.8 ),
+                ( 'parPosition', float3[0.00, 0.00, 0.00] ),
+                ( 'parSmokeLifetime', 3.0 ),
+                ( 'parSmokeSize', 600),
+                ( 'parSmokeSpeed', GenFloat3[0,0,400] ),
+                ( 'parSmokeColor', LinearColor[float3[1,1,1]] * RandomRange[0.5,1]),
+                ( 'parVerticalAcceleration', 400 ),
+                ( 'parFluidFriction', 1.0 ),
+                ( 'parWindFactor', 10.0),
+                ( 'parSizeMultiplier', 1.5),
+            ]
+        ),
+    ]
+    MaxDuration = 3
+)
+
+export BANK_VerticalSmoke_Simple is ActionCallWithParameters
+(
+    Action = BANK_VerticalSmoke
+    Params =
+    [
+        private parDensity              is Template_Param_Float (),
+        private parOpacity              is Template_Param_Float (),
+        private parLifetime             is Template_Param_Float (),
+        private parSize                 is Template_Param_Float (),
+        private parSpeed                is Template_Param_Float (),
+        private parColor                is Template_Param_Float3(),
+        private parVerticalAcceleration is Template_Param_Float (),
+        private parFluidFriction        is Template_Param_Float (),
+        private parWindFactor           is Template_Param_Float (),
+        private parSizeMultiplier       is Template_Param_Float (),
+    ]
+    NamedParameters = MAP
+    [
+        ( 'parSmokeDensity'             , parDensity ),
+        ( 'parSmokeOpacity'             , parOpacity ),
+        ( 'parPosition'                 , float3[0, 0, 0] ),
+        ( 'parSmokeLifetime'            , parLifetime * RandomRange[0.8, 1.2] ),
+        ( 'parSmokeSize'                , parSize * RandomRange[0.8, 1.2] ),
+        ( 'parSmokeSpeed'               , parSpeed * float3[0.0, 0.0, 1.0] ),
+        ( 'parSmokeColor'               , LinearColor[parColor] ),
+        ( 'parVerticalAcceleration'     , parVerticalAcceleration * RandomRange[0.8, 1.2] ),
+        ( 'parFluidFriction'            , parFluidFriction ),
+        ( 'parWindFactor'               , parWindFactor ),
+        ( 'parSizeMultiplier'           , parSizeMultiplier * RandomRange[0.8, 1.2] ),
+    ]
+)
+
+export BANK_VerticalSmoke_Finite_Simple is ActionCallWithParameters
+(
+    Action = BANK_VerticalSmoke_Finite
+    Params =
+    [
+        private parDensity              is Template_Param_Float (),
+        private parOpacity              is Template_Param_Float (),
+        private parDuration             is Template_Param_Float (),
+        private parSmokeLifetime        is Template_Param_Float (),
+        private parSize                 is Template_Param_Float (),
+        private parSpeed                is Template_Param_Float (),
+        private parColor                is Template_Param_Float3(),
+        private parVerticalAcceleration is Template_Param_Float (),
+        private parFluidFriction        is Template_Param_Float (),
+        private parWindFactor           is Template_Param_Float (),
+        private parSizeMultiplier       is Template_Param_Float (),
+    ]
+    NamedParameters = MAP
+    [
+        ( 'parSmokeDensity'             , parDensity ),
+        ( 'parSmokeOpacity'             , parOpacity ),
+        ( 'parPosition'                 , float3[0, 0, 0] ),
+        ( 'parDuration'                 , parDuration ),
+        ( 'parSmokeLifetime'            , parSmokeLifetime * RandomRange[0.8, 1.2] ),
+        ( 'parSmokeSize'                , parSize * RandomRange[0.8, 1.2] ),
+        ( 'parSmokeSpeed'               , parSpeed * float3[0.0, 0.0, 1.0] ),
+        ( 'parSmokeColor'               , LinearColor[parColor] ),
+        ( 'parVerticalAcceleration'     , parVerticalAcceleration * RandomRange[0.8, 1.2] ),
+        ( 'parFluidFriction'            , parFluidFriction ),
+        ( 'parWindFactor'               , parWindFactor ),
+        ( 'parSizeMultiplier'           , parSizeMultiplier * RandomRange[0.8, 1.2] ),
+    ]
+)
+
+export BANK_VerticalSmoke is Template_BANK_VerticalSmoke()
+export BANK_VerticalSmoke_Finite is Template_BANK_VerticalSmoke( Infinite = false )
+template Template_BANK_VerticalSmoke
+[
+    Infinite : boolean = true,
+] is SimultaneousActionDeclaration
+(
+    Params =
+    [
+        private parSmokeDensity         is Template_Param_Float ( DefaultValue = 2 ),
+        private parSmokeOpacity         is Template_Param_Float ( DefaultValue = 0.8 ),
+        private parPosition             is Template_Param_Float3( DefaultValue = float3[0.00, 0.00, 0.00] ),
+        private parSmokeLifetime        is Template_Param_Float ( DefaultValue = 1 ),
+        private parSmokeSize            is Template_Param_Float ( DefaultValue = 50 ),
+        private parSmokeSpeed           is Template_Param_Float3( DefaultValue = 2000 ),
+        private parSmokeColor           is Template_Param_Float3( DefaultValue = LinearColor[1.00, 0.25, 0] ),
+        private parVerticalAcceleration is Template_Param_Float ( DefaultValue = 500 ),
+        private parFluidFriction        is Template_Param_Float ( DefaultValue = 1 ),
+        private parWindFactor           is Template_Param_Float ( DefaultValue = 1 ),
+        private parSizeMultiplier       is Template_Param_Float ( DefaultValue = 2 ),
+    ]
+    + (<Infinite> ? [] : [private parDuration is Template_Param_Float ( DefaultValue = 10 ),])
+    Actions = (<Infinite> ? [Template_WaitForEver(),] : [WaitInSec(Duration = parDuration)]) +
+    [
+
+        ParticleBombSpawner
+        (
+            ParticleMaxDurationForSpawnSkip = parSmokeLifetime * 1.1
+            Count = 1
+            Spawner = ParticleSpawner
+            (
+                ParticleLifetime = 12.8
+                Initialisers =
+                [
+                    Initialiser_SetMobileWrapper(),
+                    ParticleInitialiserList
+                    (
+                        Position = parPosition
+                        CustomFloat_1 = max[parSmokeDensity, 1]
+                        CustomFloat_2 = parSmokeLifetime
+                        CustomFloat_3 = parSmokeSize
+                        CustomFloat_4 = parFluidFriction
+                        CustomFloat_5 = parVerticalAcceleration
+                        CustomFloat_6 = parWindFactor * 0.5 // pour compenser le facteur 2 du random plus bas.
+                        CustomFloat_7 = parSizeMultiplier
+                        CustomFloat_8 = parSmokeOpacity
+                        CustomFloat3_1 = parSmokeColor
+                        CustomFloat3_2 = parSmokeSpeed
+                        CustomFloat3_3 = MapWind
+                        Size = 1000
+                        Alpha = 1
+                    ),
+                    // TParticleInitialiserWithEvaluable
+                    // (
+                    //     InitFunction = ParticleDuration
+                    //     Field = $/Particle/ElapsedTimeSinceLastSpawn
+                    // ),
+                ]
+                ParticleDescriptor = ParticleDescriptor
+                (
+                    InfiniteParticles = true
+                    ParticleRenderer = $/VFX_Bank/NullRenderer
+                    RenderInfo = $/VFX_Bank/NullRenderInfo
+                    Evolvers = ParticleStandardEvolverList
+                    (
+                        // randomized wind
+                        CustomFloat3_3 = MapWind * ParticleCustomFloat_6 * (0.9 + MinusOneToOneLargeFakeNoise_Float3_Interpolate[ParticleLifeRatio])
+                        Position = ParticleMobileWrapperPositionUnScaled
+                        AdditionnalEvolvers =
+                        [
+                            EvolverSpraySpawner
+                            (
+                                Frequency = ParticleCustomFloat_1
+                                MaxSpawnedParticleLifetime = ParticleCustomFloat_2
+                                Spawner = ParticleSpawner
+                                (
+                                    ParticleLifetime = SpawningParticleCustomFloat_2
+                                    Initialisers =
+                                    [
+                                        ParticleInitialiserList
+                                        (
+                                            Position = 0
+                                            Size = SpawningParticleCustomFloat_3
+                                            Speed = SpawningParticleCustomFloat3_2
+                                            // parFluidFriction
+                                            CustomFloat_1 = SpawningParticleCustomFloat_4
+                                            // parGravity
+                                            CustomFloat_2 = SpawningParticleCustomFloat_5
+                                            // parSmokeSize
+                                            CustomFloat_3 = ParticleSize * RandomRange[0.8,1.25]
+                                            // parSizeMultiplier
+                                            CustomFloat_4 = SpawningParticleCustomFloat_7
+                                            // parSmokeOpacity
+                                            CustomFloat_5 = SpawningParticleCustomFloat_8
+                                            ColorModifier = SpawningParticleCustomFloat3_1
+                                            CustomFloat3_1 = SpawningParticleCustomFloat3_3
+                                            Opacity = 0
+                                            EmissivePower = 1
+                                            Rotation = RandomUnit
+                                        ),
+                                    ]
+                                    ParticleDescriptor = ParticleDescriptor
+                                    (
+                                        ParticleRenderer = $/VFX_Bank/LitParticleRenderer
+                                        RenderInfo = DeferredParticleRenderInfo
+                                        (
+                                            TextureName = 'GameData:/Assets/2D/Fx/anim_smoke_01_001.png'
+                                        )
+                                        Evolvers = ParticleStandardEvolverListWithPhysic
+                                        (
+                                            PhysicAccelerationField = GenFloat3[0,0,ParticleCustomFloat_2]
+                                            PhysicWindField = ParticleCustomFloat3_1
+                                            FluidFriction = ParticleCustomFloat_1
+
+                                            Opacity = AttackSustainDecay[ParticleLifeRatio, 0.1, 0.65] * ParticleCustomFloat_5
+                                            Size = ParticleCustomFloat_3 * (0.5 + ParticleCustomFloat_4 * ParticleLifeRatio)
+                                            Animation = ParticleLifeRatio
+                                        )
+                                    )
+                                )
+                            )
+                        ]
+                    )
+                )
+            )
+        )
+    ]
+)

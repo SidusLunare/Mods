@@ -1,0 +1,20 @@
+export ModelFile_Saab_35F_Draken_HE_CLU_DK is "GameData:/Assets/3D/Units/DK/Avion/F35_Draken/F35_Draken_HE_CLU.fbx"
+export Modele_Saab_35F_Draken_HE_CLU_DK is TResourceMesh
+(
+    Mesh=ModelFile_Saab_35F_Draken_HE_CLU_DK
+)
+export ModelFile_Saab_35F_Draken_HE_CLU_DK_MID is "GameData:/Assets/3D/Units/DK/Avion/F35_Draken_MID/F35_Draken_HE_CLU_MID.fbx"
+export Modele_Saab_35F_Draken_HE_CLU_DK_MID is TResourceMesh
+(
+    Mesh=ModelFile_Saab_35F_Draken_HE_CLU_DK_MID
+)
+export ModelFile_Saab_35F_Draken_HE_CLU_DK_LOW is "GameData:/Assets/3D/Units/DK/Avion/F35_Draken_LOW/F35_Draken_HE_CLU_LOW.fbx"
+export Modele_Saab_35F_Draken_HE_CLU_DK_LOW is TResourceMesh
+(
+    Mesh=ModelFile_Saab_35F_Draken_HE_CLU_DK_LOW
+)
+export ModelFile_Saab_35F_Draken_HE_CLU_DK_train is "GameData:/Assets/3D/Units/DK/Avion/F35_Draken/F35_Draken_train.fbx"
+export Modele_Saab_35F_Draken_HE_CLU_DK_train is TResourceMesh
+(
+    Mesh=ModelFile_Saab_35F_Draken_HE_CLU_DK_train
+)

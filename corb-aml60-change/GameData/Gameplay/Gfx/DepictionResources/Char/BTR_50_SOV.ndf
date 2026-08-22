@@ -1,0 +1,17 @@
+export Modele_BTR_50_SOV is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/DDR/APC/BTR_50/BTR_50.fbx"
+    Textures="GameData:/Assets/3D/Units/URSS/APC/BTR_50"
+)
+
+export Modele_BTR_50_SOV_MID is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/DDR/APC/BTR_50/BTR_50.fbx"
+    Textures="GameData:/Assets/3D/Units/URSS/APC/BTR_50"
+)
+
+export Modele_BTR_50_SOV_LOW is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/DDR/APC/BTR_50/BTR_50.fbx"
+    Textures="GameData:/Assets/3D/Units/URSS/APC/BTR_50"
+)

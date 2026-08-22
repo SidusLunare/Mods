@@ -1,0 +1,14 @@
+export Modele_UAZ_469_FAV_CUB is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/CUBA/Vehicule/UAZ_469_FAV/UAZ_469_FAV.fbx"
+)
+
+export Modele_UAZ_469_FAV_CUB_MID is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/CUBA/Vehicule/UAZ_469_FAV_MID/UAZ_469_FAV_MID.fbx"
+)
+
+export Modele_UAZ_469_FAV_CUB_LOW is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/CUBA/Vehicule/UAZ_469_FAV_LOW/UAZ_469_FAV_LOW.fbx"
+)

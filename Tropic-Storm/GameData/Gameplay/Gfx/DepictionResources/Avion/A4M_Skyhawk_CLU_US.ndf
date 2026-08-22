@@ -1,0 +1,19 @@
+export Modele_A4M_Skyhawk_CLU_US is TResourceMesh
+(
+    Mesh=ModelFile_A4M_Skyhawk_US
+)
+
+export Modele_A4M_Skyhawk_CLU_US_MID is TResourceMesh
+(
+    Mesh=ModelFile_A4M_Skyhawk_US_MID
+)
+
+export Modele_A4M_Skyhawk_CLU_US_LOW is TResourceMesh
+(
+    Mesh=ModelFile_A4M_Skyhawk_US_LOW
+)
+
+export Modele_A4M_Skyhawk_CLU_US_train is TResourceMesh
+(
+    Mesh=ModelFile_A4M_Skyhawk_US_train
+)

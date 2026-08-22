@@ -1,0 +1,23 @@
+export Modele_Su_7BKL_RKT_TCH is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/POL/Avion/Su_7BKL_RKT/Su_7BKL_RKT.fbx"
+    Textures="GameData:/Assets/3D/Units/TCH/Avion/Su_7BKL_RKT"
+)
+
+export Modele_Su_7BKL_RKT_TCH_MID is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/POL/Avion/Su_7BKL_RKT_MID/Su_7BKL_RKT_MID.fbx"
+    Textures="GameData:/Assets/3D/Units/TCH/Avion/Su_7BKL_RKT_MID"
+)
+
+export Modele_Su_7BKL_RKT_TCH_LOW is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/POL/Avion/Su_7BKL_RKT_LOW/Su_7BKL_RKT_LOW.fbx"
+    Textures="GameData:/Assets/3D/Units/TCH/Avion/Su_7BKL_RKT_LOW"
+)
+
+export Modele_Su_7BKL_RKT_TCH_train is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/POL/Avion/Su_7BKL_RKT/Su_7BKL_RKT_train.fbx"
+    Textures="GameData:/Assets/3D/Units/TCH/Avion/Su_7BKL_RKT"
+)

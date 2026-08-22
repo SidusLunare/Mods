@@ -1,0 +1,14 @@
+export Modele_LA_1111_supply_BRZ is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/BRZ/Vehicule/LA_1111_supply/LA_1111_supply.fbx"
+)
+
+export Modele_LA_1111_supply_BRZ_MID is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/BRZ/Vehicule/LA_1111_supply/LA_1111_supply.fbx"
+)
+
+export Modele_LA_1111_supply_BRZ_LOW is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/BRZ/Vehicule/LA_1111_supply/LA_1111_supply.fbx"
+)

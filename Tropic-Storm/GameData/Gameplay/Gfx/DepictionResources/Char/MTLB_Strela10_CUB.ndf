@@ -1,0 +1,17 @@
+export Modele_MTLB_Strela10_CUB is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/DDR/DCA/MTLB_Strela10/MTLB_Strela10.fbx"
+    Textures="GameData:/Assets/3D/Units/CUBA/DCA/MTLB_Strela10"
+)
+
+export Modele_MTLB_Strela10_CUB_MID is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/DDR/DCA/MTLB_Strela10_MID/MTLB_Strela10_MID.fbx"
+    Textures="GameData:/Assets/3D/Units/CUBA/DCA/MTLB_Strela10_MID"
+)
+
+export Modele_MTLB_Strela10_CUB_LOW is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/DDR/DCA/MTLB_Strela10_LOW/MTLB_Strela10_LOW.fbx"
+    Textures="GameData:/Assets/3D/Units/CUBA/DCA/MTLB_Strela10_LOW"
+)

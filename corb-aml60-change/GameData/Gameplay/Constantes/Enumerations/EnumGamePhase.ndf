@@ -1,0 +1,8 @@
+// Sync with  Engine\Code\Eugen\CPP\EugIA_Common\EnumGamePhaseType.h
+TGamePhase is TBaseClass
+(
+    NotInitialized is 0
+    Deploiement is 1
+    Command is 2
+    StrategicGame is 3
+)

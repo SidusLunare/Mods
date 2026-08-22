@@ -1,0 +1,23 @@
+export ModelFile_Centurion_Mk5_2_upgraded_CMD_DK is "GameData:/Assets/3D/Units/DK/Char/Centurion_Mk5_2_CMD_upgraded/Centurion_Mk5_2_upgraded.fbx"
+export Modele_Centurion_Mk5_2_upgraded_CMD_DK is TResourceMesh
+(
+    Mesh=ModelFile_Centurion_Mk5_2_upgraded_DK
+    Textures="GameData:/Assets/3D/Units/DK/Char/Centurion_Mk5_2_CMD_upgraded"
+)
+export ModelFile_Centurion_Mk5_2_upgraded_CMD_DK_MID is "GameData:/Assets/3D/Units/DK/Char/Centurion_Mk5_2_CMD_upgraded_MID/Centurion_Mk5_2_upgraded_MID.fbx"
+export Modele_Centurion_Mk5_2_upgraded_CMD_DK_MID is TResourceMesh
+(
+    Mesh=ModelFile_Centurion_Mk5_2_upgraded_DK_MID
+    Textures="GameData:/Assets/3D/Units/DK/Char/Centurion_Mk5_2_CMD_upgraded_MID"
+)
+export ModelFile_Centurion_Mk5_2_upgraded_CMD_DK_LOW is "GameData:/Assets/3D/Units/DK/Char/Centurion_Mk5_2_CMD_upgraded_LOW/Centurion_Mk5_2_upgraded_LOW.fbx"
+export Modele_Centurion_Mk5_2_upgraded_CMD_DK_LOW is TResourceMesh
+(
+    Mesh=ModelFile_Centurion_Mk5_2_upgraded_DK_LOW
+    Textures="GameData:/Assets/3D/Units/DK/Char/Centurion_Mk5_2_CMD_upgraded_LOW"
+)
+
+export Modele_Centurion_Mk5_2_upgraded_CMD_DK_Tourelle_02 is TResourceMesh
+(
+    Mesh=ModelFile_M2HB_12_7mm_no_ammo
+)

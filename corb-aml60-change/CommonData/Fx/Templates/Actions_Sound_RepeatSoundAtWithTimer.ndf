@@ -1,0 +1,35 @@
+// NE JAMAIS MODIFIER CE FICHIER A LA MAIN
+
+template Template_RepeatSoundAtWithTimer
+[
+    SoundId                     : integer[>=0] = 0,
+
+    Delay                       : TEvaluable[>=0, GroupBy = "Timer"] = TConstantFloat(Value = 5.0),
+
+    FadeIn                      : boolean[GroupBy = "FadeIn"] = false,
+    FadeFrom                    : float[GroupBy = "FadeIn"] = 0,
+    FadeVelocity                : float[GroupBy = "FadeIn"] = 0.1,
+
+    SoundSettings       : TSoundSettings[GroupBy = "Settings"] = $/SoundSettings/SoundSettings_Default,
+    SoundFileName               : TFileName[GroupBy = "File", Sound] = '',
+] is TSequentialAction
+(
+    Actions =
+    [
+        Template_PlaySoundAt
+        (
+            SoundId = <SoundId>
+            SoundFileName = <SoundFileName>
+            FadeIn = <FadeIn>
+            FadeFrom = <FadeFrom>
+            FadeVelocity = <FadeVelocity>
+            SoundSettings = <SoundSettings>
+        ),
+        WaitInSec
+        (
+            Duration = <Delay>
+        ),
+    ]
+    Mobile = nil
+    IterationCount = <Looping>
+)

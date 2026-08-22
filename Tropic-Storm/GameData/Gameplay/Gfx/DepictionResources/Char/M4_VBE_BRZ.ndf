@@ -1,0 +1,19 @@
+export Modele_M4_VBE_BRZ is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/BRZ/Char/M4_VBE/M4_VBE.fbx"
+)
+
+export Modele_M4_VBE_BRZ_MID is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/BRZ/Char/M4_VBE/M4_VBE.fbx"
+)
+
+export Modele_M4_VBE_BRZ_LOW is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/BRZ/Char/M4_VBE/M4_VBE.fbx"
+)
+
+export Modele_M4_VBE_BRZ_Tourelle_01 is TResourceMesh
+(
+    Mesh=ModelFile_M2HB_12_7mm_no_ammo
+)

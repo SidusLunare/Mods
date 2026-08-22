@@ -1,0 +1,20 @@
+export ModelFile_A4M_Skyhawk_US  is "GameData:/Assets/3D/Units/US/Avion/A4M_Skyhawk/A4M_Skyhawk_HE.fbx"
+export Modele_A4M_Skyhawk_US is TResourceMesh
+(
+    Mesh=ModelFile_A4M_Skyhawk_US
+)
+export ModelFile_A4M_Skyhawk_US_MID  is "GameData:/Assets/3D/Units/US/Avion/A4M_Skyhawk_MID/A4M_Skyhawk_HE_MID.fbx"
+export Modele_A4M_Skyhawk_US_MID is TResourceMesh
+(
+    Mesh=ModelFile_A4M_Skyhawk_US_MID
+)
+export ModelFile_A4M_Skyhawk_US_LOW  is "GameData:/Assets/3D/Units/US/Avion/A4M_Skyhawk_LOW/A4M_Skyhawk_HE_LOW.fbx"
+export Modele_A4M_Skyhawk_US_LOW is TResourceMesh
+(
+    Mesh=ModelFile_A4M_Skyhawk_US_LOW
+)
+export ModelFile_A4M_Skyhawk_US_train  is "GameData:/Assets/3D/Units/US/Avion/A4M_Skyhawk/A4M_Skyhawk_train.fbx"
+export Modele_A4M_Skyhawk_US_train is TResourceMesh
+(
+    Mesh=ModelFile_A4M_Skyhawk_US_train
+)

@@ -1,0 +1,10 @@
+export ModelFile_M48A5E_ESP is "GameData:/Assets/3D/Units/ESP/Char/M48A5E2/M48A5E2.fbx"
+export Modele_M48A5E_ESP is TResourceMesh (Mesh=ModelFile_M48A5E_ESP)
+export ModelFile_M48A5E_ESP_MID is "GameData:/Assets/3D/Units/ESP/Char/M48A5E2/M48A5E2.fbx"
+export Modele_M48A5E_ESP_MID is TResourceMesh (Mesh=ModelFile_M48A5E_ESP_MID)
+export ModelFile_M48A5E_ESP_LOW is "GameData:/Assets/3D/Units/ESP/Char/M48A5E2/M48A5E2.fbx"
+export Modele_M48A5E_ESP_LOW is TResourceMesh (Mesh=ModelFile_M48A5E_ESP_LOW)
+export Modele_M48A5E_ESP_Tourelle_02 is TResourceMesh
+(
+    Mesh=ModelFile_M2HB_12_7mm_t2
+)

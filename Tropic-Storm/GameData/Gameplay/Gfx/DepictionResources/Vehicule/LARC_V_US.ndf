@@ -1,0 +1,17 @@
+export Modele_LARC_V_US is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/US/Vehicule/LARC_V/LARC_V.fbx"
+)
+
+export Modele_LARC_V_US_MID is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/US/Vehicule/LARC_V_MID/LARC_V_MID.fbx"
+)
+
+export Modele_LARC_V_US_LOW is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/US/Vehicule/LARC_V_LOW/LARC_V_LOW.fbx"
+)
+
+
+

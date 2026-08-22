@@ -1,0 +1,14 @@
+export Modele_AAVP_7A1_USMC_WEGS_US is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/US/APC/LVTP_7A1/LVTP_7A1_WEGS.fbx"
+)
+
+export Modele_AAVP_7A1_USMC_WEGS_US_MID is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/US/APC/LVTP_7A1_MID/LVTP_7A1_WEGS_MID.fbx"
+)
+
+export Modele_AAVP_7A1_USMC_WEGS_US_LOW is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/US/APC/LVTP_7A1_LOW/LVTP_7A1_WEGS_LOW.fbx"
+)

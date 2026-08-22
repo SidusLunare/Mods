@@ -1,0 +1,3 @@
+export Modele_DCA_S125_twin_Neva_SOV is TResourceMesh( Mesh="GameData:/Assets/3D/Units/URSS/DCA/DCA_S125_Neva_twin/DCA_S125_Neva_twin.fbx")
+export Modele_DCA_S125_twin_Neva_SOV_MID is TResourceMesh( Mesh="GameData:/Assets/3D/Units/URSS/DCA/DCA_S125_Neva_twin/DCA_S125_Neva_twin.fbx")
+export Modele_DCA_S125_twin_Neva_SOV_LOW is TResourceMesh( Mesh="GameData:/Assets/3D/Units/URSS/DCA/DCA_S125_Neva_twin/DCA_S125_Neva_twin.fbx")

@@ -1,0 +1,181 @@
+InfantryUnitMatcher is TIsInfantryUnitMatcher()
+InfantryOffensiveUnitMatcher is TAllUnitMatchers( Matchers = [ ~/InfantryUnitMatcher, TTagsMatcher(Tags = ["Offensive"]), ])
+InfantryDefensiveUnitMatcher is TAllUnitMatchers( Matchers = [ ~/InfantryUnitMatcher, TTagsMatcher(Tags = ["Defensive"]), ])
+InfantryRecoUnitMatcher is TAllUnitMatchers( Matchers = [ ~/InfantryUnitMatcher, ~/IsRecoUnitMatcher ])
+InfantryAAUnitMatcher is TAllUnitMatchers(Matchers = [ ~/InfantryUnitMatcher, TIsUnitWithAAWeaponUnitMatcher() ])
+InfantryATUnitMatcher is TAllUnitMatchers(Matchers = [ ~/InfantryUnitMatcher, THasAPWeaponUnitMatcher(AP_Index=14 AP_Missile_Index=14) ])
+
+AttackInfantryWithAppuiTagsMatchersList is
+[
+    TTagsMatcher(Tags = ["Infanterie_Standard"]),
+    ~/InfantryOffensiveUnitMatcher,
+    TTagsMatcher(Tags = ["Vehicule_Appui"])
+]
+
+AttackDefenseInfantryWithAppuiTagsMatchersList is
+[
+    TTagsMatcher(Tags = ["Infanterie_Standard"]),
+    ~/InfantryOffensiveUnitMatcher,
+    ~/InfantryDefensiveUnitMatcher,
+    TTagsMatcher(Tags = ["Vehicule_Appui"])
+]
+
+InfantryStandardOrOffensiveUnitMatchersList is
+[
+    TTagsMatcher(Tags = ["Infanterie_Standard"]),
+    ~/InfantryOffensiveUnitMatcher,
+]
+
+AppuiAndCharStandardTagsMatchersList is
+[
+    TTagsMatcher(Tags = ["Vehicule_Appui"]),
+    TTagsMatcher(Tags = ["Char_Standard"]),
+]
+
+CharOrCharStandardTagsMatchersList is
+[
+    TTagsMatcher(Tags = ["Char"]),
+    TTagsMatcher(Tags = ["Char_Standard"]),
+]
+
+CharStandardTagsMatchersList is
+[
+    TTagsMatcher(Tags = ["Char_Standard"]),
+    TTagsMatcher(Tags = ["Char"]),
+]
+
+CharStandardAndAppuiTagsMatchersList is
+[
+    TTagsMatcher(Tags = ["Char_Standard"]),
+    TTagsMatcher(Tags = ["Char"]),
+    TTagsMatcher(Tags = ["Vehicule_Appui"]),
+]
+
+RecoInfanterieOrVehicleTagsMatchersList is
+[
+    ~/InfantryRecoUnitMatcher,
+    TTagsMatcher(Tags = ["Vehicule_Reco"]),
+]
+
+ChasseurDeCharTagsMatchersList is
+[
+    TTagsMatcher(Tags = ["ChasseurDeChar_Standard"]),
+    TTagsMatcher(Tags = ["ChasseurDeChar"]),
+    ~/InfantryATUnitMatcher,
+]
+
+InfanterieChasseurDeCharTagsMatchersList is
+[
+    ~/InfantryATUnitMatcher,
+    TTagsMatcher(Tags = ["ChasseurDeChar_Standard"]),
+    TTagsMatcher(Tags = ["ChasseurDeChar"]),
+]
+
+CanonAAOrInfantryAATagsMatchersList is
+[
+    TTagsMatcher(Tags = ["Canon_AA_Porte"]),
+    ~/InfantryAAUnitMatcher,
+]
+
+IsCommanderUnitMatcher is TIsCommanderUnitMatcher()
+
+RecoTagsMatchersList is
+[
+    ~/IsRecoUnitMatcher
+]
+
+CommandantCharTagsMatchersList is
+[
+    TAllUnitMatchers(Matchers = [
+        ~/IsCommanderUnitMatcher,
+        TTagsMatcher(Tags = ["Char"])
+    ]),
+    ~/IsCommanderUnitMatcher,
+]
+
+CharLourdTagsMatchersList is
+[
+    TTagsMatcher(Tags = ["Char_Lourd"]),
+    TTagsMatcher(Tags = ["Char"]),
+]
+
+AllUnitsTagsMatchers is TTagsMatcher(Tags = ["AllUnits"])
+
+ArtilleryUnitMatcher is TIsArtilleryUnitMatcher()
+
+LongRangeArtilleryUnitMatcher is TAllUnitMatchers
+(
+    Matchers =
+    [
+        ~/ArtilleryUnitMatcher,
+        THasRangeWeaponUnitMatcher(Operator=ComparisonOperator_MoreOrEqual Range = 8000)
+    ]
+)
+
+ShortRangeArtilleryUnitMatcher is TAllUnitMatchers
+(
+    Matchers =
+    [
+        ~/ArtilleryUnitMatcher,
+        THasRangeWeaponUnitMatcher(Operator=ComparisonOperator_LessOrEqual Range = 8000)
+    ]
+)
+
+AirplaneUnitMatcher is TIsAirplaneUnitMatcher()
+AirplaneBomberUnitMatcher is TAllUnitMatchers(Matchers = [~/AirplaneUnitMatcher, TIsUnitWithBombUnitMatcher()])
+AirplaneChasseurUnitMatcher is TAllUnitMatchers(Matchers = [~/AirplaneUnitMatcher, TIsUnitWithAAWeaponUnitMatcher()])
+AirplaneChasseurBomberUnitMatcher is TAllUnitMatchers(Matchers = [~/AirplaneUnitMatcher, TIsUnitWithAAWeaponUnitMatcher(), TIsUnitWithBombUnitMatcher()])
+AirplaneRecoUnitMatcher is TAllUnitMatchers(Matchers = [~/AirplaneUnitMatcher, ~/IsRecoUnitMatcher])
+AirplaneATUnitMatcher is TAllUnitMatchers(Matchers = [~/AirplaneUnitMatcher, THasAPWeaponUnitMatcher(AP_Index=26 AP_Missile_Index=26)])
+AirplaneNapalmUnitMatcher is TAllUnitMatchers(Matchers = [~/AirplaneUnitMatcher, THasWeaponWithFireSpreadingUnitMatcher()])
+AirplaneAssaultUnitMatcher is TAllUnitMatchers(Matchers = [~/AirplaneUnitMatcher, THasAPWeaponUnitMatcher(AP_Index=1 AP_Missile_Index=1), TIsUnitWithAAWeaponUnitMatcher(), THasWeaponWithDamageUnitMatcher(Operator=ComparisonOperator_MoreOrEqual DamageFamilyType=DamageFamily_he Index=1)]) //Avion Assault on a de l'AP, HE, AA mais pas forcément fort
+
+SupplyOnGroundUnitMatcher is TAllUnitMatchers
+(
+    Matchers =
+    [
+        TIsSupplyUnitMatcher(),
+        TIsGroundUnitMatcher()
+    ]
+)
+
+BuildingSupplyUnitMatcher is TAllUnitMatchers
+(
+    Matchers =
+    [
+        TIsSupplyUnitMatcher(),
+        TIsBuildingUnitMatcher()
+    ]
+)
+
+HeavyTankUnitMatcher is TAllUnitMatchers(Matchers =[THasFrontBlindageFamilyAndIndexUnitMatcher(Operator=ComparisonOperator_MoreOrEqual ResistanceFamilyType=ResistanceFamily_blindage Index=20), THasAPWeaponUnitMatcher(AP_Index=16 AP_Missile_Index=16)])
+LightTankUnitMatcher is TAllUnitMatchers(Matchers =[THasFrontBlindageFamilyAndIndexUnitMatcher(Operator=ComparisonOperator_LessOrEqual ResistanceFamilyType=ResistanceFamily_blindage Index=12),
+    THasAPWeaponUnitMatcher(AP_Index=16 AP_Missile_Index=16)])
+
+IsRecoUnitMatcher is TAllUnitMatchers(
+    Matchers = [
+        TIsMovableUnitMatcher(),
+        TOpticalStrengthUnitMatcher(OpticalStrengthType=EOpticalStrength/Standard Operator=ComparisonOperator_MoreOrEqual OpticalValue=3628)
+    ]
+)
+
+private template THasAPWeaponUnitMatcher
+[
+    AP_Index:int,
+    AP_Missile_Index:int,
+]
+is TAnyUnitMatchers(Matchers =
+[
+    THasWeaponWithDamageUnitMatcher
+    (
+        Operator=ComparisonOperator_MoreOrEqual
+        DamageFamilyType=DamageFamily_ap
+        Index=<AP_Index>
+    ),
+    THasWeaponWithDamageUnitMatcher
+    (
+        Operator=ComparisonOperator_MoreOrEqual
+        DamageFamilyType=DamageFamily_ap_missile
+        Index=<AP_Missile_Index>
+    )
+])

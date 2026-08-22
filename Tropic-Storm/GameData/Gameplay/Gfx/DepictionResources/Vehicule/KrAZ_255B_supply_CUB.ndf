@@ -1,0 +1,17 @@
+export Modele_KrAZ_255B_supply_CUB is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/URSS/Vehicule/KrAZ_255B/KrAZ_255B.fbx"
+    Textures="GameData:/Assets/3D/Units/CUBA/Vehicule/KrAZ_255B"
+)
+
+export Modele_KrAZ_255B_supply_CUB_MID is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/URSS/Vehicule/KrAZ_255B/KrAZ_255B.fbx"
+    Textures="GameData:/Assets/3D/Units/CUBA/Vehicule/KrAZ_255B"
+)
+
+export Modele_KrAZ_255B_supply_CUB_LOW is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/URSS/Vehicule/KrAZ_255B/KrAZ_255B.fbx"
+    Textures="GameData:/Assets/3D/Units/CUBA/Vehicule/KrAZ_255B"
+)

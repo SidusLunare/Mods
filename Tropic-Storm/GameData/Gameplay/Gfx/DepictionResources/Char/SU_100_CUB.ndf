@@ -1,0 +1,14 @@
+export Modele_SU_100_CUB is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/ALB/Char/SU_100/SU_100.fbx"
+)
+
+export Modele_SU_100_CUB_MID is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/ALB/Char/SU_100_MID/SU_100_MID.fbx"
+)
+
+export Modele_SU_100_CUB_LOW is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/ALB/Char/SU_100_LOW/SU_100_LOW.fbx"
+)

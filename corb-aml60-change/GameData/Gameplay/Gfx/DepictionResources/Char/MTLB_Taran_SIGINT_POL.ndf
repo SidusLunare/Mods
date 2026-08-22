@@ -1,0 +1,17 @@
+export Modele_MTLB_Taran_SIGINT_POL is TResourceMesh
+(
+    Mesh=ModelFile_MTLB_Taran_SIGINT_SOV
+    Textures="GameData:/Assets/3D/Units/POL/APC/MTLB_Taran_SIGINT"
+)
+
+export Modele_MTLB_Taran_SIGINT_POL_MID is TResourceMesh
+(
+    Mesh=ModelFile_MTLB_Taran_SIGINT_SOV_MID
+    Textures="GameData:/Assets/3D/Units/POL/APC/MTLB_Taran_SIGINT_MID"
+)
+
+export Modele_MTLB_Taran_SIGINT_POL_LOW is TResourceMesh
+(
+    Mesh=ModelFile_MTLB_Taran_SIGINT_SOV_LOW
+    Textures="GameData:/Assets/3D/Units/POL/APC/MTLB_Taran_SIGINT_LOW"
+)

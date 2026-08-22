@@ -1,0 +1,14 @@
+export Modele_AAVP_7_USMC_US is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/US/APC/LVTP_7/LVTP_7.fbx"
+)
+
+export Modele_AAVP_7_USMC_US_MID is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/US/APC/LVTP_7_MID/LVTP_7_MID.fbx"
+)
+
+export Modele_AAVP_7_USMC_US_LOW is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/US/APC/LVTP_7_LOW/LVTP_7_LOW.fbx"
+)

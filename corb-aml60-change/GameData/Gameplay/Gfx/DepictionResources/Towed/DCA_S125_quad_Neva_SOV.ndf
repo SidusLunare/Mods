@@ -1,0 +1,6 @@
+export ModelFile_DCA_S125_quad_Neva_SOV is "GameData:/Assets/3D/Units/URSS/DCA/DCA_S125_Neva_quad/DCA_S125_Neva_quad.fbx"
+export ModelFile_DCA_S125_quad_Neva_SOV_MID is "GameData:/Assets/3D/Units/URSS/DCA/DCA_S125_Neva_quad/DCA_S125_Neva_quad.fbx"
+export ModelFile_DCA_S125_quad_Neva_SOV_LOW is "GameData:/Assets/3D/Units/URSS/DCA/DCA_S125_Neva_quad/DCA_S125_Neva_quad.fbx"
+export Modele_DCA_S125_quad_Neva_SOV is TResourceMesh( Mesh=ModelFile_DCA_S125_quad_Neva_SOV)
+export Modele_DCA_S125_quad_Neva_SOV_MID is TResourceMesh( Mesh=ModelFile_DCA_S125_quad_Neva_SOV_MID)
+export Modele_DCA_S125_quad_Neva_SOV_LOW is TResourceMesh( Mesh=ModelFile_DCA_S125_quad_Neva_SOV_LOW)

@@ -1,0 +1,14 @@
+export Modele_BTR_55_SOV is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/URSS/APC/BTR_55/BTR_55.fbx"
+)
+
+export Modele_BTR_55_SOV_MID is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/URSS/APC/BTR_55_MID/BTR_55_MID.fbx"
+)
+
+export Modele_BTR_55_SOV_LOW is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/URSS/APC/BTR_55_LOW/BTR_55_LOW.fbx"
+)

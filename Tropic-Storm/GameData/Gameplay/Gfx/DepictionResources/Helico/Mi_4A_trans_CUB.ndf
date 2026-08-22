@@ -1,0 +1,22 @@
+export Modele_Mi_4A_trans_CUB is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/TCH/Helico/Mi_4A_trans/Mi_4A_trans.fbx"
+    Textures="GameData:/Assets/3D/Units/CUBA/Helico/Mi_4A_trans"
+)
+
+export Modele_Mi_4A_trans_CUB_MID is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/TCH/Helico/Mi_4A_trans_MID/Mi_4A_trans_MID.fbx"
+    Textures="GameData:/Assets/3D/Units/CUBA/Helico/Mi_4A_trans_MID"
+)
+
+export Modele_Mi_4A_trans_CUB_LOW is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/TCH/Helico/Mi_4A_trans_LOW/Mi_4A_trans_LOW.fbx"
+    Textures="GameData:/Assets/3D/Units/CUBA/Helico/Mi_4A_trans_LOW"
+)
+
+// export Modele_Mi_4A_trans_TCH_Tourelle_01 is TResourceMesh
+// (
+//     Mesh=ModelFile_A_127mm_cosmetic
+// )

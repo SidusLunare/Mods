@@ -1,0 +1,23 @@
+export Modele_Mirage_III_E_RKT_ESP is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/FR/Avion/Mirage_III_E/Mirage_III_E.fbx"
+    Textures="GameData:/Assets/3D/Units/ESP/Avion/Mirage_III_E"
+)
+
+export Modele_Mirage_III_E_RKT_ESP_MID is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/FR/Avion/Mirage_III_E_MID/Mirage_III_E_MID.fbx"
+    Textures="GameData:/Assets/3D/Units/ESP/Avion/Mirage_III_E_MID"
+)
+
+export Modele_Mirage_III_E_RKT_ESP_LOW is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/FR/Avion/Mirage_III_E_LOW/Mirage_III_E_LOW.fbx"
+    Textures="GameData:/Assets/3D/Units/ESP/Avion/Mirage_III_E_LOW"
+)
+
+export Modele_Mirage_III_E_RKT_ESP_train is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/FR/Avion/Mirage_III_E/Mirage_III_E_train.fbx"
+    Textures="GameData:/Assets/3D/Units/ESP/Avion/Mirage_III_E"
+)

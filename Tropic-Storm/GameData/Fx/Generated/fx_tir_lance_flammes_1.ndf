@@ -1,0 +1,240 @@
+// Ne pas éditer, ce fichier est généré
+
+export fx_tir_lance_flammes_1 is SimultaneousActionDeclaration
+(
+    Params =
+    [
+        private parBombTrajectory is TActionAlias( ExpectedType = 'bool' DefaultValue = false ),
+        private parDestination is TActionAlias( ExpectedType = 'float3' DefaultValue = float3[12214,0,0] ),
+        private parFlyDuration is TActionAlias( ExpectedType = 'float' DefaultValue = 1 ),
+        private parImpactOnGround is TActionAlias( ExpectedType = 'bool' DefaultValue = false ),
+        private parInitialShotDelay is TActionAlias( ExpectedType = 'float' DefaultValue = 0 ),
+        private parInitialSpeed is TActionAlias( ExpectedType = 'float3' DefaultValue = float3[4000,0,0] ),
+        private parPower is TActionAlias( ExpectedType = 'float' DefaultValue = 0.2 ),
+        private parShotCount is TActionAlias( ExpectedType = 'int' DefaultValue = 3 ),
+        private parShotOnGround is TActionAlias( ExpectedType = 'bool' DefaultValue = false ),
+        private parTirPhysic is TActionAlias( ExpectedType = 'bool' DefaultValue = true ),
+        private parTirTendu is TActionAlias( ExpectedType = 'bool' DefaultValue = false ),
+        private parWaitBetweenShot is TActionAlias( ExpectedType = 'float' DefaultValue = 0.5 ),
+    ]
+    Actions =
+    [
+        TActionDescriptorFireAndForget
+        (
+            EffetToLaunch = Action is TSimultaneousAction
+            (
+                Actions = ActionList
+            )
+            ActionList is
+            [
+                TActionCall
+                (
+                    Action = $/VFX_Bank/ProjectileMover
+                    NamedParams = MAP[
+                        ( 'AbsoluteEndPosition', parDestination ),
+                        ( 'BombTrajectory', parBombTrajectory ),
+                        ( 'DurationInSec', parFlyDuration ),
+                        ( 'InitialSpeed', parInitialSpeed ),
+                        ( 'UsePhysicSolver', parTirPhysic ),
+                        ( 'UseTirTendu', parTirTendu ),
+                    ]
+                ),
+                TWaitInSec( Duration = parFlyDuration ),
+                TSimultaneousAction
+                (
+                    Mobile = nil
+                    Actions =
+                    [
+                        TActionCall
+                        (
+                            Action = $/VFX_Bank/BANK_Light_Fade_Simple
+                            NamedParams = MAP[
+                                ( 'parColor', float3[0.9058824,0.4117647,0.04313726] ),
+                                ( 'parDuration', parFlyDuration ),
+                                ( 'parDurationRatio', 1 ),
+                                ( 'parHeight', 0 ),
+                                ( 'parOpacity', 0.5 ),
+                                ( 'parSizeLBU', 116.2791 ),
+                            ]
+                        ),
+                        TActionCall
+                        (
+                            Action = $/VFX_Bank/Smoke_Trail_Simple
+                            NamedParams = MAP[
+                                ( 'parColor1', float3[0.1058824,0.1058824,0.1058824] ),
+                                ( 'parColor2', float3[0.254902,0.2509804,0.2509804] ),
+                                ( 'parColor3', float3[0.1372549,0.1372549,0.1372549] ),
+                                ( 'parColorKey1', 0.6 ),
+                                ( 'parColorKey2', 0.65 ),
+                                ( 'parDispersion', 50 ),
+                                ( 'parDistance', 200 ),
+                                ( 'parLifeDuration', 4 ),
+                                ( 'parOpacity', 0.1 ),
+                                ( 'parSize1', 0 ),
+                                ( 'parSize2', 4000 ),
+                                ( 'parStopSpawnerRatio', 1 ),
+                            ]
+                        ),
+                        TActionCall
+                        (
+                            Action = $/VFX_Bank/Smoke_Trail_Simple
+                            NamedParams = MAP[
+                                ( 'parColor1', float3[0.1686275,0.1686275,0.1686275] ),
+                                ( 'parColor2', float3[0.1764706,0.1764706,0.1764706] ),
+                                ( 'parColor3', float3[0.2392157,0.2352941,0.2352941] ),
+                                ( 'parColorKey1', 0.6 ),
+                                ( 'parColorKey2', 0.65 ),
+                                ( 'parDispersion', 50 ),
+                                ( 'parDistance', 200 ),
+                                ( 'parLifeDuration', 1 ),
+                                ( 'parOpacity', 0.04 ),
+                                ( 'parSize1', 400 ),
+                                ( 'parSize2', 200 ),
+                                ( 'parStopSpawnerRatio', 1 ),
+                            ]
+                        ),
+                        TActionCall
+                        (
+                            Action = $/VFX_Bank/Smoke_Trail_Simple
+                            NamedParams = MAP[
+                                ( 'parColor1', float3[0.2901961,0.2862745,0.2862745] ),
+                                ( 'parColor2', float3[0.3607843,0.3607843,0.3607843] ),
+                                ( 'parColor3', float3[0.5529412,0.5529412,0.5529412] ),
+                                ( 'parColorKey1', 1 ),
+                                ( 'parColorKey2', 1 ),
+                                ( 'parDispersion', 100 ),
+                                ( 'parDistance', 200 ),
+                                ( 'parLifeDuration', 4 ),
+                                ( 'parOpacity', 0.1 ),
+                                ( 'parSize1', 500 ),
+                                ( 'parSize2', 2000 ),
+                                ( 'parStopSpawnerRatio', 1 ),
+                            ]
+                        ),
+                        TActionCall
+                        (
+                            Action = $/VFX_Bank/Trail_Ashes
+                            NamedParams = MAP[
+                                ( 'parColor', float3[1,0.0509804,0] ),
+                                ( 'parDuration', 3 ),
+                                ( 'parEndSize', 40 ),
+                                ( 'parLuminosity', 1 ),
+                                ( 'parParticleDensity', 40 ),
+                                ( 'parSize', 10 ),
+                            ]
+                        ),
+                        TActionCall
+                        (
+                            Action = $/VFX_Bank/Trail_Lance_Flammes
+                            NamedParams = MAP[
+                                ( 'parDuration', 1 ),
+                                ( 'parLuminosity', 5 ),
+                                ( 'parParticleDensity', 40 ),
+                                ( 'parTextureScale', 1 ),
+                                ( 'parWidth', 50 ),
+                                ( 'parWidthGrowthFactor', 15 ),
+                            ]
+                        ),
+                        TActionCall
+                        (
+                            Action = $/VFX_Bank/Trail_Feu
+                            NamedParams = MAP[
+                                ( 'DurationInSec', parFlyDuration ),
+                                ( 'parDuration', 2 ),
+                                ( 'parEndSize', 80 ),
+                                ( 'parLuminosity', 1 ),
+                                ( 'parParticleDensity', 5 ),
+                                ( 'parSize', 0 ),
+                                ( 'parSizeGrowthFactor', 20 ),
+                            ]
+                        ),
+                        TActionCall
+                        (
+                            Action = $/VFX_Bank/Trail_Feu
+                            NamedParams = MAP[
+                                ( 'DurationInSec', parFlyDuration ),
+                                ( 'parDuration', 2 ),
+                                ( 'parEndSize', 30 ),
+                                ( 'parLuminosity', 1 ),
+                                ( 'parParticleDensity', 5 ),
+                                ( 'parSize', 0 ),
+                                ( 'parSizeGrowthFactor', 40 ),
+                            ]
+                        ),
+                        TActionCall
+                        (
+                            Action = $/VFX_Bank/Trail_Feu
+                            NamedParams = MAP[
+                                ( 'DurationInSec', parFlyDuration ),
+                                ( 'parDuration', 2 ),
+                                ( 'parEndSize', 20 ),
+                                ( 'parLuminosity', 1 ),
+                                ( 'parParticleDensity', 10 ),
+                                ( 'parSize', 10 ),
+                                ( 'parSizeGrowthFactor', 40 ),
+                            ]
+                        ),
+                        TActionCall
+                        (
+                            Action = $/VFX_Bank/Trail_Feu
+                            NamedParams = MAP[
+                                ( 'DurationInSec', parFlyDuration ),
+                                ( 'parDuration', 2 ),
+                                ( 'parEndSize', 20 ),
+                                ( 'parLuminosity', 1 ),
+                                ( 'parParticleDensity', 10 ),
+                                ( 'parSize', 20 ),
+                                ( 'parSizeGrowthFactor', 40 ),
+                            ]
+                        ),
+                        TActionCall
+                        (
+                            Action = $/VFX_Bank/Trail_Feu
+                            NamedParams = MAP[
+                                ( 'DurationInSec', parFlyDuration ),
+                                ( 'parDuration', 1 ),
+                                ( 'parEndSize', 60 ),
+                                ( 'parLuminosity', 1 ),
+                                ( 'parParticleDensity', 20 ),
+                                ( 'parSize', 10 ),
+                                ( 'parSizeGrowthFactor', 40 ),
+                            ]
+                        ),
+                        TActionCall
+                        (
+                            Action = $/VFX_Bank/Trail_Feu
+                            NamedParams = MAP[
+                                ( 'DurationInSec', parFlyDuration ),
+                                ( 'parDuration', 1.5 ),
+                                ( 'parEndSize', 0 ),
+                                ( 'parLuminosity', 1 ),
+                                ( 'parParticleDensity', 5 ),
+                                ( 'parSize', 25 ),
+                                ( 'parSizeGrowthFactor', 40 ),
+                            ]
+                        ),
+                        TActionCall
+                        (
+                            Action = $/VFX_Bank/Dummy_Traine
+                            NamedParams = MAP[
+                                ( 'parDummyBombTrajectory', parBombTrajectory ),
+                                ( 'parDummyDestination', parDestination ),
+                                ( 'parDummyFlyDuration', parFlyDuration ),
+                                ( 'parDummyImpactOnGround', parImpactOnGround ),
+                                ( 'parDummyInitialSpeed', parInitialSpeed ),
+                                ( 'parDummyPower', parPower ),
+                                ( 'parDummyShotCount', parShotCount ),
+                                ( 'parDummyShotOnGround', parShotOnGround ),
+                                ( 'parDummyTirPhysic', parTirPhysic ),
+                                ( 'parDummyTirTendu', parTirTendu ),
+                                ( 'parDummyTraineInitialShotDelay', parInitialShotDelay ),
+                                ( 'parDummyWaitBetweenShot', parWaitBetweenShot ),
+                            ]
+                        ),
+                        TWaitInSec( Duration = 1 + parFlyDuration),
+                    ]
+                ),
+            ]
+        )
+    ]
+)

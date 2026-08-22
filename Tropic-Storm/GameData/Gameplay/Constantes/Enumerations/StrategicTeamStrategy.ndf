@@ -1,0 +1,7 @@
+// Sync with EnumStrategicTeamStrategy.h
+EStrategicTeamStrategy is TBaseClass
+(
+    NotInitialized is 0
+    TeamStrategyAttacker is 1
+    TeamStrategyDefender is 2
+)

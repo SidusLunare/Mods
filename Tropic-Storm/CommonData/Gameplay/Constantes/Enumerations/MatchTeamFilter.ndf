@@ -1,0 +1,8 @@
+//A maintenir synchro avec les valeur correspondantes dans GDUnitConstraint.h
+EMatchTeamFilter is TBaseClass
+(
+    SameTeam is 0
+    AlliedTeam is 1
+    HostileTeam is 2
+    Count is 3
+)

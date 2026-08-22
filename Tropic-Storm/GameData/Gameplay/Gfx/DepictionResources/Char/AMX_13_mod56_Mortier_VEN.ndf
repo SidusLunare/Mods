@@ -1,0 +1,18 @@
+export Modele_AMX_13_mod56_Mortier_VEN is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/BEL/APC/AMX_13_mod56_Mortier/AMX_13_mod56_Mortier.fbx"
+    Textures='GameData:/Assets/3D/Units/VEN/APC/AMX_13_mod56_Mortier'
+)
+
+export Modele_AMX_13_mod56_Mortier_VEN_MID is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/BEL/APC/AMX_13_mod56_Mortier_MID/AMX_13_mod56_Mortier_MID.fbx"
+    Textures='GameData:/Assets/3D/Units/VEN/APC/AMX_13_mod56_Mortier_MID'
+)
+
+export Modele_AMX_13_mod56_Mortier_VEN_LOW is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/BEL/APC/AMX_13_mod56_Mortier_LOW/AMX_13_mod56_Mortier_LOW.fbx"
+    Textures='GameData:/Assets/3D/Units/VEN/APC/AMX_13_mod56_Mortier_LOW'
+)
+

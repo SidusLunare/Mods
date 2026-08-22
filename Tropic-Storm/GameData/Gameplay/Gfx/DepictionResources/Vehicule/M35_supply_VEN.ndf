@@ -1,0 +1,17 @@
+export Modele_M35_supply_VEN is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/US/Vehicule/M35_Supply/M35_Supply.fbx"
+    Textures="GameData:/Assets/3D/Units/VEN/Vehicule/M35_Supply"
+)
+
+export Modele_M35_supply_VEN_MID is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/US/Vehicule/M35_Supply_MID/M35_Supply_MID.fbx"
+    Textures="GameData:/Assets/3D/Units/VEN/Vehicule/M35_Supply_MID"
+)
+
+export Modele_M35_supply_VEN_LOW is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/US/Vehicule/M35_Supply_LOW/M35_Supply_LOW.fbx"
+    Textures="GameData:/Assets/3D/Units/VEN/Vehicule/M35_Supply_LOW"
+)

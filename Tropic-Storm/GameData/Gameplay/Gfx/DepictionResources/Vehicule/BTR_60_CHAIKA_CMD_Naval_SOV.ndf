@@ -1,0 +1,17 @@
+export Modele_BTR_60_CHAIKA_CMD_Naval_SOV is TResourceMesh
+(
+    Mesh=ModelFile_BTR_60_CHAIKA_CMD_SOV
+    Textures="GameData:/Assets/3D/Units/URSS/CMD/BTR_60_CHAIKA_Naval_CMD"
+)
+
+export Modele_BTR_60_CHAIKA_CMD_Naval_SOV_MID is TResourceMesh
+(
+    Mesh=ModelFile_BTR_60_CHAIKA_CMD_SOV_MID
+    Textures="GameData:/Assets/3D/Units/URSS/CMD/BTR_60_CHAIKA_Naval_CMD_MID"
+)
+
+export Modele_BTR_60_CHAIKA_CMD_Naval_SOV_LOW is TResourceMesh
+(
+    Mesh=ModelFile_BTR_60_CHAIKA_CMD_SOV_LOW
+    Textures="GameData:/Assets/3D/Units/URSS/CMD/BTR_60_CHAIKA_Naval_CMD_LOW"
+)

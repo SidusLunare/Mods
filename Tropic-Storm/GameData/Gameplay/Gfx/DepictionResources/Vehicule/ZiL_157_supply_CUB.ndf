@@ -1,0 +1,17 @@
+export Modele_ZiL_157_supply_CUB is TResourceMesh
+(
+    Mesh=ModelFile_ZIL_157_trans_SOV
+    Textures="GameData:/Assets/3D/Units/CUBA/Vehicule/ZIL_157_supply"
+)
+
+export Modele_ZiL_157_supply_CUB_MID is TResourceMesh
+(
+    Mesh=ModelFile_ZIL_157_trans_SOV_MID
+    Textures="GameData:/Assets/3D/Units/CUBA/Vehicule/ZIL_157_supply"
+)
+
+export Modele_ZiL_157_supply_CUB_LOW is TResourceMesh
+(
+    Mesh=ModelFile_ZIL_157_trans_SOV_LOW
+    Textures="GameData:/Assets/3D/Units/CUBA/Vehicule/ZIL_157_supply"
+)

@@ -1,0 +1,19 @@
+export Modele_M1025_Humvee_AGL_USMC_US     is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/US/Vehicule/M1025_Humvee_AGL/M1025_Humvee_AGL.fbx"
+    Textures="GameData:/Assets/3D/Units/US/Vehicule/M1025_Humvee_AGL_USMC"
+)
+
+export Modele_M1025_Humvee_AGL_USMC_US_MID is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/US/Vehicule/M1025_Humvee_AGL_MID/M1025_Humvee_AGL_MID.fbx"
+    Textures="GameData:/Assets/3D/Units/US/Vehicule/M1025_Humvee_AGL_USMC_MID"
+)
+
+export Modele_M1025_Humvee_AGL_USMC_US_LOW is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/US/Vehicule/M1025_Humvee_AGL_LOW/M1025_Humvee_AGL_LOW.fbx"
+    Textures="GameData:/Assets/3D/Units/US/Vehicule/M1025_Humvee_AGL_USMC_LOW"
+)
+
+

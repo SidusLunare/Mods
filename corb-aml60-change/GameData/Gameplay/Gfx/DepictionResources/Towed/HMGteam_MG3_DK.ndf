@@ -1,0 +1,3 @@
+export Modele_HMGteam_MG3_DK is TResourceMesh( Mesh=ModelFile_HMGteam_MG3_RFA)
+export Modele_HMGteam_MG3_DK_MID is TResourceMesh( Mesh=ModelFile_HMGteam_MG3_RFA_MID)
+export Modele_HMGteam_MG3_DK_LOW is TResourceMesh( Mesh=ModelFile_HMGteam_MG3_RFA_LOW)

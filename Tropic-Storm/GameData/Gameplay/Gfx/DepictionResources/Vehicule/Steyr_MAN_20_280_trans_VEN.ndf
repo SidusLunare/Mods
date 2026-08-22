@@ -1,0 +1,3 @@
+export Modele_Steyr_MAN_20_280_trans_VEN is TResourceMesh( Mesh="GameData:/Assets/3D/Units/VEN/Vehicule/Steyr_MAN_20_280_trans/Steyr_MAN_20_280_trans.fbx")
+export Modele_Steyr_MAN_20_280_trans_VEN_MID is TResourceMesh( Mesh="GameData:/Assets/3D/Units/VEN/Vehicule/Steyr_MAN_20_280_trans_MID/Steyr_MAN_20_280_trans_MID.fbx")
+export Modele_Steyr_MAN_20_280_trans_VEN_LOW is TResourceMesh( Mesh="GameData:/Assets/3D/Units/VEN/Vehicule/Steyr_MAN_20_280_trans_LOW/Steyr_MAN_20_280_trans_LOW.fbx")

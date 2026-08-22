@@ -1,0 +1,16 @@
+export Modele_Saab_35F_Draken_CLU_DK is TResourceMesh
+(
+    Mesh=ModelFile_Saab_35F_Draken_HE_DK
+)
+export Modele_Saab_35F_Draken_CLU_DK_MID is TResourceMesh
+(
+    Mesh=ModelFile_Saab_35F_Draken_HE_DK_MID
+)
+export Modele_Saab_35F_Draken_CLU_DK_LOW is TResourceMesh
+(
+    Mesh=ModelFile_Saab_35F_Draken_HE_DK_LOW
+)
+export Modele_Saab_35F_Draken_CLU_DK_train is TResourceMesh
+(
+    Mesh=ModelFile_Saab_35F_Draken_HE_DK_train
+)

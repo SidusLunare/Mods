@@ -1,0 +1,17 @@
+export ModelFile_HH_1K_US is 'GameData:/Assets/3D/Units/US/Helico/HH_1K/HH_1K.fbx'
+export Modele_HH_1K_US is TResourceMesh
+(
+    Mesh=ModelFile_HH_1K_US
+)
+
+export ModelFile_HH_1K_US_MID is 'GameData:/Assets/3D/Units/US/Helico/HH_1K_MID/HH_1K_MID.fbx'
+export Modele_HH_1K_US_MID is TResourceMesh
+(
+    Mesh=ModelFile_HH_1K_US_MID
+)
+
+export ModelFile_HH_1K_US_LOW is 'GameData:/Assets/3D/Units/US/Helico/HH_1K_LOW/HH_1K_LOW.fbx'
+export Modele_HH_1K_US_LOW is TResourceMesh
+(
+    Mesh=ModelFile_HH_1K_US_LOW
+)

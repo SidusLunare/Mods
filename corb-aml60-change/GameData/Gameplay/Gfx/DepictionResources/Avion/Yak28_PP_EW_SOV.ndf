@@ -1,0 +1,16 @@
+export Modele_Yak28_PP_EW_SOV is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/URSS/Avion/Yak28_PP_EW/Yak28_PP_EW.fbx"
+)
+export Modele_Yak28_PP_EW_SOV_MID is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/URSS/Avion/Yak28_PP_EW/Yak28_PP_EW.fbx"
+)
+export Modele_Yak28_PP_EW_SOV_LOW is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/URSS/Avion/Yak28_PP_EW/Yak28_PP_EW.fbx"
+)
+export Modele_Yak28_PP_EW_SOV_train is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/URSS/Avion/Yak28_PP_EW/Yak28_PP_EW_train.fbx"
+)

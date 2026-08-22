@@ -1,0 +1,14 @@
+export Modele_AML_530S_VEN is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/VEN/Vehicule/AML_530S/AML_530S.fbx"
+)
+
+export Modele_AML_530S_VEN_MID is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/VEN/Vehicule/AML_530S/AML_530S.fbx"
+)
+
+export Modele_AML_530S_VEN_LOW is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/VEN/Vehicule/AML_530S/AML_530S.fbx"
+)

@@ -1,0 +1,22 @@
+export ModelFile_M41C_Caxias_BRZ is "GameData:/Assets/3D/Units/BRZ/Char/M41C_Caxias/M41C_Caxias.fbx"
+export Modele_M41C_Caxias_BRZ is TResourceMesh
+(
+    Mesh=ModelFile_M41C_Caxias_BRZ
+    Textures="GameData:/Assets/3D/Units/BRZ/Char/M41C_Caxias"
+)
+export ModelFile_M41C_Caxias_BRZ_MID is "GameData:/Assets/3D/Units/BRZ/Char/M41C_Caxias/M41C_Caxias.fbx"
+export Modele_M41C_Caxias_BRZ_MID is TResourceMesh
+(
+    Mesh=ModelFile_M41C_Caxias_BRZ_MID
+    Textures="GameData:/Assets/3D/Units/BRZ/Char/M41C_Caxias"
+)
+export ModelFile_M41C_Caxias_BRZ_LOW is "GameData:/Assets/3D/Units/BRZ/Char/M41C_Caxias/M41C_Caxias.fbx"
+export Modele_M41C_Caxias_BRZ_LOW is TResourceMesh
+(
+    Mesh=ModelFile_M41C_Caxias_BRZ_LOW
+    Textures="GameData:/Assets/3D/Units/BRZ/Char/M41C_Caxias"
+)
+export Modele_M41C_Caxias_BRZ_Tourelle_02 is TResourceMesh
+(
+    Mesh=ModelFile_M2HB_12_7mm_t2
+)

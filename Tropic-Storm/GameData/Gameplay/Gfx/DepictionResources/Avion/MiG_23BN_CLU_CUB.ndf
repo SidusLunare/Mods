@@ -1,0 +1,23 @@
+export Modele_MiG_23BN_CLU_CUB is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/DDR/Avion/MiG_23BN/MiG_23BN.fbx"
+    Textures="GameData:/Assets/3D/Units/CUBA/Avion/MiG_23BN"
+)
+
+export Modele_MiG_23BN_CLU_CUB_MID is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/DDR/Avion/MiG_23BN_MID/MiG_23BN_MID.fbx"
+    Textures="GameData:/Assets/3D/Units/CUBA/Avion/MiG_23BN_MID"
+)
+
+export Modele_MiG_23BN_CLU_CUB_LOW is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/DDR/Avion/MiG_23BN_LOW/MiG_23BN_LOW.fbx"
+    Textures="GameData:/Assets/3D/Units/CUBA/Avion/MiG_23BN_LOW"
+)
+
+export Modele_MiG_23BN_CLU_CUB_train is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/DDR/Avion/MiG_23BN/MiG_23BN_train.fbx"
+    Textures="GameData:/Assets/3D/Units/CUBA/Avion/MiG_23BN"
+)

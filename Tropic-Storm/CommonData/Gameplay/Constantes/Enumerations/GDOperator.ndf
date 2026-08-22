@@ -1,0 +1,10 @@
+// Sync with GDOperatorType.h and _enum_for_gameplay.sip
+EGDOperator is TBaseClass
+(
+   Equal is 0
+   Different is 1
+   MoreOrEqual is 2
+   LessOrEqual is 3
+   StrictlyMore is 4
+   StrictlyLess is 5
+)

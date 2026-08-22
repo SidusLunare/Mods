@@ -1,0 +1,17 @@
+export Modele_GAZ_53_trans_CUB is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/URSS/Vehicule/GAZ_53_trans/GAZ_53_trans.fbx"
+    Textures="GameData:/Assets/3D/Units/CUBA/Vehicule/GAZ_53_trans"
+)
+
+export Modele_GAZ_53_trans_CUB_MID is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/URSS/Vehicule/GAZ_53_trans_MID/GAZ_53_trans_MID.fbx"
+    Textures="GameData:/Assets/3D/Units/CUBA/Vehicule/GAZ_53_trans_MID"
+)
+
+export Modele_GAZ_53_trans_CUB_LOW is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/URSS/Vehicule/GAZ_53_trans_LOW/GAZ_53_trans_LOW.fbx"
+    Textures="GameData:/Assets/3D/Units/CUBA/Vehicule/GAZ_53_trans_LOW"
+)

@@ -1,0 +1,14 @@
+export Modele_CH46E_SeaKnight_supply_US is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/US/Helico/CH46E_SeaKnight_supply/CH46E_SeaKnight_supply.fbx"
+)
+
+export Modele_CH46E_SeaKnight_supply_US_MID is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/US/Helico/CH46E_SeaKnight_supply_MID/CH46E_SeaKnight_supply_MID.fbx"
+)
+
+export Modele_CH46E_SeaKnight_supply_US_LOW is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/US/Helico/CH46E_SeaKnight_supply_LOW/CH46E_SeaKnight_supply_LOW.fbx"
+)

@@ -1,0 +1,10 @@
+// Synchro with TimeOfDayEnvironment.h
+
+ETimeOfDayEnvironment is TBaseClass
+(
+    Night is 0
+    Morning is 1
+    Noon is 2
+    Afternoon is 3
+    Evening is 4
+)

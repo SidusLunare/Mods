@@ -1,0 +1,17 @@
+export Modele_UAZ_452_SOV is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/URSS/Vehicule/UAZ_452_MP/UAZ_452_MP.fbx"
+    Textures="GameData:/Assets/3D/Units/URSS/Vehicule/UAZ_452"
+)
+
+export Modele_UAZ_452_SOV_MID is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/URSS/Vehicule/UAZ_452_MP_MID/UAZ_452_MP_MID.fbx"
+    Textures="GameData:/Assets/3D/Units/URSS/Vehicule/UAZ_452_MID"
+)
+
+export Modele_UAZ_452_SOV_LOW is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/URSS/Vehicule/UAZ_452_MP_LOW/UAZ_452_MP_LOW.fbx"
+    Textures="GameData:/Assets/3D/Units/URSS/Vehicule/UAZ_452_LOW"
+)

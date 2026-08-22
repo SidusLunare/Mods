@@ -1,0 +1,84 @@
+// !!!!!! ATTENTION
+// Toutes les textures listées ici doivent forcement se trouver dans GameData:/Assets/2D/Interface/ShowRoom
+// !!!!!! ATTENTION
+
+//Ex : ShowRoomTexture_Blablabla is TUIResourceTexture_Common(FileName = "GameData:/Assets/2D/Interface/ShowRoom/Blablabla.png")
+
+
+
+//-------------------------------------------------------------------------------------
+ShowRoomTexture_fond_listeUnites   is TUIResourceTexture_Common( FileName = "GameData:/Assets/2D/Interface/ShowRoom/fond_listeUnites.png" )
+ShowRoomTexture_onglet_normal   is TUIResourceTexture_Common( FileName = "GameData:/Assets/2D/Interface/ShowRoom/onglet2.png" )
+ShowRoomTexture_onglet_toggled   is TUIResourceTexture_Common( FileName = "GameData:/Assets/2D/Interface/ShowRoom/onglet_toggled2.png" )
+ShowRoomTexture_onglet1_normal   is TUIResourceTexture_Common( FileName = "GameData:/Assets/2D/Interface/ShowRoom/onglet1_normal.png" )
+ShowRoomTexture_onglet1_grayed   is TUIResourceTexture_Common( FileName = "GameData:/Assets/2D/Interface/ShowRoom/onglet1_grayed.png" )
+ShowRoomTexture_onglet2_normal   is TUIResourceTexture_Common( FileName = "GameData:/Assets/2D/Interface/ShowRoom/onglet2_normal2.png" )
+ShowRoomTexture_onglet2_grayed   is TUIResourceTexture_Common( FileName = "GameData:/Assets/2D/Interface/ShowRoom/onglet2_grayed.png" )
+
+ShowRoomTexture_onglet_large_normal   is TUIResourceTexture_Common( FileName = "GameData:/Assets/2D/Interface/ShowRoom/onglet_large.png" )
+ShowRoomTexture_onglet_large_toggled   is TUIResourceTexture_Common( FileName = "GameData:/Assets/2D/Interface/ShowRoom/onglet_large_toggled.png" )
+
+ShowRoomTexture_PapierDeckCreator_foreground   is TUIResourceTexture_Common( FileName = "GameData:/Assets/2D/Interface/ShowRoom/PapierDeckCreator_foreground.png" )
+ShowRoomTexture_foregroundEffetPapier   is TUIResourceTexture_Common( FileName = "GameData:/Assets/2D/Interface/ShowRoom/foregroundEffetPapier2.png" )
+
+
+ShowRoomTexture_DeckCreation_fondUniteSelected   is TUIResourceTexture_Common( FileName = "GameData:/Assets/2D/Interface/ShowRoom/DeckCreation_fondUniteSelected.png" )
+ShowRoomTexture_DeckCreation_fondUniteEmplacementLibre   is TUIResourceTexture_Common( FileName = "GameData:/Assets/2D/Interface/ShowRoom/DeckCreation_fondUniteEmplacementLibre.png" )
+
+showRoomTexture_epingle is TUIResourceTexture_Common( FileName = "GameData:/Assets/2D/Interface/ShowRoom/epingle.png" )
+showRoomTexture_epingle2 is TUIResourceTexture_Common( FileName = "GameData:/Assets/2D/Interface/ShowRoom/epingle2.png" )
+
+showRoomTexture_LightCycle is TUIResourceTexture_Common( FileName = "GameData:/Assets/2D/Interface/ShowRoom/LightCycleButton.png" )
+
+ShowRoomTexture_AdditionalTextureBank is TBUCKToolAdditionalTextureBank
+(
+    Textures = MAP [
+
+        ("ShowRoomTexture_onglet_large",                MAP [
+                                                            (~/ComponentState/Normal, ShowRoomTexture_onglet_large_normal),
+                                                            (~/ComponentState/Toggled, ~/ShowRoomTexture_onglet_large_toggled),
+                                                            (~/ComponentState/ToggleHighlighted, ~/ShowRoomTexture_onglet_large_toggled),
+                                                        ]),
+
+        ("ShowRoomTexture_onglet",                MAP [
+                                                            (~/ComponentState/Normal, ShowRoomTexture_onglet_normal),
+                                                            (~/ComponentState/Toggled, ~/ShowRoomTexture_onglet_toggled),
+                                                            (~/ComponentState/ToggleHighlighted, ~/ShowRoomTexture_onglet_toggled),
+                                                        ]),
+
+
+
+
+
+        ("ShowRoomTexture_fond_listeUnites",                MAP [ (~/ComponentState/Normal, ~/ShowRoomTexture_fond_listeUnites),]),
+
+
+        ("ShowRoomTexture_DeckCreation_fondUniteLibre",                MAP [(~/ComponentState/Normal, ~/ShowRoomTexture_DeckCreation_fondUniteEmplacementLibre)]),
+        ("ShowRoomTexture_DeckCreation_fondUniteSelected",                MAP [(~/ComponentState/Normal, ~/ShowRoomTexture_DeckCreation_fondUniteSelected)]),
+        ("ShowRoomTexture_foregroundEffetPapier",                MAP [ (~/ComponentState/Normal, ~/ShowRoomTexture_PapierDeckCreator_foreground),]),
+        ("showRoomTexture_epingle",                MAP [
+                                                            (~/ComponentState/Normal, ~/showRoomTexture_epingle2),
+                                                            (~/ComponentState/Toggled, ~/showRoomTexture_epingle),
+                                                            (~/ComponentState/ToggleHighlighted, ~/showRoomTexture_epingle),
+                                                        ]),
+
+        ("showRoomTexture_minimize",                MAP [
+                                                            (~/ComponentState/Normal, TUIResourceTexture_Common( FileName = "GameData:/Assets/2D/Interface/ShowRoom/minimize.png" )),
+                                                            (~/ComponentState/Toggled, TUIResourceTexture_Common( FileName = "GameData:/Assets/2D/Interface/ShowRoom/maximize.png" )),
+                                                            (~/ComponentState/ToggleHighlighted, TUIResourceTexture_Common( FileName = "GameData:/Assets/2D/Interface/ShowRoom/maximize.png" )),
+                                                        ]),
+        ("showRoomTexture_maximize",                MAP [
+                                                            (~/ComponentState/Normal, TUIResourceTexture_Common( FileName = "GameData:/Assets/2D/Interface/ShowRoom/maximize.png" )),
+                                                            (~/ComponentState/Toggled, TUIResourceTexture_Common( FileName = "GameData:/Assets/2D/Interface/ShowRoom/minimize.png" )),
+                                                            (~/ComponentState/ToggleHighlighted, TUIResourceTexture_Common( FileName = "GameData:/Assets/2D/Interface/ShowRoom/minimize.png" )),
+                                                        ]),
+
+        ("ShowRoomTexture_LightCycle",              MAP [
+                                                            (~/ComponentState/Normal, showRoomTexture_LightCycle)
+                                                        ]),
+
+        ("ShowRoomTexture_FilterReset",             MAP [
+                                                            (~/ComponentState/Normal, StyleDeskTexture_CheckBox_Tick)
+                                                        ]),
+    ]
+)

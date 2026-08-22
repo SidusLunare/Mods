@@ -1,0 +1,14 @@
+export Modele_M38A1_MSS_BRZ is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/BRZ/Vehicule/M38A1_MSS/M38A1_MSS.fbx"
+)
+
+export Modele_M38A1_MSS_BRZ_MID is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/BRZ/Vehicule/M38A1_MSS_MID/M38A1_MSS_MID.fbx"
+)
+
+export Modele_M38A1_MSS_BRZ_LOW is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/BRZ/Vehicule/M38A1_MSS_LOW/M38A1_MSS_LOW.fbx"
+)
