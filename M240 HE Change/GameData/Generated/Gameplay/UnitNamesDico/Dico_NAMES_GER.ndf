@@ -1,0 +1,7 @@
+// Ne pas éditer, ce fichier est généré par UnitNameDicoFileWriter
+
+unnamed TLocalisationDicoResource
+(
+    DicoToken = "NAMES_GER"
+    FileName = "GameData:/Gameplay/Unit/Names/NAMES_GER.csv"
+)

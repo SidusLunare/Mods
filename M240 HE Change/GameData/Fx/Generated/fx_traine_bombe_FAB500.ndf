@@ -1,0 +1,100 @@
+// Ne pas éditer, ce fichier est généré
+
+export fx_traine_bombe_FAB500 is SimultaneousActionDeclaration
+(
+    Params =
+    [
+        private parBombTrajectory is TActionAlias( ExpectedType = 'bool' DefaultValue = false ),
+        private parDestination is TActionAlias( ExpectedType = 'float3' DefaultValue = float3[8214,0,0] ),
+        private parFlyDuration is TActionAlias( ExpectedType = 'float' DefaultValue = 2 ),
+        private parImpactOnGround is TActionAlias( ExpectedType = 'bool' DefaultValue = false ),
+        private parInitialShotDelay is TActionAlias( ExpectedType = 'float' DefaultValue = 0 ),
+        private parInitialSpeed is TActionAlias( ExpectedType = 'float3' DefaultValue = float3[1000,0,0] ),
+        private parPower is TActionAlias( ExpectedType = 'float' DefaultValue = 10 ),
+        private parShotCount is TActionAlias( ExpectedType = 'int' DefaultValue = 1 ),
+        private parShotOnGround is TActionAlias( ExpectedType = 'bool' DefaultValue = false ),
+        private parTirPhysic is TActionAlias( ExpectedType = 'bool' DefaultValue = true ),
+        private parTirTendu is TActionAlias( ExpectedType = 'bool' DefaultValue = false ),
+        private parWaitBetweenShot is TActionAlias( ExpectedType = 'float' DefaultValue = 0.5 ),
+    ]
+    Actions =
+    [
+        TActionDescriptorFireAndForget
+        (
+            EffetToLaunch = Action is TSimultaneousAction
+            (
+                Actions = ActionList
+            )
+            ActionList is
+            [
+                TActionCall
+                (
+                    Action = $/VFX_Bank/ProjectileMover
+                    NamedParams = MAP[
+                        ( 'AbsoluteEndPosition', parDestination ),
+                        ( 'BombTrajectory', parBombTrajectory ),
+                        ( 'DurationInSec', parFlyDuration ),
+                        ( 'InitialSpeed', parInitialSpeed ),
+                        ( 'UsePhysicSolver', parTirPhysic ),
+                        ( 'UseTirTendu', parTirTendu ),
+                    ]
+                ),
+                TWaitInSec( Duration = parFlyDuration ),
+                TSimultaneousAction
+                (
+                    Mobile = nil
+                    Actions =
+                    [
+                        TActionCall
+                        (
+                            Action = $/VFX_Bank/BANK_Traine_Bombe_Simple
+                            NamedParams = MAP[
+                                ( 'BombScale', 1 ),
+                                ( 'DurationInSec', parFlyDuration ),
+                                ( 'parDisableSFX', false ),
+                                ( 'parMeshId', 16 ),
+                                ( 'parPowerPinnable', parPower ),
+                                ( 'parSFXId', 1 ),
+                            ]
+                        ),
+                        TActionCall
+                        (
+                            Action = $/VFX_Bank/Smoke_Trail_Continuous_Simple
+                            NamedParams = MAP[
+                                ( 'parColor1', float3[0.9843138,0.9843138,0.9843138] ),
+                                ( 'parColor2', float3[0.909804,0.909804,0.909804] ),
+                                ( 'parColor3', float3[0.8431373,0.8431373,0.8431373] ),
+                                ( 'parColorKey1', 0.8 ),
+                                ( 'parColorKey2', 0.9 ),
+                                ( 'parDistance', 750 ),
+                                ( 'parOpacity', 0.5 ),
+                                ( 'parSize1', 100 ),
+                                ( 'parSize2', 0 ),
+                                ( 'parSmokeDuration', 0.25 ),
+                            ]
+                        ),
+                        TActionCall
+                        (
+                            Action = $/VFX_Bank/Dummy_Traine
+                            NamedParams = MAP[
+                                ( 'parDummyBombTrajectory', parBombTrajectory ),
+                                ( 'parDummyDestination', parDestination ),
+                                ( 'parDummyFlyDuration', parFlyDuration ),
+                                ( 'parDummyImpactOnGround', parImpactOnGround ),
+                                ( 'parDummyInitialSpeed', parInitialSpeed ),
+                                ( 'parDummyPower', parPower ),
+                                ( 'parDummyShotCount', parShotCount ),
+                                ( 'parDummyShotOnGround', parShotOnGround ),
+                                ( 'parDummyTirPhysic', parTirPhysic ),
+                                ( 'parDummyTirTendu', parTirTendu ),
+                                ( 'parDummyTraineInitialShotDelay', parInitialShotDelay ),
+                                ( 'parDummyWaitBetweenShot', parWaitBetweenShot ),
+                            ]
+                        ),
+                        TWaitInSec( Duration = 2),
+                    ]
+                ),
+            ]
+        )
+    ]
+)

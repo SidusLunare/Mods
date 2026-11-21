@@ -1,0 +1,14 @@
+export Modele_T34_M46_CUB is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/CUBA/Char/T34_M46/T34_M46.fbx"
+)
+
+export Modele_T34_M46_CUB_MID is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/CUBA/Char/T34_M46_MID/T34_M46_MID.fbx"
+)
+
+export Modele_T34_M46_CUB_LOW is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/CUBA/Char/T34_M46_LOW/T34_M46_LOW.fbx"
+)

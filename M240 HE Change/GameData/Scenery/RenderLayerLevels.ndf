@@ -1,0 +1,48 @@
+//------------------------------------------------------------------------------
+// RenderLayerLevels
+//------------------------------------------------------------------------------
+
+// Merci de trier les attributs dans l'ordre.
+// Les derniers éléments sont les plus prioritaires
+// Doit être strictement inférieur à MaxCalquesForSticker (75)
+
+StickerRenderLayerLevelList is TBaseClass
+(
+        Filler0         is 0
+        Filler1         is 1
+        Filler2         is 2
+        Filler3         is 3
+        Filler4         is 4
+        Filler5         is 5
+        Filler6         is 6
+        Filler7         is 7
+        Filler8         is 8
+        Filler9         is 9
+        Filler10         is 10
+
+    Ground              is 15
+    Grass0              is 16
+    Rocks               is 17
+    Roads_Edges         is 18
+    Roads_transition    is 19
+
+    Roads_Asphalt       is 20
+        Roads_Asphalt1  is 21
+        Roads_Asphalt2  is 22
+        Roads_Asphalt3  is 23
+        Roads_Asphalt4  is 24
+        Roads_Asphalt5  is 25
+
+    Roads_Dirt          is 30
+        Roads_Dirt1     is 31
+        Roads_Dirt2     is 32
+
+    Crossroads_Dirt     is 35
+
+    Footings            is 40
+        Footings1       is 41
+
+    Debris              is 45
+        Debris1         is 46
+        Debris2         is 47
+)

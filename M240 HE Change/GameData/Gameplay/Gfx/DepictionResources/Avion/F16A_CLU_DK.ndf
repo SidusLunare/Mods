@@ -1,0 +1,19 @@
+export Modele_F16A_CLU_DK is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/DK/Avion/F16A_HE_DK/F16A_HE_DK.fbx"
+)
+
+export Modele_F16A_CLU_DK_MID is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/DK/Avion/F16A_HE_DK_MID/F16A_HE_DK_MID.fbx"
+)
+
+export Modele_F16A_CLU_DK_LOW is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/DK/Avion/F16A_HE_DK_LOW/F16A_HE_DK_LOW.fbx"
+)
+
+export Modele_F16A_CLU_DK_train is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/DK/Avion/F16A_HE_DK/F16A_HE_DK_train.fbx"
+)

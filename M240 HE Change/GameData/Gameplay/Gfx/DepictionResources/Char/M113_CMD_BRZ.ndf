@@ -1,0 +1,17 @@
+export Modele_M113_CMD_BRZ is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/BRZ/APC/M113/M113.fbx"
+    Textures="GameData:/Assets/3D/Units/BRZ/APC/M113_CMD"
+)
+
+export Modele_M113_CMD_BRZ_MID is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/BRZ/APC/M113_MID/M113_MID.fbx"
+    Textures="GameData:/Assets/3D/Units/BRZ/APC/M113_CMD_MID"
+)
+
+export Modele_M113_CMD_BRZ_LOW is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/BRZ/APC/M113_LOW/M113_LOW.fbx"
+    Textures="GameData:/Assets/3D/Units/BRZ/APC/M113_CMD_LOW"
+)

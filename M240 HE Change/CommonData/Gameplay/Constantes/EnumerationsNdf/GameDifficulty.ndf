@@ -1,0 +1,34 @@
+// Sync with CommonData:/Gameplay/Constantes/Enumerations/GameDifficulty.ndf
+
+GameDifficultyNdfEnum is EGameDifficulty
+(
+    // Ne pas renommer les valeurs, elles sont écrites sous forme de string dans le profil des joueurs
+    Values = [
+        "Easy",
+        "Medium",
+        "Hard",
+    ]
+)
+
+GameDifficultyListConfig is TGameDifficultyListConfiguration
+(
+    MissionTypeToDifficulties = MAP
+    [
+        (
+            MissionType_Challenge,
+            [
+                EGameDifficulty/Easy,
+                EGameDifficulty/Medium,
+                EGameDifficulty/Hard
+            ]
+        ),
+        (
+            MissionType_Strategic,
+            [
+                EGameDifficulty/Easy,
+                EGameDifficulty/Medium,
+                EGameDifficulty/Hard
+            ]
+        )
+    ]
+)

@@ -1,0 +1,14 @@
+export Modele_2K12_KUB_M1_DDR is TResourceMesh
+(
+    Mesh=ModelFile_2K12_KUB_DDR
+)
+
+export Modele_2K12_KUB_M1_DDR_MID is TResourceMesh
+(
+    Mesh=ModelFile_2K12_KUB_DDR_MID
+)
+
+export Modele_2K12_KUB_M1_DDR_LOW is TResourceMesh
+(
+    Mesh=ModelFile_2K12_KUB_DDR_LOW
+)

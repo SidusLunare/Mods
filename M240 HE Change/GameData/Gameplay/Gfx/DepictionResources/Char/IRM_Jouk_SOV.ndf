@@ -1,0 +1,14 @@
+export Modele_IRM_Jouk_SOV is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/URSS/Char/IRM_Jouk/IRM_Jouk.fbx"
+)
+
+export Modele_IRM_Jouk_SOV_MID is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/URSS/Char/IRM_Jouk_MID/IRM_Jouk_MID.fbx"
+)
+
+export Modele_IRM_Jouk_SOV_LOW is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/URSS/Char/IRM_Jouk_LOW/IRM_Jouk_LOW.fbx"
+)

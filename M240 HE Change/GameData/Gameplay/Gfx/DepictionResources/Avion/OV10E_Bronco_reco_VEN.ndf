@@ -1,0 +1,16 @@
+export Modele_OV10E_Bronco_reco_VEN is TResourceMesh
+(
+    Mesh=ModelFile_OV10E_Bronco_VEN
+)
+export Modele_OV10E_Bronco_reco_VEN_MID is TResourceMesh
+(
+    Mesh=ModelFile_OV10E_Bronco_VEN_MID
+)
+export Modele_OV10E_Bronco_reco_VEN_LOW is TResourceMesh
+(
+    Mesh=ModelFile_OV10E_Bronco_VEN_LOW
+)
+export Modele_OV10E_Bronco_reco_VEN_train is TResourceMesh
+(
+    Mesh=ModelFile_OV10E_Bronco_VEN_train
+)

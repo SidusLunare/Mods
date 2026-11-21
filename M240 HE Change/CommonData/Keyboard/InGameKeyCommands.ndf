@@ -1,0 +1,5 @@
+InGameKeyCommands is TBaseClass
+(
+    OpenChat_All        is "InterfaceInGameChat::OpenAll"
+    OpenChat_Team       is "InterfaceInGameChat::OpenTeam"
+)

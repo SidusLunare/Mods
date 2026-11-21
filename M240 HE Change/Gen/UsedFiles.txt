@@ -1,0 +1,5 @@
+GameData:/Localisation/M240 HE Change/COMPANIES.csv
+GameData:/Localisation/M240 HE Change/INTERFACE_INGAME.csv
+GameData:/Localisation/M240 HE Change/INTERFACE_OUTGAME.csv
+GameData:/Localisation/M240 HE Change/PLATOONS.csv
+GameData:/Localisation/M240 HE Change/UNITS.csv

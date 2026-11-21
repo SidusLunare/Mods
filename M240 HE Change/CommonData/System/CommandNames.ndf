@@ -1,0 +1,35 @@
+CommandName is TBaseClass
+(
+    GameApplicationResetMode      is "GameApplication::ChangeModeUsingDefaultValue"
+    GameApplicationToggle         is "GameApplicationToggler::Toggle"
+    ResetDeviceType is 'TClusterInitGameApplication::ResetDeviceType'
+    GraphicsModeRefresh             is "GraphicDependentObjectHandler::GraphicsModeRefreshCallback"
+    IncGraphicsDeviceVariability    is "IncGraphicsDeviceVariability"
+    SoundEngineUpdateSoundVolume        is "ClusterSoundEngine::UpdateSoundVolume"
+    SoundEngineUpdateSoundVolumeVoice   is "ClusterSoundEngine::UpdateSoundVolumeVoice"
+    SoundUpdateFocusRole          is "ClusterSoundEngine::UpdateSoundFocus"
+
+    ResetCDLODTextureCache      is "TTerrainCDLODTextureProvider::Reset"
+
+    OptionValuesSave           is "OptionValues::Save"
+    OptionValuesLoad           is "OptionValues::Load"
+    OptionValuesSetDefault     is "OptionValues::SetDefault"
+
+    OptionsProfileIASync     is "OptionsProfile::Sync"
+    OptionsProfileSelection  is "OptionsProfile::Selection"
+
+    ResetCameraMoverTactic      is "CameraMoverManager::ResetCameraMoverTactic"
+
+    WindowFormReloadOption   is "WindowForm::ReloadOption"
+
+    CommonDepictionOnOptionChange is "CommonDepictionOnOptionChange::OnOptionChange"   // ceci correspond au nom donné dans DepictionDistanceToCameraBasedSelector.cpp
+
+    LightManagerFactoryOnOptionChanged is "LightManagerFactoryOnOptionChanged"
+
+    LevelBuildViewManagerResetOptions is "UnitLevelBuildInstanceManager::ResetOptions"   // ceci correspond au nom donné dans UnitLevelBuildView.cpp
+    ParticleMediumsResetOptions is "ParticleMediums::ResetOptions"   // ceci correspond au nom donné dans ParticleMedium.cpp
+
+    SituationAwarenessNextEvent is "TInstancePositionEvents::Trigg"
+
+    UpdateLocalisationLanguage is "Localisation::UpdateLanguage"
+)

@@ -1,0 +1,20 @@
+export Modele_BMD_1_Reostat_Naval_SOV is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/URSS/APC/BMD_REOSTAT/BMD_REOSTAT.fbx"
+    Textures="GameData:/Assets/3D/Units/URSS/APC/BMD_REOSTAT_Marines"
+)
+
+export Modele_BMD_1_Reostat_Naval_SOV_MID is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/URSS/APC/BMD_REOSTAT_MID/BMD_REOSTAT_MID.fbx"
+    Textures="GameData:/Assets/3D/Units/URSS/APC/BMD_REOSTAT_Marines_MID"
+)
+
+export Modele_BMD_1_Reostat_Naval_SOV_LOW is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/URSS/APC/BMD_REOSTAT_LOW/BMD_REOSTAT_LOW.fbx"
+    Textures="GameData:/Assets/3D/Units/URSS/APC/BMD_REOSTAT_Marines_LOW"
+)
+
+
+

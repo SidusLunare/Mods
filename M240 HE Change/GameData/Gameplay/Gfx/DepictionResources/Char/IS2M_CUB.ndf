@@ -1,0 +1,22 @@
+export Modele_IS2M_CUB is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/URSS/Char/IS2M/IS2M.fbx"
+    Textures="GameData:/Assets/3D/Units/CUBA/Char/IS2M"
+)
+
+export Modele_IS2M_CUB_MID is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/URSS/Char/IS2M_MID/IS2M_MID.fbx"
+    Textures="GameData:/Assets/3D/Units/CUBA/Char/IS2M_MID"
+)
+
+export Modele_IS2M_CUB_LOW is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/URSS/Char/IS2M_LOW/IS2M_LOW.fbx"
+    Textures="GameData:/Assets/3D/Units/CUBA/Char/IS2M_LOW"
+)
+
+export Modele_IS2M_CUB_Tourelle_02 is TResourceMesh
+(
+    Mesh=ModelFile_DShK_127mm_no_ammo
+)

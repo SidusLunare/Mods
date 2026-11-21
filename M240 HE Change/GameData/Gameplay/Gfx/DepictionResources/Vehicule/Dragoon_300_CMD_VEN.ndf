@@ -1,0 +1,4 @@
+export Modele_Dragoon_300_CMD_VEN     is TResourceMesh( Mesh="GameData:/Assets/3D/Units/VEN/Vehicule/Dragoon_300_CMD/Dragoon_300_CMD.fbx" )
+export Modele_Dragoon_300_CMD_VEN_MID is TResourceMesh( Mesh="GameData:/Assets/3D/Units/VEN/Vehicule/Dragoon_300_CMD_MID/Dragoon_300_CMD_MID.fbx" )
+export Modele_Dragoon_300_CMD_VEN_LOW is TResourceMesh( Mesh="GameData:/Assets/3D/Units/VEN/Vehicule/Dragoon_300_CMD_LOW/Dragoon_300_CMD_LOW.fbx" )
+export Modele_Dragoon_300_CMD_VEN_Tourelle_01 is TResourceMesh( Mesh=ModelFile_M60_cosmetic )

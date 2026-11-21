@@ -1,0 +1,7 @@
+template Template_MobileSoundSlotFactory
+[
+] is TMobileSoundSlotFactory
+(
+    InitialScale = 1.0
+    MaxScale = 11.0
+)

@@ -1,0 +1,19 @@
+export Modele_ERA_3B_EW_US is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/US/Avion/ERA_3B_EW/ERA_3B_EW.fbx"
+)
+
+export Modele_ERA_3B_EW_US_MID is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/US/Avion/ERA_3B_EW_MID/ERA_3B_EW_MID.fbx"
+)
+
+export Modele_ERA_3B_EW_US_LOW is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/US/Avion/ERA_3B_EW_LOW/ERA_3B_EW_LOW.fbx"
+)
+
+export Modele_ERA_3B_EW_US_train is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/US/Avion/ERA_3B_EW/ERA_3B_EW_train.fbx"
+)

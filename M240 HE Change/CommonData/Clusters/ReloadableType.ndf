@@ -1,0 +1,7 @@
+//-----------------------------------------------------------------------------
+// /!\ Doit rester synchronisé avec l'enum EReloadableType::Type dans ReloadableItem.h
+EReloadableType is TBaseClass
+(
+    UI  is 0
+    Gameplay is 1
+)

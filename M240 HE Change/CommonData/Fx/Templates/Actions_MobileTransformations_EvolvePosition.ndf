@@ -1,0 +1,21 @@
+template Template_TranslateMobile
+[
+    Position                    : TEvaluable[required] = TConstantFloat3(Value = float3[0,0,0]),
+    Absolute                    : bool = false,
+    StartDelay                  : TEvaluable = nil,
+    Duration                    : TEvaluable = TConstantFloat(Value = 1.0),
+    Forever                     : bool = false,
+    Slice                       : bool = false,
+    WaitAtLeastBetweenFrame     : TEvaluable = nil,
+] is TActionDescriptorTranslateMobile
+(
+    Function = <Position>
+    Relative = ! <Absolute>
+    InitialDelayInSec = <StartDelay>
+    DurationInSec = <Duration>
+    PeriodInSec = 0
+    PeriodInFrames = 0
+    Forever = <Forever>
+    Slice = <Slice>
+    WaitAtLeastBetweenFrame = <WaitAtLeastBetweenFrame>
+)

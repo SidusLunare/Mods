@@ -1,0 +1,29 @@
+// Ces outils sont accessibles aux moddeurs via la ligne de commande "-devmode" de l'exe.
+
+unnamed TGBufferDebugVisualiser
+(
+    RenderFlag = $/M3D/Scene/RenderContextFlag_GBufferDebug
+    SelectedDebug = $/GraphicOption/SelectedGBufferDebug
+    EnableJitterOption = $/M3D/Misc/EnableJitter
+)
+//-----------------------------------------------------------------------------------
+unnamed TDebugUnitEffectApplier
+(
+)
+//-----------------------------------------------------------------------------------
+unnamed TDebugUnitModules
+(
+    UnitNameResources = ~/UICommonUnitNameResources
+)
+//-----------------------------------------------------------------------------------
+unnamed TDebugUnitSpawner
+(
+    AllowedOption = $/MiscOptions/AllowDevKeys
+    UserInputLayer = $/M3D/Input/UserInputLayerHandler/DEBUG_GAME_SpawnInputLayer
+    WorldFloorProxy = $/M3D/Scene/WorldFloorForIAProxy
+    UnitNameResources = ~/UICommonUnitNameResources
+)
+//-----------------------------------------------------------------------------------
+unnamed TStatisticsParticles
+(
+)

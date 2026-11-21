@@ -1,0 +1,14 @@
+export Modele_BTR_152_ZU_CUB is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/CUBA/APC/BTR_152_ZU/BTR_152_ZU.fbx"
+)
+
+export Modele_BTR_152_ZU_CUB_MID is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/CUBA/APC/BTR_152_ZU_MID/BTR_152_ZU_MID.fbx"
+)
+
+export Modele_BTR_152_ZU_CUB_LOW is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/CUBA/APC/BTR_152_ZU_LOW/BTR_152_ZU_LOW.fbx"
+)

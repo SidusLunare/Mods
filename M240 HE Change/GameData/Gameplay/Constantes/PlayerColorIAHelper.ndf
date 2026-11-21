@@ -1,0 +1,259 @@
+//Fichier de gestion des couleurs des joueurs
+
+unnamed TPlayerColorIAHelper
+(
+    PlayerByAllianceStyle = MAP
+    [
+        (
+/////////////////////////////////////////////////////////////////////////////////////////PACTE////////////////////////////////////////////////////////////////////////////////////////
+            TAllianceStyle/REDFOR,
+            TPlayerColorByAllianceStyle
+            (
+                SelfColor = PlayerColor/Rouge
+                PlayerColors = MAP
+                [
+                    (
+                        TAllianceStyle/REDFOR, // allié
+                        PlayerColor/Orange
+                    ),
+
+                    (
+                        TAllianceStyle/BLUFOR, // enemi
+                        PlayerColor/Bleu
+                    ),
+
+                    (
+                        TAllianceStyle/Neutral,
+                        PlayerColor/Gris
+                    ),
+
+                    (
+                        TAllianceStyle/AlliedWithAll,
+                        PlayerColor/Orange
+                    ),
+
+                    (
+                        TAllianceStyle/EnemyWithAll,
+                        PlayerColor/Bleu
+                    ),
+                ]
+            )
+        ),
+/////////////////////////////////////////////////////////////////////////////////////////OTAN////////////////////////////////////////////////////////////////////////////////////////
+        (
+            TAllianceStyle/BLUFOR,
+            TPlayerColorByAllianceStyle
+            (
+                SelfColor = PlayerColor/Bleu
+                PlayerColors = MAP
+                [
+                    (
+                        TAllianceStyle/REDFOR, // enemi
+                        PlayerColor/Rouge
+                    ),
+
+                    (
+                        TAllianceStyle/BLUFOR, // allié
+                        PlayerColor/Vert
+                    ),
+
+                    (
+                        TAllianceStyle/Neutral,
+                        PlayerColor/Gris
+                    ),
+
+                    (
+                        TAllianceStyle/AlliedWithAll,
+                        PlayerColor/Vert
+                    ),
+
+                    (
+                        TAllianceStyle/EnemyWithAll,
+                        PlayerColor/Rouge
+                    ),
+                ]
+            )
+        ),
+
+/////////////////////////////////////////////////////////////////////////////////////////OBSERVER////////////////////////////////////////////////////////////////////////////////////////
+        (
+            TAllianceStyle/Neutral,
+            TPlayerColorByAllianceStyle
+            (
+                SelfColor = PlayerColor/Gris
+                PlayerColors = MAP
+                [
+                    (
+                        TAllianceStyle/BLUFOR,
+                        PlayerColor/Bleu
+                    ),
+
+                    (
+                        TAllianceStyle/REDFOR,
+                        PlayerColor/Rouge
+                    ),
+
+                    (
+                        TAllianceStyle/Neutral,
+                        PlayerColor/Gris
+                    ),
+
+                    (
+                        TAllianceStyle/AlliedWithAll,
+                        PlayerColor/Bleu
+                    ),
+
+                    (
+                        TAllianceStyle/EnemyWithAll,
+                        PlayerColor/Rouge
+                    ),
+                ]
+            )
+        ),
+
+/////////////////////////////////////////////////////////////////////////////////ALLIE AVEC TOUT LE MONDE (Neutre en replay)/////////////////////////////////////////////////////////////
+        (
+            TAllianceStyle/AlliedWithAll,
+            TPlayerColorByAllianceStyle
+            (
+                SelfColor = PlayerColor/Gris
+                PlayerColors = MAP
+                [
+                    (
+                        TAllianceStyle/BLUFOR,
+                        PlayerColor/Bleu
+                    ),
+
+                    (
+                        TAllianceStyle/REDFOR,
+                        PlayerColor/Rouge
+                    ),
+
+                    (
+                        TAllianceStyle/Neutral,
+                        PlayerColor/Gris
+                    ),
+
+                    (
+                        TAllianceStyle/AlliedWithAll,
+                        PlayerColor/Bleu
+                    ),
+
+                    (
+                        TAllianceStyle/EnemyWithAll,
+                        PlayerColor/Rouge
+                    ),
+                ]
+            )
+        ),
+
+/////////////////////////////////////////////////////////////////////////////////ENNEMI AVEC TOUT LE MONDE (vous ne devriez pas etre ce camp la ...)//////////////////////////////////////
+        (
+            TAllianceStyle/EnemyWithAll,
+            TPlayerColorByAllianceStyle
+            (
+                SelfColor = PlayerColor/Rouge
+                PlayerColors = MAP
+                [
+                    (
+                        TAllianceStyle/BLUFOR,
+                        PlayerColor/Rouge
+                    ),
+
+                    (
+                        TAllianceStyle/REDFOR,
+                        PlayerColor/Rouge
+                    ),
+
+                    (
+                        TAllianceStyle/Neutral,
+                        PlayerColor/Gris
+                    ),
+
+                    (
+                        TAllianceStyle/AlliedWithAll,
+                        PlayerColor/Rouge
+                    ),
+
+                    (
+                        TAllianceStyle/EnemyWithAll,
+                        PlayerColor/Rouge
+                    ),
+                ]
+            )
+        ),
+    ]
+
+    DefaultPlayerColor = PlayerColor/Gris
+    PlayerColorsByColor = MAP
+    [
+        (
+            PlayerColor/Bleu,
+            TPlayerColor
+            (
+                Colors = MAP
+                [
+                    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+                    // NE PAS AJOUTER DE NOUVELLES COULEURS DANS CE FICHIER SAUF SI LE GAMEPLAY DOIT ENVOYER CETTE INFO DIRECTEMENT AU MOTEUR 3D sans passer par l'UI
+                    ////////////////////////////////////////////////////////////////////////////BLEU////////////////////////////////////////////////////////////////////////////
+                    ("District",         RGBA[30,54,104,153]),
+                    ("FrontlineBorder",  RGBA[47,117,136,160]),
+                    ("MinimapFrontline", RGBA[47,117,136,255]),
+                    ("Units",            RGBA[89,103,114,255]),
+                ]
+            )
+        ),
+        (
+            PlayerColor/Vert,
+            TPlayerColor
+            (
+                Colors = MAP
+                [
+                    ("District",         RGBA[77,105,60,200]),
+                    ("FrontlineBorder",  RGBA[40,80,150,200]),
+                    ("MinimapFrontline", RGBA[27,142,38,130]),
+                    ("Units",            RGBA[102,182,33,255]),
+                ]
+            )
+        ),
+        (
+            PlayerColor/Rouge,
+            TPlayerColor
+            (
+                Colors = MAP
+                [
+                    ("District",         RGBA[81,39,39,153]),
+                    ("FrontlineBorder",  RGBA[156,30,13,160]),
+                    ("MinimapFrontline", RGBA[156,30,13,255]),
+                    ("Units",            RGBA[150,40,40,90]),
+                ]
+            )
+        ),
+        (
+            PlayerColor/Orange,
+            TPlayerColor
+            (
+                Colors = MAP
+                [
+                    ("District",         RGBA[120,80,50,200]),
+                    ("FrontlineBorder",  RGBA[150,40,40,90]),
+                    ("MinimapFrontline", RGBA[142,81,27,130]),
+                    ("Units",            RGBA[255,113,1,255]),
+                ]
+            )
+        ),
+    (
+            PlayerColor/Gris,
+            TPlayerColor
+            (
+                Colors = MAP
+                [
+                    ("District",         RGBA[50 ,50 ,50, 255]),
+                    ("FrontlineBorder",  RGBA[153, 153, 153, 128]),
+                    ("MinimapFrontline", RGBA[100, 100, 100, 255]),
+                    ("Units",            RGBA[0,0,0,255]),
+                ]
+            )
+        ),
+    ]
+)

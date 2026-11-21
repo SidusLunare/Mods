@@ -1,0 +1,7 @@
+export Modele_LAV_MEWSS_US     is TResourceMesh( Mesh="GameData:/Assets/3D/Units/US/APC/LAV_MEWSS/LAV_MEWSS.fbx" )
+export Modele_LAV_MEWSS_US_MID is TResourceMesh( Mesh="GameData:/Assets/3D/Units/US/APC/LAV_MEWSS_MID/LAV_MEWSS_MID.fbx" )
+export Modele_LAV_MEWSS_US_LOW is TResourceMesh( Mesh="GameData:/Assets/3D/Units/US/APC/LAV_MEWSS_LOW/LAV_MEWSS_LOW.fbx" )
+export Modele_LAV_MEWSS_US_Tourelle_01 is TResourceMesh
+(
+    Mesh=ModelFile_M240_no_ammo
+)

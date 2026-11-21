@@ -1,0 +1,25 @@
+export SFX_Ambiance_Radio_Chatter is SimultaneousActionDeclaration
+(
+    Params = []
+    Actions =
+    [
+        Ambiance_Radio_Chatter_OneShot,
+    ]
+)
+
+export Ambiance_Radio_Chatter_OneShot is Template_RepeatSequential
+(
+    TimeServer = Zoom_1_2_3_4_RenderTime
+    Actions =
+    [
+        WaitInSec
+        (
+            Duration = RandomRange [5,20]
+        ),
+        TActionDescriptorPlaySoundList
+        (
+            SoundDescriptor = $/GFX/Sound/Sound_RadioChatter
+        ),
+    ]
+    Forever = true
+)

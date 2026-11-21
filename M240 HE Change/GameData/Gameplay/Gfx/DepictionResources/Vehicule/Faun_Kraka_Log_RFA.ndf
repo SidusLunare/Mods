@@ -1,0 +1,14 @@
+export Modele_Faun_Kraka_Log_RFA is TResourceMesh
+(
+    Mesh=ModelFile_Faun_kraka_RFA
+)
+
+export Modele_Faun_Kraka_Log_RFA_MID is TResourceMesh
+(
+    Mesh=ModelFile_Faun_kraka_RFA_MID
+)
+
+export Modele_Faun_Kraka_Log_RFA_LOW is TResourceMesh
+(
+    Mesh=ModelFile_Faun_kraka_RFA_LOW
+)

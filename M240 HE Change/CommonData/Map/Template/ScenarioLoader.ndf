@@ -1,0 +1,147 @@
+template Scenario
+[
+    GUID                             ,
+    ScenarioDirectory                : string,
+    LevelBuildDirectory              : string,
+    Category                         : string,
+    LoadGameplayConstantsCluster     : TClusterInitialisation = ~/LoadScenarioGameplayConstantTransactions,
+] is TBaseClass
+(
+    ClusterSetScenarioMountingPoint is TClusterMountAdditionalDatapack
+    (
+        MountingPoint = "CurrentScenarioData"
+        Directory = "ScenariosData:/" + <ScenarioDirectory>
+        DatapackFileName = "Scenarios/" + <ScenarioDirectory> + "_Details.dat"
+    )
+
+    // On scenario exit, closes cutscene letterbox blades left open by a script
+    ClusterCloseCutSceneBlades is TClusterExecuteNamedEvent
+    (
+        CleanUpEvent = [ "TLoadableQuadTextureAnimatedBladeCloser::CloseAll" ]
+    )
+
+    // Reloads the shared $/Camera/CameraPaths content and the CameraPathEditor"s
+    // own list for the current scenario
+    ClusterLoadCameraPaths is TCompositeCluster
+    (
+        SubClusterList =
+        [
+            TClusterLoadCameraPaths
+            (
+                CameraPaths = $/Camera/CameraPaths
+            ),
+            TemplateClusterLoadNDF
+            (
+                Files =
+                [
+                    "CommonData:/Camera/CameraPathEditor.ndf",
+                ]
+                BaseName  = "CameraPathEditor.txn"
+                NameSpace = "CameraPathEditor"
+            ),
+            TemplateClusterLoadNDFForNoFinal
+            (
+                Files =
+                [
+                    "CommonData:/Camera/CameraPathDebugTool.ndf",
+                ]
+                BaseName  = "CameraPathDebugTool.txn"
+                NameSpace = "DebugTools"
+            ),
+        ]
+    )
+
+    ClusterGDScript is TemplateClusterLoadNDF
+    (
+        BaseName = "Scenarios/" + <ScenarioDirectory> + "/GDScript.txn"
+        NameSpace = "GDScript"
+        Public    = True
+
+        Directories =
+        [
+            "CommonData:/Gameplay/Constantes/Enumerations",
+            "GameData:/Gameplay/Constantes/Enumerations",
+            "ScenariosData:/" + <ScenarioDirectory> + "/Scripting",
+        ]
+        Files =
+        [
+            "GameData:/GDScript/Stubs.ndf",
+            "GameData:/GDScript/Bricks.ndf",
+            "GameData:/System/Enumerations/IADifficulty.ndf",
+            "GameData:/Generated/Gameplay/OrderType.ndf",
+            "GameData:/Generated/Gameplay/Gfx/Enums/ResourceList.ndf",
+            "CommonData:/Map/Template/CutsceneDescriptorTemplate.ndf",
+            "CommonData:/UserInterface/Use/UICommonEnum.ndf",
+            "CommonData:/Sound/Templates.ndf",
+        ]
+        GenerateCRC = true
+    )
+
+    ScenarioGameplaySubCluster is TClusterInitialisation_EditorDependent
+    (
+        SubClusterModeNoEditor = TClusterReloadable
+        (
+            ReloadType = EReloadableType/Gameplay
+            SubCluster = TCompositeCluster
+            (
+                SubClusterList =
+                [
+                    <LoadGameplayConstantsCluster>,
+                    TClusterLoadTransaction(Transaction = ScenarioSkirmishConstants),
+                    TClusterInitScenario
+                    (
+                        Loader = $/MapArea/ScenarioZoneLoader
+                    ),
+                    TClusterInitialisation_OnlyInResourceLoad
+                    (
+                        SubCluster = TCompositeCluster
+                        (
+                            SubClusterList =
+                            [
+                                TClusterLoadNavigationMapInfo
+                                (
+                                    NavigationFilePath = "DatasMap:/Navigation.iff"
+                                    StrategicGridFileName = "DatasMap:/Output/StrategicGridData.ndfbin"
+                                ),
+                                TClusterInitialisationMapBuildings
+                                (
+                                    FileName = "DatasMap:/Output/mapbuildings.ndfbin"
+                                    LevelBuildSymbolDatabaseProxy = $/M3D/Scene/LevelBuildSymbolDatabaseProxy
+                                    WorldFloorProxy = $/M3D/Scene/WorldFloorForOnlyGround
+                                ),
+                            ]
+                        )
+                    ),
+                    ClusterGDScript,
+                    $/IA/Launcher/ClusterLaunchLevel,
+                    //Attention, si vous ajoutez des choses ici, le thread IA est lancé et ne doit pas dépendre des données que vous allez ajouter
+                ]
+            )
+        )
+    )
+
+    export Load is TCompositeCluster
+    (
+        SubClusterList =
+        [
+            ClusterSetScenarioMountingPoint,
+            ClusterCloseCutSceneBlades,
+            ClusterLoadCameraPaths,
+            ScenarioGameplaySubCluster,
+        ]
+    )
+
+    export MapDico is TLocalisationDicoResource
+    (
+        DicoToken = ~/LocalisationConstantes/dico_map
+        FileName = "ScenariosData:/" + <ScenarioDirectory> + "/Scripting/Localization.csv"
+        CanBeMissing = true
+    )
+
+    export MapDialogDico is TLocalisationDicoResource
+    (
+        DicoToken = ~/LocalisationConstantes/dico_dialogues
+        FileName = "ScenariosData:/" + <ScenarioDirectory> + "/Scripting/Dialog.csv"
+        CanBeMissing = true
+    )
+)

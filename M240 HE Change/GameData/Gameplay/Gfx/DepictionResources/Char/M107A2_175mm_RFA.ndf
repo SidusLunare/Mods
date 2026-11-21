@@ -1,0 +1,18 @@
+export Modele_M107A2_175mm_RFA is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/UK/Artillerie/M107_A2_175mm/M107_A2_175mm.fbx"
+    Textures="GameData:/Assets/3D/Units/RFA/Artillerie/M107_A2_175mm"
+)
+
+export Modele_M107A2_175mm_RFA_MID is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/UK/Artillerie/M107_A2_175mm_MID/M107_A2_175mm_MID.fbx"
+    Textures="GameData:/Assets/3D/Units/RFA/Artillerie/M107_A2_175mm_MID"
+)
+
+export Modele_M107A2_175mm_RFA_LOW is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/UK/Artillerie/M107_A2_175mm_LOW/M107_A2_175mm_LOW.fbx"
+    Textures="GameData:/Assets/3D/Units/RFA/Artillerie/M107_A2_175mm_LOW"
+)
+

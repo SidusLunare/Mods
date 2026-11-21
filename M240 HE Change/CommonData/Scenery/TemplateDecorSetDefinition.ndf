@@ -1,0 +1,214 @@
+template ClusterSet_Files_UsingResourcePack
+[
+    TransactionDirectory : string,
+    SetName : string,
+    ResourcePackName : string,
+] is TCompositeCluster
+(
+    SubClusterList =
+    [
+        TClusterLoadResourcePack
+        (
+            ResourceDescriptorPacks =
+            [
+                TResourceDescriptorMeshPack
+                (
+                    PackName = <ResourcePackName>
+                    PackRelativePath = "MeshPack/DecorsSets/" + <SetName> + ".spk"
+                ),
+                TResourceDescriptorProxyPack
+                (
+                    PackName = <ResourcePackName>
+                    PackRelativePath = "TextureProxy/DecorsSets/" + <SetName> + ".ppk"
+                ),
+            ]
+        ),
+        TClusterNdfTransactions
+        (
+            Transactions = [ TNDFTransaction
+            (
+                BaseName = "DecorSets/" + <SetName> + "/Scenery.txn"
+                NameSpace = 'Scenery'
+                Public = true
+                ResourcePackName = <ResourcePackName>
+                Directories = [ <TransactionDirectory> ]
+                Files =
+                [
+                    'CommonData:/Map/Template/MaterialID.ndf',
+                    'CommonData:/Gameplay/Constantes/Enumerations/TerrainType.ndf',
+                    'CommonData:/Scene/TextureContentTypes.ndf',
+                    'CommonData:/Scenery/Base/SceneryDescriptorConstants.ndf',
+                    'CommonData:/Scenery/ContentTypes.ndf',
+                    'CommonData:/Scenery/PrimitiveTypes.ndf',
+                    'GameData:/Scenery/RenderLayerLevels.ndf',
+                    'GameData:/Scenery/SceneryDescriptorTags.ndf',
+
+                    'CommonData:/Scenery/Template/TemplateParticle_FX_TreeDest.ndf',
+                    'CommonData:/Scenery/Template/TemplateSceneryDescriptorDistrictTag.ndf',
+                    'CommonData:/Scenery/Template/TemplateSceneryDescriptorExtrudedLines.ndf',
+                    'CommonData:/Scenery/Template/TemplateSceneryDescriptorFX.ndf',
+                    'CommonData:/Scenery/Template/TemplateSceneryDescriptorModels.ndf',
+                    'CommonData:/Scenery/Template/TemplateSceneryDescriptorSDBModifier.ndf',
+                    'CommonData:/Scenery/Template/TemplateSceneryDescriptorStickers.ndf',
+                    'CommonData:/Scenery/Template/TemplateSceneryDescriptorSurfaceStickers.ndf',
+                    'CommonData:/Scenery/Template/TemplateSceneryDescriptorVegetation.ndf',
+                ]
+            )]
+        ),
+    ]
+)
+
+template template_ClusterGraphicSettingsTransaction
+[
+    SettingsName : string,
+    DecorSetName : string,
+    ResourcePackName : string = '',
+    Files : LIST<string> = [],
+] is TClusterMultipleNdfTransactions
+(
+    DirName = "DecorSets/" + <DecorSetName> + "/GraphicSettings"
+    BaseName = <SettingsName> + ".txn"
+    TransactionsNameSpace = "GraphicSettings/" + <SettingsName>
+    ResourcePackName = <ResourcePackName>
+    Files = <Files>
+    Loader = TTransactionLoaderByFile( Directory = 'DecorSetData:/' + <DecorSetName> + '/' + <SettingsName> )
+)
+
+template Template_LevelBuildDecorSetDefinition
+[
+    DecorSetName : string,
+    IncludedDecorSets = [],
+    TransactionDirectory : string,
+    TransactionDirectoryForEditor : string,
+
+    PatternFileExtension : string,
+    PatternBinarySave : bool,
+] is TDecorSetDefinition
+(
+    ResourcePackName is 'DecorsSets/' + <DecorSetName>
+
+    DecorSetList = ~/LevelBuildDecorSetList
+    Name = <DecorSetName>
+    IncludedDecorSets = <IncludedDecorSets>
+    Directory = 'PatternsData:/' + <DecorSetName>
+    FileExtension = <PatternFileExtension>
+    BinarySave = <PatternBinarySave>
+
+    LoadClusterScenery = TCompositeCluster
+    (
+        SubClusterList =
+        [
+            ClusterSet_Files_UsingResourcePack
+            (
+                SetName = <DecorSetName>
+                ResourcePackName = ResourcePackName
+                TransactionDirectory = <TransactionDirectory>
+            ),
+
+            TClusterInitialisation_EditorDependent
+            (
+                SubClusterModeEditor = TCompositeCluster
+                (
+                    SubClusterList =
+                    [
+                        TClusterNdfTransactions
+                        (
+                            Transactions = [ TNDFTransaction
+                            (
+                                BaseName = "DecorSets/" + <DecorSetName> + "/Scenery_Editor.txn"
+                                NameSpace = 'Scenery'
+                                Public = true
+                                Directories = [ <TransactionDirectoryForEditor> ]
+                                Files =
+                                [
+                                    'CommonData:/Gameplay/Constantes/Enumerations/TerrainType.ndf',
+                                    'CommonData:/Scenery/Base/SceneryDescriptorConstants.ndf',
+                                    'CommonData:/Scenery/ContentTypes.ndf',
+                                    'GameData:/Scenery/SceneryDescriptorTags.ndf',
+
+                                    'CommonData:/Scenery/Template/TemplateJunctionGenerator.ndf',
+                                    'CommonData:/Scenery/Template/TemplateSceneryDescriptorDistrictTag.ndf',
+                                    'CommonData:/Scenery/Template/TemplateSceneryDescriptorFillerPattern.ndf',
+                                    'CommonData:/Scenery/Template/TemplateSceneryDescriptorFX.ndf',
+                                    'CommonData:/Scenery/Template/TemplateSceneryDescriptorMultiLine.ndf',
+                                    'CommonData:/Scenery/Template/TemplateSceneryDescriptorMultiFiller.ndf',
+                                    'CommonData:/Scenery/Template/TemplateSceneryDescriptorNavigation.ndf',
+                                    'CommonData:/Scenery/Template/TemplateSceneryDescriptorSDBModifier.ndf',
+                                    'CommonData:/Scenery/Template/TemplateSceneryDescriptorSurfaceWithBorder.ndf',
+                                    'CommonData:/Scenery/Template/TemplateSceneryDescriptorWater.ndf',
+                                ]
+                            )]
+                        ),
+                        TClusterInitialisation_OnlyInResourceLoad
+                        (
+                            SubCluster = TClusterLoadPattern(Binary=<PatternBinarySave> SymbolDatabaseProxy = $/M3D/Scene/LevelBuildSymbolDatabaseProxy)
+                        ),
+                    ]
+                )
+            ),
+        ]
+    )
+
+    LoadClusterEnvironmentSettings = TCompositeCluster
+    (
+        SubClusterList =
+        [
+            template_ClusterGraphicSettingsTransaction
+            (
+                SettingsName = 'ColorGrading'
+                DecorSetName = <DecorSetName>
+                ResourcePackName = ResourcePackName
+            ),
+            template_ClusterGraphicSettingsTransaction
+            (
+                SettingsName = 'Grass'
+                DecorSetName = <DecorSetName>
+                ResourcePackName = ResourcePackName
+                Files = ['CommonData:/Map/Template/Template_BricoGrass.ndf']
+            ),
+            template_ClusterGraphicSettingsTransaction
+            (
+                SettingsName = 'PostProcess'
+                DecorSetName = <DecorSetName>
+                ResourcePackName = ResourcePackName
+            ),
+            template_ClusterGraphicSettingsTransaction
+            (
+                SettingsName = 'Rock'
+                DecorSetName = <DecorSetName>
+                ResourcePackName = ResourcePackName
+            ),
+            template_ClusterGraphicSettingsTransaction
+            (
+                SettingsName = 'Splatting'
+                DecorSetName = <DecorSetName>
+                ResourcePackName = ResourcePackName
+                Files = ['CommonData:/Map/Template/MaterialID.ndf']
+            ),
+            template_ClusterGraphicSettingsTransaction
+            (
+                SettingsName = 'Water'
+                DecorSetName = <DecorSetName>
+                ResourcePackName = ResourcePackName
+            ),
+            template_ClusterGraphicSettingsTransaction
+            (
+                SettingsName = 'Lighting'
+                DecorSetName = <DecorSetName>
+                // (Vivien 26/12/2025) Pour ceux qui viendront après :
+                // Décommenter cette ligne modulerisera le rangement des textures de ciels dans les DecorSets,
+                // ce qui permettra théoriquement aux moddeurs de créer les leurs,
+                // mais ça provoquera une re-livraison des 4 Go de textures de ciels sur Warno aux prochains patch,
+                // et fera grossir la taille du jeu d'autant pour une durée indéterminée.
+
+                // ResourcePackName = ResourcePackName
+            ),
+            template_ClusterGraphicSettingsTransaction
+            (
+                SettingsName = 'EnvironmentSettings'
+                DecorSetName = <DecorSetName>
+                ResourcePackName = ResourcePackName
+            ),
+        ]
+    )
+)

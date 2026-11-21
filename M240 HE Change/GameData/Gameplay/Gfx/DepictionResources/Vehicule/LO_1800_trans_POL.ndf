@@ -1,0 +1,14 @@
+export Modele_LO_1800_trans_POL is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/POL/Vehicule/LO_1800/LO_1800.fbx"
+)
+
+export Modele_LO_1800_trans_POL_MID is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/POL/Vehicule/LO_1800_MID/LO_1800_MID.fbx"
+)
+
+export Modele_LO_1800_trans_POL_LOW is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/POL/Vehicule/LO_1800_LOW/LO_1800_LOW.fbx"
+)

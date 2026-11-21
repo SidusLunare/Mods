@@ -1,0 +1,46 @@
+//-----------------------------------------------------------------------------
+// Modes scenery descriptor
+// ( doit matcher Crux/Code/Eugen/CPP/LevelBuild/LevelBuildModes.h )
+SDMode_High_Baked           is 0x1
+SDMode_High_NotBaked        is 0x2
+SDMode_High                 is (SDMode_High_Baked | SDMode_High_NotBaked)
+SDMode_Mid                  is 0x4
+SDMode_Low                  is 0x8
+SDMode_Sticker              is 0x10
+SDMode_StickerDynamic       is 0x20
+SDMode_Navigation           is 0x40
+SDMode_Road                 is 0x80
+SDMode_District             is 0x100
+SDMode_RaytraceObject       is 0x200
+SDMode_Water                is 0x400
+SDMode_StateDB              is 0x800
+SDMode_EditorOnly           is 0x1000
+SDMode_StaticGeometry       is 0x2000
+SDMode_FXFeedback           is 0x4000
+SDMode_FXModel              is 0x8000
+SDMode_StaticFX             is 0x10000
+SDMode_FXBank               is 0x20000
+SDMode_Snap                 is 0x40000
+SDMode_OnlyBaked            is 0x80000 // PaulQ(24/01/12): ces objets ne sont visibles que lors du baking
+SDMode_RaytraceBuilding     is 0x100000
+SDMode_RaytraceHighBuilding is 0x200000
+SDMode_All                  is 0x2FFFFF
+
+SDMode_AllLod is SDMode_High + SDMode_Mid + SDMode_Low
+
+// mode dans la DB de level design
+SDMode_LevelDesign          is 0x1
+SDMode_Zone                 is 0x2
+
+// mask scenery descriptor.
+// /!\ Doit matcher avec Eugen::LevelBuild::State::Type dans LevelBuildHierarchyStates.h /!\
+SDMask_Destroy              is 2
+SDMask_Hidden               is 4
+SDMask_HideVeget            is 8
+SDMask_Squash               is 16
+SDMask_SlightSlope          is 32
+
+SDMask_SquashOrDestroy      is SDMask_Squash+SDMask_Destroy
+
+WaterMarkSceneryDescriptorName      is "WaterBody_Mark"
+WaterMarchingSquaresStepLengthInLBU is 12

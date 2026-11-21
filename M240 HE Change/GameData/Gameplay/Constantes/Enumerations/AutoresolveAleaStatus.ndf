@@ -1,0 +1,9 @@
+// Sync with AutoresolveAleaStatus.h
+EAutoresolveAleaStatus is TBaseClass
+(
+    Default is 0
+    NoLuck is 1
+    AttackerAlwaysLucky is 2
+    DefenderAlwaysLucky is 3
+    Length is 4
+)

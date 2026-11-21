@@ -1,0 +1,36 @@
+// Ne pas éditer, ce fichier est généré
+
+export fx_jet_cascade_diorama is SimultaneousActionDeclaration
+(
+    Params =
+    [
+        private parInitialShotDelay is TActionAlias( ExpectedType = 'float' DefaultValue = 0 ),
+        private parShotCount is TActionAlias( ExpectedType = 'int' DefaultValue = 30 ),
+        private parWaitBetweenShot is TActionAlias( ExpectedType = 'float' DefaultValue = 0.15 ),
+    ]
+    Actions = ActionList is
+    [
+        TSimultaneousAction
+        (
+            Mobile = TMobileWithLocalRepereMatrixFactory
+            (
+                Position = float3[170,-4,0]
+            )
+            Actions =
+            [
+                TActionCall
+                (
+                    Action = $/VFX_Bank/CanonSmoke_Simple
+                    NamedParams = MAP[
+                        ( 'parDuration', 2.5 ),
+                        ( 'parInitialDelay', parInitialShotDelay ),
+                        ( 'parOpacity', 1 ),
+                        ( 'parRepeatCount', parShotCount ),
+                        ( 'parRepeatTime', parWaitBetweenShot ),
+                        ( 'parSize', 10000 ),
+                    ]
+                ),
+            ]
+        ),
+    ]
+)

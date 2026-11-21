@@ -1,0 +1,19 @@
+export Modele_MiG_21F_HE_CUB is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/CUBA/Avion/MiG_21F/MiG_21F.fbx"
+)
+
+export Modele_MiG_21F_HE_CUB_MID is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/CUBA/Avion/MiG_21F_MID/MiG_21F_MID.fbx"
+)
+
+export Modele_MiG_21F_HE_CUB_LOW is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/CUBA/Avion/MiG_21F_LOW/MiG_21F_LOW.fbx"
+)
+
+export Modele_MiG_21F_HE_CUB_train is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/CUBA/Avion/MiG_21F/MiG_21F_train.fbx"
+)

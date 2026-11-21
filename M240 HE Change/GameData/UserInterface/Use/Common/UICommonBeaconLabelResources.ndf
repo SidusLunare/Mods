@@ -1,0 +1,204 @@
+private iconeDim is [ 25.0, 25.0 ]
+
+CommonBeaconLabelResources is TUISpecificBeaconLabelResources
+(
+    Layer = $/UserInterface/UILayer_Labels
+
+    BeaconLabelMagnificationMultiplier = 1.0
+    FadeTime        = 0.5
+
+    BeaconAttackLabelDescriptor = BeaconLabelDescriptor
+    (
+        TextToken = "HFL_ATTACT"
+        IconTextureToken = "textureBeaconAttack"
+        IconSize = iconeDim
+    )
+    BeaconDefendLabelDescriptor = BeaconLabelDescriptor
+    (
+        TextToken = "HFL_DEFENT"
+        IconTextureToken = "textureBeaconDefense"
+        IconSize = iconeDim
+    )
+    BeaconHelpLabelDescriptor = BeaconLabelDescriptor
+    (
+        TextToken = "HFL_HELPT"
+        IconTextureToken = "textureBeaconHelp"
+        IconSize = iconeDim
+    )
+    BeaconCustomLabelDescriptor = BeaconLabelDescriptor
+    (
+        IconTextureToken = "textureBeaconCustom"
+        IconSize = iconeDim
+        Largeur = 200.0
+    )
+    BeaconFireSupportLabelDescriptor = BeaconLabelDescriptor
+    (
+        TextToken = "HFL_SuppT"
+        IconTextureToken = "textureBeaconFireSupport"
+        IconSize = iconeDim
+    )
+    BeaconEnemySpottedLabelDescriptor = BeaconLabelDescriptor
+    (
+        TextToken = "HFL_recoT"
+        IconTextureToken = "textureBeaconEnemySpotted"
+        IconSize = iconeDim
+    )
+
+    BeaconLabelTransformation = TLabelTransformPreTranslateFaceCamFakePerspective
+    (
+        PreTranslation = [0,0,5000]
+        ScalePerAltitudeConstReso = 1.5
+        Camera = $/M3D/Misc/CameraPrincipale
+        Scene2D = $/M3D/Scene/Scene_2D_Interface
+        ConstnessFactor = 0.6
+    )
+
+    VideoModeValue = $/M3D/Scene/ShootVideoMode
+)
+
+private template BeaconLabelDescriptor
+[
+    TextToken : string = "",
+    IconTextureToken : string = "",
+    IconSize : float2,
+    Largeur : float = 70.0,
+]
+is BUCKListDescriptor
+(
+    Axis = ~/ListAxis/Horizontal
+
+    ComponentFrame = TUIFramePropertyRTTI
+    (
+        MagnifiableWidthHeight = [0, 30]
+        MagnifiableOffset = [0, 0]
+    )
+
+    FirstMargin = TRTTILength(Pixel = DistanceBetweenExternalAndInternalBorder + 1.0)
+    LastMargin = TRTTILength(Pixel = DistanceBetweenExternalAndInternalBorder + 1.0)
+
+    Elements =
+    [
+        BUCKListElementDescriptor
+        (
+            ComponentDescriptor = BUCKTextureDescriptor
+            (
+                TextureToken = <IconTextureToken>
+                ComponentFrame = TUIFramePropertyRTTI
+                (
+                    MagnifiableWidthHeight = <IconSize>
+                    AlignementToFather = [0.0, 0.5]
+                    AlignementToAnchor = [0.0, 0.5]
+                )
+
+                TextureColorToken = 'BlancEquipe'
+            )
+        ),
+
+        BUCKListElementDescriptor
+        (
+            ComponentDescriptor = BeaconLabelText
+            (
+                ElementName = "Text"
+                TextToken = <TextToken>
+
+                ComponentFrame = TUIFramePropertyRTTI
+                (
+                    RelativeWidthHeight = [0.0, 1.0]
+                    MagnifiableWidthHeight = [<Largeur>, 0.0]
+
+                    AlignementToAnchor = [0.0, 0.5]
+                    AlignementToFather = [0.0, 0.5]
+                )
+
+                TextPadding = TRTTILength4( Magnifiable = [3.0, 0.0, 3.0, 0.0] )
+                TextSize = "11"
+                TextColor = "BlancEquipe"
+
+                Alignment = UIText_Left
+                HorizontalFitStyle = ~/FitStyle/MinBetweenUserDefinedAndContent
+                VerticalFitStyle = ~/FitStyle/UserDefined
+            )
+        ),
+    ]
+
+    ForegroundComponents =
+    [
+        BeaconLabelText
+        (
+            ElementName = "HeadingText"
+
+            ComponentFrame = TUIFramePropertyRTTI
+            (
+                RelativeWidthHeight = [1.0, 0.0]
+                MagnifiableWidthHeight = [-6.0, 15.0]
+                MagnifiableOffset = [3.0, -1.0]
+                AlignementToAnchor = [0.0, 1.0]
+            )
+
+            TextSize = "12"
+
+            Alignment = UIText_Left
+            HorizontalFitStyle = ~/FitStyle/MinBetweenUserDefinedAndContent
+            VerticalFitStyle = ~/FitStyle/UserDefined
+            BigLineAction = ~/BigLineAction/CutByDots
+            BigWordAction = ~/BigWordAction/BigWordCut
+
+            HasBackground = true
+            BackgroundBlockColorToken = "ObjectiveEtiquetteManager/TextBackground"
+        )
+    ]
+    BackgroundComponents =
+    [
+        PanelRoundedCorner()
+    ]
+)
+
+private template BeaconLabelText
+[
+    ElementName : string,
+    TextToken : string = "",
+    ComponentFrame : TUIFramePropertyRTTI,
+    TypefaceToken : string = "IBM",
+    TextSize : string,
+    TextColor : string = "ObjectiveEtiquetteManager/BeaconText",
+    Alignment = UIText_Left,
+    HorizontalFitStyle = ~/FitStyle/FitToContent,
+    VerticalFitStyle = ~/FitStyle/FitToContent,
+    BigLineAction = ~/BigLineAction/MultiLine,
+    BigWordAction = ~/BigWordAction/BigWordNewLine,
+    TextPadding = TRTTILength4( Magnifiable = [5.0, 0.0, 5.0, 0.0]),
+    HasBackground : bool = false,
+    BackgroundBlockColorToken : string = "",
+]
+is BUCKTextDescriptor
+(
+    ElementName = <ElementName>
+
+    TextToken = <TextToken>
+
+    ComponentFrame = <ComponentFrame>
+    ParagraphStyle = TParagraphStyle
+    (
+        Alignment         = <Alignment>
+        VerticalAlignment = UIText_VerticalCenter
+        Balanced          = true
+        BigWordAction     = <BigWordAction>
+    )
+
+    TextStyle = "Default"
+    TypefaceToken = <TypefaceToken>
+
+    HasBackground = <HasBackground>
+    BackgroundBlockColorToken = <BackgroundBlockColorToken>
+
+    TextDico = ~/LocalisationConstantes/dico_interface_ingame
+
+    TextPadding = <TextPadding>
+    TextSize = <TextSize>
+    TextColor = <TextColor>
+
+    HorizontalFitStyle = <HorizontalFitStyle>
+    VerticalFitStyle = <VerticalFitStyle>
+
+    BigLineAction = <BigLineAction>
+)

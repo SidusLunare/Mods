@@ -1,0 +1,17 @@
+export ModelFile_AMX_30_B_Instructor_FR is 'GameData:/Assets/3D/Units/FR/Char/AMX_30_B_Instructor/AMX_30_B_Instructor.fbx'
+export Modele_AMX_30_B_Instructor_FR is TResourceMesh
+(
+    Mesh=ModelFile_AMX_30_B_Instructor_FR
+)
+
+export ModelFile_AMX_30_B_Instructor_FR_MID is 'GameData:/Assets/3D/Units/FR/Char/AMX_30_B_Instructor_MID/AMX_30_B_Instructor_MID.fbx'
+export Modele_AMX_30_B_Instructor_FR_MID is TResourceMesh
+(
+    Mesh=ModelFile_AMX_30_B_Instructor_FR_MID
+)
+
+export ModelFile_AMX_30_B_Instructor_FR_LOW is 'GameData:/Assets/3D/Units/FR/Char/AMX_30_B_Instructor_LOW/AMX_30_B_Instructor_LOW.fbx'
+export Modele_AMX_30_B_Instructor_FR_LOW is TResourceMesh
+(
+    Mesh=ModelFile_AMX_30_B_Instructor_FR_LOW
+)

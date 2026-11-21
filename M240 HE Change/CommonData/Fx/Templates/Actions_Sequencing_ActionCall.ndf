@@ -1,0 +1,15 @@
+template Template_ActionCall
+[
+    Action                          : TActionDescriptor[required],
+    NamedParameters                 : MAP<string, TEvaluable> = MAP[], // paramètres nommé
+    LocalVariables                  : LIST<TPinnableValue> = [],
+    Disabled                        : TEvaluable = nil,
+    TimeServer                      : TTimeServerWithVisibilityRange = nil,
+] is TActionCall
+(
+    Action = <Action>
+    NamedParams = <NamedParameters>
+    Disabled = <Disabled>
+    TimeServer = <TimeServer>
+    LocalVariables = <LocalVariables>
+)

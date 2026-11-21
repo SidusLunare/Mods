@@ -1,0 +1,3 @@
+export Modele_Howz_Reinosa_105mm_ESP is TResourceMesh( Mesh="GameData:/Assets/3D/Units/ESP/Canon/Howz_Reinosa_105mm/Howz_Reinosa_105mm.fbx")
+export Modele_Howz_Reinosa_105mm_ESP_MID is TResourceMesh( Mesh="GameData:/Assets/3D/Units/ESP/Canon/Howz_Reinosa_105mm_MID/Howz_Reinosa_105mm_MID.fbx")
+export Modele_Howz_Reinosa_105mm_ESP_LOW is TResourceMesh( Mesh="GameData:/Assets/3D/Units/ESP/Canon/Howz_Reinosa_105mm_LOW/Howz_Reinosa_105mm_LOW.fbx")

@@ -1,0 +1,44 @@
+template template_FillerPatternEntry_Proxy
+[
+    SceneryDescriptorName : string,
+] is TSceneryDescriptorProxy
+(
+    AliasedRegistrationName  = <SceneryDescriptorName>
+    SymbolDatabaseProxy = $/M3D/Scene/LevelBuildSymbolDatabaseProxy
+)
+
+template template_FillerPattern
+[
+    GridSizeInMeters                : float,
+    SceneryDescriptors              = [],
+    GridCount                       : float2,
+    PreRandomizePositionInMeters    : float = 0,
+    PreRandomizeRotation            : float2 = [0, 0], // Entre 0 et 1 pour la rotation complète.
+    PreRandomizeScale               : float2 = [1, 1], // Minimum et maximum.
+] is TFillerPatternGenerator
+(
+    GridSizeInLBU = <GridSizeInMeters>
+    SceneryDescriptors = <SceneryDescriptors>
+    GridCount = <GridCount>
+    PreRandomizePositionInLBU = <PreRandomizePositionInMeters>
+    PreRandomizeRotation = <PreRandomizeRotation>
+    PreRandomizeScale    = <PreRandomizeScale>
+)
+
+template template_SurfaceFiller
+[
+    RegistrationName      : string,
+    Tags                  : LIST<string> = [],
+    ColorCode             : color = RGBA[0, 0, 0, 0],
+
+    FillerPattern,
+] is TSceneryDescriptorSurfaceFiller
+(
+    SymbolDatabaseProxy         = $/M3D/Scene/LevelBuildSymbolDatabaseProxy
+    RegistrationName            = <RegistrationName>
+    Tags                        = <Tags>
+    ColorCode                   = <ColorCode>
+
+    FillerPatternGenerator      = <FillerPattern>
+    GeneratedPatternName        = <RegistrationName> + "_GeneratedPattern"
+)

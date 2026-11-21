@@ -1,0 +1,3 @@
+export Modele_DCA_S125_quad_Neva_CUB is TResourceMesh( Mesh=ModelFile_DCA_S125_quad_Neva_SOV Textures="GameData:/Assets/3D/Units/CUBA/DCA/DCA_S125_Neva_quad")
+export Modele_DCA_S125_quad_Neva_CUB_MID is TResourceMesh( Mesh=ModelFile_DCA_S125_quad_Neva_SOV_MID Textures="GameData:/Assets/3D/Units/CUBA/DCA/DCA_S125_Neva_quad")
+export Modele_DCA_S125_quad_Neva_CUB_LOW is TResourceMesh( Mesh=ModelFile_DCA_S125_quad_Neva_SOV_LOW Textures="GameData:/Assets/3D/Units/CUBA/DCA/DCA_S125_Neva_quad")

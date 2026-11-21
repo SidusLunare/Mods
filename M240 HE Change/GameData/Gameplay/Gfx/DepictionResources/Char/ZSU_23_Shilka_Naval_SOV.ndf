@@ -1,0 +1,20 @@
+export Modele_ZSU_23_Shilka_Naval_SOV is TResourceMesh
+(
+    Mesh=ModelFile_ZSU_23_Shilka_SOV
+    Textures="GameData:/Assets/3D/Units/URSS/DCA/ZSU_23_Biryusa_Marine"
+)
+
+export Modele_ZSU_23_Shilka_Naval_SOV_MID is TResourceMesh
+(
+    Mesh=ModelFile_ZSU_23_Shilka_SOV_MID
+    Textures="GameData:/Assets/3D/Units/URSS/DCA/ZSU_23_Biryusa_Marine_MID"
+)
+
+export Modele_ZSU_23_Shilka_Naval_SOV_LOW is TResourceMesh
+(
+    Mesh=ModelFile_ZSU_23_Shilka_SOV_LOW
+    Textures="GameData:/Assets/3D/Units/URSS/DCA/ZSU_23_Biryusa_Marine_LOW"
+)
+
+
+

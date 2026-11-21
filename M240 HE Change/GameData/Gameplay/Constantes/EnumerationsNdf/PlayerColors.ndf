@@ -1,0 +1,12 @@
+// Sync with Enumerations/PlayerColors.ndf
+
+PlayerColorNdfEnum is EPlayerColor
+(
+    Values = [
+        "Bleu",
+        "Vert",
+        "Rouge",
+        "Orange",
+        "Gris",
+    ]
+)

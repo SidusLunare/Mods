@@ -1,0 +1,47 @@
+// Ne pas éditer, ce fichier est généré
+
+export fx_fumee_usine_diorama_Variante_5 is Simultaneous
+(
+    Actions = ActionList is
+    [
+        TSimultaneousAction
+        (
+            Mobile = nil
+            Actions =
+            [
+                TActionCall
+                (
+                    Action = $/VFX_Bank/BANK_VerticalSmoke_Simple
+                    NamedParams = MAP[
+                        ( 'parColor', float3[0.1411765,0.1411765,0.1411765] ),
+                        ( 'parDensity', 3 ),
+                        ( 'parFluidFriction', 0.5 ),
+                        ( 'parLifetime', 15 ),
+                        ( 'parOpacity', 0.8 ),
+                        ( 'parSize', 600 ),
+                        ( 'parSizeMultiplier', 8 ),
+                        ( 'parSpeed', 600 ),
+                        ( 'parVerticalAcceleration', 500 ),
+                        ( 'parWindFactor', 1.5 ),
+                    ]
+                ),
+                TActionCall
+                (
+                    Action = $/VFX_Bank/BANK_VerticalSmoke_Simple
+                    NamedParams = MAP[
+                        ( 'parColor', float3[0.172549,0.172549,0.172549] ),
+                        ( 'parDensity', 3 ),
+                        ( 'parFluidFriction', 0.5 ),
+                        ( 'parLifetime', 20 ),
+                        ( 'parOpacity', 0.35 ),
+                        ( 'parSize', 1200 ),
+                        ( 'parSizeMultiplier', 8 ),
+                        ( 'parSpeed', 800 ),
+                        ( 'parVerticalAcceleration', 650 ),
+                        ( 'parWindFactor', 2.5 ),
+                    ]
+                ),
+            ]
+        ),
+    ]
+)

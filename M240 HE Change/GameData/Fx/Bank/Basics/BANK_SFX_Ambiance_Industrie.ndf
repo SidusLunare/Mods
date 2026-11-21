@@ -1,0 +1,38 @@
+export SFX_Ambiance_Industrie is SimultaneousActionDeclaration
+(
+    Params = []
+    Actions =
+    [
+        Ambiance_Industrie_OneShot,
+    ]
+)
+
+export Ambiance_Industrie_OneShot is Template_RepeatSimultaneous
+(
+    Actions =
+    [
+        TActionDescriptorPlaySoundList
+        (
+            SoundDescriptor = $/GFX/Sound/Sound_IndustrieAmbiance
+            Looped = true
+        ),
+
+        Template_RepeatSequential
+        (
+           TimeServer = Zoom_1_2_3_4_RenderTime
+           Actions =
+           [
+              WaitInSec
+              (
+                  Duration = RandomRange [5,10]
+              ),
+              TActionDescriptorPlaySoundList
+              (
+                  SoundDescriptor = $/GFX/Sound/Sound_IndustrieAmbiance_Evenements
+              ),
+
+           ]
+           Forever = true
+        )
+    ]
+)

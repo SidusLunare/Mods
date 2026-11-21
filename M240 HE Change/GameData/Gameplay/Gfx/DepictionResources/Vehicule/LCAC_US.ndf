@@ -1,0 +1,74 @@
+export Modele_LCAC_US is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/US/Vehicule/LCAC/LCAC.fbx"
+)
+
+export Modele_LCAC_US_MID is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/US/Vehicule/LCAC_MID/LCAC_MID.fbx"
+)
+
+export Modele_LCAC_US_LOW is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/US/Vehicule/LCAC_LOW/LCAC_LOW.fbx"
+)
+
+template LCAC_Rotor
+[
+    PaleLength   : float,
+    PaleCount    : int,
+    RotationAxis : float3,
+    SousMobile   : string,
+] is TIntroduceMobileHappening
+(
+
+    Anchor = <SousMobile>
+    Happening = TSequencingActionHappening(ActionDescriptor = TActionCall
+    (
+        Action = $/GFX/GameFx/FX_Binder_Rotor
+        NamedParams = MAP
+        [
+            ('parPaleLength', <PaleLength>),
+            ('parPaleCount', <PaleCount>),
+            ('parRotationAxis', <RotationAxis>),
+        ]
+    ))
+)
+
+export HandWritten_LCAC_US is TDepictionHandWrittenPart
+(
+    Operators = [
+        TCosmeticAirCushionRotorOperatorDesc
+        (
+            OperatorId = 'Rotors'
+            DecelerationAfterDeath = 40.0
+            HelixList =
+            [
+                THelix
+                (
+                    BladeCount = 4
+                    BladesBoneName = "helice_ls_1"
+                    BlurActionId = "FX_Helice_1"
+                    Clockwise = false
+                    HelixBoneName = "bloc_moteur_1"
+                    RotationAxis = 0
+                    RotationSpeed = 100
+                ),
+                THelix
+                (
+                    BladeCount = 4
+                    BladesBoneName = "helice_ls_2"
+                    BlurActionId = "FX_Helice_2"
+                    Clockwise = false
+                    HelixBoneName = "bloc_moteur_2"
+                    RotationAxis = 0
+                    RotationSpeed = 100
+                ),
+            ]
+        )
+    ]
+    Actions = MAP[
+        ('FX_Helice_1', LCAC_Rotor( PaleLength = 320 PaleCount = 4 RotationAxis = float3[0, 1, 0] SousMobile = "bloc_moteur_1" )),
+        ('FX_Helice_2', LCAC_Rotor( PaleLength = 320 PaleCount = 4 RotationAxis = float3[0, 1, 0] SousMobile = "bloc_moteur_2" ))
+    ]
+)

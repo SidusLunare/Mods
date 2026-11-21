@@ -1,0 +1,26 @@
+export Map_TextureDiversityPath is 'LevelBuildData:/' + ~/MapName + '/Div_map.webp'
+export Map_TextureDiversity is TResourceTextureFromFile
+(
+    FileName = Map_TextureDiversityPath
+)
+
+export Map_HeightFieldPath is 'LevelBuildData:/' + ~/MapName + '/HeightMap.png'
+export Map_HeightField is TResourceTextureFromFile
+(
+    FileName = Map_HeightFieldPath
+)
+
+export Map_TextureSplatting is TResourceTextureFromFile
+(
+    FileName = 'LevelBuildData:/' + ~/MapName + '/Splat_map.png'
+)
+
+export Map_WaterFlow is TResourceTextureFromFile
+(
+    FileName = 'LevelBuildData:/' + ~/MapName + '/WaterFlow.png'
+)
+
+export Map_Minimap is TUIResourceTexture
+(
+    FileName = 'LevelBuildData:/' + ~/MapName + '/Minimap.webp'
+)

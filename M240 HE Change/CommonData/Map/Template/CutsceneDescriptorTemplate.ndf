@@ -1,0 +1,28 @@
+
+template CutsceneDescriptorTemplate [ Key, AudioFile, Filter = TSoundFilter_Normalize ] is TCutsceneDescriptor
+(
+    Key                  = <Key>
+    DefaultSoundDescriptor = TSoundDescriptor
+    (
+        SoundSettings = $/SoundSettings/Dialog_SoundSettings
+        Filter = <Filter>
+        TheSoundStream = TSoundStream (FileName = <AudioFile>)
+    )
+)
+
+template CutsceneDescriptorTemplateWithAlternateAudioFile [ Key, AudioFile, Filter = TSoundFilter_Normalize, AlternativeAudioFile ] is TCutsceneDescriptor
+(
+    Key                  = <Key>
+    DefaultSoundDescriptor = TSoundDescriptor
+    (
+        SoundSettings = $/SoundSettings/Dialog_SoundSettings
+        Filter = <Filter>
+        TheSoundStream = TSoundStream (FileName = <AudioFile>)
+    )
+    AlternativeSoundDescriptor = TSoundDescriptor
+    (
+        SoundSettings = $/SoundSettings/Dialog_SoundSettings
+        Filter = <Filter>
+        TheSoundStream = TSoundStream (FileName = <AlternativeAudioFile>)
+    )
+)

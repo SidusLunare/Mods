@@ -1,0 +1,14 @@
+export Modele_Marder_1A3_reco_RFA is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/RFA/APC/Marder_1A3_MILAN/Marder_1A3_MILAN.fbx"
+)
+
+export Modele_Marder_1A3_reco_RFA_MID is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/RFA/APC/Marder_1A3_MILAN_MID/Marder_1A3_MILAN_MID.fbx"
+)
+
+export Modele_Marder_1A3_reco_RFA_LOW is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/RFA/APC/Marder_1A3_MILAN_LOW/Marder_1A3_MILAN_LOW.fbx"
+)

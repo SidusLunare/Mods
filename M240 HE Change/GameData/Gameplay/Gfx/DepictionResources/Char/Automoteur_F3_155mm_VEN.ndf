@@ -1,0 +1,17 @@
+export Modele_Automoteur_F3_155mm_VEN is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/FR/Artillerie/Automoteur_F3_155mm/Automoteur_F3_155mm.fbx"
+    Textures="GameData:/Assets/3D/Units/VEN/Artillerie/Automoteur_F3_155mm"
+)
+
+export Modele_Automoteur_F3_155mm_VEN_MID is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/FR/Artillerie/Automoteur_F3_155mm_MID/Automoteur_F3_155mm_MID.fbx"
+    Textures="GameData:/Assets/3D/Units/VEN/Artillerie/Automoteur_F3_155mm_MID"
+)
+
+export Modele_Automoteur_F3_155mm_VEN_LOW is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/FR/Artillerie/Automoteur_F3_155mm_LOW/Automoteur_F3_155mm_LOW.fbx"
+    Textures="GameData:/Assets/3D/Units/VEN/Artillerie/Automoteur_F3_155mm_LOW"
+)

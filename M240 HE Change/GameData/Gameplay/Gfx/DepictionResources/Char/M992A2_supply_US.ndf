@@ -1,0 +1,14 @@
+export Modele_M992A2_supply_US is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/US/APC/M992A2_Supply/M992A2_Supply.fbx"
+)
+
+export Modele_M992A2_supply_US_MID is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/US/APC/M992A2_Supply_MID/M992A2_Supply_MID.fbx"
+)
+
+export Modele_M992A2_supply_US_LOW is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/US/APC/M992A2_Supply_LOW/M992A2_Supply_LOW.fbx"
+)

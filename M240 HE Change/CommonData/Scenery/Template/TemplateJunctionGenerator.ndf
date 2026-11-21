@@ -1,0 +1,32 @@
+template Junction_Proxy
+[
+    Name : string,
+] is TSceneryDescriptorProxy
+(
+    AliasedRegistrationName = <Name>
+    SymbolDatabaseProxy = $/M3D/Scene/LevelBuildSymbolDatabaseProxy
+)
+
+template template_Junction
+[
+    MainLine : string,
+    SecondLine : string,
+    Junction : string = '',
+    Bifurcation_T : string = '',
+    Bifurcation_Y : string = '',
+    Bifurcation_YFlip : string = '',
+    Cross_4_X : string = '',
+] is TJunction
+(
+    MainLine = Junction_Proxy( Name = <MainLine> )
+    SecondLine = Junction_Proxy( Name = <SecondLine> )
+    Junction = <Junction> == '' ? nil : Junction_Proxy( Name = <Junction> )
+    Bifurcation_T = <Bifurcation_T> == '' ? nil : Junction_Proxy( Name = <Bifurcation_T> )
+    Bifurcation_Y = <Bifurcation_Y> == '' ? nil : Junction_Proxy( Name = <Bifurcation_Y> )
+    Bifurcation_YFlip = <Bifurcation_YFlip> == '' ? nil : Junction_Proxy( Name = <Bifurcation_YFlip> )
+    Cross_4_X = <Cross_4_X> == '' ? nil : Junction_Proxy( Name = <Cross_4_X> )
+
+    PrincipalRoadTie = Junction_Proxy( Name = "RoadTie_PrincipalRoad" )
+    SecondaryRoadTie = Junction_Proxy( Name = "RoadTie_SecondaryRoad" )
+)
+

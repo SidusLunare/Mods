@@ -1,0 +1,98 @@
+// GameData:/Fx/Set/Impacts/AoA_FX_Destruction_Vehicule.ndf
+
+export FX_Vehicule_CadavreSticker is Template_ActionCall
+(
+    Action = BANK_Ground_Sticker_destruction
+    NamedParameters = MAP[
+        ( 'BANK_position',      float3[0,0,0] ),
+        ( 'BANK_size',          1500 * RandomRange[0.7, 1.3] ),//getX[parRadius] ),
+        ( 'BANK_lifetime',      200 * $/VFX_Bank/FxLodLevel_from_05to1 ),
+        ( 'Bank_FadeInTime',    0.25 )]
+)
+
+
+export FX_Vehicule_Dest_Fire is SimultaneousActionDeclaration
+(
+    Params =
+    [
+        private parScaleFactor is Template_Param_Float (DefaultValue = 1 ),
+        private parDuration is Template_Param_Float (),
+    ]
+    Actions =
+    [
+        Simultaneous
+        (
+            Actions =
+            [
+                Template_ActionCall
+                (
+                    Action = $/VFX_Bank/BANK_DarkFireCompo
+                    NamedParameters = MAP[
+                        ( 'BANK_Radius', RandomRange[1100, 1300]),
+                        ( 'BANK_Lifetime', parDuration ),
+                        ( 'BANK_ScaleFactor', parScaleFactor ),
+                        ( 'BANK_FLammeSizeMul', RandomRange[2, 6] ),    // RandomRange[2.25, 3.5] )
+                        ( 'BANK_PCount_FireMul', RandomRange[0.33, 0.66] * $/VFX_Bank/FxLodLevel_from_05to1 ),
+                        ( 'BANK_PCount_SmokeMul', RandomRange[4, 8] * $/VFX_Bank/FxLodLevel_from_05to1 ),
+                        ( 'BANK_PCount_SparksMul', 0 ),
+                        ( 'BANK_PCount_SmokeStarterMul', RandomRange[1, 2] * $/VFX_Bank/FxLodLevel_from_05to1 ),
+                    ]
+                ),
+            Template_ActionCall
+                (
+                    Action = $/VFX_Bank/BANK_Light_Follow_Mobile_Random_Flash
+                    NamedParameters = MAP[
+                        ( 'parSizeLBU'          , 27.9069767442 ),
+                        ( 'parColor'            , float3[1,0.5,0] ),
+                        ( 'parPosition'         , float3[0.0, 0.0, 1000] ),
+                        ( 'parDuration'         , parDuration ),
+                        ( 'parAlpha'            , 0.65 ),
+                    ]
+                ),
+            ]
+        )
+    ]
+)
+
+export FX_Vehicule_Dest_Fire_Avion is SimultaneousActionDeclaration
+(
+    Params =
+    [
+        private parScaleFactor is Template_Param_Float (DefaultValue = 1 ),
+        private parDuration is Template_Param_Float (),
+    ]
+    Actions =
+    [
+        Simultaneous
+        (
+            Actions =
+            [
+                Template_ActionCall
+                (
+                    Action = $/VFX_Bank/BANK_DarkFireCompo
+                    NamedParameters = MAP[
+                        ( 'BANK_Radius', RandomRange[1100, 1300]),
+                        ( 'BANK_Lifetime', parDuration ),
+                        ( 'BANK_ScaleFactor', parScaleFactor ),
+                        ( 'BANK_FLammeSizeMul', RandomRange[2, 6] ),    // RandomRange[2.25, 3.5] )
+                        ( 'BANK_PCount_FireMul', RandomRange[0.33, 0.66] * $/VFX_Bank/FxLodLevel_from_05to1 ),
+                        ( 'BANK_PCount_SmokeMul', RandomRange[4, 8] * $/VFX_Bank/FxLodLevel_from_05to1 ),
+                        ( 'BANK_PCount_SparksMul', 0 ),
+                        ( 'BANK_PCount_SmokeStarterMul', RandomRange[1, 2] * $/VFX_Bank/FxLodLevel_from_05to1 ),
+                    ]
+                ),
+            Template_ActionCall
+                (
+                    Action = $/VFX_Bank/BANK_Light_Follow_Mobile_Random_Flash
+                    NamedParameters = MAP[
+                        ( 'parSizeLBU'          , 27.9069767442 ),
+                        ( 'parColor'            , float3[1,0.5,0] ),
+                        ( 'parPosition'         , float3[0.0, 0.0,200] ),
+                        ( 'parDuration'         , parDuration),
+                        ( 'parAlpha'            , 0.5 ),
+                    ]
+                ),
+            ]
+        )
+    ]
+)

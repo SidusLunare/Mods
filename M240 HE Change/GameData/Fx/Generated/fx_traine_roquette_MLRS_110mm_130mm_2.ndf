@@ -1,0 +1,207 @@
+// Ne pas éditer, ce fichier est généré
+
+export fx_traine_roquette_MLRS_110mm_130mm_2 is SimultaneousActionDeclaration
+(
+    Params =
+    [
+        private parBombTrajectory is TActionAlias( ExpectedType = 'bool' DefaultValue = false ),
+        private parDestination is TActionAlias( ExpectedType = 'float3' DefaultValue = float3[100000,0,0] ),
+        private parFlyDuration is TActionAlias( ExpectedType = 'float' DefaultValue = 7.564738 ),
+        private parImpactOnGround is TActionAlias( ExpectedType = 'bool' DefaultValue = false ),
+        private parInitialShotDelay is TActionAlias( ExpectedType = 'float' DefaultValue = 0 ),
+        private parInitialSpeed is TActionAlias( ExpectedType = 'float3' DefaultValue = float3[18811.93,14903.34,0] ),
+        private parPower is TActionAlias( ExpectedType = 'float' DefaultValue = 10 ),
+        private parShotCount is TActionAlias( ExpectedType = 'int' DefaultValue = 1 ),
+        private parShotOnGround is TActionAlias( ExpectedType = 'bool' DefaultValue = false ),
+        private parTirPhysic is TActionAlias( ExpectedType = 'bool' DefaultValue = false ),
+        private parTirTendu is TActionAlias( ExpectedType = 'bool' DefaultValue = true ),
+        private parWaitBetweenShot is TActionAlias( ExpectedType = 'float' DefaultValue = 0.5 ),
+    ]
+    Actions =
+    [
+        TActionDescriptorFireAndForget
+        (
+            EffetToLaunch = Action is TSimultaneousAction
+            (
+                Actions = ActionList
+            )
+            ActionList is
+            [
+                TActionCall
+                (
+                    Action = $/VFX_Bank/ProjectileMover
+                    NamedParams = MAP[
+                        ( 'AbsoluteEndPosition', parDestination ),
+                        ( 'BombTrajectory', parBombTrajectory ),
+                        ( 'DurationInSec', parFlyDuration ),
+                        ( 'InitialSpeed', parInitialSpeed ),
+                        ( 'UsePhysicSolver', parTirPhysic ),
+                        ( 'UseTirTendu', parTirTendu ),
+                    ]
+                ),
+                TWaitInSec( Duration = parFlyDuration ),
+                TSimultaneousAction
+                (
+                    Mobile = nil
+                    Actions =
+                    [
+                        TActionCall
+                        (
+                            Action = $/VFX_Bank/BANK_Light_Fade_Simple
+                            NamedParams = MAP[
+                                ( 'parColor', float3[1,0.7529413,0.5019608] ),
+                                ( 'parDuration', parFlyDuration ),
+                                ( 'parDurationRatio', 0.1 ),
+                                ( 'parHeight', 0 ),
+                                ( 'parOpacity', 0.2 ),
+                                ( 'parSizeLBU', 23.25581 ),
+                            ]
+                        ),
+                        TActionCall
+                        (
+                            Action = $/VFX_Bank/FX_BANK_Rocket_Fire_Simple
+                            NamedParams = MAP[
+                                ( 'DurationInSec', parFlyDuration ),
+                                ( 'parLength', 10 ),
+                                ( 'parOpacity', 3 ),
+                                ( 'parStopSpawnerRatio', 0.07 ),
+                                ( 'parWidth', 4 ),
+                            ]
+                        ),
+                        TActionCall
+                        (
+                            Action = $/VFX_Bank/Smoke_Trail_Continuous_Simple
+                            NamedParams = MAP[
+                                ( 'parColor1', float3[0.9921569,0.5411765,0.1607843] ),
+                                ( 'parColor2', float3[1,0.5450981,0.227451] ),
+                                ( 'parColor3', float3[1,0.5137255,0.1607843] ),
+                                ( 'parColorKey1', 0.5 ),
+                                ( 'parColorKey2', 0.5 ),
+                                ( 'parDistance', 2000 ),
+                                ( 'parOpacity', 0.95 ),
+                                ( 'parSize1', 300 ),
+                                ( 'parSize2', 150 ),
+                                ( 'parSmokeDuration', 0.04 ),
+                            ]
+                        ),
+                        TActionCall
+                        (
+                            Action = $/VFX_Bank/Smoke_Trail_Simple
+                            NamedParams = MAP[
+                                ( 'DurationInSec', parFlyDuration ),
+                                ( 'parColor1', float3[0.9960785,0.9921569,0.9921569] ),
+                                ( 'parColor2', float3[0.5294118,0.5294118,0.5294118] ),
+                                ( 'parColor3', float3[0.4078432,0.4078432,0.4078432] ),
+                                ( 'parColorKey1', 0.65 ),
+                                ( 'parColorKey2', 0.6 ),
+                                ( 'parDispersion', 75 ),
+                                ( 'parDistance', 400 ),
+                                ( 'parLifeDuration', 0.15 ),
+                                ( 'parOpacity', 0.1 ),
+                                ( 'parSize1', 750 ),
+                                ( 'parSize2', 2000 ),
+                                ( 'parStopSpawnerRatio', 1 ),
+                            ]
+                        ),
+                        TActionCall
+                        (
+                            Action = $/VFX_Bank/Smoke_Trail_Simple
+                            NamedParams = MAP[
+                                ( 'DurationInSec', parFlyDuration ),
+                                ( 'parColor1', float3[0.9960785,0.9921569,0.9921569] ),
+                                ( 'parColor2', float3[0.7333333,0.7333333,0.7333333] ),
+                                ( 'parColor3', float3[0.4901961,0.4901961,0.4901961] ),
+                                ( 'parColorKey1', 0.5 ),
+                                ( 'parColorKey2', 0.5 ),
+                                ( 'parDispersion', 100 ),
+                                ( 'parDistance', 400 ),
+                                ( 'parLifeDuration', 2 ),
+                                ( 'parOpacity', 0.1 ),
+                                ( 'parSize1', 400 ),
+                                ( 'parSize2', 2000 ),
+                                ( 'parStopSpawnerRatio', 0.03 ),
+                            ]
+                        ),
+                        TActionCall
+                        (
+                            Action = $/VFX_Bank/Smoke_Trail_Simple
+                            NamedParams = MAP[
+                                ( 'DurationInSec', parFlyDuration ),
+                                ( 'parColor1', float3[1,0.7529413,0.5019608] ),
+                                ( 'parColor2', float3[1,0.7529413,0.5019608] ),
+                                ( 'parColor3', float3[0.2,0.2,0.2] ),
+                                ( 'parColorKey1', 1 ),
+                                ( 'parColorKey2', 1 ),
+                                ( 'parDispersion', 80 ),
+                                ( 'parDistance', 200 ),
+                                ( 'parLifeDuration', 0.1 ),
+                                ( 'parOpacity', 0.8 ),
+                                ( 'parSize1', 500 ),
+                                ( 'parSize2', 1400 ),
+                                ( 'parStopSpawnerRatio', 0.07 ),
+                            ]
+                        ),
+                        TActionCall
+                        (
+                            Action = $/VFX_Bank/Smoke_Trail_Simple
+                            NamedParams = MAP[
+                                ( 'DurationInSec', parFlyDuration ),
+                                ( 'parColor1', float3[0.1764706,0.1764706,0.1764706] ),
+                                ( 'parColor2', float3[0.2392157,0.2392157,0.2392157] ),
+                                ( 'parColor3', float3[0.2235294,0.2235294,0.2235294] ),
+                                ( 'parColorKey1', 0.7 ),
+                                ( 'parColorKey2', 0.5 ),
+                                ( 'parDispersion', 90 ),
+                                ( 'parDistance', 400 ),
+                                ( 'parLifeDuration', 2 ),
+                                ( 'parOpacity', 0.15 ),
+                                ( 'parSize1', 400 ),
+                                ( 'parSize2', 2000 ),
+                                ( 'parStopSpawnerRatio', 0.07 ),
+                            ]
+                        ),
+                        TWaitInSec( Duration = 7.56 + parFlyDuration),
+                    ]
+                ),
+                TSimultaneousAction
+                (
+                    Mobile = TMobileWithLocalRepereMatrixFactory
+                    (
+                        Position = float3[46,-3,0]
+                    )
+                    Actions =
+                    [
+                        TActionCall
+                        (
+                            Action = $/VFX_Bank/BANK_Traine_Roquette_Simple
+                            NamedParams = MAP[
+                                ( 'DurationInSec', parFlyDuration ),
+                                ( 'RocketMeshId', 13 ),
+                                ( 'RocketScale', 1.5 ),
+                                ( 'parSFXId', 3 ),
+                            ]
+                        ),
+                        TActionCall
+                        (
+                            Action = $/VFX_Bank/Dummy_Traine
+                            NamedParams = MAP[
+                                ( 'parDummyBombTrajectory', parBombTrajectory ),
+                                ( 'parDummyDestination', parDestination ),
+                                ( 'parDummyFlyDuration', parFlyDuration ),
+                                ( 'parDummyImpactOnGround', parImpactOnGround ),
+                                ( 'parDummyInitialSpeed', parInitialSpeed ),
+                                ( 'parDummyPower', parPower ),
+                                ( 'parDummyShotCount', parShotCount ),
+                                ( 'parDummyShotOnGround', parShotOnGround ),
+                                ( 'parDummyTirPhysic', parTirPhysic ),
+                                ( 'parDummyTirTendu', parTirTendu ),
+                                ( 'parDummyTraineInitialShotDelay', parInitialShotDelay ),
+                                ( 'parDummyWaitBetweenShot', parWaitBetweenShot ),
+                            ]
+                        ),
+                    ]
+                ),
+            ]
+        )
+    ]
+)

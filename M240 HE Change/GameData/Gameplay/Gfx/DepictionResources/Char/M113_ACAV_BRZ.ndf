@@ -1,0 +1,15 @@
+export ModelFile_M113_ACAV_BRZ is "GameData:/Assets/3D/Units/BRZ/APC/M113_RCL/M113_RCL.fbx"
+export Modele_M113_ACAV_BRZ is TResourceMesh
+(
+    Mesh=ModelFile_M113_ACAV_BRZ
+)
+export ModelFile_M113_ACAV_BRZ_MID is "GameData:/Assets/3D/Units/BRZ/APC/M113_RCL_MID/M113_RCL_MID.fbx"
+export Modele_M113_ACAV_BRZ_MID is TResourceMesh
+(
+    Mesh=ModelFile_M113_ACAV_BRZ_MID
+)
+export ModelFile_M113_ACAV_BRZ_LOW is "GameData:/Assets/3D/Units/BRZ/APC/M113_RCL_LOW/M113_RCL_LOW.fbx"
+export Modele_M113_ACAV_BRZ_LOW is TResourceMesh
+(
+    Mesh=ModelFile_M113_ACAV_BRZ_LOW
+)

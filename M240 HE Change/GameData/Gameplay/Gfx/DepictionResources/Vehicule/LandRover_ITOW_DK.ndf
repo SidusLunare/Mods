@@ -1,0 +1,19 @@
+export Modele_LandRover_ITOW_DK is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/DK/Vehicule/LandRover_TOW/LandRover_TOW.fbx"
+)
+
+export Modele_LandRover_ITOW_DK_MID is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/DK/Vehicule/LandRover_TOW_MID/LandRover_TOW_MID.fbx"
+)
+
+export Modele_LandRover_ITOW_DK_LOW is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/DK/Vehicule/LandRover_TOW_LOW/LandRover_TOW_LOW.fbx"
+)
+
+export Modele_LandRover_ITOW_DK_Tourelle_01 is TResourceMesh
+(
+    Mesh=ModelFile_TOW_T1
+)

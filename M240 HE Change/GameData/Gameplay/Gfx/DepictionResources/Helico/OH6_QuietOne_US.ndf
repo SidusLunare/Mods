@@ -1,0 +1,14 @@
+export Modele_OH6_QuietOne_US is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/US/Helico/OH6_QuietOne/OH6_QuietOne.fbx"
+)
+
+export Modele_OH6_QuietOne_US_MID is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/US/Helico/OH6_QuietOne_MID/OH6_QuietOne_MID.fbx"
+)
+
+export Modele_OH6_QuietOne_US_LOW is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/US/Helico/OH6_QuietOne_LOW/OH6_QuietOne_LOW.fbx"
+)

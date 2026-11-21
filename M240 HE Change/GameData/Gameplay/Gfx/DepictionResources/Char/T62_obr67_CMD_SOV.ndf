@@ -1,0 +1,14 @@
+export Modele_T62_obr67_CMD_SOV is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/URSS/Char/T62_CMD/T62_CMD.fbx"
+)
+
+export Modele_T62_obr67_CMD_SOV_MID is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/URSS/Char/T62_CMD_MID/T62_CMD_MID.fbx"
+)
+
+export Modele_T62_obr67_CMD_SOV_LOW is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/URSS/Char/T62_CMD_LOW/T62_CMD_LOW.fbx"
+)

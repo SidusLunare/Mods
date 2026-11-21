@@ -1,0 +1,14 @@
+export Modele_M113A2_PNMK_DK is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/DK/APC/M113A2_PNMK/M113A2_PNMK.fbx"
+)
+
+export Modele_M113A2_PNMK_DK_MID is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/DK/APC/M113A2_PNMK_MID/M113A2_PNMK_MID.fbx"
+)
+
+export Modele_M113A2_PNMK_DK_LOW is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/DK/APC/M113A2_PNMK_LOW/M113A2_PNMK_LOW.fbx"
+)

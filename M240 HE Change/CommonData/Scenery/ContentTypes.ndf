@@ -1,0 +1,16 @@
+// Keep in sync with ContentTypeCaption in StatisticsVideoBufferAllocators.cpp
+ContentType_Unknown                                   is 0
+ContentType_MeshBucket_LevelBuild_High                is 1
+ContentType_MeshBucket_LevelBuild_Mid                 is 2
+ContentType_MeshBucket_LevelBuild_Low                 is 3
+ContentType_IndividualMesh_LevelBuild_High            is 4
+ContentType_IndividualMesh_LevelBuild_Mid             is 5
+ContentType_IndividualMesh_LevelBuild_Low             is 6
+ContentType_IndividualMesh_LevelBuild_VeryLow         is 7
+ContentType_MeshBucket_LevelBuild_ImposteurSource     is 8
+ContentType_IndividualMesh_LevelBuild_ImposteurSource is 9
+ContentType_MeshBucket_LevelBuild_ImposteurRender     is 10
+ContentType_MeshBucket_LevelBuild_Vegetation_Tree     is 11
+ContentType_Sticker                                   is 12
+ContentType_Misc                                      is 13
+ContentType_Editor                                    is 14

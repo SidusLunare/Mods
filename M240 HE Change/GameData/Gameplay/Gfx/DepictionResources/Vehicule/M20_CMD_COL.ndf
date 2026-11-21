@@ -1,0 +1,3 @@
+export Modele_M20_CMD_COL     is TResourceMesh( Mesh="GameData:/Assets/3D/Units/COL/Vehicule/M20_Scout_Car/M20_Scout_Car.fbx" )
+export Modele_M20_CMD_COL_MID is TResourceMesh( Mesh="GameData:/Assets/3D/Units/COL/Vehicule/M20_Scout_Car_MID/M20_Scout_Car_MID.fbx" )
+export Modele_M20_CMD_COL_LOW is TResourceMesh( Mesh="GameData:/Assets/3D/Units/COL/Vehicule/M20_Scout_Car_LOW/M20_Scout_Car_LOW.fbx" )

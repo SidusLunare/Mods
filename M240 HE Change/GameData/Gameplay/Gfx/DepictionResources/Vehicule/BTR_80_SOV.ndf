@@ -1,0 +1,14 @@
+export Modele_BTR_80_SOV is TResourceMesh
+(
+    Mesh=ModelFile_BTR_80_SOV
+)
+
+export Modele_BTR_80_SOV_MID is TResourceMesh
+(
+    Mesh=ModelFile_BTR_80_SOV_MID
+)
+
+export Modele_BTR_80_SOV_LOW is TResourceMesh
+(
+    Mesh=ModelFile_BTR_80_SOV_LOW
+)

@@ -1,0 +1,22 @@
+export Modele_T55A_CMD_CUB is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/POL/Char/T55A_CMD/T55A_CMD.fbx"
+    Textures="GameData:/Assets/3D/Units/CUBA/Char/T55A_CMD"
+)
+
+export Modele_T55A_CMD_CUB_MID is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/POL/Char/T55A_CMD_MID/T55A_CMD_MID.fbx"
+    Textures="GameData:/Assets/3D/Units/CUBA/Char/T55A_CMD_MID"
+)
+
+export Modele_T55A_CMD_CUB_LOW is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/POL/Char/T55A_CMD_LOW/T55A_CMD_LOW.fbx"
+    Textures="GameData:/Assets/3D/Units/CUBA/Char/T55A_CMD_LOW"
+)
+
+export Modele_T55A_CMD_CUB_Tourelle_02 is TResourceMesh
+(
+    Mesh=ModelFile_DShK_127mm_t2
+)

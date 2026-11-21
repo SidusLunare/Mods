@@ -1,0 +1,116 @@
+WargameMatchSetupConstantes is TWargameMatchSetupTunableConstante
+(
+    // /!\ MERCI DE RESPECTER L'ORDRE ALPHABETIQUE !
+    // Par catégories puis par constante.
+
+    // 0 is No Time Limit
+    TimeLimitTable = [20, 30, 40, 60, 0]
+    DefaultTimeLimitInMinutes = 40
+
+//--------------------------- Constantes Conquest ---------------------------------------//
+
+    DefaultMoneyWinPerAllianceRateInConquestMode = 3 // medium
+    TimeBeforeEarningConquestPoints = 1.5 // en secondes
+
+    // Tokens de localisation pour le niveau d'income
+    //                                            none         very_low     low         medium      high         very_high
+    MoneyWinLocalisationTokensInConquestMode = [ 'CONQ_NONE', 'CONQ_VLOW', 'CONQ_LOW', 'CONQ_MED', 'CONQ_HIGH', 'CONQ_VHIGH' ]
+
+    // Multiplicateur de points de commandement gagnes par joueur par période de TimeBeforeEarningCommandPoints en mode conquete
+    //                                   none  very_low    low   medium   high    very_high
+    MoneyWinPerAllianceInConquestMode = [  0,      0.5,   0.75,      1,    1.5,       2]
+
+    ConquestPossibleScores =
+    [
+        1000,//1000 par défaut, 1800 (30mn) en limité
+        2000,//2000 par défaut, 2100 (35mn) en limité
+        4000,//4000 par défaut, 2400 (45mn) en limité
+    ]
+
+    CoeffMoneyMaxIfUsingUpkeep = 1.5
+
+//-------------------------- Constantes Economy -----------------------------------------//
+
+    BaseIncome = MAP
+    [
+        (ECombatRule/NotSpecified,   0),
+        (ECombatRule/Conquest,       260),
+        (ECombatRule/Destruction,    4),
+    ]
+    DefaultIncomeMultiplierIndex    = 3 // normal
+    //                   none   very_low   low      normal    high     very_high
+    IncomeMultiplier = [   0,    0.5,    0.75,       1,      1.25,       1.5 ]
+    TimeBeforeEarningCommandPointsSkirmish = MAP
+    [
+        (ECombatRule/NotSpecified,   60.0),
+        (ECombatRule/Conquest,       60.0),
+        (ECombatRule/Destruction,     4.0),
+    ]
+    TimeBeforeEarningCommandPointsStrategicBattleground = 60.0
+
+    TimeBeforeEarningCommandPointsFactorToAddByNbPlayers = //Facteur de TimeBeforeEarningCommandPoints à ajouter selon des paliers de joueurs
+                [
+                    (10,    0.1), // à partir de 10 joueurs, 10% de délai pour l'income
+                    (20,    0.3)  // à partir de 20 joueurs, 30% de délai pour l'income
+                ]
+
+//--------------------------- Constantes Destruction ---------------------------------------//
+
+    DefaultIncomeMultiplierIndexInDestructionMode = 3 // medium
+
+    // Tokens de localisation pour le niveau d'income
+    //                                            none         very_low     low         medium
+    IncomeMultiplierTokensInDestructionMode = [ 'CONQ_NONE', 'CONQ_VLOW', 'CONQ_LOW', 'CONQ_MED']
+
+    // Multiplicateur de points de commandement gagnes par joueur par période de TimeBeforeEarningCommandPoints en mode conquete
+    //                                   none  very_low    low   medium
+    IncomeMultiplierInDestructionMode = [  0,      0.5,   0.75,      1]
+
+//------------------------ Constantes Lobby ---------------------------------------//
+
+    ConquestPointsDefaultIndex = 1 //Indice dans ConquestPossibleScores
+    DefaultArgentInitial = 1500
+    ArgentInitialSetting =
+    [
+        500,
+        1000,
+        1500,
+        2000,
+        2500,
+        3000,
+    ]
+
+    DefaultDestructionScoreToReachSetting =
+    [
+        3000,
+        4000,
+        5000,
+        6000,
+        8000,
+        0,
+    ]
+
+    ArgentInitialMinimumPourGererLIA = 250
+    VictoryTypeDestructionLevelsTable = MAP
+    [
+        // Syntaxe :
+        // (Argent Initial Courant, [liste des valeurs de scoreToReach possibles pour cette valeur d'argent initial avec 0 signifiant Total Destruction]),
+        //Toute nouvelle valeur d'ArgentInitial doit apparaitre dans VictoryTypeDestructionLevelsTable du fichier GDConstants.ndf
+        (500,  [3000, 4000, 5000, 6000, 8000, 0]),
+        (750,  [3000, 4000, 5000, 6000, 8000, 0]),
+        (1000, [3000, 4000, 5000, 6000, 8000, 0]),
+        (1500, [3000, 4000, 5000, 6000, 8000, 0]),
+        (2000, [3000, 4000, 5000, 6000, 8000, 0]),
+        (2500, [3000, 4000, 5000, 6000, 8000, 0]),
+        (3000, [3000, 4000, 5000, 6000, 8000, 0]),
+        //(6000, [5000, 5500, 6000, 6500, 7000, 0]),
+    ]
+
+    UpkeepPercentAvailableSettings =
+    [
+        0,
+        5,
+        7
+    ]
+    UpkeepPercentDefaultSetting = 0
+)

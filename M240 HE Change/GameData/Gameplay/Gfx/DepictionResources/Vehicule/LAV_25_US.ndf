@@ -1,0 +1,17 @@
+export Modele_LAV_25_US     is TResourceMesh
+(
+    Mesh='GameData:/Assets/3D/Units/US/APC/LAV25/LAV25.fbx'
+    Textures='GameData:/Assets/3D/Units/US/APC/LAV25_Marines'
+)
+
+export Modele_LAV_25_US_MID is TResourceMesh
+(
+    Mesh='GameData:/Assets/3D/Units/US/APC/LAV25_MID/LAV25_MID.fbx'
+    Textures='GameData:/Assets/3D/Units/US/APC/LAV25_Marines_MID'
+)
+
+export Modele_LAV_25_US_LOW is TResourceMesh
+(
+    Mesh='GameData:/Assets/3D/Units/US/APC/LAV25_LOW/LAV25_LOW.fbx'
+    Textures='GameData:/Assets/3D/Units/US/APC/LAV25_Marines_LOW'
+)

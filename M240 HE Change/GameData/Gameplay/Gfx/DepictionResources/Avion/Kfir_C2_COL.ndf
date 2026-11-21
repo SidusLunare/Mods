@@ -1,0 +1,19 @@
+export Modele_Kfir_C2_COL is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/COL/Avion/Kfir_C2/Kfir_C2.fbx"
+)
+
+export Modele_Kfir_C2_COL_MID is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/COL/Avion/Kfir_C2_MID/Kfir_C2_MID.fbx"
+)
+
+export Modele_Kfir_C2_COL_LOW is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/COL/Avion/Kfir_C2_LOW/Kfir_C2_LOW.fbx"
+)
+
+export Modele_Kfir_C2_COL_train is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/COL/Avion/Kfir_C2/Kfir_C2_train.fbx"
+)

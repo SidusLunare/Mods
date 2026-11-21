@@ -1,0 +1,23 @@
+// hack pour indiquer à l'éditeur tous les paramètres à afficher, même s'ils ne sont pas tous utilisés.
+
+export Dummy_Traine is SimultaneousActionDeclaration
+(
+    Params =
+    [
+        private parDummyPower is Template_ActionAlias( ExpectedType = 'float' ),
+        private parDummyShotOnGround is Template_ActionAlias( ExpectedType = 'bool' ),
+        private parDummyDestination is Template_ActionAlias( ExpectedType = 'float3' ),
+        private parDummyBombTrajectory is Template_Param_Bool( DefaultValue = false ),
+        private parDummyTirPhysic is Template_ActionAlias( ExpectedType = 'bool' ),
+        private parDummyTirTendu is Template_ActionAlias( ExpectedType = 'bool' ),
+        private parDummyInitialSpeed is Template_ActionAlias( ExpectedType = 'float3' ),
+        private parDummyFlyDuration is Template_ActionAlias( ExpectedType = 'float' ),
+        private parDummyShotCount is Template_ActionAlias( ExpectedType = 'int' ),
+        private parDummyWaitBetweenShot is Template_ActionAlias( ExpectedType = 'float' ),
+        private parDummyTraineInitialShotDelay is Template_ActionAlias( ExpectedType = 'float' ),
+        private parDummyImpactOnGround is Template_ActionAlias( ExpectedType = 'bool' ),
+    ]
+    Actions =
+    [
+    ]
+)

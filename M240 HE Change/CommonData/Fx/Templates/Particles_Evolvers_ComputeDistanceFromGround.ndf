@@ -1,0 +1,8 @@
+template Template_ComputeDistanceFromGround
+[
+    Position                : TEvaluable[required] = nil,
+] is TParticleEvolver_ComputeDistanceFromGround
+(
+    World = $/M3D/Scene/DefaultWorld
+    Position = <Position>
+)

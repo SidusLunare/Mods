@@ -1,0 +1,6 @@
+Juncture is TBaseClass
+(
+    Tactic        is 0
+    Strategic     is 1
+    OutGame       is 2
+)

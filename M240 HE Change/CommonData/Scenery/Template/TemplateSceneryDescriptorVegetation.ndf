@@ -1,0 +1,455 @@
+VegetationImposteurManager is $/SceneryDB/MainImposteurManager
+SmallVegetationImposteurManager is $/SceneryDB/NoLightingImposteurManager
+
+VegetationAlphaHighMeshBucketDico  is $/SceneryBase/SceneryMeshBucketHandlerDicoVegetationAlphaHigh
+VegetationOpaqueHighMeshBucketDico is $/SceneryBase/SceneryMeshBucketHandlerDicoVegetationHigh
+
+VegetationAlphaMidMeshBucketDico  is $/SceneryBase/SceneryMeshBucketHandlerDicoVegetationAlphaMid
+VegetationOpaqueMidMeshBucketDico is $/SceneryBase/SceneryMeshBucketHandlerDicoVegetationMid
+//-----------------------------------------------------------------------------------
+//***********************************************************************************
+//-----------------------------------------------------------------------------------
+template SceneryDescriptor_Vegetation_Impostor
+[
+    ModelOpaque,
+    ModelAlpha,
+    ModeMask,
+    StaticQuantizer,
+    SmallVegetation,
+] is TSceneryDescriptorImpostor
+(
+    VegetationModelAlpha  is <ModelAlpha>
+    VegetationModelOpaque is <ModelOpaque>
+
+    SceneryDescriptor =
+    [
+        TSceneryDescriptorModel3DForImpostor
+        (
+            Resource                     = TResourceMesh( Mesh=VegetationModelAlpha )
+            ModeMask                     = <ModeMask>
+            MaterialTextureDico          = $/M3D/Misc/MaterialTextureDico
+            SceneryMeshBucketHandlerDico = ( <SmallVegetation> ? $/SceneryBase/SceneryMeshBucketHandlerDicoSmallVegetationInImposteurWorld : $/SceneryBase/SceneryMeshBucketHandlerDicoAlphaInImposteurWorld )
+            ContentTypeIfIndividualMesh  = ContentType_IndividualMesh_LevelBuild_ImposteurSource
+        )
+    ] +
+    ( ( <ModelOpaque> == '' ) ? [] :
+    [
+        TSceneryDescriptorModel3DForImpostor
+        (
+            Resource                     = TResourceMesh( Mesh=VegetationModelOpaque )
+            ModeMask                     = <ModeMask>
+            MaterialTextureDico          = $/M3D/Misc/MaterialTextureDico
+            SceneryMeshBucketHandlerDico = $/SceneryBase/SceneryMeshBucketHandlerDicoOpaqueInImposteurWorld
+            ContentTypeIfIndividualMesh  = ContentType_IndividualMesh_LevelBuild_ImposteurSource
+        )
+    ]
+    )
+
+    QuadSceneryMeshBucketHandlerIndex = ( <SmallVegetation> ? 1 : 0 )
+    ImposteurManager                  = ( <SmallVegetation> ? SmallVegetationImposteurManager : VegetationImposteurManager )
+    StaticQuantizer                   = <StaticQuantizer>
+)
+//-----------------------------------------------------------------------------------
+//***********************************************************************************
+//-----------------------------------------------------------------------------------
+template SceneryDescriptor_Vegetation_Model3D
+[
+    FileName                     : string,
+    ModeMask                     : int,
+    SceneryMeshBucketHandlerDico : TSceneryMeshBucketHandlerDico,
+] is TSceneryDescriptorModel3D
+(
+    Resource                       = TResourceMesh( Mesh=<FileName> )
+    ModeMask                       = <ModeMask>
+    MaterialTextureDico            = $/M3D/Misc/MaterialTextureDico
+    SceneryMeshBucketHandlerDico   = <SceneryMeshBucketHandlerDico>
+)
+//-----------------------------------------------------------------------------------
+//***********************************************************************************
+//-----------------------------------------------------------------------------------
+template SceneryDescriptor_Vegetation_Model_Imposteur_Low
+[
+    ModelFoliage     : string     = '',
+    ModelTrunkHigh   : string     = '',
+    ModelTrunkMid    : string     = '',
+    StaticQuantizer  : int        = 1,
+    LodConfig        : TLodConfig,
+] is TSceneryDescriptorMultiLOD
+(
+    VegetationModelFoliage     is <ModelFoliage>
+    VegetationModelTrunkHigh   is <ModelTrunkHigh>
+    VegetationModelTrunkMid    is <ModelTrunkMid>
+
+    SymbolDatabaseProxy = $/M3D/Scene/LevelBuildSymbolDatabaseProxy
+
+    FoliageHigh is SceneryDescriptor_Vegetation_Model3D
+    (
+        FileName                     = VegetationModelFoliage
+        ModeMask                     = SDMode_High_NotBaked + SDMode_OnlyBaked
+        SceneryMeshBucketHandlerDico = VegetationAlphaHighMeshBucketDico
+    )
+
+    TrunkHigh is SceneryDescriptor_Vegetation_Model3D
+    (
+        FileName                     = VegetationModelTrunkHigh
+        ModeMask                     = SDMode_High_NotBaked + SDMode_OnlyBaked
+        SceneryMeshBucketHandlerDico = VegetationOpaqueHighMeshBucketDico
+    )
+
+    FoliageMid is SceneryDescriptor_Vegetation_Model3D
+    (
+        FileName                     = VegetationModelFoliage
+        ModeMask                     = SDMode_Mid
+        SceneryMeshBucketHandlerDico = VegetationAlphaMidMeshBucketDico
+    )
+
+    TrunkMid is SceneryDescriptor_Vegetation_Model3D
+    (
+        FileName                     = VegetationModelTrunkMid
+        ModeMask                     = SDMode_Mid
+        SceneryMeshBucketHandlerDico = VegetationOpaqueMidMeshBucketDico
+    )
+
+    Imposteur is SceneryDescriptor_Vegetation_Impostor
+    (
+        ModelAlpha               = <ModelFoliage>
+        ModelOpaque              = <ModelTrunkHigh>
+        ModeMask                 = SDMode_Low
+        StaticQuantizer          = <StaticQuantizer>
+        SmallVegetation          = false
+    )
+
+    LodConfig = <LodConfig>
+    High =
+        (<ModelFoliage> != '' ? [ FoliageHigh ] : []) +
+        (<ModelTrunkHigh> != '' ? [ TrunkHigh ] : [])
+    Mid =
+        (<ModelFoliage> != '' ? [ FoliageMid ] : []) +
+        (<ModelTrunkHigh> != '' ? [ TrunkMid ] : [])
+    Low = [ Imposteur ]
+)
+//-----------------------------------------------------------------------------------
+//***********************************************************************************
+//-----------------------------------------------------------------------------------
+template SceneryDescriptor_Vegetation_ModelHigh_ImposteurMidLow
+[
+    ModelFoliage         : string     = '',
+    ModelTrunk           : string     = '',
+    StaticQuantizer      : int    = 1,
+    LodConfig            : TLodConfig,
+] is TSceneryDescriptorMultiLOD
+(
+    // ModelFoliage : feuilles de l'arbre (alpha test / alpha coverage)
+    // ModelTrunk : tronc de l'arbre (pas de transparence)
+    VegetationModelFoliage is <ModelFoliage>
+    VegetationModelTrunk   is <ModelTrunk>
+
+    HighModeMask is SDMode_High_NotBaked
+
+    SymbolDatabaseProxy = $/M3D/Scene/LevelBuildSymbolDatabaseProxy
+
+    Foliage is SceneryDescriptor_Vegetation_Model3D
+    (
+        FileName                     = VegetationModelFoliage
+        ModeMask                     = HighModeMask
+        SceneryMeshBucketHandlerDico = VegetationAlphaHighMeshBucketDico
+    )
+
+    Trunk is SceneryDescriptor_Vegetation_Model3D
+    (
+        FileName                     = VegetationModelTrunk
+        ModeMask                     = HighModeMask
+        SceneryMeshBucketHandlerDico = VegetationOpaqueHighMeshBucketDico
+    )
+
+    Imposteur is SceneryDescriptor_Vegetation_Impostor
+    (
+        ModelAlpha               = <ModelFoliage>
+        ModelOpaque              = <ModelTrunk>
+        ModeMask                 = SDMode_Mid + SDMode_Low
+        StaticQuantizer          = <StaticQuantizer>
+        SmallVegetation          = false
+    )
+
+    LodConfig = <LodConfig>
+    High = [ Foliage ] + ( <ModelTrunk> != '' ? [ Trunk ] : [])
+    Mid = [ Imposteur ]
+    Low = [ Imposteur ]
+)
+//-----------------------------------------------------------------------------------
+//***********************************************************************************
+//-----------------------------------------------------------------------------------
+template SceneryDescriptor_Vegetation_AlwaysImposted
+[
+    Model           : string     = '',
+    StaticQuantizer : int    = 1,
+    SmallVegetation : bool       = false,
+    LodConfig       : TLodConfig,
+] is TSceneryDescriptorMultiLOD
+(
+    SymbolDatabaseProxy = $/M3D/Scene/LevelBuildSymbolDatabaseProxy
+
+    Imposteur is SceneryDescriptor_Vegetation_Impostor
+    (
+        ModelAlpha               = <Model>
+        ModelOpaque              = ''
+        ModeMask                 = SDMode_High_NotBaked + SDMode_Mid + SDMode_Low
+        StaticQuantizer          = <StaticQuantizer>
+        SmallVegetation          = <SmallVegetation>
+    )
+
+    LodConfig = <LodConfig>
+    High = [ Imposteur ]
+    Mid = [ Imposteur ]
+    Low = [ Imposteur ]
+)
+//-----------------------------------------------------------------------------------
+//***********************************************************************************
+//-----------------------------------------------------------------------------------
+template SceneryDescriptor_Vegetation_Destroyable
+[
+    RegistrationName  : string,
+    Tags              : LIST<string> = [],
+    Intact            : TBaseClass = nil,
+    Destroyed         : TBaseClass = nil,
+    StateMaskHidden   : int = SDMask_Hidden,
+    FxDestruction,
+] is SceneryDescriptor_Destroyable
+(
+    RegistrationName = <RegistrationName>
+    Tags = <Tags>
+
+    StateMaskHidden    = <StateMaskHidden>
+    StateMaskDestroyed = SDMask_SquashOrDestroy
+
+    Destroyed   = <Destroyed>
+    FxDestruction = <FxDestruction>
+
+    Fallback = <Intact>
+)
+//-----------------------------------------------------------------------------------
+//***********************************************************************************
+//-----------------------------------------------------------------------------------
+template SceneryDescriptor_Vegetation_Destroyable_WithModels
+[
+    RegistrationName  : string,
+    Tags              : LIST<string> = [],
+    SymbolDatabaseProxy : TLevelBuildSymbolDatabaseProxy = $/M3D/Scene/LevelBuildSymbolDatabaseProxy,
+    Intact            : TBaseClass = nil,
+    Destroyed         = [],
+    StateMaskHidden   : int = SDMask_Hidden,
+] is TSceneryDescriptorMultiState
+(
+    RegistrationName            = <RegistrationName>
+    Tags                        = <Tags>
+    SymbolDatabaseProxy         = <SymbolDatabaseProxy>
+
+    StateMaskHidden = <StateMaskHidden>
+
+    Fallback = <Intact>
+    Alternatives =
+    [
+        TSceneryDescriptorMultiStateEntry
+        (
+            StateMask = SDMask_SquashOrDestroy
+            SceneryDescriptors = <Destroyed>
+        )
+    ]
+)
+//-----------------------------------------------------------------------------------
+//***********************************************************************************
+//-----------------------------------------------------------------------------------
+template SceneryDescriptor_Vegetation_Tree
+[
+    RegistrationName     : string,
+    Tags                 : LIST<string> = [],
+    AdditionalHiddenMask : int = 0,
+    ModelFoliage         : string,
+    ModelTrunkHigh       : string = '',
+    ModelTrunkMid        : string = '',
+    Destroyed            : TBaseClass = nil,
+    FxDestruction        : TBaseClass = nil,
+] is SceneryDescriptor_Vegetation_Destroyable
+(
+    RegistrationName = <RegistrationName>
+    Tags = <Tags>
+    StateMaskHidden  = SDMask_Hidden + <AdditionalHiddenMask>
+
+    Destroyed   = <FxDestruction> == nil ? <Destroyed> : nil
+    FxDestruction = <FxDestruction>
+
+    // high model, mid model, low imposteur
+    Intact = SceneryDescriptor_Vegetation_Model_Imposteur_Low
+    (
+        ModelFoliage         = <ModelFoliage>
+        ModelTrunkHigh       = <ModelTrunkHigh>
+        ModelTrunkMid        = <ModelTrunkMid>
+
+        StaticQuantizer      = 8
+
+        LodConfig            = $/SceneryDB/LodConfig_Tree
+    )
+)
+//-----------------------------------------------------------------------------------
+template SceneryDescriptor_Vegetation_Tree_WithDestModels
+[
+    RegistrationName     : string,
+    Tags                 : LIST<string> = [],
+    AdditionalHiddenMask : int = 0,
+    ModelFoliage         : string,
+    ModelTrunkHigh       : string = '',
+    ModelTrunkMid        : string = '',
+    DestroyedModels      = [],
+] is SceneryDescriptor_Vegetation_Destroyable_WithModels
+(
+    RegistrationName = <RegistrationName>
+    Tags = <Tags>
+    StateMaskHidden  = SDMask_Hidden + <AdditionalHiddenMask>
+
+    Destroyed   = <DestroyedModels>
+
+    // high model, mid model, low imposteur
+    Intact = SceneryDescriptor_Vegetation_Model_Imposteur_Low
+    (
+        ModelFoliage         = <ModelFoliage>
+        ModelTrunkHigh       = <ModelTrunkHigh>
+        ModelTrunkMid        = <ModelTrunkMid>
+
+        StaticQuantizer      = 8
+
+        LodConfig            = $/SceneryDB/LodConfig_Tree
+    )
+)
+template SceneryDescriptor_TreeDest_WithTransitionFX
+[
+    ModelFoliage     : string,
+    ModelTrunkHigh   : string = '',
+    ModelTrunkMid    : string = '',
+    FxDestruction    : TBaseClass = nil,
+] is TSceneryDescriptorMultiMode
+(
+    SymbolDatabaseProxy = $/M3D/Scene/LevelBuildSymbolDatabaseProxy
+
+    ArbreDetruit is SceneryDescriptor_Vegetation_Model_Imposteur_Low
+    (
+        ModelFoliage         = <ModelFoliage>
+        ModelTrunkHigh       = <ModelTrunkHigh>
+        ModelTrunkMid        = <ModelTrunkMid>
+
+        StaticQuantizer      = 3
+
+        LodConfig = $/SceneryDB/LodConfig_Tree
+    )
+
+    ModeEntry =
+    [
+        <FxDestruction>,
+        ArbreDetruit,
+    ]
+)
+template SceneryDescriptor_BushDest_WithTransitionFX
+[
+    ModelFoliage     : string,
+    ModelTrunk       : string = '',
+    FxDestruction    : TBaseClass = nil,
+] is TSceneryDescriptorMultiMode
+(
+    SymbolDatabaseProxy = $/M3D/Scene/LevelBuildSymbolDatabaseProxy
+
+    BuissonDetruit is SceneryDescriptor_Vegetation_ModelHigh_ImposteurMidLow
+    (
+        ModelFoliage    = <ModelFoliage>
+        ModelTrunk      = <ModelTrunk>
+        StaticQuantizer = 2
+        LodConfig       = $/SceneryDB/LodConfig_Tree
+    )
+
+    ModeEntry =
+    [
+        <FxDestruction>,
+        BuissonDetruit,
+    ]
+)
+//-----------------------------------------------------------------------------------
+//***********************************************************************************
+//-----------------------------------------------------------------------------------
+template SceneryDescriptor_Vegetation_Bush
+[
+    RegistrationName     : string,
+    Tags                 : LIST<string> = [],
+    AdditionalHiddenMask : int = 0,
+    ModelFoliage         : string,
+    ModelTrunk           : string = '',
+    Destroyed            : TBaseClass = nil,
+    FxDestruction        : TBaseClass = nil,
+] is SceneryDescriptor_Vegetation_Destroyable
+(
+    RegistrationName = <RegistrationName>
+    Tags = <Tags>
+    StateMaskHidden  = SDMask_Hidden + <AdditionalHiddenMask>
+
+    Destroyed   = <FxDestruction> == nil ? <Destroyed> : nil
+    FxDestruction = <FxDestruction>
+
+    // high model, mid imposteur, low imposteur
+    Intact = SceneryDescriptor_Vegetation_ModelHigh_ImposteurMidLow
+    (
+        ModelFoliage    = <ModelFoliage>
+        ModelTrunk      = <ModelTrunk>
+        StaticQuantizer = 6
+        LodConfig       = $/SceneryDB/LodConfig_Tree
+    )
+)
+//-----------------------------------------------------------------------------------
+template SceneryDescriptor_Vegetation_Bush_WithDestModels
+[
+    RegistrationName     : string,
+    Tags                 : LIST<string> = [],
+    AdditionalHiddenMask : int = 0,
+    ModelFoliage         : string,
+    ModelTrunk           : string = '',
+    DestroyedModels      = [],
+] is SceneryDescriptor_Vegetation_Destroyable_WithModels
+(
+    RegistrationName = <RegistrationName>
+    Tags = <Tags>
+    StateMaskHidden  = SDMask_Hidden + <AdditionalHiddenMask>
+
+    Destroyed   = <DestroyedModels>
+
+    // high model, mid model, low imposteur
+    Intact = SceneryDescriptor_Vegetation_ModelHigh_ImposteurMidLow
+    (
+        ModelFoliage    = <ModelFoliage>
+        ModelTrunk      = <ModelTrunk>
+        StaticQuantizer = 6
+        LodConfig       = $/SceneryDB/LodConfig_Tree
+    )
+)
+//-----------------------------------------------------------------------------------
+//***********************************************************************************
+//-----------------------------------------------------------------------------------
+template SceneryDescriptor_Vegetation_SmallVeget
+[
+    RegistrationName     : string,
+    Tags                 : LIST<string> = [],
+    Model                : string,
+    Destroyed            : TBaseClass = nil,
+    FxDestruction           : TBaseClass = nil,
+] is SceneryDescriptor_Vegetation_Destroyable
+(
+    RegistrationName = <RegistrationName>
+    Tags = <Tags>
+    StateMaskHidden  = SDMask_Hidden + SDMask_HideVeget
+
+    Destroyed   = <FxDestruction> == nil ? <Destroyed> : nil
+    FxDestruction = <FxDestruction>
+
+    Intact = SceneryDescriptor_Vegetation_AlwaysImposted
+    (
+        Model           = <Model>
+        StaticQuantizer = 1
+        SmallVegetation = true
+        LodConfig       = $/SceneryDB/LodConfig_Vegetable
+    )
+)

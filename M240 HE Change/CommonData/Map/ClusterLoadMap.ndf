@@ -1,0 +1,298 @@
+export ClusterLoadMap is TCompositeCluster
+(
+    GameModeName is (~/MapJuncture == Juncture/Tactic ? "GameModeTactic" :
+                    (~/MapJuncture == Juncture/Strategic ? "GameModeStrategic" : "GameModeOutGame"))
+
+    SubClusterList =
+    [
+    $/IA/Launcher/ClusterResetGameInfo,
+    TClusterWorldMobile
+    (
+        WorldList =
+        [
+            $/M3D/Scene/DefaultWorld,
+            $/M3D/Scene/WorldImposteur,
+            $/M3D/Scene/WorldImposteurNoLighting,
+            $/M3D/Scene/WorldInterface2D,
+            $/M3D/Scene/World_SparseDBRTex,
+        ]
+    ),
+    TClusterCleanupSoundEngine
+    (
+        ForOutgame = (~/MapJuncture == Juncture/OutGame)
+    ),
+    TClusterInitialisation_OnlyInResourceLoad
+    (
+        SubCluster = TClusterMountMapDataPack
+        (
+            DataPackList = [
+                "UserDatapacks:/Maps/" + ~/MapName + ".dat",
+                "UserDatapacks:/Maps/" + ~/MapName + "_Stickers.dat",
+                "UserDatapacks:/Maps/" + ~/MapName + "_Shooting.dat",
+
+                // compat with existing Steam installs
+                "UserDatapacks:/Maps/PC/" + ~/MapName + ".dat",
+                "UserDatapacks:/Maps/PC/" + ~/MapName + "_Stickers.dat",
+                "UserDatapacks:/Maps/PC/" + ~/MapName + "_Shooting.dat",
+            ]
+            LevelBuildDirectory = "DatasMap/" + ~/MapName
+            MountingPoint   = "DatasMap"
+        )
+    ),
+    TemplateClusterLoadForNoEditor
+    (
+        Files =
+        [
+            "GameData:/Map/MenuEscape.ndf",
+        ]
+        BaseName  = "Map/MenuEscape.txn"
+        NameSpace = "MenuEscape"
+    ),
+
+    TemplateClusterLoadNDF
+    (
+        Files =
+        [
+            "CommonData:/System/WorldUnits.ndf",
+            "GameData:/System/Range.ndf",
+            "GameData:/Scenery/DecorsSetNames.ndf",
+            "CommonData:/Map/Template/MapJuncture.ndf",
+            "CommonData:/Map/Template/MapTextures.ndf",
+            "CommonData:/Map/Template/MapConstantes.ndf",
+            "CommonData:/UserInterface/Use/UICommonEnum.ndf",
+            "LevelBuildData:/" + ~/MapName + "/GraphicSettings.ndf",
+            "LevelBuildData:/" + ~/MapName + "/Map.ndf",
+        ]
+        BaseName  = "Maps/" + ~/MapName + "/MapConstante.txn"
+        NameSpace = "MapConstante"
+        Public = true
+    ),
+    TemplateClusterLoadNDF
+    (
+        BaseName = "ClusterApplyGraphicSettings.txn"
+        NameSpace = "ClusterApplyGraphicSettings"
+
+        Files = [ "CommonData:/Map/ApplyGraphicSettings.ndf" ]
+    ),
+    TClusterStartNamedCluster(SubClusterName = "ClusterApplyGraphicSettings/ApplyGraphicSettings"),
+    TemplateClusterLoadNDF
+    (
+        Files =
+        [ "GameData:/System/GridConstants.ndf" ]
+        + (~/MapJuncture == Juncture/OutGame ? [ "GameData:/System/MapInfoOutgame.ndf" ] : [])
+        + (~/MapJuncture == Juncture/Strategic ? [ "GameData:/System/MapInfoStrategic.ndf" ] : [])
+        + (~/MapJuncture == Juncture/Tactic ? [ "GameData:/System/MapInfoTactic.ndf" ] : [])
+        BaseName  = "MapInfoHolder_" + GameModeName + ".txn"
+        NameSpace = "MapConstante"
+    ),
+
+    TClusterMountAdditionalDatapack
+    (
+        MountingPoint = "LevelBuildMapPath"
+        Directory = "LevelBuildData:/" + ~/MapName
+        DatapackFileName = "Maps/" + ~/MapName + "_Details.dat"
+    ),
+
+    // Ensure all jobs are completed before unloading the datapack
+    TClusterSyncAsyncJobs(),
+
+    TemplateClusterLoadNDFForEditor
+    (
+        Files =
+        [
+            "CommonData:/Editor/GeoDatabases.ndf",
+        ]
+        BaseName  = "GeoDatabases.txn"
+        NameSpace = "GeoDatabases"
+    ),
+    TClusterInitialisation_EditorDependent
+    (
+        SubClusterModeNoEditor = TClusterInitialisation_OnlyInResourceLoad
+        (
+            SubCluster = TClusterLoadBinaryLevelBuild
+            (
+                FileName = "DatasMap:/Output/save.lbh"
+                SymbolDatabaseProxy = $/M3D/Scene/LevelBuildSymbolDatabaseProxy
+                LevelBuildHierarchyProxy = $/M3D/Scene/LevelBuildHierarchyProxy
+            )
+        )
+    ),
+    TClusterImposteurs
+    (
+        ImposteurSystem = $/SceneryDB/ImposteurSystem
+    ),
+    TemplateClusterLoadNDF
+    (
+        Files =
+        [
+            "CommonData:/Map/CaseQueryExtent.ndf",
+            "CommonData:/Map/ShootingInfo.ndf",
+            "CommonData:/Map/TerrainCDLODGenerator.ndf",
+            "CommonData:/Map/WaterRenderer.ndf",
+            "CommonData:/Scene/TextureContentTypes.ndf",
+            "CommonData:/System/FxSystem.ndf",
+            "CommonData:/UserInterface/Use/UICommonEnum.ndf",
+        ]
+        BaseName  = "MapTerrain.txn"
+        NameSpace = "MapTerrain"
+    ),
+    TemplateClusterLoadForNoEditor
+    (
+        Files =
+        [
+            "CommonData:/Scenery/Base/SceneryDescriptorConstants.ndf",
+            "CommonData:/System/JobsPriority.ndf",
+            "GameData:/System/Range.ndf",
+            "CommonData:/Map/CaseQueryExtent.ndf",
+            "CommonData:/Map/Habilleur_LevelBuild.ndf",
+            "CommonData:/Map/Habilleur_Templates.ndf",
+            "CommonData:/Map/StaticTerrainManagers.ndf",
+            "GameData:/Map/Habilleur_SparseDBRTex.ndf",
+        ]
+        BaseName  = "DecorsHabilleurs.txn"
+        NameSpace = "DecorsHabilleurs"
+    ),
+    TemplateClusterLoadNDFForEditor
+    (
+        Files =
+        [
+            "CommonData:/Scenery/Base/SceneryDescriptorConstants.ndf",
+            "CommonData:/System/JobsPriority.ndf",
+            "GameData:/System/Range.ndf",
+            "CommonData:/Editor/LayerSettings.ndf",
+            "CommonData:/Map/CaseQueryExtent.ndf",
+            "CommonData:/Map/Habilleur_Templates.ndf",
+            "CommonData:/Map/Habilleur_StateDB_Template.ndf",
+            "CommonData:/Map/Habilleur_Editor_Templates.ndf",
+            "CommonData:/Map/Habilleur_LevelBuild_Editor.ndf",
+            "GameData:/Map/Habilleur_SparseDBRTex.ndf",
+            "GameData:/Map/Habilleur_StateDB.ndf",
+        ]
+        BaseName  = "DecorsHabilleursEditor.txn"
+        NameSpace = "DecorsHabilleursEditor"
+    ),
+    TemplateClusterLoadNDFForEditor
+    (
+        NameSpace = "MapGeneration"
+        BaseName  = "Map/MapGeneration.txn"
+
+        Files =
+        [
+            "CommonData:/Editor/BakingTaskSet.ndf",
+            "CommonData:/Editor/TerrainGeneration.ndf",
+            "CommonData:/Editor/TerrainLayers.ndf",
+            "CommonData:/Map/CaseQueryExtent.ndf",
+            "CommonData:/Scenery/Base/SceneryDescriptorConstants.ndf",
+        ]
+    ),
+    TemplateClusterLoadNDFForNoFinal
+    (
+        Files =
+        [
+            "CommonData:/System/DebugTools.ndf",
+            "GameData:/System/DebugTools.ndf",
+        ]
+        BaseName  = "DebugTools.txn"
+        NameSpace = "DebugTools"
+    ),
+    TClusterSetMapJuncture
+    (
+        Juncture = ~/MapJuncture
+    ),
+    TClusterReloadable
+    (
+        ReloadType = EReloadableType/Gameplay
+        SubCluster = TCompositeCluster
+        (
+            SubClusterList =
+            [
+                ~/MapJuncture == Juncture/OutGame ?
+                TemplateClusterLoadForNoEditor
+                (
+                    Files =
+                    [
+                        "CommonData:/Map/Bootstrap/BootstrapOutGame.ndf"
+                    ]
+                    BaseName  = "Scenario/Bootstrap/OutGame.txn"
+                    NameSpace = "MapIA"
+                ) : (~/MapJuncture == Juncture/Strategic ?
+                TemplateClusterLoadForNoEditor
+                (
+                    Files =
+                    [
+                        "CommonData:/Map/Bootstrap/BootstrapStrategic.ndf"
+                    ]
+                    BaseName  = "Scenario/Bootstrap/Strategic.txn"
+                    NameSpace = "MapIA"
+                ) :
+                TemplateClusterLoadForNoEditor
+                (
+                    Files =
+                    [
+                        "CommonData:/Map/Bootstrap/BootstrapTactic.ndf"
+                    ]
+                    BaseName  = "Scenario/Bootstrap/Tactic.txn"
+                    NameSpace = "MapIA"
+                )),
+                TemplateClusterLoadForNoEditor
+                (
+                    Files =
+                    [
+                        "CommonData:/System/CommandNames.ndf",
+                        "GameData:/Map/Template/MapIA.ndf",
+                    ]
+                    BaseName  = "Map/MapIA.txn"
+                    NameSpace = "MapIA"
+                ),
+                TemplateClusterLoadForNoEditor
+                (
+                    Files =
+                    [
+                        "GameData:/Feedbacks/InfluenceMapFeedback.ndf",
+                    ]
+                    BaseName  = "Misc/Feedbacks.txn"
+                    NameSpace = "Feedbacks"
+                ),
+            ]
+        )
+    ),
+    ]
+    + (~/MapJuncture == Juncture/OutGame ?
+    [
+        TClusterInitLaunchMapHelperForOutGame(),
+    ] : [])
+    + (~/MapJuncture == Juncture/Tactic ?
+    [
+        TemplateClusterLoadNDFForNoFinal
+        (
+            Files =
+            [
+                "CommonData:/Keyboard/KeyboardEventNotFinalTactic.ndf",
+            ]
+            BaseName  = "Misc/KeyboardShortcutsTactic.txn"
+            NameSpace = "KeyboardShortcuts"
+        ),
+        TemplateClusterLoadForNoEditor
+        (
+            Files =
+            [
+                "CommonData:/Keyboard/InGameKeyCommands.ndf",
+                "CommonData:/Keyboard/KeyboardEventFinalTactic.ndf",
+            ]
+            BaseName  = "Misc/KeyboardShortcutsTacticFinal.txn"
+            NameSpace = "KeyboardShortcuts"
+        ),
+    ] : [])
+    + (~/MapJuncture == Juncture/Strategic ?
+    [
+        TemplateClusterLoadNDFForNoFinal
+        (
+            Files =
+            [
+                "CommonData:/Keyboard/KeyboardEventNotFinalStrategic.ndf",
+            ]
+            BaseName  = "Misc/KeyboardShortcutsStrategic.txn"
+            NameSpace = "KeyboardShortcuts"
+        ),
+    ] : [])
+)

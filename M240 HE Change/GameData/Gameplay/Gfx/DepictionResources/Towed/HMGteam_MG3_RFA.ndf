@@ -1,0 +1,6 @@
+export ModelFile_HMGteam_MG3_RFA is "GameData:/Assets/3D/Ammo/Armes/HMG_trepied/MG3.fbx"
+export ModelFile_HMGteam_MG3_RFA_MID is "GameData:/Assets/3D/Ammo/Armes/HMG_trepied/MG3.fbx"
+export ModelFile_HMGteam_MG3_RFA_LOW is "GameData:/Assets/3D/Ammo/Armes/HMG_trepied/MG3.fbx"
+export Modele_HMGteam_MG3_RFA is TResourceMesh( Mesh=ModelFile_HMGteam_MG3_RFA)
+export Modele_HMGteam_MG3_RFA_MID is TResourceMesh( Mesh=ModelFile_HMGteam_MG3_RFA_MID)
+export Modele_HMGteam_MG3_RFA_LOW is TResourceMesh( Mesh=ModelFile_HMGteam_MG3_RFA_LOW)

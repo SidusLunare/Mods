@@ -1,0 +1,88 @@
+
+template Template_UnaryFunctionSat
+[
+    Param: TEvaluable[required],
+] is TIntrinsicCall_1Param
+(
+    Intrinsic = $/System/EvaluableIntrinsics/sat
+    Param = <Param>
+)
+
+template Template_UnaryFunctionNot
+[
+    Param: TEvaluable[required],
+] is TIntrinsicCall_1Param
+(
+    Intrinsic = $/System/EvaluableIntrinsics/not
+    Param = <Param>
+)
+
+template Template_UnaryFunctionNegate
+[
+    Param: TEvaluable[required],
+] is TIntrinsicCall_1Param
+(
+    Intrinsic   = $/System/EvaluableIntrinsics/negate
+    Param       = <Param>
+)
+
+template Template_UnaryFunctionNormalized
+[
+    Param : TEvaluable[required],
+] is TIntrinsicCall_1Param
+(
+    Intrinsic = $/System/EvaluableIntrinsics/normalized
+    Param     = <Param>
+)
+
+template Template_UnaryFunctionLength
+[
+    Param : TEvaluable[required],
+] is TIntrinsicCall_1Param
+(
+    Intrinsic   = $/System/EvaluableIntrinsics/length
+    Param       = <Param>
+)
+
+template Template_UnaryFunctionGet_x[Param : TEvaluable[required]] is TIntrinsicCall_1Param
+(
+    Intrinsic   = $/System/EvaluableIntrinsics/getX
+    Param       = <Param>
+)
+
+template Template_UnaryFunctionGet_y[Param : TEvaluable[required]] is TIntrinsicCall_1Param
+(
+    Intrinsic   = $/System/EvaluableIntrinsics/getY
+    Param       = <Param>
+)
+
+template Template_UnaryFunctionGet_z[Param : TEvaluable[required]] is TIntrinsicCall_1Param
+(
+    Intrinsic   = $/System/EvaluableIntrinsics/getZ
+    Param       = <Param>
+)
+
+
+template Template_UnaryFunctionGet_xxx[Param : TEvaluable[required]] is TIntrinsicCall_1Param
+(
+    Intrinsic   = $/System/EvaluableIntrinsics/getXXX
+    Param       = <Param>
+)
+
+template Template_UnaryFunctionGet_yyy[Param : TEvaluable[required]] is TIntrinsicCall_1Param
+(
+    Intrinsic   = $/System/EvaluableIntrinsics/getYYY
+    Param       = <Param>
+)
+
+template Template_UnaryFunctionGet_zzz[Param : TEvaluable[required]] is TIntrinsicCall_1Param
+(
+    Intrinsic   = $/System/EvaluableIntrinsics/getZZZ
+    Param       = <Param>
+)
+
+template Template_UnaryFunctionGet_xy0[Param : TEvaluable[required]] is TIntrinsicCall_1Param
+(
+    Intrinsic   = $/System/EvaluableIntrinsics/getXY0
+    Param       = <Param>
+)

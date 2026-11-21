@@ -1,0 +1,14 @@
+export Modele_BTR_60_CHAIKA_CMD_SOV is TResourceMesh
+(
+    Mesh=ModelFile_BTR_60_CHAIKA_CMD_SOV
+)
+
+export Modele_BTR_60_CHAIKA_CMD_SOV_MID is TResourceMesh
+(
+    Mesh=ModelFile_BTR_60_CHAIKA_CMD_SOV_MID
+)
+
+export Modele_BTR_60_CHAIKA_CMD_SOV_LOW is TResourceMesh
+(
+    Mesh=ModelFile_BTR_60_CHAIKA_CMD_SOV_LOW
+)

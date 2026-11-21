@@ -1,0 +1,5 @@
+template ParticleRendererNull
+[
+] is TParticleRenderer_Null
+(
+)

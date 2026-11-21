@@ -1,0 +1,7 @@
+// Sync with StrategicCasualtiesType.h
+ECasualties is TBaseClass
+(
+    NoCasualties is 0
+    Casualties is 1
+    Disabled is 2
+)

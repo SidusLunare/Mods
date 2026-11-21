@@ -1,0 +1,14 @@
+export Modele_VBC_90_CMD_FR is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/FR/Vehicule/VBC_90_CMD/VBC_90_CMD.fbx"
+)
+
+export Modele_VBC_90_CMD_FR_MID is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/FR/Vehicule/VBC_90_CMD_MID/VBC_90_CMD_MID.fbx"
+)
+
+export Modele_VBC_90_CMD_FR_LOW is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/FR/Vehicule/VBC_90_CMD_LOW/VBC_90_CMD_LOW.fbx"
+)

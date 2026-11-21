@@ -1,0 +1,19 @@
+template template_BricoGrass
+[
+    Name: string,
+    Vegetation0 = [],
+    Vegetation1 = [],
+    Vegetation2 = [],
+    Vegetation3 = [],
+] is TBricoGrassTextureSet
+(
+    Vegetation0TextureSet = <Vegetation0>
+    Vegetation1TextureSet = <Vegetation1>
+    Vegetation2TextureSet = <Vegetation2>
+    Vegetation3TextureSet = <Vegetation3>
+    VegetationTextureArray = TGrassTextureArray
+    (
+        DiffuseTextureArrayName = "VirtualData:/DiffuseGrassTextureArray_" + <Name>
+        HullTextureArrayName = "VirtualData:/HullGrassTextureArray_" + <Name>
+    )
+)
