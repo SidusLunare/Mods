@@ -1,7 +1,0 @@
-template ParticleRendererSticker
-[
-] is TParticleRenderer_Sticker
-(
-    WorldFloorProxy = $/M3D/Scene/WorldFloorForOnlyGround
-    Camera = $/M3D/Scene/FxCameraProvider_CameraPrincipale
-)

@@ -1,7 +1,0 @@
-export StandardRenderer is ParticleRendererStandard()
-export RealSticker is ParticleRendererSticker()
-export RotorRenderer is ParticleRendererRotor()
-export NullRenderer is ParticleRendererNull()
-export PointLightRendererLBU is TParticleRenderer_PointLight(LightingEnvironment = $/M3D/Environment/GlobalLightingEnvironment)
-export LitParticleRenderer is TParticleRenderer_LitParticle()
-export LitParticleRendererNoCentroidPositioning is TParticleRenderer_LitParticle(DoNotUseCentroidAsCenterOfScale =true)

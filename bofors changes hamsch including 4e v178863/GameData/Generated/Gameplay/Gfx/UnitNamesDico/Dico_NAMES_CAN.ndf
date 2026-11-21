@@ -1,7 +1,0 @@
-// Ne pas éditer, ce fichier est généré par UnitNameDicoFileWriter
-
-unnamed TLocalisationDicoResource
-(
-    DicoToken = "NAMES_CAN"
-    FileName = "GameData:/Gameplay/Unit/Names/NAMES_CAN.csv"
-)

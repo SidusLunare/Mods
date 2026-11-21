@@ -1,7 +1,0 @@
-TacticUniteDescriptorConstantes is TEntityDescriptorConstantes
-(
-    TeamUnitDescriptor                = ~/Tactic_TeamUnitDescriptor
-    AllianceUnitDescriptor            = ~/Tactic_AllianceUnitDescriptor
-    GroupUnitDescriptor               = ~/Tactic_ModularUnitGroupDescriptor
-    FakeTargetDescriptor              = ~/Tactic_Descriptor_Unit_FakeTarget
-)

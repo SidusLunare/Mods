@@ -1,7 +1,0 @@
-// Synchronized with RotateAroundAttackStrategyDescriptor.h
-EAirplaneRotateAroundPolicy is TBaseClass
-(
-    TurnLeft is 0
-    TurnRight is 1
-    TurnBothSides is 2
-)

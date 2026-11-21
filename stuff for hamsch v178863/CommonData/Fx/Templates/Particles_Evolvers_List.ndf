@@ -1,9 +1,0 @@
-template Template_List
-[
-    Evolvers    : LIST<TParticleEvolverDescriptor>[required] = [],
-    Disabled    : boolean = false
-] is TParticleEvolver_List
-(
-    Evolvers = <Evolvers>
-    Disabled = <Disabled>
-)

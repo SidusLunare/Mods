@@ -1,8 +1,0 @@
-template Template_MobileFactoryStickOnGround
-[
-] is TMobileStickOnGroundFactory
-(
-    World3DForPick    = $/M3D/Scene/DefaultWorld
-    InitialScale = 1.0
-    MaxScale = 11.0
-)

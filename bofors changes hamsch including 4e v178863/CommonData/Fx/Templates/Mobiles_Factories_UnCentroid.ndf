@@ -1,6 +1,0 @@
-template MobileUnCentroid
-[
-] is TMobileWithLocalRepereMatrixFactory
-(
-    DoNotInheritCentroid = true
-)

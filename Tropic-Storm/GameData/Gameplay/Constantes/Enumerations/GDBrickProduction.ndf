@@ -1,6 +1,0 @@
-// Sync with GDProductionType.h
-EGDBrickProduction is TBaseClass
-(
-    Deck is 0
-    Groups is 1
-)

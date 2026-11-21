@@ -1,4 +1,0 @@
-export DynamicMeshManager is TDynamicMeshHelperManager
-(
-    MaterialTextureDico = $/M3D/Misc/MaterialTextureDico
-)

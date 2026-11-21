@@ -1,9 +1,0 @@
-template Initialiser_CreateTrailId
-[
-    ClusterCount                : TEvaluable = nil,
-    OverrideValueFromSpawner    : boolean = false,
-] is TParticleInitialiserCreateTrailId
-(
-    ClusterCount = <ClusterCount>
-    OverrideValueFromSpawner = <OverrideValueFromSpawner>
-)

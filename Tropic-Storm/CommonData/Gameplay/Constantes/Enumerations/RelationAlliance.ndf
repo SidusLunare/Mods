@@ -1,7 +1,0 @@
-// Sync with EnumRelationAlliance.h
-TRelationAlliance is TBaseClass
-(
-    Neutre is 0
-    Allie is 1
-    Ennemi is 2
-)

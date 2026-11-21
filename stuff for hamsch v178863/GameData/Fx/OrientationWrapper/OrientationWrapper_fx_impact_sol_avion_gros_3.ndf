@@ -1,5 +1,0 @@
-export OrientationWrapper_fx_impact_sol_avion_gros_3 is OrientationWrapper
-(
-    Action = fx_impact_sol_avion_gros_3
-    Angle = float3[-1, 0, 0]
-)

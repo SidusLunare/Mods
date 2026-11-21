@@ -1,6 +1,0 @@
-template ParticleRendererRotor
-[
-] is TParticleRenderer_Rotor
-(
-)
-

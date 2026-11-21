@@ -1,7 +1,0 @@
-template Template_EventHandlerCollection
-[
-    Handlers    : LIST<TParticleEventHandler>[required] = [],
-] is TParticleEventHandlerCollection
-(
-    Handlers = <Handlers>
-)

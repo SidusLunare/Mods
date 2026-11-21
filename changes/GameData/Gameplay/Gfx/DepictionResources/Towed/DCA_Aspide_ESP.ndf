@@ -1,4 +1,0 @@
-export Modele_DCA_Aspide_ESP is TResourceMesh( Mesh="GameData:/Assets/3D/Units/ESP/DCA/DCA_ASPIDE/DCA_ASPIDE.fbx")
-export Modele_DCA_Aspide_ESP_MID is TResourceMesh( Mesh="GameData:/Assets/3D/Units/ESP/DCA/DCA_ASPIDE_MID/DCA_ASPIDE_MID.fbx")
-export Modele_DCA_Aspide_ESP_LOW is TResourceMesh( Mesh="GameData:/Assets/3D/Units/ESP/DCA/DCA_ASPIDE_LOW/DCA_ASPIDE_LOW.fbx")
-export Modele_Missile_Aspide_1A is TResourceMesh( Mesh="GameData:/Assets/3D/Units/Ammo/Missiles/ITA/Aspide_1A/Aspide_1A.fbx" )

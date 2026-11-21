@@ -1,3 +1,0 @@
-export Modele_AT_T12R_Ruta_SOV is TResourceMesh ( Mesh="GameData:/Assets/3D/Units/URSS/Canon/AT_T12R_RUTA/AT_T12R_RUTA.fbx")
-export Modele_AT_T12R_Ruta_SOV_MID is TResourceMesh ( Mesh="GameData:/Assets/3D/Units/URSS/Canon/AT_T12R_RUTA_MID/AT_T12R_RUTA_MID.fbx")
-export Modele_AT_T12R_Ruta_SOV_LOW is TResourceMesh ( Mesh="GameData:/Assets/3D/Units/URSS/Canon/AT_T12R_RUTA_LOW/AT_T12R_RUTA_LOW.fbx")

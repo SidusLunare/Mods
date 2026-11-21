@@ -1,9 +1,0 @@
-template Template_EventHandlerBounce
-[
-    RestitutionCoefficient  : TEvaluable = TConstantFloat(Value = 0.7),
-    Condition   : TEvaluable = nil,
-] is TParticleEventHandlerBounce
-(
-    RestitutionCoefficient = <RestitutionCoefficient>
-    Condition = <Condition>
-)
