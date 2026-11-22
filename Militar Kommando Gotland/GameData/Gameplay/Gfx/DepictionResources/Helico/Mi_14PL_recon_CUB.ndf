@@ -1,0 +1,63 @@
+export Modele_Mi_14PL_recon_CUB is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/DDR/Helico/Mi_14PL_recon/Mi_14PL_recon.fbx"
+    Textures="GameData:/Assets/3D/Units/CUBA/Helico/Mi_14PL_recon"
+)
+
+export Modele_Mi_14PL_recon_CUB_MID is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/DDR/Helico/Mi_14PL_recon_MID/Mi_14PL_recon_MID.fbx"
+    Textures="GameData:/Assets/3D/Units/CUBA/Helico/Mi_14PL_recon_MID"
+)
+
+export Modele_Mi_14PL_recon_CUB_LOW is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/DDR/Helico/Mi_14PL_recon_LOW/Mi_14PL_recon_LOW.fbx"
+    Textures="GameData:/Assets/3D/Units/CUBA/Helico/Mi_14PL_recon_LOW"
+)
+
+Mi_14PL_landing_gears is TCosmeticLandingGearOperatorDesc
+(
+    OperatorId = 'landing_gears'
+    AnimationList = [
+        TBoneProceduralAnimation
+        (
+            BoneName = 'roue_avant'
+            Axis = 1
+            LimitValue = -120
+            Delay = 1
+            Duration = 2
+        ),
+        TBoneProceduralAnimation
+        (
+            BoneName = 'roue_arriere'
+            Axis = 1
+            LimitValue = 65
+            Delay = 1
+            Duration = 2
+        ),
+        TBoneProceduralAnimation
+        (
+            BoneName = 'bras_arriere'
+            Axis = 1
+            LimitValue = -20
+            Delay = 1
+            Duration = 2
+        ),
+        TBoneProceduralAnimation
+        (
+            BoneName = 'trappe'
+            Axis = 1
+            LimitValue = 85
+            Delay = 1
+            Duration = 2
+        ),
+    ]
+)
+
+export HandWritten_Mi_14PL_recon_CUB is TDepictionHandWrittenPart
+(
+    Operators = [
+        Mi_14PL_landing_gears
+    ]
+)

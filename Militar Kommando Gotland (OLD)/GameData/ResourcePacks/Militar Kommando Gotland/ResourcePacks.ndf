@@ -1,0 +1,17 @@
+
+unnamed TResourcePackLoader
+(
+    Packs =
+    [
+        TResourceDescriptorMeshPack
+        (
+            PackName = "Base"
+            PackRelativePath = "MeshPack/Militar Kommando Gotland/Mesh_All.spk"
+        ),
+        TResourceDescriptorProxyPack
+        (
+            PackName = "Base"
+            PackRelativePath = "TextureProxy/Militar Kommando Gotland/Mesh_All.ndfbin"
+        ),
+    ]
+)

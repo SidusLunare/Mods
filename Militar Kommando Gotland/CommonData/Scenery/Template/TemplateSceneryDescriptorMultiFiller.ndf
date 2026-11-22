@@ -1,0 +1,34 @@
+template template_MultiFillerEntry_Proxy
+[
+    SceneryDescriptorName : string,
+    BorderOffsetInMeters  : float = 0,
+    UVOffsetInMeters      : float2 = float2[0, 0],
+]
+is TSceneryDescriptorMultiFillerEntry
+(
+    SceneryDescriptor = TSceneryDescriptorProxy
+    (
+        AliasedRegistrationName = <SceneryDescriptorName>
+        SymbolDatabaseProxy = $/M3D/Scene/LevelBuildSymbolDatabaseProxy
+    )
+    BorderOffsetInLBU = <BorderOffsetInMeters>
+    UVOffsetInLBU = <UVOffsetInMeters>
+)
+//------------------------------------------------------------------------------
+template template_MultiFiller
+[
+    RegistrationName : string,
+    Tags : LIST<string> = [],
+    ColorCode : color = RGBA[0, 0, 0, 0],
+
+    Entries = [],
+]
+is TSceneryDescriptorMultiFiller
+(
+    RegistrationName = <RegistrationName>
+    Tags = <Tags>
+    ColorCode = <ColorCode>
+    SymbolDatabaseProxy = $/M3D/Scene/LevelBuildSymbolDatabaseProxy
+
+    Entries = <Entries>
+)

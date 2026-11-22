@@ -1,0 +1,14 @@
+export Modele_UH1H_Mamee_ESP is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/ESP/Helico/UH1H_Mamee/UH1H_Mamee.fbx"
+)
+
+export Modele_UH1H_Mamee_ESP_MID is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/ESP/Helico/UH1H_Mamee_MID/UH1H_Mamee_MID.fbx"
+)
+
+export Modele_UH1H_Mamee_ESP_LOW is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/ESP/Helico/UH1H_Mamee_LOW/UH1H_Mamee_LOW.fbx"
+)

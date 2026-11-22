@@ -37,6 +37,7 @@ StrategicResource is TUISpecificStrategicResources
     ]
 
     MainContainerResource       = ~/StrategicMainContainerResource
+    UnitNameResources           = ~/UICommonUnitNameResources
 
     CommonHUDResources          = ~/InGameHUDResource
     LabelResource               = ~/CommonLabelResource
@@ -46,14 +47,13 @@ StrategicResource is TUISpecificStrategicResources
     LabelsOnMapResources        = ~/StrategicLabelsOnMapResources
     ScriptedLabelResources      = ~/StrategicScriptedLabelResources
     FeedbackManagerDescriptor   = ~/StrategicFeedbackMessageManagerDescriptor
-    UnitLabelResource           = ~/SpecificStrategicUnitLabelResources
+    UnitLabelResources          = ~/SpecificStrategicUnitLabelResources
     BeaconLabelResources        = ~/CommonBeaconLabelResources
 
     SelectionHandlerInGameResources = ~/SelectionResources
     GroupSelectionReminderResources = ~/GroupSelectionReminder
     PositionEvents              = ~/MainPositionEvents
     MousePolicyManagerResources = ~/StrategicMousePolicyManagerResources
-    OptionManager               = $/GameOptionsInterface/GameOptionsInterfaceWrapper
 
     ShortcutUserInputLayer      = $/M3D/Input/UserInputLayerHandler/InputLayer_InGameShortcuts
     LDScriptUserInputLayer      =  $/M3D/Input/UserInputLayerHandler/InputLayer_LDScriptInterceptor
@@ -66,6 +66,7 @@ StrategicResource is TUISpecificStrategicResources
     StartBattleResources        = ~/UISpecificStrategicStartBattleViewDescriptor
     BattlePlanningResources     = ~/StrategicBattlePlanningResources
     ConnectedPlayersResources   = ~/UISpecificStrategicConnectedPlayersViewDescriptor
+    BattleOrderResources        = ~/StrategicBattleOrderResources
 
     PlayerNameDisplayDescriptor = ~/UISpecificStrategicPlayerNameDisplayViewDescriptor
     StrategicBattleResources    = ~/StrategicBattleResources
@@ -73,6 +74,7 @@ StrategicResource is TUISpecificStrategicResources
     PlayerTurnCheckerResources = ~/StrategicPlayerTurnCheckerResources
 
     StrategicWorldFloorProxy = $/M3D/Scene/WorldFloorOutMapProxy
+    CubeActionResources      = ~/StrategicCubeActionResources
 )
 
 //------------------------------------------------------------------------------------
@@ -245,8 +247,6 @@ private StrategicMainContainerResource is TUICommonMainContainerResource
                                 RelativeWidthHeight = [1.0, 0.0]
                                 MagnifiableWidthHeight = [0,120]
                             )
-
-                            //FitStyle = ~/ContainerFitStyle/FitToContentVertically
                         )
                     ),
 

@@ -1,0 +1,14 @@
+export Modele_Csepel_D344_trans_HON is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/HON/Vehicule/Csepel_D344_trans/Csepel_D344_trans.fbx"
+)
+
+export Modele_Csepel_D344_trans_HON_MID is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/HON/Vehicule/Csepel_D344_trans/Csepel_D344_trans.fbx"
+)
+
+export Modele_Csepel_D344_trans_HON_LOW is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/HON/Vehicule/Csepel_D344_trans/Csepel_D344_trans.fbx"
+)

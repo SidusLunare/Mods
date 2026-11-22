@@ -1,0 +1,173 @@
+// GameData:/Fx/Bank/Basics/BANK_Bomb_Distort.ndf
+// Call Test_Distort in FX Tester
+// ShockWave distortion
+export Test_Distort is Competition
+(
+    Mobile = Template_MobileWithLocalRepereMatrixFactory
+    (
+        InitialScale = TConstantFloat(Value = 1)
+        MaxScale = TConstantFloat(Value = 1)
+        DoNotInheritCentroid = True
+    )
+    Actions =
+    [
+        Template_ActionCall
+        (
+            Action = ~/BANK_Bomb_Distort
+        ),
+        WaitInSec( Duration = 10),
+    ]
+)
+
+export BANK_Bomb_Distort_Simple is ActionCallWithParameters
+(
+    Action = BANK_Bomb_Distort
+    Params =
+    [
+        private parPositionRelative is Template_Param_Float3( DefaultValue = float3[0,0,0]),
+        private parDuration         is Template_Param_Float (),
+        private parFinalSize        is Template_Param_Float (),
+        private parInitialSize      is Template_Param_Float (),
+        private parIntensity        is Template_Param_Float (),
+    ]
+    NamedParameters = MAP
+    [
+        ( 'parPosition'          , parPositionRelative ),
+        ( 'parDuration'          , parDuration ),
+        ( 'parFinalSize'         , parFinalSize * RandomRange[0.8, 1.25] ),
+        ( 'parInitialSize'       , parInitialSize * RandomRange[0.8, 1.25] ),
+        ( 'parDistanceIntensity' , parIntensity * RandomRange[0.8, 1.25] ),
+        ( 'parZBias'             , 1000 )
+    ]
+)
+
+export BANK_Bomb_Distort_Plane_Simple is ActionCallWithParameters
+(
+    Action = BANK_Bomb_Distort_Plane
+    Params =
+    [
+        parDuration    is Template_Param_Float (),
+        parFinalSize   is Template_Param_Float (),
+        parInitialSize is Template_Param_Float (),
+        parIntensity   is Template_Param_Float (),
+    ]
+    NamedParameters = MAP
+    [
+        ( 'parDuration'          , parDuration ),
+        ( 'parFinalSize'         , parFinalSize ),
+        ( 'parInitialSize'       , parInitialSize ),
+        ( 'parDistanceIntensity' , parIntensity ),
+        ( 'parZBias'             , 1000 ),
+    ]
+)
+
+export BANK_Bomb_Distort is SimultaneousActionDeclaration
+(
+    Params =
+    [
+        private parPosition             is Template_Param_Float3    ( DefaultValue = float3[0,0,0] ),
+        private parInitialSize          is Template_Param_Float     ( DefaultValue = 200 ),
+        private parFinalSize            is Template_Param_Float     ( DefaultValue = 1500 ),
+        private parDuration             is Template_Param_Float     ( DefaultValue = 1 ),
+        private parDistanceIntensity    is Template_Param_Float     ( DefaultValue = 100000 ),
+        private parZBias                is Template_Param_Float     ( DefaultValue = 0 ),
+        private parCount                is Template_Param_Int       ( DefaultValue = 10 ),
+    ]
+    Actions =
+    [
+        private Bomb_Distort is ParticleBombSpawner
+        (
+            ParticleMaxDurationForSpawnSkip = parDuration * 1.1
+            Count = parCount
+            Spawner =  ParticleSpawner
+            (
+                ParticleLifetime = parDuration
+                Initialisers =
+                [
+                    ParticleInitialiserList
+                    (
+                        Position = parPosition
+                        ColorModifier = LinearColor[1, 1, 1]
+
+                        Rotation = RandomUnit
+                        CustomFloat_1 = parInitialSize * HomogeneousUnit
+                        CustomFloat_2 = parFinalSize * HomogeneousUnit
+                        CustomFloat_3 = parDistanceIntensity
+                        CustomFloat_4 = parZBias
+                        Opacity = 1
+                        EmissivePower = 1
+                    )
+                ]
+                ParticleDescriptor = ParticleDescriptor
+                (
+                    RenderInfo = Template_DistortionParticleRenderInfo
+                    (
+                        SortTriangles = True
+                        TextureName = 'GameData:/Assets/2D/Fx/Distortion/distort_ring.png'
+                    )
+                    Evolvers = ParticleStandardEvolverList
+                    (
+                        Opacity = MapToLinearSmoothRect[ParticleLifeRatio, 0, 0.2, 0.5, 1] * sat[ParticleCustomFloat_3 div length[CameraPosition - ParticlePosition]]
+                        Size = lerp[ParticleLifeRatio, ParticleCustomFloat_1, ParticleCustomFloat_2]
+                        ZBias = ParticleCustomFloat_4
+                    )
+                    ParticleRenderer = LitParticleRenderer
+                )
+            )
+        ),
+    ]
+)
+export BANK_Bomb_Distort_Plane is SimultaneousActionDeclaration
+(
+    Params = [
+        parPosition             is Template_Param_Float3    ( DefaultValue = float3[0,0,0] ),
+        parInitialSize          is Template_Param_Float     ( DefaultValue = 200 ),
+        parFinalSize            is Template_Param_Float     ( DefaultValue = 1500 ),
+        parDuration             is Template_Param_Float     ( DefaultValue = 0.5 ),
+        parDistanceIntensity    is Template_Param_Float     ( DefaultValue = 100 ),
+        parZBias                is Template_Param_Float     ( DefaultValue = 0 ),
+        parCount                is Template_Param_Int       ( DefaultValue = 1 ),
+        parDirection            is Template_Param_Float3    ( DefaultValue = float3[0,0,1] ),
+    ]
+    Actions =
+    [
+        private Bomb_Distort is ParticleBombSpawner
+        (
+            ParticleMaxDurationForSpawnSkip = parDuration * 1.1
+            Count = parCount
+            Spawner =  ParticleSpawner
+            (
+                ParticleLifetime = parDuration
+                Initialisers =
+                [
+                    ParticleInitialiserList
+                    (
+                        UpVector= parDirection
+                        Position= parPosition
+                        ColorRGB= LinearColor[1, 1, 1]
+                        ColorMultiplier= 1
+                        CustomFloat_1= parInitialSize * HomogeneousUnit
+                        CustomFloat_2= parFinalSize * HomogeneousUnit
+                        CustomFloat_3= parDistanceIntensity
+                        CustomFloat_4= parZBias
+                    )
+                ]
+                ParticleDescriptor = ParticleDescriptor
+                (
+                    RenderInfo = Template_DistortionParticleRenderInfo
+                    (
+                        SortTriangles = True
+                        TextureName = 'GameData:/Assets/2D/Fx/Distortion/distort_ring2.png'
+                    )
+                    Evolvers = ParticleStandardEvolverList
+                    (
+                        Alpha = MapToLinearSmoothRect[ParticleLifeRatio, 0, 0.2, 0.5, 1] * ParticleCustomFloat_3 div length[CameraPosition - ParticlePosition]
+                        Size = lerp[ParticleLifeRatio, ParticleCustomFloat_1, ParticleCustomFloat_2]
+                        ZBias = ParticleCustomFloat_4
+                    )
+                    ParticleRenderer = Template_ParticleRendererPlane(StickOnGround = false)
+                )
+            )
+        ),
+    ]
+)

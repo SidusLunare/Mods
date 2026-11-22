@@ -76,9 +76,9 @@ export BANK_Water_Frags is SimultaneousActionDeclaration
                     ParticleRenderer = $/VFX_Bank/StandardRenderer
                     RenderInfo = ParticleRenderInfo
                     (
-                        OpaqueParticle = True
-                        ZTest = True
-                        SortTriangles = True
+                        OpaqueParticle = true
+                        ZTest = true
+                        SortTriangles = true
                         Use3DRotation = false
                         TextureName = 'GameData:/Assets/2D/Fx/water_spacks.png'
                         Calque = 'Particles'

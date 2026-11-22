@@ -1,0 +1,23 @@
+export Modele_Tu_143_SOV is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/TCH/Avion/Tu_143/Tu_143.fbx"
+    Textures="GameData:/Assets/3D/Units/URSS/Avion/Tu_143"
+)
+
+export Modele_Tu_143_SOV_MID is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/TCH/Avion/Tu_143_MID/Tu_143_MID.fbx"
+    Textures="GameData:/Assets/3D/Units/URSS/Avion/Tu_143_MID"
+)
+
+export Modele_Tu_143_SOV_LOW is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/TCH/Avion/Tu_143_LOW/Tu_143_LOW.fbx"
+    Textures="GameData:/Assets/3D/Units/URSS/Avion/Tu_143_LOW"
+)
+
+export Modele_Tu_143_SOV_train is TResourceMesh
+(
+    Mesh=ModelFile_Support_Drones
+    //Textures="GameData:/Assets/3D/Units/URSS/Avion/Tu_143"
+)

@@ -1,0 +1,7 @@
+// Sync with VisibilityLevel.h
+TVisibilityLevel is TBaseClass
+(
+    INVISIBLE is 0
+    SPOTTED is 1
+    REVEALED is 2
+)

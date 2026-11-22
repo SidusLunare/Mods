@@ -55,9 +55,9 @@ LevelUpResources is TBaseClass
     )
     public Cadre is BUCKTextureDescriptor
     (
-        ClipTextureToComponent = False
+        ClipTextureToComponent = false
         TextureToken = "OutgameTexture_LevelUp_Cadre"
-        TileTextureInComponent = True
+        TileTextureInComponent = true
         ComponentFrame = TUIFramePropertyRTTI
         (
             MagnifiableOffset = [0,32]

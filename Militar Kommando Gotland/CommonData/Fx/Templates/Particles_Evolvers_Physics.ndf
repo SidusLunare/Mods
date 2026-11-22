@@ -3,9 +3,9 @@ template Template_Physics
     FluidFriction        : TEvaluable[>=0] = nil,
     AccelerationField    : TEvaluable = nil,
     WindField            : TEvaluable = nil,
-    Disabled             : boolean = false,
+    Disabled             : bool = false,
     UseCollisions        : TEvaluable = nil,
-    ForceSlicing         : boolean = false,
+    ForceSlicing         : bool = false,
     WorldFloorProxy      = nil,
 ] is TParticleEvolver_Physics
 (

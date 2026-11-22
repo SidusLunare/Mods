@@ -80,36 +80,6 @@ export fx_impact_Bombe_Napalm is SimultaneousActionDeclaration
                 ),
                 TActionCall
                 (
-                    Action = $/VFX_Bank/BANK_FireBalls_HQTex_Simple
-                    NamedParams = MAP[
-                        ( 'parColor', float3[1,0.8000001,0.6980392] ),
-                        ( 'parCount', 2 ),
-                        ( 'parDeltaPosition', float3[0,0,0] ),
-                        ( 'parDuration', 6 ),
-                        ( 'parLuminosite', 10 ),
-                        ( 'parOpacity', 1 ),
-                        ( 'parSize', 5000 ),
-                        ( 'parSpeed', 0 ),
-                        ( 'parStartPosition', parPosition ),
-                    ]
-                ),
-                TActionCall
-                (
-                    Action = $/VFX_Bank/BANK_FireBalls_HQTex_Simple
-                    NamedParams = MAP[
-                        ( 'parColor', float3[1,0.8000001,0.6980392] ),
-                        ( 'parCount', 2 ),
-                        ( 'parDeltaPosition', float3[0,0,-500] ),
-                        ( 'parDuration', 3 ),
-                        ( 'parLuminosite', 10 ),
-                        ( 'parOpacity', 1 ),
-                        ( 'parSize', 3500 ),
-                        ( 'parSpeed', 0 ),
-                        ( 'parStartPosition', parPosition ),
-                    ]
-                ),
-                TActionCall
-                (
                     Action = $/VFX_Bank/BANK_FireBalls_Simple
                     NamedParams = MAP[
                         ( 'parColor', float3[1,0.9019608,0.5019608] ),
@@ -138,6 +108,36 @@ export fx_impact_Bombe_Napalm is SimultaneousActionDeclaration
                         ( 'parOpacity', 0 ),
                         ( 'parSize', 3000 ),
                         ( 'parDeltaPositionAdditif', float3[12,1,-482] + parPosition ),
+                    ]
+                ),
+                TActionCall
+                (
+                    Action = $/VFX_Bank/BANK_FireBalls_HQTex_Simple
+                    NamedParams = MAP[
+                        ( 'parColor', float3[1,0.8000001,0.6980392] ),
+                        ( 'parCount', 2 ),
+                        ( 'parDeltaPosition', float3[0,0,0] ),
+                        ( 'parDuration', 6 ),
+                        ( 'parLuminosite', 10 ),
+                        ( 'parOpacity', 1 ),
+                        ( 'parSize', 5000 ),
+                        ( 'parSpeed', 0 ),
+                        ( 'parStartPosition', parPosition ),
+                    ]
+                ),
+                TActionCall
+                (
+                    Action = $/VFX_Bank/BANK_FireBalls_HQTex_Simple
+                    NamedParams = MAP[
+                        ( 'parColor', float3[1,0.8000001,0.6980392] ),
+                        ( 'parCount', 2 ),
+                        ( 'parDeltaPosition', float3[0,0,-500] ),
+                        ( 'parDuration', 3 ),
+                        ( 'parLuminosite', 10 ),
+                        ( 'parOpacity', 1 ),
+                        ( 'parSize', 3500 ),
+                        ( 'parSpeed', 0 ),
+                        ( 'parStartPosition', parPosition ),
                     ]
                 ),
                 TActionCall

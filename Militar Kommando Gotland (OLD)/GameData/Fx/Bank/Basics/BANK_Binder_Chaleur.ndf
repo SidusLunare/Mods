@@ -1,0 +1,104 @@
+export FX_BANK_Binder_Chaleur is SimultaneousActionDeclaration
+(
+    Params =
+    [
+        private parDensity is Template_Param_Float(DefaultValue = 20),
+        private parLength is Template_Param_Float(DefaultValue = 1.0),
+        private parSpeed is Template_Param_Float(DefaultValue = 2.0),
+    ]
+    Actions =
+    [
+        Chaleur  is ParticleBombSpawner
+        (
+            ParticleMaxDurationForSpawnSkip = 0
+            Count = 1
+            Spawner = ParticleSpawner
+            (
+                ParticleLifetime = 1
+                Initialisers =
+                [
+                    Initialiser_SetMobileWrapper(),
+                    Initialiser_Size( InitFunction = 100 ),
+                    Initialiser_Opacity( InitFunction = 1 ),
+                    Initialiser_ColorModifier( InitFunction = LinearColor[1,1,1] ),
+                    Initialiser_ColorMultiplier( InitFunction = 1 ),
+
+                    Initialiser_CustomFloat_1(InitFunction = parDensity),
+                    Initialiser_CustomFloat_2(InitFunction = parLength),
+                    Initialiser_CustomFloat_3(InitFunction = parSpeed),
+                ]
+                ParticleDescriptor = ParticleDescriptor
+                (
+                    ParticleRenderer = $/VFX_Bank/NullRenderer
+                    RenderInfo = $/VFX_Bank/NullRenderInfo
+                    Evolvers = Template_List
+                    (
+                        Evolvers =
+                        [
+                            Template_EvolverPosition( EvolveFunction = ParticleMobileWrapperPositionUnScaled ),
+                            Template_EvolverDirection( EvolveFunction = normalized[ParticleMobileWrapperAxeX] ),
+                            EvolverSpraySpawner
+                            (
+                                Frequency = ParticleCustomFloat_1
+                                MaxSpawnedParticleLifetime = 2.0 div ParticleCustomFloat_3
+                                Spawner = ParticleSpawner
+                                (
+                                    ParticleDescriptor = ParticleDescriptor
+                                    (
+                                        RenderInfo = Template_DistortionParticleRenderInfo
+                                        (
+                                            SortTriangles = True
+                                            TextureName = 'GameData:/Assets/2D/Fx/Distortion/distort.png'
+                                        )
+                                        Evolvers = Template_List
+                                        (
+                                            Evolvers =
+                                            [
+                                                Template_EvolverPosition ( EvolveFunction = lerp[ MapToSquareDecelerated[ParticleLifeRatio], ParticleCustomFloat3_1, ParticleCustomFloat3_2]),
+                                                Template_EvolverOpacity
+                                                (
+                                                    EvolveFunction = MapToLinearSmoothRect[ ParticleLifeRatio, 0, 0.2, 0.5, 1 ]
+                                                                  * Min[0.08, 2000 div length[CameraPosition - ParticlePosition] ]
+                                                ),
+                                                Template_EvolverSize ( EvolveFunction = 250 * (1 + ParticleLifeRatio) )
+                                            ]
+                                        )
+                                        ParticleRenderer = StandardRenderer
+                                    )
+                                    Initialisers =
+                                    [
+                                        Initialiser_ColorModifier ( InitFunction = LinearColor[1, 1, 1] ),
+                                        Initialiser_ColorMultiplier ( InitFunction = 1 ),
+                                        Initialiser_Rotation ( InitFunction = RandomUnit ),
+                                        Initialiser_CustomFloat3_1 ( InitFunction = SpawningParticlePosition ),
+                                        Initialiser_CustomFloat3_2 ( InitFunction = SpawningParticlePosition + SpawningParticleDirection * RandomRange[200 * SpawningParticleCustomFloat_2, 400 * SpawningParticleCustomFloat_2] + float3[0,0,1] * RandomRange[100 * SpawningParticleCustomFloat_2, 400 * SpawningParticleCustomFloat_2] ),
+                                    ]
+                                    ParticleLifetime = 3.0 div SpawningParticleCustomFloat_3
+                                )
+                            )
+                        ]
+                    )
+                    InfiniteParticles = true
+                )
+            )
+        ),
+        Template_WaitForEver()
+    ]
+)
+
+export FX_BANK_Binder_Chaleur_Simple is ActionCallWithParameters
+(
+    Action = FX_BANK_Binder_Chaleur
+    Params =
+    [
+        private parDensity                is Template_Param_Float ( DefaultValue = 1.15 ),
+        private parLength                 is Template_Param_Float ( DefaultValue = 1.25 ),
+        private parSpeed                 is Template_Param_Float ( DefaultValue = 1.25 ),
+    ]
+    NamedParameters = MAP
+    [
+        ( 'parDensity'                    , parDensity ),
+        ( 'parLength'                     , parLength ),
+        ( 'parSpeed'                      , parSpeed ),
+    ]
+)

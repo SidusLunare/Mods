@@ -68,10 +68,10 @@ template boutonAvecSeparateur
 [
     TextToken : string,
     ElementName: string = '',
-    DefaultToggleValue: boolean = false,
-    IsTogglable: boolean = false,
-    CannotDeselect : boolean = false,
-    ForceEvents : boolean = false,
+    DefaultToggleValue: bool = false,
+    IsTogglable: bool = false,
+    CannotDeselect : bool = false,
+    ForceEvents : bool = false,
     TextColor : string = "Blanc_multi",
     TextSize : string = "16",
     ForbiddenTags : LIST<string> = [],
@@ -80,7 +80,7 @@ template boutonAvecSeparateur
     HintBodyToken : string = '',
     Mapping : TEugBMutablePBaseClass = nil,
     TextElementName : string = '',
-    HasSeparateur : boolean = true,
+    HasSeparateur : bool = true,
     DicoToken : string = ~/LocalisationConstantes/dico_interface_outgame,
     TextDico : string = ~/LocalisationConstantes/dico_interface_outgame,
     HasIcone : bool = false,
@@ -463,7 +463,6 @@ private OptionsWarningDescriptor is TScrollingDescriptor
 private FriendInviteModalDescriptor is SpecificModalWindow
 (
     TitleToken = "T_INVITE"
-    ContentMagnifiableWidthHeight = [0.0, 520.0]
 
     ButtonList =
     [

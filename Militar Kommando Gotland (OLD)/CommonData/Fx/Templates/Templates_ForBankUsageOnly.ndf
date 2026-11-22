@@ -1,0 +1,118 @@
+///////////
+// ensemble de templates qui sont utilisé par l'editeur d'Fx
+//
+// pour que l'editeur d'Fx reconnaisse une brique, elle doit être définit en tant que template NDF.
+// Du coup, quand on veut utiliser un evaluable simple, on est obligé de faire un template.
+// pour voir l'utilisation de ces template : cf : @evaluable.ndf dans la bank
+
+template Template_TimeInSecondsNonPausable_ForBank
+[
+] is TVariable
+(
+    Object = $/System/TaskController/TimeEnSecondesNonPausable
+    PropertyName = 'Value'
+    Variability = $/Variability/Frame
+)
+
+template Template_ActionDependentValue_ForBank
+[
+    ValueName    : string[required],
+    ExpectedType : string [Values = ['float', 'float3', 'float4', 'int', 'bool', 'any']] = 'any'
+] is TActionDependentValue
+(
+    Name = <ValueName>
+    ExpectedType = <ExpectedType>
+)
+
+
+template Template_CameraPosition_ForBank
+[
+    Camera    : TCameraDataForFx
+] is TGetCameraPosition
+(
+    Camera = <Camera>
+)
+
+template Template_CameraDeltaPosition_ForBank
+[
+    Camera    : TCameraDataForFx
+] is TGetCameraDeltaPosition
+(
+    Camera = <Camera>
+)
+
+template Template_CameraDirection_ForBank
+[
+    Camera    : TCameraDataForFx
+] is TGetCameraDirection
+(
+    Camera = <Camera>
+)
+
+template Template_CameraAxeX_ForBank
+[
+    Camera    : TCameraDataForFx
+] is TGetCameraViewMatrixAxeX
+(
+    Camera = <Camera>
+)
+
+template Template_CameraAxeY_ForBank
+[
+    Camera    : TCameraDataForFx
+] is TGetCameraViewMatrixAxeY
+(
+    Camera = <Camera>
+)
+
+template Template_MousePosition_ForBank
+[
+    World    : TWorld3D
+] is TGetMousePosition
+(
+    World = <World>
+)
+
+template Template_AparametricFunction_ForBank
+[
+    Function    : string[required]
+] is TAparametricFunction
+(
+    Function = <Function>
+)
+
+template Template_ParticleAccessor_ForBank
+[
+    Field    : TParticleSubPart[required],
+    Indexed  : boolean = false
+] is TParticleAccessor
+(
+    Field = <Field>
+    Indexed = <Indexed>
+)
+
+template Template_SpawnerAccessor_ForBank
+[
+    Field    : string[required]
+] is TSpawnerAccessor
+(
+    Field = <Field>
+)
+
+template Template_GetEnv_Float_ForBank
+[
+    ValueName    : string
+] is TGetFromContext_Float
+(
+    Name = <ValueName>
+    Variability = $/Variability/Particle
+    IsMemoryView = true
+)
+
+template Template_NamedUnaryIntrinsic_ForBank
+[
+    Operator    : string[required]
+] is TNamedUnaryIntrinsic
+(
+    Operator = <Operator>
+)

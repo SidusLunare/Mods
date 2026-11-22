@@ -1,0 +1,198 @@
+// Ne pas éditer, ce fichier est généré
+
+export fx_propulsion_missile_AA_TOR is SimultaneousActionDeclaration
+(
+    Params =
+    [
+        private parFlyDuration is TActionAlias( ExpectedType = 'float' DefaultValue = 7.564738 ),
+        private parPosition is TActionAlias( ExpectedType = 'float3' DefaultValue = float3[0,0,0] ),
+    ]
+    Actions = ActionList is
+    [
+        TSimultaneousAction
+        (
+            Mobile = nil
+            Actions =
+            [
+                TSequentialAction
+                (Actions =
+                    [
+                        TWaitInSec( Duration = 0.4 ),
+                        TActionCall
+                        (
+                            Action = $/VFX_Bank/BANK_Bomb_Flash
+                            NamedParams = MAP[
+                                ( 'parCount', 3 ),
+                                ( 'parDuration', 0.1 ),
+                                ( 'parFinalSize', 2000 ),
+                                ( 'parInitialSize', 10 ),
+                                ( 'parPositionRelative', parPosition ),
+                                ( 'parZBias', 0 ),
+                            ]
+                        ),
+                    ]
+                ),
+                TSequentialAction
+                (Actions =
+                    [
+                        TWaitInSec( Duration = 0.5 ),
+                        TActionCall
+                        (
+                            Action = $/VFX_Bank/BANK_Light_Fade_Simple
+                            NamedParams = MAP[
+                                ( 'parColor', float3[1,0.7529413,0.5019608] ),
+                                ( 'parDuration', parFlyDuration ),
+                                ( 'parDurationRatio', 1 ),
+                                ( 'parHeight', 0 ),
+                                ( 'parOpacity', 0.5 ),
+                                ( 'parSizeLBU', 46.51163 ),
+                            ]
+                        ),
+                    ]
+                ),
+                TSequentialAction
+                (Actions =
+                    [
+                        TWaitInSec( Duration = 0.5 ),
+                        TActionCall
+                        (
+                            Action = $/VFX_Bank/BANK_Propulsion_Missile_Simple
+                            NamedParams = MAP[
+                                ( 'parDisableFlame', false ),
+                                ( 'parDisableLight', false ),
+                                ( 'parDisableSFX', false ),
+                                ( 'parFlameColorMultiplier', 20 ),
+                                ( 'parFlameFrequency', 20 ),
+                                ( 'parFlameIntensity', 5 ),
+                                ( 'parFlameOffset', -350 ),
+                                ( 'parFlameOpacity', 0 ),
+                                ( 'parFlameSize', 750 ),
+                                ( 'parFlameStretch', 20 ),
+                                ( 'parLightColor', float3[1,0.7529413,0.5019608] ),
+                                ( 'parLightPower', 4 ),
+                                ( 'parLightPowerJittering', 0.1 ),
+                                ( 'parLightSize', 400 ),
+                                ( 'parLightSizeJittering', 0.5 ),
+                                ( 'parSFXId', 2 ),
+                            ]
+                        ),
+                    ]
+                ),
+                TSequentialAction
+                (Actions =
+                    [
+                        TWaitInSec( Duration = 0.6 ),
+                        TActionCall
+                        (
+                            Action = $/VFX_Bank/Smoke_Trail_Simple
+                            NamedParams = MAP[
+                                ( 'DurationInSec', parFlyDuration ),
+                                ( 'parColor1', float3[1,1,1] ),
+                                ( 'parColor2', float3[0.8235295,0.8235295,0.8235295] ),
+                                ( 'parColor3', float3[0.6980392,0.6980392,0.6980392] ),
+                                ( 'parColorKey1', 0.5 ),
+                                ( 'parColorKey2', 0.5 ),
+                                ( 'parDispersion', 100 ),
+                                ( 'parDistance', 175 ),
+                                ( 'parLifeDuration', 1.5 ),
+                                ( 'parOpacity', 0.08 ),
+                                ( 'parSize1', 2000 ),
+                                ( 'parSize2', 5000 ),
+                                ( 'parStopSpawnerRatio', 0.75 ),
+                            ]
+                        ),
+                    ]
+                ),
+                TSequentialAction
+                (Actions =
+                    [
+                        TWaitInSec( Duration = 1.5 ),
+                        TActionCall
+                        (
+                            Action = $/VFX_Bank/Smoke_Trail_Simple
+                            NamedParams = MAP[
+                                ( 'DurationInSec', parFlyDuration ),
+                                ( 'parColor1', float3[1,1,1] ),
+                                ( 'parColor2', float3[0.854902,0.854902,0.854902] ),
+                                ( 'parColor3', float3[0.7254902,0.7254902,0.7254902] ),
+                                ( 'parColorKey1', 0.5 ),
+                                ( 'parColorKey2', 0.5 ),
+                                ( 'parDispersion', 500 ),
+                                ( 'parDistance', 500 ),
+                                ( 'parLifeDuration', 8 ),
+                                ( 'parOpacity', 0.08 ),
+                                ( 'parSize1', 3000 ),
+                                ( 'parSize2', 5000 ),
+                                ( 'parStopSpawnerRatio', 1 ),
+                            ]
+                        ),
+                    ]
+                ),
+                TSequentialAction
+                (Actions =
+                    [
+                        TWaitInSec( Duration = 0.5 ),
+                        TActionCall
+                        (
+                            Action = $/VFX_Bank/Smoke_Trail_Simple
+                            NamedParams = MAP[
+                                ( 'DurationInSec', parFlyDuration ),
+                                ( 'parColor1', float3[1,0.7529413,0.5019608] ),
+                                ( 'parColor2', float3[1,0.7529413,0.5019608] ),
+                                ( 'parColor3', float3[0.2,0.2,0.2] ),
+                                ( 'parColorKey1', 1 ),
+                                ( 'parColorKey2', 1 ),
+                                ( 'parDispersion', 75 ),
+                                ( 'parDistance', 100 ),
+                                ( 'parLifeDuration', 0.15 ),
+                                ( 'parOpacity', 1 ),
+                                ( 'parSize1', 500 ),
+                                ( 'parSize2', 1750 ),
+                                ( 'parStopSpawnerRatio', 0.35 ),
+                            ]
+                        ),
+                    ]
+                ),
+                TActionCall
+                (
+                    Action = $/VFX_Bank/Smoke_Trail_Simple
+                    NamedParams = MAP[
+                        ( 'DurationInSec', parFlyDuration ),
+                        ( 'parColor1', float3[0.7843138,0.7843138,0.7843138] ),
+                        ( 'parColor2', float3[0.6078432,0.6078432,0.6078432] ),
+                        ( 'parColor3', float3[0.482353,0.482353,0.482353] ),
+                        ( 'parColorKey1', 0.5 ),
+                        ( 'parColorKey2', 0.5 ),
+                        ( 'parDispersion', 1000 ),
+                        ( 'parDistance', 200 ),
+                        ( 'parLifeDuration', 2 ),
+                        ( 'parOpacity', 0.2 ),
+                        ( 'parSize1', 2500 ),
+                        ( 'parSize2', 4000 ),
+                        ( 'parStopSpawnerRatio', 0.05 ),
+                    ]
+                ),
+                TActionCall
+                (
+                    Action = $/VFX_Bank/Smoke_Trail_Simple
+                    NamedParams = MAP[
+                        ( 'DurationInSec', parFlyDuration ),
+                        ( 'parColor1', float3[0.7843138,0.7843138,0.7843138] ),
+                        ( 'parColor2', float3[0.6078432,0.6078432,0.6078432] ),
+                        ( 'parColor3', float3[0.482353,0.482353,0.482353] ),
+                        ( 'parColorKey1', 0.5 ),
+                        ( 'parColorKey2', 0.5 ),
+                        ( 'parDispersion', 300 ),
+                        ( 'parDistance', 400 ),
+                        ( 'parLifeDuration', 8 ),
+                        ( 'parOpacity', 0.05 ),
+                        ( 'parSize1', 1500 ),
+                        ( 'parSize2', 5000 ),
+                        ( 'parStopSpawnerRatio', 0.2 ),
+                    ]
+                ),
+                TWaitInSec( Duration = parFlyDuration),
+            ]
+        ),
+    ]
+)

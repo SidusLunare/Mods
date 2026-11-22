@@ -76,12 +76,12 @@ export Trail_Lance_Flammes is SimultaneousActionDeclaration
                                         )
                                         RenderInfo = ParticleRenderInfo
                                         (
-                                            ZTest = True
-                                            ZWrite = False
-                                            Use3DRotation = False
+                                            ZTest = true
+                                            ZWrite = false
+                                            Use3DRotation = false
                                             TextureName = 'GameData:/Assets/2D/Fx/flamestrip.png'
                                             Calque = 'Particles'
-                                            EmissiveParticle = True
+                                            EmissiveParticle = true
                                         )
                                         ParticleRenderer = ParticleRendererMeshTrail ( ScalingMode = 1 )
                                     )
@@ -175,7 +175,7 @@ export Trail_Feu is SimultaneousActionDeclaration
                                         Evolvers = ParticleStandardEvolverListWithPhysic
                                         (
                                             FluidFriction = 2
-                                            UseHardCodedRotation = True
+                                            UseHardCodedRotation = true
                                             PhysicWindField = MapWind * 0.40
                                             Animation = sat[ParticleLifeRatio + 0.1]
                                             EmissivePower = ParticleCustomFloat_5 * AttackSustainDecay[ParticleLifeRatio, 0.6, 0.7]
@@ -184,13 +184,13 @@ export Trail_Feu is SimultaneousActionDeclaration
                                         ParticleRenderer = $/VFX_Bank/LitParticleRendererNoCentroidPositioning
                                         RenderInfo = ParticleRenderInfo
                                         (
-                                            ZTest = True
-                                            ZWrite = False
-                                            SortTriangles = True
-                                            Use3DRotation = True
+                                            ZTest = true
+                                            ZWrite = false
+                                            SortTriangles = true
+                                            Use3DRotation = true
                                             TextureName = 'GameData:/Assets/2D/Fx/anim_fireball_000.png'
                                             Calque = 'Particles'
-                                            EmissiveParticle = True
+                                            EmissiveParticle = true
                                         )
                                     )
                                 )
@@ -290,20 +290,20 @@ export Trail_Ashes is SimultaneousActionDeclaration
                                             FluidFriction = 2
                                             PhysicAccelerationField = float3[0.00, 0.00, -500.00] + ParticleCustomFloat3_1
                                             PhysicWindField = MapWind * 0.5
-                                            UseHardCodedRotation = True
+                                            UseHardCodedRotation = true
                                             Size = lerp[ParticleCustomFloat_1, ParticleCustomFloat_2, ParticleCustomFloat_3]
                                             EmissivePower = ParticleCustomFloat_6 * AttackDecay[CurvedRamp[ParticleLifeRatio, 0.5], 0.1]
                                         )
                                         ParticleRenderer = $/VFX_Bank/LitParticleRendererNoCentroidPositioning
                                         RenderInfo = ParticleRenderInfo
                                         (
-                                            ZTest = True
-                                            ZWrite = False
-                                            SortTriangles = True
-                                            Use3DRotation = True
+                                            ZTest = true
+                                            ZWrite = false
+                                            SortTriangles = true
+                                            Use3DRotation = true
                                             TextureName = 'GameData:/Assets/2D/Fx/ashe.png'
                                             Calque = 'Particles'
-                                            EmissiveParticle = True
+                                            EmissiveParticle = true
                                         )
                                     )
                                 )

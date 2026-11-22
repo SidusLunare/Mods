@@ -44,7 +44,7 @@ export FX_BANK_Binder_Construction_Spark is Simultaneous
                                         SortTriangles = true
                                         ZTest = true
                                         Calque = 'Particles'
-                                        EmissiveParticle = True
+                                        EmissiveParticle = true
                                     )
                                     Evolvers = ParticleStandardEvolverList
                                     (
@@ -89,9 +89,9 @@ export FX_BANK_Binder_Construction_Spark is Simultaneous
                                     (
                                         ZTest = true
                                         TextureName = 'GameData:/Assets/2D/Fx/sparks_01.png'
-                                        SortTriangles = True
+                                        SortTriangles = true
                                         Calque = 'Particles'
-                                        EmissiveParticle = True
+                                        EmissiveParticle = true
                                     )
                                     Evolvers = ParticleStandardEvolverList
                                     (

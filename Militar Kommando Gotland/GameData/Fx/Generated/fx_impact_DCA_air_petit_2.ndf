@@ -14,6 +14,56 @@ export fx_impact_DCA_air_petit_2 is SimultaneousActionDeclaration
     [
         TSimultaneousAction
         (
+            Mobile = TMobileWithLocalRepereMatrixFactory
+            (
+                Position = parPosition
+            )
+            Actions =
+            [
+                TActionCall
+                (
+                    Action = $/VFX_Bank/BANK_Bomb_Distort_Simple
+                    NamedParams = MAP[
+                        ( 'parDuration', 0.6 ),
+                        ( 'parFinalSize', 2600 ),
+                        ( 'parInitialSize', 25 ),
+                        ( 'parIntensity', 120 ),
+                        ( 'parPositionRelative', float3[0,0,0] ),
+                    ]
+                ),
+                TActionCall
+                (
+                    Action = $/VFX_Bank/DarkSmoke_Simple
+                    NamedParams = MAP[
+                        ( 'parCloudsize', float3[200,200,200] ),
+                        ( 'parColor', float3[0.07843138,0.07843138,0.07843138] ),
+                        ( 'parCount', 20 ),
+                        ( 'parDecayLength', 0.45 ),
+                        ( 'parDecayStart', 0.8 ),
+                        ( 'parEmissive', 0.7 ),
+                        ( 'parOpacity', 0.55 ),
+                        ( 'parParticleSize', 500 ),
+                        ( 'parRandomPosition', 0 ),
+                        ( 'parSmokeDuration', 2 ),
+                        ( 'parSpawnerDuration', 0.4 ),
+                        ( 'parSpawnerSpeed', 600 ),
+                    ]
+                ),
+                TActionCall
+                (
+                    Action = $/VFX_Bank/ShakeCamera
+                    NamedParams = MAP[
+                        ( 'parDuration', 0.2 ),
+                        ( 'parFrequency', 2 ),
+                        ( 'parPeriod', 0.05 ),
+                        ( 'parPower', 0.25 ),
+                        ( 'parRadius', 20000 ),
+                    ]
+                ),
+            ]
+        ),
+        TSimultaneousAction
+        (
             Mobile = nil
             Actions =
             [
@@ -91,56 +141,6 @@ export fx_impact_DCA_air_petit_2 is SimultaneousActionDeclaration
                     ]
                 ),
                 TWaitInSec( Duration = 0.15),
-            ]
-        ),
-        TSimultaneousAction
-        (
-            Mobile = TMobileWithLocalRepereMatrixFactory
-            (
-                Position = parPosition
-            )
-            Actions =
-            [
-                TActionCall
-                (
-                    Action = $/VFX_Bank/BANK_Bomb_Distort_Simple
-                    NamedParams = MAP[
-                        ( 'parDuration', 0.6 ),
-                        ( 'parFinalSize', 2600 ),
-                        ( 'parInitialSize', 25 ),
-                        ( 'parIntensity', 120 ),
-                        ( 'parPositionRelative', float3[0,0,0] ),
-                    ]
-                ),
-                TActionCall
-                (
-                    Action = $/VFX_Bank/DarkSmoke_Simple
-                    NamedParams = MAP[
-                        ( 'parCloudsize', float3[200,200,200] ),
-                        ( 'parColor', float3[0.07843138,0.07843138,0.07843138] ),
-                        ( 'parCount', 20 ),
-                        ( 'parDecayLength', 0.45 ),
-                        ( 'parDecayStart', 0.8 ),
-                        ( 'parEmissive', 0.7 ),
-                        ( 'parOpacity', 0.55 ),
-                        ( 'parParticleSize', 500 ),
-                        ( 'parRandomPosition', 0 ),
-                        ( 'parSmokeDuration', 2 ),
-                        ( 'parSpawnerDuration', 0.4 ),
-                        ( 'parSpawnerSpeed', 600 ),
-                    ]
-                ),
-                TActionCall
-                (
-                    Action = $/VFX_Bank/ShakeCamera
-                    NamedParams = MAP[
-                        ( 'parDuration', 0.2 ),
-                        ( 'parFrequency', 2 ),
-                        ( 'parPeriod', 0.05 ),
-                        ( 'parPower', 0.25 ),
-                        ( 'parRadius', 20000 ),
-                    ]
-                ),
             ]
         ),
     ]

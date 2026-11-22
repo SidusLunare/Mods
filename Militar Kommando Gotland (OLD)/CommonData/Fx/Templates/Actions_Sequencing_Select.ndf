@@ -1,0 +1,17 @@
+template Template_Select
+[
+    LocalVariables              : LIST<TPinnableValue> = [],
+    Mobile                      : TMobileFactory = nil,
+    Actions                     : LIST<TActionDescriptor> = [],
+    Disabled                    : TEvaluable = nil,
+    Index                       : TEvaluable[required] = nil,
+    TimeServer                  : TTimeServerWithVisibilityRange = nil,
+] is TActionDescriptor_Select
+(
+    LocalVariables = <LocalVariables>
+    Mobile = <Mobile>
+    Actions = <Actions>
+    Disabled = <Disabled>
+    Index = <Index>
+    TimeServer = <TimeServer>
+)

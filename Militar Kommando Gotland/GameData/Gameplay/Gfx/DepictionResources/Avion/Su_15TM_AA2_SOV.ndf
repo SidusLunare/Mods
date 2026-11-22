@@ -17,7 +17,7 @@ export Modele_Su_15TM_AA2_SOV_train is TResourceMesh
     Mesh=ModelFile_Su_15TM_AA_SOV_train
 )
 
-export ModelFile_Pod_UPK_t3 is 'GameData:/Assets/3D/Units/Ammo/Tourelles/SOV/UPK_23_250/UPK_23_250_t3.fbx'
+export ModelFile_Pod_UPK_t3 is 'GameData:/Assets/3D/Ammo/Tourelles/UPK_23_250/UPK_23_250_t3.fbx'
 export Modele_Su_15TM_AA2_SOV_Tourelle_03 is TResourceMesh
 (
     Mesh=ModelFile_Pod_UPK_t3

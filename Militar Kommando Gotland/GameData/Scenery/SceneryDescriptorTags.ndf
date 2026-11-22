@@ -1,0 +1,7 @@
+SceneryDescriptorTags is TBaseClass
+(
+    Europe is "Europe"
+    ShowRoom is "ShowRoom"
+    NE is "NE"
+    KR is "KR"
+)

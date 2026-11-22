@@ -1,0 +1,19 @@
+export Modele_Mirage_III_ATGM_SWI is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/SWI/Avion/Mirage_III_S/Mirage_III_S_ATGM.fbx"
+)
+
+export Modele_Mirage_III_ATGM_SWI_MID is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/SWI/Avion/Mirage_III_S/Mirage_III_S_ATGM.fbx"
+)
+
+export Modele_Mirage_III_ATGM_SWI_LOW is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/SWI/Avion/Mirage_III_S/Mirage_III_S_ATGM.fbx"
+)
+
+export Modele_Mirage_III_ATGM_SWI_train is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/SWI/Avion/Mirage_III_S/Mirage_III_S_train.fbx"
+)

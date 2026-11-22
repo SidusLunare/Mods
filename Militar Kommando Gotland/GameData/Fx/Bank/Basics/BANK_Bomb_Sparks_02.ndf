@@ -72,8 +72,8 @@ export BANK_Bomb_Sparks_02_WG is SimultaneousActionDeclaration
                     ParticleRenderer = $/VFX_Bank/StandardRenderer
                     RenderInfo = ParticleRenderInfo
                     (
-                        SortTriangles = True
-                        Use3DRotation = True
+                        SortTriangles = true
+                        Use3DRotation = true
                         TextureName = 'GameData:/Assets/2D/Fx/flare_gris.png'
                         Calque = 'Particles'
                         EmissiveParticle = true

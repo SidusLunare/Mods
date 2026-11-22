@@ -46,14 +46,6 @@ HudSoundOnUnitUnderAttack is TemplateSoundDescriptor
 (
     FileName  = "GameData:/Assets/Sounds/SFX/SA/event_01.wav"
 )
-HudSoundOnObjectiveCaptured is TemplateSoundDescriptor
-(
-    FileName  = "GameData:/Assets/Sounds/SFX/SA/Test_16b_event_04.wav"
-)
-HudSoundOnObjectiveLost is TemplateSoundDescriptor
-(
-    FileName  = "GameData:/Assets/Sounds/SFX/SA/Test_16b_event_05.wav"
-)
 HudSoundOnVictory is TemplateSoundDescriptor
 (
     FileName  = "GameData:/Assets/Sounds/Solo/MUSIC_VICTORY.ogg"

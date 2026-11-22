@@ -1,0 +1,14 @@
+export Modele_Ka_27PV_SOV is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/URSS/Helico/Ka_27PS/Ka_27PS.fbx"
+)
+
+export Modele_Ka_27PV_SOV_MID is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/URSS/Helico/Ka_27PS/Ka_27PS.fbx"
+)
+
+export Modele_Ka_27PV_SOV_LOW is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/URSS/Helico/Ka_27PS/Ka_27PS.fbx"
+)

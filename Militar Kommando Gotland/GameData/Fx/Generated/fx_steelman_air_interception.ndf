@@ -11,750 +11,6 @@ export fx_steelman_air_interception is SimultaneousActionDeclaration
     [
         TSimultaneousAction
         (
-            Mobile = nil
-            Actions =
-            [
-                TSequentialAction
-                (Actions =
-                    [
-                        TWaitInSec( Duration = 0.2 ),
-                        TActionCall
-                        (
-                            Action = $/VFX_Bank/BANK_Bomb_Flash
-                            NamedParams = MAP[
-                                ( 'parCount', 3 ),
-                                ( 'parDuration', 0.08 ),
-                                ( 'parFinalSize', 6000 ),
-                                ( 'parInitialSize', 20 ),
-                                ( 'parZBias', 255 ),
-                                ( 'parPositionRelative', float3[78,-1046,13740] + parPosition ),
-                            ]
-                        ),
-                    ]
-                ),
-                TActionCall
-                (
-                    Action = $/VFX_Bank/BANK_Bomb_Flash
-                    NamedParams = MAP[
-                        ( 'parCount', 3 ),
-                        ( 'parDuration', 0.05 ),
-                        ( 'parFinalSize', 3000 ),
-                        ( 'parInitialSize', 20 ),
-                        ( 'parZBias', 255 ),
-                        ( 'parPositionRelative', float3[-3386,-7182,7698] + parPosition ),
-                    ]
-                ),
-                TSequentialAction
-                (Actions =
-                    [
-                        TWaitInSec( Duration = 3.5 ),
-                        TActionCall
-                        (
-                            Action = $/VFX_Bank/BANK_Bomb_Flash
-                            NamedParams = MAP[
-                                ( 'parCount', 3 ),
-                                ( 'parDuration', 0.1 ),
-                                ( 'parFinalSize', 3000 ),
-                                ( 'parInitialSize', 20 ),
-                                ( 'parZBias', 255 ),
-                                ( 'parPositionRelative', float3[-8055,-6583,17609] + parPosition ),
-                            ]
-                        ),
-                    ]
-                ),
-                TSequentialAction
-                (Actions =
-                    [
-                        TWaitInSec( Duration = 4 ),
-                        TActionCall
-                        (
-                            Action = $/VFX_Bank/BANK_Bomb_Flash
-                            NamedParams = MAP[
-                                ( 'parCount', 3 ),
-                                ( 'parDuration', 0.08 ),
-                                ( 'parFinalSize', 3000 ),
-                                ( 'parInitialSize', 20 ),
-                                ( 'parZBias', 255 ),
-                                ( 'parPositionRelative', float3[661,-1120,16500] + parPosition ),
-                            ]
-                        ),
-                    ]
-                ),
-                TSequentialAction
-                (Actions =
-                    [
-                        TWaitInSec( Duration = 3 ),
-                        TActionCall
-                        (
-                            Action = $/VFX_Bank/BANK_Bomb_Flash
-                            NamedParams = MAP[
-                                ( 'parCount', 3 ),
-                                ( 'parDuration', 0.09 ),
-                                ( 'parFinalSize', 3000 ),
-                                ( 'parInitialSize', 20 ),
-                                ( 'parZBias', 255 ),
-                                ( 'parPositionRelative', float3[1553,-9682,13414] + parPosition ),
-                            ]
-                        ),
-                    ]
-                ),
-                TSequentialAction
-                (Actions =
-                    [
-                        TWaitInSec( Duration = 2.6 ),
-                        TActionCall
-                        (
-                            Action = $/VFX_Bank/BANK_Bomb_Flash
-                            NamedParams = MAP[
-                                ( 'parCount', 3 ),
-                                ( 'parDuration', 0.05 ),
-                                ( 'parFinalSize', 3000 ),
-                                ( 'parInitialSize', 20 ),
-                                ( 'parZBias', 255 ),
-                                ( 'parPositionRelative', float3[-3827,12645,16077] + parPosition ),
-                            ]
-                        ),
-                    ]
-                ),
-                TSequentialAction
-                (Actions =
-                    [
-                        TWaitInSec( Duration = 2.5 ),
-                        TActionCall
-                        (
-                            Action = $/VFX_Bank/BANK_Bomb_Flash
-                            NamedParams = MAP[
-                                ( 'parCount', 3 ),
-                                ( 'parDuration', 0.08 ),
-                                ( 'parFinalSize', 3000 ),
-                                ( 'parInitialSize', 20 ),
-                                ( 'parZBias', 255 ),
-                                ( 'parPositionRelative', float3[4860,2731,22693] + parPosition ),
-                            ]
-                        ),
-                    ]
-                ),
-                TSequentialAction
-                (Actions =
-                    [
-                        TWaitInSec( Duration = 4 ),
-                        TActionCall
-                        (
-                            Action = $/VFX_Bank/BANK_Bomb_Flash
-                            NamedParams = MAP[
-                                ( 'parCount', 4 ),
-                                ( 'parDuration', 0.1 ),
-                                ( 'parFinalSize', 8000 ),
-                                ( 'parInitialSize', 200 ),
-                                ( 'parZBias', 255 ),
-                                ( 'parPositionRelative', float3[8551,-7883,6243] + parPosition ),
-                            ]
-                        ),
-                    ]
-                ),
-                TSequentialAction
-                (Actions =
-                    [
-                        TWaitInSec( Duration = 0.5 ),
-                        TActionCall
-                        (
-                            Action = $/VFX_Bank/BANK_Bomb_Flash
-                            NamedParams = MAP[
-                                ( 'parCount', 3 ),
-                                ( 'parDuration', 0.05 ),
-                                ( 'parFinalSize', 2000 ),
-                                ( 'parInitialSize', 20 ),
-                                ( 'parZBias', 255 ),
-                                ( 'parPositionRelative', float3[6097,8908,13645] + parPosition ),
-                            ]
-                        ),
-                    ]
-                ),
-                TSequentialAction
-                (Actions =
-                    [
-                        TWaitInSec( Duration = 2 ),
-                        TActionCall
-                        (
-                            Action = $/VFX_Bank/BANK_Bomb_Flash
-                            NamedParams = MAP[
-                                ( 'parCount', 3 ),
-                                ( 'parDuration', 0.05 ),
-                                ( 'parFinalSize', 4000 ),
-                                ( 'parInitialSize', 20 ),
-                                ( 'parZBias', 255 ),
-                                ( 'parPositionRelative', float3[3828,-373,15141] + parPosition ),
-                            ]
-                        ),
-                    ]
-                ),
-                TSequentialAction
-                (Actions =
-                    [
-                        TWaitInSec( Duration = 2.5 ),
-                        TActionCall
-                        (
-                            Action = $/VFX_Bank/BANK_Bomb_Flash
-                            NamedParams = MAP[
-                                ( 'parCount', 3 ),
-                                ( 'parDuration', 0.1 ),
-                                ( 'parFinalSize', 5000 ),
-                                ( 'parInitialSize', 200 ),
-                                ( 'parZBias', 255 ),
-                                ( 'parPositionRelative', float3[12858,4580,12390] + parPosition ),
-                            ]
-                        ),
-                    ]
-                ),
-                TSequentialAction
-                (Actions =
-                    [
-                        TWaitInSec( Duration = 6.5 ),
-                        TActionCall
-                        (
-                            Action = $/VFX_Bank/BANK_Bomb_Flash
-                            NamedParams = MAP[
-                                ( 'parCount', 3 ),
-                                ( 'parDuration', 0.1 ),
-                                ( 'parFinalSize', 5000 ),
-                                ( 'parInitialSize', 200 ),
-                                ( 'parZBias', 255 ),
-                                ( 'parPositionRelative', float3[1341,-1060,11380] + parPosition ),
-                            ]
-                        ),
-                    ]
-                ),
-                TSequentialAction
-                (Actions =
-                    [
-                        TWaitInSec( Duration = 3 ),
-                        TActionCall
-                        (
-                            Action = $/VFX_Bank/BANK_Bomb_Flash
-                            NamedParams = MAP[
-                                ( 'parCount', 4 ),
-                                ( 'parDuration', 0.1 ),
-                                ( 'parFinalSize', 8000 ),
-                                ( 'parInitialSize', 200 ),
-                                ( 'parZBias', 255 ),
-                                ( 'parPositionRelative', float3[-6373,9883,12228] + parPosition ),
-                            ]
-                        ),
-                    ]
-                ),
-                TSequentialAction
-                (Actions =
-                    [
-                        TWaitInSec( Duration = 4.5 ),
-                        TActionCall
-                        (
-                            Action = $/VFX_Bank/BANK_Bomb_Flash
-                            NamedParams = MAP[
-                                ( 'parCount', 3 ),
-                                ( 'parDuration', 0.1 ),
-                                ( 'parFinalSize', 5000 ),
-                                ( 'parInitialSize', 200 ),
-                                ( 'parZBias', 255 ),
-                                ( 'parPositionRelative', float3[-8129,390,12390] + parPosition ),
-                            ]
-                        ),
-                    ]
-                ),
-                TActionCall
-                (
-                    Action = $/VFX_Bank/BANK_Bomb_Flash
-                    NamedParams = MAP[
-                        ( 'parCount', 4 ),
-                        ( 'parDuration', 0.1 ),
-                        ( 'parFinalSize', 8000 ),
-                        ( 'parInitialSize', 200 ),
-                        ( 'parZBias', 255 ),
-                        ( 'parPositionRelative', float3[353,418,13379] + parPosition ),
-                    ]
-                ),
-                TSequentialAction
-                (Actions =
-                    [
-                        TWaitInSec( Duration = 0.6 ),
-                        TActionCall
-                        (
-                            Action = $/VFX_Bank/BANK_Bomb_Flash
-                            NamedParams = MAP[
-                                ( 'parCount', 3 ),
-                                ( 'parDuration', 0.1 ),
-                                ( 'parFinalSize', 3500 ),
-                                ( 'parInitialSize', 20 ),
-                                ( 'parZBias', 255 ),
-                                ( 'parPositionRelative', float3[5927,-4675,14554] + parPosition ),
-                            ]
-                        ),
-                    ]
-                ),
-                TSequentialAction
-                (Actions =
-                    [
-                        TWaitInSec( Duration = 0.4 ),
-                        TActionCall
-                        (
-                            Action = $/VFX_Bank/BANK_Bomb_Flash
-                            NamedParams = MAP[
-                                ( 'parCount', 3 ),
-                                ( 'parDuration', 0.06 ),
-                                ( 'parFinalSize', 3000 ),
-                                ( 'parInitialSize', 20 ),
-                                ( 'parZBias', 255 ),
-                                ( 'parPositionRelative', float3[2261,4395,16090] + parPosition ),
-                            ]
-                        ),
-                    ]
-                ),
-                TSequentialAction
-                (Actions =
-                    [
-                        TWaitInSec( Duration = 0.4 ),
-                        TActionCall
-                        (
-                            Action = $/VFX_Bank/BANK_Dynamic_Flash_Only_Two_Simple
-                            NamedParams = MAP[
-                                ( 'parColorEnd', float3[0.09411766,0.05882353,0.007843138] ),
-                                ( 'parColorStart', float3[0.9294118,0.5882353,0.07843138] ),
-                                ( 'parDuration', 0.2 ),
-                                ( 'parInitialDelay', parInitialShotDelay ),
-                                ( 'parOpacity', 0.3 ),
-                                ( 'parSize', 10000 ),
-                                ( 'parSpeed', float3[0,0,0] ),
-                                ( 'Position', float3[2260,4385,16590] ),
-                            ]
-                        ),
-                    ]
-                ),
-                TSequentialAction
-                (Actions =
-                    [
-                        TWaitInSec( Duration = 0.6 ),
-                        TActionCall
-                        (
-                            Action = $/VFX_Bank/BANK_Dynamic_Flash_Only_Two_Simple
-                            NamedParams = MAP[
-                                ( 'parColorEnd', float3[0.09411766,0.05882353,0.007843138] ),
-                                ( 'parColorStart', float3[0.9294118,0.5882353,0.07843138] ),
-                                ( 'parDuration', 0.1 ),
-                                ( 'parInitialDelay', parInitialShotDelay ),
-                                ( 'parOpacity', 0.3 ),
-                                ( 'parSize', 10000 ),
-                                ( 'parSpeed', float3[0,0,0] ),
-                                ( 'Position', float3[6002,-4688,15047] ),
-                            ]
-                        ),
-                    ]
-                ),
-                TSequentialAction
-                (Actions =
-                    [
-                        TWaitInSec( Duration = 3.5 ),
-                        TActionCall
-                        (
-                            Action = $/VFX_Bank/BANK_Dynamic_Flash_Only_Two_Simple
-                            NamedParams = MAP[
-                                ( 'parColorEnd', float3[0.09411766,0.05882353,0.007843138] ),
-                                ( 'parColorStart', float3[0.9294118,0.5882353,0.07843138] ),
-                                ( 'parDuration', 0.2 ),
-                                ( 'parInitialDelay', parInitialShotDelay ),
-                                ( 'parOpacity', 0.3 ),
-                                ( 'parSize', 10000 ),
-                                ( 'parSpeed', float3[0,0,0] ),
-                                ( 'Position', float3[-8056,-6594,18108] ),
-                            ]
-                        ),
-                    ]
-                ),
-                TSequentialAction
-                (Actions =
-                    [
-                        TWaitInSec( Duration = 2.6 ),
-                        TActionCall
-                        (
-                            Action = $/VFX_Bank/BANK_Dynamic_Flash_Only_Two_Simple
-                            NamedParams = MAP[
-                                ( 'parColorEnd', float3[0.09411766,0.05882353,0.007843138] ),
-                                ( 'parColorStart', float3[0.9294118,0.5882353,0.07843138] ),
-                                ( 'parDuration', 0.08 ),
-                                ( 'parInitialDelay', parInitialShotDelay ),
-                                ( 'parOpacity', 0.3 ),
-                                ( 'parSize', 8000 ),
-                                ( 'parSpeed', float3[0,0,0] ),
-                                ( 'Position', float3[-3753,12632,16571] ),
-                            ]
-                        ),
-                    ]
-                ),
-                TSequentialAction
-                (Actions =
-                    [
-                        TWaitInSec( Duration = 0.5 ),
-                        TActionCall
-                        (
-                            Action = $/VFX_Bank/BANK_Dynamic_Flash_Only_Two_Simple
-                            NamedParams = MAP[
-                                ( 'parColorEnd', float3[0.09411766,0.05882353,0.007843138] ),
-                                ( 'parColorStart', float3[0.9294118,0.5882353,0.07843138] ),
-                                ( 'parDuration', 0.1 ),
-                                ( 'parInitialDelay', parInitialShotDelay ),
-                                ( 'parOpacity', 0.3 ),
-                                ( 'parSize', 8000 ),
-                                ( 'parSpeed', float3[0,0,0] ),
-                                ( 'Position', float3[430,8898,19736] ),
-                            ]
-                        ),
-                    ]
-                ),
-                TSequentialAction
-                (Actions =
-                    [
-                        TWaitInSec( Duration = 3 ),
-                        TActionCall
-                        (
-                            Action = $/VFX_Bank/BANK_Dynamic_Flash_Only_Two_Simple
-                            NamedParams = MAP[
-                                ( 'parColorEnd', float3[0.09411766,0.05882353,0.007843138] ),
-                                ( 'parColorStart', float3[0.9294118,0.5882353,0.07843138] ),
-                                ( 'parDuration', 0.12 ),
-                                ( 'parInitialDelay', parInitialShotDelay ),
-                                ( 'parOpacity', 0.3 ),
-                                ( 'parSize', 8500 ),
-                                ( 'parSpeed', float3[0,0,0] ),
-                                ( 'Position', float3[1517,-9695,13907] ),
-                            ]
-                        ),
-                    ]
-                ),
-                TSequentialAction
-                (Actions =
-                    [
-                        TWaitInSec( Duration = 4.5 ),
-                        TActionCall
-                        (
-                            Action = $/VFX_Bank/BANK_Dynamic_Flash_Only_Two_Simple
-                            NamedParams = MAP[
-                                ( 'parColorEnd', float3[0.09411766,0.05882353,0.007843138] ),
-                                ( 'parColorStart', float3[0.9294118,0.5882353,0.07843138] ),
-                                ( 'parDuration', 0.5 ),
-                                ( 'parInitialDelay', parInitialShotDelay ),
-                                ( 'parOpacity', 0.3 ),
-                                ( 'parSize', 15000 ),
-                                ( 'parSpeed', float3[0,0,1100] ),
-                                ( 'Position', float3[-8129,390,12890] ),
-                            ]
-                        ),
-                    ]
-                ),
-                TSequentialAction
-                (Actions =
-                    [
-                        TWaitInSec( Duration = 2 ),
-                        TActionCall
-                        (
-                            Action = $/VFX_Bank/BANK_Dynamic_Flash_Only_Two_Simple
-                            NamedParams = MAP[
-                                ( 'parColorEnd', float3[0.09411766,0.05882353,0.007843138] ),
-                                ( 'parColorStart', float3[0.9294118,0.5882353,0.07843138] ),
-                                ( 'parDuration', 0.1 ),
-                                ( 'parInitialDelay', parInitialShotDelay ),
-                                ( 'parOpacity', 0.3 ),
-                                ( 'parSize', 10000 ),
-                                ( 'parSpeed', float3[0,0,0] ),
-                                ( 'Position', float3[3827,-383,15641] ),
-                            ]
-                        ),
-                    ]
-                ),
-                TActionCall
-                (
-                    Action = $/VFX_Bank/BANK_Dynamic_Flash_Only_Two_Simple
-                    NamedParams = MAP[
-                        ( 'parColorEnd', float3[0.09411766,0.05882353,0.007843138] ),
-                        ( 'parColorStart', float3[0.9294118,0.5882353,0.07843138] ),
-                        ( 'parDuration', 2 ),
-                        ( 'parInitialDelay', parInitialShotDelay ),
-                        ( 'parOpacity', 0.3 ),
-                        ( 'parSize', 15000 ),
-                        ( 'parSpeed', float3[0,0,0] ),
-                        ( 'Position', float3[353,418,13179] ),
-                    ]
-                ),
-                TSequentialAction
-                (Actions =
-                    [
-                        TWaitInSec( Duration = 4 ),
-                        TActionCall
-                        (
-                            Action = $/VFX_Bank/BANK_Dynamic_Flash_Only_Two_Simple
-                            NamedParams = MAP[
-                                ( 'parColorEnd', float3[0.09411766,0.05882353,0.007843138] ),
-                                ( 'parColorStart', float3[0.9294118,0.2156863,0.007843138] ),
-                                ( 'parDuration', 2 ),
-                                ( 'parInitialDelay', parInitialShotDelay ),
-                                ( 'parOpacity', 0.3 ),
-                                ( 'parSize', 15000 ),
-                                ( 'parSpeed', float3[0,0,0] ),
-                                ( 'Position', float3[8551,-7883,6043] ),
-                            ]
-                        ),
-                    ]
-                ),
-                TSequentialAction
-                (Actions =
-                    [
-                        TWaitInSec( Duration = 2.5 ),
-                        TActionCall
-                        (
-                            Action = $/VFX_Bank/BANK_Dynamic_Flash_Only_Two_Simple
-                            NamedParams = MAP[
-                                ( 'parColorEnd', float3[0.09411766,0.05882353,0.007843138] ),
-                                ( 'parColorStart', float3[0.9294118,0.5882353,0.07843138] ),
-                                ( 'parDuration', 0.5 ),
-                                ( 'parInitialDelay', parInitialShotDelay ),
-                                ( 'parOpacity', 0.3 ),
-                                ( 'parSize', 15000 ),
-                                ( 'parSpeed', float3[0,0,1100] ),
-                                ( 'Position', float3[12858,4580,12890] ),
-                            ]
-                        ),
-                    ]
-                ),
-                TSequentialAction
-                (Actions =
-                    [
-                        TWaitInSec( Duration = 2.5 ),
-                        TActionCall
-                        (
-                            Action = $/VFX_Bank/BANK_Dynamic_Flash_Only_Two_Simple
-                            NamedParams = MAP[
-                                ( 'parColorEnd', float3[0.0509804,0.03921569,0.003921569] ),
-                                ( 'parColorStart', float3[0.5019608,0.4117647,0.4] ),
-                                ( 'parDuration', 0.2 ),
-                                ( 'parInitialDelay', parInitialShotDelay ),
-                                ( 'parOpacity', 0.3 ),
-                                ( 'parSize', 4000 ),
-                                ( 'parSpeed', float3[0,0,0] ),
-                                ( 'Position', float3[12858,4580,12590] ),
-                            ]
-                        ),
-                    ]
-                ),
-                TSequentialAction
-                (Actions =
-                    [
-                        TWaitInSec( Duration = 6.5 ),
-                        TActionCall
-                        (
-                            Action = $/VFX_Bank/BANK_Dynamic_Flash_Only_Two_Simple
-                            NamedParams = MAP[
-                                ( 'parColorEnd', float3[0.09411766,0.05882353,0.007843138] ),
-                                ( 'parColorStart', float3[0.9294118,0.5882353,0.07843138] ),
-                                ( 'parDuration', 0.5 ),
-                                ( 'parInitialDelay', parInitialShotDelay ),
-                                ( 'parOpacity', 0.3 ),
-                                ( 'parSize', 15000 ),
-                                ( 'parSpeed', float3[0,0,1100] ),
-                                ( 'Position', float3[1341,-1060,11880] ),
-                            ]
-                        ),
-                    ]
-                ),
-                TSequentialAction
-                (Actions =
-                    [
-                        TWaitInSec( Duration = 6.5 ),
-                        TActionCall
-                        (
-                            Action = $/VFX_Bank/BANK_Dynamic_Flash_Only_Two_Simple
-                            NamedParams = MAP[
-                                ( 'parColorEnd', float3[0.0509804,0.03921569,0.003921569] ),
-                                ( 'parColorStart', float3[0.5019608,0.4117647,0.4] ),
-                                ( 'parDuration', 0.2 ),
-                                ( 'parInitialDelay', parInitialShotDelay ),
-                                ( 'parOpacity', 0.3 ),
-                                ( 'parSize', 4000 ),
-                                ( 'parSpeed', float3[0,0,0] ),
-                                ( 'Position', float3[1341,-1060,11580] ),
-                            ]
-                        ),
-                    ]
-                ),
-                TSequentialAction
-                (Actions =
-                    [
-                        TWaitInSec( Duration = 4.5 ),
-                        TActionCall
-                        (
-                            Action = $/VFX_Bank/BANK_Dynamic_Flash_Only_Two_Simple
-                            NamedParams = MAP[
-                                ( 'parColorEnd', float3[0.0509804,0.03921569,0.003921569] ),
-                                ( 'parColorStart', float3[0.5019608,0.4117647,0.4] ),
-                                ( 'parDuration', 0.2 ),
-                                ( 'parInitialDelay', parInitialShotDelay ),
-                                ( 'parOpacity', 0.3 ),
-                                ( 'parSize', 4000 ),
-                                ( 'parSpeed', float3[0,0,0] ),
-                                ( 'Position', float3[-8129,390,12590] ),
-                            ]
-                        ),
-                    ]
-                ),
-                TActionCall
-                (
-                    Action = $/VFX_Bank/BANK_Dynamic_Flash_Only_Two_Simple
-                    NamedParams = MAP[
-                        ( 'parColorEnd', float3[0.09411766,0.05882353,0.007843138] ),
-                        ( 'parColorStart', float3[0.9294118,0.5882353,0.07843138] ),
-                        ( 'parDuration', 0.1 ),
-                        ( 'parInitialDelay', parInitialShotDelay ),
-                        ( 'parOpacity', 0.3 ),
-                        ( 'parSize', 15000 ),
-                        ( 'parSpeed', float3[0,0,0] ),
-                        ( 'Position', float3[-7732,-7175,16350] ),
-                    ]
-                ),
-                TSequentialAction
-                (Actions =
-                    [
-                        TWaitInSec( Duration = 2.5 ),
-                        TActionCall
-                        (
-                            Action = $/VFX_Bank/BANK_Dynamic_Flash_Only_Two_Simple
-                            NamedParams = MAP[
-                                ( 'parColorEnd', float3[0.09411766,0.05882353,0.007843138] ),
-                                ( 'parColorStart', float3[0.9294118,0.5882353,0.07843138] ),
-                                ( 'parDuration', 0.1 ),
-                                ( 'parInitialDelay', parInitialShotDelay ),
-                                ( 'parOpacity', 0.3 ),
-                                ( 'parSize', 15000 ),
-                                ( 'parSpeed', float3[0,0,0] ),
-                                ( 'Position', float3[4915,2738,23086] ),
-                            ]
-                        ),
-                    ]
-                ),
-                TSequentialAction
-                (Actions =
-                    [
-                        TWaitInSec( Duration = 3 ),
-                        TActionCall
-                        (
-                            Action = $/VFX_Bank/BANK_Dynamic_Flash_Only_Two_Simple
-                            NamedParams = MAP[
-                                ( 'parColorEnd', float3[0.09411766,0.05882353,0.007843138] ),
-                                ( 'parColorStart', float3[0.9294118,0.5882353,0.07843138] ),
-                                ( 'parDuration', 1 ),
-                                ( 'parInitialDelay', parInitialShotDelay ),
-                                ( 'parOpacity', 0.3 ),
-                                ( 'parSize', 8000 ),
-                                ( 'parSpeed', float3[0,0,0] ),
-                                ( 'Position', float3[-6373,9883,12028] ),
-                            ]
-                        ),
-                    ]
-                ),
-                TSequentialAction
-                (Actions =
-                    [
-                        TWaitInSec( Duration = 0.2 ),
-                        TActionCall
-                        (
-                            Action = $/VFX_Bank/BANK_Dynamic_Flash_Only_Two_Simple
-                            NamedParams = MAP[
-                                ( 'parColorEnd', float3[0.09411766,0.05882353,0.007843138] ),
-                                ( 'parColorStart', float3[0.9294118,0.5882353,0.07843138] ),
-                                ( 'parDuration', 0.2 ),
-                                ( 'parInitialDelay', parInitialShotDelay ),
-                                ( 'parOpacity', 0.3 ),
-                                ( 'parSize', 15000 ),
-                                ( 'parSpeed', float3[0,0,0] ),
-                                ( 'Position', float3[101,-1051,19959] ),
-                            ]
-                        ),
-                    ]
-                ),
-                TSequentialAction
-                (Actions =
-                    [
-                        TWaitInSec( Duration = 4 ),
-                        TActionCall
-                        (
-                            Action = $/VFX_Bank/BANK_Dynamic_Flash_Only_Two_Simple
-                            NamedParams = MAP[
-                                ( 'parColorEnd', float3[0.09411766,0.05882353,0.007843138] ),
-                                ( 'parColorStart', float3[0.9294118,0.5882353,0.07843138] ),
-                                ( 'parDuration', 0.12 ),
-                                ( 'parInitialDelay', parInitialShotDelay ),
-                                ( 'parOpacity', 0.3 ),
-                                ( 'parSize', 15000 ),
-                                ( 'parSpeed', float3[0,0,0] ),
-                                ( 'Position', float3[685,-1125,17128] ),
-                            ]
-                        ),
-                    ]
-                ),
-                TSequentialAction
-                (Actions =
-                    [
-                        TWaitInSec( Duration = 4.5 ),
-                        TActionCall
-                        (
-                            Action = $/VFX_Bank/BANK_Dynamic_Flash_Simple
-                            NamedParams = MAP[
-                                ( 'parColorEnd', float3[1,0.9058824,0.2470588] ),
-                                ( 'parColorStart', float3[0.6,0.2980392,0.09803922] ),
-                                ( 'parDuration', 0.1 ),
-                                ( 'parOpacity', 0.3 ),
-                                ( 'parSizeLBU', 32.55814 ),
-                                ( 'Position', float3[-8129,390,12940] ),
-                            ]
-                        ),
-                    ]
-                ),
-                TSequentialAction
-                (Actions =
-                    [
-                        TWaitInSec( Duration = 2.5 ),
-                        TActionCall
-                        (
-                            Action = $/VFX_Bank/BANK_Dynamic_Flash_Simple
-                            NamedParams = MAP[
-                                ( 'parColorEnd', float3[1,0.9058824,0.2470588] ),
-                                ( 'parColorStart', float3[0.6,0.2980392,0.09803922] ),
-                                ( 'parDuration', 0.1 ),
-                                ( 'parOpacity', 0.3 ),
-                                ( 'parSizeLBU', 32.55814 ),
-                                ( 'Position', float3[12858,4580,12940] ),
-                            ]
-                        ),
-                    ]
-                ),
-                TSequentialAction
-                (Actions =
-                    [
-                        TWaitInSec( Duration = 6.5 ),
-                        TActionCall
-                        (
-                            Action = $/VFX_Bank/BANK_Dynamic_Flash_Simple
-                            NamedParams = MAP[
-                                ( 'parColorEnd', float3[1,0.9058824,0.2470588] ),
-                                ( 'parColorStart', float3[0.6,0.2980392,0.09803922] ),
-                                ( 'parDuration', 0.1 ),
-                                ( 'parOpacity', 0.3 ),
-                                ( 'parSizeLBU', 32.55814 ),
-                                ( 'Position', float3[1341,-1060,11930] ),
-                            ]
-                        ),
-                    ]
-                ),
-                TWaitInSec( Duration = 2),
-            ]
-        ),
-        TSimultaneousAction
-        (
             Mobile = TMobileWithLocalRepereMatrixFactory
             (
                 Position = float3[1341,-1060,11380] + parPosition
@@ -1153,6 +409,750 @@ export fx_steelman_air_interception is SimultaneousActionDeclaration
                         ),
                     ]
                 ),
+            ]
+        ),
+        TSimultaneousAction
+        (
+            Mobile = nil
+            Actions =
+            [
+                TSequentialAction
+                (Actions =
+                    [
+                        TWaitInSec( Duration = 0.2 ),
+                        TActionCall
+                        (
+                            Action = $/VFX_Bank/BANK_Bomb_Flash
+                            NamedParams = MAP[
+                                ( 'parCount', 3 ),
+                                ( 'parDuration', 0.08 ),
+                                ( 'parFinalSize', 6000 ),
+                                ( 'parInitialSize', 20 ),
+                                ( 'parZBias', 255 ),
+                                ( 'parPositionRelative', float3[78,-1046,13740] + parPosition ),
+                            ]
+                        ),
+                    ]
+                ),
+                TActionCall
+                (
+                    Action = $/VFX_Bank/BANK_Bomb_Flash
+                    NamedParams = MAP[
+                        ( 'parCount', 3 ),
+                        ( 'parDuration', 0.05 ),
+                        ( 'parFinalSize', 3000 ),
+                        ( 'parInitialSize', 20 ),
+                        ( 'parZBias', 255 ),
+                        ( 'parPositionRelative', float3[-3386,-7182,7698] + parPosition ),
+                    ]
+                ),
+                TSequentialAction
+                (Actions =
+                    [
+                        TWaitInSec( Duration = 3.5 ),
+                        TActionCall
+                        (
+                            Action = $/VFX_Bank/BANK_Bomb_Flash
+                            NamedParams = MAP[
+                                ( 'parCount', 3 ),
+                                ( 'parDuration', 0.1 ),
+                                ( 'parFinalSize', 3000 ),
+                                ( 'parInitialSize', 20 ),
+                                ( 'parZBias', 255 ),
+                                ( 'parPositionRelative', float3[-8055,-6583,17609] + parPosition ),
+                            ]
+                        ),
+                    ]
+                ),
+                TSequentialAction
+                (Actions =
+                    [
+                        TWaitInSec( Duration = 4 ),
+                        TActionCall
+                        (
+                            Action = $/VFX_Bank/BANK_Bomb_Flash
+                            NamedParams = MAP[
+                                ( 'parCount', 3 ),
+                                ( 'parDuration', 0.08 ),
+                                ( 'parFinalSize', 3000 ),
+                                ( 'parInitialSize', 20 ),
+                                ( 'parZBias', 255 ),
+                                ( 'parPositionRelative', float3[661,-1120,16500] + parPosition ),
+                            ]
+                        ),
+                    ]
+                ),
+                TSequentialAction
+                (Actions =
+                    [
+                        TWaitInSec( Duration = 3 ),
+                        TActionCall
+                        (
+                            Action = $/VFX_Bank/BANK_Bomb_Flash
+                            NamedParams = MAP[
+                                ( 'parCount', 3 ),
+                                ( 'parDuration', 0.09 ),
+                                ( 'parFinalSize', 3000 ),
+                                ( 'parInitialSize', 20 ),
+                                ( 'parZBias', 255 ),
+                                ( 'parPositionRelative', float3[1553,-9682,13414] + parPosition ),
+                            ]
+                        ),
+                    ]
+                ),
+                TSequentialAction
+                (Actions =
+                    [
+                        TWaitInSec( Duration = 2.6 ),
+                        TActionCall
+                        (
+                            Action = $/VFX_Bank/BANK_Bomb_Flash
+                            NamedParams = MAP[
+                                ( 'parCount', 3 ),
+                                ( 'parDuration', 0.05 ),
+                                ( 'parFinalSize', 3000 ),
+                                ( 'parInitialSize', 20 ),
+                                ( 'parZBias', 255 ),
+                                ( 'parPositionRelative', float3[-3827,12645,16077] + parPosition ),
+                            ]
+                        ),
+                    ]
+                ),
+                TSequentialAction
+                (Actions =
+                    [
+                        TWaitInSec( Duration = 2.5 ),
+                        TActionCall
+                        (
+                            Action = $/VFX_Bank/BANK_Bomb_Flash
+                            NamedParams = MAP[
+                                ( 'parCount', 3 ),
+                                ( 'parDuration', 0.08 ),
+                                ( 'parFinalSize', 3000 ),
+                                ( 'parInitialSize', 20 ),
+                                ( 'parZBias', 255 ),
+                                ( 'parPositionRelative', float3[4860,2731,22693] + parPosition ),
+                            ]
+                        ),
+                    ]
+                ),
+                TSequentialAction
+                (Actions =
+                    [
+                        TWaitInSec( Duration = 4 ),
+                        TActionCall
+                        (
+                            Action = $/VFX_Bank/BANK_Bomb_Flash
+                            NamedParams = MAP[
+                                ( 'parCount', 4 ),
+                                ( 'parDuration', 0.1 ),
+                                ( 'parFinalSize', 8000 ),
+                                ( 'parInitialSize', 200 ),
+                                ( 'parZBias', 255 ),
+                                ( 'parPositionRelative', float3[8551,-7883,6243] + parPosition ),
+                            ]
+                        ),
+                    ]
+                ),
+                TSequentialAction
+                (Actions =
+                    [
+                        TWaitInSec( Duration = 0.5 ),
+                        TActionCall
+                        (
+                            Action = $/VFX_Bank/BANK_Bomb_Flash
+                            NamedParams = MAP[
+                                ( 'parCount', 3 ),
+                                ( 'parDuration', 0.05 ),
+                                ( 'parFinalSize', 2000 ),
+                                ( 'parInitialSize', 20 ),
+                                ( 'parZBias', 255 ),
+                                ( 'parPositionRelative', float3[6097,8908,13645] + parPosition ),
+                            ]
+                        ),
+                    ]
+                ),
+                TSequentialAction
+                (Actions =
+                    [
+                        TWaitInSec( Duration = 2 ),
+                        TActionCall
+                        (
+                            Action = $/VFX_Bank/BANK_Bomb_Flash
+                            NamedParams = MAP[
+                                ( 'parCount', 3 ),
+                                ( 'parDuration', 0.05 ),
+                                ( 'parFinalSize', 4000 ),
+                                ( 'parInitialSize', 20 ),
+                                ( 'parZBias', 255 ),
+                                ( 'parPositionRelative', float3[3828,-373,15141] + parPosition ),
+                            ]
+                        ),
+                    ]
+                ),
+                TSequentialAction
+                (Actions =
+                    [
+                        TWaitInSec( Duration = 2.5 ),
+                        TActionCall
+                        (
+                            Action = $/VFX_Bank/BANK_Bomb_Flash
+                            NamedParams = MAP[
+                                ( 'parCount', 3 ),
+                                ( 'parDuration', 0.1 ),
+                                ( 'parFinalSize', 5000 ),
+                                ( 'parInitialSize', 200 ),
+                                ( 'parZBias', 255 ),
+                                ( 'parPositionRelative', float3[12858,4580,12390] + parPosition ),
+                            ]
+                        ),
+                    ]
+                ),
+                TSequentialAction
+                (Actions =
+                    [
+                        TWaitInSec( Duration = 6.5 ),
+                        TActionCall
+                        (
+                            Action = $/VFX_Bank/BANK_Bomb_Flash
+                            NamedParams = MAP[
+                                ( 'parCount', 3 ),
+                                ( 'parDuration', 0.1 ),
+                                ( 'parFinalSize', 5000 ),
+                                ( 'parInitialSize', 200 ),
+                                ( 'parZBias', 255 ),
+                                ( 'parPositionRelative', float3[1341,-1060,11380] + parPosition ),
+                            ]
+                        ),
+                    ]
+                ),
+                TSequentialAction
+                (Actions =
+                    [
+                        TWaitInSec( Duration = 3 ),
+                        TActionCall
+                        (
+                            Action = $/VFX_Bank/BANK_Bomb_Flash
+                            NamedParams = MAP[
+                                ( 'parCount', 4 ),
+                                ( 'parDuration', 0.1 ),
+                                ( 'parFinalSize', 8000 ),
+                                ( 'parInitialSize', 200 ),
+                                ( 'parZBias', 255 ),
+                                ( 'parPositionRelative', float3[-6373,9883,12228] + parPosition ),
+                            ]
+                        ),
+                    ]
+                ),
+                TSequentialAction
+                (Actions =
+                    [
+                        TWaitInSec( Duration = 4.5 ),
+                        TActionCall
+                        (
+                            Action = $/VFX_Bank/BANK_Bomb_Flash
+                            NamedParams = MAP[
+                                ( 'parCount', 3 ),
+                                ( 'parDuration', 0.1 ),
+                                ( 'parFinalSize', 5000 ),
+                                ( 'parInitialSize', 200 ),
+                                ( 'parZBias', 255 ),
+                                ( 'parPositionRelative', float3[-8129,390,12390] + parPosition ),
+                            ]
+                        ),
+                    ]
+                ),
+                TActionCall
+                (
+                    Action = $/VFX_Bank/BANK_Bomb_Flash
+                    NamedParams = MAP[
+                        ( 'parCount', 4 ),
+                        ( 'parDuration', 0.1 ),
+                        ( 'parFinalSize', 8000 ),
+                        ( 'parInitialSize', 200 ),
+                        ( 'parZBias', 255 ),
+                        ( 'parPositionRelative', float3[353,418,13379] + parPosition ),
+                    ]
+                ),
+                TSequentialAction
+                (Actions =
+                    [
+                        TWaitInSec( Duration = 0.6 ),
+                        TActionCall
+                        (
+                            Action = $/VFX_Bank/BANK_Bomb_Flash
+                            NamedParams = MAP[
+                                ( 'parCount', 3 ),
+                                ( 'parDuration', 0.1 ),
+                                ( 'parFinalSize', 3500 ),
+                                ( 'parInitialSize', 20 ),
+                                ( 'parZBias', 255 ),
+                                ( 'parPositionRelative', float3[5927,-4675,14554] + parPosition ),
+                            ]
+                        ),
+                    ]
+                ),
+                TSequentialAction
+                (Actions =
+                    [
+                        TWaitInSec( Duration = 0.4 ),
+                        TActionCall
+                        (
+                            Action = $/VFX_Bank/BANK_Bomb_Flash
+                            NamedParams = MAP[
+                                ( 'parCount', 3 ),
+                                ( 'parDuration', 0.06 ),
+                                ( 'parFinalSize', 3000 ),
+                                ( 'parInitialSize', 20 ),
+                                ( 'parZBias', 255 ),
+                                ( 'parPositionRelative', float3[2261,4395,16090] + parPosition ),
+                            ]
+                        ),
+                    ]
+                ),
+                TSequentialAction
+                (Actions =
+                    [
+                        TWaitInSec( Duration = 4.5 ),
+                        TActionCall
+                        (
+                            Action = $/VFX_Bank/BANK_Dynamic_Flash_Simple
+                            NamedParams = MAP[
+                                ( 'parColorEnd', float3[1,0.9058824,0.2470588] ),
+                                ( 'parColorStart', float3[0.6,0.2980392,0.09803922] ),
+                                ( 'parDuration', 0.1 ),
+                                ( 'parOpacity', 0.3 ),
+                                ( 'parSizeLBU', 32.55814 ),
+                                ( 'Position', float3[-8129,390,12940] ),
+                            ]
+                        ),
+                    ]
+                ),
+                TSequentialAction
+                (Actions =
+                    [
+                        TWaitInSec( Duration = 2.5 ),
+                        TActionCall
+                        (
+                            Action = $/VFX_Bank/BANK_Dynamic_Flash_Simple
+                            NamedParams = MAP[
+                                ( 'parColorEnd', float3[1,0.9058824,0.2470588] ),
+                                ( 'parColorStart', float3[0.6,0.2980392,0.09803922] ),
+                                ( 'parDuration', 0.1 ),
+                                ( 'parOpacity', 0.3 ),
+                                ( 'parSizeLBU', 32.55814 ),
+                                ( 'Position', float3[12858,4580,12940] ),
+                            ]
+                        ),
+                    ]
+                ),
+                TSequentialAction
+                (Actions =
+                    [
+                        TWaitInSec( Duration = 6.5 ),
+                        TActionCall
+                        (
+                            Action = $/VFX_Bank/BANK_Dynamic_Flash_Simple
+                            NamedParams = MAP[
+                                ( 'parColorEnd', float3[1,0.9058824,0.2470588] ),
+                                ( 'parColorStart', float3[0.6,0.2980392,0.09803922] ),
+                                ( 'parDuration', 0.1 ),
+                                ( 'parOpacity', 0.3 ),
+                                ( 'parSizeLBU', 32.55814 ),
+                                ( 'Position', float3[1341,-1060,11930] ),
+                            ]
+                        ),
+                    ]
+                ),
+                TSequentialAction
+                (Actions =
+                    [
+                        TWaitInSec( Duration = 0.4 ),
+                        TActionCall
+                        (
+                            Action = $/VFX_Bank/BANK_Dynamic_Flash_Only_Two_Simple
+                            NamedParams = MAP[
+                                ( 'parColorEnd', float3[0.09411766,0.05882353,0.007843138] ),
+                                ( 'parColorStart', float3[0.9294118,0.5882353,0.07843138] ),
+                                ( 'parDuration', 0.2 ),
+                                ( 'parInitialDelay', parInitialShotDelay ),
+                                ( 'parOpacity', 0.3 ),
+                                ( 'parSize', 10000 ),
+                                ( 'parSpeed', float3[0,0,0] ),
+                                ( 'Position', float3[2260,4385,16590] ),
+                            ]
+                        ),
+                    ]
+                ),
+                TSequentialAction
+                (Actions =
+                    [
+                        TWaitInSec( Duration = 0.6 ),
+                        TActionCall
+                        (
+                            Action = $/VFX_Bank/BANK_Dynamic_Flash_Only_Two_Simple
+                            NamedParams = MAP[
+                                ( 'parColorEnd', float3[0.09411766,0.05882353,0.007843138] ),
+                                ( 'parColorStart', float3[0.9294118,0.5882353,0.07843138] ),
+                                ( 'parDuration', 0.1 ),
+                                ( 'parInitialDelay', parInitialShotDelay ),
+                                ( 'parOpacity', 0.3 ),
+                                ( 'parSize', 10000 ),
+                                ( 'parSpeed', float3[0,0,0] ),
+                                ( 'Position', float3[6002,-4688,15047] ),
+                            ]
+                        ),
+                    ]
+                ),
+                TSequentialAction
+                (Actions =
+                    [
+                        TWaitInSec( Duration = 3.5 ),
+                        TActionCall
+                        (
+                            Action = $/VFX_Bank/BANK_Dynamic_Flash_Only_Two_Simple
+                            NamedParams = MAP[
+                                ( 'parColorEnd', float3[0.09411766,0.05882353,0.007843138] ),
+                                ( 'parColorStart', float3[0.9294118,0.5882353,0.07843138] ),
+                                ( 'parDuration', 0.2 ),
+                                ( 'parInitialDelay', parInitialShotDelay ),
+                                ( 'parOpacity', 0.3 ),
+                                ( 'parSize', 10000 ),
+                                ( 'parSpeed', float3[0,0,0] ),
+                                ( 'Position', float3[-8056,-6594,18108] ),
+                            ]
+                        ),
+                    ]
+                ),
+                TSequentialAction
+                (Actions =
+                    [
+                        TWaitInSec( Duration = 2.6 ),
+                        TActionCall
+                        (
+                            Action = $/VFX_Bank/BANK_Dynamic_Flash_Only_Two_Simple
+                            NamedParams = MAP[
+                                ( 'parColorEnd', float3[0.09411766,0.05882353,0.007843138] ),
+                                ( 'parColorStart', float3[0.9294118,0.5882353,0.07843138] ),
+                                ( 'parDuration', 0.08 ),
+                                ( 'parInitialDelay', parInitialShotDelay ),
+                                ( 'parOpacity', 0.3 ),
+                                ( 'parSize', 8000 ),
+                                ( 'parSpeed', float3[0,0,0] ),
+                                ( 'Position', float3[-3753,12632,16571] ),
+                            ]
+                        ),
+                    ]
+                ),
+                TSequentialAction
+                (Actions =
+                    [
+                        TWaitInSec( Duration = 0.5 ),
+                        TActionCall
+                        (
+                            Action = $/VFX_Bank/BANK_Dynamic_Flash_Only_Two_Simple
+                            NamedParams = MAP[
+                                ( 'parColorEnd', float3[0.09411766,0.05882353,0.007843138] ),
+                                ( 'parColorStart', float3[0.9294118,0.5882353,0.07843138] ),
+                                ( 'parDuration', 0.1 ),
+                                ( 'parInitialDelay', parInitialShotDelay ),
+                                ( 'parOpacity', 0.3 ),
+                                ( 'parSize', 8000 ),
+                                ( 'parSpeed', float3[0,0,0] ),
+                                ( 'Position', float3[430,8898,19736] ),
+                            ]
+                        ),
+                    ]
+                ),
+                TSequentialAction
+                (Actions =
+                    [
+                        TWaitInSec( Duration = 3 ),
+                        TActionCall
+                        (
+                            Action = $/VFX_Bank/BANK_Dynamic_Flash_Only_Two_Simple
+                            NamedParams = MAP[
+                                ( 'parColorEnd', float3[0.09411766,0.05882353,0.007843138] ),
+                                ( 'parColorStart', float3[0.9294118,0.5882353,0.07843138] ),
+                                ( 'parDuration', 0.12 ),
+                                ( 'parInitialDelay', parInitialShotDelay ),
+                                ( 'parOpacity', 0.3 ),
+                                ( 'parSize', 8500 ),
+                                ( 'parSpeed', float3[0,0,0] ),
+                                ( 'Position', float3[1517,-9695,13907] ),
+                            ]
+                        ),
+                    ]
+                ),
+                TSequentialAction
+                (Actions =
+                    [
+                        TWaitInSec( Duration = 4.5 ),
+                        TActionCall
+                        (
+                            Action = $/VFX_Bank/BANK_Dynamic_Flash_Only_Two_Simple
+                            NamedParams = MAP[
+                                ( 'parColorEnd', float3[0.09411766,0.05882353,0.007843138] ),
+                                ( 'parColorStart', float3[0.9294118,0.5882353,0.07843138] ),
+                                ( 'parDuration', 0.5 ),
+                                ( 'parInitialDelay', parInitialShotDelay ),
+                                ( 'parOpacity', 0.3 ),
+                                ( 'parSize', 15000 ),
+                                ( 'parSpeed', float3[0,0,1100] ),
+                                ( 'Position', float3[-8129,390,12890] ),
+                            ]
+                        ),
+                    ]
+                ),
+                TSequentialAction
+                (Actions =
+                    [
+                        TWaitInSec( Duration = 2 ),
+                        TActionCall
+                        (
+                            Action = $/VFX_Bank/BANK_Dynamic_Flash_Only_Two_Simple
+                            NamedParams = MAP[
+                                ( 'parColorEnd', float3[0.09411766,0.05882353,0.007843138] ),
+                                ( 'parColorStart', float3[0.9294118,0.5882353,0.07843138] ),
+                                ( 'parDuration', 0.1 ),
+                                ( 'parInitialDelay', parInitialShotDelay ),
+                                ( 'parOpacity', 0.3 ),
+                                ( 'parSize', 10000 ),
+                                ( 'parSpeed', float3[0,0,0] ),
+                                ( 'Position', float3[3827,-383,15641] ),
+                            ]
+                        ),
+                    ]
+                ),
+                TActionCall
+                (
+                    Action = $/VFX_Bank/BANK_Dynamic_Flash_Only_Two_Simple
+                    NamedParams = MAP[
+                        ( 'parColorEnd', float3[0.09411766,0.05882353,0.007843138] ),
+                        ( 'parColorStart', float3[0.9294118,0.5882353,0.07843138] ),
+                        ( 'parDuration', 2 ),
+                        ( 'parInitialDelay', parInitialShotDelay ),
+                        ( 'parOpacity', 0.3 ),
+                        ( 'parSize', 15000 ),
+                        ( 'parSpeed', float3[0,0,0] ),
+                        ( 'Position', float3[353,418,13179] ),
+                    ]
+                ),
+                TSequentialAction
+                (Actions =
+                    [
+                        TWaitInSec( Duration = 4 ),
+                        TActionCall
+                        (
+                            Action = $/VFX_Bank/BANK_Dynamic_Flash_Only_Two_Simple
+                            NamedParams = MAP[
+                                ( 'parColorEnd', float3[0.09411766,0.05882353,0.007843138] ),
+                                ( 'parColorStart', float3[0.9294118,0.2156863,0.007843138] ),
+                                ( 'parDuration', 2 ),
+                                ( 'parInitialDelay', parInitialShotDelay ),
+                                ( 'parOpacity', 0.3 ),
+                                ( 'parSize', 15000 ),
+                                ( 'parSpeed', float3[0,0,0] ),
+                                ( 'Position', float3[8551,-7883,6043] ),
+                            ]
+                        ),
+                    ]
+                ),
+                TSequentialAction
+                (Actions =
+                    [
+                        TWaitInSec( Duration = 2.5 ),
+                        TActionCall
+                        (
+                            Action = $/VFX_Bank/BANK_Dynamic_Flash_Only_Two_Simple
+                            NamedParams = MAP[
+                                ( 'parColorEnd', float3[0.09411766,0.05882353,0.007843138] ),
+                                ( 'parColorStart', float3[0.9294118,0.5882353,0.07843138] ),
+                                ( 'parDuration', 0.5 ),
+                                ( 'parInitialDelay', parInitialShotDelay ),
+                                ( 'parOpacity', 0.3 ),
+                                ( 'parSize', 15000 ),
+                                ( 'parSpeed', float3[0,0,1100] ),
+                                ( 'Position', float3[12858,4580,12890] ),
+                            ]
+                        ),
+                    ]
+                ),
+                TSequentialAction
+                (Actions =
+                    [
+                        TWaitInSec( Duration = 2.5 ),
+                        TActionCall
+                        (
+                            Action = $/VFX_Bank/BANK_Dynamic_Flash_Only_Two_Simple
+                            NamedParams = MAP[
+                                ( 'parColorEnd', float3[0.0509804,0.03921569,0.003921569] ),
+                                ( 'parColorStart', float3[0.5019608,0.4117647,0.4] ),
+                                ( 'parDuration', 0.2 ),
+                                ( 'parInitialDelay', parInitialShotDelay ),
+                                ( 'parOpacity', 0.3 ),
+                                ( 'parSize', 4000 ),
+                                ( 'parSpeed', float3[0,0,0] ),
+                                ( 'Position', float3[12858,4580,12590] ),
+                            ]
+                        ),
+                    ]
+                ),
+                TSequentialAction
+                (Actions =
+                    [
+                        TWaitInSec( Duration = 6.5 ),
+                        TActionCall
+                        (
+                            Action = $/VFX_Bank/BANK_Dynamic_Flash_Only_Two_Simple
+                            NamedParams = MAP[
+                                ( 'parColorEnd', float3[0.09411766,0.05882353,0.007843138] ),
+                                ( 'parColorStart', float3[0.9294118,0.5882353,0.07843138] ),
+                                ( 'parDuration', 0.5 ),
+                                ( 'parInitialDelay', parInitialShotDelay ),
+                                ( 'parOpacity', 0.3 ),
+                                ( 'parSize', 15000 ),
+                                ( 'parSpeed', float3[0,0,1100] ),
+                                ( 'Position', float3[1341,-1060,11880] ),
+                            ]
+                        ),
+                    ]
+                ),
+                TSequentialAction
+                (Actions =
+                    [
+                        TWaitInSec( Duration = 6.5 ),
+                        TActionCall
+                        (
+                            Action = $/VFX_Bank/BANK_Dynamic_Flash_Only_Two_Simple
+                            NamedParams = MAP[
+                                ( 'parColorEnd', float3[0.0509804,0.03921569,0.003921569] ),
+                                ( 'parColorStart', float3[0.5019608,0.4117647,0.4] ),
+                                ( 'parDuration', 0.2 ),
+                                ( 'parInitialDelay', parInitialShotDelay ),
+                                ( 'parOpacity', 0.3 ),
+                                ( 'parSize', 4000 ),
+                                ( 'parSpeed', float3[0,0,0] ),
+                                ( 'Position', float3[1341,-1060,11580] ),
+                            ]
+                        ),
+                    ]
+                ),
+                TSequentialAction
+                (Actions =
+                    [
+                        TWaitInSec( Duration = 4.5 ),
+                        TActionCall
+                        (
+                            Action = $/VFX_Bank/BANK_Dynamic_Flash_Only_Two_Simple
+                            NamedParams = MAP[
+                                ( 'parColorEnd', float3[0.0509804,0.03921569,0.003921569] ),
+                                ( 'parColorStart', float3[0.5019608,0.4117647,0.4] ),
+                                ( 'parDuration', 0.2 ),
+                                ( 'parInitialDelay', parInitialShotDelay ),
+                                ( 'parOpacity', 0.3 ),
+                                ( 'parSize', 4000 ),
+                                ( 'parSpeed', float3[0,0,0] ),
+                                ( 'Position', float3[-8129,390,12590] ),
+                            ]
+                        ),
+                    ]
+                ),
+                TActionCall
+                (
+                    Action = $/VFX_Bank/BANK_Dynamic_Flash_Only_Two_Simple
+                    NamedParams = MAP[
+                        ( 'parColorEnd', float3[0.09411766,0.05882353,0.007843138] ),
+                        ( 'parColorStart', float3[0.9294118,0.5882353,0.07843138] ),
+                        ( 'parDuration', 0.1 ),
+                        ( 'parInitialDelay', parInitialShotDelay ),
+                        ( 'parOpacity', 0.3 ),
+                        ( 'parSize', 15000 ),
+                        ( 'parSpeed', float3[0,0,0] ),
+                        ( 'Position', float3[-7732,-7175,16350] ),
+                    ]
+                ),
+                TSequentialAction
+                (Actions =
+                    [
+                        TWaitInSec( Duration = 2.5 ),
+                        TActionCall
+                        (
+                            Action = $/VFX_Bank/BANK_Dynamic_Flash_Only_Two_Simple
+                            NamedParams = MAP[
+                                ( 'parColorEnd', float3[0.09411766,0.05882353,0.007843138] ),
+                                ( 'parColorStart', float3[0.9294118,0.5882353,0.07843138] ),
+                                ( 'parDuration', 0.1 ),
+                                ( 'parInitialDelay', parInitialShotDelay ),
+                                ( 'parOpacity', 0.3 ),
+                                ( 'parSize', 15000 ),
+                                ( 'parSpeed', float3[0,0,0] ),
+                                ( 'Position', float3[4915,2738,23086] ),
+                            ]
+                        ),
+                    ]
+                ),
+                TSequentialAction
+                (Actions =
+                    [
+                        TWaitInSec( Duration = 3 ),
+                        TActionCall
+                        (
+                            Action = $/VFX_Bank/BANK_Dynamic_Flash_Only_Two_Simple
+                            NamedParams = MAP[
+                                ( 'parColorEnd', float3[0.09411766,0.05882353,0.007843138] ),
+                                ( 'parColorStart', float3[0.9294118,0.5882353,0.07843138] ),
+                                ( 'parDuration', 1 ),
+                                ( 'parInitialDelay', parInitialShotDelay ),
+                                ( 'parOpacity', 0.3 ),
+                                ( 'parSize', 8000 ),
+                                ( 'parSpeed', float3[0,0,0] ),
+                                ( 'Position', float3[-6373,9883,12028] ),
+                            ]
+                        ),
+                    ]
+                ),
+                TSequentialAction
+                (Actions =
+                    [
+                        TWaitInSec( Duration = 0.2 ),
+                        TActionCall
+                        (
+                            Action = $/VFX_Bank/BANK_Dynamic_Flash_Only_Two_Simple
+                            NamedParams = MAP[
+                                ( 'parColorEnd', float3[0.09411766,0.05882353,0.007843138] ),
+                                ( 'parColorStart', float3[0.9294118,0.5882353,0.07843138] ),
+                                ( 'parDuration', 0.2 ),
+                                ( 'parInitialDelay', parInitialShotDelay ),
+                                ( 'parOpacity', 0.3 ),
+                                ( 'parSize', 15000 ),
+                                ( 'parSpeed', float3[0,0,0] ),
+                                ( 'Position', float3[101,-1051,19959] ),
+                            ]
+                        ),
+                    ]
+                ),
+                TSequentialAction
+                (Actions =
+                    [
+                        TWaitInSec( Duration = 4 ),
+                        TActionCall
+                        (
+                            Action = $/VFX_Bank/BANK_Dynamic_Flash_Only_Two_Simple
+                            NamedParams = MAP[
+                                ( 'parColorEnd', float3[0.09411766,0.05882353,0.007843138] ),
+                                ( 'parColorStart', float3[0.9294118,0.5882353,0.07843138] ),
+                                ( 'parDuration', 0.12 ),
+                                ( 'parInitialDelay', parInitialShotDelay ),
+                                ( 'parOpacity', 0.3 ),
+                                ( 'parSize', 15000 ),
+                                ( 'parSpeed', float3[0,0,0] ),
+                                ( 'Position', float3[685,-1125,17128] ),
+                            ]
+                        ),
+                    ]
+                ),
+                TWaitInSec( Duration = 2),
             ]
         ),
         TSimultaneousAction
@@ -1899,6 +1899,210 @@ export fx_steelman_air_interception is SimultaneousActionDeclaration
                         TWaitInSec( Duration = 1.5 ),
                         TActionCall
                         (
+                            Action = $/VFX_Bank/BANK_Dynamic_Flash_Simple
+                            NamedParams = MAP[
+                                ( 'parColorEnd', float3[0.003921569,0.003921569,0] ),
+                                ( 'parColorStart', float3[0.6,0.2980392,0.09803922] ),
+                                ( 'parDuration', 2 ),
+                                ( 'parOpacity', 0.3 ),
+                                ( 'parSizeLBU', 46.51163 ),
+                                ( 'Position', float3[-5032,-6168,10456] ),
+                            ]
+                        ),
+                    ]
+                ),
+                TSequentialAction
+                (Actions =
+                    [
+                        TWaitInSec( Duration = 4.5 ),
+                        TActionCall
+                        (
+                            Action = $/VFX_Bank/BANK_Dynamic_Flash_Simple
+                            NamedParams = MAP[
+                                ( 'parColorEnd', float3[0.003921569,0.003921569,0] ),
+                                ( 'parColorStart', float3[0.6,0.2980392,0.09803922] ),
+                                ( 'parDuration', 2 ),
+                                ( 'parOpacity', 0.3 ),
+                                ( 'parSizeLBU', 46.51163 ),
+                                ( 'Position', float3[-5032,-1048,7788] ),
+                            ]
+                        ),
+                    ]
+                ),
+                TSequentialAction
+                (Actions =
+                    [
+                        TWaitInSec( Duration = 0.75 ),
+                        TActionCall
+                        (
+                            Action = $/VFX_Bank/BANK_Dynamic_Flash_Simple
+                            NamedParams = MAP[
+                                ( 'parColorEnd', float3[0.003921569,0.003921569,0] ),
+                                ( 'parColorStart', float3[0.6,0.2980392,0.09803922] ),
+                                ( 'parDuration', 2 ),
+                                ( 'parOpacity', 0.3 ),
+                                ( 'parSizeLBU', 46.51163 ),
+                                ( 'Position', float3[-5032,4072,10456] ),
+                            ]
+                        ),
+                    ]
+                ),
+                TSequentialAction
+                (Actions =
+                    [
+                        TWaitInSec( Duration = 4.5 ),
+                        TActionCall
+                        (
+                            Action = $/VFX_Bank/BANK_Dynamic_Flash_Simple
+                            NamedParams = MAP[
+                                ( 'parColorEnd', float3[0.003921569,0.003921569,0] ),
+                                ( 'parColorStart', float3[0.9725491,0.4941177,0.1764706] ),
+                                ( 'parDuration', 2 ),
+                                ( 'parOpacity', 0.3 ),
+                                ( 'parSizeLBU', 46.51163 ),
+                                ( 'Position', float3[-1172,-1340,20384] ),
+                            ]
+                        ),
+                    ]
+                ),
+                TActionCall
+                (
+                    Action = $/VFX_Bank/BANK_Dynamic_Flash_Simple
+                    NamedParams = MAP[
+                        ( 'parColorEnd', float3[0.003921569,0.003921569,0] ),
+                        ( 'parColorStart', float3[0.9725491,0.4941177,0.1764706] ),
+                        ( 'parDuration', 2 ),
+                        ( 'parOpacity', 0.3 ),
+                        ( 'parSizeLBU', 46.51163 ),
+                        ( 'Position', float3[-1061,-1315,14579] ),
+                    ]
+                ),
+                TSequentialAction
+                (Actions =
+                    [
+                        TWaitInSec( Duration = 5.5 ),
+                        TActionCall
+                        (
+                            Action = $/VFX_Bank/BANK_Dynamic_Flash_Simple
+                            NamedParams = MAP[
+                                ( 'parColorEnd', float3[0.003921569,0.003921569,0] ),
+                                ( 'parColorStart', float3[0.9725491,0.4941177,0.1764706] ),
+                                ( 'parDuration', 2 ),
+                                ( 'parOpacity', 0.3 ),
+                                ( 'parSizeLBU', 46.51163 ),
+                                ( 'Position', float3[-90,-1841,17171] ),
+                            ]
+                        ),
+                    ]
+                ),
+                TSequentialAction
+                (Actions =
+                    [
+                        TWaitInSec( Duration = 3.5 ),
+                        TActionCall
+                        (
+                            Action = $/VFX_Bank/BANK_Dynamic_Flash_Simple
+                            NamedParams = MAP[
+                                ( 'parColorEnd', float3[0.003921569,0.003921569,0] ),
+                                ( 'parColorStart', float3[0.9725491,0.4941177,0.1764706] ),
+                                ( 'parDuration', 2 ),
+                                ( 'parOpacity', 0.3 ),
+                                ( 'parSizeLBU', 46.51163 ),
+                                ( 'Position', float3[88,-1048,16641] ),
+                            ]
+                        ),
+                    ]
+                ),
+                TSequentialAction
+                (Actions =
+                    [
+                        TWaitInSec( Duration = 0.75 ),
+                        TActionCall
+                        (
+                            Action = $/VFX_Bank/BANK_Dynamic_Flash_Simple
+                            NamedParams = MAP[
+                                ( 'parColorEnd', float3[0.003921569,0.003921569,0] ),
+                                ( 'parColorStart', float3[0.9725491,0.4941177,0.1764706] ),
+                                ( 'parDuration', 2 ),
+                                ( 'parOpacity', 0.3 ),
+                                ( 'parSizeLBU', 46.51163 ),
+                                ( 'Position', float3[158,110,16144] ),
+                            ]
+                        ),
+                    ]
+                ),
+                TSequentialAction
+                (Actions =
+                    [
+                        TWaitInSec( Duration = 2.5 ),
+                        TActionCall
+                        (
+                            Action = $/VFX_Bank/BANK_Dynamic_Flash_Simple
+                            NamedParams = MAP[
+                                ( 'parColorEnd', float3[0.003921569,0.003921569,0] ),
+                                ( 'parColorStart', float3[0.9725491,0.4941177,0.1764706] ),
+                                ( 'parDuration', 2 ),
+                                ( 'parOpacity', 0.3 ),
+                                ( 'parSizeLBU', 46.51163 ),
+                                ( 'Position', float3[1579,-890,18590] ),
+                            ]
+                        ),
+                    ]
+                ),
+                TActionCall
+                (
+                    Action = $/VFX_Bank/BANK_Dynamic_Flash_Simple
+                    NamedParams = MAP[
+                        ( 'parColorEnd', float3[0.003921569,0.003921569,0] ),
+                        ( 'parColorStart', float3[0.6,0.2980392,0.09803922] ),
+                        ( 'parDuration', 2 ),
+                        ( 'parOpacity', 0.3 ),
+                        ( 'parSizeLBU', 46.51163 ),
+                        ( 'Position', float3[5208,-6168,10456] ),
+                    ]
+                ),
+                TSequentialAction
+                (Actions =
+                    [
+                        TWaitInSec( Duration = 6.5 ),
+                        TActionCall
+                        (
+                            Action = $/VFX_Bank/BANK_Dynamic_Flash_Simple
+                            NamedParams = MAP[
+                                ( 'parColorEnd', float3[0.003921569,0.003921569,0] ),
+                                ( 'parColorStart', float3[0.6,0.2980392,0.09803922] ),
+                                ( 'parDuration', 2 ),
+                                ( 'parOpacity', 0.3 ),
+                                ( 'parSizeLBU', 46.51163 ),
+                                ( 'Position', float3[5208,-1048,10456] ),
+                            ]
+                        ),
+                    ]
+                ),
+                TSequentialAction
+                (Actions =
+                    [
+                        TWaitInSec( Duration = 1 ),
+                        TActionCall
+                        (
+                            Action = $/VFX_Bank/BANK_Dynamic_Flash_Simple
+                            NamedParams = MAP[
+                                ( 'parColorEnd', float3[0.003921569,0.003921569,0] ),
+                                ( 'parColorStart', float3[0.6,0.2980392,0.09803922] ),
+                                ( 'parDuration', 2 ),
+                                ( 'parOpacity', 0.3 ),
+                                ( 'parSizeLBU', 46.51163 ),
+                                ( 'Position', float3[5208,4072,10456] ),
+                            ]
+                        ),
+                    ]
+                ),
+                TSequentialAction
+                (Actions =
+                    [
+                        TWaitInSec( Duration = 1.5 ),
+                        TActionCall
+                        (
                             Action = $/VFX_Bank/BANK_Dynamic_Flash_Only_Two_Simple
                             NamedParams = MAP[
                                 ( 'parColorEnd', float3[0.003921569,0.003921569,0] ),
@@ -2116,210 +2320,6 @@ export fx_steelman_air_interception is SimultaneousActionDeclaration
                                 ( 'parOpacity', 0.3 ),
                                 ( 'parSize', 25000 ),
                                 ( 'parSpeed', float3[0,0,0] ),
-                                ( 'Position', float3[5208,4072,10456] ),
-                            ]
-                        ),
-                    ]
-                ),
-                TSequentialAction
-                (Actions =
-                    [
-                        TWaitInSec( Duration = 1.5 ),
-                        TActionCall
-                        (
-                            Action = $/VFX_Bank/BANK_Dynamic_Flash_Simple
-                            NamedParams = MAP[
-                                ( 'parColorEnd', float3[0.003921569,0.003921569,0] ),
-                                ( 'parColorStart', float3[0.6,0.2980392,0.09803922] ),
-                                ( 'parDuration', 2 ),
-                                ( 'parOpacity', 0.3 ),
-                                ( 'parSizeLBU', 46.51163 ),
-                                ( 'Position', float3[-5032,-6168,10456] ),
-                            ]
-                        ),
-                    ]
-                ),
-                TSequentialAction
-                (Actions =
-                    [
-                        TWaitInSec( Duration = 4.5 ),
-                        TActionCall
-                        (
-                            Action = $/VFX_Bank/BANK_Dynamic_Flash_Simple
-                            NamedParams = MAP[
-                                ( 'parColorEnd', float3[0.003921569,0.003921569,0] ),
-                                ( 'parColorStart', float3[0.6,0.2980392,0.09803922] ),
-                                ( 'parDuration', 2 ),
-                                ( 'parOpacity', 0.3 ),
-                                ( 'parSizeLBU', 46.51163 ),
-                                ( 'Position', float3[-5032,-1048,7788] ),
-                            ]
-                        ),
-                    ]
-                ),
-                TSequentialAction
-                (Actions =
-                    [
-                        TWaitInSec( Duration = 0.75 ),
-                        TActionCall
-                        (
-                            Action = $/VFX_Bank/BANK_Dynamic_Flash_Simple
-                            NamedParams = MAP[
-                                ( 'parColorEnd', float3[0.003921569,0.003921569,0] ),
-                                ( 'parColorStart', float3[0.6,0.2980392,0.09803922] ),
-                                ( 'parDuration', 2 ),
-                                ( 'parOpacity', 0.3 ),
-                                ( 'parSizeLBU', 46.51163 ),
-                                ( 'Position', float3[-5032,4072,10456] ),
-                            ]
-                        ),
-                    ]
-                ),
-                TSequentialAction
-                (Actions =
-                    [
-                        TWaitInSec( Duration = 4.5 ),
-                        TActionCall
-                        (
-                            Action = $/VFX_Bank/BANK_Dynamic_Flash_Simple
-                            NamedParams = MAP[
-                                ( 'parColorEnd', float3[0.003921569,0.003921569,0] ),
-                                ( 'parColorStart', float3[0.9725491,0.4941177,0.1764706] ),
-                                ( 'parDuration', 2 ),
-                                ( 'parOpacity', 0.3 ),
-                                ( 'parSizeLBU', 46.51163 ),
-                                ( 'Position', float3[-1172,-1340,20384] ),
-                            ]
-                        ),
-                    ]
-                ),
-                TActionCall
-                (
-                    Action = $/VFX_Bank/BANK_Dynamic_Flash_Simple
-                    NamedParams = MAP[
-                        ( 'parColorEnd', float3[0.003921569,0.003921569,0] ),
-                        ( 'parColorStart', float3[0.9725491,0.4941177,0.1764706] ),
-                        ( 'parDuration', 2 ),
-                        ( 'parOpacity', 0.3 ),
-                        ( 'parSizeLBU', 46.51163 ),
-                        ( 'Position', float3[-1061,-1315,14579] ),
-                    ]
-                ),
-                TSequentialAction
-                (Actions =
-                    [
-                        TWaitInSec( Duration = 5.5 ),
-                        TActionCall
-                        (
-                            Action = $/VFX_Bank/BANK_Dynamic_Flash_Simple
-                            NamedParams = MAP[
-                                ( 'parColorEnd', float3[0.003921569,0.003921569,0] ),
-                                ( 'parColorStart', float3[0.9725491,0.4941177,0.1764706] ),
-                                ( 'parDuration', 2 ),
-                                ( 'parOpacity', 0.3 ),
-                                ( 'parSizeLBU', 46.51163 ),
-                                ( 'Position', float3[-90,-1841,17171] ),
-                            ]
-                        ),
-                    ]
-                ),
-                TSequentialAction
-                (Actions =
-                    [
-                        TWaitInSec( Duration = 3.5 ),
-                        TActionCall
-                        (
-                            Action = $/VFX_Bank/BANK_Dynamic_Flash_Simple
-                            NamedParams = MAP[
-                                ( 'parColorEnd', float3[0.003921569,0.003921569,0] ),
-                                ( 'parColorStart', float3[0.9725491,0.4941177,0.1764706] ),
-                                ( 'parDuration', 2 ),
-                                ( 'parOpacity', 0.3 ),
-                                ( 'parSizeLBU', 46.51163 ),
-                                ( 'Position', float3[88,-1048,16641] ),
-                            ]
-                        ),
-                    ]
-                ),
-                TSequentialAction
-                (Actions =
-                    [
-                        TWaitInSec( Duration = 0.75 ),
-                        TActionCall
-                        (
-                            Action = $/VFX_Bank/BANK_Dynamic_Flash_Simple
-                            NamedParams = MAP[
-                                ( 'parColorEnd', float3[0.003921569,0.003921569,0] ),
-                                ( 'parColorStart', float3[0.9725491,0.4941177,0.1764706] ),
-                                ( 'parDuration', 2 ),
-                                ( 'parOpacity', 0.3 ),
-                                ( 'parSizeLBU', 46.51163 ),
-                                ( 'Position', float3[158,110,16144] ),
-                            ]
-                        ),
-                    ]
-                ),
-                TSequentialAction
-                (Actions =
-                    [
-                        TWaitInSec( Duration = 2.5 ),
-                        TActionCall
-                        (
-                            Action = $/VFX_Bank/BANK_Dynamic_Flash_Simple
-                            NamedParams = MAP[
-                                ( 'parColorEnd', float3[0.003921569,0.003921569,0] ),
-                                ( 'parColorStart', float3[0.9725491,0.4941177,0.1764706] ),
-                                ( 'parDuration', 2 ),
-                                ( 'parOpacity', 0.3 ),
-                                ( 'parSizeLBU', 46.51163 ),
-                                ( 'Position', float3[1579,-890,18590] ),
-                            ]
-                        ),
-                    ]
-                ),
-                TActionCall
-                (
-                    Action = $/VFX_Bank/BANK_Dynamic_Flash_Simple
-                    NamedParams = MAP[
-                        ( 'parColorEnd', float3[0.003921569,0.003921569,0] ),
-                        ( 'parColorStart', float3[0.6,0.2980392,0.09803922] ),
-                        ( 'parDuration', 2 ),
-                        ( 'parOpacity', 0.3 ),
-                        ( 'parSizeLBU', 46.51163 ),
-                        ( 'Position', float3[5208,-6168,10456] ),
-                    ]
-                ),
-                TSequentialAction
-                (Actions =
-                    [
-                        TWaitInSec( Duration = 6.5 ),
-                        TActionCall
-                        (
-                            Action = $/VFX_Bank/BANK_Dynamic_Flash_Simple
-                            NamedParams = MAP[
-                                ( 'parColorEnd', float3[0.003921569,0.003921569,0] ),
-                                ( 'parColorStart', float3[0.6,0.2980392,0.09803922] ),
-                                ( 'parDuration', 2 ),
-                                ( 'parOpacity', 0.3 ),
-                                ( 'parSizeLBU', 46.51163 ),
-                                ( 'Position', float3[5208,-1048,10456] ),
-                            ]
-                        ),
-                    ]
-                ),
-                TSequentialAction
-                (Actions =
-                    [
-                        TWaitInSec( Duration = 1 ),
-                        TActionCall
-                        (
-                            Action = $/VFX_Bank/BANK_Dynamic_Flash_Simple
-                            NamedParams = MAP[
-                                ( 'parColorEnd', float3[0.003921569,0.003921569,0] ),
-                                ( 'parColorStart', float3[0.6,0.2980392,0.09803922] ),
-                                ( 'parDuration', 2 ),
-                                ( 'parOpacity', 0.3 ),
-                                ( 'parSizeLBU', 46.51163 ),
                                 ( 'Position', float3[5208,4072,10456] ),
                             ]
                         ),

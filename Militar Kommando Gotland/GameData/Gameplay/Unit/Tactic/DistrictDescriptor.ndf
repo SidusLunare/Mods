@@ -45,11 +45,11 @@ template DistrictDescriptor
                 ResistanceSides = TResistanceTypeRTTI(Family=ResistanceFamily_batiment Index=1)
                 ResistanceRear = TResistanceTypeRTTI(Family=ResistanceFamily_batiment Index=1)
                 ResistanceTop = TResistanceTypeRTTI(Family=ResistanceFamily_batiment Index=1)
-                ExplosiveReactiveArmor = False
+                ExplosiveReactiveArmor = false
             )
             KillWhenDamagesReachMax = <KillWhenDamagesReachMax>
             HitRollECM = 0.0
-            UseTopArmorAgainstFire = True
+            UseTopArmorAgainstFire = true
         ),
         ~/DistrictSelectionModuleDescriptor,
         TShootingPointsModuleDescriptor(),
@@ -60,11 +60,11 @@ template DistrictDescriptor
             DatabaseId = 1
             GameplayBehavior = EGameplayBehavior/Nothing
         ),
-        DistrictCadavreGeneratorModuleDescriptor(),
+        DistrictCadaverGeneratorModuleDescriptor(),
         TMinimapDisplayModuleDescriptor
         (
             Texture = "Texture_Minimap_Unit_inf"
-            FollowUnitOrientation = True
+            FollowUnitOrientation = true
         ),
         ~/TargetDataModuleDescriptor,
     ]

@@ -16,6 +16,52 @@ export fx_impact_balles_vehicule_air_petitx4 is SimultaneousActionDeclaration
         (
             Mobile = TMobileWithLocalRepereMatrixFactory
             (
+                Position = float3[256,-477,0] + parPosition
+            )
+            Actions =
+            [
+                TActionCall
+                (
+                    Action = $/VFX_Bank/BANK_Bomb_Distort_Simple
+                    NamedParams = MAP[
+                        ( 'parDuration', 0.6 ),
+                        ( 'parFinalSize', 2600 ),
+                        ( 'parInitialSize', 25 ),
+                        ( 'parIntensity', 120 ),
+                        ( 'parPositionRelative', float3[256,-477,0] ),
+                    ]
+                ),
+                TActionCall
+                (
+                    Action = $/VFX_Bank/BANK_Rubble2_Simple
+                    NamedParams = MAP[
+                        ( 'parCountDebrits', 1 ),
+                        ( 'parCountDebritsWithFire', 2 ),
+                        ( 'parCountDebritsWithSmoke', 2 ),
+                        ( 'parDebritSizeMul', 1 ),
+                        ( 'parDispersion', 0 ),
+                        ( 'parFireParticleEndSize', 350 ),
+                        ( 'parFireParticleStartSize', 75 ),
+                        ( 'parLifetime', 4 ),
+                        ( 'parMeshType', 4 ),
+                        ( 'parMinSpeedRatio', 0.75 ),
+                        ( 'parParticleOpacity', 0.7 ),
+                        ( 'parSmokeColor', float3[1,0.9921569,0.9490197] ),
+                        ( 'parSmokeColorMultiplier', 0.1 ),
+                        ( 'parSmokeDensity', 100 ),
+                        ( 'parSmokeParticleEndSize', 500 ),
+                        ( 'parSmokeParticleStartSize', 150 ),
+                        ( 'parSpeed', float3[3000,3000,3000] ),
+                        ( 'parSpeedDispersion', 0 ),
+                    ]
+                ),
+                TWaitInSec( Duration = 4),
+            ]
+        ),
+        TSimultaneousAction
+        (
+            Mobile = TMobileWithLocalRepereMatrixFactory
+            (
                 EulerAngles = float3[4.712389,0,0]
             )
             Actions =
@@ -329,52 +375,6 @@ export fx_impact_balles_vehicule_air_petitx4 is SimultaneousActionDeclaration
                     ]
                 ),
                 TWaitInSec( Duration = 0.25),
-            ]
-        ),
-        TSimultaneousAction
-        (
-            Mobile = TMobileWithLocalRepereMatrixFactory
-            (
-                Position = float3[256,-477,0] + parPosition
-            )
-            Actions =
-            [
-                TActionCall
-                (
-                    Action = $/VFX_Bank/BANK_Bomb_Distort_Simple
-                    NamedParams = MAP[
-                        ( 'parDuration', 0.6 ),
-                        ( 'parFinalSize', 2600 ),
-                        ( 'parInitialSize', 25 ),
-                        ( 'parIntensity', 120 ),
-                        ( 'parPositionRelative', float3[256,-477,0] ),
-                    ]
-                ),
-                TActionCall
-                (
-                    Action = $/VFX_Bank/BANK_Rubble2_Simple
-                    NamedParams = MAP[
-                        ( 'parCountDebrits', 1 ),
-                        ( 'parCountDebritsWithFire', 2 ),
-                        ( 'parCountDebritsWithSmoke', 2 ),
-                        ( 'parDebritSizeMul', 1 ),
-                        ( 'parDispersion', 0 ),
-                        ( 'parFireParticleEndSize', 350 ),
-                        ( 'parFireParticleStartSize', 75 ),
-                        ( 'parLifetime', 4 ),
-                        ( 'parMeshType', 4 ),
-                        ( 'parMinSpeedRatio', 0.75 ),
-                        ( 'parParticleOpacity', 0.7 ),
-                        ( 'parSmokeColor', float3[1,0.9921569,0.9490197] ),
-                        ( 'parSmokeColorMultiplier', 0.1 ),
-                        ( 'parSmokeDensity', 100 ),
-                        ( 'parSmokeParticleEndSize', 500 ),
-                        ( 'parSmokeParticleStartSize', 150 ),
-                        ( 'parSpeed', float3[3000,3000,3000] ),
-                        ( 'parSpeedDispersion', 0 ),
-                    ]
-                ),
-                TWaitInSec( Duration = 4),
             ]
         ),
         TSimultaneousAction

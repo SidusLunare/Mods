@@ -112,7 +112,7 @@ template Template_BeaconActionDeclaration
                                                     ParticleRenderer = $/VFX_Bank/LitParticleRenderer
                                                     RenderInfo = ParticleRenderInfo
                                                     (
-                                                        SortTriangles = True
+                                                        SortTriangles = true
                                                         TextureName = 'GameData:/Assets/2D/Fx/poussiere.png'
                                                         EmissiveParticle = true
                                                         Calque = "AfterPostProcess"
@@ -156,7 +156,7 @@ template Template_BeaconActionDeclaration
                                                     ParticleRenderer = $/VFX_Bank/LitParticleRenderer
                                                     RenderInfo = ParticleRenderInfo
                                                     (
-                                                        SortTriangles = True
+                                                        SortTriangles = true
                                                         TextureName = 'GameData:/Assets/2D/Fx/flare_gris.png'
                                                         EmissiveParticle = true
                                                         Calque = "AfterPostProcess"
@@ -201,7 +201,7 @@ template Template_BeaconActionDeclaration
                                 ParticleRenderer = $/VFX_Bank/LitParticleRenderer
                                 RenderInfo = ParticleRenderInfo
                                 (
-                                    SortTriangles = True
+                                    SortTriangles = true
                                     TextureName = 'GameData:/Assets/2D/Fx/flare_blanc_02.png'
                                     EmissiveParticle = true
                                     Calque = "AfterPostProcess"

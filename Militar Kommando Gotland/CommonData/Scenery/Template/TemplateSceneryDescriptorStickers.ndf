@@ -1,0 +1,234 @@
+template template_Sticker
+[
+    // General
+    RegistrationName                : string,
+    Tags                            : LIST<string> = [],
+
+    RenderLayerIndex                : int,
+
+    SizeLBU                         : float2,
+
+    // Textures
+    DiffuseShade                    : float3 = float3[0.5, 0.5, 0.5],
+    TextureDiffuse                  : string = 'VirtualData:/ToutBlanc',
+    TextureSeparateAlpha            : string = 'VirtualData:/ToutBlanc',
+    TextureNormalMap                : string = 'VirtualData:/NormalZ',
+    TextureORSMap                   : string = 'VirtualData:/ToutBlanc',
+    TextureTiling                   : float = 1,
+    TextureAlphaTileInMeters        : float = 1,
+    MaterialID                      : int,
+
+    TextureOverlayDiffuse           : string = 'VirtualData:/ToutGris128',
+    TextureOverlayTileInMeters      : float = 1,
+    TextureOverlayInfluence         : float = 1,
+
+    // Displacement
+    DisplacementAmplitudeInMeters   : float = 0.0,
+    DisplacementMapZero             : float = 0.5,
+
+    UseDiversityMap                 : bool = true,
+
+] is TSceneryDescriptorSticker
+(
+    TextureAlphaTiling              is 1.0 div <TextureAlphaTileInMeters>
+    OverlayTiling                   is 1.0 div <TextureOverlayTileInMeters>
+    UseDisplacement                 is (<DisplacementAmplitudeInMeters> != 0)
+
+    SymbolDatabaseProxy             = $/M3D/Scene/LevelBuildSymbolDatabaseProxy
+
+    RegistrationName                = <RegistrationName>
+    Tags                            = <Tags>
+    Mode                            = SDMode_Sticker
+
+    MinExtentLBU                    = <SizeLBU> * -0.5
+    MaxExtentLBU                    = <SizeLBU> * 0.5
+    DisplacementAmplitudeLBU = <DisplacementAmplitudeInMeters>
+    UseDisplacement = UseDisplacement
+    TextureNormalMap = <TextureNormalMap>
+
+    SceneryMeshBucketHandlerDico = TSceneryMeshBucketHandlerDico
+    (
+        MaterialType = UseDisplacement ? 'StickerDisplacementPBR' : 'StickerPBR'
+
+        RenderLayerSelector = TRenderLayerSelector
+        (
+            RenderLayerName = 'Calque_Sticker'
+            RenderLayerArrayIndex = <RenderLayerIndex>
+        )
+
+        BaseBucketVertexCount = 1500
+        BaseBucketIndexCount  = 3000
+        MaxBucketVertexCount = 12000
+        MaxBucketIndexCount  = 24000
+        CastShadow = false
+        UseMeshBucketMemoryThreshold = 0
+        ContentType = ContentType_Sticker
+        TextureContentType = ContentType_Texture_Sticker
+        SupportSubCase = false
+    )
+
+    MeshMaterial = TMeshMaterial
+    (
+        MaterialNameOnlyForReporting = <RegistrationName>
+        Tags = <UseDiversityMap> ? ['UseDiversityMap'] : []
+
+        ParameterDico =
+        MAP[
+            ('DiffuseShade', <DiffuseShade>),
+            ('TextureTiling', <TextureTiling>),
+            ('TextureAlphaTiling', float2[TextureAlphaTiling, TextureAlphaTiling]),
+            ('TextureDisplacementTiling', 1.0),
+            ('TextureOverlayTiling', float2[OverlayTiling, OverlayTiling]),
+            ('TextureOverlayInfluence', <TextureOverlayInfluence>),
+            ('DisplacementAmplitudeLBU', <DisplacementAmplitudeInMeters>),
+            ('MaterialID', <MaterialID>),
+        ]
+        + (UseDisplacement
+            ? MAP[
+            ('DisplacementMapZero', <DisplacementMapZero>)]
+            : MAP[]
+        )
+
+        TextureDico =
+        MAP[
+            ('Diffuse', <TextureDiffuse>),
+            ('NormalMap', <TextureNormalMap>),
+            ('ORSMap', <TextureORSMap>),
+            ('SeparateAlpha', <TextureSeparateAlpha>),
+            ('OverlayDiffuse', <TextureOverlayDiffuse>),
+        ]
+        + (UseDisplacement ? MAP[('DisplacementMap', <TextureNormalMap>)] : MAP[])
+    )
+)
+//-----------------------------------------------------------------------------------
+//***********************************************************************************
+//-----------------------------------------------------------------------------------
+template template_Sticker_WithDetail
+[
+    // General
+    RegistrationName                : string,
+    Tags                            : LIST<string> = [],
+
+    RenderLayerIndex                : int,
+
+    SizeLBU                         : float2,
+
+    TextureSnowMask                 : string = 'VirtualData:/ToutNoir',
+    TextureSnowMaskTileInMeters     : float = 0,
+    TextureSnowDisplacementMap      : string = 'VirtualData:/ToutNoir',
+    TextureSnowDisplacementTileInMeters : float = 0,
+
+    // Textures
+    DiffuseShade                    : float3 = float3[0.5, 0.5, 0.5],
+    TextureDiffuse                  : string = 'VirtualData:/ToutBlanc',
+    TextureSeparateAlpha            : string = 'VirtualData:/ToutBlanc',
+    TextureNormalMap                : string = 'VirtualData:/NormalZ',
+    TextureORSMap                   : string = 'VirtualData:/ToutBlanc',
+    TextureTiling                   : float = 1,
+    TextureAlphaTileInMeters        : float = 1,
+    MaterialID                      : int,
+
+    // Detail map
+    DetailDiffuseShade              : float3 = float3[0.5, 0.5, 0.5],
+    TextureDetailDiffuse            : string = 'VirtualData:/ToutBlanc',
+    TextureDetailNormalMap          : string = 'VirtualData:/NormalZ',
+    TextureDetailORSMap             : string = 'VirtualData:/ToutBlanc',
+    TextureDetailTiling             : float = 1,
+    DetailMaterialID                : int,
+
+    TextureDetailSelector           : string,
+    TextureDetailSelectorTileInMeters : float,
+
+    TextureOverlayDiffuse           : string = 'VirtualData:/ToutGris128',
+    TextureOverlayTileInMeters      : float = 1,
+    TextureOverlayInfluence         : float = 1,
+
+    // Displacement
+    DisplacementAmplitudeInMeters   : float = 0.0,
+    DisplacementMapZero             : float = 0.5,
+
+] is TSceneryDescriptorSticker
+(
+    TextureAlphaTiling              is 1.0 div <TextureAlphaTileInMeters>
+    OverlayTiling                   is 1.0 div <TextureOverlayTileInMeters>
+    DetailSelectorTiling            is 1.0 div <TextureDetailSelectorTileInMeters>
+    SnowMaskTiling                  is (<TextureSnowMaskTileInMeters> != 0) ? 1.0 div ( <TextureSnowMaskTileInMeters> ) : TextureAlphaTiling
+    SnowDisplacementTiling          is (<TextureSnowDisplacementTileInMeters> != 0) ? 1.0 div ( <TextureSnowDisplacementTileInMeters> ) : SnowMaskTiling
+    UseDisplacement                 is (<DisplacementAmplitudeInMeters> != 0)
+
+    SymbolDatabaseProxy             = $/M3D/Scene/LevelBuildSymbolDatabaseProxy
+
+    RegistrationName                = <RegistrationName>
+    Tags                            = <Tags>
+    Mode                            = SDMode_Sticker
+
+    MinExtentLBU                    = <SizeLBU> * -0.5
+    MaxExtentLBU                    = <SizeLBU> * 0.5
+    DisplacementAmplitudeLBU = <DisplacementAmplitudeInMeters>
+    UseDisplacement = UseDisplacement
+    TextureNormalMap = <TextureNormalMap>
+
+    SceneryMeshBucketHandlerDico = TSceneryMeshBucketHandlerDico
+    (
+        MaterialType = UseDisplacement ? 'StickerDisplacementPBR' : 'StickerPBR'
+
+        RenderLayerSelector = TRenderLayerSelector
+        (
+            RenderLayerName = 'Calque_Sticker'
+            RenderLayerArrayIndex = <RenderLayerIndex>
+        )
+
+        BaseBucketVertexCount = 1500
+        BaseBucketIndexCount  = 3000
+        MaxBucketVertexCount = 12000
+        MaxBucketIndexCount  = 24000
+        CastShadow = false
+        UseMeshBucketMemoryThreshold = 0
+        ContentType = ContentType_Sticker
+        TextureContentType = ContentType_Texture_Sticker
+        SupportSubCase = false
+    )
+
+    MeshMaterial = TMeshMaterial
+    (
+        MaterialNameOnlyForReporting = <RegistrationName>
+
+        ParameterDico =
+        MAP[
+            ('DiffuseShade', <DiffuseShade>),
+            ('TextureTiling', <TextureTiling>),
+            ('TextureAlphaTiling', float2[TextureAlphaTiling, TextureAlphaTiling]),
+            ('DetailDiffuseShade', <DetailDiffuseShade>),
+            ('TextureDetailTiling', <TextureDetailTiling>),
+            ('TextureSnowMaskTiling', float2[SnowMaskTiling, SnowMaskTiling]),
+            ('TextureSnowDisplacementTiling', float2[SnowDisplacementTiling, SnowDisplacementTiling]),
+            ('TextureOverlayTiling', float2[OverlayTiling, OverlayTiling]),
+            ('TextureDetailSelectorTiling', float2[DetailSelectorTiling, DetailSelectorTiling]),
+            ('TextureOverlayInfluence', <TextureOverlayInfluence>),
+            ('DisplacementAmplitudeLBU', <DisplacementAmplitudeInMeters>),
+            ('MaterialID', <MaterialID>),
+            ('DetailMaterialID', <DetailMaterialID>),
+        ]
+        + (UseDisplacement
+            ? MAP[
+            ('DisplacementMapZero', <DisplacementMapZero>)]
+            : MAP[]
+        )
+
+        TextureDico =
+        MAP[
+            ('Diffuse', <TextureDiffuse>),
+            ('NormalMap', <TextureNormalMap>),
+            ('ORSMap', <TextureORSMap>),
+            ('SeparateAlpha', <TextureSeparateAlpha>),
+            ('OverlayDiffuse', <TextureOverlayDiffuse>),
+            ('DetailDiffuse', <TextureDetailDiffuse>),
+            ('DetailNormalMap', <TextureDetailNormalMap>),
+            ('DetailORSMap', <TextureDetailORSMap>),
+            ('SnowMask', <TextureSnowMask>),
+            ('SnowDisplacementMap', <TextureSnowDisplacementMap>),
+            ('DetailSelector', <TextureDetailSelector>),
+        ]
+        + (UseDisplacement ? MAP[('DisplacementMap', <TextureNormalMap>)] : MAP[])
+    )
+)

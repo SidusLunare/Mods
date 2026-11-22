@@ -1,8 +1,5 @@
-// Ne pas éditer, ce fichier est auto-généré !
+// Ne pas éditer, ce fichier est généré par AcknowEnumStringFileWriter
 
-//----------------------------------------------------------------------------------
-// TAcknowUnitType
-//----------------------------------------------------------------------------------
 unnamed TAcknowUnitType
 (
     Values = [
@@ -35,6 +32,7 @@ unnamed TAcknowUnitType
         "TAcknowUnitType_Command_Infantry",
         "TAcknowUnitType_Command_Marine",
         "TAcknowUnitType_Command_QUE",
+        "TAcknowUnitType_Command_Romand",
         "TAcknowUnitType_Command_SK",
         "TAcknowUnitType_Engineer",
         "TAcknowUnitType_Engineer2",
@@ -42,6 +40,7 @@ unnamed TAcknowUnitType
         "TAcknowUnitType_Engineers",
         "TAcknowUnitType_Flame",
         "TAcknowUnitType_FlameVehicle",
+        "TAcknowUnitType_Gendarme",
         "TAcknowUnitType_GroundAtk",
         "TAcknowUnitType_GroundAtk2",
         "TAcknowUnitType_GroundAtk_Marine",
@@ -69,6 +68,7 @@ unnamed TAcknowUnitType
         "TAcknowUnitType_Inf_Militia",
         "TAcknowUnitType_Inf_Para_Legion_Pol",
         "TAcknowUnitType_Inf_QUE",
+        "TAcknowUnitType_Inf_Romand",
         "TAcknowUnitType_Inf_SK",
         "TAcknowUnitType_KaJaPa",
         "TAcknowUnitType_Legion_Transport_ITA",
@@ -76,6 +76,7 @@ unnamed TAcknowUnitType
         "TAcknowUnitType_Logistic",
         "TAcknowUnitType_Logistic_Marine",
         "TAcknowUnitType_Logistic_QUE",
+        "TAcknowUnitType_Logistic_Romand",
         "TAcknowUnitType_Logistic_SK",
         "TAcknowUnitType_MLRS",
         "TAcknowUnitType_MissileAA",
@@ -89,6 +90,7 @@ unnamed TAcknowUnitType
         "TAcknowUnitType_Reco_Legion",
         "TAcknowUnitType_Reco_Marine",
         "TAcknowUnitType_Reco_QUE",
+        "TAcknowUnitType_Reco_Romand",
         "TAcknowUnitType_Reco_SK",
         "TAcknowUnitType_ReconInfantry",
         "TAcknowUnitType_Recon_INF",
@@ -101,12 +103,16 @@ unnamed TAcknowUnitType
         "TAcknowUnitType_TankDestroyer",
         "TAcknowUnitType_TankDestroyerMissile",
         "TAcknowUnitType_TankDestroyer_Legion_DE",
+        "TAcknowUnitType_TankDestroyer_Legion_ITA",
         "TAcknowUnitType_TankDestroyer_Marine",
         "TAcknowUnitType_TankDestroyer_QUE",
+        "TAcknowUnitType_TankDestroyer_Romand",
+        "TAcknowUnitType_TankDestroyer_Romand2",
         "TAcknowUnitType_Tank_Legion",
         "TAcknowUnitType_Tank_Legion_CZ",
         "TAcknowUnitType_Tank_Marine",
         "TAcknowUnitType_Tank_QUE",
+        "TAcknowUnitType_Tank_Romand",
         "TAcknowUnitType_Tank_SK",
         "TAcknowUnitType_Transport",
         "TAcknowUnitType_Transport2",

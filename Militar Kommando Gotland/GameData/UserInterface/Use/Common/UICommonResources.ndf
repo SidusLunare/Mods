@@ -1,11 +1,3 @@
-template InterfaceSound
-[
-    FileName  : string
-] is TSoundDescriptor
-(
-    SoundSettings = $/SoundSettings/HUD_SoundSettings
-    TheSoundStream = TSoundStream ( FileName = <FileName> )
-)
 
 //=======================================================================================================================
 // SOUNDS DATABASE
@@ -35,6 +27,7 @@ ClickSound_Over_And_Out_Radio_Effect_4 is InterfaceSound( FileName = "GameData:/
 ClickSound_Add_Card is InterfaceSound( FileName = "GameData:/Assets/Sounds/OutGame/Add_Card.wav" )
 ClickSound_Remove_Card is InterfaceSound( FileName = "GameData:/Assets/Sounds/OutGame/Remove_Card.wav" )
 ClickSound_Change_Selector is InterfaceSound( FileName = "GameData:/Assets/Sounds/OutGame/Selector_Change.wav" )
+ClickSound_GameFound is InterfaceSound( FileName = "GameData:/Assets/Sounds/OutGame/game_found.wav" )
 
 HoverSound_hub_armory is InterfaceSound( FileName = "GameData:/Assets/Sounds/OutGame/hub_armory.wav" )
 HoverSound_hub_armory_exit is InterfaceSound( FileName = "GameData:/Assets/Sounds/OutGame/hub_armory_exit.wav" )
@@ -51,6 +44,7 @@ NoSound is InterfaceSound( FileName = "GameData:/Assets/Sounds/InGame/Silence.og
 // General
 SoundEvent_CheckBoxTick                     is ButtonClickSound
 SoundEvent_OpenCloseWarchat                 is ClickSound_RadioBlip
+SoundEvent_ChatMessageReceived              is NoSound
 SoundEvent_TreeLineButtonSound              is ClickSound_Remove_Card // Currently used for steelman Order of battle tree view
 SoundEvent_LDHintButton                     is ClickSound_Over_And_Out_Radio_Effect_3 //ClickSound_boutonCountry //ClickSound_RadioBlip
 
@@ -139,6 +133,10 @@ SoundEvent_OpenDeckList                     is ClickSound_folder
 SoundEvent_OpenNewSlot                      is HoverSound_hub_Enter_multi
 SoundEvent_OpenOptionDropdown               is ClickSound_Change_Selector
 SoundEvent_SelectOption                     is ClickSound_Change_Selector
+SoundEvent_LobbyFull                        is NoSound
+SoundEvent_LobbySettingsChanged             is NoSound
+SoundEvent_LobbyPlayerJoin                  is NoSound
+SoundEvent_LobbyPlayerLeave                 is NoSound
 
 // Steelman
 SoundEvent_SteelmanNextTurn                 is ClickSound_keyboard //ClickSound_Frequency_search //ClickSound_RadioBlip

@@ -1,0 +1,12 @@
+template ParticleRendererPeriodicBox
+[
+    BoxSize         : TEvaluable[required] = nil,
+    XYRepeat        : TEvaluable = TConstantInteger(Value = 1),
+    ZRepeat         : TEvaluable = TConstantInteger(Value = 1),
+] is TParticleRenderer_PeriodicBox
+(
+    BoxSize = <BoxSize>
+    XYRepeat = <XYRepeat>
+    ZRepeat = <ZRepeat>
+    Camera = $/M3D/Scene/FxCameraProvider_CameraPrincipale
+)

@@ -1,4 +1,4 @@
-//hack pour indiquer a l'éditeur touts les paramètres à afficher, même s'il ne sont pas tous utilisés.
+// hack pour indiquer à l'éditeur tous les paramètres à afficher, même s'ils ne sont pas tous utilisés.
 
 export Dummy_Traine is SimultaneousActionDeclaration
 (
@@ -7,9 +7,9 @@ export Dummy_Traine is SimultaneousActionDeclaration
         private parDummyPower is Template_ActionAlias( ExpectedType = 'float' ),
         private parDummyShotOnGround is Template_ActionAlias( ExpectedType = 'bool' ),
         private parDummyDestination is Template_ActionAlias( ExpectedType = 'float3' ),
+        private parDummyBombTrajectory is Template_Param_Bool( DefaultValue = false ),
         private parDummyTirPhysic is Template_ActionAlias( ExpectedType = 'bool' ),
         private parDummyTirTendu is Template_ActionAlias( ExpectedType = 'bool' ),
-        private parDummyFluidFriction is Template_ActionAlias( ExpectedType = 'float' ),
         private parDummyInitialSpeed is Template_ActionAlias( ExpectedType = 'float3' ),
         private parDummyFlyDuration is Template_ActionAlias( ExpectedType = 'float' ),
         private parDummyShotCount is Template_ActionAlias( ExpectedType = 'int' ),

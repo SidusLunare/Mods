@@ -1216,8 +1216,8 @@ is BUCKContainerDescriptor
 
 template EndgameResultAnimationStrategic
 [
-    victory : boolean = false,
-    draw : boolean = false
+    victory : bool = false,
+    draw : bool = false
 ]
 
 is BUCKContainerDescriptor
@@ -1527,7 +1527,7 @@ private template StrategicChoiceButton
 (
     ComponentFrame = TUIFramePropertyRTTI
     (
-        MagnifiableWidthHeight = [370,476]
+        MagnifiableWidthHeight = [0.0, 476]
     )
     FitStyle = ~/ContainerFitStyle/FitToContentHorizontally
 

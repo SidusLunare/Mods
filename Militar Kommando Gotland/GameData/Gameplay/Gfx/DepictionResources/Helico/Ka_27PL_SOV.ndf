@@ -1,0 +1,14 @@
+export Modele_Ka_27PL_SOV is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/YUG/Helico/Ka_27PL/Ka_27PL.fbx"
+)
+
+export Modele_Ka_27PL_SOV_MID is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/YUG/Helico/Ka_27PL/Ka_27PL.fbx"
+)
+
+export Modele_Ka_27PL_SOV_LOW is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/YUG/Helico/Ka_27PL/Ka_27PL.fbx"
+)

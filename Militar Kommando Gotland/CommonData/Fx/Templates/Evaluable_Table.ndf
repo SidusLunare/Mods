@@ -1,7 +1,7 @@
 template Template_ColorTable
 [
     Values  : List<color>,
-    Interpolate : boolean = true,
+    Interpolate : bool = true,
 ] is TFunctionDeclaration
 (
     Intrinsic = TColorTable
@@ -15,7 +15,7 @@ template Template_ColorTable
 template Template_FloatTable
 [
     Values      : List<float>,
-    Interpolate : boolean = true,
+    Interpolate : bool = true,
 ] is TFunctionDeclaration
 (
     Intrinsic = TFloatTable
@@ -29,7 +29,7 @@ template Template_FloatTable
 template Template_Float3Table
 [
     Values          : List<float3>,
-    Interpolate     : boolean = true,
+    Interpolate     : bool = true,
 ] is TFunctionDeclaration
 (
     Intrinsic = TFloat3Table

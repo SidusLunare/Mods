@@ -5,7 +5,7 @@ template Template_RepeatSequential
     Actions                     : LIST<TActionDescriptor> = [],
     IterationCount              : TEvaluable = nil,
     Disabled                    : TEvaluable = nil,
-    Forever                     : boolean = false,
+    Forever                     : bool = false,
     TimeServer                  : TTimeServerWithVisibilityRange = nil,
 ] is TRepeatSequentialAction
 (

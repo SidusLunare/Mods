@@ -55,9 +55,9 @@ export BANK_Water_Ripple is SimultaneousActionDeclaration
                 (
                     RenderInfo = ParticleRenderInfo
                     (
-                        OpaqueParticle = True
-                        ZTest = True
-                        SortTriangles = True
+                        OpaqueParticle = true
+                        ZTest = true
+                        SortTriangles = true
                         Use3DRotation = false
                         TextureName = 'GameData:/Assets/2D/Fx/ring.png'
                         Calque = 'Particles'

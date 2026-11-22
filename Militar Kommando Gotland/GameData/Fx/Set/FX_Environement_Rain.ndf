@@ -115,7 +115,7 @@ template Template_FX_Rain
                                             (
                                                 RenderInfo = ParticleRenderInfo
                                                 (
-                                                    EmissiveParticle = True
+                                                    EmissiveParticle = true
                                                     Calque = 'Particles'
                                                     SortTriangles = true
                                                 )
@@ -206,8 +206,8 @@ export DrunkParticle is SimultaneousActionDeclaration
             [
                 private stickOnGround is Template_StickMobileOnGround
                 (
-                    MobileUpMatchWithGroundNormal = True
-                    ResetOrientation = True
+                    MobileUpMatchWithGroundNormal = true
+                    ResetOrientation = true
                 ),
                 ParticleBombSpawner
                 (
@@ -310,7 +310,7 @@ export DrunkParticle is SimultaneousActionDeclaration
                                                                 (
                                                                     RenderInfo = ParticleRenderInfo
                                                                     (
-                                                                          OpaqueParticle = True
+                                                                          OpaqueParticle = true
                                                                         TextureName = 'GameData:/Assets/2D/Fx/poussiere.png'
                                                                         Calque = 'Particles'
                                                                     )

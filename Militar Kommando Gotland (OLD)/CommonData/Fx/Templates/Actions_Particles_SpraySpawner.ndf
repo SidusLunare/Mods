@@ -1,0 +1,33 @@
+template ParticleSpraySpawnerWithEvaluable
+[
+    Frequency                   : TEvaluable[GroupBy = "Spawn parameters"] = TConstantFloat(Value = 10.0),
+    Spawner                     : TParticleSpawner[required] = ParticleSpawner(),
+    Position                    : TEvaluable[GroupBy = "Spawn parameters"] = nil,
+    Forever                     : boolean[GroupBy = "Timer parameters"] = false,
+    InitialDelayInSec           : TEvaluable[GroupBy = "Timer parameters"] = nil,
+    PeriodInSec                 : TEvaluable[GroupBy = "Timer parameters"] = TConstantFloat(Value = 0.05),
+    DurationInSec               : TEvaluable[required, GroupBy = "Timer parameters"] = TConstantFloat(Value = 10.0),
+    StabilisationTime           : TEvaluable[GroupBy = "Timer parameters"] = nil,
+    WaitAtLeastBetweenFrame     : TEvaluable[GroupBy = "Timer parameters"] = nil,
+    SpawnFirstParticleAtStart   : TEvaluable[GroupBy = "Spawn parameters"] = nil,
+    Disabled                    : TEvaluable = nil,
+    TimeServer                  : TTimeServerWithVisibilityRange = nil,
+    RecomputeOffsetFromCentroid : boolean = false,
+    ParticleMaxDurationForSpawnSkip : TEvaluable = nil
+] is TParticleSpawnerActionSpray
+(
+    Frequency = <Frequency>
+    Spawner = <Spawner>
+    Position = <Position>
+    Forever = <Forever>
+    InitialDelayInSec = <InitialDelayInSec>
+    PeriodInSec = <PeriodInSec>
+    DurationInSec = <DurationInSec>
+    Disabled = <Disabled>
+    TimeServer = <TimeServer>
+    StabilisationTime = <StabilisationTime>
+    WaitAtLeastBetweenFrame = <WaitAtLeastBetweenFrame>
+    SpawnFirstParticleAtStart = <SpawnFirstParticleAtStart>
+    RecomputeOffsetFromCentroid = <RecomputeOffsetFromCentroid>
+    ParticleMaxDurationForSpawnSkip = <ParticleMaxDurationForSpawnSkip>
+)

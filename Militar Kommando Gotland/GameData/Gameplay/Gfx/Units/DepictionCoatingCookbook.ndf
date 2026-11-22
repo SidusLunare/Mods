@@ -1,6 +1,24 @@
 unnamed TCoatingRecipe
 (
     Cookbook = $/DepictionCore/CoatingCookbook
+    CoatingName = 'Panther_trans_BRZ'
+    Ingredients = [
+        Panther_trans_BRZ_landing_gears_coating_ingredient,
+    ]
+)
+
+unnamed TCoatingRecipe
+(
+    Cookbook = $/DepictionCore/CoatingCookbook
+    CoatingName = 'Mi_8MTV_Berkut_SOV'
+    Ingredients = [
+        Mi_8MTV_Berkut_SOV_tourelle_coating_ingredient,
+    ]
+)
+
+unnamed TCoatingRecipe
+(
+    Cookbook = $/DepictionCore/CoatingCookbook
     CoatingName = 'Puma_Orchidee_FR'
     Ingredients = [
         Puma_Orchidee_FR_radar_coating_ingredient,
@@ -57,6 +75,15 @@ unnamed TCoatingRecipe
 (
     Cookbook = $/DepictionCore/CoatingCookbook
     CoatingName = 'Mi_24V_POL'
+    Ingredients = [
+        Mi_24V_SOV_landing_gears_coating_ingredient,
+    ]
+)
+
+unnamed TCoatingRecipe
+(
+    Cookbook = $/DepictionCore/CoatingCookbook
+    CoatingName = 'Mi_24A_SOV'
     Ingredients = [
         Mi_24V_SOV_landing_gears_coating_ingredient,
     ]
@@ -278,7 +305,6 @@ unnamed TCoatingRecipe
     ]
 )
 
-
 unnamed TCoatingRecipe
 (
     Cookbook = $/DepictionCore/CoatingCookbook
@@ -318,6 +344,24 @@ unnamed TCoatingRecipe
 unnamed TCoatingRecipe
 (
     Cookbook = $/DepictionCore/CoatingCookbook
+    CoatingName = 'Mi_14PS_recon_SOV'
+    Ingredients = [
+        Mi_14PL_landing_gears_coating_ingredient,
+    ]
+)
+
+unnamed TCoatingRecipe
+(
+    Cookbook = $/DepictionCore/CoatingCookbook
+    CoatingName = 'Mi_14PS_supply_SOV'
+    Ingredients = [
+        Mi_14PL_landing_gears_coating_ingredient,
+    ]
+)
+
+unnamed TCoatingRecipe
+(
+    Cookbook = $/DepictionCore/CoatingCookbook
     CoatingName = 'Mi_14PL_recon_SOV'
     Ingredients = [
         Mi_14PL_landing_gears_coating_ingredient,
@@ -328,6 +372,15 @@ unnamed TCoatingRecipe
 (
     Cookbook = $/DepictionCore/CoatingCookbook
     CoatingName = 'Mi_14PL_AT_DDR'
+    Ingredients = [
+        Mi_14PL_landing_gears_coating_ingredient,
+    ]
+)
+
+unnamed TCoatingRecipe
+(
+    Cookbook = $/DepictionCore/CoatingCookbook
+    CoatingName = 'Mi_14PL_RKT_CUB'
     Ingredients = [
         Mi_14PL_landing_gears_coating_ingredient,
     ]

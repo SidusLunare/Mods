@@ -235,6 +235,34 @@ export fx_impact_sol_Smoke_Dispenser is SimultaneousActionDeclaration
             [
                 TActionCall
                 (
+                    Action = $/VFX_Bank/BANK_Bomb_NewSparks_Simple
+                    NamedParams = MAP[
+                        ( 'parColor', float3[0.8980393,0.8980393,0.8980393] ),
+                        ( 'parColorMultiplier', 10 ),
+                        ( 'parCount', 150 ),
+                        ( 'parDir', parDirection ),
+                        ( 'parFluidFriction', 1.1 ),
+                        ( 'parGravity', 750 ),
+                        ( 'parLifetime', 4 ),
+                        ( 'parNarrowness', 0.2 ),
+                        ( 'parPositionRadius', 500 ),
+                        ( 'parPositionRelative', parPosition ),
+                        ( 'parSize', 6 ),
+                        ( 'parSpeedMax', 6000 ),
+                        ( 'parSpeedMin', 2000 ),
+                        ( 'parStretch', 2.5 ),
+                        ( 'parWindFactor', 0.5 ),
+                    ]
+                ),
+            ]
+        ),
+        TSimultaneousAction
+        (
+            Mobile = nil
+            Actions =
+            [
+                TActionCall
+                (
                     Action = $/VFX_Bank/BANK_Bomb_NewSparks_Omni_Simple
                     NamedParams = MAP[
                         ( 'parColor', float3[1,0.2509804,0] ),
@@ -281,34 +309,6 @@ export fx_impact_sol_Smoke_Dispenser is SimultaneousActionDeclaration
                         ( 'parStretch', 1 ),
                         ( 'parWindFactor', 0.25 ),
                         ( 'parDir', float3[0.9962764,-0.01497342,0.08490732] ),
-                    ]
-                ),
-            ]
-        ),
-        TSimultaneousAction
-        (
-            Mobile = nil
-            Actions =
-            [
-                TActionCall
-                (
-                    Action = $/VFX_Bank/BANK_Bomb_NewSparks_Simple
-                    NamedParams = MAP[
-                        ( 'parColor', float3[0.8980393,0.8980393,0.8980393] ),
-                        ( 'parColorMultiplier', 10 ),
-                        ( 'parCount', 150 ),
-                        ( 'parDir', parDirection ),
-                        ( 'parFluidFriction', 1.1 ),
-                        ( 'parGravity', 750 ),
-                        ( 'parLifetime', 4 ),
-                        ( 'parNarrowness', 0.2 ),
-                        ( 'parPositionRadius', 500 ),
-                        ( 'parPositionRelative', parPosition ),
-                        ( 'parSize', 6 ),
-                        ( 'parSpeedMax', 6000 ),
-                        ( 'parSpeedMin', 2000 ),
-                        ( 'parStretch', 2.5 ),
-                        ( 'parWindFactor', 0.5 ),
                     ]
                 ),
             ]

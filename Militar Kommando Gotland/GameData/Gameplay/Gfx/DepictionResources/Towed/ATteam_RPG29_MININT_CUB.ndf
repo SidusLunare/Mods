@@ -1,0 +1,3 @@
+export Modele_ATteam_RPG29_MININT_CUB is TResourceMesh( Mesh="GameData:/Assets/3D/Units/CUBA/Canon/RocketInf_RPG29_RCL_105mm/RocketInf_RPG29_RCL_105mm.fbx")
+export Modele_ATteam_RPG29_MININT_CUB_MID is TResourceMesh( Mesh="GameData:/Assets/3D/Units/CUBA/Canon/RocketInf_RPG29_RCL_105mm_MID/RocketInf_RPG29_RCL_105mm_MID.fbx")
+export Modele_ATteam_RPG29_MININT_CUB_LOW is TResourceMesh( Mesh="GameData:/Assets/3D/Units/CUBA/Canon/RocketInf_RPG29_RCL_105mm_LOW/RocketInf_RPG29_RCL_105mm_LOW.fbx")

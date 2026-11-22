@@ -4,8 +4,8 @@ export fx_traine_bombe_GBU12 is SimultaneousActionDeclaration
 (
     Params =
     [
+        private parBombTrajectory is TActionAlias( ExpectedType = 'bool' DefaultValue = false ),
         private parDestination is TActionAlias( ExpectedType = 'float3' DefaultValue = float3[0,0,0] ),
-        private parFluidFriction is TActionAlias( ExpectedType = 'float' DefaultValue = 1 ),
         private parFlyDuration is TActionAlias( ExpectedType = 'float' DefaultValue = 2 ),
         private parImpactOnGround is TActionAlias( ExpectedType = 'bool' DefaultValue = false ),
         private parInitialShotDelay is TActionAlias( ExpectedType = 'float' DefaultValue = 0 ),
@@ -32,8 +32,8 @@ export fx_traine_bombe_GBU12 is SimultaneousActionDeclaration
                     Action = $/VFX_Bank/ProjectileMover
                     NamedParams = MAP[
                         ( 'AbsoluteEndPosition', parDestination ),
+                        ( 'BombTrajectory', parBombTrajectory ),
                         ( 'DurationInSec', parFlyDuration ),
-                        ( 'FluidFriction', parFluidFriction ),
                         ( 'InitialSpeed', parInitialSpeed ),
                         ( 'UsePhysicSolver', parTirPhysic ),
                         ( 'UseTirTendu', parTirTendu ),
@@ -77,8 +77,8 @@ export fx_traine_bombe_GBU12 is SimultaneousActionDeclaration
                         (
                             Action = $/VFX_Bank/Dummy_Traine
                             NamedParams = MAP[
+                                ( 'parDummyBombTrajectory', parBombTrajectory ),
                                 ( 'parDummyDestination', parDestination ),
-                                ( 'parDummyFluidFriction', parFluidFriction ),
                                 ( 'parDummyFlyDuration', parFlyDuration ),
                                 ( 'parDummyImpactOnGround', parImpactOnGround ),
                                 ( 'parDummyInitialSpeed', parInitialSpeed ),

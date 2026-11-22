@@ -99,7 +99,7 @@ export BANK_VerticalSmoke is Template_BANK_VerticalSmoke()
 export BANK_VerticalSmoke_Finite is Template_BANK_VerticalSmoke( Infinite = false )
 template Template_BANK_VerticalSmoke
 [
-    Infinite : boolean = true,
+    Infinite : bool = true,
 ] is SimultaneousActionDeclaration
 (
     Params =

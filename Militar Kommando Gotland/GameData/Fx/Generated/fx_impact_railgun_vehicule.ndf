@@ -16,43 +16,6 @@ export fx_impact_railgun_vehicule is SimultaneousActionDeclaration
         (
             Mobile = TMobileWithLocalRepereMatrixFactory
             (
-                EulerAngles = float3[1.570796,0,0]
-            )
-            Actions =
-            [
-                TActionCall
-                (
-                    Action = $/VFX_Bank/BANK_Bomb_Flash
-                    NamedParams = MAP[
-                        ( 'parCount', 3 ),
-                        ( 'parDuration', 0.1 ),
-                        ( 'parFinalSize', 2500 ),
-                        ( 'parInitialSize', 200 ),
-                        ( 'parZBias', 255 ),
-                        ( 'parPositionRelative', float3[0,0,200] + parPosition ),
-                    ]
-                ),
-                TActionCall
-                (
-                    Action = $/VFX_Bank/BANK_Dynamic_Flash_Only_Two_Simple
-                    NamedParams = MAP[
-                        ( 'parColorEnd', float3[0.6117647,0.7843138,0.9725491] ),
-                        ( 'parColorStart', float3[0.6117647,0.7843138,0.9725491] ),
-                        ( 'parDuration', 0.6 ),
-                        ( 'parInitialDelay', parInitialShotDelay ),
-                        ( 'parOpacity', 0.8 ),
-                        ( 'parSize', 3000 ),
-                        ( 'parSpeed', float3[0,0,0] ),
-                        ( 'Position', parPosition ),
-                    ]
-                ),
-                TWaitInSec( Duration = 0.6),
-            ]
-        ),
-        TSimultaneousAction
-        (
-            Mobile = TMobileWithLocalRepereMatrixFactory
-            (
                 Position = parPosition
                 EulerAngles = float3[1.570796,0,0]
             )
@@ -149,6 +112,43 @@ export fx_impact_railgun_vehicule is SimultaneousActionDeclaration
                         ( 'parWindWeight', 0.3 ),
                     ]
                 ),
+            ]
+        ),
+        TSimultaneousAction
+        (
+            Mobile = TMobileWithLocalRepereMatrixFactory
+            (
+                EulerAngles = float3[1.570796,0,0]
+            )
+            Actions =
+            [
+                TActionCall
+                (
+                    Action = $/VFX_Bank/BANK_Bomb_Flash
+                    NamedParams = MAP[
+                        ( 'parCount', 3 ),
+                        ( 'parDuration', 0.1 ),
+                        ( 'parFinalSize', 2500 ),
+                        ( 'parInitialSize', 200 ),
+                        ( 'parZBias', 255 ),
+                        ( 'parPositionRelative', float3[0,0,200] + parPosition ),
+                    ]
+                ),
+                TActionCall
+                (
+                    Action = $/VFX_Bank/BANK_Dynamic_Flash_Only_Two_Simple
+                    NamedParams = MAP[
+                        ( 'parColorEnd', float3[0.6117647,0.7843138,0.9725491] ),
+                        ( 'parColorStart', float3[0.6117647,0.7843138,0.9725491] ),
+                        ( 'parDuration', 0.6 ),
+                        ( 'parInitialDelay', parInitialShotDelay ),
+                        ( 'parOpacity', 0.8 ),
+                        ( 'parSize', 3000 ),
+                        ( 'parSpeed', float3[0,0,0] ),
+                        ( 'Position', parPosition ),
+                    ]
+                ),
+                TWaitInSec( Duration = 0.6),
             ]
         ),
         TSimultaneousAction

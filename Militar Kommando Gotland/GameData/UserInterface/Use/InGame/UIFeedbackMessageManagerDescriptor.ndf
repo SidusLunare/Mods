@@ -14,9 +14,11 @@
 //     AlertMessageType    = AlertMsg_Per_UniteDetruite
 //     TimeBeforeRepeat    = 30 (Seulement pour OnResourceEmpty, OnMaxStock, OnEnemyContact)
 //
-//     UseTeamColorForMinimap = False
+//     UseTeamColorForMinimap = false
 //     BaseFilterColorForMinimap = RGBA[255,0,0,255]
 //
+
+UIFeedbackTextFormatterUseOptionalUnitDescriptor is TUIFeedbackTextFormatterUseOptionalUnitDescriptor(UnitNameResources = ~/UICommonUnitNameResources)
 
 FeedbackParagraphStyle is TParagraphStyle
 (
@@ -64,6 +66,8 @@ OnUnitLost is TUIFeedbackDispatchedMessageDescriptor
     AlertMessageType = AlertMsg_Per_UniteDetruite
     AllowFocusOnEvent = true
     IsActiveForPlayer = true
+
+    TextFormatter = UIFeedbackTextFormatterUseOptionalUnitDescriptor
 )
 
 OnUnitCapturedByEnemy is TUIFeedbackDispatchedMessageDescriptor
@@ -87,7 +91,7 @@ OnCapturedEnemyUnit is TUIFeedbackDispatchedMessageDescriptor
     MinimapPingDuration = 2
     MinimapPingAnimStartTime = 0.5
     BaseFilterColorForMinimap = [200,238,254,255]
-//  AlertMessageType = AlertMsg_Arei_UnitSurrender_En
+//  AlertMessageType = AlertMsg_Arei_EnemyUnitSurrender
 //  AllowFocusOnEvent = true
     IsActiveForPlayer = true
     TimeBeforeRepeat = 10
@@ -100,7 +104,7 @@ OnUnitSurrender is TUIFeedbackDispatchedMessageDescriptor  //deprec
     MinimapPingDuration = 4
     MinimapPingAnimStartTime = 0.5
     BaseFilterColorForMinimap = [200,238,254,255] // [203,132,212,255]
-    AlertMessageType = AlertMsg_Arei_UnitSurrender_En // AlertMessageType = AlertMsg_Arei_UnitSurrender
+    AlertMessageType = AlertMsg_Arei_EnemyUnitSurrender
     TimeBeforeRepeat = 10
     UnitAcknow = TAcknowUnitAction_Surrender
     IsActiveForEnemies = true
@@ -112,6 +116,8 @@ OnBuildingLost is TUIFeedbackDispatchedMessageDescriptor
 (
     TimeBeforeRepeat = 20
     IsActiveForPlayer = true
+
+    TextFormatter = UIFeedbackTextFormatterUseOptionalUnitDescriptor
 )
 
 OnDamageReceived is TUIFeedbackDispatchedMessageDescriptor
@@ -329,6 +335,8 @@ OnAirplaneOutOfFuel is TUIFeedbackDispatchedMessageDescriptor
     AlertMessageType = AlertMsg_Rens_OnAirplaneOutOfFuel
     UnitAcknow = TAcknowUnitAction_AirplaneOutOfFuel
     IsActiveForPlayer = true
+
+    TextFormatter = UIFeedbackTextFormatterUseOptionalUnitDescriptor
 )
 
 OnAirplaneOutOfAmmo is TUIFeedbackDispatchedMessageDescriptor
@@ -336,6 +344,8 @@ OnAirplaneOutOfAmmo is TUIFeedbackDispatchedMessageDescriptor
     TimeBeforeRepeat = 10
     AlertMessageType = AlertMsg_Rens_OnAirplaneOutOfAmmo
     IsActiveForPlayer = true
+
+    TextFormatter = UIFeedbackTextFormatterUseOptionalUnitDescriptor
 )
 
 OnUnitUnderAttack is TUIFeedbackDispatchedMessageDescriptor
@@ -350,6 +360,8 @@ OnUnitUnderAttack is TUIFeedbackDispatchedMessageDescriptor
     AlertMessageType = AlertMsg_Rens_UnitUnderAttack
     AllowFocusOnEvent = true
     IsActiveForPlayer = true
+
+    TextFormatter = UIFeedbackTextFormatterUseOptionalUnitDescriptor
 )
 
 OnUnloadOrder is TUIFeedbackDispatchedMessageDescriptor
@@ -395,6 +407,8 @@ OnEnemyUnitDestroyed is TUIFeedbackDispatchedMessageDescriptor // une unité enn
     AlertMessageType = AlertMsg_Arei_EnemyUnitDestroyed
     TimeBeforeRepeat = 5
     IsActiveForPlayer = true
+
+    TextFormatter = UIFeedbackTextFormatterUseOptionalUnitDescriptor
 )
 
 OnTargetUnitDestroyed is TUIFeedbackDispatchedMessageDescriptor // une unité du joueur a tué une unité ennemie (donc on joue l'acknow)
@@ -466,40 +480,6 @@ OnTargetBuildingDestroyed is TUIFeedbackDispatchedMessageDescriptor
     IsActiveForEnemies = false
     //UnitAcknow = TAcknowUnitAction_TargetDestroyed
     TimeBeforeRepeat = 5
-)
-
-OnObjectiveCaptured is TUIFeedbackDispatchedMessageDescriptor
-(
-    MinimapPingType = $/UI/Components/MinimapPing_Spotted
-    MinimapPingAnimType = $/UI/Components/MinimapPingAnim_Scale
-    MinimapPingDuration = 4
-    MinimapPingAnimStartTime = 0.5
-    BaseFilterColorForMinimap = [250,190,50,250]
-    //HudSound = ~/HudSoundOnObjectiveCaptured //son placeholder
-    AlertMessageType = AlertMsg_Par_OnObjectiveCaptured
-    TimeBeforeRepeat = 20 // 30
-    IsActiveForPlayer = true
-    IsActiveForAllies = true
-    IsActiveForEnemies = false
-    AllowFocusOnEvent = true
-    //UnitAcknow = $/SoundSettings/TAcknowUnitAction_EnemyAirplaneContact
-)
-
-OnObjectiveLost is TUIFeedbackDispatchedMessageDescriptor
-(
-    MinimapPingType = $/UI/Components/MinimapPing_Spotted
-    MinimapPingAnimType = $/UI/Components/MinimapPingAnim_Scale
-    MinimapPingDuration = 4
-    MinimapPingAnimStartTime = 0.5
-    BaseFilterColorForMinimap = [204,0,0,250]
-    //HudSound = ~/HudSoundOnObjectiveLost //son placeholder
-    AlertMessageType = AlertMsg_Par_OnObjectiveLost
-    TimeBeforeRepeat = 20 // 10
-    IsActiveForPlayer = true
-    IsActiveForAllies = true
-    IsActiveForEnemies = false
-    AllowFocusOnEvent = true
-    //UnitAcknow = $/SoundSettings/TAcknowUnitAction_EnemyAirplaneContact
 )
 
 OnEnemyAirplaneContact is TUIFeedbackDispatchedMessageDescriptor
@@ -580,6 +560,8 @@ OnCriticEvacuate is TUIFeedbackDispatchedMessageDescriptor
     UnitAcknow = TAcknowUnitAction_CriticEvacuate
     TimeBeforeRepeat = 10
     IsActiveForPlayer = true
+
+    TextFormatter = UIFeedbackTextFormatterUseOptionalUnitDescriptor
 )
 
 OnUnitSold is TUIFeedbackDispatchedMessageDescriptor
@@ -775,6 +757,8 @@ OnREDUnitLostForReplay is TUIFeedbackDispatchedMessageDescriptor
     AlertMessageType = AlertMsg_Per_UniteDetruiteREDReplay
     AllowFocusOnEvent = true
     IsActiveForSpectator = true
+
+    TextFormatter = UIFeedbackTextFormatterUseOptionalUnitDescriptor
 )
 
 OnCommandZoneCapturedForReplay is TUIFeedbackDispatchedMessageDescriptor
@@ -814,6 +798,8 @@ OnBLUUnitLostForReplay is TUIFeedbackDispatchedMessageDescriptor
     AlertMessageType = AlertMsg_Per_UniteDetruiteBLUReplay
     AllowFocusOnEvent = true
     IsActiveForSpectator = true
+
+    TextFormatter = UIFeedbackTextFormatterUseOptionalUnitDescriptor
 )
 
 //----------------------------------------------------------------------------------
@@ -871,8 +857,6 @@ IngameFeedbackMessageManagerDescriptor is TUISpecificInGameFeedbackMessageManage
         ( FeedbackMessage_OnWithdrawOrder, ~/OnWithdrawOrder ),
         ( FeedbackMessage_OnTargetDistrictDestroyed, ~/OnTargetDistrictDestroyed ),
         ( FeedbackMessage_OnTargetBuildingDestroyed, ~/OnTargetBuildingDestroyed ),
-        ( FeedbackMessage_OnObjectiveCaptured, ~/OnObjectiveCaptured ),
-        ( FeedbackMessage_OnObjectiveLost, ~/OnObjectiveLost ),
         ( FeedbackMessage_OnBuildingUnderAttack, ~/OnUnitUnderAttack ),
         ( FeedbackMessage_OnShootOnPositionSmokeOrder, ~/OnSmoke ),
         ( FeedbackMessage_OnCriticEvacuate, ~/OnCriticEvacuate),

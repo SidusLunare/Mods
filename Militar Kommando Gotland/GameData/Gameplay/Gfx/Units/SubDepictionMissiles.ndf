@@ -6,7 +6,7 @@ template DepictionMissileSelector
 is TSubDepictionMissileSelector
 (
     HighNoneLimitInMeter = LodHighNoneLimit_Missile
-    CameraMoverManager = $/Camera/CameraMoverManager
+    Camera = $/M3D/Misc/CameraPrincipale
     PhysicalProperty = <PhysicalProperty>
     ThresholdAsUInt = <Value>
 )
@@ -18,7 +18,7 @@ template DepictionInstancedMissilesSelector
 is TSubDepictionInstancedMissilesSelector
 (
     HighNoneLimitInMeter = LodHighNoneLimit_Missile
-    CameraMoverManager = $/Camera/CameraMoverManager
+    Camera = $/M3D/Misc/CameraPrincipale
     PhysicalProperty = <PhysicalProperty>
 )
 
@@ -30,7 +30,7 @@ template DepictionInstancedRocketsSelector
 is TSubDepictionInstancedRocketsSelector
 (
     HighNoneLimitInMeter = LodHighNoneLimit_Missile
-    CameraMoverManager = $/Camera/CameraMoverManager
+    Camera = $/M3D/Misc/CameraPrincipale
     PhysicalProperty = <PhysicalProperty>
     VisibleRocketCount = <VisibleRocketCount>
 )

@@ -16,51 +16,6 @@ export fx_impact_vehicule_he_trestresgros is SimultaneousActionDeclaration
         (
             Mobile = TMobileWithLocalRepereMatrixFactory
             (
-                EulerAngles = float3[3.141593,0,0]
-            )
-            Actions =
-            [
-                TActionCall
-                (
-                    Action = $/VFX_Bank/BANK_Bomb_Flash
-                    NamedParams = MAP[
-                        ( 'parCount', 1 ),
-                        ( 'parDuration', 0.4 ),
-                        ( 'parFinalSize', 5300 ),
-                        ( 'parInitialSize', 0 ),
-                        ( 'parPositionRelative', parPosition ),
-                        ( 'parZBias', 0 ),
-                    ]
-                ),
-                TActionCall
-                (
-                    Action = $/VFX_Bank/ClusterMunitionAnim_Simple
-                    NamedParams = MAP[
-                        ( 'parColor', float3[0.7372549,0.3882353,0.2156863] ),
-                        ( 'parDuration', 1 ),
-                        ( 'parImpactPos', parDirection ),
-                        ( 'parLuminosite', 6 ),
-                        ( 'parSize', 4650 ),
-                        ( 'parSpawnRadius', 0 ),
-                        ( 'parPositionInit', float3[0,0,100] + parPosition ),
-                    ]
-                ),
-                TActionCall
-                (
-                    Action = $/GFX/GameFx/dummy_impact_for_exporter_hack
-                    NamedParams = MAP[
-                        ( 'Dir', parDirection ),
-                        ( 'Pos', parPosition ),
-                        ( 'RadPhy', parRadiusPhysical ),
-                        ( 'RadSupr', parRadiusSuppress ),
-                    ]
-                ),
-            ]
-        ),
-        TSimultaneousAction
-        (
-            Mobile = TMobileWithLocalRepereMatrixFactory
-            (
                 Position = parPosition
                 EulerAngles = float3[3.141593,0,0]
             )
@@ -128,6 +83,51 @@ export fx_impact_vehicule_he_trestresgros is SimultaneousActionDeclaration
         ),
         TSimultaneousAction
         (
+            Mobile = TMobileWithLocalRepereMatrixFactory
+            (
+                EulerAngles = float3[3.141593,0,0]
+            )
+            Actions =
+            [
+                TActionCall
+                (
+                    Action = $/VFX_Bank/BANK_Bomb_Flash
+                    NamedParams = MAP[
+                        ( 'parCount', 1 ),
+                        ( 'parDuration', 0.4 ),
+                        ( 'parFinalSize', 5300 ),
+                        ( 'parInitialSize', 0 ),
+                        ( 'parPositionRelative', parPosition ),
+                        ( 'parZBias', 0 ),
+                    ]
+                ),
+                TActionCall
+                (
+                    Action = $/VFX_Bank/ClusterMunitionAnim_Simple
+                    NamedParams = MAP[
+                        ( 'parColor', float3[0.7372549,0.3882353,0.2156863] ),
+                        ( 'parDuration', 1 ),
+                        ( 'parImpactPos', parDirection ),
+                        ( 'parLuminosite', 6 ),
+                        ( 'parSize', 4650 ),
+                        ( 'parSpawnRadius', 0 ),
+                        ( 'parPositionInit', float3[0,0,100] + parPosition ),
+                    ]
+                ),
+                TActionCall
+                (
+                    Action = $/GFX/GameFx/dummy_impact_for_exporter_hack
+                    NamedParams = MAP[
+                        ( 'Dir', parDirection ),
+                        ( 'Pos', parPosition ),
+                        ( 'RadPhy', parRadiusPhysical ),
+                        ( 'RadSupr', parRadiusSuppress ),
+                    ]
+                ),
+            ]
+        ),
+        TSimultaneousAction
+        (
             Mobile = nil
             Actions =
             [
@@ -142,27 +142,6 @@ export fx_impact_vehicule_he_trestresgros is SimultaneousActionDeclaration
                         ( 'parSize', 1100 ),
                         ( 'parSpawnRadius', 0 ),
                         ( 'parPositionInit', float3[0,0,275] + parPosition ),
-                    ]
-                ),
-                TActionCall
-                (
-                    Action = $/VFX_Bank/BANK_Bomb_NewSparks_Omni_Simple
-                    NamedParams = MAP[
-                        ( 'parColor', float3[1,0.2509804,0] ),
-                        ( 'parColorMultiplier', 6.400001 ),
-                        ( 'parCount', 20 ),
-                        ( 'parDir', parDirection ),
-                        ( 'parFluidFriction', 0 ),
-                        ( 'parGravity', -1000 ),
-                        ( 'parLifetime', 1.45 ),
-                        ( 'parNarrowness', 0 ),
-                        ( 'parPositionRadius', 680 ),
-                        ( 'parPositionRelative', parPosition ),
-                        ( 'parSize', 11 ),
-                        ( 'parSpeedMax', 2800 ),
-                        ( 'parSpeedMin', 300 ),
-                        ( 'parStretch', 0.5 ),
-                        ( 'parWindFactor', 0 ),
                     ]
                 ),
                 TActionCall
@@ -184,6 +163,27 @@ export fx_impact_vehicule_he_trestresgros is SimultaneousActionDeclaration
                         ( 'parSpeedMin', 8000 ),
                         ( 'parStretch', 2 ),
                         ( 'parWindFactor', 1 ),
+                    ]
+                ),
+                TActionCall
+                (
+                    Action = $/VFX_Bank/BANK_Bomb_NewSparks_Omni_Simple
+                    NamedParams = MAP[
+                        ( 'parColor', float3[1,0.2509804,0] ),
+                        ( 'parColorMultiplier', 6.400001 ),
+                        ( 'parCount', 20 ),
+                        ( 'parDir', parDirection ),
+                        ( 'parFluidFriction', 0 ),
+                        ( 'parGravity', -1000 ),
+                        ( 'parLifetime', 1.45 ),
+                        ( 'parNarrowness', 0 ),
+                        ( 'parPositionRadius', 680 ),
+                        ( 'parPositionRelative', parPosition ),
+                        ( 'parSize', 11 ),
+                        ( 'parSpeedMax', 2800 ),
+                        ( 'parSpeedMin', 300 ),
+                        ( 'parStretch', 0.5 ),
+                        ( 'parWindFactor', 0 ),
                     ]
                 ),
             ]

@@ -1,0 +1,19 @@
+export Modele_X1_Pioneiro_BRZ is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/BRZ/Char/X1_Pioneiro/X1_Pioneiro.fbx"
+)
+
+export Modele_X1_Pioneiro_BRZ_MID is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/BRZ/Char/X1_Pioneiro_MID/X1_Pioneiro_MID.fbx"
+)
+
+export Modele_X1_Pioneiro_BRZ_LOW is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/BRZ/Char/X1_Pioneiro_LOW/X1_Pioneiro_LOW.fbx"
+)
+
+export Modele_X1_Pioneiro_BRZ_Tourelle_02 is TResourceMesh
+(
+    Mesh=ModelFile_M2HB_12_7mm_cosmetic
+)

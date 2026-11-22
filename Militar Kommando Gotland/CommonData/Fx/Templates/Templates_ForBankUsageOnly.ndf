@@ -84,7 +84,7 @@ template Template_AparametricFunction_ForBank
 template Template_ParticleAccessor_ForBank
 [
     Field    : TParticleSubPart[required],
-    Indexed  : boolean = false
+    Indexed  : bool = false
 ] is TParticleAccessor
 (
     Field = <Field>

@@ -11,8 +11,6 @@ PlayerMissionModuleDescriptor is TPlayerMissionModuleDescriptor()
 
 TargetCoordinatorModuleDescriptor is TTargetCoordinatorModuleDescriptor()
 
-TargetManagerModuleDescriptor is TTargetManagerModuleDescriptor()
-
 BuildingOrderConfigModuleDescriptor is TOrderableModuleDescriptor
 (
     UnlockableOrders = [ EOrderType/Stop, EOrderType/SupplyUnit, EOrderType/AskForSupply, EOrderType/AIDefend, EOrderType/AIAttack, EOrderType/AIStop ]
@@ -46,12 +44,12 @@ template AirplaneMovementDescriptor
 
 template BuildingApparenceModuleDescriptor
 [
-    BlackHoleIdentifier,
+    BlackHoleKey,
     SymbolName,
 ] is TApparenceModuleDescriptor
 (
-    PickableObject                        = True
-    BlackHoleIdentifier = <BlackHoleIdentifier>
+    PickableObject                        = true
+    BlackHoleKey = <BlackHoleKey>
     Depiction = TTimelyModifyLevelBuildReceiverFactory
     (
         SymbolName = <SymbolName>
@@ -60,7 +58,7 @@ template BuildingApparenceModuleDescriptor
 
 DistrictApparenceModuleDescriptor is TApparenceModuleDescriptor
 (
-    PickableObject = True
+    PickableObject = true
     Depiction = TTimelyModifyLevelBuildReceiverFactory()
 )
 
@@ -68,24 +66,24 @@ template InfantryApparenceModuleDescriptor [
     MimeticName
 ] is TApparenceModuleDescriptor
 (
-    UseFollowCam = True
-    PickableObject = False
-    Depiction = TTimelyDepictionReceiverFactory( MimeticName = <MimeticName> )
+    UseFollowCam = true
+    PickableObject = false
+    Depiction = TTimelyDepictionReceiverFactory( BlackHoleKey = <MimeticName> )
     ReferenceMesh = $/GFX/DepictionResources/Rien
 )
 
 template VehicleApparenceModuleDescriptor [
     MimeticName,
-    BlackHoleIdentifier,
+    BlackHoleKey,
     GameplayBBoxBoneName = "",
     ReferenceMesh,
 ] is TApparenceModuleDescriptor
 (
-    UseFollowCam = True
-    PickableObject = True
-    Depiction = TTimelyDepictionReceiverFactory( MimeticName = <MimeticName> )
+    UseFollowCam = true
+    PickableObject = true
+    Depiction = TTimelyDepictionReceiverFactory( BlackHoleKey = <MimeticName> )
     ReferenceMesh = <ReferenceMesh>
-    BlackHoleIdentifier = <BlackHoleIdentifier>
+    BlackHoleKey = <BlackHoleKey>
     GameplayBBoxBoneName = <GameplayBBoxBoneName>
 )
 
@@ -93,96 +91,65 @@ FacingInfosModuleDescriptor is TFacingInfosModuleDescriptor()
 
 HeliApparenceModuleDescriptor is THeliApparenceModuleDescriptor()
 
-UnitStateEngineCompanyModuleDescriptor is TStateEngineCompanyModuleDescriptor
-(
-)
-UnitStateEngineModuleDescriptor is TStateEngineUnitModuleDescriptor
-(
-)
+UnitStateEngineUnitModuleDescriptor is TStateEngineUnitModuleDescriptor()
+UnitStateEngineSubUnitModuleDescriptor is TStateEngineSubUnitModuleDescriptor()
 
 AirplanePositionModuleDescriptor is TPositionModuleDescriptor
 (
-    InGeoDb                    = True
-    ClampInWorld               = False
-    ClampOutMap                = True
-)
-
-AirplaneCadavrePositionModuleDescriptor is TPositionModuleDescriptor
-(
-    InGeoDb                    = False
-    ClampInWorld               = False
-    ClampOutMap                = True
-)
-
-
-template HelicopterCadavrePositionModuleDescriptor [
-    LowAltitudeFlyingAltitudeGRU,
-    NearGroundFlyingAltitudeGRU
-] is TPositionModuleDescriptor
-(
-    InGeoDb                    = False
-    ClampInWorld               = True
-    ClampOutMap                = False
-    LowAltitudeFlyingAltitudeGRU  = <LowAltitudeFlyingAltitudeGRU>
-    NearGroundFlyingAltitudeGRU   = <NearGroundFlyingAltitudeGRU>
+    InitialCollisionPlane      = TCollisionPlane/HighAltitude
+    InGeoDb                    = true
 )
 
 UnitPositionModuleDescriptor is TPositionModuleDescriptor
 (
-    InGeoDb                    = True
-    ClampInWorld               = True
-    ClampOutMap                = False
+    InitialCollisionPlane      = TCollisionPlane/Ground
+    InGeoDb                    = true
 )
 
-UnitCadavrePositionModuleDescriptor is TPositionModuleDescriptor
+HelicopterPositionModuleDescriptor is TPositionModuleDescriptor
 (
-    InGeoDb                    = False
-    ClampInWorld               = True
-    ClampOutMap                = False
+    InitialCollisionPlane      = TCollisionPlane/NearGround
+    InGeoDb                    = true
+)
+
+UnitCadaverPositionModuleDescriptor is TPositionModuleDescriptor
+(
+    InitialCollisionPlane      = TCollisionPlane/Ground
+    InGeoDb                    = false
 )
 
 DistrictPositionModuleDescriptor is TPositionModuleDescriptor
 (
-    InGeoDb                    = True
-    ClampInWorld               = False
-    ClampOutMap                = False
+    InitialCollisionPlane      = TCollisionPlane/Ground
+    InGeoDb                    = true
 )
 
-DistrictCadavrePositionModuleDescriptor is TPositionModuleDescriptor
+DistrictCadaverPositionModuleDescriptor is TPositionModuleDescriptor
 (
-    InGeoDb                    = False
-    ClampInWorld               = False
-    ClampOutMap                = False
+    InitialCollisionPlane      = TCollisionPlane/Ground
+    InGeoDb                    = false
 )
 
-BunkerCadavrePositionModuleDescriptor is TPositionModuleDescriptor
+BuildingCadaverPositionModuleDescriptor is TPositionModuleDescriptor
 (
-    InGeoDb                    = False
-    ClampInWorld               = False
-    ClampOutMap                = False
-)
-
-BuildingCadavrePositionModuleDescriptor is TPositionModuleDescriptor
-(
-    InGeoDb                    = False
-    ClampInWorld               = True
-    ClampOutMap                = False
+    InitialCollisionPlane      = TCollisionPlane/Ground
+    InGeoDb                    = false
 )
 
 SelectionModuleDescriptor is TSelectionModuleDescriptor
 (
-    IsSelectable        = True
-    IsHighlightable     = True
-    HasSelectionShader  = False // Disabled by [SDDEUX-1276]
-    HasHighlightShader  = True
+    IsSelectable        = true
+    IsHighlightable     = true
+    HasSelectionShader  = false // Disabled by [SDDEUX-1276]
+    HasHighlightShader  = true
 )
 
 DistrictSelectionModuleDescriptor is TSelectionModuleDescriptor
 (
-    IsSelectable        = True
-    IsHighlightable     = True
-    HasSelectionShader  = True
-    HasHighlightShader  = True
+    IsSelectable        = true
+    IsHighlightable     = true
+    HasSelectionShader  = true
+    HasHighlightShader  = true
 )
 
 InflammableModuleDescriptorDistrict  is TInflammableModuleDescriptor
@@ -198,79 +165,68 @@ EKillMode is TBaseClass
     Building is 4
 )
 
-BuildingCadavreModuleDescriptor is TCadavreModuleDescriptor
+BuildingCadaverModuleDescriptor is TCadaverModuleDescriptor
 (
     KillMode = EKillMode/Building
-    CadavreDuration = ~/CadavreDurationApresFeu_Batiment
-    CadavreFireDurationMin = ~/CadavrePeriodeEnFeu_Minimum_Batiment
-    CadavreFireDurationMax = ~/CadavrePeriodeEnFeu_Maximum_Batiment
+    CadaverDuration = ~/CadaverDurationApresFeu_Batiment
+    CadaverFireDurationMin = ~/CadaverPeriodeEnFeu_Minimum_Batiment
+    CadaverFireDurationMax = ~/CadaverPeriodeEnFeu_Maximum_Batiment
     DeathExplosionAmmo = nil
 )
 
-template UnitCadavreModuleDescriptor [
-    KillMode : int,
-    CadavreDuration,
-    DeathExplosionAmmo,
-] is TCadavreModuleDescriptor
-(
-    KillMode = <KillMode>
-    CadavreDuration = <CadavreDuration>
-    CadavreFireDurationMin = ~/CadavrePeriodeEnFeu_Minimum
-    CadavreFireDurationMax = ~/CadavrePeriodeEnFeu_Maximum
-    DeathExplosionAmmo = <DeathExplosionAmmo>
-)
-
-template UnitCadavreGeneratorModuleDescriptor
+template UnitCadaverGeneratorModuleDescriptor
 [
     KillMode : int,
-    CadavreDuration,
+    CadaverDuration,
     DeathExplosionAmmo,
-] is TCadavreGeneratorModuleDescriptor
+] is TCadaverGeneratorModuleDescriptor
 (
-    CadavreModuleDescriptors =
+    CadaverModuleDescriptors =
     [
         ~/EmptyTagsModuleDescriptor,
-        ~/CadavreFlagsModuleDescriptor,
-        ~/UnitCadavrePositionModuleDescriptor,
-        UnitCadavreModuleDescriptor
+        ~/DefaultFlagsModuleDescriptor,
+        ~/UnitCadaverPositionModuleDescriptor,
+        TCadaverModuleDescriptor
         (
             KillMode = <KillMode>
-            CadavreDuration = <CadavreDuration>
+            CadaverDuration = <CadaverDuration>
+            CadaverFireDurationMin = ~/CadaverPeriodeEnFeu_Minimum
+            CadaverFireDurationMax = ~/CadaverPeriodeEnFeu_Maximum
             DeathExplosionAmmo = <DeathExplosionAmmo>
         ),
     ]
 )
 
-template BuildingCadavreGeneratorModuleDescriptor[] is TCadavreGeneratorModuleDescriptor
+template BuildingCadaverGeneratorModuleDescriptor[] is TCadaverGeneratorModuleDescriptor
 (
-    CadavreModuleDescriptors =
+    CadaverModuleDescriptors =
     [
-        ~/CadavreFlagsModuleDescriptor,
-        ~/BuildingCadavrePositionModuleDescriptor,
-        ~/BuildingCadavreModuleDescriptor,
+        ~/DefaultFlagsModuleDescriptor,
+        ~/BuildingCadaverPositionModuleDescriptor,
+        ~/BuildingCadaverModuleDescriptor,
     ]
 )
 
-template DistrictCadavreGeneratorModuleDescriptor[] is TCadavreGeneratorModuleDescriptor
+template DistrictCadaverGeneratorModuleDescriptor[] is TCadaverGeneratorModuleDescriptor
 (
-    CadavreModuleDescriptors =
+    CadaverModuleDescriptors =
     [
         ~/DistrictTagsModuleDescriptor,
         ~/DistrictFlagsModuleDescriptor,
-        ~/DistrictCadavrePositionModuleDescriptor,
+        ~/DistrictCadaverPositionModuleDescriptor,
         TIAStratModuleDescriptor
         (
             DatabaseId = 1
             GameplayBehavior = EGameplayBehavior/Nothing
         ),
-        ~/BuildingCadavreModuleDescriptor,
+        ~/BuildingCadaverModuleDescriptor,
     ]
 )
 
 FOBBuildingModuleDescriptor is TWargameBuildingModuleDescriptor
 (
-    BoundingBoxMinInLBU = $/GFX/Constantes/FOBBoxMin
-    BoundingBoxMaxInLBU = $/GFX/Constantes/FOBBoxMax
+    BoundingBoxMinInLBU = $/GFX/Unit/FOBBoxMin
+    BoundingBoxMaxInLBU = $/GFX/Unit/FOBBoxMax
 )
 
 BuildingDescriptorTagsModuleDescriptor is TTagsModuleDescriptor
@@ -306,7 +262,7 @@ BuildingScannerConfigurationDescriptor is TScannerConfigurationDescriptor
         ( EVisionRange/HighAltitude, 3533.56890459 ),
     ]
     OpticalStrengths = MAP [
-        ( EOpticalStrength/LowAltitude, 40.0 ),
-        ( EOpticalStrength/HighAltitude, 40.0 ),
+        ( EOpticalStrength/LowAltitude, 1413.427562 ),
+        ( EOpticalStrength/HighAltitude, 1413.427562 ),
     ]
 )

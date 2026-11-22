@@ -11,8 +11,8 @@ export Test_BANK_Smoke_Screen is Competition
             [
                 private Stickonground is Template_StickMobileOnGround
                 (
-                    MobileUpMatchWithGroundNormal = True
-                    ResetOrientation = True
+                    MobileUpMatchWithGroundNormal = true
+                    ResetOrientation = true
                 ),
                 Template_ActionCall
                 (

@@ -5,7 +5,7 @@ export Modele_Jaguar_RKT2_FR is TResourceMesh
 
 export Modele_Jaguar_RKT2_FR_MID is TResourceMesh
 (
-    Mesh="GameData:/Assets/3D/Units/FR/Avion/Jaguar_A/Jaguar_A_RKT.fbx"
+    Mesh="GameData:/Assets/3D/Units/FR/Avion/Jaguar_A_MID/Jaguar_A_RKT_MID.fbx"
 )
 
 export Modele_Jaguar_RKT2_FR_LOW is TResourceMesh

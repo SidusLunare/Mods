@@ -1,3 +1,4 @@
 @echo off
 for %%* in (.) do set CurrDirName=%%~nx*
-..\Utils\Python\python.exe ..\Utils\Scripts\CreateAssetDefinitionFiles.py "%CurrDirName%"
+python3 ..\Utils\Scripts\CreateAssetDefinitionFiles.py "%CurrDirName%"
+pause

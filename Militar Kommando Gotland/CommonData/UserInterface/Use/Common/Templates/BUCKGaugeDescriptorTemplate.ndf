@@ -126,7 +126,7 @@ template BUCKGaugeDescriptor
     Axis : int = ~/ListAxis/Horizontal,                                 // Axe de la jauge
 
     CenterValueTextName : string = "",                                  // ElementName du texte pour la valeur centrale de la jauge
-    AutoCenterValue : bool = false,                                     // True : le texte sera updaté pour afficher le total de la jauge, False : Le texte sera updaté manuellement
+    AutoCenterValue : bool = false,                                     // true : le texte sera updaté pour afficher le total de la jauge, false : Le texte sera updaté manuellement
 
     GaugeMax : float = 0.0,                                             // Valeur max de la jauge
     GaugeValueMinSize : TRTTILength = TRTTILength(),                    // Taille minimale de la jauge

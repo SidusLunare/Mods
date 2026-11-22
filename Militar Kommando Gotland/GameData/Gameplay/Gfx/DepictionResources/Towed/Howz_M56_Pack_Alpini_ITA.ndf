@@ -1,0 +1,6 @@
+export ModelFile_Howz_M56_Pack_Alpini_ITA is "GameData:/Assets/3D/Units/UK/Canon/Howz_Mod56_105mm/Howz_Mod56_105mm.fbx"
+export ModelFile_Howz_M56_Pack_Alpini_ITA_MID is "GameData:/Assets/3D/Units/UK/Canon/Howz_Mod56_105mm_MID/Howz_Mod56_105mm_MID.fbx"
+export ModelFile_Howz_M56_Pack_Alpini_ITA_LOW is "GameData:/Assets/3D/Units/UK/Canon/Howz_Mod56_105mm_LOW/Howz_Mod56_105mm_LOW.fbx"
+export Modele_Howz_M56_Pack_Alpini_ITA is TResourceMesh( Mesh=ModelFile_Howz_M56_Pack_VEN Textures="GameData:/Assets/3D/Units/VEN/Artillerie/Howz_Mod56_105mm")
+export Modele_Howz_M56_Pack_Alpini_ITA_MID is TResourceMesh( Mesh=ModelFile_Howz_M56_Pack_VEN_MID Textures="GameData:/Assets/3D/Units/VEN/Artillerie/Howz_Mod56_105mm_MID")
+export Modele_Howz_M56_Pack_Alpini_ITA_LOW is TResourceMesh( Mesh=ModelFile_Howz_M56_Pack_VEN_LOW Textures="GameData:/Assets/3D/Units/VEN/Artillerie/Howz_Mod56_105mm_LOW")

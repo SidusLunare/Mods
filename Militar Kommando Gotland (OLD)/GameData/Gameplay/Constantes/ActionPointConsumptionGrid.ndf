@@ -1,0 +1,12 @@
+export ActionPointConsumptionGridConstants is TActionPointConsumptionGridConstantsDescriptor
+(
+    TerrainsBloquants = [
+    ]
+
+    TerrainsRalentisseurs = [
+        ~/ETerrainType/StrategicForest,
+    ]
+
+    // Precision de la grille : Attention à l'impact sur les perfs
+    TailleDeCaseApproximativeGRU = ~/ActionPointConsumptionRefs/CaseSizeGRU // ATTENTION : modifier cette valeur dans GameData:/Gameplay/Constantes/ActionPointConsumptionGridRefs.ndf
+)

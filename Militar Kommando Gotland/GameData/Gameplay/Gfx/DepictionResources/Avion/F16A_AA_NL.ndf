@@ -6,14 +6,14 @@ export Modele_F16A_AA_NL is TResourceMesh
 
 export Modele_F16A_AA_NL_MID is TResourceMesh
 (
-    Mesh="GameData:/Assets/3D/Units/US/Avion/F16A_B15_Fighting_Falcon/F16A_B15_Fighting_Falcon.fbx"
-    Textures="GameData:/Assets/3D/Units/NL/Avion/F16A_B15_Fighting_Falcon"
+    Mesh="GameData:/Assets/3D/Units/US/Avion/F16A_B15_Fighting_Falcon_MID/F16A_B15_Fighting_Falcon_MID.fbx"
+    Textures="GameData:/Assets/3D/Units/NL/Avion/F16A_B15_Fighting_Falcon_MID"
 )
 
 export Modele_F16A_AA_NL_LOW is TResourceMesh
 (
-    Mesh="GameData:/Assets/3D/Units/US/Avion/F16A_B15_Fighting_Falcon/F16A_B15_Fighting_Falcon.fbx"
-    Textures="GameData:/Assets/3D/Units/NL/Avion/F16A_B15_Fighting_Falcon"
+    Mesh="GameData:/Assets/3D/Units/US/Avion/F16A_B15_Fighting_Falcon_LOW/F16A_B15_Fighting_Falcon_LOW.fbx"
+    Textures="GameData:/Assets/3D/Units/NL/Avion/F16A_B15_Fighting_Falcon_LOW"
 )
 
 export Modele_F16A_AA_NL_train is TResourceMesh

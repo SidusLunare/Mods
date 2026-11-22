@@ -1,0 +1,106 @@
+// GFX/Skirmish has no test-specific variant: both prod and test scenarios load the same files, so the cluster is a shared instance.
+// ScenarioGameplayConstants has one, TestGameplayConstants.
+CommonFiles is
+[
+        'CommonData:/Gameplay/Constantes/InitialisationGameDistanceUnits.ndf',
+        'CommonData:/Gameplay/Constantes/FlagList.ndf',
+        'CommonData:/Gameplay/World/WorldIndices.ndf',
+        'GameData:/Gameplay/Constantes/ActionPointConsumptionGrid.ndf',
+        'GameData:/Gameplay/Constantes/ActionPointConsumptionGridRefs.ndf',
+        'GameData:/Gameplay/Constantes/EnumerationsNdf/AutoresolveAdvantage.ndf',
+        'GameData:/Gameplay/Constantes/EvaluationMenace.ndf',
+        'GameData:/Gameplay/Constantes/GestionFormationConstantes.ndf',
+        'GameData:/Gameplay/Constantes/HitRollConstants.ndf',
+        'GameData:/Gameplay/Constantes/Strategic/AutoresolveConstantes.ndf',
+        'GameData:/Gameplay/Constantes/Strategic/IAStratConstantes.ndf',
+        'GameData:/Gameplay/Constantes/Strategic/PawnsBehaviors.ndf',
+        'GameData:/Gameplay/Constantes/Strategic/StrategicCameraConstantes.ndf',
+        'GameData:/Gameplay/Constantes/WeaponTypePriorities.ndf',
+        'GameData:/Gameplay/Constantes/WorldConstantes.ndf',
+        'GameData:/Gameplay/Constantes/WreckageConstants.ndf',
+        'GameData:/Gameplay/Formules/GainXPJoueur.ndf',
+        'GameData:/Gameplay/IAStrategic/Units/EntityDescriptorConstantes.ndf',
+        'GameData:/Gameplay/IAStrategic/Units/IAGroup.ndf',
+        'GameData:/Gameplay/IAStrategic/Units/IAObjective.ndf',
+        'GameData:/Generated/Gameplay/Gfx/DamageResistanceFamilyList.ndf',
+        'GameData:/Generated/Gameplay/OrderType.ndf',
+        'GameData:/System/CurrentSavingVersion.ndf',
+        'GameData:/System/Enumerations/IADifficulty.ndf',
+]
+
+ScenarioSkirmishConstants is TNDFTransaction
+(
+    BaseName  = 'Scenario/GFX/Skirmish.txn'
+    NameSpace = 'GFX/Skirmish'
+    Public    = true
+    Directories =
+    [
+        'CommonData:/Gameplay/Constantes/Enumerations',
+        'GameData:/Gameplay/Constantes/Enumerations',
+        'GameData:/Gameplay/Skirmish',
+    ]
+    Files =
+    [
+        'GameData:/Gameplay/Constantes/IAStratConstantes.ndf',
+        'GameData:/Gameplay/Constantes/IAStratPathCacheCostConstante.ndf',
+        'GameData:/Gameplay/Constantes/IAStratVisionParameters.ndf',
+        'GameData:/Gameplay/Constantes/IAStratWeaponConstantes.ndf',
+        'GameData:/Generated/Gameplay/Gfx/DamageResistanceFamilyList.ndf',
+        'GameData:/Generated/Gameplay/Gfx/PlayerMissionTags.ndf',
+        'GameData:/System/Enumerations/IADifficulty.ndf',
+    ]
+)
+
+ScenarioGameplayConstants is TNDFTransaction
+(
+    BaseName  = 'Scenario/GFX/Constantes.txn'
+    NameSpace = 'GameplayTuning'
+    Public    = true
+    Directories =
+    [
+        'CommonData:/Gameplay/Constantes/Enumerations',
+        'GameData:/Gameplay/Constantes/Enumerations',
+    ]
+    Files = ~/CommonFiles +
+    [
+        'CommonData:/Map/Enum/ChapterMissionType.ndf',
+        'GameData:/Gameplay/Constantes/BatimentPath.ndf',
+        'GameData:/Gameplay/Constantes/Deroute.ndf',
+        'GameData:/Gameplay/Constantes/GDConstants.ndf',
+        'GameData:/Gameplay/Constantes/Resources.ndf',
+        'GameData:/Gameplay/Constantes/Strategic/GDConstants.ndf',
+        'GameData:/Gameplay/Constantes/Strategic/StrategicFatigueConstants.ndf',
+        'GameData:/Gameplay/Constantes/WargameConstantes.ndf',
+    ]
+)
+
+LoadScenarioGameplayConstantTransactions is TClusterLoadTransaction(Transaction = ~/ScenarioGameplayConstants)
+
+TestScenarioGameplayConstants is TNDFTransaction
+(
+    BaseName  = 'NotFinal/Tests/Constantes.txn'
+    NameSpace = 'GameplayTuning'
+    Directories =
+    [
+        'CommonData:/Gameplay/Constantes/Enumerations',
+        'GameData:/Gameplay/Constantes/Enumerations',
+    ]
+    Files = ~/CommonFiles +
+    [
+        'CommonData:/Gameplay/Test/Constantes/Resources.ndf',
+        'CommonData:/Gameplay/Test/DamageResistanceTestAutos.ndf',
+        'CommonData:/Gameplay/Test/Deroute.ndf',
+        'CommonData:/Gameplay/Test/GDConstantsStrategic.ndf',
+        'CommonData:/Gameplay/Test/GDConstantsTactic.ndf',
+        'CommonData:/Gameplay/Test/IAStratConstantes.ndf',
+        'CommonData:/Gameplay/Test/InfluenceConstantes.ndf',
+        'CommonData:/Gameplay/Test/PathfindParametersOverrider.ndf',
+        'CommonData:/Gameplay/Test/Resources.ndf',
+        'CommonData:/Gameplay/Test/TerrainsOverrider.ndf',
+        'CommonData:/Gameplay/Test/UIBank.ndf',
+        'CommonData:/Gameplay/Test/WargameConstantes.ndf',
+        'GameData:/Gameplay/Constantes/TerrainSpeedFactors.ndf',
+    ]
+)
+
+LoadTestScenarioGameplayConstantTransactions is TClusterLoadTransaction(Transaction = ~/TestScenarioGameplayConstants)

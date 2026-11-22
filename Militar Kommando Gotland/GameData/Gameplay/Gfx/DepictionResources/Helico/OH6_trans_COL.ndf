@@ -1,0 +1,17 @@
+export Modele_OH6_trans_COL is TResourceMesh
+(
+    Mesh=ModelFile_OH6_DK
+    Textures="GameData:/Assets/3D/Units/COL/Helico/OH6"
+)
+
+export Modele_OH6_trans_COL_MID is TResourceMesh
+(
+    Mesh=ModelFile_OH6_DK_MID
+    Textures="GameData:/Assets/3D/Units/COL/Helico/OH6_MID"
+)
+
+export Modele_OH6_trans_COL_LOW is TResourceMesh
+(
+    Mesh=ModelFile_OH6_DK_LOW
+    Textures="GameData:/Assets/3D/Units/COL/Helico/OH6_LOW"
+)

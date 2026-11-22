@@ -1,0 +1,53 @@
+// Ne pas éditer, ce fichier est généré
+
+export fx_fumee_blanche_brume_sol_diorama is Simultaneous
+(
+    Actions = ActionList is
+    [
+        TSimultaneousAction
+        (
+            Mobile = nil
+            Actions =
+            [
+                TActionCall
+                (
+                    Action = $/VFX_Bank/AoA_FX_BANK_FireAndDarkSmoke_with_wind_simple
+                    NamedParams = MAP[
+                        ( 'Feu_Size_Mul', 0 ),
+                        ( 'FireCountMul', 0 ),
+                        ( 'FireDuration', 0 ),
+                        ( 'Ground_Size', 50 ),
+                        ( 'SmokeColor', float3[0.7843138,0.7843138,0.7843138] ),
+                        ( 'SmokeCountMul', 5 ),
+                        ( 'SmokeDuration', 5 ),
+                        ( 'SmokeOpacity', 0.25 ),
+                        ( 'SmokeSpeed', -4 ),
+                        ( 'SmokeWindFactor', 10 ),
+                        ( 'Smoke_Size_Mul', 10 ),
+                        ( 'SparksCountMul', 0 ),
+                        ( 'SparksDuration', 0 ),
+                    ]
+                ),
+                TActionCall
+                (
+                    Action = $/VFX_Bank/AoA_FX_BANK_FireAndDarkSmoke_with_wind_simple
+                    NamedParams = MAP[
+                        ( 'Feu_Size_Mul', 0 ),
+                        ( 'FireCountMul', 0 ),
+                        ( 'FireDuration', 0 ),
+                        ( 'Ground_Size', 50 ),
+                        ( 'SmokeColor', float3[0.3921569,0.3921569,0.3921569] ),
+                        ( 'SmokeCountMul', 4 ),
+                        ( 'SmokeDuration', 3 ),
+                        ( 'SmokeOpacity', 0.5 ),
+                        ( 'SmokeSpeed', -2 ),
+                        ( 'SmokeWindFactor', 10 ),
+                        ( 'Smoke_Size_Mul', 10 ),
+                        ( 'SparksCountMul', 0 ),
+                        ( 'SparksDuration', 0 ),
+                    ]
+                ),
+            ]
+        ),
+    ]
+)

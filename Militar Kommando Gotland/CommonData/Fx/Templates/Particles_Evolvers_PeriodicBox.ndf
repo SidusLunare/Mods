@@ -1,7 +1,7 @@
 template Template_PeriodicBox
 [
     BoxSize         : TEvaluable[required] = nil,
-    Disabled        : boolean = false
+    Disabled        : bool = false
 ] is TParticleEvolver_PeriodicBox
 (
     BoxSize = <BoxSize>

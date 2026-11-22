@@ -48,6 +48,28 @@ export fx_impact_balle_eau_gros is SimultaneousActionDeclaration
         (
             Mobile = TMobileWithLocalRepereMatrixFactory
             (
+                Position = parPosition
+            )
+            Actions =
+            [
+                TActionCall
+                (
+                    Action = $/VFX_Bank/Small_ground_Impact_Simple
+                    NamedParams = MAP[
+                        ( 'parDuration', 0.6 ),
+                        ( 'parDustColor', float3[0.9882354,1,0.9882354] ),
+                        ( 'parDustSize', 0 ),
+                        ( 'parMudSize', 0 ),
+                        ( 'parOpacity', 0.5 ),
+                        ( 'parRandomPosition', 0 ),
+                    ]
+                ),
+            ]
+        ),
+        TSimultaneousAction
+        (
+            Mobile = TMobileWithLocalRepereMatrixFactory
+            (
                 Position = float3[95,-62,0]
             )
             Actions =
@@ -64,28 +86,6 @@ export fx_impact_balle_eau_gros is SimultaneousActionDeclaration
                         ( 'parLifetime', 2 ),
                         ( 'parSize', 52 ),
                         ( 'parSpeed', 800 ),
-                    ]
-                ),
-            ]
-        ),
-        TSimultaneousAction
-        (
-            Mobile = TMobileWithLocalRepereMatrixFactory
-            (
-                Position = parPosition
-            )
-            Actions =
-            [
-                TActionCall
-                (
-                    Action = $/VFX_Bank/Small_ground_Impact_Simple
-                    NamedParams = MAP[
-                        ( 'parDuration', 0.6 ),
-                        ( 'parDustColor', float3[0.9882354,1,0.9882354] ),
-                        ( 'parDustSize', 0 ),
-                        ( 'parMudSize', 0 ),
-                        ( 'parOpacity', 0.5 ),
-                        ( 'parRandomPosition', 0 ),
                     ]
                 ),
             ]

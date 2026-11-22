@@ -162,6 +162,28 @@ export fx_impact_sol_HE_grand is SimultaneousActionDeclaration
         ),
         TSimultaneousAction
         (
+            Mobile = TMobileWithLocalRepereMatrixFactory
+            (
+                Position = parPosition
+                EulerAngles = float3[3.141593,0,0]
+            )
+            Actions =
+            [
+                TActionCall
+                (
+                    Action = $/VFX_Bank/BANK_Bomb_Distort_Simple
+                    NamedParams = MAP[
+                        ( 'parDuration', 0.7000002 ),
+                        ( 'parFinalSize', 6300 ),
+                        ( 'parInitialSize', 10000 ),
+                        ( 'parIntensity', 5000 ),
+                        ( 'parPositionRelative', float3[35,1,0] ),
+                    ]
+                ),
+            ]
+        ),
+        TSimultaneousAction
+        (
             Mobile = nil
             Actions =
             [
@@ -287,28 +309,6 @@ export fx_impact_sol_HE_grand is SimultaneousActionDeclaration
                     ]
                 ),
                 TWaitInSec( Duration = 1.4),
-            ]
-        ),
-        TSimultaneousAction
-        (
-            Mobile = TMobileWithLocalRepereMatrixFactory
-            (
-                Position = parPosition
-                EulerAngles = float3[3.141593,0,0]
-            )
-            Actions =
-            [
-                TActionCall
-                (
-                    Action = $/VFX_Bank/BANK_Bomb_Distort_Simple
-                    NamedParams = MAP[
-                        ( 'parDuration', 0.7000002 ),
-                        ( 'parFinalSize', 6300 ),
-                        ( 'parInitialSize', 10000 ),
-                        ( 'parIntensity', 5000 ),
-                        ( 'parPositionRelative', float3[35,1,0] ),
-                    ]
-                ),
             ]
         ),
         TSimultaneousAction

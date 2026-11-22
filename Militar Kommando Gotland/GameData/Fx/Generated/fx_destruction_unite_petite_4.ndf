@@ -15,208 +15,6 @@ export fx_destruction_unite_petite_4 is SimultaneousActionDeclaration
     [
         TSimultaneousAction
         (
-            Mobile = nil
-            Actions =
-            [
-                TSequentialAction
-                (Actions =
-                    [
-                        TWaitInSec( Duration = 0.1 ),
-                        TActionCall
-                        (
-                            Action = $/VFX_Bank/BANK_Bomb_Flash
-                            NamedParams = MAP[
-                                ( 'parCount', 3 ),
-                                ( 'parDuration', 0.1 ),
-                                ( 'parFinalSize', 0 ),
-                                ( 'parInitialSize', 3000 ),
-                                ( 'parZBias', 0 ),
-                                ( 'parPositionRelative', float3[49,0,-132] + parPosition ),
-                            ]
-                        ),
-                    ]
-                ),
-                TActionCall
-                (
-                    Action = $/VFX_Bank/BANK_Bomb_Flash
-                    NamedParams = MAP[
-                        ( 'parCount', 3 ),
-                        ( 'parDuration', 0.1 ),
-                        ( 'parFinalSize', 3000 ),
-                        ( 'parInitialSize', 10 ),
-                        ( 'parZBias', 0 ),
-                        ( 'parPositionRelative', float3[49,0,-132] + parPosition ),
-                    ]
-                ),
-                TActionCall
-                (
-                    Action = $/GFX/GameFx/dummy_impact_for_exporter_hack
-                    NamedParams = MAP[
-                        ( 'Dir', parDirection ),
-                        ( 'Pos', parPosition ),
-                        ( 'RadPhy', parRadiusPhysical ),
-                        ( 'RadSupr', parRadiusSuppress ),
-                    ]
-                ),
-                TSequentialAction
-                (Actions =
-                    [
-                        TWaitInSec( Duration = 0.25 ),
-                        TActionCall
-                        (
-                            Action = $/VFX_Bank/BANK_Dynamic_Flash_Only_Two_Simple
-                            NamedParams = MAP[
-                                ( 'Position', parPosition ),
-                                ( 'parColorEnd', float3[0.04313726,0.04313726,0.04313726] ),
-                                ( 'parColorStart', float3[0.6,0.2980392,0.09803922] ),
-                                ( 'parDuration', 0.2 ),
-                                ( 'parInitialDelay', parInitialShotDelay ),
-                                ( 'parOpacity', 0.2 ),
-                                ( 'parSize', 15000 ),
-                                ( 'parSpeed', float3[0,0,0] ),
-                            ]
-                        ),
-                    ]
-                ),
-                TSequentialAction
-                (Actions =
-                    [
-                        TWaitInSec( Duration = 0.25 ),
-                        TActionCall
-                        (
-                            Action = $/VFX_Bank/BANK_Bomb_NewSparks_Simple
-                            NamedParams = MAP[
-                                ( 'parColor', float3[0.8862746,0.3058824,0.03921569] ),
-                                ( 'parColorMultiplier', 6 ),
-                                ( 'parCount', 100 ),
-                                ( 'parDir', parDirection ),
-                                ( 'parFluidFriction', 1.8 ),
-                                ( 'parGravity', 2500 ),
-                                ( 'parLifetime', 3 ),
-                                ( 'parNarrowness', 0.1 ),
-                                ( 'parPositionRadius', 100 ),
-                                ( 'parSize', 13 ),
-                                ( 'parSpeedMax', 10000 ),
-                                ( 'parSpeedMin', 4000 ),
-                                ( 'parStretch', 0.7 ),
-                                ( 'parWindFactor', 0.2999996 ),
-                                ( 'parPositionRelative', parPosition ),
-                            ]
-                        ),
-                    ]
-                ),
-                TSequentialAction
-                (Actions =
-                    [
-                        TWaitInSec( Duration = 1 ),
-                        TActionCall
-                        (
-                            Action = $/VFX_Bank/BANK_Bomb_NewSparks_Simple
-                            NamedParams = MAP[
-                                ( 'parColor', float3[0.8862746,0.3058824,0.03921569] ),
-                                ( 'parColorMultiplier', 3.6 ),
-                                ( 'parCount', 25 ),
-                                ( 'parDir', parDirection ),
-                                ( 'parFluidFriction', 1.8 ),
-                                ( 'parGravity', 2500 ),
-                                ( 'parLifetime', 1.3 ),
-                                ( 'parNarrowness', 0.1 ),
-                                ( 'parPositionRadius', 100 ),
-                                ( 'parSize', 12 ),
-                                ( 'parSpeedMax', 5900 ),
-                                ( 'parSpeedMin', 2600 ),
-                                ( 'parStretch', 0.7 ),
-                                ( 'parWindFactor', 0.2999996 ),
-                                ( 'parPositionRelative', parPosition ),
-                            ]
-                        ),
-                    ]
-                ),
-                TSequentialAction
-                (Actions =
-                    [
-                        TWaitInSec( Duration = 1.5 ),
-                        TActionCall
-                        (
-                            Action = $/VFX_Bank/BANK_Bomb_NewSparks_Simple
-                            NamedParams = MAP[
-                                ( 'parColor', float3[0.8862746,0.3058824,0.03921569] ),
-                                ( 'parColorMultiplier', 4 ),
-                                ( 'parCount', 25 ),
-                                ( 'parDir', parDirection ),
-                                ( 'parFluidFriction', 1.8 ),
-                                ( 'parGravity', 3500 ),
-                                ( 'parLifetime', 3 ),
-                                ( 'parNarrowness', 0.4 ),
-                                ( 'parPositionRadius', 100 ),
-                                ( 'parSize', 12 ),
-                                ( 'parSpeedMax', 8000 ),
-                                ( 'parSpeedMin', 2000 ),
-                                ( 'parStretch', 0.7 ),
-                                ( 'parWindFactor', 0.2999996 ),
-                                ( 'parPositionRelative', parPosition ),
-                            ]
-                        ),
-                    ]
-                ),
-                TSequentialAction
-                (Actions =
-                    [
-                        TWaitInSec( Duration = 0.5 ),
-                        TActionCall
-                        (
-                            Action = $/VFX_Bank/BANK_Bomb_NewSparks_Simple
-                            NamedParams = MAP[
-                                ( 'parColor', float3[0.8862746,0.3058824,0.03921569] ),
-                                ( 'parColorMultiplier', 3.6 ),
-                                ( 'parCount', 20 ),
-                                ( 'parDir', parDirection ),
-                                ( 'parFluidFriction', 1.8 ),
-                                ( 'parGravity', 3000 ),
-                                ( 'parLifetime', 1.3 ),
-                                ( 'parNarrowness', 0.3 ),
-                                ( 'parPositionRadius', 100 ),
-                                ( 'parSize', 12 ),
-                                ( 'parSpeedMax', 5900 ),
-                                ( 'parSpeedMin', 2600 ),
-                                ( 'parStretch', 0.7 ),
-                                ( 'parWindFactor', 0.2999996 ),
-                                ( 'parPositionRelative', parPosition ),
-                            ]
-                        ),
-                    ]
-                ),
-                TSequentialAction
-                (Actions =
-                    [
-                        TWaitInSec( Duration = 2 ),
-                        TActionCall
-                        (
-                            Action = $/VFX_Bank/BANK_Bomb_NewSparks_Simple
-                            NamedParams = MAP[
-                                ( 'parColor', float3[0.8862746,0.3058824,0.03921569] ),
-                                ( 'parColorMultiplier', 3.6 ),
-                                ( 'parCount', 25 ),
-                                ( 'parDir', parDirection ),
-                                ( 'parFluidFriction', 1.8 ),
-                                ( 'parGravity', 2500 ),
-                                ( 'parLifetime', 2 ),
-                                ( 'parNarrowness', 0.1 ),
-                                ( 'parPositionRadius', 100 ),
-                                ( 'parSize', 14 ),
-                                ( 'parSpeedMax', 5900 ),
-                                ( 'parSpeedMin', 2600 ),
-                                ( 'parStretch', 0.7 ),
-                                ( 'parWindFactor', 0.2999996 ),
-                                ( 'parPositionRelative', parPosition ),
-                            ]
-                        ),
-                    ]
-                ),
-            ]
-        ),
-        TSimultaneousAction
-        (
             Mobile = TMobileWithLocalRepereMatrixFactory
             (
                 Position = parPosition
@@ -437,6 +235,243 @@ export fx_destruction_unite_petite_4 is SimultaneousActionDeclaration
         ),
         TSimultaneousAction
         (
+            Mobile = nil
+            Actions =
+            [
+                TSequentialAction
+                (Actions =
+                    [
+                        TWaitInSec( Duration = 0.1 ),
+                        TActionCall
+                        (
+                            Action = $/VFX_Bank/BANK_Bomb_Flash
+                            NamedParams = MAP[
+                                ( 'parCount', 3 ),
+                                ( 'parDuration', 0.1 ),
+                                ( 'parFinalSize', 0 ),
+                                ( 'parInitialSize', 3000 ),
+                                ( 'parZBias', 0 ),
+                                ( 'parPositionRelative', float3[49,0,-132] + parPosition ),
+                            ]
+                        ),
+                    ]
+                ),
+                TActionCall
+                (
+                    Action = $/VFX_Bank/BANK_Bomb_Flash
+                    NamedParams = MAP[
+                        ( 'parCount', 3 ),
+                        ( 'parDuration', 0.1 ),
+                        ( 'parFinalSize', 3000 ),
+                        ( 'parInitialSize', 10 ),
+                        ( 'parZBias', 0 ),
+                        ( 'parPositionRelative', float3[49,0,-132] + parPosition ),
+                    ]
+                ),
+                TActionCall
+                (
+                    Action = $/GFX/GameFx/dummy_impact_for_exporter_hack
+                    NamedParams = MAP[
+                        ( 'Dir', parDirection ),
+                        ( 'Pos', parPosition ),
+                        ( 'RadPhy', parRadiusPhysical ),
+                        ( 'RadSupr', parRadiusSuppress ),
+                    ]
+                ),
+                TSequentialAction
+                (Actions =
+                    [
+                        TWaitInSec( Duration = 0.25 ),
+                        TActionCall
+                        (
+                            Action = $/VFX_Bank/BANK_Dynamic_Flash_Only_Two_Simple
+                            NamedParams = MAP[
+                                ( 'Position', parPosition ),
+                                ( 'parColorEnd', float3[0.04313726,0.04313726,0.04313726] ),
+                                ( 'parColorStart', float3[0.6,0.2980392,0.09803922] ),
+                                ( 'parDuration', 0.2 ),
+                                ( 'parInitialDelay', parInitialShotDelay ),
+                                ( 'parOpacity', 0.2 ),
+                                ( 'parSize', 15000 ),
+                                ( 'parSpeed', float3[0,0,0] ),
+                            ]
+                        ),
+                    ]
+                ),
+                TSequentialAction
+                (Actions =
+                    [
+                        TWaitInSec( Duration = 0.25 ),
+                        TActionCall
+                        (
+                            Action = $/VFX_Bank/BANK_Bomb_NewSparks_Simple
+                            NamedParams = MAP[
+                                ( 'parColor', float3[0.8862746,0.3058824,0.03921569] ),
+                                ( 'parColorMultiplier', 6 ),
+                                ( 'parCount', 100 ),
+                                ( 'parDir', parDirection ),
+                                ( 'parFluidFriction', 1.8 ),
+                                ( 'parGravity', 2500 ),
+                                ( 'parLifetime', 3 ),
+                                ( 'parNarrowness', 0.1 ),
+                                ( 'parPositionRadius', 100 ),
+                                ( 'parSize', 13 ),
+                                ( 'parSpeedMax', 10000 ),
+                                ( 'parSpeedMin', 4000 ),
+                                ( 'parStretch', 0.7 ),
+                                ( 'parWindFactor', 0.2999996 ),
+                                ( 'parPositionRelative', parPosition ),
+                            ]
+                        ),
+                    ]
+                ),
+                TSequentialAction
+                (Actions =
+                    [
+                        TWaitInSec( Duration = 1 ),
+                        TActionCall
+                        (
+                            Action = $/VFX_Bank/BANK_Bomb_NewSparks_Simple
+                            NamedParams = MAP[
+                                ( 'parColor', float3[0.8862746,0.3058824,0.03921569] ),
+                                ( 'parColorMultiplier', 3.6 ),
+                                ( 'parCount', 25 ),
+                                ( 'parDir', parDirection ),
+                                ( 'parFluidFriction', 1.8 ),
+                                ( 'parGravity', 2500 ),
+                                ( 'parLifetime', 1.3 ),
+                                ( 'parNarrowness', 0.1 ),
+                                ( 'parPositionRadius', 100 ),
+                                ( 'parSize', 12 ),
+                                ( 'parSpeedMax', 5900 ),
+                                ( 'parSpeedMin', 2600 ),
+                                ( 'parStretch', 0.7 ),
+                                ( 'parWindFactor', 0.2999996 ),
+                                ( 'parPositionRelative', parPosition ),
+                            ]
+                        ),
+                    ]
+                ),
+                TSequentialAction
+                (Actions =
+                    [
+                        TWaitInSec( Duration = 1.5 ),
+                        TActionCall
+                        (
+                            Action = $/VFX_Bank/BANK_Bomb_NewSparks_Simple
+                            NamedParams = MAP[
+                                ( 'parColor', float3[0.8862746,0.3058824,0.03921569] ),
+                                ( 'parColorMultiplier', 4 ),
+                                ( 'parCount', 25 ),
+                                ( 'parDir', parDirection ),
+                                ( 'parFluidFriction', 1.8 ),
+                                ( 'parGravity', 3500 ),
+                                ( 'parLifetime', 3 ),
+                                ( 'parNarrowness', 0.4 ),
+                                ( 'parPositionRadius', 100 ),
+                                ( 'parSize', 12 ),
+                                ( 'parSpeedMax', 8000 ),
+                                ( 'parSpeedMin', 2000 ),
+                                ( 'parStretch', 0.7 ),
+                                ( 'parWindFactor', 0.2999996 ),
+                                ( 'parPositionRelative', parPosition ),
+                            ]
+                        ),
+                    ]
+                ),
+                TSequentialAction
+                (Actions =
+                    [
+                        TWaitInSec( Duration = 0.5 ),
+                        TActionCall
+                        (
+                            Action = $/VFX_Bank/BANK_Bomb_NewSparks_Simple
+                            NamedParams = MAP[
+                                ( 'parColor', float3[0.8862746,0.3058824,0.03921569] ),
+                                ( 'parColorMultiplier', 3.6 ),
+                                ( 'parCount', 20 ),
+                                ( 'parDir', parDirection ),
+                                ( 'parFluidFriction', 1.8 ),
+                                ( 'parGravity', 3000 ),
+                                ( 'parLifetime', 1.3 ),
+                                ( 'parNarrowness', 0.3 ),
+                                ( 'parPositionRadius', 100 ),
+                                ( 'parSize', 12 ),
+                                ( 'parSpeedMax', 5900 ),
+                                ( 'parSpeedMin', 2600 ),
+                                ( 'parStretch', 0.7 ),
+                                ( 'parWindFactor', 0.2999996 ),
+                                ( 'parPositionRelative', parPosition ),
+                            ]
+                        ),
+                    ]
+                ),
+                TSequentialAction
+                (Actions =
+                    [
+                        TWaitInSec( Duration = 2 ),
+                        TActionCall
+                        (
+                            Action = $/VFX_Bank/BANK_Bomb_NewSparks_Simple
+                            NamedParams = MAP[
+                                ( 'parColor', float3[0.8862746,0.3058824,0.03921569] ),
+                                ( 'parColorMultiplier', 3.6 ),
+                                ( 'parCount', 25 ),
+                                ( 'parDir', parDirection ),
+                                ( 'parFluidFriction', 1.8 ),
+                                ( 'parGravity', 2500 ),
+                                ( 'parLifetime', 2 ),
+                                ( 'parNarrowness', 0.1 ),
+                                ( 'parPositionRadius', 100 ),
+                                ( 'parSize', 14 ),
+                                ( 'parSpeedMax', 5900 ),
+                                ( 'parSpeedMin', 2600 ),
+                                ( 'parStretch', 0.7 ),
+                                ( 'parWindFactor', 0.2999996 ),
+                                ( 'parPositionRelative', parPosition ),
+                            ]
+                        ),
+                    ]
+                ),
+            ]
+        ),
+        TSimultaneousAction
+        (
+            Mobile = TMobileWithLocalRepereMatrixFactory
+            (
+                Position = float3[0,0,100] + parPosition
+            )
+            Actions =
+            [
+                TActionCall
+                (
+                    Action = $/VFX_Bank/BANK_Rubble2_Simple
+                    NamedParams = MAP[
+                        ( 'parCountDebrits', 20 ),
+                        ( 'parCountDebritsWithFire', 1 ),
+                        ( 'parCountDebritsWithSmoke', 5 ),
+                        ( 'parDebritSizeMul', 1.049999 ),
+                        ( 'parDispersion', 200 ),
+                        ( 'parFireParticleEndSize', 150 ),
+                        ( 'parFireParticleStartSize', 50 ),
+                        ( 'parLifetime', 4 ),
+                        ( 'parMeshType', 0 ),
+                        ( 'parMinSpeedRatio', 0.1500003 ),
+                        ( 'parParticleOpacity', 0.7 ),
+                        ( 'parSmokeColor', float3[0.1921569,0.1921569,0.1921569] ),
+                        ( 'parSmokeColorMultiplier', 1 ),
+                        ( 'parSmokeDensity', 100 ),
+                        ( 'parSmokeParticleEndSize', 750 ),
+                        ( 'parSmokeParticleStartSize', 150 ),
+                        ( 'parSpeed', float3[5000,5000,6000] ),
+                        ( 'parSpeedDispersion', 0.4000029 ),
+                    ]
+                ),
+                TWaitInSec( Duration = 4),
+            ]
+        ),
+        TSimultaneousAction
+        (
             Mobile = TMobileWithLocalRepereMatrixFactory
             (
                 Position = float3[17,6,0] + parPosition
@@ -505,41 +540,6 @@ export fx_destruction_unite_petite_4 is SimultaneousActionDeclaration
                     ]
                 ),
                 TWaitInSec( Duration = 10),
-            ]
-        ),
-        TSimultaneousAction
-        (
-            Mobile = TMobileWithLocalRepereMatrixFactory
-            (
-                Position = float3[0,0,100] + parPosition
-            )
-            Actions =
-            [
-                TActionCall
-                (
-                    Action = $/VFX_Bank/BANK_Rubble2_Simple
-                    NamedParams = MAP[
-                        ( 'parCountDebrits', 20 ),
-                        ( 'parCountDebritsWithFire', 1 ),
-                        ( 'parCountDebritsWithSmoke', 5 ),
-                        ( 'parDebritSizeMul', 1.049999 ),
-                        ( 'parDispersion', 200 ),
-                        ( 'parFireParticleEndSize', 150 ),
-                        ( 'parFireParticleStartSize', 50 ),
-                        ( 'parLifetime', 4 ),
-                        ( 'parMeshType', 0 ),
-                        ( 'parMinSpeedRatio', 0.1500003 ),
-                        ( 'parParticleOpacity', 0.7 ),
-                        ( 'parSmokeColor', float3[0.1921569,0.1921569,0.1921569] ),
-                        ( 'parSmokeColorMultiplier', 1 ),
-                        ( 'parSmokeDensity', 100 ),
-                        ( 'parSmokeParticleEndSize', 750 ),
-                        ( 'parSmokeParticleStartSize', 150 ),
-                        ( 'parSpeed', float3[5000,5000,6000] ),
-                        ( 'parSpeedDispersion', 0.4000029 ),
-                    ]
-                ),
-                TWaitInSec( Duration = 4),
             ]
         ),
     ]

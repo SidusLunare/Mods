@@ -1,7 +1,6 @@
 
 TabMagnifiableWidth is 160
 TabMagnifiableHeight is 36
-TabMagnifiableMarginIfFitContent is 30.0 //On ajoute la moitie de la hauteur, ce qui correspond a la diagonale
 
 template BUCKSpecificWithTabsComponentDescriptor
 [
@@ -18,7 +17,6 @@ template BUCKSpecificWithTabsComponentDescriptor
     TabsListBackgroundColorToken : string = "Onglet/Background",
     RedefinedTabsContainer : TBUCKContainerDescriptor = nil,
     Axis : int = ~/ListAxis/Horizontal,
-    CanReselectTabs : bool = false
 ]
 is BUCKWithTabsDescriptor
 (
@@ -39,7 +37,6 @@ is BUCKWithTabsDescriptor
     TabsListBackgroundColorToken = <TabsListBackgroundColorToken>
     RedefinedTabsContainer = <RedefinedTabsContainer>
 
-    CanReselectTabs = <CanReselectTabs>
     Axis = <Axis>
     IsFocusable = true
 )
@@ -62,7 +59,7 @@ is BUCKOneTabDescriptor
 
     ComponentFrame = TUIFramePropertyRTTI
     (
-        MagnifiableWidthHeight = (<HorizontalFitStyle> == ~/FitStyle/UserDefined ? [TabMagnifiableWidth, TabMagnifiableHeight] : [TabMagnifiableMarginIfFitContent * 2.0, TabMagnifiableHeight])
+        MagnifiableWidthHeight = (<HorizontalFitStyle> == ~/FitStyle/UserDefined ? [TabMagnifiableWidth, TabMagnifiableHeight] : [0.0, TabMagnifiableHeight])
     )
 
     FitStyle = (<HorizontalFitStyle> == ~/FitStyle/UserDefined ? ~/ContainerFitStyle/None : ~/ContainerFitStyle/FitToContentHorizontally)
@@ -147,7 +144,6 @@ template BUCKSpecific_Fulda_WithTabsComponentDescriptor
 
     RedefinedTabsContainer : TBUCKContainerDescriptor = nil,
 
-    CanReselectTabs : bool = false,
     ShowTabsFirst : bool = false,
 ]
 is BUCKWithTabsDescriptor
@@ -169,8 +165,6 @@ is BUCKWithTabsDescriptor
     TabsListBackgroundColorToken = ""
     RedefinedTabsContainer = <RedefinedTabsContainer>
     Axis = ~/ListAxis/Horizontal
-
-    CanReselectTabs = <CanReselectTabs>
 
     IsFocusable = true
     ShowTabsFirst = <ShowTabsFirst>

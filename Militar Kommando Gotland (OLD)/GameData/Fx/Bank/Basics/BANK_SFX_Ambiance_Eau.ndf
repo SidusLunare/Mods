@@ -1,0 +1,38 @@
+export SFX_Ambiance_Eau is SimultaneousActionDeclaration
+(
+    Params = []
+    Actions =
+    [
+        Ambiance_Eau_OneShot,
+    ]
+)
+
+export Ambiance_Eau_OneShot is Template_RepeatSimultaneous
+(
+    Actions =
+    [
+        TActionDescriptorPlaySoundList
+        (
+            SoundDescriptor = $/GFX/Sound/Sound_EauAmbiance
+            Looped = true
+        ),
+
+        Template_RepeatSequential
+        (
+           TimeServer = Zoom_1_2_3_4_RenderTime
+           Actions =
+           [
+              WaitInSec
+              (
+                  Duration = RandomRange [5,10]
+              ),
+              TActionDescriptorPlaySoundList
+              (
+                  SoundDescriptor = $/GFX/Sound/Sound_EauAmbiance_Evenements
+              ),
+
+           ]
+           Forever = true
+        )
+    ]
+)

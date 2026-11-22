@@ -1,5 +1,4 @@
-// A maintenir synchro avec Enumerations/IADifficulty.ndf
-// A maintenir synchro avec Data/Python/Eugen/leveldesign_specific/enum_ia_difficulty.py
+// Sync with Enumerations/IADifficulty.ndf
 
 IADifficultyNdfEnum is EIADifficulty
 (
@@ -17,14 +16,14 @@ IADifficultyNdfEnum is EIADifficulty
 
 IAListConfig is TIADifficultyListConfiguration
 (
-    HumanIADifficulty = IADifficulty/HumanDifficulty
-    IAAnyDifficulty = IADifficulty/AnyDifficulty
-    DefaultIADifficulty = IADifficulty/Normal
-    ScriptedDifficulty = IADifficulty/Scripted
+    HumanIADifficulty = EIADifficulty/HumanDifficulty
+    IAAnyDifficulty = EIADifficulty/AnyDifficulty
+    DefaultIADifficulty = EIADifficulty/Normal
+    ScriptedDifficulty = EIADifficulty/Scripted
     IADifficultyList = MAP
     [
         (
-            IADifficulty/TresFacile,
+            EIADifficulty/TresFacile,
             TIADifficultyConfiguration
             (
                 IAName = "AI_VEASY"
@@ -33,7 +32,7 @@ IAListConfig is TIADifficultyListConfiguration
             )
         ),
         (
-            IADifficulty/Facile,
+            EIADifficulty/Facile,
             TIADifficultyConfiguration
             (
                 IAName = "AI_EASY"
@@ -42,7 +41,7 @@ IAListConfig is TIADifficultyListConfiguration
             )
         ),
         (
-            IADifficulty/Normal,
+            EIADifficulty/Normal,
             TIADifficultyConfiguration
             (
                 IAName = "AI_MEDIUM"
@@ -51,7 +50,7 @@ IAListConfig is TIADifficultyListConfiguration
             )
         ),
         (
-            IADifficulty/Difficile,
+            EIADifficulty/Difficile,
             TIADifficultyConfiguration
             (
                 IAName = "AI_HARD"
@@ -60,7 +59,7 @@ IAListConfig is TIADifficultyListConfiguration
             )
         ),
         (
-            IADifficulty/TresDifficile,
+            EIADifficulty/TresDifficile,
             TIADifficultyConfiguration
             (
                 IAName = "AI_VHARD"
@@ -69,7 +68,7 @@ IAListConfig is TIADifficultyListConfiguration
             )
         ),
         (
-            IADifficulty/PlusDifficile,
+            EIADifficulty/PlusDifficile,
             TIADifficultyConfiguration
             (
                 IAName = "AI_HARDEST"

@@ -106,8 +106,8 @@ export Small_Canon_Flash is SimultaneousActionDeclaration
                     RenderInfo = ParticleRenderInfo
                     (
                         EmissiveParticle = true
-                        ZTest = True
-                        SortTriangles = True
+                        ZTest = true
+                        SortTriangles = true
                         ZWrite = false
                         TextureName = 'GameData:/Assets/2D/Fx/anim_muzzle_fire_001.png'
                     )
@@ -158,10 +158,10 @@ export Small_Canon_Flash is SimultaneousActionDeclaration
                 (
                     RenderInfo = ParticleRenderInfo
                     (
-                        ZTest = True
+                        ZTest = true
                         ZWrite = false
-                        SortTriangles = True
-                        Use3DRotation = False
+                        SortTriangles = true
+                        Use3DRotation = false
                         TextureName = 'GameData:/Assets/2D/Fx/flare_jaune_00.png'
                         Calque = 'Particles'
                         EmissiveParticle = true

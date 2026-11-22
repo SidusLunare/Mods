@@ -2,11 +2,11 @@
 
 template Template_RepeatSoundAtWithTimer
 [
-    SoundId                     : integer[>=0] = 0,
+    SoundId                     : int[>=0] = 0,
 
     Delay                       : TEvaluable[>=0, GroupBy = "Timer"] = TConstantFloat(Value = 5.0),
 
-    FadeIn                      : boolean[GroupBy = "FadeIn"] = false,
+    FadeIn                      : bool[GroupBy = "FadeIn"] = false,
     FadeFrom                    : float[GroupBy = "FadeIn"] = 0,
     FadeVelocity                : float[GroupBy = "FadeIn"] = 0.1,
 

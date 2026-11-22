@@ -1,0 +1,14 @@
+export Modele_BMP_Vasilek_HON is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/TCH/APC/PRAM_S/PRAM_S.fbx"
+)
+
+export Modele_BMP_Vasilek_HON_MID is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/TCH/APC/PRAM_S_MID/PRAM_S_MID.fbx"
+)
+
+export Modele_BMP_Vasilek_HON_LOW is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/TCH/APC/PRAM_S_LOW/PRAM_S_LOW.fbx"
+)

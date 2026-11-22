@@ -1,0 +1,6 @@
+export ModelFile_HMGteam_MG3_CYP is "GameData:/Assets/3D/Ammo/Armes/HMG_trepied/MG3.fbx"
+export ModelFile_HMGteam_MG3_CYP_MID is "GameData:/Assets/3D/Ammo/Armes/HMG_trepied/MG3.fbx"
+export ModelFile_HMGteam_MG3_CYP_LOW is "GameData:/Assets/3D/Ammo/Armes/HMG_trepied/MG3.fbx"
+export Modele_HMGteam_MG3_CYP is TResourceMesh( Mesh=ModelFile_HMGteam_MG3_CYP)
+export Modele_HMGteam_MG3_CYP_MID is TResourceMesh( Mesh=ModelFile_HMGteam_MG3_CYP_MID)
+export Modele_HMGteam_MG3_CYP_LOW is TResourceMesh( Mesh=ModelFile_HMGteam_MG3_CYP_LOW)

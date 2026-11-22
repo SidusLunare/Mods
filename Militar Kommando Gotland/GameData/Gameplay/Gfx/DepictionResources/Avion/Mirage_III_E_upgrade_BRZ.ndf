@@ -1,0 +1,19 @@
+export Modele_Mirage_III_E_upgrade_BRZ is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/BRZ/Avion/Mirage_III_E_upgrade/Mirage_III_E_upgrade.fbx"
+)
+
+export Modele_Mirage_III_E_upgrade_BRZ_MID is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/BRZ/Avion/Mirage_III_E_upgrade_MID/Mirage_III_E_upgrade_MID.fbx"
+)
+
+export Modele_Mirage_III_E_upgrade_BRZ_LOW is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/BRZ/Avion/Mirage_III_E_upgrade_LOW/Mirage_III_E_upgrade_LOW.fbx"
+)
+
+export Modele_Mirage_III_E_upgrade_BRZ_train is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/BRZ/Avion/Mirage_III_E_upgrade/Mirage_III_E_upgrade_train.fbx"
+)

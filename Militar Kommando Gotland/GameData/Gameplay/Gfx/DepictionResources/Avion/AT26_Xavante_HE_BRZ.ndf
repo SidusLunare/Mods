@@ -1,0 +1,23 @@
+export ModelFile_AT26_Xavante_HE_BRZ is 'GameData:/Assets/3D/Units/BRZ/Avion/AT26_Xavante_HE/AT26_Xavante_HE.fbx'
+export Modele_AT26_Xavante_HE_BRZ is TResourceMesh
+(
+    Mesh=ModelFile_AT26_Xavante_HE_BRZ
+)
+
+export ModelFile_AT26_Xavante_HE_BRZ_MID is 'GameData:/Assets/3D/Units/BRZ/Avion/AT26_Xavante_HE_MID/AT26_Xavante_HE_MID.fbx'
+export Modele_AT26_Xavante_HE_BRZ_MID is TResourceMesh
+(
+    Mesh=ModelFile_AT26_Xavante_HE_BRZ_MID
+)
+
+export ModelFile_AT26_Xavante_HE_BRZ_LOW is 'GameData:/Assets/3D/Units/BRZ/Avion/AT26_Xavante_HE_LOW/AT26_Xavante_HE_LOW.fbx'
+export Modele_AT26_Xavante_HE_BRZ_LOW is TResourceMesh
+(
+    Mesh=ModelFile_AT26_Xavante_HE_BRZ_LOW
+)
+
+export ModelFile_AT26_Xavante_HE_BRZ_train is 'GameData:/Assets/3D/Units/BRZ/Avion/AT26_Xavante_HE/AT26_Xavante_HE_train.fbx'
+export Modele_AT26_Xavante_HE_BRZ_train is TResourceMesh
+(
+    Mesh=ModelFile_AT26_Xavante_HE_BRZ_train
+)

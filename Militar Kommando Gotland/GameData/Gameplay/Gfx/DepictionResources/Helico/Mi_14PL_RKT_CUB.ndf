@@ -1,0 +1,14 @@
+export Modele_Mi_14PL_RKT_CUB is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/CUBA/Helico/Mi_14PL_RKT/Mi_14PL_RKT.fbx"
+)
+
+export Modele_Mi_14PL_RKT_CUB_MID is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/CUBA/Helico/Mi_14PL_RKT_MID/Mi_14PL_RKT_MID.fbx"
+)
+
+export Modele_Mi_14PL_RKT_CUB_LOW is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/CUBA/Helico/Mi_14PL_RKT_LOW/Mi_14PL_RKT_LOW.fbx"
+)

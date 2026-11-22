@@ -1,0 +1,64 @@
+HudSoundOnUnitDestroyed is TemplateSoundDescriptor
+(
+    FileName  = "GameData:/Assets/Sounds/SFX/SA/event_03.wav"
+)
+HudSoundBeaconPlaced is TemplateSoundDescriptor
+(
+    FileName  = "GameData:/Assets/Sounds/Hud/BeaconPlaced.wav"
+)
+HudSoundBeaconHelpPlaced is TemplateSoundDescriptor
+(
+    FileName  = "GameData:/Assets/Sounds/Hud/BeaconHelpPlaced.wav"
+)
+HudSoundBeaconCustomPlaced is TemplateSoundDescriptor
+(
+    FileName  = "GameData:/Assets/Sounds/Hud/BeaconCustomPlaced.wav"
+)
+HudSoundBeaconSpottedPlaced is TemplateSoundDescriptor
+(
+    FileName  = "GameData:/Assets/Sounds/Hud/BeaconSpottedPlaced.wav"
+)
+HudSoundBeaconAttkPlaced is TemplateSoundDescriptor
+(
+    FileName  = "GameData:/Assets/Sounds/Hud/BeaconAttkPlaced.wav"
+)
+HudSoundAirContact is TemplateSoundDescriptor
+(
+    FileName  = "GameData:/Assets/Sounds/Hud/AirRaid.wav"
+)
+HudSoundAlarm is TemplateSoundDescriptor
+(
+    FileName  = "GameData:/Assets/Sounds/Hud/Alarm_Lost_Sector.wav"
+)
+HudSoundGainSector is TemplateSoundDescriptor
+(
+    FileName  = "GameData:/Assets/Sounds/Hud/Gain_Sector.wav"
+)
+HudSoundEnemyGainSector is TemplateSoundDescriptor
+(
+    FileName  = "GameData:/Assets/Sounds/Hud/Gain_Enemy_Sector.wav"
+)
+HudSoundUnitContact is TemplateSoundDescriptor
+(
+    FileName  = "GameData:/Assets/Sounds/SFX/SA/event_02.wav"
+)
+HudSoundOnUnitUnderAttack is TemplateSoundDescriptor
+(
+    FileName  = "GameData:/Assets/Sounds/SFX/SA/event_01.wav"
+)
+HudSoundOnObjectiveCaptured is TemplateSoundDescriptor
+(
+    FileName  = "GameData:/Assets/Sounds/SFX/SA/Test_16b_event_04.wav"
+)
+HudSoundOnObjectiveLost is TemplateSoundDescriptor
+(
+    FileName  = "GameData:/Assets/Sounds/SFX/SA/Test_16b_event_05.wav"
+)
+HudSoundOnVictory is TemplateSoundDescriptor
+(
+    FileName  = "GameData:/Assets/Sounds/Solo/MUSIC_VICTORY.ogg"
+)
+HudSoundOnDefeat is TemplateSoundDescriptor
+(
+    FileName  = "GameData:/Assets/Sounds/Solo/MUSIC_DEFEAT.ogg"
+)

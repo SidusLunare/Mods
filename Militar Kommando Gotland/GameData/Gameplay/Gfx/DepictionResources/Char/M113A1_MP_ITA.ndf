@@ -1,0 +1,14 @@
+export Modele_M113A1_MP_ITA is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/CAN/APC/M113A1/M113A1.fbx"
+)
+
+export Modele_M113A1_MP_ITA_MID is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/CAN/APC/M113A1_MID/M113A1_MID.fbx"
+)
+
+export Modele_M113A1_MP_ITA_LOW is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/CAN/APC/M113A1_LOW/M113A1_LOW.fbx"
+)

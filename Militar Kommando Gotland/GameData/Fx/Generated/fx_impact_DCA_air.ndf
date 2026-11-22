@@ -14,6 +14,68 @@ export fx_impact_DCA_air is SimultaneousActionDeclaration
     [
         TSimultaneousAction
         (
+            Mobile = TMobileWithLocalRepereMatrixFactory
+            (
+                Position = parPosition
+            )
+            Actions =
+            [
+                TActionCall
+                (
+                    Action = $/VFX_Bank/BANK_Bomb_Distort_Simple
+                    NamedParams = MAP[
+                        ( 'parDuration', 0.4 ),
+                        ( 'parFinalSize', 8000 ),
+                        ( 'parInitialSize', 100 ),
+                        ( 'parIntensity', 500 ),
+                        ( 'parPositionRelative', float3[0,0,0] ),
+                    ]
+                ),
+                TActionCall
+                (
+                    Action = $/VFX_Bank/DarkSmoke_Simple
+                    NamedParams = MAP[
+                        ( 'parCloudsize', float3[800,800,1000] ),
+                        ( 'parColor', float3[0.145098,0.145098,0.145098] ),
+                        ( 'parCount', 5 ),
+                        ( 'parDecayLength', 0.25 ),
+                        ( 'parDecayStart', 0.8 ),
+                        ( 'parEmissive', 0.8 ),
+                        ( 'parOpacity', 0.8 ),
+                        ( 'parParticleSize', 1400 ),
+                        ( 'parRandomPosition', 0 ),
+                        ( 'parSmokeDuration', 3 ),
+                        ( 'parSpawnerDuration', 0.3 ),
+                        ( 'parSpawnerSpeed', 0 ),
+                    ]
+                ),
+                TActionCall
+                (
+                    Action = $/VFX_Bank/BANK_WasteGroundDust_Simple
+                    NamedParams = MAP[
+                        ( 'parAlphaStartDecayValue', 0.01 ),
+                        ( 'parCount', 30 ),
+                        ( 'parEndColor', float3[0,0,0] ),
+                        ( 'parEndSize', 2000 ),
+                        ( 'parFluidFriction', 1.5 ),
+                        ( 'parInitialDelay', parInitialShotDelay ),
+                        ( 'parLifetime', 5 ),
+                        ( 'parOpacity', 1 ),
+                        ( 'parRandomInitPosRadius', 0 ),
+                        ( 'parRotationFactor', 1 ),
+                        ( 'parScaleSizeFactor', 1 ),
+                        ( 'parStartColor', float3[0.1490196,0.1176471,0.09803922] ),
+                        ( 'parStartHeight', 0 ),
+                        ( 'parStartRotation', 0.25 ),
+                        ( 'parStartSize', 101 ),
+                        ( 'parStartSpeed3D', float3[2000,2000,0] ),
+                        ( 'parWindWeight', 1 ),
+                    ]
+                ),
+            ]
+        ),
+        TSimultaneousAction
+        (
             Mobile = nil
             Actions =
             [
@@ -84,68 +146,6 @@ export fx_impact_DCA_air is SimultaneousActionDeclaration
                     ]
                 ),
                 TWaitInSec( Duration = 1),
-            ]
-        ),
-        TSimultaneousAction
-        (
-            Mobile = TMobileWithLocalRepereMatrixFactory
-            (
-                Position = parPosition
-            )
-            Actions =
-            [
-                TActionCall
-                (
-                    Action = $/VFX_Bank/BANK_Bomb_Distort_Simple
-                    NamedParams = MAP[
-                        ( 'parDuration', 0.4 ),
-                        ( 'parFinalSize', 8000 ),
-                        ( 'parInitialSize', 100 ),
-                        ( 'parIntensity', 500 ),
-                        ( 'parPositionRelative', float3[0,0,0] ),
-                    ]
-                ),
-                TActionCall
-                (
-                    Action = $/VFX_Bank/DarkSmoke_Simple
-                    NamedParams = MAP[
-                        ( 'parCloudsize', float3[800,800,1000] ),
-                        ( 'parColor', float3[0.145098,0.145098,0.145098] ),
-                        ( 'parCount', 5 ),
-                        ( 'parDecayLength', 0.25 ),
-                        ( 'parDecayStart', 0.8 ),
-                        ( 'parEmissive', 0.8 ),
-                        ( 'parOpacity', 0.8 ),
-                        ( 'parParticleSize', 1400 ),
-                        ( 'parRandomPosition', 0 ),
-                        ( 'parSmokeDuration', 3 ),
-                        ( 'parSpawnerDuration', 0.3 ),
-                        ( 'parSpawnerSpeed', 0 ),
-                    ]
-                ),
-                TActionCall
-                (
-                    Action = $/VFX_Bank/BANK_WasteGroundDust_Simple
-                    NamedParams = MAP[
-                        ( 'parAlphaStartDecayValue', 0.01 ),
-                        ( 'parCount', 30 ),
-                        ( 'parEndColor', float3[0,0,0] ),
-                        ( 'parEndSize', 2000 ),
-                        ( 'parFluidFriction', 1.5 ),
-                        ( 'parInitialDelay', parInitialShotDelay ),
-                        ( 'parLifetime', 5 ),
-                        ( 'parOpacity', 1 ),
-                        ( 'parRandomInitPosRadius', 0 ),
-                        ( 'parRotationFactor', 1 ),
-                        ( 'parScaleSizeFactor', 1 ),
-                        ( 'parStartColor', float3[0.1490196,0.1176471,0.09803922] ),
-                        ( 'parStartHeight', 0 ),
-                        ( 'parStartRotation', 0.25 ),
-                        ( 'parStartSize', 101 ),
-                        ( 'parStartSpeed3D', float3[2000,2000,0] ),
-                        ( 'parWindWeight', 1 ),
-                    ]
-                ),
             ]
         ),
     ]

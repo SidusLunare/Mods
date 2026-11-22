@@ -156,10 +156,10 @@ export BANK_WasteCanonFire_WG is SimultaneousActionDeclaration
                 (
                     RenderInfo = ParticleRenderInfo
                     (
-                        ZTest = True
-                        ZWrite = False
-                        SortTriangles = True
-                        Use3DRotation = True
+                        ZTest = true
+                        ZWrite = false
+                        SortTriangles = true
+                        Use3DRotation = true
                         TextureName = 'GameData:/Assets/2D/Fx/flame_03.png'
                         EmissiveParticle = true
                     )

@@ -6,13 +6,13 @@ template Template_MobileWithLocalRepereMatrixFactory
     EulerAngles                         : TEvaluable[GroupBy = "Matrix"] = nil,
     Scale                               : TEvaluable[GroupBy = "Matrix"] = nil,
 
-    DoNotInheritCentroid                : boolean[GroupBy = "Scale and Centroid"]  = false,
-    IntroduceCentroid                   : boolean[GroupBy = "Scale and Centroid"] = true,
+    DoNotInheritCentroid                : bool[GroupBy = "Scale and Centroid"]  = false,
+    IntroduceCentroid                   : bool[GroupBy = "Scale and Centroid"] = true,
     InitialScale                        : TEvaluable[GroupBy = "Scale and Centroid"] = nil,
     MaxScale                            : TEvaluable[GroupBy = "Scale and Centroid"] = nil,
-    CentroidRelative                    : boolean[GroupBy = "Scale and Centroid"] = true,
-    UsePreviousMobileAsCenterOfScale    : boolean[GroupBy = "Scale and Centroid"] = false,
-    UseMobileScale                      : boolean[GroupBy = "Scale and Centroid"] = false,
+    CentroidRelative                    : bool[GroupBy = "Scale and Centroid"] = true,
+    UsePreviousMobileAsCenterOfScale    : bool[GroupBy = "Scale and Centroid"] = false,
+    UseMobileScale                      : bool[GroupBy = "Scale and Centroid"] = false,
 ] is TMobileWithLocalRepereMatrixFactory
 (
     Position = <Position>

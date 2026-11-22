@@ -4,7 +4,7 @@ template EvolverSpraySpawner
     MaxSpawnedParticleLifetime  : TEvaluable = nil,
     Spawner                     : TParticleSpawner[required] = nil,
     Condition                   : TEvaluable = nil,
-    Disabled                    : boolean = false,
+    Disabled                    : bool = false,
     ElapsedTimeField            : TParticleSubPart = nil,
     PreviousPositionField       : TParticleSubPart = nil
 ] is TParticleEvolver_SpraySpawner

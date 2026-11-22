@@ -14,6 +14,99 @@ export fx_impact_he_vehicule_air_gros_03 is SimultaneousActionDeclaration
     [
         TSimultaneousAction
         (
+            Mobile = TMobileWithLocalRepereMatrixFactory
+            (
+                Position = parPosition
+            )
+            Actions =
+            [
+                TActionCall
+                (
+                    Action = $/VFX_Bank/BANK_Bomb_Distort_Simple
+                    NamedParams = MAP[
+                        ( 'parDuration', 0.4 ),
+                        ( 'parFinalSize', 8000 ),
+                        ( 'parInitialSize', 100 ),
+                        ( 'parIntensity', 500 ),
+                        ( 'parPositionRelative', float3[0,0,0] ),
+                    ]
+                ),
+                TActionCall
+                (
+                    Action = $/VFX_Bank/DarkSmoke_Simple
+                    NamedParams = MAP[
+                        ( 'parCloudsize', float3[800,800,1000] ),
+                        ( 'parColor', float3[0.4666667,0.4078432,0.3137255] ),
+                        ( 'parCount', 10 ),
+                        ( 'parDecayLength', 0.45 ),
+                        ( 'parDecayStart', 0.8 ),
+                        ( 'parEmissive', 0.7 ),
+                        ( 'parOpacity', 0.8 ),
+                        ( 'parParticleSize', 1500 ),
+                        ( 'parRandomPosition', 1000 ),
+                        ( 'parSmokeDuration', 3 ),
+                        ( 'parSpawnerDuration', 0.7 ),
+                        ( 'parSpawnerSpeed', 800 ),
+                    ]
+                ),
+                TActionCall
+                (
+                    Action = $/VFX_Bank/DarkSmoke_Simple
+                    NamedParams = MAP[
+                        ( 'parCloudsize', float3[1000,1000,1000] ),
+                        ( 'parColor', float3[0.1098039,0.1098039,0.1098039] ),
+                        ( 'parCount', 15 ),
+                        ( 'parDecayLength', 0.45 ),
+                        ( 'parDecayStart', 0.8 ),
+                        ( 'parEmissive', 0.7 ),
+                        ( 'parOpacity', 0.9 ),
+                        ( 'parParticleSize', 2000 ),
+                        ( 'parRandomPosition', 1500 ),
+                        ( 'parSmokeDuration', 3.5 ),
+                        ( 'parSpawnerDuration', 0.7 ),
+                        ( 'parSpawnerSpeed', 800 ),
+                    ]
+                ),
+                TActionCall
+                (
+                    Action = $/VFX_Bank/BANK_Rubble2_Simple
+                    NamedParams = MAP[
+                        ( 'parCountDebrits', 4 ),
+                        ( 'parCountDebritsWithFire', 3 ),
+                        ( 'parCountDebritsWithSmoke', 2 ),
+                        ( 'parDebritSizeMul', 1 ),
+                        ( 'parDispersion', 250 ),
+                        ( 'parFireParticleEndSize', 450 ),
+                        ( 'parFireParticleStartSize', 75 ),
+                        ( 'parLifetime', 6 ),
+                        ( 'parMeshType', 4 ),
+                        ( 'parMinSpeedRatio', 0.75 ),
+                        ( 'parParticleOpacity', 0.7 ),
+                        ( 'parSmokeColor', float3[1,0.9921569,0.9490197] ),
+                        ( 'parSmokeColorMultiplier', 0.1 ),
+                        ( 'parSmokeDensity', 100 ),
+                        ( 'parSmokeParticleEndSize', 1000 ),
+                        ( 'parSmokeParticleStartSize', 400 ),
+                        ( 'parSpeed', float3[5000,5000,5000] ),
+                        ( 'parSpeedDispersion', 1 ),
+                    ]
+                ),
+                TActionCall
+                (
+                    Action = $/VFX_Bank/BANK_Bomb_ShockWave
+                    NamedParams = MAP[
+                        ( 'parCount', 1 ),
+                        ( 'parDuration', 0.4 ),
+                        ( 'parFinalSize', 8000 ),
+                        ( 'parInitialSize', 100 ),
+                        ( 'parZBias', 1000 ),
+                    ]
+                ),
+                TWaitInSec( Duration = 6),
+            ]
+        ),
+        TSimultaneousAction
+        (
             Mobile = nil
             Actions =
             [
@@ -133,99 +226,6 @@ export fx_impact_he_vehicule_air_gros_03 is SimultaneousActionDeclaration
                     ]
                 ),
                 TWaitInSec( Duration = 0.15),
-            ]
-        ),
-        TSimultaneousAction
-        (
-            Mobile = TMobileWithLocalRepereMatrixFactory
-            (
-                Position = parPosition
-            )
-            Actions =
-            [
-                TActionCall
-                (
-                    Action = $/VFX_Bank/BANK_Bomb_Distort_Simple
-                    NamedParams = MAP[
-                        ( 'parDuration', 0.4 ),
-                        ( 'parFinalSize', 8000 ),
-                        ( 'parInitialSize', 100 ),
-                        ( 'parIntensity', 500 ),
-                        ( 'parPositionRelative', float3[0,0,0] ),
-                    ]
-                ),
-                TActionCall
-                (
-                    Action = $/VFX_Bank/DarkSmoke_Simple
-                    NamedParams = MAP[
-                        ( 'parCloudsize', float3[800,800,1000] ),
-                        ( 'parColor', float3[0.4666667,0.4078432,0.3137255] ),
-                        ( 'parCount', 10 ),
-                        ( 'parDecayLength', 0.45 ),
-                        ( 'parDecayStart', 0.8 ),
-                        ( 'parEmissive', 0.7 ),
-                        ( 'parOpacity', 0.8 ),
-                        ( 'parParticleSize', 1500 ),
-                        ( 'parRandomPosition', 1000 ),
-                        ( 'parSmokeDuration', 3 ),
-                        ( 'parSpawnerDuration', 0.7 ),
-                        ( 'parSpawnerSpeed', 800 ),
-                    ]
-                ),
-                TActionCall
-                (
-                    Action = $/VFX_Bank/DarkSmoke_Simple
-                    NamedParams = MAP[
-                        ( 'parCloudsize', float3[1000,1000,1000] ),
-                        ( 'parColor', float3[0.1098039,0.1098039,0.1098039] ),
-                        ( 'parCount', 15 ),
-                        ( 'parDecayLength', 0.45 ),
-                        ( 'parDecayStart', 0.8 ),
-                        ( 'parEmissive', 0.7 ),
-                        ( 'parOpacity', 0.9 ),
-                        ( 'parParticleSize', 2000 ),
-                        ( 'parRandomPosition', 1500 ),
-                        ( 'parSmokeDuration', 3.5 ),
-                        ( 'parSpawnerDuration', 0.7 ),
-                        ( 'parSpawnerSpeed', 800 ),
-                    ]
-                ),
-                TActionCall
-                (
-                    Action = $/VFX_Bank/BANK_Rubble2_Simple
-                    NamedParams = MAP[
-                        ( 'parCountDebrits', 4 ),
-                        ( 'parCountDebritsWithFire', 3 ),
-                        ( 'parCountDebritsWithSmoke', 2 ),
-                        ( 'parDebritSizeMul', 1 ),
-                        ( 'parDispersion', 250 ),
-                        ( 'parFireParticleEndSize', 450 ),
-                        ( 'parFireParticleStartSize', 75 ),
-                        ( 'parLifetime', 6 ),
-                        ( 'parMeshType', 4 ),
-                        ( 'parMinSpeedRatio', 0.75 ),
-                        ( 'parParticleOpacity', 0.7 ),
-                        ( 'parSmokeColor', float3[1,0.9921569,0.9490197] ),
-                        ( 'parSmokeColorMultiplier', 0.1 ),
-                        ( 'parSmokeDensity', 100 ),
-                        ( 'parSmokeParticleEndSize', 1000 ),
-                        ( 'parSmokeParticleStartSize', 400 ),
-                        ( 'parSpeed', float3[5000,5000,5000] ),
-                        ( 'parSpeedDispersion', 1 ),
-                    ]
-                ),
-                TActionCall
-                (
-                    Action = $/VFX_Bank/BANK_Bomb_ShockWave
-                    NamedParams = MAP[
-                        ( 'parCount', 1 ),
-                        ( 'parDuration', 0.4 ),
-                        ( 'parFinalSize', 8000 ),
-                        ( 'parInitialSize', 100 ),
-                        ( 'parZBias', 1000 ),
-                    ]
-                ),
-                TWaitInSec( Duration = 6),
             ]
         ),
     ]

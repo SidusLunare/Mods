@@ -71,7 +71,7 @@ export FX_BANK_Rocket_Fire is SimultaneousActionDeclaration
                                         SortTriangles = true
                                         TextureName = 'GameData:/Assets/2D/Fx/reactor.png'
                                         Calque = 'Particles'
-                                        EmissiveParticle = True
+                                        EmissiveParticle = true
                                     )
                                     Evolvers = ParticleStandardEvolverList
                                     (

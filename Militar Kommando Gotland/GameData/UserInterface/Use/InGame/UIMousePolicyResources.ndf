@@ -100,11 +100,11 @@ MouseWidgetSelector_Attack is TUIMouseWidgetSelector_Attack
 
     ArmorLocationTokens = MAP
     [
-        // (EArmorLocation/Default , ""),
-        (EArmorLocation/Front   , "TC_LOCF"),
-        (EArmorLocation/Sides   , "TC_LOCS"),
-        (EArmorLocation/Rear    , "TC_LOCR"),
-        (EArmorLocation/Top     , "TC_LOCT"),
+        // (TArmorLocation/Default , ""),
+        (TArmorLocation/Front   , "TC_LOCF"),
+        (TArmorLocation/Sides   , "TC_LOCS"),
+        (TArmorLocation/Rear    , "TC_LOCR"),
+        (TArmorLocation/Top     , "TC_LOCT"),
     ]
 
     RemaingReloadTimeToken = "TC_RLD"
@@ -114,8 +114,6 @@ MouseWidgetSelector_Attack is TUIMouseWidgetSelector_Attack
 
     EfficientShotRuleToken = "ER_ESEF"
     NotEfficientShotRuleToken = "ER_ESMA"
-
-    BlinkingInterval = 1.0
 
     TextColorMap = MAP
     [
@@ -484,7 +482,7 @@ is TUIMouseWidgetResource
 template Template_HardwareMouseWidgetResourcePlayerMission
 [
     HardwareMouseCursorAnimation = ~/MouseCursorAnimationDefault,
-    PlayerMissionType = ~/EPlayerMissionRequestType_Unknown
+    PlayerMissionType = ~/PlayerMissionRequest/Unknown
 ]
 is TUIMouseWidgetResource
 (
@@ -815,13 +813,13 @@ MouseWidget_InvalidDefense is Template_HardwareMouseWidgetResource
 MouseWidget_OrderAIAttack is Template_HardwareMouseWidgetResourcePlayerMission
 (
     HardwareMouseCursorAnimation = ~/Mousecurseur_ai_attack
-    PlayerMissionType = ~/EPlayerMissionRequestType_Seize
+    PlayerMissionType = ~/PlayerMissionRequest/Seize
 )
 
 MouseWidget_OrderAIArtilleryFocus is Template_HardwareMouseWidgetResourcePlayerMission
 (
     HardwareMouseCursorAnimation = ~/Mousecurseur_ai_artillery_focus
-    PlayerMissionType = ~/EPlayerMissionRequestType_ManageArtillery_Focus
+    PlayerMissionType = ~/PlayerMissionRequest/ManageArtillery_Focus
 )
 
 //--------------------------------------------------------

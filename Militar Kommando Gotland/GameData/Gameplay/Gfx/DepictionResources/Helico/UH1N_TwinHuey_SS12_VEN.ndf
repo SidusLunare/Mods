@@ -1,0 +1,14 @@
+export Modele_UH1N_TwinHuey_SS12_VEN is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/VEN/Helico/UH1N_TwinHuey_SS12/UH1N_TwinHuey_SS12.fbx"
+)
+
+export Modele_UH1N_TwinHuey_SS12_VEN_MID is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/VEN/Helico/UH1N_TwinHuey_SS12_MID/UH1N_TwinHuey_SS12_MID.fbx"
+)
+
+export Modele_UH1N_TwinHuey_SS12_VEN_LOW is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/VEN/Helico/UH1N_TwinHuey_SS12_LOW/UH1N_TwinHuey_SS12_LOW.fbx"
+)

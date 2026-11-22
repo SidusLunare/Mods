@@ -160,6 +160,18 @@ export fx_impact_eau_HE_gros is SimultaneousActionDeclaration
             [
                 TActionCall
                 (
+                    Action = $/VFX_Bank/BANK_Dynamic_Flash_Simple
+                    NamedParams = MAP[
+                        ( 'parColorEnd', float3[0.003921569,0.003921569,0] ),
+                        ( 'parColorStart', float3[0.7019608,0.7019608,0.7019608] ),
+                        ( 'parDuration', 0.5 ),
+                        ( 'parOpacity', 0.8 ),
+                        ( 'parSizeLBU', 46.51163 ),
+                        ( 'Position', parPosition ),
+                    ]
+                ),
+                TActionCall
+                (
                     Action = $/VFX_Bank/BANK_Dynamic_Flash_Only_Two_Simple
                     NamedParams = MAP[
                         ( 'parColorEnd', float3[0.003921569,0.003921569,0] ),
@@ -169,18 +181,6 @@ export fx_impact_eau_HE_gros is SimultaneousActionDeclaration
                         ( 'parOpacity', 0.8 ),
                         ( 'parSize', 15000 ),
                         ( 'parSpeed', float3[0,0,0] ),
-                        ( 'Position', parPosition ),
-                    ]
-                ),
-                TActionCall
-                (
-                    Action = $/VFX_Bank/BANK_Dynamic_Flash_Simple
-                    NamedParams = MAP[
-                        ( 'parColorEnd', float3[0.003921569,0.003921569,0] ),
-                        ( 'parColorStart', float3[0.7019608,0.7019608,0.7019608] ),
-                        ( 'parDuration', 0.5 ),
-                        ( 'parOpacity', 0.8 ),
-                        ( 'parSizeLBU', 46.51163 ),
                         ( 'Position', parPosition ),
                     ]
                 ),

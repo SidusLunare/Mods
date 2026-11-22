@@ -171,27 +171,6 @@ export fx_impact_eau_HE_grand is SimultaneousActionDeclaration
                 ),
                 TActionCall
                 (
-                    Action = $/VFX_Bank/BANK_Bomb_NewSparks_Omni_Simple
-                    NamedParams = MAP[
-                        ( 'parColor', float3[0.9764706,0.9764706,0.9764706] ),
-                        ( 'parColorMultiplier', 6.400001 ),
-                        ( 'parCount', 150 ),
-                        ( 'parDir', parDirection ),
-                        ( 'parFluidFriction', 0 ),
-                        ( 'parGravity', 1000 ),
-                        ( 'parLifetime', 1 ),
-                        ( 'parNarrowness', 4 ),
-                        ( 'parPositionRadius', 310 ),
-                        ( 'parSize', 8 ),
-                        ( 'parSpeedMax', 1500 ),
-                        ( 'parSpeedMin', 500 ),
-                        ( 'parStretch', 0.5 ),
-                        ( 'parWindFactor', 0 ),
-                        ( 'parPositionRelative', float3[-29,-27,0] + parPosition ),
-                    ]
-                ),
-                TActionCall
-                (
                     Action = $/VFX_Bank/BANK_Bomb_NewSparks_Simple
                     NamedParams = MAP[
                         ( 'parColor', float3[1,0.2509804,0] ),
@@ -209,6 +188,27 @@ export fx_impact_eau_HE_grand is SimultaneousActionDeclaration
                         ( 'parStretch', 1.5 ),
                         ( 'parWindFactor', 1 ),
                         ( 'parPositionRelative', parPosition ),
+                    ]
+                ),
+                TActionCall
+                (
+                    Action = $/VFX_Bank/BANK_Bomb_NewSparks_Omni_Simple
+                    NamedParams = MAP[
+                        ( 'parColor', float3[0.9764706,0.9764706,0.9764706] ),
+                        ( 'parColorMultiplier', 6.400001 ),
+                        ( 'parCount', 150 ),
+                        ( 'parDir', parDirection ),
+                        ( 'parFluidFriction', 0 ),
+                        ( 'parGravity', 1000 ),
+                        ( 'parLifetime', 1 ),
+                        ( 'parNarrowness', 4 ),
+                        ( 'parPositionRadius', 310 ),
+                        ( 'parSize', 8 ),
+                        ( 'parSpeedMax', 1500 ),
+                        ( 'parSpeedMin', 500 ),
+                        ( 'parStretch', 0.5 ),
+                        ( 'parWindFactor', 0 ),
+                        ( 'parPositionRelative', float3[-29,-27,0] + parPosition ),
                     ]
                 ),
                 TWaitInSec( Duration = 1.4),

@@ -1,6 +1,6 @@
 template Template_ParticleRendererPlane
 [
-    StickOnGround : boolean = false,
+    StickOnGround : bool = false,
 ] is TParticleRenderer_Plane
 (
     StickOnGround = <StickOnGround>

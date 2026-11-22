@@ -1,7 +1,7 @@
 template Template_List
 [
     Evolvers    : LIST<TParticleEvolverDescriptor>[required] = [],
-    Disabled    : boolean = false
+    Disabled    : bool = false
 ] is TParticleEvolver_List
 (
     Evolvers = <Evolvers>

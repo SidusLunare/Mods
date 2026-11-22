@@ -66,6 +66,21 @@ Depiction_pion_CAN_439TFS is StrategicAirplanePawnDepictionDesc
     MeshDescriptorPawn = $/GFX/DepictionResources/Modele_F18_Hornet_CRV7_CAN
     MeshSocle = $/GFX/DepictionResources/MeshModele_Socle_CAN
 )
+Depiction_pion_CUB_21RACB is StrategicAirplanePawnDepictionDesc
+(
+    MeshDescriptorPawn = $/GFX/DepictionResources/Modele_MiG_21bis_HE_CUB
+    MeshSocle = $/GFX/DepictionResources/MeshModele_Socle_CUB
+)
+Depiction_pion_CUB_22RACB is StrategicAirplanePawnDepictionDesc
+(
+    MeshDescriptorPawn = $/GFX/DepictionResources/Modele_MiG_21bis_HE_CUB
+    MeshSocle = $/GFX/DepictionResources/MeshModele_Socle_CUB
+)
+Depiction_pion_CUB_RAC_Prov is StrategicAirplanePawnDepictionDesc
+(
+    MeshDescriptorPawn = $/GFX/DepictionResources/Modele_MiG_29_AA_CUB
+    MeshSocle = $/GFX/DepictionResources/MeshModele_Socle_CUB
+)
 Depiction_pion_FR_Alsace is StrategicAirplanePawnDepictionDesc
 (
     MeshDescriptorPawn = $/GFX/DepictionResources/Modele_Mirage_2000_C_FR
@@ -416,6 +431,12 @@ Depiction_pion_US_10TFS is StrategicAirplanePawnDepictionDesc
     MeshDescriptorPawn = $/GFX/DepictionResources/Modele_F16E_AA_US
     MeshSocle = $/GFX/DepictionResources/MeshModele_Socle_US
 )
+Depiction_pion_US_1SOW is StrategicAirplanePawnDepictionDesc
+(
+    MeshDescriptorPawn = $/GFX/DepictionResources/Modele_AC_130H_Gunship_US
+    MeshSocle = $/GFX/DepictionResources/MeshModele_Socle_US
+    Scale = 4
+)
 Depiction_pion_US_22TFS is StrategicAirplanePawnDepictionDesc
 (
     MeshDescriptorPawn = $/GFX/DepictionResources/Modele_F15C_Eagle_AA_US
@@ -439,6 +460,11 @@ Depiction_pion_US_32TFS is StrategicAirplanePawnDepictionDesc
 Depiction_pion_US_4450TFS is StrategicAirplanePawnDepictionDesc
 (
     MeshDescriptorPawn = $/GFX/DepictionResources/Modele_F117_Nighthawk_US
+    MeshSocle = $/GFX/DepictionResources/MeshModele_Socle_US
+)
+Depiction_pion_US_46TFS is StrategicAirplanePawnDepictionDesc
+(
+    MeshDescriptorPawn = $/GFX/DepictionResources/Modele_A10_Thunderbolt_II_ATGM_US
     MeshSocle = $/GFX/DepictionResources/MeshModele_Socle_US
 )
 Depiction_pion_US_480TFS is StrategicAirplanePawnDepictionDesc
@@ -551,6 +577,31 @@ Depiction_pion_US_92TFS is StrategicAirplanePawnDepictionDesc
     MeshDescriptorPawn = $/GFX/DepictionResources/Modele_A10_Thunderbolt_II_ATGM_US
     MeshSocle = $/GFX/DepictionResources/MeshModele_Socle_US
 )
+Depiction_pion_US_AFRES is StrategicAirplanePawnDepictionDesc
+(
+    MeshDescriptorPawn = $/GFX/DepictionResources/Modele_F16E_HE_US
+    MeshSocle = $/GFX/DepictionResources/MeshModele_Socle_US
+)
+Depiction_pion_US_MAG_41_46 is StrategicAirplanePawnDepictionDesc
+(
+    MeshDescriptorPawn = $/GFX/DepictionResources/Modele_F18_Hornet_AA2_US
+    MeshSocle = $/GFX/DepictionResources/MeshModele_Socle_US
+)
+Depiction_pion_US_MAG_42 is StrategicAirplanePawnDepictionDesc
+(
+    MeshDescriptorPawn = $/GFX/DepictionResources/Modele_A4M_Skyhawk_US
+    MeshSocle = $/GFX/DepictionResources/MeshModele_Socle_US
+)
+Depiction_pion_US_MAG_49 is StrategicAirplanePawnDepictionDesc
+(
+    MeshDescriptorPawn = $/GFX/DepictionResources/Modele_A4M_Skyhawk_US
+    MeshSocle = $/GFX/DepictionResources/MeshModele_Socle_US
+)
+Depiction_pion_US_USNR is StrategicAirplanePawnDepictionDesc
+(
+    MeshDescriptorPawn = $/GFX/DepictionResources/Modele_A7E_Corsair_II_AT_US
+    MeshSocle = $/GFX/DepictionResources/MeshModele_Socle_US
+)
 export Gfx_pion_BEL_11Sq is TTimelyDepictionReceiverFactory( DepictionDescriptor = Depiction_pion_BEL_11Sq)
 export Gfx_pion_BEL_1Sq is TTimelyDepictionReceiverFactory( DepictionDescriptor = Depiction_pion_BEL_1Sq)
 export Gfx_pion_BEL_23Sq is TTimelyDepictionReceiverFactory( DepictionDescriptor = Depiction_pion_BEL_23Sq)
@@ -564,6 +615,9 @@ export Gfx_pion_BEL_8Sq is TTimelyDepictionReceiverFactory( DepictionDescriptor 
 export Gfx_pion_CAN_409TFS is TTimelyDepictionReceiverFactory( DepictionDescriptor = Depiction_pion_CAN_409TFS)
 export Gfx_pion_CAN_421TFS is TTimelyDepictionReceiverFactory( DepictionDescriptor = Depiction_pion_CAN_421TFS)
 export Gfx_pion_CAN_439TFS is TTimelyDepictionReceiverFactory( DepictionDescriptor = Depiction_pion_CAN_439TFS)
+export Gfx_pion_CUB_21RACB is TTimelyDepictionReceiverFactory( DepictionDescriptor = Depiction_pion_CUB_21RACB)
+export Gfx_pion_CUB_22RACB is TTimelyDepictionReceiverFactory( DepictionDescriptor = Depiction_pion_CUB_22RACB)
+export Gfx_pion_CUB_RAC_Prov is TTimelyDepictionReceiverFactory( DepictionDescriptor = Depiction_pion_CUB_RAC_Prov)
 export Gfx_pion_FR_Alsace is TTimelyDepictionReceiverFactory( DepictionDescriptor = Depiction_pion_FR_Alsace)
 export Gfx_pion_FR_Ardennes is TTimelyDepictionReceiverFactory( DepictionDescriptor = Depiction_pion_FR_Ardennes)
 export Gfx_pion_FR_Champagne is TTimelyDepictionReceiverFactory( DepictionDescriptor = Depiction_pion_FR_Champagne)
@@ -634,11 +688,13 @@ export Gfx_pion_UK_2_15Sq is TTimelyDepictionReceiverFactory( DepictionDescripto
 export Gfx_pion_UK_3_4Sq is TTimelyDepictionReceiverFactory( DepictionDescriptor = Depiction_pion_UK_3_4Sq)
 export Gfx_pion_UK_9_14Sq is TTimelyDepictionReceiverFactory( DepictionDescriptor = Depiction_pion_UK_9_14Sq)
 export Gfx_pion_US_10TFS is TTimelyDepictionReceiverFactory( DepictionDescriptor = Depiction_pion_US_10TFS)
+export Gfx_pion_US_1SOW is TTimelyDepictionReceiverFactory( DepictionDescriptor = Depiction_pion_US_1SOW)
 export Gfx_pion_US_22TFS is TTimelyDepictionReceiverFactory( DepictionDescriptor = Depiction_pion_US_22TFS)
 export Gfx_pion_US_23TFS is TTimelyDepictionReceiverFactory( DepictionDescriptor = Depiction_pion_US_23TFS)
 export Gfx_pion_US_313TFS is TTimelyDepictionReceiverFactory( DepictionDescriptor = Depiction_pion_US_313TFS)
 export Gfx_pion_US_32TFS is TTimelyDepictionReceiverFactory( DepictionDescriptor = Depiction_pion_US_32TFS)
 export Gfx_pion_US_4450TFS is TTimelyDepictionReceiverFactory( DepictionDescriptor = Depiction_pion_US_4450TFS)
+export Gfx_pion_US_46TFS is TTimelyDepictionReceiverFactory( DepictionDescriptor = Depiction_pion_US_46TFS)
 export Gfx_pion_US_480TFS is TTimelyDepictionReceiverFactory( DepictionDescriptor = Depiction_pion_US_480TFS)
 export Gfx_pion_US_492TFS is TTimelyDepictionReceiverFactory( DepictionDescriptor = Depiction_pion_US_492TFS)
 export Gfx_pion_US_493TFS is TTimelyDepictionReceiverFactory( DepictionDescriptor = Depiction_pion_US_493TFS)
@@ -661,11 +717,16 @@ export Gfx_pion_US_81TFS is TTimelyDepictionReceiverFactory( DepictionDescriptor
 export Gfx_pion_US_81TFW is TTimelyDepictionReceiverFactory( DepictionDescriptor = Depiction_pion_US_81TFW)
 export Gfx_pion_US_91TFS is TTimelyDepictionReceiverFactory( DepictionDescriptor = Depiction_pion_US_91TFS)
 export Gfx_pion_US_92TFS is TTimelyDepictionReceiverFactory( DepictionDescriptor = Depiction_pion_US_92TFS)
+export Gfx_pion_US_AFRES is TTimelyDepictionReceiverFactory( DepictionDescriptor = Depiction_pion_US_AFRES)
+export Gfx_pion_US_MAG_41_46 is TTimelyDepictionReceiverFactory( DepictionDescriptor = Depiction_pion_US_MAG_41_46)
+export Gfx_pion_US_MAG_42 is TTimelyDepictionReceiverFactory( DepictionDescriptor = Depiction_pion_US_MAG_42)
+export Gfx_pion_US_MAG_49 is TTimelyDepictionReceiverFactory( DepictionDescriptor = Depiction_pion_US_MAG_49)
+export Gfx_pion_US_USNR is TTimelyDepictionReceiverFactory( DepictionDescriptor = Depiction_pion_US_USNR)
 
-unnamed TMimeticGhostRegistration
+unnamed TGhostMimeticRegistration
 (
     GfxProperties = $/DepictionCore/GfxProperties
-    MimeticGhost = MAP
+    GhostMimetics = MAP
     [
         ( 'pion_BEL_11Sq', Depiction_pion_BEL_11Sq ),
         ( 'pion_BEL_1Sq', Depiction_pion_BEL_1Sq ),
@@ -680,6 +741,9 @@ unnamed TMimeticGhostRegistration
         ( 'pion_CAN_409TFS', Depiction_pion_CAN_409TFS ),
         ( 'pion_CAN_421TFS', Depiction_pion_CAN_421TFS ),
         ( 'pion_CAN_439TFS', Depiction_pion_CAN_439TFS ),
+        ( 'pion_CUB_21RACB', Depiction_pion_CUB_21RACB ),
+        ( 'pion_CUB_22RACB', Depiction_pion_CUB_22RACB ),
+        ( 'pion_CUB_RAC_Prov', Depiction_pion_CUB_RAC_Prov ),
         ( 'pion_FR_Alsace', Depiction_pion_FR_Alsace ),
         ( 'pion_FR_Ardennes', Depiction_pion_FR_Ardennes ),
         ( 'pion_FR_Champagne', Depiction_pion_FR_Champagne ),
@@ -750,11 +814,13 @@ unnamed TMimeticGhostRegistration
         ( 'pion_UK_3_4Sq', Depiction_pion_UK_3_4Sq ),
         ( 'pion_UK_9_14Sq', Depiction_pion_UK_9_14Sq ),
         ( 'pion_US_10TFS', Depiction_pion_US_10TFS ),
+        ( 'pion_US_1SOW', Depiction_pion_US_1SOW ),
         ( 'pion_US_22TFS', Depiction_pion_US_22TFS ),
         ( 'pion_US_23TFS', Depiction_pion_US_23TFS ),
         ( 'pion_US_313TFS', Depiction_pion_US_313TFS ),
         ( 'pion_US_32TFS', Depiction_pion_US_32TFS ),
         ( 'pion_US_4450TFS', Depiction_pion_US_4450TFS ),
+        ( 'pion_US_46TFS', Depiction_pion_US_46TFS ),
         ( 'pion_US_480TFS', Depiction_pion_US_480TFS ),
         ( 'pion_US_492TFS', Depiction_pion_US_492TFS ),
         ( 'pion_US_493TFS', Depiction_pion_US_493TFS ),
@@ -777,6 +843,11 @@ unnamed TMimeticGhostRegistration
         ( 'pion_US_81TFW', Depiction_pion_US_81TFW ),
         ( 'pion_US_91TFS', Depiction_pion_US_91TFS ),
         ( 'pion_US_92TFS', Depiction_pion_US_92TFS ),
+        ( 'pion_US_AFRES', Depiction_pion_US_AFRES ),
+        ( 'pion_US_MAG_41_46', Depiction_pion_US_MAG_41_46 ),
+        ( 'pion_US_MAG_42', Depiction_pion_US_MAG_42 ),
+        ( 'pion_US_MAG_49', Depiction_pion_US_MAG_49 ),
+        ( 'pion_US_USNR', Depiction_pion_US_USNR ),
     ]
 )
 

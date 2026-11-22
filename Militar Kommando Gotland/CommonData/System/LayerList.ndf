@@ -34,7 +34,5 @@ InterfaceLayers is [
 ]
 
 InterfaceArrayLayersForDebug is [
-        $/M3D/Scene/Scene3D_AfterPostProcess/Calque_UIDebug3D_Array,
         $/M3D/Scene/Scene_2D_AlwaysOnTopInterface/LayerArray_UIDebug,
-        $/M3D/Scene/Scene_2D_AlwaysOnTopInterface/CalqueArray_2DInterface_debug,
 ]

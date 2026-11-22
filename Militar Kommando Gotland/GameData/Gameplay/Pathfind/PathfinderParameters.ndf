@@ -1,7 +1,7 @@
 
 export FlyingPathFinderParameters is TIAPathfinderParameters
 (
-    CanUseRoads = False
+    CanUseRoads = false
     ObstacleMasks = ~/ETerrainType/None
 
     SmartMoveCoeffByTerrain = MAP
@@ -11,7 +11,7 @@ export FlyingPathFinderParameters is TIAPathfinderParameters
 
 export AmphibiousPathFinderParameters is TIAPathfinderParameters
 (
-    CanUseRoads = True
+    CanUseRoads = true
     EnteringRoadCost = 0.5
     LeavingRoadCost = 2.5
 
@@ -30,7 +30,7 @@ export AmphibiousPathFinderParameters is TIAPathfinderParameters
 
 export InfantryPathFinderParameters is TIAPathfinderParameters
 (
-    CanUseRoads = False
+    CanUseRoads = false
     EnteringRoadCost = 0.0
     LeavingRoadCost = 0.0
 
@@ -50,7 +50,7 @@ export InfantryPathFinderParameters is TIAPathfinderParameters
 
 export VehiclesPathFinderParameters is TIAPathfinderParameters
 (
-    CanUseRoads = True
+    CanUseRoads = true
     EnteringRoadCost = 1.0
     LeavingRoadCost = 2.5
 

@@ -1,0 +1,14 @@
+export Modele_Leonidas_2_CMD_CYP is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/FR/APC/AMX_10PC/AMX_10PC.fbx"
+)
+
+export Modele_Leonidas_2_CMD_CYP_MID is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/FR/APC/AMX_10PC_MID/AMX_10PC_MID.fbx"
+)
+
+export Modele_Leonidas_2_CMD_CYP_LOW is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/FR/APC/AMX_10PC_LOW/AMX_10PC_LOW.fbx"
+)

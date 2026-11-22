@@ -1,0 +1,288 @@
+
+export BANK_SmallWater_Projection_Test is Template_ActionCall
+(
+    Action = ~/BANK_SmallWater_Projection
+    NamedParameters = MAP[
+        ( 'BANK_Count', 10 ),
+        ( 'BANK_Position', float3[0.00, 0.00, 0.00] ),
+        ( 'BANK_Lifetime', 2 ),
+        ( 'BANK_Size', 30 ),
+        ( 'BANK_Grow_Factor', 10 ),
+        ( 'BANK_Speed', MinusOneToOneRandomHemisphereVolume * float3[0.1, 0.1, 1.00] * 2000 + float3[0.00, 0.00, 800.00] ),
+        ( 'BANK_Color', float3[1.00, 1.0, 1.0]),
+        ( 'BANK_Gravity', -3000 ),
+        ( 'BANK_Fluidfriction', 0 ),
+        ( 'BANK_Particule_Start_Position', float3[0.00, 0.00, 0.00] )
+    ]
+
+)
+
+export BANK_SmallWater_Projection_Simple is ActionCallWithParameters
+(
+    Action = BANK_SmallWater_Projection
+    Params =
+    [
+        private parCount                    is Template_Param_Int (),
+        private parLifetime                 is Template_Param_Float (),
+        private parSize                     is Template_Param_Float (),
+        private parGrowFactor               is Template_Param_Float (),
+        private parSpeed                    is Template_Param_Float (),
+        private parColor                    is Template_Param_Float3 (),
+        private parGravity                  is Template_Param_Float (),
+        private parFluidFriction            is Template_Param_Float (),
+    ]
+    NamedParameters = MAP
+    [
+        ( 'BANK_Count'                      , parCount ),
+        ( 'BANK_Position'                   , float3[0.00, 0.00, 0.00] ),
+        ( 'BANK_Lifetime'                   , parLifetime ),
+        ( 'BANK_Size'                       , parSize * RandomRange[0.8, 1.25] ),
+        ( 'BANK_Grow_Factor'                , parGrowFactor * RandomRange[0.8, 1.25] ),
+        ( 'BANK_Speed'                      , MinusOneToOneRandomHemisphereVolume * float3[0.1, 0.1, 1.00] * parSpeed + float3[0.00, 0.00, 800.00] ),
+        ( 'BANK_Color'                      , LinearColor[parColor] ),
+        ( 'BANK_Gravity'                    , - parGravity ),
+        ( 'BANK_Fluidfriction'              , parFluidFriction ),
+        ( 'BANK_Particule_Start_Position'   , float3[0.00, 0.00, 0.00] ),
+    ]
+)
+
+export BANK_SmallWater_Projection is SimultaneousActionDeclaration
+(
+    Params =
+    [
+        private BANK_Count is Template_ActionAlias
+        (
+            ExpectedType = 'int'
+        ),
+        private BANK_Position is Template_ActionAlias
+        (
+            ExpectedType = 'float3'
+        ),
+        private BANK_Lifetime is Template_ActionAlias
+        (
+            ExpectedType = 'float'
+        ),
+        private BANK_Size is Template_ActionAlias
+        (
+            ExpectedType = 'float'
+            DefaultValue = 30
+        ),
+        private BANK_Grow_Factor is Template_ActionAlias
+        (
+            ExpectedType = 'any'
+        ),
+        private BANK_Speed is Template_ActionAlias
+        (
+            ExpectedType = 'float3'
+        ),
+        private BANK_Color is Template_ActionAlias
+        (
+            ExpectedType = 'float3'
+        ),
+        private BANK_Gravity is Template_ActionAlias
+        (
+            ExpectedType = 'float'
+        ),
+        private BANK_Fluidfriction is Template_ActionAlias
+        (
+            ExpectedType = 'float'
+        ),
+        private BANK_Particule_Start_Position is Template_ActionAlias
+        (
+            ExpectedType = 'float3'
+        ),
+    ]
+    Actions =
+    [
+        public Bomb_Water is ParticleBombSpawner
+        (
+            Count = BANK_Count
+            Position = BANK_Position
+            Spawner = public Spawner is ParticleSpawner
+            (
+                ParticleLifetime = RandomRange[0.8, 1.2] * BANK_Lifetime
+                Initialisers =
+                [
+                    private Splash is ParticleInitialiserList
+                    (
+                        Alpha = 1.0
+                        ColorMultiplier = 1.0
+
+                        Position = BANK_Particule_Start_Position
+                        Speed = BANK_Speed
+                        Size = 300
+                        Opacity = 1
+                        ColorModifier = BANK_Color
+                        RotationSpeed = float3[0.5,0.5,0.5]
+                        Rotation = $/VFX_Bank/RandomUnit
+                        CustomFloat_1 = BANK_Gravity
+                        CustomFloat_2 = BANK_Fluidfriction
+                        CustomFloat_3 = RandomRange[1, 5] * BANK_Size * MapToLinearSmoothStep[getZ[ParticleSpeed], 0, 1000]
+                        CustomFloat_4 = BANK_Grow_Factor
+                        CustomFloat3_1 = $/VFX_Bank/SpawnerPosition
+                    ),
+                ]
+                ParticleDescriptor = ParticleDescriptor
+                (
+                    RenderInfo = ParticleRenderInfo
+                    (
+                        OpaqueParticle = True
+                        ZTest = True
+                        SortTriangles = True
+                        Use3DRotation = false
+                        TextureName = 'GameData:/Assets/2D/Fx/anim_explo_002.png'
+                        Calque = 'Particles'
+                    )
+                    ParticleRenderer = $/VFX_Bank/StandardRenderer
+                    Evolvers = ParticleStandardEvolverListWithPhysic
+                    (
+                        FluidFriction = $/VFX_Bank/ParticleCustomFloat_2
+                        PhysicAccelerationField = GenFloat3[0, 0, $/VFX_Bank/ParticleCustomFloat_1]
+                        PhysicWindField = $/VFX_Bank/MapWind * 2
+                        ForceSlicing = False
+                        Size = lerp[$/VFX_Bank/ParticleLifeRatio, 1, $/VFX_Bank/ParticleCustomFloat_4] * $/VFX_Bank/ParticleCustomFloat_3
+                        Opacity = $/VFX_Bank/ParticleRemainingLifeRatio
+                        AdditionnalEvolvers =
+                        [
+                            Template_EvolverRotationTextureSmallIndex
+                            (
+                                EvolveFunction = Template_FunctionCall
+                                (
+                                    Params =
+                                    [
+                                        0.6 + ParticleLifeRatio * ParticleLifeRatio * 0.4
+                                    ]
+                                    FunctionToCall = ~/Bank_Explo_TextAnim
+                                )
+                            ),
+                        ]
+                        UseHardCodedRotation = true
+                    )
+                )
+            )
+        ),
+    ]
+    MaxDuration = 3
+)
+
+export Test_anim_water_splash is SimultaneousActionDeclaration
+(
+    Params =
+    [
+        private BANK_Count is Template_ActionAlias
+        (
+            ExpectedType = 'int'
+        ),
+        private BANK_Position is Template_ActionAlias
+        (
+            ExpectedType = 'float3'
+        ),
+        private BANK_Lifetime is Template_ActionAlias
+        (
+            ExpectedType = 'float'
+        ),
+        private BANK_Size is Template_ActionAlias
+        (
+            ExpectedType = 'float'
+            DefaultValue = 30
+        ),
+        private BANK_Grow_Factor is Template_ActionAlias
+        (
+            ExpectedType = 'any'
+        ),
+        private BANK_Speed is Template_ActionAlias
+        (
+            ExpectedType = 'float3'
+        ),
+        private BANK_Color is Template_ActionAlias
+        (
+            ExpectedType = 'float3'
+        ),
+        private BANK_Gravity is Template_ActionAlias
+        (
+            ExpectedType = 'float'
+        ),
+        private BANK_Fluidfriction is Template_ActionAlias
+        (
+            ExpectedType = 'float'
+        ),
+        private BANK_Particule_Start_Position is Template_ActionAlias
+        (
+            ExpectedType = 'float3'
+        ),
+    ]
+    Mobile = MobileUnCentroid()
+    Actions =
+    [
+        private Bomb_Water is ParticleBombSpawner
+        (
+            Count = 1
+            Position = BANK_Position
+            Spawner = ParticleSpawner
+            (
+                ParticleLifetime =0.5
+                Initialisers =
+                [
+                    private Splash is ParticleInitialiserList
+                    (
+                        Alpha = 1.0
+                        ColorMultiplier = 1.0
+
+                        Position = BANK_Particule_Start_Position + ParticleSize * float3[0, 0, 0.5] + 0.25 * ParticleSize * MinusOneToOneRandomDisc
+                        Speed = BANK_Speed
+                        Size = 900
+                        ColorModifier = BANK_Color
+                        CustomFloat_1 = BANK_Gravity
+                        CustomFloat_2 = BANK_Fluidfriction
+                        CustomFloat_3 = 900
+                        CustomFloat_4 = BANK_Grow_Factor
+                        CustomFloat3_1 = $/VFX_Bank/SpawnerPosition
+                        Opacity = 1
+                    ),
+                ]
+                ParticleDescriptor = ParticleDescriptor
+                (
+                    RenderInfo = ParticleRenderInfo
+                    (
+                        OpaqueParticle = True
+                        ZTest = True
+                        SortTriangles = True
+                        Use3DRotation = false
+                        Calque = 'Particles'
+                    )
+                    ParticleRenderer = $/VFX_Bank/StandardRenderer
+                    Evolvers = ParticleStandardEvolverList
+                    (
+                        AdditionnalEvolvers =
+                        [
+                            Template_TextureAnimation ( EvolveFunction =  ParticleLifeRatio),
+                        ]
+                    )
+                )
+            )
+        ),
+    ]
+    MaxDuration = 3
+)
+
+export Bank_Explo_TextAnim is Template_EvaluableTable
+(
+    Values =
+    [
+        TConstantTexture (TextureName = 'GameData:/Assets/2D/Fx/anim_explo_001.png' ),
+        TConstantTexture (TextureName = 'GameData:/Assets/2D/Fx/anim_explo_002.png' ),
+        TConstantTexture (TextureName = 'GameData:/Assets/2D/Fx/anim_explo_003.png' ),
+        TConstantTexture (TextureName = 'GameData:/Assets/2D/Fx/anim_explo_004.png' ),
+        TConstantTexture (TextureName = 'GameData:/Assets/2D/Fx/anim_explo_005.png' ),
+        TConstantTexture (TextureName = 'GameData:/Assets/2D/Fx/anim_explo_006.png' ),
+        TConstantTexture (TextureName = 'GameData:/Assets/2D/Fx/anim_explo_007.png' ),
+        TConstantTexture (TextureName = 'GameData:/Assets/2D/Fx/anim_explo_008.png' ),
+        TConstantTexture (TextureName = 'GameData:/Assets/2D/Fx/anim_explo_009.png' ),
+        TConstantTexture (TextureName = 'GameData:/Assets/2D/Fx/anim_explo_010.png' ),
+        TConstantTexture (TextureName = 'GameData:/Assets/2D/Fx/anim_explo_011.png' ),
+        TConstantTexture (TextureName = 'GameData:/Assets/2D/Fx/anim_explo_012.png' ),
+        TConstantTexture (TextureName = 'GameData:/Assets/2D/Fx/anim_explo_013.png' ),
+        TConstantTexture (TextureName = 'GameData:/Assets/2D/Fx/anim_explo_014.png' ),
+        TConstantTexture (TextureName = 'GameData:/Assets/2D/Fx/anim_explo_015.png' ),
+    ]
+)

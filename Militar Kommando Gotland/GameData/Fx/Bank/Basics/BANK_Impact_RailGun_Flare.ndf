@@ -36,7 +36,7 @@ export BANK_Impact_RailGun_Flare is SimultaneousActionDeclaration(
                         SortTriangles = true
                         ZTest = true
                         Calque = 'Particles'
-                        EmissiveParticle = True
+                        EmissiveParticle = true
                     )
                     Evolvers = ParticleStandardEvolverList
                     (

@@ -37,16 +37,16 @@ export BANK_Bench_Laser is SimultaneousActionDeclaration
                 (
                     RenderInfo = ParticleRenderInfo
                     (
-                        ZTest = True
-                        ZWrite = False
-                        SortTriangles = True
+                        ZTest = true
+                        ZWrite = false
+                        SortTriangles = true
                         TextureName = 'GameData:/Assets/2D/Fx/sparks_01.png'
                         Calque = 'Particles'
                         EmissiveParticle = true
                     )
                     Evolvers = ParticleStandardEvolverList
                     (
-                        Position = $/VFX_Bank/ParticleCustomFloat3_1
+                        Position = ParticleCustomFloat3_1
                         Opacity = lerp[sqrt[sqrt[ParticleLifeRatio]], 0.7, 0]
                         EmissivePower = lerp[sqrt[sqrt[ParticleLifeRatio]], 0.3, 0]
                         ZBias = ParticleCustomFloat_4
@@ -84,7 +84,7 @@ export fx_Bench_Rainbow_Laser is SimultaneousActionDeclaration
         ),
         TActionCall
         (
-            Action = $/VFX_Bank/BANK_Dynamic_Flash_Repeat_Simple
+            Action = BANK_Dynamic_Flash_Repeat_Simple
             NamedParams = MAP[
                 ( 'parColorEnd', ColorModifier ),
                 ( 'parColorStart', ColorModifier ),
@@ -140,7 +140,7 @@ export BANK_Bench_RainbowSparks is Template_ActionWithParameters
                                     ColorModifier = MinusOneToOneRandomSphereSurface
                                     Alpha = 1.0
                                     Position = float3[0.00, 0.00, 0.00]
-                                    Speed = OrientAndNarrowRandomValue[ $/VFX_Bank/MinusOneToOneRandomBoxSurface, parDirection, parNarrowness] * parSpeed * RandomRange[0.5, 1.33]
+                                    Speed = OrientAndNarrowRandomValue[ MinusOneToOneRandomBoxSurface, parDirection, parNarrowness] * parSpeed * RandomRange[0.5, 1.33]
                                     Size = RandomRange[0.66, 1.33] * parSize
                                     CustomFloat_1 = - parGravity
                                     CustomFloat_2 = parFluidFriction
@@ -153,10 +153,10 @@ export BANK_Bench_RainbowSparks is Template_ActionWithParameters
                                 ParticleRenderer = LitParticleRenderer
                                 RenderInfo = ParticleRenderInfo
                                 (
-                                    SortTriangles = True
+                                    SortTriangles = true
                                     TextureName = 'GameData:/Assets/2D/Fx/fx_etincelle_00.png'
                                     Calque = 'Particles'
-                                    EmissiveParticle = True
+                                    EmissiveParticle = true
                                 )
 
                                 Evolvers = Template_List
@@ -165,13 +165,13 @@ export BANK_Bench_RainbowSparks is Template_ActionWithParameters
                                     [
                                         ParticleStandardEvolverListWithPhysic
                                         (
-                                            FluidFriction = $/VFX_Bank/ParticleCustomFloat_2
-                                            PhysicAccelerationField = GenFloat3[0, 0, $/VFX_Bank/ParticleCustomFloat_1]
-                                            ForceSlicing = False
-                                            EmissivePower = 5 * $/VFX_Bank/ParticleRemainingLifeRatio
+                                            FluidFriction = ParticleCustomFloat_2
+                                            PhysicAccelerationField = GenFloat3[0, 0, ParticleCustomFloat_1]
+                                            ForceSlicing = false
+                                            EmissivePower = 5 * ParticleRemainingLifeRatio
                                             Opacity = 0
-                                            Direction = normalized[$/VFX_Bank/ParticleSpeed]
-                                            Stretching = $/VFX_Bank/ParticleCustomFloat_3 * length[ParticleSpeed]
+                                            Direction = normalized[ParticleSpeed]
+                                            Stretching = ParticleCustomFloat_3 * length[ParticleSpeed]
                                         ),
                                     ]
                                 )
@@ -197,7 +197,7 @@ export BANK_Bench_Trail_Machine_Gun is SimultaneousActionDeclaration
         private parFlyDuration             is Template_Param_Float  ( DefaultValue = 0.45),
         private parShotCount               is Template_Param_Int    ( DefaultValue = 0),
         private parWaitBetweenShot         is Template_Param_Float  ( DefaultValue = 0),
-        private parImpactOnGround          is Template_Param_Bool   ( DefaultValue = False),
+        private parImpactOnGround          is Template_Param_Bool   ( DefaultValue = false),
         private parInitialDelay            is Template_Param_Float  ( DefaultValue = 0 ), //*
         private MaxStretch                 is Template_Param_Float  ( DefaultValue = 50 ),
         private RebondExplosion            is Template_Param_Int    ( DefaultValue = 0 ),
@@ -239,7 +239,7 @@ export BANK_Bench_Trail_Machine_Gun is SimultaneousActionDeclaration
                         CustomFloat3_2 = MobilePosition
                         // Random de position en fonction du temps de vol
                         CustomFloat3_3 = ifte[parImpactOnGround, MinusOneToOneRandomDisc, Cross[MinusOneToOneRandomDisc, normalized[getXY0[parDestination - MobilePosition]]]] * RadiusRandom * length[ParticleCustomFloat3_2 - parDestination]
-                        Direction = normalized[( $/VFX_Bank/ParticleCustomFloat3_1 - $/VFX_Bank/ParticleCustomFloat3_2 )]
+                        Direction = normalized[( ParticleCustomFloat3_1 - ParticleCustomFloat3_2 )]
 
                     ),
                     Initialiser_TextureSmallIndex
@@ -255,15 +255,15 @@ export BANK_Bench_Trail_Machine_Gun is SimultaneousActionDeclaration
                         SortTriangles = true
                         TextureName = 'GameData:/Assets/2D/Fx/trail_mitrailleuse_00.png'
                         Calque = 'Particles'
-                        EmissiveParticle = True
+                        EmissiveParticle = true
                     )
-                    ParticleRenderer = $/VFX_Bank/LitParticleRendererNoCentroidPositioning
+                    ParticleRenderer = LitParticleRendererNoCentroidPositioning
                     Evolvers = ParticleStandardEvolverList
                     (
-                        Position = lerp[$/VFX_Bank/ParticleLifeRatio, $/VFX_Bank/ParticleCustomFloat3_2, $/VFX_Bank/ParticleCustomFloat3_1]
-                        Stretching = Clamp[Distance[$/VFX_Bank/ParticlePosition, $/VFX_Bank/ParticleCustomFloat3_2] div $/VFX_Bank/ParticleSize, 1, ParticleCustomFloat_4 ]
-                        OffsetAlongDirection = (- ($/VFX_Bank/ParticleSize * $/VFX_Bank/ParticleStretching) div 2.0)
-                        EmissivePower = lerp[$/VFX_Bank/ParticleLifeRatio*2, 0,ParticleCustomFloat_3]
+                        Position = lerp[ParticleLifeRatio, ParticleCustomFloat3_2, ParticleCustomFloat3_1]
+                        Stretching = Clamp[Distance[ParticlePosition, ParticleCustomFloat3_2] div ParticleSize, 1, ParticleCustomFloat_4 ]
+                        OffsetAlongDirection = (- (ParticleSize * ParticleStretching) div 2.0)
+                        EmissivePower = lerp[ParticleLifeRatio*2, 0,ParticleCustomFloat_3]
                     )
                 )
             )
@@ -297,7 +297,7 @@ export fx_Bench_Rainbow_MG is SimultaneousActionDeclaration
         ),
         TActionCall
         (
-            Action = $/VFX_Bank/BANK_Dynamic_Flash_Repeat_Simple
+            Action = BANK_Dynamic_Flash_Repeat_Simple
             NamedParams = MAP[
                 ( 'parColorEnd', ColorModifier ),
                 ( 'parColorStart', ColorModifier ),

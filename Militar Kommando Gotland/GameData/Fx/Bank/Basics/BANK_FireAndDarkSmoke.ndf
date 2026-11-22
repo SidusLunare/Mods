@@ -126,13 +126,13 @@ private AoA_FX_BANK_FireAndDarkSmoke is SimultaneousActionDeclaration
                                         ParticleRenderer = $/VFX_Bank/LitParticleRenderer
                                         RenderInfo = ParticleRenderInfo
                                         (
-                                            ZTest = True
-                                            SortTriangles = True
-                                            Use3DRotation = True
+                                            ZTest = true
+                                            SortTriangles = true
+                                            Use3DRotation = true
                                             TextureName = 'GameData:/Assets/2D/Fx/anim_flame_03_000.png'
-                                            ZWrite = False
+                                            ZWrite = false
                                             Calque = 'Particles'
-                                            EmissiveParticle = True
+                                            EmissiveParticle = true
                                         )
                                         Evolvers = ParticleStandardEvolverList
                                         (
@@ -183,7 +183,7 @@ private AoA_FX_BANK_FireAndDarkSmoke is SimultaneousActionDeclaration
                                             RotationSpeed = ParticleCustomFloat3_1 * ParticleRemainingLifeRatio
                                             Animation = ParticleLifeRatio
                                             ColorModifier = LinearColor[FireAndDarkSmoke_Color_Table[ParticleLifeRatio]]
-                                            UseHardCodedRotation = True
+                                            UseHardCodedRotation = true
                                         )
                                     )
                                 )
@@ -216,13 +216,13 @@ private AoA_FX_BANK_FireAndDarkSmoke is SimultaneousActionDeclaration
                                         ParticleRenderer = $/VFX_Bank/LitParticleRenderer
                                         RenderInfo = ParticleRenderInfo
                                         (
-                                            ZTest = True
-                                            SortTriangles = True
-                                            Use3DRotation = True
+                                            ZTest = true
+                                            SortTriangles = true
+                                            Use3DRotation = true
                                             TextureName = 'GameData:/Assets/2D/Fx/default_map_fx.png'
-                                            ZWrite = False
+                                            ZWrite = false
                                             Calque = 'Particles'
-                                            EmissiveParticle = True
+                                            EmissiveParticle = true
                                         )
                                         Evolvers = ParticleStandardEvolverListWithPhysic
                                         (
@@ -255,5 +255,5 @@ private FireAndDarkSmoke_Color_Table is Template_Float3Table
         [0.40, 0.40, 0.40],
         [0.10, 0.10, 0.10],
     ]
-    Interpolate = True
+    Interpolate = true
 )

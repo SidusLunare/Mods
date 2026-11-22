@@ -460,6 +460,45 @@ export fx_impact_sol_M261_Hydras_11 is SimultaneousActionDeclaration
         (
             Mobile = TMobileWithLocalRepereMatrixFactory
             (
+                Position = float3[76,35,0] + parPosition
+            )
+            Actions =
+            [
+                TSequentialAction
+                (Actions =
+                    [
+                        TWaitInSec( Duration = 1.25 ),
+                        TActionCall
+                        (
+                            Action = $/VFX_Bank/BANK_WasteGroundDust_Simple
+                            NamedParams = MAP[
+                                ( 'parAlphaStartDecayValue', 0.01 ),
+                                ( 'parCount', 10 ),
+                                ( 'parEndColor', float3[0,0,0] ),
+                                ( 'parEndSize', 8000 ),
+                                ( 'parFluidFriction', 3.5 ),
+                                ( 'parInitialDelay', parInitialShotDelay ),
+                                ( 'parLifetime', 4 ),
+                                ( 'parOpacity', 0.4 ),
+                                ( 'parRandomInitPosRadius', 150 ),
+                                ( 'parRotationFactor', 1.2 ),
+                                ( 'parScaleSizeFactor', 1 ),
+                                ( 'parStartColor', float3[0.5686275,0.4156863,0.2862745] ),
+                                ( 'parStartHeight', 0 ),
+                                ( 'parStartRotation', 0.25 ),
+                                ( 'parStartSize', 300 ),
+                                ( 'parStartSpeed3D', float3[1500,2500,0] ),
+                                ( 'parWindWeight', 4 ),
+                            ]
+                        ),
+                    ]
+                ),
+            ]
+        ),
+        TSimultaneousAction
+        (
+            Mobile = TMobileWithLocalRepereMatrixFactory
+            (
                 Position = float3[-280,7,0]
             )
             Actions =
@@ -640,45 +679,6 @@ export fx_impact_sol_M261_Hydras_11 is SimultaneousActionDeclaration
                                 ( 'parStartSize', 100 ),
                                 ( 'parStartSpeed', 8 ),
                                 ( 'parWindWeight', 1 ),
-                            ]
-                        ),
-                    ]
-                ),
-            ]
-        ),
-        TSimultaneousAction
-        (
-            Mobile = TMobileWithLocalRepereMatrixFactory
-            (
-                Position = float3[76,35,0] + parPosition
-            )
-            Actions =
-            [
-                TSequentialAction
-                (Actions =
-                    [
-                        TWaitInSec( Duration = 1.25 ),
-                        TActionCall
-                        (
-                            Action = $/VFX_Bank/BANK_WasteGroundDust_Simple
-                            NamedParams = MAP[
-                                ( 'parAlphaStartDecayValue', 0.01 ),
-                                ( 'parCount', 10 ),
-                                ( 'parEndColor', float3[0,0,0] ),
-                                ( 'parEndSize', 8000 ),
-                                ( 'parFluidFriction', 3.5 ),
-                                ( 'parInitialDelay', parInitialShotDelay ),
-                                ( 'parLifetime', 4 ),
-                                ( 'parOpacity', 0.4 ),
-                                ( 'parRandomInitPosRadius', 150 ),
-                                ( 'parRotationFactor', 1.2 ),
-                                ( 'parScaleSizeFactor', 1 ),
-                                ( 'parStartColor', float3[0.5686275,0.4156863,0.2862745] ),
-                                ( 'parStartHeight', 0 ),
-                                ( 'parStartRotation', 0.25 ),
-                                ( 'parStartSize', 300 ),
-                                ( 'parStartSpeed3D', float3[1500,2500,0] ),
-                                ( 'parWindWeight', 4 ),
                             ]
                         ),
                     ]

@@ -1,0 +1,202 @@
+export BANK_Traine_Bombe_Simple is Template_ActionWithParameters
+(
+    Params =
+    [
+        private parDisableSFX           is Template_Param_Bool  ( DefaultValue = false ),
+        private parMeshId               is Template_Param_Int   ( DefaultValue = 1 ),
+        private parSFXId                is Template_Param_Int   ( DefaultValue = 1 ),
+        private BombScale               is Template_Param_Float  ( DefaultValue = 1 ),
+        private DurationInSec           is Template_Param_Float ( DefaultValue = 1 ),
+        private parPowerPinnable        is Template_Param_Float ( DefaultValue = 1 ),
+    ]
+    Action = TActionDescriptor_Select
+    (
+        Index = parMeshId + 1
+        Actions = Bomb_Model_List.Value
+    )
+)
+
+template Template_CallBombe
+[
+    Mesh,
+] is Template_ActionCall
+(
+    Action = Template_TraineBombe(Mesh = Template_MeshResourcesForFxEditor(Value = <Mesh>))
+    NamedParameters = MAP
+    [
+        ( 'parDisableSFX'               , BANK_Traine_Bombe_Simple/parDisableSFX ),
+        ( 'parMeshId'                   , BANK_Traine_Bombe_Simple/parMeshId ),
+        ( 'parSFXId'                    , BANK_Traine_Bombe_Simple/parSFXId ),
+        ( 'BombScale'                   , BANK_Traine_Bombe_Simple/BombScale ),
+        ( 'parFlyDuration'              , BANK_Traine_Bombe_Simple/DurationInSec ),
+        ( 'parPower'                    , BANK_Traine_Bombe_Simple/parPowerPinnable ),
+    ]
+)
+
+export Bomb_Model_List is TEugBListPBaseClass
+(
+    Value =
+    [
+        public AN_M64_500lb         is Template_CallBombe(Mesh = 'GameData:/Assets/3D/Units/Ammo/Bombes/AN_M64_500lb.fbx'),
+        public AN_M65_1000lb        is Template_CallBombe(Mesh = 'GameData:/Assets/3D/Units/Ammo/Bombes/AN_M65_1000lb.fbx'),
+        public AN_M57_250lb         is Template_CallBombe(Mesh = 'GameData:/Assets/3D/Units/Ammo/Bombes/AN_M57_250lb.fbx'),
+        public SD70                 is Template_CallBombe(Mesh = 'GameData:/Assets/3D/Units/Ammo/Bombes/SD70.fbx'),
+        public SC50                 is Template_CallBombe(Mesh = 'GameData:/Assets/3D/Units/Ammo/Bombes/SC50.fbx'),
+        public SC250                is Template_CallBombe(Mesh = 'GameData:/Assets/3D/Units/Ammo/Bombes/SC250.fbx'),
+        public SC500                is Template_CallBombe(Mesh = 'GameData:/Assets/3D/Units/Ammo/Bombes/SC500.fbx'),
+        public SC1000               is Template_CallBombe(Mesh = 'GameData:/Assets/3D/Units/Ammo/Bombes/SC1000.fbx'),
+        public AN_M47A2_Smoke_100lb is Template_CallBombe(Mesh = 'GameData:/Assets/3D/Units/Ammo/Bombes/AN_M47A2_Smoke_100lb.fbx'),
+        //rajouts FULDA
+        public AN_M30               is Template_CallBombe(Mesh = 'GameData:/Assets/3D/Units/Ammo/Bombes/AN_M30.fbx'),
+        public AN_M76_500lb         is Template_CallBombe(Mesh = 'GameData:/Assets/3D/Units/Ammo/Bombes/AN_M76_500lb.fbx'),
+        public BK90_Mjolner         is Template_CallBombe(Mesh = 'GameData:/Assets/3D/Units/Ammo/Bombes/BK90_Mjolner.fbx'),
+        public BL755_Cluster        is Template_CallBombe(Mesh = 'GameData:/Assets/3D/Units/Ammo/Bombes/BL755_Cluster.fbx'),
+        public BLG_66_Belouga       is Template_CallBombe(Mesh = 'GameData:/Assets/3D/Units/Ammo/Bombes/BLG_66_Belouga.fbx'),
+        public British_500kg_bomb   is Template_CallBombe(Mesh = 'GameData:/Assets/3D/Units/Ammo/Bombes/British_500kg_bomb.fbx'),
+        public FAB_250              is Template_CallBombe(Mesh = 'GameData:/Assets/3D/Units/Ammo/Bombes/SOV/FAB_250/FAB_250.fbx'),
+        public FAB_500              is Template_CallBombe(Mesh = 'GameData:/Assets/3D/Units/Ammo/Bombes/SOV/FAB_500/FAB_500.fbx'),
+        public FAB_500_M54          is Template_CallBombe(Mesh = 'GameData:/Assets/3D/Units/Ammo/Bombes/SOV/FAB_500_M_54/FAB_500_M_54.fbx'),
+        public FAB_1000             is Template_CallBombe(Mesh = 'GameData:/Assets/3D/Units/Ammo/Bombes/FAB_1000.fbx'),
+        public French_Napalm        is Template_CallBombe(Mesh = 'GameData:/Assets/3D/Units/Ammo/Bombes/French_Napalm.fbx'),
+        public GBU10                is Template_CallBombe(Mesh = 'GameData:/Assets/3D/Units/Ammo/Bombes/US/GBU_10_Paveway_II.fbx'),
+        public GBU12                is Template_CallBombe(Mesh = 'GameData:/Assets/3D/Units/Ammo/Bombes/US/GBU_12_Paveway_II.fbx'),
+        public GBU24                is Template_CallBombe(Mesh = 'GameData:/Assets/3D/Units/Ammo/Bombes/US/GBU_24_Paveway_III.fbx'),
+        public GBU49                is Template_CallBombe(Mesh = 'GameData:/Assets/3D/Units/Ammo/Bombes/FR/GBU_49_Paveway_II.fbx'),
+        public GBU58                is Template_CallBombe(Mesh = 'GameData:/Assets/3D/Units/Ammo/Bombes/FR/GBU_58_Paveway.fbx'),
+        public M117                 is Template_CallBombe(Mesh = 'GameData:/Assets/3D/Units/Ammo/Bombes/M117.fbx'),
+        public Mk_20_Rockeye_II     is Template_CallBombe(Mesh = 'GameData:/Assets/3D/Units/Ammo/Bombes/Mk_20_Rockeye_II.fbx'),
+        public Mk_77                is Template_CallBombe(Mesh = 'GameData:/Assets/3D/Units/Ammo/Bombes/Mk_77.fbx'),
+        public Mk_81                is Template_CallBombe(Mesh = 'GameData:/Assets/3D/Units/Ammo/Bombes/OTAN/MK_81.fbx'),
+        public Mk_82_unused         is Template_CallBombe(Mesh = 'GameData:/Assets/3D/Units/Ammo/Bombes/OTAN/MK_82.fbx'), // Francis (23/10/24) doublon pour ne pas décaler les indices
+        public Mk_82                is Template_CallBombe(Mesh = 'GameData:/Assets/3D/Units/Ammo/Bombes/OTAN/MK_82.fbx'),
+        public Mk_83                is Template_CallBombe(Mesh = 'GameData:/Assets/3D/Units/Ammo/Bombes/OTAN/MK_83.fbx'),
+        public BLU110_Mk_83         is Template_CallBombe(Mesh = 'GameData:/Assets/3D/Units/Ammo/Bombes/UK/BLU_110_Mk83/BLU_110_Mk83.fbx'),
+        public Mk_84                is Template_CallBombe(Mesh = 'GameData:/Assets/3D/Units/Ammo/Bombes/OTAN/MK_84.fbx'),
+        public Mortier_petit        is Template_CallBombe(Mesh = 'GameData:/Assets/3D/Units/Ammo/Bombes/Mortier_petit.fbx'),
+        public RBK_500              is Template_CallBombe(Mesh = 'GameData:/Assets/3D/Units/Ammo/Bombes/RBK_500.fbx'),
+        public RL50                 is Template_CallBombe(Mesh = 'GameData:/Assets/3D/Units/Ammo/Bombes/RL50.fbx'),
+        public SAMP_T200            is Template_CallBombe(Mesh = 'GameData:/Assets/3D/Units/Ammo/Bombes/SAMP_T200.fbx'),
+        public MATRA_250            is Template_CallBombe(Mesh = 'GameData:/Assets/3D/Units/Ammo/Bombes/FR/Bomb_Matra_250Kg.fbx'),
+        public MATRA_400            is Template_CallBombe(Mesh = 'GameData:/Assets/3D/Units/Ammo/Bombes/FR/Bomb_Matra_400Kg.fbx'),
+        public ZB_500               is Template_CallBombe(Mesh = 'GameData:/Assets/3D/Units/Ammo/Bombes/ZB_500.fbx'),
+        public SD2_Butterfly_Bomb   is Template_CallBombe(Mesh = 'GameData:/Assets/3D/Units/Ammo/Bombes/SD2_Butterfly_Bomb.fbx'),
+        public KB44                 is Template_CallBombe(Mesh = 'GameData:/Assets/3D/FX/Mesh_Particles/KB44_particle/KB44_particle.fbx'),
+        public BLG_66               is Template_CallBombe(Mesh = 'GameData:/Assets/3D/Units/Ammo/Bombes/BLG_66_Belouga.fbx'),
+        public Mk_18_RET            is Template_CallBombe(Mesh = 'GameData:/Assets/3D/Units/Ammo/Bombes/UK/Mk_18_RET/Mk_18_RET.fbx'),
+        public KAB_500Kr            is Template_CallBombe(Mesh = 'GameData:/Assets/3D/Units/Ammo/Bombes/SOV/KAB_500Kr/KAB_500Kr.fbx'),
+        public KAB_1500Kr           is Template_CallBombe(Mesh = 'GameData:/Assets/3D/Units/Ammo/Bombes/SOV/KAB_1500Kr/KAB_1500Kr.fbx'),
+        public ODAB                 is Template_CallBombe(Mesh = 'GameData:/Assets/3D/Units/Ammo/Bombes/SOV/ODAB_500PM/ODAB_500PM.fbx' ),
+        public BLU_95               is Template_CallBombe(Mesh = 'GameData:/Assets/3D/Units/Ammo/Bombes/US/BLU_95/BLU_95.fbx' )
+
+
+
+
+    ]
+)
+
+template Template_TraineBombe
+[
+    Mesh,
+] is SimultaneousActionDeclaration
+(
+    Params =
+    [
+        private parDisableSFX      is Template_Param_Bool  ( DefaultValue = false ),
+        private parMeshId          is Template_Param_Int   ( DefaultValue = 1 ),
+        private parSFXId           is Template_Param_Int   ( DefaultValue = 1 ),
+        private BombScale          is Template_Param_Float  ( DefaultValue = 1 ),
+        private parFlyDuration     is Template_Param_Float ( DefaultValue = 1 ),
+        private parPower           is Template_Param_Float ( DefaultValue = 1 ),
+    ]
+    MaxDuration = 30
+    LocalVariables =
+    [
+        public FlyingTime is Template_Pinnable
+        (
+            InitialValue = parFlyDuration
+            ExpectedType = 'float'
+        ),
+    ]
+    Actions =
+    [
+        Competition
+        (
+            Mobile = Template_MobileSoundSlotFactory()
+            Disabled = parDisableSFX
+            Actions =
+            [
+                Template_Select
+                (
+                    Actions = [
+                        Petit is Template_SFX_Propulsion_x3
+                        (
+                            SoundFile1 = 'GameData:/Assets/Sounds/SFX/Traine/Traine_Bombe_Petit_01.wav'
+                            SoundFile2 = 'GameData:/Assets/Sounds/SFX/Traine/Traine_Bombe_Petit_02.wav'
+                            SoundFile3 = 'GameData:/Assets/Sounds/SFX/Traine/Traine_Bombe_Petit_03.wav'
+                        ),
+                         Gros is Template_SFX_Propulsion_x3
+                        (
+                            SoundFile1 = 'GameData:/Assets/Sounds/SFX/Traine/Traine_Bombe_Gros_01.wav'
+                            SoundFile2 = 'GameData:/Assets/Sounds/SFX/Traine/Traine_Bombe_Gros_02.wav'
+                            SoundFile3 = 'GameData:/Assets/Sounds/SFX/Traine/Traine_Bombe_Gros_03.wav'
+                        ),
+                    ]
+                    Index = parSFXId +1
+                ),
+                WaitInSec
+                (
+                    Duration = FlyingTime
+                )
+            ]
+        )
+    ]
+    +
+    [
+        private Projectile_Mesh is ParticleBombSpawner
+        (
+            ParticleMaxDurationForSpawnSkip = FlyingTime * 1.1
+            Count = 1
+            Spawner = ParticleSpawner
+            (
+                ParticleLifetime = FlyingTime
+                Initialisers =
+                [
+                    Initialiser_SetMobileWrapper(),
+                    ParticleInitialiserList
+                    (
+                        ScaleForMesh = BombScale
+                        Size = BombScale
+                        CustomFloat_2 = parPower
+                        DynamicMesh = <Mesh>
+                        Direction = normalized[ParticleMobileWrapperAxeX]
+                    )
+                ]
+                ParticleDescriptor = ParticleDescriptor
+                (
+                    RenderInfo = ShadowedParticleMeshRenderInfo
+                    Evolvers = ParticleStandardEvolverList
+                    (
+                        Position = ParticleMobileWrapperPositionUnScaled
+                        Direction = normalized[ParticleMobileWrapperAxeX]
+                        RotationAxisForMesh = float3[0.00, 1.00, 0.00]
+                        Alpha = 1
+                    )
+                    ParticleRenderer = Template_ParticleRendererDynamicMesh
+                    (
+                        AuthorizedMeshes = [<Mesh>]
+                    )
+                )
+            )
+        )
+    ]
+)
+
+
+export Bomb_Sfx_List is TEugBListPBaseClass
+(
+    Value =
+    [
+        public Petit is TConstant( Value = '' ),
+        public Gros is  TConstant( Value = '' ),
+    ]
+)

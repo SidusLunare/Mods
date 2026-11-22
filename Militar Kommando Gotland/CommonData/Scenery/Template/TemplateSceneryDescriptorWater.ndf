@@ -1,0 +1,19 @@
+template template_Water_Surface
+[
+    RegistrationName         : string,
+    Tags                     : LIST<string> = [],
+    ColorCode                : color = RGBA[0, 0, 0, 0],
+
+    DepthInMeters            : float,
+] is TSceneryDescriptorTriangleSurface
+(
+    RegistrationName         = <RegistrationName>
+    Tags                     = <Tags>
+    ColorCode                = <ColorCode>
+    SymbolDatabaseProxy      = $/M3D/Scene/LevelBuildSymbolDatabaseProxy
+
+    Mode                     = SDMode_Water
+    Color                    = [0,150,255,150]
+    ZOffsetInLBU             = <DepthInMeters> * -1
+    MeshBucketHandler        = $/SceneryBase/SceneryMeshBucketHandler_VectorielArea
+)

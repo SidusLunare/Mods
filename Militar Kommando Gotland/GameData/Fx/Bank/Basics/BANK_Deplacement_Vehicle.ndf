@@ -91,13 +91,13 @@ export BANK_Deplacement_Mud is SimultaneousActionDeclaration
                                     (
                                         RenderInfo = ParticleRenderInfo
                                         (
-                                            ZTest = True
-                                            ZWrite = False
-                                            SortTriangles = True
-                                            Use3DRotation = False
+                                            ZTest = true
+                                            ZWrite = false
+                                            SortTriangles = true
+                                            Use3DRotation = false
                                             TextureName = 'GameData:/Assets/2D/Fx/fx_terre_02_v2.png'
                                             Calque = 'Particles'
-                                            OpaqueParticle = True
+                                            OpaqueParticle = true
                                         )
                                         Evolvers = ParticleStandardEvolverListWithPhysic
                                         (

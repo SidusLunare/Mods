@@ -1,0 +1,14 @@
+export Modele_Berliet_GBC_8KT_20mm_twin_FR is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/FR/Vehicule/Berliet_GBC_8KT_20mm_twin/Berliet_GBC_8KT_20mm_twin.fbx"
+)
+
+export Modele_Berliet_GBC_8KT_20mm_twin_FR_MID is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/FR/Vehicule/Berliet_GBC_8KT_20mm_twin_MID/Berliet_GBC_8KT_20mm_twin_MID.fbx"
+)
+
+export Modele_Berliet_GBC_8KT_20mm_twin_FR_LOW is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/FR/Vehicule/Berliet_GBC_8KT_20mm_twin_LOW/Berliet_GBC_8KT_20mm_twin_LOW.fbx"
+)

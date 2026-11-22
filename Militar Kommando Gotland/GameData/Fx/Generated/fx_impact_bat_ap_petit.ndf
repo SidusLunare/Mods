@@ -158,6 +158,18 @@ export fx_impact_bat_ap_petit is SimultaneousActionDeclaration
                 ),
                 TActionCall
                 (
+                    Action = $/VFX_Bank/BANK_Dynamic_Flash_Simple
+                    NamedParams = MAP[
+                        ( 'parColorEnd', float3[0,0,0] ),
+                        ( 'parColorStart', float3[0.6,0.2980392,0.09803922] ),
+                        ( 'parDuration', 0.2800001 ),
+                        ( 'parOpacity', 0.2 ),
+                        ( 'parSizeLBU', 37.2093 ),
+                        ( 'Position', parPosition ),
+                    ]
+                ),
+                TActionCall
+                (
                     Action = $/VFX_Bank/BANK_Dynamic_Flash_Only_Two_Simple
                     NamedParams = MAP[
                         ( 'parColorEnd', float3[0.9294118,0.2156863,0.007843138] ),
@@ -167,18 +179,6 @@ export fx_impact_bat_ap_petit is SimultaneousActionDeclaration
                         ( 'parOpacity', 1 ),
                         ( 'parSize', 1300 ),
                         ( 'parSpeed', float3[0,0,0] ),
-                        ( 'Position', parPosition ),
-                    ]
-                ),
-                TActionCall
-                (
-                    Action = $/VFX_Bank/BANK_Dynamic_Flash_Simple
-                    NamedParams = MAP[
-                        ( 'parColorEnd', float3[0,0,0] ),
-                        ( 'parColorStart', float3[0.6,0.2980392,0.09803922] ),
-                        ( 'parDuration', 0.2800001 ),
-                        ( 'parOpacity', 0.2 ),
-                        ( 'parSizeLBU', 37.2093 ),
                         ( 'Position', parPosition ),
                     ]
                 ),

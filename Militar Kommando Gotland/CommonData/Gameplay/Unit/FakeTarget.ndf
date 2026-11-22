@@ -9,19 +9,16 @@ Tactic_Descriptor_Unit_FakeTarget is TEntityDescriptor
             InitialFlagSet =
             [
                 Flag_FakeTarget,
-                Flag_Detectable,
             ]
         ),
         TPositionModuleDescriptor
         (
-            InGeoDb        = True
+            InitialCollisionPlane = TCollisionPlane/Ground
         ),
         TVisibilityModuleDescriptor
         (
             UnitConcealmentBonus = 1.0
-        ),
-        TScannerConfigurationDescriptor
-        (
+            AutoRevealIfSpotted = true
         ),
         TReverseScannerWithIdentificationDescriptor
         (

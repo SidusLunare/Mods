@@ -1,0 +1,17 @@
+export Modele_Mi_14PL_recon_SOV is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/DDR/Helico/Mi_14PL_recon/Mi_14PL_recon.fbx"
+    Textures="GameData:/Assets/3D/Units/URSS/Helico/Mi_14PL_recon"
+)
+
+export Modele_Mi_14PL_recon_SOV_MID is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/DDR/Helico/Mi_14PL_recon_MID/Mi_14PL_recon_MID.fbx"
+    Textures="GameData:/Assets/3D/Units/URSS/Helico/Mi_14PL_recon_MID"
+)
+
+export Modele_Mi_14PL_recon_SOV_LOW is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/DDR/Helico/Mi_14PL_recon_LOW/Mi_14PL_recon_LOW.fbx"
+    Textures="GameData:/Assets/3D/Units/URSS/Helico/Mi_14PL_recon_LOW"
+)

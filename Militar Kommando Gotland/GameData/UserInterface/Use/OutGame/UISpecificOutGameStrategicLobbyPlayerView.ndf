@@ -162,7 +162,7 @@ BUCKSpecificOutGameStrategicLobbyPlayerViewDescriptor is BUCKListDescriptor
                RelativeWidthHeight = [1.0, 1.0]
             )
 
-            HasBackground = True
+            HasBackground = true
             BackgroundBlockColorToken = "Lobby/PlayerNeedSwitchSideColorSlotColor"
         ),
     ]

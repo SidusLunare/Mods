@@ -11,6 +11,17 @@ export fx_destruction_quartier_petit_08 is Simultaneous
             [
                 TActionCall
                 (
+                    Action = $/VFX_Bank/BANK_Bomb_Distort_Simple
+                    NamedParams = MAP[
+                        ( 'parDuration', 0.7000002 ),
+                        ( 'parFinalSize', 6300 ),
+                        ( 'parInitialSize', 10000 ),
+                        ( 'parIntensity', 5000 ),
+                        ( 'parPositionRelative', float3[0,0,0] ),
+                    ]
+                ),
+                TActionCall
+                (
                     Action = $/VFX_Bank/BANK_Bomb_Flash
                     NamedParams = MAP[
                         ( 'parCount', 1 ),
@@ -19,17 +30,6 @@ export fx_destruction_quartier_petit_08 is Simultaneous
                         ( 'parInitialSize', 0 ),
                         ( 'parZBias', 0 ),
                         ( 'parPositionRelative', float3[0,0,200] ),
-                    ]
-                ),
-                TActionCall
-                (
-                    Action = $/VFX_Bank/BANK_Bomb_Distort_Simple
-                    NamedParams = MAP[
-                        ( 'parDuration', 0.7000002 ),
-                        ( 'parFinalSize', 6300 ),
-                        ( 'parInitialSize', 10000 ),
-                        ( 'parIntensity', 5000 ),
-                        ( 'parPositionRelative', float3[0,0,0] ),
                     ]
                 ),
                 TActionCall
@@ -144,43 +144,6 @@ export fx_destruction_quartier_petit_08 is Simultaneous
         (
             Mobile = TMobileWithLocalRepereMatrixFactory
             (
-                Position = float3[-38,30,0]
-                EulerAngles = float3[1.570796,0,0]
-            )
-            Actions =
-            [
-                TActionCall
-                (
-                    Action = $/VFX_Bank/BANK_Rubble2_Oriented_Simple
-                    NamedParams = MAP[
-                        ( 'parCountDebrits', 0 ),
-                        ( 'parCountDebritsWithFire', 0 ),
-                        ( 'parCountDebritsWithSmoke', 5 ),
-                        ( 'parDebritSizeMul', 1.75 ),
-                        ( 'parDir', float3[0,0,1] ),
-                        ( 'parDispersion', 2000 ),
-                        ( 'parFireParticleEndSize', 200 ),
-                        ( 'parFireParticleStartSize', 0 ),
-                        ( 'parGravity', 2500 ),
-                        ( 'parLifetime', 5 ),
-                        ( 'parMeshType', 1 ),
-                        ( 'parNarrowness', 0.01 ),
-                        ( 'parParticleOpacity', 0.19 ),
-                        ( 'parSmokeColor', float3[0.5411765,0.5411765,0.5372549] ),
-                        ( 'parSmokeColorMultiplier', 0.2000001 ),
-                        ( 'parSmokeDensity', 100 ),
-                        ( 'parSmokeParticleEndSize', 2100 ),
-                        ( 'parSmokeParticleStartSize', 600 ),
-                        ( 'parSpeed', float3[200,200,4000] ),
-                    ]
-                ),
-                TWaitInSec( Duration = 5),
-            ]
-        ),
-        TSimultaneousAction
-        (
-            Mobile = TMobileWithLocalRepereMatrixFactory
-            (
                 EulerAngles = float3[1.570796,0,0]
             )
             Actions =
@@ -230,6 +193,43 @@ export fx_destruction_quartier_petit_08 is Simultaneous
                         ( 'parStartSize', 1000 ),
                         ( 'parStartSpeed3D', float3[6000,6000,2000] ),
                         ( 'parWindWeight', 4 ),
+                    ]
+                ),
+                TWaitInSec( Duration = 5),
+            ]
+        ),
+        TSimultaneousAction
+        (
+            Mobile = TMobileWithLocalRepereMatrixFactory
+            (
+                Position = float3[-38,30,0]
+                EulerAngles = float3[1.570796,0,0]
+            )
+            Actions =
+            [
+                TActionCall
+                (
+                    Action = $/VFX_Bank/BANK_Rubble2_Oriented_Simple
+                    NamedParams = MAP[
+                        ( 'parCountDebrits', 0 ),
+                        ( 'parCountDebritsWithFire', 0 ),
+                        ( 'parCountDebritsWithSmoke', 5 ),
+                        ( 'parDebritSizeMul', 1.75 ),
+                        ( 'parDir', float3[0,0,1] ),
+                        ( 'parDispersion', 2000 ),
+                        ( 'parFireParticleEndSize', 200 ),
+                        ( 'parFireParticleStartSize', 0 ),
+                        ( 'parGravity', 2500 ),
+                        ( 'parLifetime', 5 ),
+                        ( 'parMeshType', 1 ),
+                        ( 'parNarrowness', 0.01 ),
+                        ( 'parParticleOpacity', 0.19 ),
+                        ( 'parSmokeColor', float3[0.5411765,0.5411765,0.5372549] ),
+                        ( 'parSmokeColorMultiplier', 0.2000001 ),
+                        ( 'parSmokeDensity', 100 ),
+                        ( 'parSmokeParticleEndSize', 2100 ),
+                        ( 'parSmokeParticleStartSize', 600 ),
+                        ( 'parSpeed', float3[200,200,4000] ),
                     ]
                 ),
                 TWaitInSec( Duration = 5),

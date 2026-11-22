@@ -1,0 +1,14 @@
+export Modele_AR_76_MP_ITA is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/ITA/Vehicule/AR76_Carabineri/AR76_Carabineri.fbx"
+)
+
+export Modele_AR_76_MP_ITA_MID is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/ITA/Vehicule/AR76_Carabineri_MID/AR76_Carabineri_MID.fbx"
+)
+
+export Modele_AR_76_MP_ITA_LOW is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/ITA/Vehicule/AR76_Carabineri_LOW/AR76_Carabineri_LOW.fbx"
+)

@@ -15,13 +15,11 @@ public orderEvaluatorCollectionStrategic is TOrderEvaluatorCollectionDescriptor(
     OrderFeedbacksMap = MAP [
         (EOrderType/Shoot, TOrderFeedback(
             FXFeedback = $/GFX/GameFx/FX_Feedback_Attack
-            MouseWidgetSelector = "MouseWidgetSelector_DenyOrder"
             PlayFXFeedbackWithoutTargets = true
         )),
         (EOrderType/FortifyAntiAir, TOrderFeedback()),
         (EOrderType/Move, TOrderFeedback(
             FXFeedback = $/GFX/GameFx/FX_Feedback_Move
-            MouseWidgetSelector = "MouseWidgetSelector_DefaultOrder"
             PlayFXFeedbackWithoutTargets = true
         )),
     ]

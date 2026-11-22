@@ -87,6 +87,39 @@ export FX_Tir_Obus is SimultaneousActionDeclaration
         (
             Mobile = TMobileWithLocalRepereMatrixFactory
             (
+                Position = float3[-900,0,-200]
+            )
+            Actions =
+            [
+                TActionCall
+                (
+                    Action = $/VFX_Bank/BANK_WasteGroundDust_Simple
+                    NamedParams = MAP[
+                        ( 'parAlphaStartDecayValue', 0.01 ),
+                        ( 'parCount', 25 ),
+                        ( 'parEndColor', float3[0.9921569,0.7764707,0.6] ),
+                        ( 'parEndSize', 1500 ),
+                        ( 'parFluidFriction', 2 ),
+                        ( 'parInitialDelay', parInitialShotDelay ),
+                        ( 'parLifetime', 2 ),
+                        ( 'parOpacity', 1 ),
+                        ( 'parRandomInitPosRadius', 500 ),
+                        ( 'parRotationFactor', 1 ),
+                        ( 'parScaleSizeFactor', 1 ),
+                        ( 'parStartColor', float3[0.9921569,0.7764707,0.6] ),
+                        ( 'parStartHeight', 400 ),
+                        ( 'parStartRotation', 0.25 ),
+                        ( 'parStartSize', 150 ),
+                        ( 'parStartSpeed3D', float3[20,20,0] ),
+                        ( 'parWindWeight', 0.8 ),
+                    ]
+                ),
+            ]
+        ),
+        TSimultaneousAction
+        (
+            Mobile = TMobileWithLocalRepereMatrixFactory
+            (
                 Position = float3[-100,0,0]
             )
             Actions =
@@ -138,39 +171,6 @@ export FX_Tir_Obus is SimultaneousActionDeclaration
                         ( 'parStartRotation', 0.25 ),
                         ( 'parStartSize', 200 ),
                         ( 'parStartSpeed', 5 ),
-                        ( 'parWindWeight', 0.8 ),
-                    ]
-                ),
-            ]
-        ),
-        TSimultaneousAction
-        (
-            Mobile = TMobileWithLocalRepereMatrixFactory
-            (
-                Position = float3[-900,0,-200]
-            )
-            Actions =
-            [
-                TActionCall
-                (
-                    Action = $/VFX_Bank/BANK_WasteGroundDust_Simple
-                    NamedParams = MAP[
-                        ( 'parAlphaStartDecayValue', 0.01 ),
-                        ( 'parCount', 25 ),
-                        ( 'parEndColor', float3[0.9921569,0.7764707,0.6] ),
-                        ( 'parEndSize', 1500 ),
-                        ( 'parFluidFriction', 2 ),
-                        ( 'parInitialDelay', parInitialShotDelay ),
-                        ( 'parLifetime', 2 ),
-                        ( 'parOpacity', 1 ),
-                        ( 'parRandomInitPosRadius', 500 ),
-                        ( 'parRotationFactor', 1 ),
-                        ( 'parScaleSizeFactor', 1 ),
-                        ( 'parStartColor', float3[0.9921569,0.7764707,0.6] ),
-                        ( 'parStartHeight', 400 ),
-                        ( 'parStartRotation', 0.25 ),
-                        ( 'parStartSize', 150 ),
-                        ( 'parStartSpeed3D', float3[20,20,0] ),
                         ( 'parWindWeight', 0.8 ),
                     ]
                 ),

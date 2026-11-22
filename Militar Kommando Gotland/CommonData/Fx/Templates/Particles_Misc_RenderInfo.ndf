@@ -1,12 +1,12 @@
 template ParticleRenderInfo
 [
-    ZTest                   : boolean[GroupBy = "Render Info"] = true,
-    ZWrite                  : boolean[GroupBy = "Render Info"] = false,
-    SortTriangles           : boolean[GroupBy = "Render Info"] = false,
-    Use3DRotation           : boolean[GroupBy = "Render Info"] = true,
+    ZTest                   : bool[GroupBy = "Render Info"] = true,
+    ZWrite                  : bool[GroupBy = "Render Info"] = false,
+    SortTriangles           : bool[GroupBy = "Render Info"] = false,
+    Use3DRotation           : bool[GroupBy = "Render Info"] = true,
     TextureName             : TFileName[Texture] = 'GameData:/Assets/2D/Fx/spot.png',
-    EmissiveParticle        : boolean[GroupBy = "Render Info"] = false,
-    OpaqueParticle          : boolean[GroupBy = "Render Info"] = false,
+    EmissiveParticle        : bool[GroupBy = "Render Info"] = false,
+    OpaqueParticle          : bool[GroupBy = "Render Info"] = false,
     Calque                  : string
                               [
                                 values =
@@ -56,7 +56,7 @@ export NullRenderInfo is TFxElementRenderInfo
 
 template Template_DistortionParticleRenderInfo
 [
-    SortTriangles           : boolean[GroupBy = "Render Info"] = false,
+    SortTriangles           : bool[GroupBy = "Render Info"] = false,
     TextureName             : TFileName[Texture] = 'GameData:/Assets/2D/Fx/spot.png',
 ] is TFxElementRenderInfo
 (
@@ -69,7 +69,7 @@ template Template_DistortionParticleRenderInfo
     MeshMaterial = StandardMaterial
 
     SortTriangles = <SortTriangles>
-    Use3DRotation = False
+    Use3DRotation = false
 
     RenderLayerSelector = $/VFX_Bank/FXDistortionRenderLayerSelector
     ContentType = ContentType_Texture_FX
@@ -93,8 +93,8 @@ template LitParticleRenderInfo
 
     MeshMaterial = StandardMaterial
 
-    SortTriangles = True
-    Use3DRotation = True
+    SortTriangles = true
+    Use3DRotation = true
 
     RenderLayerSelector = $/VFX_Bank/FXRenderLayerSelector
     ContentType = ContentType_Texture_FX
@@ -102,7 +102,7 @@ template LitParticleRenderInfo
 
 template DeferredParticleRenderInfo
 [
-    Use3DRotation           : boolean[GroupBy = "Render Info"] = true,
+    Use3DRotation           : bool[GroupBy = "Render Info"] = true,
     TextureName             : TFileName[Texture] = 'GameData:/Assets/2D/Fx/spot.png',
     Calque                  : string
                               [
@@ -135,10 +135,7 @@ template DeferredParticleRenderInfo
     ContentType = ContentType_Texture_FX
 )
 
-template ParticleRenderInfoForMeshParticle
-[
-    RenderInShadowScene,
-] is TFxElementRenderInfo
+ParticleMeshRenderInfo is TFxElementRenderInfo
 (
     MeshMaterial = TMeshMaterial
     (
@@ -147,12 +144,9 @@ template ParticleRenderInfoForMeshParticle
     SortTriangles = false
     Use3DRotation = false
     RenderLayerSelector = $/M3D/Scene/DefaultFxParticleOpaqueRenderPlace
-    RenderInShadowScene = <RenderInShadowScene>
     ContentType = ContentType_Texture_FX
 )
 
-ShadowedParticleMeshRenderInfo is ParticleRenderInfoForMeshParticle(RenderInShadowScene = true)
-ParticleMeshRenderInfo is ParticleRenderInfoForMeshParticle(RenderInShadowScene = false)
 export RotorParticleRenderInfo is TFxElementRenderInfo
 (
     MeshMaterial = TMeshMaterial
@@ -161,8 +155,8 @@ export RotorParticleRenderInfo is TFxElementRenderInfo
         TextureDico = MAP[('OARTexture0', 'GameData:/Assets/2D/Fx/pale_rotor.png')]
     )
 
-    SortTriangles = True
-    Use3DRotation = True
+    SortTriangles = true
+    Use3DRotation = true
 
     RenderLayerSelector = $/VFX_Bank/FXLastRenderLayerSelector
     ContentType = ContentType_Texture_FX
@@ -175,8 +169,8 @@ LightRenderInfo is TFxElementRenderInfo
         MaterialType = 'ParticleLight'
         TextureDico = MAP[('OARTexture0', 'GameData:/Assets/2D/Fx/spot.png')]
     )
-    SortTriangles = False
-    Use3DRotation = True
+    SortTriangles = false
+    Use3DRotation = true
     RenderLayerSelector = $/VFX_Bank/FXLightRenderLayerSelector
     ContentType = ContentType_Texture_FX
 )

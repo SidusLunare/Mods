@@ -557,6 +557,79 @@ export fx_steelman_combat is SimultaneousActionDeclaration
         (
             Mobile = TMobileWithLocalRepereMatrixFactory
             (
+                Position = parPosition
+                EulerAngles = float3[2.913648,0,0]
+            )
+            Actions =
+            [
+                TActionCall
+                (
+                    Action = $/VFX_Bank/BANK_Bomb_Distort_Simple
+                    NamedParams = MAP[
+                        ( 'parDuration', 0.7000002 ),
+                        ( 'parFinalSize', 2700 ),
+                        ( 'parInitialSize', 200 ),
+                        ( 'parIntensity', 5000 ),
+                        ( 'parPositionRelative', float3[3443,-776,0] ),
+                    ]
+                ),
+                TSequentialAction
+                (Actions =
+                    [
+                        TWaitInSec( Duration = 1 ),
+                        TActionCall
+                        (
+                            Action = $/VFX_Bank/BANK_Bomb_Distort_Simple
+                            NamedParams = MAP[
+                                ( 'parDuration', 0.7000002 ),
+                                ( 'parFinalSize', 2700 ),
+                                ( 'parInitialSize', 200 ),
+                                ( 'parIntensity', 5000 ),
+                                ( 'parPositionRelative', float3[581,2688,0] ),
+                            ]
+                        ),
+                    ]
+                ),
+                TSequentialAction
+                (Actions =
+                    [
+                        TWaitInSec( Duration = 1.5 ),
+                        TActionCall
+                        (
+                            Action = $/VFX_Bank/BANK_Bomb_Distort_Simple
+                            NamedParams = MAP[
+                                ( 'parDuration', 0.7000002 ),
+                                ( 'parFinalSize', 2700 ),
+                                ( 'parInitialSize', 200 ),
+                                ( 'parIntensity', 5000 ),
+                                ( 'parPositionRelative', float3[-2075,-3949,0] ),
+                            ]
+                        ),
+                    ]
+                ),
+                TSequentialAction
+                (Actions =
+                    [
+                        TWaitInSec( Duration = 0.75 ),
+                        TActionCall
+                        (
+                            Action = $/VFX_Bank/BANK_Bomb_Distort_Simple
+                            NamedParams = MAP[
+                                ( 'parDuration', 0.7000002 ),
+                                ( 'parFinalSize', 2700 ),
+                                ( 'parInitialSize', 200 ),
+                                ( 'parIntensity', 5000 ),
+                                ( 'parPositionRelative', float3[-4034,360,0] ),
+                            ]
+                        ),
+                    ]
+                ),
+            ]
+        ),
+        TSimultaneousAction
+        (
+            Mobile = TMobileWithLocalRepereMatrixFactory
+            (
                 EulerAngles = float3[2.913648,0,0]
             )
             Actions =
@@ -715,6 +788,72 @@ export fx_steelman_combat is SimultaneousActionDeclaration
                 ),
                 TActionCall
                 (
+                    Action = $/VFX_Bank/BANK_Dynamic_Flash_Simple
+                    NamedParams = MAP[
+                        ( 'parColorEnd', float3[0.6,0.2980392,0.09803922] ),
+                        ( 'parColorStart', float3[0.6,0.2980392,0.09803922] ),
+                        ( 'parDuration', 0.2800001 ),
+                        ( 'parOpacity', 0.98 ),
+                        ( 'parSizeLBU', 46.51163 ),
+                        ( 'Position', float3[3443,-776,0] + parPosition ),
+                    ]
+                ),
+                TSequentialAction
+                (Actions =
+                    [
+                        TWaitInSec( Duration = 1 ),
+                        TActionCall
+                        (
+                            Action = $/VFX_Bank/BANK_Dynamic_Flash_Simple
+                            NamedParams = MAP[
+                                ( 'parColorEnd', float3[0.6,0.2980392,0.09803922] ),
+                                ( 'parColorStart', float3[0.6,0.2980392,0.09803922] ),
+                                ( 'parDuration', 0.2800001 ),
+                                ( 'parOpacity', 0.98 ),
+                                ( 'parSizeLBU', 46.51163 ),
+                                ( 'Position', float3[581,2688,0] + parPosition ),
+                            ]
+                        ),
+                    ]
+                ),
+                TSequentialAction
+                (Actions =
+                    [
+                        TWaitInSec( Duration = 1.5 ),
+                        TActionCall
+                        (
+                            Action = $/VFX_Bank/BANK_Dynamic_Flash_Simple
+                            NamedParams = MAP[
+                                ( 'parColorEnd', float3[0.6,0.2980392,0.09803922] ),
+                                ( 'parColorStart', float3[0.6,0.2980392,0.09803922] ),
+                                ( 'parDuration', 0.2800001 ),
+                                ( 'parOpacity', 0.98 ),
+                                ( 'parSizeLBU', 46.51163 ),
+                                ( 'Position', float3[-2075,-3949,0] + parPosition ),
+                            ]
+                        ),
+                    ]
+                ),
+                TSequentialAction
+                (Actions =
+                    [
+                        TWaitInSec( Duration = 0.75 ),
+                        TActionCall
+                        (
+                            Action = $/VFX_Bank/BANK_Dynamic_Flash_Simple
+                            NamedParams = MAP[
+                                ( 'parColorEnd', float3[0.6,0.2980392,0.09803922] ),
+                                ( 'parColorStart', float3[0.6,0.2980392,0.09803922] ),
+                                ( 'parDuration', 0.2800001 ),
+                                ( 'parOpacity', 0.98 ),
+                                ( 'parSizeLBU', 46.51163 ),
+                                ( 'Position', float3[-4034,360,0] + parPosition ),
+                            ]
+                        ),
+                    ]
+                ),
+                TActionCall
+                (
                     Action = $/VFX_Bank/BANK_Dynamic_Flash_Only_Two_Simple
                     NamedParams = MAP[
                         ( 'parColorEnd', float3[0.9294118,0.2156863,0.007843138] ),
@@ -787,146 +926,7 @@ export fx_steelman_combat is SimultaneousActionDeclaration
                         ),
                     ]
                 ),
-                TActionCall
-                (
-                    Action = $/VFX_Bank/BANK_Dynamic_Flash_Simple
-                    NamedParams = MAP[
-                        ( 'parColorEnd', float3[0.6,0.2980392,0.09803922] ),
-                        ( 'parColorStart', float3[0.6,0.2980392,0.09803922] ),
-                        ( 'parDuration', 0.2800001 ),
-                        ( 'parOpacity', 0.98 ),
-                        ( 'parSizeLBU', 46.51163 ),
-                        ( 'Position', float3[3443,-776,0] + parPosition ),
-                    ]
-                ),
-                TSequentialAction
-                (Actions =
-                    [
-                        TWaitInSec( Duration = 1 ),
-                        TActionCall
-                        (
-                            Action = $/VFX_Bank/BANK_Dynamic_Flash_Simple
-                            NamedParams = MAP[
-                                ( 'parColorEnd', float3[0.6,0.2980392,0.09803922] ),
-                                ( 'parColorStart', float3[0.6,0.2980392,0.09803922] ),
-                                ( 'parDuration', 0.2800001 ),
-                                ( 'parOpacity', 0.98 ),
-                                ( 'parSizeLBU', 46.51163 ),
-                                ( 'Position', float3[581,2688,0] + parPosition ),
-                            ]
-                        ),
-                    ]
-                ),
-                TSequentialAction
-                (Actions =
-                    [
-                        TWaitInSec( Duration = 1.5 ),
-                        TActionCall
-                        (
-                            Action = $/VFX_Bank/BANK_Dynamic_Flash_Simple
-                            NamedParams = MAP[
-                                ( 'parColorEnd', float3[0.6,0.2980392,0.09803922] ),
-                                ( 'parColorStart', float3[0.6,0.2980392,0.09803922] ),
-                                ( 'parDuration', 0.2800001 ),
-                                ( 'parOpacity', 0.98 ),
-                                ( 'parSizeLBU', 46.51163 ),
-                                ( 'Position', float3[-2075,-3949,0] + parPosition ),
-                            ]
-                        ),
-                    ]
-                ),
-                TSequentialAction
-                (Actions =
-                    [
-                        TWaitInSec( Duration = 0.75 ),
-                        TActionCall
-                        (
-                            Action = $/VFX_Bank/BANK_Dynamic_Flash_Simple
-                            NamedParams = MAP[
-                                ( 'parColorEnd', float3[0.6,0.2980392,0.09803922] ),
-                                ( 'parColorStart', float3[0.6,0.2980392,0.09803922] ),
-                                ( 'parDuration', 0.2800001 ),
-                                ( 'parOpacity', 0.98 ),
-                                ( 'parSizeLBU', 46.51163 ),
-                                ( 'Position', float3[-4034,360,0] + parPosition ),
-                            ]
-                        ),
-                    ]
-                ),
                 TWaitInSec( Duration = 1.4),
-            ]
-        ),
-        TSimultaneousAction
-        (
-            Mobile = TMobileWithLocalRepereMatrixFactory
-            (
-                Position = parPosition
-                EulerAngles = float3[2.913648,0,0]
-            )
-            Actions =
-            [
-                TActionCall
-                (
-                    Action = $/VFX_Bank/BANK_Bomb_Distort_Simple
-                    NamedParams = MAP[
-                        ( 'parDuration', 0.7000002 ),
-                        ( 'parFinalSize', 2700 ),
-                        ( 'parInitialSize', 200 ),
-                        ( 'parIntensity', 5000 ),
-                        ( 'parPositionRelative', float3[3443,-776,0] ),
-                    ]
-                ),
-                TSequentialAction
-                (Actions =
-                    [
-                        TWaitInSec( Duration = 1 ),
-                        TActionCall
-                        (
-                            Action = $/VFX_Bank/BANK_Bomb_Distort_Simple
-                            NamedParams = MAP[
-                                ( 'parDuration', 0.7000002 ),
-                                ( 'parFinalSize', 2700 ),
-                                ( 'parInitialSize', 200 ),
-                                ( 'parIntensity', 5000 ),
-                                ( 'parPositionRelative', float3[581,2688,0] ),
-                            ]
-                        ),
-                    ]
-                ),
-                TSequentialAction
-                (Actions =
-                    [
-                        TWaitInSec( Duration = 1.5 ),
-                        TActionCall
-                        (
-                            Action = $/VFX_Bank/BANK_Bomb_Distort_Simple
-                            NamedParams = MAP[
-                                ( 'parDuration', 0.7000002 ),
-                                ( 'parFinalSize', 2700 ),
-                                ( 'parInitialSize', 200 ),
-                                ( 'parIntensity', 5000 ),
-                                ( 'parPositionRelative', float3[-2075,-3949,0] ),
-                            ]
-                        ),
-                    ]
-                ),
-                TSequentialAction
-                (Actions =
-                    [
-                        TWaitInSec( Duration = 0.75 ),
-                        TActionCall
-                        (
-                            Action = $/VFX_Bank/BANK_Bomb_Distort_Simple
-                            NamedParams = MAP[
-                                ( 'parDuration', 0.7000002 ),
-                                ( 'parFinalSize', 2700 ),
-                                ( 'parInitialSize', 200 ),
-                                ( 'parIntensity', 5000 ),
-                                ( 'parPositionRelative', float3[-4034,360,0] ),
-                            ]
-                        ),
-                    ]
-                ),
             ]
         ),
         TSimultaneousAction

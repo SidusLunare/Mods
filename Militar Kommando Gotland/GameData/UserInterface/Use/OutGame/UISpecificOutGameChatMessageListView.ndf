@@ -143,4 +143,7 @@ UISpecificOutGameChatMessageListViewDescriptor is TUISpecificOutGameChatMessageL
     MainComponentContainerUniqueName = "" // Permet d'indiquer l'endroit ou le composant doit s'insérer
 
     MaxNameSizeInChat = 25
+
+    MessageReceivedSound = ~/SoundEvent_ChatMessageReceived
+    MessageReceivedSoundMinDelay = 10
 )

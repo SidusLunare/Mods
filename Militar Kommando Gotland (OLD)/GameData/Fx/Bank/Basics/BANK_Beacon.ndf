@@ -1,0 +1,321 @@
+template OneBeaconAtPosition
+[
+    Color,
+    Position,
+] is Simultaneous
+(
+    Mobile = Template_MobileWithLocalRepereMatrixFactory
+    (
+        Position = <Position>
+    )
+    Actions =
+    [
+        Template_ActionCall
+        (
+            Action = ~/FX_BANK_Beacon
+            NamedParameters = MAP[
+                ( 'Par_Beacon_Color', <Color> ),
+                ( 'Par_Beacon_Alpha', 0.5 ),
+            ]
+        )
+    ]
+)
+
+export BANK_OneBeacon_test is Simultaneous
+(
+    Actions =
+    [
+        OneBeaconAtPosition( Color = float3[45, 175, 23] div 255.0 Position = float3[0,0,0,]),
+    ]
+)
+
+export FX_BANK_Beacon is SimultaneousActionDeclaration
+(
+    Params =
+    [
+        private Par_Beacon_Color is Template_Param_Float3( DefaultValue = float3[1.00, 0.00, 0.00] ),
+        private Par_Beacon_Alpha is Template_Param_Float ( DefaultValue = TConstantInteger(Value = 1) ),
+    ]
+    Actions =
+    [
+        Template_WaitForEver(),
+        private All is ParticleBombSpawner
+        (
+            Count = 1
+            Spawner = ParticleSpawner
+            (
+                ParticleLifetime = 666 // infini
+                Initialisers =
+                [
+                    ParticleInitialiserList
+                    (
+                        ColorModifier = LinearColor[Par_Beacon_Color]
+                        Alpha = Par_Beacon_Alpha
+                        Opacity = RandomUnit * Par_Beacon_Alpha
+                    ),
+                    Initialiser_SetMobileWrapper(),
+                ]
+                PostTransformInitialisers =
+                [
+                    Template_Post_Initialiser_For_EvolverSpraySpawner
+                    (
+                        ElapsedTimeField = $/Particle/CustomFloat_9
+                        PreviousPositionField = $/Particle/CustomFloat3_9
+                    ),
+                ]
+                ParticleDescriptor = ParticleDescriptor
+                (
+                    InfiniteParticles = true
+                    ParticleRenderer = $/VFX_Bank/NullRenderer
+                    RenderInfo = $/VFX_Bank/NullRenderInfo
+                    Evolvers = ParticleStandardEvolverList
+                    (
+                        Position = ParticleMobileWrapperPositionUnScaled
+                        AdditionnalEvolvers =
+                        [
+                            EvolverSpraySpawner
+                            (
+                                Frequency = 12
+                                MaxSpawnedParticleLifetime = 6
+                                Spawner = ParticleSpawner
+                                (
+                                    ParticleLifetime = 6
+                                    Initialisers =
+                                    [
+                                        Initialiser_SetSpawningParticleMobileWrapper(),
+                                        private Fumigen_init is ParticleInitialiserList
+                                        (
+                                            Size = 300
+                                            Alpha = 1.0
+
+                                            Position = MinusOneToOneRandomDisc * 50
+                                            Speed = (MinusOneToOneLargeFakeNoise_Float3_Interpolate[RandomUnit + Sawtooth[SpawningParticleElapsedTime * 0.005]] +
+                                                    MinusOneToOneRandomHemisphereVolume) * 280 + float3[0.00, 0.00, 1020.00]
+                                            RotationSpeed = RandomRange[-0.08, 0.08]
+                                            Rotation = RandomUnit
+                                            CustomFloat_1 = SpawningParticleAlpha * 0.07
+                                            CustomFloat_2 = RandomRange[220, 300]
+                                            ColorModifier = SpawningParticleColorModifier
+                                            EmissivePower = 1
+                                        ),
+                                    ]
+                                    ParticleDescriptor = ParticleDescriptor
+                                    (
+                                        ParticleRenderer = $/VFX_Bank/LitParticleRenderer
+                                        RenderInfo = ParticleRenderInfo
+                                        (
+                                            SortTriangles = True
+                                            TextureName = 'GameData:/Assets/2D/Fx/poussiere.png'
+                                            EmissiveParticle = true
+                                        )
+                                        Evolvers = ParticleStandardEvolverList
+                                        (
+                                            Position = ParticleMobileWrapperPositionUnScaled + ParticleLifeRatio * ParticleSpeed * 5
+                                            Opacity = AttackDecay[ParticleLifeRatio, 0.1] * ParticleCustomFloat_1
+                                            Size = (ParticleElapsedTime + 1) * ParticleCustomFloat_2
+                                            EmissivePower = AttackDecay[ParticleLifeRatio, 0.1] * ParticleCustomFloat_1
+                                        )
+                                    )
+                                )
+                            ),
+                            EvolverSpraySpawner
+                            (
+                                Frequency = 20
+                                MaxSpawnedParticleLifetime = 3
+                                ElapsedTimeField = $/Particle/CustomFloat_9
+                                PreviousPositionField = $/Particle/CustomFloat3_9
+                                Spawner = ParticleSpawner
+                                (
+                                    ParticleLifetime = 1
+                                    Initialisers =
+                                    [
+                                        private Sparks_init is ParticleInitialiserList
+                                        (
+                                            Alpha = 1.0
+
+                                            Position = MinusOneToOneRandomCircle * 50
+                                            Speed = MinusOneToOneRandomHemisphereVolume * 500 + float3[0.00, 0.00, 500.00]
+                                            Size = RandomRange[10, 20]
+                                            ColorModifier = SpawningParticleColorModifier
+                                            CustomFloat_1 = SpawningParticleAlpha * 7
+                                            Stretching = 0.15
+                                            Opacity = 0
+                                            CustomFloat3_1 = MinusOneToOneRandomCircle * 1500
+                                        ),
+                                        Initialiser_SetSpawningParticleMobileWrapper(),
+                                    ]
+                                    ParticleDescriptor = ParticleDescriptor
+                                    (
+                                        ParticleRenderer = $/VFX_Bank/LitParticleRenderer
+                                        RenderInfo = ParticleRenderInfo
+                                        (
+                                            SortTriangles = True
+                                            TextureName = 'GameData:/Assets/2D/Fx/flare_gris.png'
+                                            EmissiveParticle = true
+                                        )
+
+                                        Evolvers = ParticleStandardEvolverList
+                                        (
+                                            Position = ParticleMobileWrapperPositionUnScaled + ParticleLifeRatio * ParticleSpeed * 2
+                                            Direction = ParticleSpeed
+                                            EmissivePower = ParticleRemainingLifeRatio * ParticleCustomFloat_1
+                                            Stretching = 10 * ParticleRemainingLifeRatio
+                                        )
+
+                                    )
+                                )
+                            ),
+                        ]
+                    )
+                )
+            )
+        ),
+        private Sparks_begin_Bombe is ParticleBombSpawner
+        (
+            ParticleMaxDurationForSpawnSkip = 3
+            Count = 50
+            Spawner = ParticleSpawner
+            (
+                ParticleLifetime = 0.5
+                Initialisers =
+                [
+                    private Sparks_init is ParticleInitialiserList
+                    (
+                        Alpha = 1.0
+
+                        Position = MinusOneToOneRandomCircle * 50
+                        Speed = MinusOneToOneRandomHemisphereVolume * 1200 + float3[0.00, 0.00, 1200.00]
+                        Size = RandomRange[10, 20]
+                        ColorModifier = LinearColor[Par_Beacon_Color]
+                        Stretching = 0.15
+                        Opacity = 0
+                    ),
+                    Initialiser_SetMobileWrapper(),
+                ]
+                ParticleDescriptor = ParticleDescriptor
+                (
+                    ParticleRenderer = $/VFX_Bank/LitParticleRenderer
+                    RenderInfo = ParticleRenderInfo
+                    (
+                        SortTriangles = True
+                        TextureName = 'GameData:/Assets/2D/Fx/flare_blanc_02.png'
+                        EmissiveParticle = true
+                    )
+                    Evolvers = private Sparks_evolver is ParticleStandardEvolverListWithPhysic
+                    (
+                        FluidFriction = 1
+                        PhysicAccelerationField = float3[0.00, 0.00, -2000.00]
+                        EmissivePower = ParticleRemainingLifeRatio * 10
+                        Direction = ParticleSpeed
+                        Stretching = 10 * ParticleRemainingLifeRatio
+                    )
+                )
+            )
+        ),
+        private Fumigen_glow is ParticleBombSpawner
+        (
+            ParticleMaxDurationForSpawnSkip = 666
+            Count = 1
+            Spawner = ParticleSpawner
+            (
+                ParticleLifetime = 666 // infinite
+                Initialisers =
+                [
+                    private Fumigen_glow_init is ParticleInitialiserList
+                    (
+                        Alpha = 1.0
+                        ColorMultiplier = 1.0
+
+                        Position = float3[0.00, 0.00, 50.00]
+                        Size = 250
+                        ColorModifier = LinearColor[Par_Beacon_Color]
+                        CustomFloat_1 = Par_Beacon_Alpha
+                        CustomFloat_2 = RandomRange[180, 220]
+                        ZBias = 255
+                        Opacity = Par_Beacon_Alpha
+                    ),
+                    Initialiser_SetMobileWrapper(),
+                ]
+                ParticleDescriptor = ParticleDescriptor
+                (
+                    InfiniteParticles = true
+                    ParticleRenderer = $/VFX_Bank/StandardRenderer
+                    RenderInfo = ParticleRenderInfo
+                    (
+                        SortTriangles = True
+                        TextureName = 'GameData:/Assets/2D/Fx/flare_blanc_02.png'
+                        Use3DRotation = False
+                        EmissiveParticle = true
+                    )
+                    Evolvers = private Fumigen_glow_evolver is ParticleStandardEvolverList
+                    (
+                        Position = ParticleMobileWrapperPositionUnScaled
+                        ColorMultiplier = RandomRange[3,6] * 0.1
+                        Size = RandomRange[600,1000]
+                    )
+                )
+            )
+        ),
+        private Fumigen_glow_plane is ParticleBombSpawner
+        (
+            ParticleMaxDurationForSpawnSkip = 0
+            Count = 1
+            Spawner = ParticleSpawner
+            (
+                ParticleLifetime = 666
+                Initialisers =
+                [
+                    private Fumigen_glow_plane_init is ParticleInitialiserList
+                    (
+                        ColorRGB = float3[1, 1, 1]
+
+                        Position = float3[0.00, 0.00, 50.00]
+                        Size = 500
+                        ColorModifier = LinearColor[Par_Beacon_Color]
+                        ColorMultiplier = 3
+                        CustomFloat_1 = Par_Beacon_Alpha
+                        CustomFloat_2 = RandomRange[180, 220]
+                        Opacity = 0
+                        UpVector = float3[0.00, 0.00, 1.00]
+                        ZBias = 255
+                        Alpha = Par_Beacon_Alpha
+                    ),
+                    Initialiser_SetMobileWrapper(),
+                ]
+                ParticleDescriptor = ParticleDescriptor
+                (
+                    InfiniteParticles = true
+                    ParticleRenderer = Template_ParticleRendererPlane()
+                    RenderInfo = ParticleRenderInfo
+                    (
+                        SortTriangles = True
+                        TextureName = 'GameData:/Assets/2D/Fx/flare_jaune_00.png'
+                        Use3DRotation = False
+                        EmissiveParticle = true
+                    )
+                    Evolvers = private Fumigen_glow_evolver is ParticleStandardEvolverList
+                    (
+                        Position = ParticleMobileWrapperPositionUnScaled
+                        ColorMultiplier = RandomRange[3,4] * 0.1
+                        Size = RandomRange[600,1000]
+                    )
+                )
+            )
+        ),
+    ]
+)
+
+export FX_BANK_Beacon_Simple is ActionCallWithParameters
+(
+    Action = FX_BANK_Beacon
+    Params =
+    [
+        private Par_Beacon_Color       is Template_Param_Float3 ( DefaultValue = float3[1, 0, 0] ),
+        private Par_Beacon_Alpha       is Template_Param_Float ( DefaultValue = 1 ),
+    ]
+    NamedParameters = MAP
+    [
+        ( 'Par_Beacon_Color'           , LinearColor[Par_Beacon_Color] ),
+        ( 'Par_Beacon_Alpha'           , Par_Beacon_Alpha ),
+    ]
+)

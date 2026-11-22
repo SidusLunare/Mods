@@ -1,0 +1,52 @@
+// Ne pas éditer, ce fichier est généré
+
+export fx_critique_moteur_detruit is Simultaneous
+(
+    Actions = ActionList is
+    [
+        TSimultaneousAction
+        (
+            Mobile = TMobileWithLocalRepereMatrixFactory
+            (
+                Position = float3[0,0,-301]
+            )
+            Actions =
+            [
+                TActionCall
+                (
+                    Action = $/VFX_Bank/AoA_FX_BANK_FireAndDarkSmoke_Simple
+                    NamedParams = MAP[
+                        ( 'Feu_Size_Mul', 0.2 ),
+                        ( 'FireCountMul', 0.5 ),
+                        ( 'FireDuration', 5 ),
+                        ( 'Ground_Size', 0.8 ),
+                        ( 'SmokeCountMul', 3 ),
+                        ( 'SmokeDuration', 7 ),
+                        ( 'SmokeOpacity', 0.8 ),
+                        ( 'SmokeSpeed', 1 ),
+                        ( 'Smoke_Size_Mul', 0.5 ),
+                        ( 'SparksCountMul', 5 ),
+                        ( 'SparksDuration', 1.5 ),
+                    ]
+                ),
+            ]
+        ),
+        TSimultaneousAction
+        (
+            Mobile = nil
+            Actions =
+            [
+                TActionCall
+                (
+                    Action = $/VFX_Bank/BANK_Light_Follow_Mobile_Random_Flash_Infinite_Simple
+                    NamedParams = MAP[
+                        ( 'parColor', float3[0.882353,0.454902,0.1372549] ),
+                        ( 'parHeight', 500 ),
+                        ( 'parOpacity', 0.6 ),
+                        ( 'parSizeLBU', 23.25581 ),
+                    ]
+                ),
+            ]
+        ),
+    ]
+)

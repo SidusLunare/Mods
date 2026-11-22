@@ -38,7 +38,7 @@ template ParticleStandardEvolverList
     RotationSpeed   : TEvaluable[GroupBy = "Standard fields"] = nil,
     Rotation        : TEvaluable[GroupBy = "Standard fields"] = nil,
     RotationAxisForMesh : TEvaluable[GroupBy = "Standard fields"] = nil,
-    UseHardCodedRotation        : boolean = false,
+    UseHardCodedRotation        : bool = false,
     AdditionnalEvolvers         : LIST<TParticleEvolverDescriptor> = []
 ]   is TParticleEvolver_List
 (

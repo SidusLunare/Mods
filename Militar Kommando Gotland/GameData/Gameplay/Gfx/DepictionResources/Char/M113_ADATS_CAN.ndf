@@ -1,21 +1,21 @@
 export Modele_M113_ADATS_CAN is TResourceMesh
 (
-    Mesh="GameData:/Assets/3D/Units/CAN/APC/M113_ADATS/M113_ADATS.fbx"
+    Mesh="GameData:/Assets/3D/Units/CAN/DCA/M113_ADATS/M113_ADATS.fbx"
 )
 
 export Modele_M113_ADATS_CAN_MID is TResourceMesh
 (
-    Mesh="GameData:/Assets/3D/Units/CAN/APC/M113_ADATS_MID/M113_ADATS_MID.fbx"
+    Mesh="GameData:/Assets/3D/Units/CAN/DCA/M113_ADATS_MID/M113_ADATS_MID.fbx"
 )
 
 export Modele_M113_ADATS_CAN_LOW is TResourceMesh
 (
-    Mesh="GameData:/Assets/3D/Units/CAN/APC/M113_ADATS_LOW/M113_ADATS_LOW.fbx"
+    Mesh="GameData:/Assets/3D/Units/CAN/DCA/M113_ADATS_LOW/M113_ADATS_LOW.fbx"
 )
 
 export DeployAnimation_M113_ADATS_CAN is TResourceMatrixArrayAnimation
 (
-    FileName   = 'GameData:/Assets/3D/Units/CAN/APC/M113_ADATS/M113_ADATS_Deploy.fbx'
+    FileName   = 'GameData:/Assets/3D/Units/CAN/DCA/M113_ADATS/M113_ADATS_Deploy.fbx'
     PlayInLoop     = false
 )
 
@@ -23,32 +23,32 @@ export DepictionOperator_Deployable_M113_ADATS_CAN is DepictionOperator_Animatio
 (
     DeployAnimation = TResourceMatrixArrayAnimation
     (
-        FileName   = 'GameData:/Assets/3D/Units/CAN/APC/M113_ADATS/M113_ADATS_Deploy.fbx'
+        FileName   = 'GameData:/Assets/3D/Units/CAN/DCA/M113_ADATS/M113_ADATS_Deploy.fbx'
         PlayInLoop     = false
     )
 
     FoldAnimation = TResourceMatrixArrayAnimation
     (
-        FileName   = 'GameData:/Assets/3D/Units/CAN/APC/M113_ADATS/M113_ADATS_Fold.fbx'
+        FileName   = 'GameData:/Assets/3D/Units/CAN/DCA/M113_ADATS/M113_ADATS_Fold.fbx'
         PlayInLoop     = false
     )
 
     IdleAnimation = TResourceMatrixArrayAnimation
     (
-        FileName   = 'GameData:/Assets/3D/Units/CAN/APC/M113_ADATS/M113_ADATS_Deploy.fbx'
+        FileName   = 'GameData:/Assets/3D/Units/CAN/DCA/M113_ADATS/M113_ADATS_Deploy.fbx'
         PlayInLoop     = false
     )
 
     MoveFrontAnimation = TResourceMatrixArrayAnimation
     (
-        FileName   = 'GameData:/Assets/3D/Units/CAN/APC/M113_ADATS/M113_ADATS_Fold.fbx'
+        FileName   = 'GameData:/Assets/3D/Units/CAN/DCA/M113_ADATS/M113_ADATS_Fold.fbx'
         PlayInLoop     = false
     )
 
     MoveBackAnimation = TResourceMatrixArrayAnimation
     (
-        FileName   = 'GameData:/Assets/3D/Units/CAN/APC/M113_ADATS/M113_ADATS_Fold.fbx'
-        PlayInLoop     = true
+        FileName   = 'GameData:/Assets/3D/Units/CAN/DCA/M113_ADATS/M113_ADATS_Fold.fbx'
+        PlayInLoop     = false
     )
 
     DeployFromMoveTime  = 1

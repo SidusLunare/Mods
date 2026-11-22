@@ -1,0 +1,127 @@
+// Call Test_Flash in FX Tester
+export Test_Test_Flash is Template_ActionCall
+(
+    Action = ~/BANK_Test_Flash
+)
+
+export BANK_Test_Flash is SimultaneousActionDeclaration
+(
+    Params =
+    [
+        private parPositionRelative is Template_Param_Float3( DefaultValue = float3[0,0,0] ),
+        private parInitialSize      is Template_Param_Float ( DefaultValue = 10 ),
+        private parFinalSize        is Template_Param_Float ( DefaultValue = 10000 ),
+        private parDuration         is Template_Param_Float ( DefaultValue = 0.1 ),
+        private parZBias            is Template_Param_Float ( DefaultValue = 0 ),
+        private parCount            is Template_Param_Int   ( DefaultValue = 1 ),
+    ]
+    Actions =
+    [
+        private Test_Bomb_Flash is ParticleBombSpawner
+        (
+            Count = parCount
+            Spawner =  ParticleSpawner
+            (
+                ParticleLifetime = parDuration
+                Initialisers =
+                [
+                    ParticleInitialiserList
+                    (
+                        Position= parPositionRelative
+                        ColorRGB = LinearColor[1, 1, 1]
+                        ColorMultiplier = 1
+                        Rotation= RandomUnit
+                        EmissivePower = 0.5
+                        ColorModifier = 1
+                        Opacity = 0.8
+                        CustomFloat_1= parInitialSize * 2 * HomogeneousUnit
+                        CustomFloat_2= parFinalSize * 2 * HomogeneousUnit
+                        CustomFloat_4= parZBias
+                    )
+                ]
+                ParticleDescriptor = ParticleDescriptor
+                (
+                    RenderInfo = ParticleRenderInfo
+                    (
+                        ZTest = True
+                        ZWrite = False
+                        SortTriangles = True
+                        TextureName = 'GameData:/Assets/2D/Fx/spot.png'
+                        Calque = 'Particles'
+                        EmissiveParticle = true
+                    )
+                    Evolvers = ParticleStandardEvolverList
+                    (
+                        Opacity = lerp[sqrt[sqrt[ParticleLifeRatio]], 0.7, 0]
+                        EmissivePower = lerp[sqrt[sqrt[ParticleLifeRatio]], 0.3, 0]//0.1//AttackDecay[ParticleLifeRatio, 0.8] * 2
+                        Size = lerp[sqrt[sqrt[ParticleLifeRatio]], ParticleCustomFloat_1, ParticleCustomFloat_2]
+                        ZBias = ParticleCustomFloat_4
+                    )
+                    ParticleRenderer = LitParticleRenderer
+                )
+            )
+        ),
+    ]
+)
+export BANK_Test_Flash_Flat is SimultaneousActionDeclaration
+(
+    Params =
+    [
+        private parPositionRelative is Template_Param_Float3( DefaultValue = float3[0,0,0] ),
+        private parInitialSize      is Template_Param_Float ( DefaultValue = 10 ),
+        private parFinalSize        is Template_Param_Float ( DefaultValue = 10000 ),
+        private parDuration         is Template_Param_Float ( DefaultValue = 0.1 ),
+        private parZBias            is Template_Param_Float ( DefaultValue = 255 ),
+        private parUpVector         is Template_Param_Float3( DefaultValue = float3[0,0,1] ),
+        private parCount            is Template_Param_Int   ( DefaultValue = 1 ),
+    ]
+    Actions =
+    [
+        private Test_Bomb_Flash is ParticleBombSpawner
+        (
+            Count = parCount
+            Spawner =  ParticleSpawner
+            (
+                ParticleLifetime = parDuration
+                Initialisers =
+                [
+                    ParticleInitialiserList
+                    (
+                        UpVector = parUpVector
+                        Position= parPositionRelative
+                        ColorRGB = LinearColor[1, 1, 1]
+                        ColorMultiplier = 1
+                        Rotation= RandomUnit
+                        EmissivePower = 0.5
+                        ColorModifier = 1
+                        Opacity=0.8
+                        CustomFloat_1= parInitialSize * 2 * HomogeneousUnit
+                        CustomFloat_2= parFinalSize * 2 * HomogeneousUnit
+                        CustomFloat_4= parZBias
+                    )
+                ]
+                ParticleDescriptor = ParticleDescriptor
+                (
+                    RenderInfo = ParticleRenderInfo
+                    (
+                        ZTest = True
+                        ZWrite = False
+                        SortTriangles = True
+                        Use3DRotation = False
+                        TextureName = 'GameData:/Assets/2D/Fx/spot.png'
+                        Calque = 'Particles'
+                        EmissiveParticle = true
+                    )
+                    Evolvers = ParticleStandardEvolverList
+                    (
+                        Opacity = lerp[sqrt[sqrt[ParticleLifeRatio]], 0.7, 0]
+                        EmissivePower = lerp[sqrt[sqrt[ParticleLifeRatio]], 0.3, 0]//0.5//AttackDecay[ParticleLifeRatio, 0.8] * 2
+                        Size = lerp[sqrt[sqrt[ParticleLifeRatio]], ParticleCustomFloat_1, ParticleCustomFloat_2]
+                        ZBias = ParticleCustomFloat_4
+                    )
+                    ParticleRenderer = Template_ParticleRendererPlane(StickOnGround = true)
+                )
+            )
+        ),
+    ]
+)

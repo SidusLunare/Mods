@@ -3,39 +3,34 @@ IALinkToGroupModuleDescriptor is TIALinkToGroupModuleDescriptor()
 StrategicSequenceModuleDescriptor is TStrategicSequenceModuleDescriptor()
 StrategicAerialModuleDescriptor is TStrategicAerialModuleDescriptor()
 
-template StrategicFatigueModuleDescriptor [ InitialFatigue ] is TStrategicFatigueModuleDescriptor
+template StrategicFatigueModuleDescriptor [ InitialFatigue, MaxFatigue = ~/StrategicMaxFatiguePerUnit ] is TStrategicFatigueModuleDescriptor
 (
-  MaxFatigue      = ~/StrategicMaxFatiguePerUnit
+  MaxFatigue      = <MaxFatigue>
   InitialFatigue  = <InitialFatigue>
 )
 
 StrategicSelectionModuleDescriptor is TSelectionModuleDescriptor
 (
-    IsSelectable       = True
-    IsHighlightable    = True
-    HasSelectionShader = True
-    HasHighlightShader = True
+    IsSelectable       = true
+    IsHighlightable    = true
+    HasSelectionShader = true
+    HasHighlightShader = true
 )
 
 PawnPositionModuleDescriptor is TPositionModuleDescriptor
 (
-    InGeoDb                    = True
-    ClampInWorld               = False
-    ClampOutMap                = False
+    InitialCollisionPlane      = TCollisionPlane/Ground
+    InGeoDb                    = true
 )
 
-StrategicStateEngineModuleDescriptor is TStateEngineUnitModuleDescriptor
-(
-)
+StrategicStateEngineModuleDescriptor is TStateEngineUnitModuleDescriptor()
 
-StrategicIdleStatusModuleDescriptor is TStrategicIdleStatusModuleDescriptor
-(
-)
+StrategicIdleStatusModuleDescriptor is TStrategicIdleStatusModuleDescriptor()
 
 StrategicBuildingModuleDescriptor is TWargameBuildingModuleDescriptor
 (
-    BoundingBoxMinInLBU = $/GFX/Constantes/StrategicBuildingBoxMin
-    BoundingBoxMaxInLBU = $/GFX/Constantes/StrategicBuildingBoxMax
+    BoundingBoxMinInLBU = $/GFX/Pawn/StrategicBuildingBoxMin
+    BoundingBoxMaxInLBU = $/GFX/Pawn/StrategicBuildingBoxMax
 )
 
 template StrategicUIModuleDescriptor [ NameToken, ProdMenuTexture ] is TPawnUIModuleDescriptor
@@ -46,15 +41,17 @@ template StrategicUIModuleDescriptor [ NameToken, ProdMenuTexture ] is TPawnUIMo
 
 PawnAirplaneOrderConfigModuleDescriptor is TOrderConfigModuleDescriptor()
 
-PawnAirportScannerConfigurationDescriptor is TScannerConfigurationDescriptor
+PawnBuildingScannerConfigurationDescriptor is TScannerConfigurationDescriptor
 (
     VisionRangesGRU = MAP [
         ( EVisionRange/Standard, 353.356890459 ),
         ( EVisionRange/HighAltitude, 706.713780919 ),
     ]
     OpticalStrengths = MAP [
-        ( EOpticalStrength/Standard, 120.0 ),
-        ( EOpticalStrength/LowAltitude, 120.0 ),
-        ( EOpticalStrength/HighAltitude, 60.0 ),
+        ( EOpticalStrength/Standard, 4240.282686 ),
+        ( EOpticalStrength/LowAltitude, 4240.282686 ),
+        ( EOpticalStrength/HighAltitude, 2120.141343 ),
     ]
 )
+
+StrategicPositionModuleDescriptor is TStrategicPositionModuleDescriptor()

@@ -1,0 +1,6 @@
+//-----------------------------------------------------------------------------
+// primitive type (Synchronisé avec Core3D/Primitives.h)
+
+PrimitiveType_POINTLIST     is 1
+PrimitiveType_LINELIST      is 2
+PrimitiveType_TRIANGLELIST  is 3

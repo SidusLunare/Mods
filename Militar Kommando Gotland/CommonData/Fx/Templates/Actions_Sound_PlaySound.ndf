@@ -1,14 +1,14 @@
 template Template_PlaySound
 [
     SoundDescriptor     : TSoundDescriptor = nil,
-    Looped              : boolean[GroupBy = "Looping"] = true,
-    DetachSoundPosition : boolean = false,
-    SoundId             : integer[>=0] = 0,
+    Looped              : bool[GroupBy = "Looping"] = true,
+    DetachSoundPosition : bool = false,
+    SoundId             : int[>=0] = 0,
 
-    UseCustomPosition   : boolean[GroupBy = "Position"] = false,
+    UseCustomPosition   : bool[GroupBy = "Position"] = false,
     CustomPosition      : float3[GroupBy = "Position"] = float3[0, 0, 0],
 
-    FadeIn              : boolean[GroupBy = "FadeIn"] = false,
+    FadeIn              : bool[GroupBy = "FadeIn"] = false,
     FadeFrom            : float[GroupBy = "FadeIn"] = 0,
     FadeVelocity        : float[GroupBy = "FadeIn"] = 0.1
 ] is TActionDescriptorPlaySound

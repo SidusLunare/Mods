@@ -26,12 +26,32 @@ WeaponTraits is TWeaponTraitsContainer
             )
         ),
         (
+            "ERFB",
+            TWeaponTraitDescriptor
+            (
+                TraitTextureName       = "Texture_Trait_Icon_indirect_ERFB"
+                TraitHintTitleToken    = "OTIZHIZOBS"
+                TraitHintBodyToken     = "YRVCGRILFO"
+                ShowAsFilterInShowroom = True
+            )
+        ),
+        (
             "F&F",
             TWeaponTraitDescriptor
             (
                 TraitTextureName       = "Texture_Trait_Icon_fireAndForget"
                 TraitHintTitleToken    = "INEEJCQGOC"
                 TraitHintBodyToken     = "SPZEYDYYBR"
+                ShowAsFilterInShowroom = True
+            )
+        ),
+        (
+            "F&F_boresight",
+            TWeaponTraitDescriptor
+            (
+                TraitTextureName       = "Texture_Trait_Icon_fireAndForget_boresight"
+                TraitHintTitleToken    = "MWMJSNAVAC"
+                TraitHintBodyToken     = "HQHPIJEOCJ"
                 ShowAsFilterInShowroom = True
             )
         ),
@@ -208,6 +228,16 @@ WeaponTraits is TWeaponTraitsContainer
                 TraitTextureName       = "Texture_Trait_Icon_demolition"
                 TraitHintTitleToken    = "MISTHDBINN"
                 TraitHintBodyToken     = "WHGWOIPJER"
+                ShowAsFilterInShowroom = True
+            )
+        ),
+        (
+            "flashbang",
+            TWeaponTraitDescriptor
+            (
+                TraitTextureName       = "Texture_Trait_Icon_flashbang"
+                TraitHintTitleToken    = "PNBBJKKXTY"
+                TraitHintBodyToken     = "AGUFHSPSRB"
                 ShowAsFilterInShowroom = True
             )
         ),

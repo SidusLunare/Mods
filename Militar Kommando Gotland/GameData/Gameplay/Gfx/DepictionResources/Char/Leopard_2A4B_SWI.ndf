@@ -1,0 +1,19 @@
+export Modele_Leopard_2A4B_SWI is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/SWI/Char/Leopard_2A4B/Leopard_2A4B.fbx"
+)
+
+export Modele_Leopard_2A4B_SWI_MID is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/SWI/Char/Leopard_2A4B_MID/Leopard_2A4B_MID.fbx"
+)
+
+export Modele_Leopard_2A4B_SWI_LOW is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/SWI/Char/Leopard_2A4B_LOW/Leopard_2A4B_LOW.fbx"
+)
+
+export Modele_Leopard_2A4B_SWI_Tourelle_02 is TResourceMesh
+(
+    Mesh=ModelFile_MAG_cosmetic
+)

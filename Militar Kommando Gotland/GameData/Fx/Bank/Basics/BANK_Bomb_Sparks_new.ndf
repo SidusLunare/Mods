@@ -47,7 +47,7 @@ export BANK_Bomb_SpraySparks_Omni is template_BANK_Bomb_NewSparks_Spray
 
 template template_BANK_Bomb_NewSparks
 [
-    Omnidirection : boolean,
+    Omnidirection : bool,
 ]is Template_ActionWithParameters
 (
     Params =
@@ -112,10 +112,10 @@ template template_BANK_Bomb_NewSparks
                                 ParticleRenderer = $/VFX_Bank/LitParticleRenderer
                                 RenderInfo = ParticleRenderInfo
                                 (
-                                    SortTriangles = True
+                                    SortTriangles = true
                                     TextureName = 'GameData:/Assets/2D/Fx/fx_etincelle_00.png'
                                     Calque = 'Particles'
-                                    EmissiveParticle = True
+                                    EmissiveParticle = true
                                 )
 
                                 Evolvers = Template_List
@@ -127,7 +127,7 @@ template template_BANK_Bomb_NewSparks
                                             FluidFriction = $/VFX_Bank/ParticleCustomFloat_2
                                             PhysicAccelerationField = GenFloat3[0, 0, $/VFX_Bank/ParticleCustomFloat_1]
                                             PhysicWindField = $/VFX_Bank/MapWind * 2 * ParticleCustomFloat_6
-                                            ForceSlicing = False
+                                            ForceSlicing = false
                                             EmissivePower = $/VFX_Bank/ParticleCustomFloat_4 * $/VFX_Bank/ParticleRemainingLifeRatio
                                             Size = $/VFX_Bank/ParticleCustomFloat_5
                                             Opacity = 0
@@ -151,7 +151,7 @@ template template_BANK_Bomb_NewSparks
 
 template template_BANK_Bomb_NewSparks_Spray
 [
-    Omnidirection : boolean,
+    Omnidirection : bool,
 ]is SimultaneousActionDeclaration
 (
     Params =
@@ -210,10 +210,10 @@ template template_BANK_Bomb_NewSparks_Spray
                     ParticleRenderer = $/VFX_Bank/LitParticleRenderer
                     RenderInfo = ParticleRenderInfo
                     (
-                        SortTriangles = True
+                        SortTriangles = true
                         TextureName = 'GameData:/Assets/2D/Fx/fx_etincelle_00.png'
                         Calque = 'Particles'
-                        EmissiveParticle = True
+                        EmissiveParticle = true
                     )
 
                     Evolvers = Template_List
@@ -225,7 +225,7 @@ template template_BANK_Bomb_NewSparks_Spray
                                 FluidFriction = $/VFX_Bank/ParticleCustomFloat_2
                                 PhysicAccelerationField = GenFloat3[0, 0, $/VFX_Bank/ParticleCustomFloat_1]
                                 PhysicWindField = $/VFX_Bank/MapWind * 2 * ParticleCustomFloat_6
-                                ForceSlicing = False
+                                ForceSlicing = false
                                 EmissivePower = $/VFX_Bank/ParticleCustomFloat_4 * $/VFX_Bank/ParticleRemainingLifeRatio
                                 Size = $/VFX_Bank/ParticleCustomFloat_5
                                 Opacity = 0
@@ -245,7 +245,7 @@ template template_BANK_Bomb_NewSparks_Spray
 
 template template_BANK_Bomb_NewSparks_Simple
 [
-    Omnidirection : boolean,
+    Omnidirection : bool,
     InverseDir = false,
 ]is ActionCallWithParameters
 (
@@ -310,7 +310,7 @@ export BANK_Bomb_NewSparks_Omni_Simple is template_BANK_Bomb_NewSparks_Simple
 
 template template_BANK_Bomb_NewSparks_Spray_Simple
 [
-    Omnidirection : boolean,
+    Omnidirection : bool,
 ]is ActionCallWithParameters
 (
     Action = <Omnidirection> ? BANK_Bomb_SpraySparks_Omni : nil

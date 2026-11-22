@@ -1,0 +1,14 @@
+export Modele_Isuzu_Pickup_B10_Militia_CUB is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/CUBA/Antichar/Isuzu_Pickup_B10/Isuzu_Pickup_B10.fbx"
+)
+
+export Modele_Isuzu_Pickup_B10_Militia_CUB_MID is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/CUBA/Antichar/Isuzu_Pickup_B10_MID/Isuzu_Pickup_B10_MID.fbx"
+)
+
+export Modele_Isuzu_Pickup_B10_Militia_CUB_LOW is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/CUBA/Antichar/Isuzu_Pickup_B10_LOW/Isuzu_Pickup_B10_LOW.fbx"
+)

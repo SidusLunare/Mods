@@ -11,7 +11,7 @@ export Modele_2S4_Tyulpan_SOV_MID is TResourceMesh
 export ModelFile_2S4_Tyulpan_SOV_LOW is "GameData:/Assets/3D/Units/URSS/Artillerie/2S4_Tyulpan_LOW/2S4_Tyulpan_LOW.fbx"
 export Modele_2S4_Tyulpan_SOV_LOW is TResourceMesh
 (
-    Mesh=ModelFile_2S4_Tyulpan_SOV_MID
+    Mesh=ModelFile_2S4_Tyulpan_SOV_LOW
 )
 
 export Modele_2S4_Tyulpan_SOV_Tourelle_02 is TResourceMesh

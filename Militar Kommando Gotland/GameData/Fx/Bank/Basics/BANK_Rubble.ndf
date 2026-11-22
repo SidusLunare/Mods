@@ -4,9 +4,9 @@ export BANK_Rubble2_test is Simultaneous
     (
         Position = float3[0.00, 0.00, 1000.00]
         DoNotInheritCentroid = true
-        IntroduceCentroid = False
-        CentroidRelative = False
-        UsePreviousMobileAsCenterOfScale = False
+        IntroduceCentroid = false
+        CentroidRelative = false
+        UsePreviousMobileAsCenterOfScale = false
     )
     Actions =
     [
@@ -337,7 +337,7 @@ is SimultaneousActionDeclaration
                     (
                         FluidFriction = ParticleCustomFloat_8
                         PhysicAccelerationField = float3[0.00, 0.00, -1.00] * ParticleCustomFloat_4
-                        UseCollisions = True
+                        UseCollisions = true
                         Alpha = $/VFX_Bank/ParticleRemainingLifeRatio
                         CustomFloat_9 = ParticleCustomFloat_9 + EvolverDt * ParticleCustomFloat_1
                         Rotation = ParticleCustomFloat_9
@@ -443,7 +443,7 @@ is SimultaneousActionDeclaration
                     (
                         FluidFriction = ParticleCustomFloat_8
                         PhysicAccelerationField = float3[0.00, 0.00, -1.00] * ParticleCustomFloat_4
-                        UseCollisions = True
+                        UseCollisions = true
                         Alpha = $/VFX_Bank/ParticleRemainingLifeRatio
                         CustomFloat_9 = ParticleCustomFloat_9 + EvolverDt * ParticleCustomFloat_1
                         Rotation = ParticleCustomFloat_9
@@ -494,7 +494,7 @@ is SimultaneousActionDeclaration
                                                 Opacity = AttackDecay[$/VFX_Bank/ParticleLifeRatio, 0.05] * ParticleCustomFloat_1
                                                 Size = lerp[$/VFX_Bank/ParticleLifeRatio, getX[$/VFX_Bank/ParticleCustomFloat3_2], getY[$/VFX_Bank/ParticleCustomFloat3_2]] * $/VFX_Bank/ParticleCustomFloat_3
                                                 // EmissivePower = $/VFX_Bank/ParticleRemainingLifeRatio
-                                                UseHardCodedRotation = True
+                                                UseHardCodedRotation = true
                                                 Animation = ParticleLifeRatio div 2
                                             )
                                             ]
@@ -585,7 +585,7 @@ is SimultaneousActionDeclaration
                     (
                         FluidFriction = ParticleCustomFloat_8
                         PhysicAccelerationField = float3[0.00, 0.00, -1.00] * ParticleCustomFloat_4
-                        UseCollisions = True
+                        UseCollisions = true
                         Alpha = $/VFX_Bank/ParticleRemainingLifeRatio
                         UseHardCodedRotation = false
                         CustomFloat_9 = ParticleCustomFloat_9 + EvolverDt * ParticleCustomFloat_1
@@ -624,10 +624,10 @@ is SimultaneousActionDeclaration
                                         ParticleRenderer = $/VFX_Bank/LitParticleRenderer
                                         RenderInfo = ParticleRenderInfo
                                         (
-                                            SortTriangles = True
+                                            SortTriangles = true
                                             TextureName = 'GameData:/Assets/2D/Fx/anim_fireball_000.png' //flame_01.png
                                             Calque = 'Particles'
-                                            EmissiveParticle = True
+                                            EmissiveParticle = true
                                         )
                                         Evolvers = ParticleStandardEvolverListWithPhysic
                                         (
@@ -637,7 +637,7 @@ is SimultaneousActionDeclaration
                                             ColorModifier = lerp[$/VFX_Bank/ParticleLifeRatio, LinearColor[1.00, 0.50, 0.00], LinearColor[1.00, 1.00, 1.00]]
                                             EmissivePower = 0.05 * Template_FunctionCall( Params = [ $/VFX_Bank/ParticleLifeRatio ] FunctionToCall = ~/BANK_Rubble_Trail_Temperature_Table ) *
                                                             Pow[AttackDecay[$/VFX_Bank/ParticleLifeRatio, 0.01], 2]
-                                            UseHardCodedRotation = False //True
+                                            UseHardCodedRotation = false //true
                                             Size = lerp[$/VFX_Bank/ParticleLifeRatio, getX[$/VFX_Bank/ParticleCustomFloat3_3], getY[$/VFX_Bank/ParticleCustomFloat3_3]] * $/VFX_Bank/ParticleCustomFloat_3
                                         )
                                     )
@@ -677,12 +677,12 @@ is SimultaneousActionDeclaration
                                         (
                                             PhysicAccelerationField = $/VFX_Bank/MapWind
                                             FluidFriction = 0.5
-                                            ForceSlicing = False
+                                            ForceSlicing = false
                                             // EmissivePower = $/VFX_Bank/ParticleRemainingLifeRatio
                                             Size = lerp[$/VFX_Bank/ParticleLifeRatio, getX[$/VFX_Bank/ParticleCustomFloat3_2], getY[$/VFX_Bank/ParticleCustomFloat3_2]] * $/VFX_Bank/ParticleCustomFloat_3
                                             Opacity =  AttackDecay[$/VFX_Bank/ParticleLifeRatio, 0.1] * ParticleCustomFloat_1
                                             Animation = lerp[ParticleRotation,0.1, 0.5] * (1 + ParticleLifeRatio)
-                                            UseHardCodedRotation = True
+                                            UseHardCodedRotation = true
                                         )
                                     )
                                 )

@@ -114,8 +114,8 @@ export Sniper_Flash is SimultaneousActionDeclaration
                 (
                     RenderInfo = ParticleRenderInfo
                     (
-                        ZTest = True
-                        SortTriangles = True
+                        ZTest = true
+                        SortTriangles = true
                         ZWrite = false
                         TextureName = 'GameData:/Assets/2D/Fx/anim_tir_sniper_00.png'
                         EmissiveParticle = true

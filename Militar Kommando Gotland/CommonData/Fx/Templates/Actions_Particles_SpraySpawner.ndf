@@ -3,7 +3,7 @@ template ParticleSpraySpawnerWithEvaluable
     Frequency                   : TEvaluable[GroupBy = "Spawn parameters"] = TConstantFloat(Value = 10.0),
     Spawner                     : TParticleSpawner[required] = ParticleSpawner(),
     Position                    : TEvaluable[GroupBy = "Spawn parameters"] = nil,
-    Forever                     : boolean[GroupBy = "Timer parameters"] = false,
+    Forever                     : bool[GroupBy = "Timer parameters"] = false,
     InitialDelayInSec           : TEvaluable[GroupBy = "Timer parameters"] = nil,
     PeriodInSec                 : TEvaluable[GroupBy = "Timer parameters"] = TConstantFloat(Value = 0.05),
     DurationInSec               : TEvaluable[required, GroupBy = "Timer parameters"] = TConstantFloat(Value = 10.0),
@@ -12,7 +12,7 @@ template ParticleSpraySpawnerWithEvaluable
     SpawnFirstParticleAtStart   : TEvaluable[GroupBy = "Spawn parameters"] = nil,
     Disabled                    : TEvaluable = nil,
     TimeServer                  : TTimeServerWithVisibilityRange = nil,
-    RecomputeOffsetFromCentroid : boolean = false,
+    RecomputeOffsetFromCentroid : bool = false,
     ParticleMaxDurationForSpawnSkip : TEvaluable = nil
 ] is TParticleSpawnerActionSpray
 (

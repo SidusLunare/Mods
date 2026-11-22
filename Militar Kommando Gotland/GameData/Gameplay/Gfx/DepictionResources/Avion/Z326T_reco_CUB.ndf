@@ -1,0 +1,19 @@
+export Modele_Z326T_reco_CUB is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/CUBA/Avion/Z326T_reco/Z326T_reco.fbx"
+)
+
+export Modele_Z326T_reco_CUB_MID is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/CUBA/Avion/Z326T_reco_MID/Z326T_reco_MID.fbx"
+)
+
+export Modele_Z326T_reco_CUB_LOW is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/CUBA/Avion/Z326T_reco_LOW/Z326T_reco_LOW.fbx"
+)
+
+export Modele_Z326T_reco_CUB_train is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/CUBA/Avion/Z326T_reco/Z326T_reco_train.fbx"
+)

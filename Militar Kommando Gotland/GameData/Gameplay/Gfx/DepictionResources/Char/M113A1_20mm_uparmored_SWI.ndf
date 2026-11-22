@@ -1,0 +1,14 @@
+export Modele_M113A1_20mm_uparmored_SWI is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/FR/APC/AMX_10P/AMX_10P.fbx"
+)
+
+export Modele_M113A1_20mm_uparmored_SWI_MID is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/FR/APC/AMX_10P_MID/AMX_10P_MID.fbx"
+)
+
+export Modele_M113A1_20mm_uparmored_SWI_LOW is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/FR/APC/AMX_10P_LOW/AMX_10P_LOW.fbx"
+)

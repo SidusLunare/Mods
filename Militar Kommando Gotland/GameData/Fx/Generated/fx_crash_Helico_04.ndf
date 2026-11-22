@@ -4,6 +4,7 @@ export fx_crash_Helico_04 is SimultaneousActionDeclaration
 (
     Params =
     [
+        private parBombTrajectory is TActionAlias( ExpectedType = 'bool' DefaultValue = false ),
         private parFlyDuration is TActionAlias( ExpectedType = 'float' DefaultValue = 6 ),
         private parInitialShotDelay is TActionAlias( ExpectedType = 'float' DefaultValue = 0 ),
         private parPosition is TActionAlias( ExpectedType = 'float3' DefaultValue = float3[0,0,0] ),
@@ -297,8 +298,8 @@ export fx_crash_Helico_04 is SimultaneousActionDeclaration
                 (
                     Action = $/VFX_Bank/Dummy_Traine
                     NamedParams = MAP[
+                        ( 'parDummyBombTrajectory', parBombTrajectory ),
                         ( 'parDummyDestination', float3[12214,0,0] ),
-                        ( 'parDummyFluidFriction', 0.9 ),
                         ( 'parDummyFlyDuration', parFlyDuration ),
                         ( 'parDummyImpactOnGround', false ),
                         ( 'parDummyInitialSpeed', float3[4000,0,0] ),

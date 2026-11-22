@@ -118,6 +118,16 @@ export fx_impact_sol_HE_122mm_3 is SimultaneousActionDeclaration
             [
                 TActionCall
                 (
+                    Action = $/VFX_Bank/BANK_Bomb_Distort_Plane_Simple
+                    NamedParams = MAP[
+                        ( 'parDuration', 0.5 ),
+                        ( 'parFinalSize', 170000 ),
+                        ( 'parInitialSize', 0 ),
+                        ( 'parIntensity', 1000 ),
+                    ]
+                ),
+                TActionCall
+                (
                     Action = $/VFX_Bank/BANK_Bomb_Flash
                     NamedParams = MAP[
                         ( 'parCount', 1 ),
@@ -126,16 +136,6 @@ export fx_impact_sol_HE_122mm_3 is SimultaneousActionDeclaration
                         ( 'parInitialSize', 0 ),
                         ( 'parZBias', 0 ),
                         ( 'parPositionRelative', parPosition ),
-                    ]
-                ),
-                TActionCall
-                (
-                    Action = $/VFX_Bank/BANK_Bomb_Distort_Plane_Simple
-                    NamedParams = MAP[
-                        ( 'parDuration', 0.5 ),
-                        ( 'parFinalSize', 170000 ),
-                        ( 'parInitialSize', 0 ),
-                        ( 'parIntensity', 1000 ),
                     ]
                 ),
                 TActionCall
@@ -149,27 +149,6 @@ export fx_impact_sol_HE_122mm_3 is SimultaneousActionDeclaration
                         ( 'parParticleLifetime', 6 ),
                         ( 'parSize', 4000 ),
                         ( 'parSpeedMul', 0.8 ),
-                    ]
-                ),
-                TActionCall
-                (
-                    Action = $/VFX_Bank/BANK_Bomb_NewSparks_Omni_Simple
-                    NamedParams = MAP[
-                        ( 'parColor', float3[1,0.2509804,0] ),
-                        ( 'parColorMultiplier', 6.400001 ),
-                        ( 'parCount', 20 ),
-                        ( 'parFluidFriction', 0 ),
-                        ( 'parGravity', 2000 ),
-                        ( 'parLifetime', 3 ),
-                        ( 'parNarrowness', 0 ),
-                        ( 'parPositionRadius', 680 ),
-                        ( 'parSize', 10 ),
-                        ( 'parSpeedMax', 2800 ),
-                        ( 'parSpeedMin', 300 ),
-                        ( 'parStretch', 1 ),
-                        ( 'parWindFactor', 0 ),
-                        ( 'parDir', float3[0,0,1] ),
-                        ( 'parPositionRelative', parPosition ),
                     ]
                 ),
                 TActionCall
@@ -189,6 +168,27 @@ export fx_impact_sol_HE_122mm_3 is SimultaneousActionDeclaration
                         ( 'parSpeedMin', 5000 ),
                         ( 'parStretch', 1 ),
                         ( 'parWindFactor', 1 ),
+                        ( 'parDir', float3[0,0,1] ),
+                        ( 'parPositionRelative', parPosition ),
+                    ]
+                ),
+                TActionCall
+                (
+                    Action = $/VFX_Bank/BANK_Bomb_NewSparks_Omni_Simple
+                    NamedParams = MAP[
+                        ( 'parColor', float3[1,0.2509804,0] ),
+                        ( 'parColorMultiplier', 6.400001 ),
+                        ( 'parCount', 20 ),
+                        ( 'parFluidFriction', 0 ),
+                        ( 'parGravity', 2000 ),
+                        ( 'parLifetime', 3 ),
+                        ( 'parNarrowness', 0 ),
+                        ( 'parPositionRadius', 680 ),
+                        ( 'parSize', 10 ),
+                        ( 'parSpeedMax', 2800 ),
+                        ( 'parSpeedMin', 300 ),
+                        ( 'parStretch', 1 ),
+                        ( 'parWindFactor', 0 ),
                         ( 'parDir', float3[0,0,1] ),
                         ( 'parPositionRelative', parPosition ),
                     ]
@@ -309,6 +309,30 @@ export fx_impact_sol_HE_122mm_3 is SimultaneousActionDeclaration
                 ),
                 TActionCall
                 (
+                    Action = $/VFX_Bank/BANK_Rubble2_Simple
+                    NamedParams = MAP[
+                        ( 'parCountDebrits', 10 ),
+                        ( 'parCountDebritsWithFire', 0 ),
+                        ( 'parCountDebritsWithSmoke', 0 ),
+                        ( 'parDebritSizeMul', 0.5 ),
+                        ( 'parDispersion', 1200 ),
+                        ( 'parFireParticleEndSize', 0 ),
+                        ( 'parFireParticleStartSize', 200 ),
+                        ( 'parLifetime', 5 ),
+                        ( 'parMeshType', 1 ),
+                        ( 'parMinSpeedRatio', 1 ),
+                        ( 'parParticleOpacity', 0.3400001 ),
+                        ( 'parSmokeColor', float3[0.1647059,0.1647059,0.1647059] ),
+                        ( 'parSmokeColorMultiplier', 0.3 ),
+                        ( 'parSmokeDensity', 100 ),
+                        ( 'parSmokeParticleEndSize', 600 ),
+                        ( 'parSmokeParticleStartSize', 100 ),
+                        ( 'parSpeed', float3[4250,4360,9983] ),
+                        ( 'parSpeedDispersion', 0 ),
+                    ]
+                ),
+                TActionCall
+                (
                     Action = $/VFX_Bank/BANK_Rubble2_Oriented_Simple
                     NamedParams = MAP[
                         ( 'parCountDebrits', 15 ),
@@ -330,30 +354,6 @@ export fx_impact_sol_HE_122mm_3 is SimultaneousActionDeclaration
                         ( 'parSmokeParticleEndSize', 3000 ),
                         ( 'parSmokeParticleStartSize', 600 ),
                         ( 'parSpeed', float3[4280,4350,8000] ),
-                    ]
-                ),
-                TActionCall
-                (
-                    Action = $/VFX_Bank/BANK_Rubble2_Simple
-                    NamedParams = MAP[
-                        ( 'parCountDebrits', 10 ),
-                        ( 'parCountDebritsWithFire', 0 ),
-                        ( 'parCountDebritsWithSmoke', 0 ),
-                        ( 'parDebritSizeMul', 0.5 ),
-                        ( 'parDispersion', 1200 ),
-                        ( 'parFireParticleEndSize', 0 ),
-                        ( 'parFireParticleStartSize', 200 ),
-                        ( 'parLifetime', 5 ),
-                        ( 'parMeshType', 1 ),
-                        ( 'parMinSpeedRatio', 1 ),
-                        ( 'parParticleOpacity', 0.3400001 ),
-                        ( 'parSmokeColor', float3[0.1647059,0.1647059,0.1647059] ),
-                        ( 'parSmokeColorMultiplier', 0.3 ),
-                        ( 'parSmokeDensity', 100 ),
-                        ( 'parSmokeParticleEndSize', 600 ),
-                        ( 'parSmokeParticleStartSize', 100 ),
-                        ( 'parSpeed', float3[4250,4360,9983] ),
-                        ( 'parSpeedDispersion', 0 ),
                     ]
                 ),
                 TActionCall

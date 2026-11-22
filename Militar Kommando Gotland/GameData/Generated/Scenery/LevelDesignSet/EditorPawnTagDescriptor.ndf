@@ -107,6 +107,30 @@ unnamed Template_SceneryDescriptorSpawn
 )
 unnamed Template_SceneryDescriptorSpawn
 (
+    RegistrationName      = 'pion_CUB_21RACB'
+    ClassName             = '$/GFX/Pawn/Descriptor_Unit_pion_CUB_21RACB'
+    AutoNameBase          = 'pion_CUB_21RACB'
+    ModelResource         = $/GFX/DepictionResources/Modele_MiG_21bis_HE_CUB
+    ThumbstackScale       = 7
+)
+unnamed Template_SceneryDescriptorSpawn
+(
+    RegistrationName      = 'pion_CUB_22RACB'
+    ClassName             = '$/GFX/Pawn/Descriptor_Unit_pion_CUB_22RACB'
+    AutoNameBase          = 'pion_CUB_22RACB'
+    ModelResource         = $/GFX/DepictionResources/Modele_MiG_21bis_HE_CUB
+    ThumbstackScale       = 7
+)
+unnamed Template_SceneryDescriptorSpawn
+(
+    RegistrationName      = 'pion_CUB_RAC_Prov'
+    ClassName             = '$/GFX/Pawn/Descriptor_Unit_pion_CUB_RAC_Prov'
+    AutoNameBase          = 'pion_CUB_RAC_Prov'
+    ModelResource         = $/GFX/DepictionResources/Modele_MiG_29_AA_CUB
+    ThumbstackScale       = 7
+)
+unnamed Template_SceneryDescriptorSpawn
+(
     RegistrationName      = 'pion_FR_Alsace'
     ClassName             = '$/GFX/Pawn/Descriptor_Unit_pion_FR_Alsace'
     AutoNameBase          = 'pion_FR_Alsace'
@@ -667,6 +691,14 @@ unnamed Template_SceneryDescriptorSpawn
 )
 unnamed Template_SceneryDescriptorSpawn
 (
+    RegistrationName      = 'pion_US_1SOW'
+    ClassName             = '$/GFX/Pawn/Descriptor_Unit_pion_US_1SOW'
+    AutoNameBase          = 'pion_US_1SOW'
+    ModelResource         = $/GFX/DepictionResources/Modele_AC_130H_Gunship_US
+    ThumbstackScale       = 7
+)
+unnamed Template_SceneryDescriptorSpawn
+(
     RegistrationName      = 'pion_US_22TFS'
     ClassName             = '$/GFX/Pawn/Descriptor_Unit_pion_US_22TFS'
     AutoNameBase          = 'pion_US_22TFS'
@@ -703,6 +735,14 @@ unnamed Template_SceneryDescriptorSpawn
     ClassName             = '$/GFX/Pawn/Descriptor_Unit_pion_US_4450TFS'
     AutoNameBase          = 'pion_US_4450TFS'
     ModelResource         = $/GFX/DepictionResources/Modele_F117_Nighthawk_US
+    ThumbstackScale       = 7
+)
+unnamed Template_SceneryDescriptorSpawn
+(
+    RegistrationName      = 'pion_US_46TFS'
+    ClassName             = '$/GFX/Pawn/Descriptor_Unit_pion_US_46TFS'
+    AutoNameBase          = 'pion_US_46TFS'
+    ModelResource         = $/GFX/DepictionResources/Modele_A10_Thunderbolt_II_ATGM_US
     ThumbstackScale       = 7
 )
 unnamed Template_SceneryDescriptorSpawn
@@ -881,7 +921,46 @@ unnamed Template_SceneryDescriptorSpawn
     ModelResource         = $/GFX/DepictionResources/Modele_A10_Thunderbolt_II_ATGM_US
     ThumbstackScale       = 7
 )
-
+unnamed Template_SceneryDescriptorSpawn
+(
+    RegistrationName      = 'pion_US_AFRES'
+    ClassName             = '$/GFX/Pawn/Descriptor_Unit_pion_US_AFRES'
+    AutoNameBase          = 'pion_US_AFRES'
+    ModelResource         = $/GFX/DepictionResources/Modele_F16E_HE_US
+    ThumbstackScale       = 7
+)
+unnamed Template_SceneryDescriptorSpawn
+(
+    RegistrationName      = 'pion_US_MAG_41_46'
+    ClassName             = '$/GFX/Pawn/Descriptor_Unit_pion_US_MAG_41_46'
+    AutoNameBase          = 'pion_US_MAG_41_46'
+    ModelResource         = $/GFX/DepictionResources/Modele_F18_Hornet_AA2_US
+    ThumbstackScale       = 7
+)
+unnamed Template_SceneryDescriptorSpawn
+(
+    RegistrationName      = 'pion_US_MAG_42'
+    ClassName             = '$/GFX/Pawn/Descriptor_Unit_pion_US_MAG_42'
+    AutoNameBase          = 'pion_US_MAG_42'
+    ModelResource         = $/GFX/DepictionResources/Modele_A4M_Skyhawk_US
+    ThumbstackScale       = 7
+)
+unnamed Template_SceneryDescriptorSpawn
+(
+    RegistrationName      = 'pion_US_MAG_49'
+    ClassName             = '$/GFX/Pawn/Descriptor_Unit_pion_US_MAG_49'
+    AutoNameBase          = 'pion_US_MAG_49'
+    ModelResource         = $/GFX/DepictionResources/Modele_A4M_Skyhawk_US
+    ThumbstackScale       = 7
+)
+unnamed Template_SceneryDescriptorSpawn
+(
+    RegistrationName      = 'pion_US_USNR'
+    ClassName             = '$/GFX/Pawn/Descriptor_Unit_pion_US_USNR'
+    AutoNameBase          = 'pion_US_USNR'
+    ModelResource         = $/GFX/DepictionResources/Modele_A7E_Corsair_II_AT_US
+    ThumbstackScale       = 7
+)
 unnamed Template_SceneryDescriptorSpawn
 (
     RegistrationName      = 'pion_BEL_14Linie'
@@ -1336,6 +1415,734 @@ unnamed Template_SceneryDescriptorSpawn
     ClassName             = '$/GFX/Pawn/Descriptor_Unit_pion_CAN_CFE'
     AutoNameBase          = 'pion_CAN_CFE'
     ModelResource         = $/GFX/DepictionResources/Modele_M577_CAN
+    ThumbstackScale       = 7
+)
+unnamed Template_SceneryDescriptorSpawn
+(
+    RegistrationName      = 'pion_CUB_11InfDiv'
+    ClassName             = '$/GFX/Pawn/Descriptor_Unit_pion_CUB_11InfDiv'
+    AutoNameBase          = 'pion_CUB_11InfDiv'
+    ModelResource         = $/GFX/DepictionResources/Modele_BTR_60_CHAIKA_CMD_CUB
+    ThumbstackScale       = 7
+)
+unnamed Template_SceneryDescriptorSpawn
+(
+    RegistrationName      = 'pion_CUB_11InfDiv_1Art_2'
+    ClassName             = '$/GFX/Pawn/Descriptor_Unit_pion_CUB_11InfDiv_1Art_2'
+    AutoNameBase          = 'pion_CUB_11InfDiv_1Art_2'
+    ModelResource         = $/GFX/DepictionResources/Modele_Howz_D30_122mm_CUB
+    ThumbstackScale       = 7
+)
+unnamed Template_SceneryDescriptorSpawn
+(
+    RegistrationName      = 'pion_CUB_11InfDiv_1Art_3'
+    ClassName             = '$/GFX/Pawn/Descriptor_Unit_pion_CUB_11InfDiv_1Art_3'
+    AutoNameBase          = 'pion_CUB_11InfDiv_1Art_3'
+    ModelResource         = $/GFX/DepictionResources/Modele_BM21_Grad_CUB
+    ThumbstackScale       = 7
+)
+unnamed Template_SceneryDescriptorSpawn
+(
+    RegistrationName      = 'pion_CUB_11InfDiv_1Inf_1'
+    ClassName             = '$/GFX/Pawn/Descriptor_Unit_pion_CUB_11InfDiv_1Inf_1'
+    AutoNameBase          = 'pion_CUB_11InfDiv_1Inf_1'
+    ModelResource         = $/GFX/DepictionResources/Modele_BTR_60_CUB
+    ThumbstackScale       = 7
+)
+unnamed Template_SceneryDescriptorSpawn
+(
+    RegistrationName      = 'pion_CUB_11InfDiv_1Inf_2'
+    ClassName             = '$/GFX/Pawn/Descriptor_Unit_pion_CUB_11InfDiv_1Inf_2'
+    AutoNameBase          = 'pion_CUB_11InfDiv_1Inf_2'
+    ModelResource         = $/GFX/DepictionResources/Modele_BTR_60_CUB
+    ThumbstackScale       = 7
+)
+unnamed Template_SceneryDescriptorSpawn
+(
+    RegistrationName      = 'pion_CUB_11InfDiv_1Inf_3'
+    ClassName             = '$/GFX/Pawn/Descriptor_Unit_pion_CUB_11InfDiv_1Inf_3'
+    AutoNameBase          = 'pion_CUB_11InfDiv_1Inf_3'
+    ModelResource         = $/GFX/DepictionResources/Modele_GAZ_53_trans_CUB
+    ThumbstackScale       = 7
+)
+unnamed Template_SceneryDescriptorSpawn
+(
+    RegistrationName      = 'pion_CUB_11InfDiv_2Inf_1'
+    ClassName             = '$/GFX/Pawn/Descriptor_Unit_pion_CUB_11InfDiv_2Inf_1'
+    AutoNameBase          = 'pion_CUB_11InfDiv_2Inf_1'
+    ModelResource         = $/GFX/DepictionResources/Modele_BTR_60_CUB
+    ThumbstackScale       = 7
+)
+unnamed Template_SceneryDescriptorSpawn
+(
+    RegistrationName      = 'pion_CUB_11InfDiv_2Inf_2'
+    ClassName             = '$/GFX/Pawn/Descriptor_Unit_pion_CUB_11InfDiv_2Inf_2'
+    AutoNameBase          = 'pion_CUB_11InfDiv_2Inf_2'
+    ModelResource         = $/GFX/DepictionResources/Modele_BTR_60_CUB
+    ThumbstackScale       = 7
+)
+unnamed Template_SceneryDescriptorSpawn
+(
+    RegistrationName      = 'pion_CUB_11InfDiv_2Inf_3'
+    ClassName             = '$/GFX/Pawn/Descriptor_Unit_pion_CUB_11InfDiv_2Inf_3'
+    AutoNameBase          = 'pion_CUB_11InfDiv_2Inf_3'
+    ModelResource         = $/GFX/DepictionResources/Modele_GAZ_53_trans_CUB
+    ThumbstackScale       = 7
+)
+unnamed Template_SceneryDescriptorSpawn
+(
+    RegistrationName      = 'pion_CUB_11InfDiv_3Inf_1'
+    ClassName             = '$/GFX/Pawn/Descriptor_Unit_pion_CUB_11InfDiv_3Inf_1'
+    AutoNameBase          = 'pion_CUB_11InfDiv_3Inf_1'
+    ModelResource         = $/GFX/DepictionResources/Modele_BTR_60_CUB
+    ThumbstackScale       = 7
+)
+unnamed Template_SceneryDescriptorSpawn
+(
+    RegistrationName      = 'pion_CUB_11InfDiv_3Inf_2'
+    ClassName             = '$/GFX/Pawn/Descriptor_Unit_pion_CUB_11InfDiv_3Inf_2'
+    AutoNameBase          = 'pion_CUB_11InfDiv_3Inf_2'
+    ModelResource         = $/GFX/DepictionResources/Modele_BTR_60_CUB
+    ThumbstackScale       = 7
+)
+unnamed Template_SceneryDescriptorSpawn
+(
+    RegistrationName      = 'pion_CUB_11InfDiv_3Inf_3'
+    ClassName             = '$/GFX/Pawn/Descriptor_Unit_pion_CUB_11InfDiv_3Inf_3'
+    AutoNameBase          = 'pion_CUB_11InfDiv_3Inf_3'
+    ModelResource         = $/GFX/DepictionResources/Modele_GAZ_53_trans_CUB
+    ThumbstackScale       = 7
+)
+unnamed Template_SceneryDescriptorSpawn
+(
+    RegistrationName      = 'pion_CUB_11InfDiv_AA'
+    ClassName             = '$/GFX/Pawn/Descriptor_Unit_pion_CUB_11InfDiv_AA'
+    AutoNameBase          = 'pion_CUB_11InfDiv_AA'
+    ModelResource         = $/GFX/DepictionResources/Modele_DCA_AZP_S60_CUB
+    ThumbstackScale       = 7
+)
+unnamed Template_SceneryDescriptorSpawn
+(
+    RegistrationName      = 'pion_CUB_11InfDiv_reco'
+    ClassName             = '$/GFX/Pawn/Descriptor_Unit_pion_CUB_11InfDiv_reco'
+    AutoNameBase          = 'pion_CUB_11InfDiv_reco'
+    ModelResource         = $/GFX/DepictionResources/Modele_PT76_CUB
+    ThumbstackScale       = 7
+)
+unnamed Template_SceneryDescriptorSpawn
+(
+    RegistrationName      = 'pion_CUB_12InfDiv'
+    ClassName             = '$/GFX/Pawn/Descriptor_Unit_pion_CUB_12InfDiv'
+    AutoNameBase          = 'pion_CUB_12InfDiv'
+    ModelResource         = $/GFX/DepictionResources/Modele_BTR_60_CHAIKA_CMD_CUB
+    ThumbstackScale       = 7
+)
+unnamed Template_SceneryDescriptorSpawn
+(
+    RegistrationName      = 'pion_CUB_12InfDiv_1Art_2'
+    ClassName             = '$/GFX/Pawn/Descriptor_Unit_pion_CUB_12InfDiv_1Art_2'
+    AutoNameBase          = 'pion_CUB_12InfDiv_1Art_2'
+    ModelResource         = $/GFX/DepictionResources/Modele_Howz_D30_122mm_CUB
+    ThumbstackScale       = 7
+)
+unnamed Template_SceneryDescriptorSpawn
+(
+    RegistrationName      = 'pion_CUB_12InfDiv_1Art_3'
+    ClassName             = '$/GFX/Pawn/Descriptor_Unit_pion_CUB_12InfDiv_1Art_3'
+    AutoNameBase          = 'pion_CUB_12InfDiv_1Art_3'
+    ModelResource         = $/GFX/DepictionResources/Modele_BM21_Grad_CUB
+    ThumbstackScale       = 7
+)
+unnamed Template_SceneryDescriptorSpawn
+(
+    RegistrationName      = 'pion_CUB_12InfDiv_1Inf_1'
+    ClassName             = '$/GFX/Pawn/Descriptor_Unit_pion_CUB_12InfDiv_1Inf_1'
+    AutoNameBase          = 'pion_CUB_12InfDiv_1Inf_1'
+    ModelResource         = $/GFX/DepictionResources/Modele_BTR_60_CUB
+    ThumbstackScale       = 7
+)
+unnamed Template_SceneryDescriptorSpawn
+(
+    RegistrationName      = 'pion_CUB_12InfDiv_1Inf_2'
+    ClassName             = '$/GFX/Pawn/Descriptor_Unit_pion_CUB_12InfDiv_1Inf_2'
+    AutoNameBase          = 'pion_CUB_12InfDiv_1Inf_2'
+    ModelResource         = $/GFX/DepictionResources/Modele_BTR_60_CUB
+    ThumbstackScale       = 7
+)
+unnamed Template_SceneryDescriptorSpawn
+(
+    RegistrationName      = 'pion_CUB_12InfDiv_1Inf_3'
+    ClassName             = '$/GFX/Pawn/Descriptor_Unit_pion_CUB_12InfDiv_1Inf_3'
+    AutoNameBase          = 'pion_CUB_12InfDiv_1Inf_3'
+    ModelResource         = $/GFX/DepictionResources/Modele_GAZ_53_trans_CUB
+    ThumbstackScale       = 7
+)
+unnamed Template_SceneryDescriptorSpawn
+(
+    RegistrationName      = 'pion_CUB_12InfDiv_2Inf_1'
+    ClassName             = '$/GFX/Pawn/Descriptor_Unit_pion_CUB_12InfDiv_2Inf_1'
+    AutoNameBase          = 'pion_CUB_12InfDiv_2Inf_1'
+    ModelResource         = $/GFX/DepictionResources/Modele_BTR_60_CUB
+    ThumbstackScale       = 7
+)
+unnamed Template_SceneryDescriptorSpawn
+(
+    RegistrationName      = 'pion_CUB_12InfDiv_2Inf_2'
+    ClassName             = '$/GFX/Pawn/Descriptor_Unit_pion_CUB_12InfDiv_2Inf_2'
+    AutoNameBase          = 'pion_CUB_12InfDiv_2Inf_2'
+    ModelResource         = $/GFX/DepictionResources/Modele_BTR_60_CUB
+    ThumbstackScale       = 7
+)
+unnamed Template_SceneryDescriptorSpawn
+(
+    RegistrationName      = 'pion_CUB_12InfDiv_2Inf_3'
+    ClassName             = '$/GFX/Pawn/Descriptor_Unit_pion_CUB_12InfDiv_2Inf_3'
+    AutoNameBase          = 'pion_CUB_12InfDiv_2Inf_3'
+    ModelResource         = $/GFX/DepictionResources/Modele_GAZ_53_trans_CUB
+    ThumbstackScale       = 7
+)
+unnamed Template_SceneryDescriptorSpawn
+(
+    RegistrationName      = 'pion_CUB_12InfDiv_3Inf_1'
+    ClassName             = '$/GFX/Pawn/Descriptor_Unit_pion_CUB_12InfDiv_3Inf_1'
+    AutoNameBase          = 'pion_CUB_12InfDiv_3Inf_1'
+    ModelResource         = $/GFX/DepictionResources/Modele_BTR_60_CUB
+    ThumbstackScale       = 7
+)
+unnamed Template_SceneryDescriptorSpawn
+(
+    RegistrationName      = 'pion_CUB_12InfDiv_3Inf_2'
+    ClassName             = '$/GFX/Pawn/Descriptor_Unit_pion_CUB_12InfDiv_3Inf_2'
+    AutoNameBase          = 'pion_CUB_12InfDiv_3Inf_2'
+    ModelResource         = $/GFX/DepictionResources/Modele_BTR_60_CUB
+    ThumbstackScale       = 7
+)
+unnamed Template_SceneryDescriptorSpawn
+(
+    RegistrationName      = 'pion_CUB_12InfDiv_3Inf_3'
+    ClassName             = '$/GFX/Pawn/Descriptor_Unit_pion_CUB_12InfDiv_3Inf_3'
+    AutoNameBase          = 'pion_CUB_12InfDiv_3Inf_3'
+    ModelResource         = $/GFX/DepictionResources/Modele_GAZ_53_trans_CUB
+    ThumbstackScale       = 7
+)
+unnamed Template_SceneryDescriptorSpawn
+(
+    RegistrationName      = 'pion_CUB_12InfDiv_AA'
+    ClassName             = '$/GFX/Pawn/Descriptor_Unit_pion_CUB_12InfDiv_AA'
+    AutoNameBase          = 'pion_CUB_12InfDiv_AA'
+    ModelResource         = $/GFX/DepictionResources/Modele_DCA_AZP_S60_CUB
+    ThumbstackScale       = 7
+)
+unnamed Template_SceneryDescriptorSpawn
+(
+    RegistrationName      = 'pion_CUB_12InfDiv_reco'
+    ClassName             = '$/GFX/Pawn/Descriptor_Unit_pion_CUB_12InfDiv_reco'
+    AutoNameBase          = 'pion_CUB_12InfDiv_reco'
+    ModelResource         = $/GFX/DepictionResources/Modele_PT76_CUB
+    ThumbstackScale       = 7
+)
+unnamed Template_SceneryDescriptorSpawn
+(
+    RegistrationName      = 'pion_CUB_1Tanques'
+    ClassName             = '$/GFX/Pawn/Descriptor_Unit_pion_CUB_1Tanques'
+    AutoNameBase          = 'pion_CUB_1Tanques'
+    ModelResource         = $/GFX/DepictionResources/Modele_BTR_60_CHAIKA_CMD_CUB
+    ThumbstackScale       = 7
+)
+unnamed Template_SceneryDescriptorSpawn
+(
+    RegistrationName      = 'pion_CUB_1Tanques_1Art_1'
+    ClassName             = '$/GFX/Pawn/Descriptor_Unit_pion_CUB_1Tanques_1Art_1'
+    AutoNameBase          = 'pion_CUB_1Tanques_1Art_1'
+    ModelResource         = $/GFX/DepictionResources/Modele_2S3_CUB
+    ThumbstackScale       = 7
+)
+unnamed Template_SceneryDescriptorSpawn
+(
+    RegistrationName      = 'pion_CUB_1Tanques_1Art_3'
+    ClassName             = '$/GFX/Pawn/Descriptor_Unit_pion_CUB_1Tanques_1Art_3'
+    AutoNameBase          = 'pion_CUB_1Tanques_1Art_3'
+    ModelResource         = $/GFX/DepictionResources/Modele_BM21_Grad_CUB
+    ThumbstackScale       = 7
+)
+unnamed Template_SceneryDescriptorSpawn
+(
+    RegistrationName      = 'pion_CUB_1Tanques_1Mech_1'
+    ClassName             = '$/GFX/Pawn/Descriptor_Unit_pion_CUB_1Tanques_1Mech_1'
+    AutoNameBase          = 'pion_CUB_1Tanques_1Mech_1'
+    ModelResource         = $/GFX/DepictionResources/Modele_BMP_1_SP2_CUB
+    ThumbstackScale       = 7
+)
+unnamed Template_SceneryDescriptorSpawn
+(
+    RegistrationName      = 'pion_CUB_1Tanques_1Mech_2'
+    ClassName             = '$/GFX/Pawn/Descriptor_Unit_pion_CUB_1Tanques_1Mech_2'
+    AutoNameBase          = 'pion_CUB_1Tanques_1Mech_2'
+    ModelResource         = $/GFX/DepictionResources/Modele_BTR_60_CUB
+    ThumbstackScale       = 7
+)
+unnamed Template_SceneryDescriptorSpawn
+(
+    RegistrationName      = 'pion_CUB_1Tanques_1Mech_3'
+    ClassName             = '$/GFX/Pawn/Descriptor_Unit_pion_CUB_1Tanques_1Mech_3'
+    AutoNameBase          = 'pion_CUB_1Tanques_1Mech_3'
+    ModelResource         = $/GFX/DepictionResources/Modele_BTR_60P_CUB
+    ThumbstackScale       = 7
+)
+unnamed Template_SceneryDescriptorSpawn
+(
+    RegistrationName      = 'pion_CUB_1Tanques_1Tk'
+    ClassName             = '$/GFX/Pawn/Descriptor_Unit_pion_CUB_1Tanques_1Tk'
+    AutoNameBase          = 'pion_CUB_1Tanques_1Tk'
+    ModelResource         = $/GFX/DepictionResources/Modele_T62_obr72_CUB
+    ThumbstackScale       = 7
+)
+unnamed Template_SceneryDescriptorSpawn
+(
+    RegistrationName      = 'pion_CUB_1Tanques_2Tk'
+    ClassName             = '$/GFX/Pawn/Descriptor_Unit_pion_CUB_1Tanques_2Tk'
+    AutoNameBase          = 'pion_CUB_1Tanques_2Tk'
+    ModelResource         = $/GFX/DepictionResources/Modele_T62_obr72_CUB
+    ThumbstackScale       = 7
+)
+unnamed Template_SceneryDescriptorSpawn
+(
+    RegistrationName      = 'pion_CUB_1Tanques_3Tk'
+    ClassName             = '$/GFX/Pawn/Descriptor_Unit_pion_CUB_1Tanques_3Tk'
+    AutoNameBase          = 'pion_CUB_1Tanques_3Tk'
+    ModelResource         = $/GFX/DepictionResources/Modele_T62_obr67_CUB
+    ThumbstackScale       = 7
+)
+unnamed Template_SceneryDescriptorSpawn
+(
+    RegistrationName      = 'pion_CUB_1Tanques_AA'
+    ClassName             = '$/GFX/Pawn/Descriptor_Unit_pion_CUB_1Tanques_AA'
+    AutoNameBase          = 'pion_CUB_1Tanques_AA'
+    ModelResource         = $/GFX/DepictionResources/Modele_Osa_9K33M_CUB
+    ThumbstackScale       = 7
+)
+unnamed Template_SceneryDescriptorSpawn
+(
+    RegistrationName      = 'pion_CUB_1Tanques_reco'
+    ClassName             = '$/GFX/Pawn/Descriptor_Unit_pion_CUB_1Tanques_reco'
+    AutoNameBase          = 'pion_CUB_1Tanques_reco'
+    ModelResource         = $/GFX/DepictionResources/Modele_PT76_CUB
+    ThumbstackScale       = 7
+)
+unnamed Template_SceneryDescriptorSpawn
+(
+    RegistrationName      = 'pion_CUB_20MechDiv'
+    ClassName             = '$/GFX/Pawn/Descriptor_Unit_pion_CUB_20MechDiv'
+    AutoNameBase          = 'pion_CUB_20MechDiv'
+    ModelResource         = $/GFX/DepictionResources/Modele_BTR_60_CHAIKA_CMD_CUB
+    ThumbstackScale       = 7
+)
+unnamed Template_SceneryDescriptorSpawn
+(
+    RegistrationName      = 'pion_CUB_20MechDiv_1Art_1'
+    ClassName             = '$/GFX/Pawn/Descriptor_Unit_pion_CUB_20MechDiv_1Art_1'
+    AutoNameBase          = 'pion_CUB_20MechDiv_1Art_1'
+    ModelResource         = $/GFX/DepictionResources/Modele_Howz_D1_152mm_CUB
+    ThumbstackScale       = 7
+)
+unnamed Template_SceneryDescriptorSpawn
+(
+    RegistrationName      = 'pion_CUB_20MechDiv_1Art_3'
+    ClassName             = '$/GFX/Pawn/Descriptor_Unit_pion_CUB_20MechDiv_1Art_3'
+    AutoNameBase          = 'pion_CUB_20MechDiv_1Art_3'
+    ModelResource         = $/GFX/DepictionResources/Modele_BM21_Grad_CUB
+    ThumbstackScale       = 7
+)
+unnamed Template_SceneryDescriptorSpawn
+(
+    RegistrationName      = 'pion_CUB_20MechDiv_1Mech_1'
+    ClassName             = '$/GFX/Pawn/Descriptor_Unit_pion_CUB_20MechDiv_1Mech_1'
+    AutoNameBase          = 'pion_CUB_20MechDiv_1Mech_1'
+    ModelResource         = $/GFX/DepictionResources/Modele_BTR_60_CUB
+    ThumbstackScale       = 7
+)
+unnamed Template_SceneryDescriptorSpawn
+(
+    RegistrationName      = 'pion_CUB_20MechDiv_1Mech_2'
+    ClassName             = '$/GFX/Pawn/Descriptor_Unit_pion_CUB_20MechDiv_1Mech_2'
+    AutoNameBase          = 'pion_CUB_20MechDiv_1Mech_2'
+    ModelResource         = $/GFX/DepictionResources/Modele_BTR_60_CUB
+    ThumbstackScale       = 7
+)
+unnamed Template_SceneryDescriptorSpawn
+(
+    RegistrationName      = 'pion_CUB_20MechDiv_1Mech_3'
+    ClassName             = '$/GFX/Pawn/Descriptor_Unit_pion_CUB_20MechDiv_1Mech_3'
+    AutoNameBase          = 'pion_CUB_20MechDiv_1Mech_3'
+    ModelResource         = $/GFX/DepictionResources/Modele_BTR_60P_CUB
+    ThumbstackScale       = 7
+)
+unnamed Template_SceneryDescriptorSpawn
+(
+    RegistrationName      = 'pion_CUB_20MechDiv_2Mech_1'
+    ClassName             = '$/GFX/Pawn/Descriptor_Unit_pion_CUB_20MechDiv_2Mech_1'
+    AutoNameBase          = 'pion_CUB_20MechDiv_2Mech_1'
+    ModelResource         = $/GFX/DepictionResources/Modele_BTR_60_CUB
+    ThumbstackScale       = 7
+)
+unnamed Template_SceneryDescriptorSpawn
+(
+    RegistrationName      = 'pion_CUB_20MechDiv_2Mech_2'
+    ClassName             = '$/GFX/Pawn/Descriptor_Unit_pion_CUB_20MechDiv_2Mech_2'
+    AutoNameBase          = 'pion_CUB_20MechDiv_2Mech_2'
+    ModelResource         = $/GFX/DepictionResources/Modele_BTR_60_CUB
+    ThumbstackScale       = 7
+)
+unnamed Template_SceneryDescriptorSpawn
+(
+    RegistrationName      = 'pion_CUB_20MechDiv_2Mech_3'
+    ClassName             = '$/GFX/Pawn/Descriptor_Unit_pion_CUB_20MechDiv_2Mech_3'
+    AutoNameBase          = 'pion_CUB_20MechDiv_2Mech_3'
+    ModelResource         = $/GFX/DepictionResources/Modele_BTR_60P_CUB
+    ThumbstackScale       = 7
+)
+unnamed Template_SceneryDescriptorSpawn
+(
+    RegistrationName      = 'pion_CUB_20MechDiv_3Mech_1'
+    ClassName             = '$/GFX/Pawn/Descriptor_Unit_pion_CUB_20MechDiv_3Mech_1'
+    AutoNameBase          = 'pion_CUB_20MechDiv_3Mech_1'
+    ModelResource         = $/GFX/DepictionResources/Modele_BTR_60_CUB
+    ThumbstackScale       = 7
+)
+unnamed Template_SceneryDescriptorSpawn
+(
+    RegistrationName      = 'pion_CUB_20MechDiv_3Mech_2'
+    ClassName             = '$/GFX/Pawn/Descriptor_Unit_pion_CUB_20MechDiv_3Mech_2'
+    AutoNameBase          = 'pion_CUB_20MechDiv_3Mech_2'
+    ModelResource         = $/GFX/DepictionResources/Modele_BTR_60_CUB
+    ThumbstackScale       = 7
+)
+unnamed Template_SceneryDescriptorSpawn
+(
+    RegistrationName      = 'pion_CUB_20MechDiv_3Mech_3'
+    ClassName             = '$/GFX/Pawn/Descriptor_Unit_pion_CUB_20MechDiv_3Mech_3'
+    AutoNameBase          = 'pion_CUB_20MechDiv_3Mech_3'
+    ModelResource         = $/GFX/DepictionResources/Modele_BTR_60P_CUB
+    ThumbstackScale       = 7
+)
+unnamed Template_SceneryDescriptorSpawn
+(
+    RegistrationName      = 'pion_CUB_20MechDiv_AA'
+    ClassName             = '$/GFX/Pawn/Descriptor_Unit_pion_CUB_20MechDiv_AA'
+    AutoNameBase          = 'pion_CUB_20MechDiv_AA'
+    ModelResource         = $/GFX/DepictionResources/Modele_Osa_9K33M_CUB
+    ThumbstackScale       = 7
+)
+unnamed Template_SceneryDescriptorSpawn
+(
+    RegistrationName      = 'pion_CUB_20MechDiv_Tk'
+    ClassName             = '$/GFX/Pawn/Descriptor_Unit_pion_CUB_20MechDiv_Tk'
+    AutoNameBase          = 'pion_CUB_20MechDiv_Tk'
+    ModelResource         = $/GFX/DepictionResources/Modele_T55A_obr75_CUB
+    ThumbstackScale       = 7
+)
+unnamed Template_SceneryDescriptorSpawn
+(
+    RegistrationName      = 'pion_CUB_20MechDiv_reco'
+    ClassName             = '$/GFX/Pawn/Descriptor_Unit_pion_CUB_20MechDiv_reco'
+    AutoNameBase          = 'pion_CUB_20MechDiv_reco'
+    ModelResource         = $/GFX/DepictionResources/Modele_PT76_CUB
+    ThumbstackScale       = 7
+)
+unnamed Template_SceneryDescriptorSpawn
+(
+    RegistrationName      = 'pion_CUB_24InfDiv'
+    ClassName             = '$/GFX/Pawn/Descriptor_Unit_pion_CUB_24InfDiv'
+    AutoNameBase          = 'pion_CUB_24InfDiv'
+    ModelResource         = $/GFX/DepictionResources/Modele_BTR_60_CHAIKA_CMD_CUB
+    ThumbstackScale       = 7
+)
+unnamed Template_SceneryDescriptorSpawn
+(
+    RegistrationName      = 'pion_CUB_24InfDiv_1Art_2'
+    ClassName             = '$/GFX/Pawn/Descriptor_Unit_pion_CUB_24InfDiv_1Art_2'
+    AutoNameBase          = 'pion_CUB_24InfDiv_1Art_2'
+    ModelResource         = $/GFX/DepictionResources/Modele_Howz_D30_122mm_CUB
+    ThumbstackScale       = 7
+)
+unnamed Template_SceneryDescriptorSpawn
+(
+    RegistrationName      = 'pion_CUB_24InfDiv_1Art_3'
+    ClassName             = '$/GFX/Pawn/Descriptor_Unit_pion_CUB_24InfDiv_1Art_3'
+    AutoNameBase          = 'pion_CUB_24InfDiv_1Art_3'
+    ModelResource         = $/GFX/DepictionResources/Modele_BM21_Grad_CUB
+    ThumbstackScale       = 7
+)
+unnamed Template_SceneryDescriptorSpawn
+(
+    RegistrationName      = 'pion_CUB_24InfDiv_1Inf_1'
+    ClassName             = '$/GFX/Pawn/Descriptor_Unit_pion_CUB_24InfDiv_1Inf_1'
+    AutoNameBase          = 'pion_CUB_24InfDiv_1Inf_1'
+    ModelResource         = $/GFX/DepictionResources/Modele_BTR_60_CUB
+    ThumbstackScale       = 7
+)
+unnamed Template_SceneryDescriptorSpawn
+(
+    RegistrationName      = 'pion_CUB_24InfDiv_1Inf_2'
+    ClassName             = '$/GFX/Pawn/Descriptor_Unit_pion_CUB_24InfDiv_1Inf_2'
+    AutoNameBase          = 'pion_CUB_24InfDiv_1Inf_2'
+    ModelResource         = $/GFX/DepictionResources/Modele_BTR_60_CUB
+    ThumbstackScale       = 7
+)
+unnamed Template_SceneryDescriptorSpawn
+(
+    RegistrationName      = 'pion_CUB_24InfDiv_1Inf_3'
+    ClassName             = '$/GFX/Pawn/Descriptor_Unit_pion_CUB_24InfDiv_1Inf_3'
+    AutoNameBase          = 'pion_CUB_24InfDiv_1Inf_3'
+    ModelResource         = $/GFX/DepictionResources/Modele_GAZ_53_trans_CUB
+    ThumbstackScale       = 7
+)
+unnamed Template_SceneryDescriptorSpawn
+(
+    RegistrationName      = 'pion_CUB_24InfDiv_2Inf_1'
+    ClassName             = '$/GFX/Pawn/Descriptor_Unit_pion_CUB_24InfDiv_2Inf_1'
+    AutoNameBase          = 'pion_CUB_24InfDiv_2Inf_1'
+    ModelResource         = $/GFX/DepictionResources/Modele_BTR_60_CUB
+    ThumbstackScale       = 7
+)
+unnamed Template_SceneryDescriptorSpawn
+(
+    RegistrationName      = 'pion_CUB_24InfDiv_2Inf_2'
+    ClassName             = '$/GFX/Pawn/Descriptor_Unit_pion_CUB_24InfDiv_2Inf_2'
+    AutoNameBase          = 'pion_CUB_24InfDiv_2Inf_2'
+    ModelResource         = $/GFX/DepictionResources/Modele_BTR_60_CUB
+    ThumbstackScale       = 7
+)
+unnamed Template_SceneryDescriptorSpawn
+(
+    RegistrationName      = 'pion_CUB_24InfDiv_2Inf_3'
+    ClassName             = '$/GFX/Pawn/Descriptor_Unit_pion_CUB_24InfDiv_2Inf_3'
+    AutoNameBase          = 'pion_CUB_24InfDiv_2Inf_3'
+    ModelResource         = $/GFX/DepictionResources/Modele_GAZ_53_trans_CUB
+    ThumbstackScale       = 7
+)
+unnamed Template_SceneryDescriptorSpawn
+(
+    RegistrationName      = 'pion_CUB_24InfDiv_3Inf_1'
+    ClassName             = '$/GFX/Pawn/Descriptor_Unit_pion_CUB_24InfDiv_3Inf_1'
+    AutoNameBase          = 'pion_CUB_24InfDiv_3Inf_1'
+    ModelResource         = $/GFX/DepictionResources/Modele_BTR_60_CUB
+    ThumbstackScale       = 7
+)
+unnamed Template_SceneryDescriptorSpawn
+(
+    RegistrationName      = 'pion_CUB_24InfDiv_3Inf_2'
+    ClassName             = '$/GFX/Pawn/Descriptor_Unit_pion_CUB_24InfDiv_3Inf_2'
+    AutoNameBase          = 'pion_CUB_24InfDiv_3Inf_2'
+    ModelResource         = $/GFX/DepictionResources/Modele_BTR_60_CUB
+    ThumbstackScale       = 7
+)
+unnamed Template_SceneryDescriptorSpawn
+(
+    RegistrationName      = 'pion_CUB_24InfDiv_3Inf_3'
+    ClassName             = '$/GFX/Pawn/Descriptor_Unit_pion_CUB_24InfDiv_3Inf_3'
+    AutoNameBase          = 'pion_CUB_24InfDiv_3Inf_3'
+    ModelResource         = $/GFX/DepictionResources/Modele_GAZ_53_trans_CUB
+    ThumbstackScale       = 7
+)
+unnamed Template_SceneryDescriptorSpawn
+(
+    RegistrationName      = 'pion_CUB_24InfDiv_AA'
+    ClassName             = '$/GFX/Pawn/Descriptor_Unit_pion_CUB_24InfDiv_AA'
+    AutoNameBase          = 'pion_CUB_24InfDiv_AA'
+    ModelResource         = $/GFX/DepictionResources/Modele_DCA_AZP_S60_CUB
+    ThumbstackScale       = 7
+)
+unnamed Template_SceneryDescriptorSpawn
+(
+    RegistrationName      = 'pion_CUB_24InfDiv_reco'
+    ClassName             = '$/GFX/Pawn/Descriptor_Unit_pion_CUB_24InfDiv_reco'
+    AutoNameBase          = 'pion_CUB_24InfDiv_reco'
+    ModelResource         = $/GFX/DepictionResources/Modele_PT76_CUB
+    ThumbstackScale       = 7
+)
+unnamed Template_SceneryDescriptorSpawn
+(
+    RegistrationName      = 'pion_CUB_2Corps_1Sec'
+    ClassName             = '$/GFX/Pawn/Descriptor_Unit_pion_CUB_2Corps_1Sec'
+    AutoNameBase          = 'pion_CUB_2Corps_1Sec'
+    ModelResource         = $/GFX/DepictionResources/Modele_GAZ_53_trans_CUB
+    ThumbstackScale       = 7
+)
+unnamed Template_SceneryDescriptorSpawn
+(
+    RegistrationName      = 'pion_CUB_2Corps_2Sec'
+    ClassName             = '$/GFX/Pawn/Descriptor_Unit_pion_CUB_2Corps_2Sec'
+    AutoNameBase          = 'pion_CUB_2Corps_2Sec'
+    ModelResource         = $/GFX/DepictionResources/Modele_GAZ_53_trans_CUB
+    ThumbstackScale       = 7
+)
+unnamed Template_SceneryDescriptorSpawn
+(
+    RegistrationName      = 'pion_CUB_2Corps_PinarSec'
+    ClassName             = '$/GFX/Pawn/Descriptor_Unit_pion_CUB_2Corps_PinarSec'
+    AutoNameBase          = 'pion_CUB_2Corps_PinarSec'
+    ModelResource         = $/GFX/DepictionResources/Modele_BTR_60_CHAIKA_CMD_CUB
+    ThumbstackScale       = 7
+)
+unnamed Template_SceneryDescriptorSpawn
+(
+    RegistrationName      = 'pion_CUB_2Corps_Reco'
+    ClassName             = '$/GFX/Pawn/Descriptor_Unit_pion_CUB_2Corps_Reco'
+    AutoNameBase          = 'pion_CUB_2Corps_Reco'
+    ModelResource         = $/GFX/DepictionResources/Modele_PT76_CUB
+    ThumbstackScale       = 7
+)
+unnamed Template_SceneryDescriptorSpawn
+(
+    RegistrationName      = 'pion_CUB_36Helo'
+    ClassName             = '$/GFX/Pawn/Descriptor_Unit_pion_CUB_36Helo'
+    AutoNameBase          = 'pion_CUB_36Helo'
+    ModelResource         = $/GFX/DepictionResources/Modele_Mi_24D_CUB
+    ThumbstackScale       = 7
+)
+unnamed Template_SceneryDescriptorSpawn
+(
+    RegistrationName      = 'pion_CUB_ArtDiv_1'
+    ClassName             = '$/GFX/Pawn/Descriptor_Unit_pion_CUB_ArtDiv_1'
+    AutoNameBase          = 'pion_CUB_ArtDiv_1'
+    ModelResource         = $/GFX/DepictionResources/Modele_T34_M46_CUB
+    ThumbstackScale       = 7
+)
+unnamed Template_SceneryDescriptorSpawn
+(
+    RegistrationName      = 'pion_CUB_ArtDiv_2'
+    ClassName             = '$/GFX/Pawn/Descriptor_Unit_pion_CUB_ArtDiv_2'
+    AutoNameBase          = 'pion_CUB_ArtDiv_2'
+    ModelResource         = $/GFX/DepictionResources/Modele_T34_D30_CUB
+    ThumbstackScale       = 7
+)
+unnamed Template_SceneryDescriptorSpawn
+(
+    RegistrationName      = 'pion_CUB_ArtDiv_3'
+    ClassName             = '$/GFX/Pawn/Descriptor_Unit_pion_CUB_ArtDiv_3'
+    AutoNameBase          = 'pion_CUB_ArtDiv_3'
+    ModelResource         = $/GFX/DepictionResources/Modele_T34_KS19_CUB
+    ThumbstackScale       = 7
+)
+unnamed Template_SceneryDescriptorSpawn
+(
+    RegistrationName      = 'pion_CUB_Naval_Inf_Bat'
+    ClassName             = '$/GFX/Pawn/Descriptor_Unit_pion_CUB_Naval_Inf_Bat'
+    AutoNameBase          = 'pion_CUB_Naval_Inf_Bat'
+    ModelResource         = $/GFX/DepictionResources/Modele_BTR_60_Naval_CUB
+    ThumbstackScale       = 7
+)
+unnamed Template_SceneryDescriptorSpawn
+(
+    RegistrationName      = 'pion_CUB_WestAA_1'
+    ClassName             = '$/GFX/Pawn/Descriptor_Unit_pion_CUB_WestAA_1'
+    AutoNameBase          = 'pion_CUB_WestAA_1'
+    ModelResource         = $/GFX/DepictionResources/Modele_DCA_S125_quad_Neva_CUB
+    ThumbstackScale       = 7
+)
+unnamed Template_SceneryDescriptorSpawn
+(
+    RegistrationName      = 'pion_CUB_WestAA_2'
+    ClassName             = '$/GFX/Pawn/Descriptor_Unit_pion_CUB_WestAA_2'
+    AutoNameBase          = 'pion_CUB_WestAA_2'
+    ModelResource         = $/GFX/DepictionResources/Modele_DCA_S125_quad_Neva_CUB
+    ThumbstackScale       = 7
+)
+unnamed Template_SceneryDescriptorSpawn
+(
+    RegistrationName      = 'pion_CUB_WestAA_3'
+    ClassName             = '$/GFX/Pawn/Descriptor_Unit_pion_CUB_WestAA_3'
+    AutoNameBase          = 'pion_CUB_WestAA_3'
+    ModelResource         = $/GFX/DepictionResources/Modele_DCA_S125_quad_Neva_CUB
+    ThumbstackScale       = 7
+)
+unnamed Template_SceneryDescriptorSpawn
+(
+    RegistrationName      = 'pion_CUB_WestAA_4'
+    ClassName             = '$/GFX/Pawn/Descriptor_Unit_pion_CUB_WestAA_4'
+    AutoNameBase          = 'pion_CUB_WestAA_4'
+    ModelResource         = $/GFX/DepictionResources/Modele_DCA_S125_quad_Neva_CUB
+    ThumbstackScale       = 7
+)
+unnamed Template_SceneryDescriptorSpawn
+(
+    RegistrationName      = 'pion_CUB_WestAA_5'
+    ClassName             = '$/GFX/Pawn/Descriptor_Unit_pion_CUB_WestAA_5'
+    AutoNameBase          = 'pion_CUB_WestAA_5'
+    ModelResource         = $/GFX/DepictionResources/Modele_DCA_S125_quad_Neva_CUB
+    ThumbstackScale       = 7
+)
+unnamed Template_SceneryDescriptorSpawn
+(
+    RegistrationName      = 'pion_CUB_WestArmy'
+    ClassName             = '$/GFX/Pawn/Descriptor_Unit_pion_CUB_WestArmy'
+    AutoNameBase          = 'pion_CUB_WestArmy'
+    ModelResource         = $/GFX/DepictionResources/Modele_GAZ_69_CMD_CUB
+    ThumbstackScale       = 7
+)
+unnamed Template_SceneryDescriptorSpawn
+(
+    RegistrationName      = 'pion_CUB_WestMTT_HavanaMTT_1'
+    ClassName             = '$/GFX/Pawn/Descriptor_Unit_pion_CUB_WestMTT_HavanaMTT_1'
+    AutoNameBase          = 'pion_CUB_WestMTT_HavanaMTT_1'
+    ModelResource         = $/GFX/DepictionResources/Modele_Isuzu_Pickup_CUB
+    ThumbstackScale       = 7
+)
+unnamed Template_SceneryDescriptorSpawn
+(
+    RegistrationName      = 'pion_CUB_WestMTT_HavanaMTT_2'
+    ClassName             = '$/GFX/Pawn/Descriptor_Unit_pion_CUB_WestMTT_HavanaMTT_2'
+    AutoNameBase          = 'pion_CUB_WestMTT_HavanaMTT_2'
+    ModelResource         = $/GFX/DepictionResources/Modele_Isuzu_Pickup_CUB
+    ThumbstackScale       = 7
+)
+unnamed Template_SceneryDescriptorSpawn
+(
+    RegistrationName      = 'pion_CUB_WestMTT_HavanaMTT_3'
+    ClassName             = '$/GFX/Pawn/Descriptor_Unit_pion_CUB_WestMTT_HavanaMTT_3'
+    AutoNameBase          = 'pion_CUB_WestMTT_HavanaMTT_3'
+    ModelResource         = $/GFX/DepictionResources/Modele_Isuzu_Pickup_CUB
+    ThumbstackScale       = 7
+)
+unnamed Template_SceneryDescriptorSpawn
+(
+    RegistrationName      = 'pion_CUB_WestMTT_HavanaMTT_4'
+    ClassName             = '$/GFX/Pawn/Descriptor_Unit_pion_CUB_WestMTT_HavanaMTT_4'
+    AutoNameBase          = 'pion_CUB_WestMTT_HavanaMTT_4'
+    ModelResource         = $/GFX/DepictionResources/Modele_Isuzu_Pickup_CUB
+    ThumbstackScale       = 7
+)
+unnamed Template_SceneryDescriptorSpawn
+(
+    RegistrationName      = 'pion_CUB_WestMTT_PinarMTT_1'
+    ClassName             = '$/GFX/Pawn/Descriptor_Unit_pion_CUB_WestMTT_PinarMTT_1'
+    AutoNameBase          = 'pion_CUB_WestMTT_PinarMTT_1'
+    ModelResource         = $/GFX/DepictionResources/Modele_Isuzu_Pickup_CUB
+    ThumbstackScale       = 7
+)
+unnamed Template_SceneryDescriptorSpawn
+(
+    RegistrationName      = 'pion_CUB_WestMTT_PinarMTT_2'
+    ClassName             = '$/GFX/Pawn/Descriptor_Unit_pion_CUB_WestMTT_PinarMTT_2'
+    AutoNameBase          = 'pion_CUB_WestMTT_PinarMTT_2'
+    ModelResource         = $/GFX/DepictionResources/Modele_Isuzu_Pickup_CUB
+    ThumbstackScale       = 7
+)
+unnamed Template_SceneryDescriptorSpawn
+(
+    RegistrationName      = 'pion_CUB_WestMTT_PinarMTT_3'
+    ClassName             = '$/GFX/Pawn/Descriptor_Unit_pion_CUB_WestMTT_PinarMTT_3'
+    AutoNameBase          = 'pion_CUB_WestMTT_PinarMTT_3'
+    ModelResource         = $/GFX/DepictionResources/Modele_Isuzu_Pickup_CUB
+    ThumbstackScale       = 7
+)
+unnamed Template_SceneryDescriptorSpawn
+(
+    RegistrationName      = 'pion_CUB_WestMTT_PinarMTT_4'
+    ClassName             = '$/GFX/Pawn/Descriptor_Unit_pion_CUB_WestMTT_PinarMTT_4'
+    AutoNameBase          = 'pion_CUB_WestMTT_PinarMTT_4'
+    ModelResource         = $/GFX/DepictionResources/Modele_Isuzu_Pickup_CUB
     ThumbstackScale       = 7
 )
 unnamed Template_SceneryDescriptorSpawn
@@ -3876,54 +4683,6 @@ unnamed Template_SceneryDescriptorSpawn
 )
 unnamed Template_SceneryDescriptorSpawn
 (
-    RegistrationName      = 'pion_POL_30RMD_32Reco'
-    ClassName             = '$/GFX/Pawn/Descriptor_Unit_pion_POL_30RMD_32Reco'
-    AutoNameBase          = 'pion_POL_30RMD_32Reco'
-    ModelResource         = $/GFX/DepictionResources/Modele_BRDM_2_POL
-    ThumbstackScale       = 7
-)
-unnamed Template_SceneryDescriptorSpawn
-(
-    RegistrationName      = 'pion_POL_30RMD_76TKSR'
-    ClassName             = '$/GFX/Pawn/Descriptor_Unit_pion_POL_30RMD_76TKSR'
-    AutoNameBase          = 'pion_POL_30RMD_76TKSR'
-    ModelResource         = $/GFX/DepictionResources/Modele_T54B_POL
-    ThumbstackScale       = 7
-)
-unnamed Template_SceneryDescriptorSpawn
-(
-    RegistrationName      = 'pion_POL_30RMD_77Art'
-    ClassName             = '$/GFX/Pawn/Descriptor_Unit_pion_POL_30RMD_77Art'
-    AutoNameBase          = 'pion_POL_30RMD_77Art'
-    ModelResource         = $/GFX/DepictionResources/Modele_Howz_M30_122mm_POL
-    ThumbstackScale       = 7
-)
-unnamed Template_SceneryDescriptorSpawn
-(
-    RegistrationName      = 'pion_POL_30RMD_83MSR'
-    ClassName             = '$/GFX/Pawn/Descriptor_Unit_pion_POL_30RMD_83MSR'
-    AutoNameBase          = 'pion_POL_30RMD_83MSR'
-    ModelResource         = $/GFX/DepictionResources/Modele_BMP_1_SP2_POL
-    ThumbstackScale       = 7
-)
-unnamed Template_SceneryDescriptorSpawn
-(
-    RegistrationName      = 'pion_POL_30RMD_84MSR'
-    ClassName             = '$/GFX/Pawn/Descriptor_Unit_pion_POL_30RMD_84MSR'
-    AutoNameBase          = 'pion_POL_30RMD_84MSR'
-    ModelResource         = $/GFX/DepictionResources/Modele_Star_266_POL
-    ThumbstackScale       = 7
-)
-unnamed Template_SceneryDescriptorSpawn
-(
-    RegistrationName      = 'pion_POL_30RMD_85MSR'
-    ClassName             = '$/GFX/Pawn/Descriptor_Unit_pion_POL_30RMD_85MSR'
-    AutoNameBase          = 'pion_POL_30RMD_85MSR'
-    ModelResource         = $/GFX/DepictionResources/Modele_Star_266_POL
-    ThumbstackScale       = 7
-)
-unnamed Template_SceneryDescriptorSpawn
-(
     RegistrationName      = 'pion_POL_49AtckHelo'
     ClassName             = '$/GFX/Pawn/Descriptor_Unit_pion_POL_49AtckHelo'
     AutoNameBase          = 'pion_POL_49AtckHelo'
@@ -4336,14 +5095,6 @@ unnamed Template_SceneryDescriptorSpawn
     ClassName             = '$/GFX/Pawn/Descriptor_Unit_pion_POL_6Airborne_6Para'
     AutoNameBase          = 'pion_POL_6Airborne_6Para'
     ModelResource         = $/GFX/DepictionResources/Modele_GAZ_66B_POL
-    ThumbstackScale       = 7
-)
-unnamed Template_SceneryDescriptorSpawn
-(
-    RegistrationName      = 'pion_POL_6Airborne_HQ'
-    ClassName             = '$/GFX/Pawn/Descriptor_Unit_pion_POL_6Airborne_HQ'
-    AutoNameBase          = 'pion_POL_6Airborne_HQ'
-    ModelResource         = $/GFX/DepictionResources/Modele_UAZ_469_trans_POL
     ThumbstackScale       = 7
 )
 unnamed Template_SceneryDescriptorSpawn
@@ -12836,6 +13587,38 @@ unnamed Template_SceneryDescriptorSpawn
 )
 unnamed Template_SceneryDescriptorSpawn
 (
+    RegistrationName      = 'pion_SOV_7MSBr_20'
+    ClassName             = '$/GFX/Pawn/Descriptor_Unit_pion_SOV_7MSBr_20'
+    AutoNameBase          = 'pion_SOV_7MSBr_20'
+    ModelResource         = $/GFX/DepictionResources/Modele_BTR_60_SOV
+    ThumbstackScale       = 7
+)
+unnamed Template_SceneryDescriptorSpawn
+(
+    RegistrationName      = 'pion_SOV_7MSBr_3'
+    ClassName             = '$/GFX/Pawn/Descriptor_Unit_pion_SOV_7MSBr_3'
+    AutoNameBase          = 'pion_SOV_7MSBr_3'
+    ModelResource         = $/GFX/DepictionResources/Modele_BMP_1P_Konkurs_SOV
+    ThumbstackScale       = 7
+)
+unnamed Template_SceneryDescriptorSpawn
+(
+    RegistrationName      = 'pion_SOV_7MSBr_4'
+    ClassName             = '$/GFX/Pawn/Descriptor_Unit_pion_SOV_7MSBr_4'
+    AutoNameBase          = 'pion_SOV_7MSBr_4'
+    ModelResource         = $/GFX/DepictionResources/Modele_BTR_60_SOV
+    ThumbstackScale       = 7
+)
+unnamed Template_SceneryDescriptorSpawn
+(
+    RegistrationName      = 'pion_SOV_7MSBr_MLRS'
+    ClassName             = '$/GFX/Pawn/Descriptor_Unit_pion_SOV_7MSBr_MLRS'
+    AutoNameBase          = 'pion_SOV_7MSBr_MLRS'
+    ModelResource         = $/GFX/DepictionResources/Modele_BM21_Grad_SOV
+    ThumbstackScale       = 7
+)
+unnamed Template_SceneryDescriptorSpawn
+(
     RegistrationName      = 'pion_SOV_8GA'
     ClassName             = '$/GFX/Pawn/Descriptor_Unit_pion_SOV_8GA'
     AutoNameBase          = 'pion_SOV_8GA'
@@ -16020,6 +16803,118 @@ unnamed Template_SceneryDescriptorSpawn
 )
 unnamed Template_SceneryDescriptorSpawn
 (
+    RegistrationName      = 'pion_US_101AB'
+    ClassName             = '$/GFX/Pawn/Descriptor_Unit_pion_US_101AB'
+    AutoNameBase          = 'pion_US_101AB'
+    ModelResource         = $/GFX/DepictionResources/Modele_OH58C_CMD_US
+    ThumbstackScale       = 7
+)
+unnamed Template_SceneryDescriptorSpawn
+(
+    RegistrationName      = 'pion_US_101AB_101Helo_1'
+    ClassName             = '$/GFX/Pawn/Descriptor_Unit_pion_US_101AB_101Helo_1'
+    AutoNameBase          = 'pion_US_101AB_101Helo_1'
+    ModelResource         = $/GFX/DepictionResources/Modele_AH64_Apache_US
+    ThumbstackScale       = 7
+)
+unnamed Template_SceneryDescriptorSpawn
+(
+    RegistrationName      = 'pion_US_101AB_101Helo_2'
+    ClassName             = '$/GFX/Pawn/Descriptor_Unit_pion_US_101AB_101Helo_2'
+    AutoNameBase          = 'pion_US_101AB_101Helo_2'
+    ModelResource         = $/GFX/DepictionResources/Modele_AH1F_Cobra_US
+    ThumbstackScale       = 7
+)
+unnamed Template_SceneryDescriptorSpawn
+(
+    RegistrationName      = 'pion_US_101AB_101Helo_3'
+    ClassName             = '$/GFX/Pawn/Descriptor_Unit_pion_US_101AB_101Helo_3'
+    AutoNameBase          = 'pion_US_101AB_101Helo_3'
+    ModelResource         = $/GFX/DepictionResources/Modele_AH1F_Cobra_US
+    ThumbstackScale       = 7
+)
+unnamed Template_SceneryDescriptorSpawn
+(
+    RegistrationName      = 'pion_US_101AB_17Cav_2'
+    ClassName             = '$/GFX/Pawn/Descriptor_Unit_pion_US_101AB_17Cav_2'
+    AutoNameBase          = 'pion_US_101AB_17Cav_2'
+    ModelResource         = $/GFX/DepictionResources/Modele_OH58C_Scout_US
+    ThumbstackScale       = 7
+)
+unnamed Template_SceneryDescriptorSpawn
+(
+    RegistrationName      = 'pion_US_101AB_187IR_1'
+    ClassName             = '$/GFX/Pawn/Descriptor_Unit_pion_US_101AB_187IR_1'
+    AutoNameBase          = 'pion_US_101AB_187IR_1'
+    ModelResource         = $/GFX/DepictionResources/Modele_M998_Humvee_US
+    ThumbstackScale       = 7
+)
+unnamed Template_SceneryDescriptorSpawn
+(
+    RegistrationName      = 'pion_US_101AB_187IR_2'
+    ClassName             = '$/GFX/Pawn/Descriptor_Unit_pion_US_101AB_187IR_2'
+    AutoNameBase          = 'pion_US_101AB_187IR_2'
+    ModelResource         = $/GFX/DepictionResources/Modele_M998_Humvee_US
+    ThumbstackScale       = 7
+)
+unnamed Template_SceneryDescriptorSpawn
+(
+    RegistrationName      = 'pion_US_101AB_187IR_3'
+    ClassName             = '$/GFX/Pawn/Descriptor_Unit_pion_US_101AB_187IR_3'
+    AutoNameBase          = 'pion_US_101AB_187IR_3'
+    ModelResource         = $/GFX/DepictionResources/Modele_M998_Humvee_US
+    ThumbstackScale       = 7
+)
+unnamed Template_SceneryDescriptorSpawn
+(
+    RegistrationName      = 'pion_US_101AB_327IR_1'
+    ClassName             = '$/GFX/Pawn/Descriptor_Unit_pion_US_101AB_327IR_1'
+    AutoNameBase          = 'pion_US_101AB_327IR_1'
+    ModelResource         = $/GFX/DepictionResources/Modele_UH60A_Black_Hawk_US
+    ThumbstackScale       = 7
+)
+unnamed Template_SceneryDescriptorSpawn
+(
+    RegistrationName      = 'pion_US_101AB_327IR_2'
+    ClassName             = '$/GFX/Pawn/Descriptor_Unit_pion_US_101AB_327IR_2'
+    AutoNameBase          = 'pion_US_101AB_327IR_2'
+    ModelResource         = $/GFX/DepictionResources/Modele_UH60A_Black_Hawk_US
+    ThumbstackScale       = 7
+)
+unnamed Template_SceneryDescriptorSpawn
+(
+    RegistrationName      = 'pion_US_101AB_327IR_3'
+    ClassName             = '$/GFX/Pawn/Descriptor_Unit_pion_US_101AB_327IR_3'
+    AutoNameBase          = 'pion_US_101AB_327IR_3'
+    ModelResource         = $/GFX/DepictionResources/Modele_UH60A_Black_Hawk_US
+    ThumbstackScale       = 7
+)
+unnamed Template_SceneryDescriptorSpawn
+(
+    RegistrationName      = 'pion_US_101AB_502IR_1'
+    ClassName             = '$/GFX/Pawn/Descriptor_Unit_pion_US_101AB_502IR_1'
+    AutoNameBase          = 'pion_US_101AB_502IR_1'
+    ModelResource         = $/GFX/DepictionResources/Modele_M998_Humvee_US
+    ThumbstackScale       = 7
+)
+unnamed Template_SceneryDescriptorSpawn
+(
+    RegistrationName      = 'pion_US_101AB_502IR_2'
+    ClassName             = '$/GFX/Pawn/Descriptor_Unit_pion_US_101AB_502IR_2'
+    AutoNameBase          = 'pion_US_101AB_502IR_2'
+    ModelResource         = $/GFX/DepictionResources/Modele_M998_Humvee_US
+    ThumbstackScale       = 7
+)
+unnamed Template_SceneryDescriptorSpawn
+(
+    RegistrationName      = 'pion_US_101AB_502IR_3'
+    ClassName             = '$/GFX/Pawn/Descriptor_Unit_pion_US_101AB_502IR_3'
+    AutoNameBase          = 'pion_US_101AB_502IR_3'
+    ModelResource         = $/GFX/DepictionResources/Modele_M998_Humvee_US
+    ThumbstackScale       = 7
+)
+unnamed Template_SceneryDescriptorSpawn
+(
     RegistrationName      = 'pion_US_11ACR_1'
     ClassName             = '$/GFX/Pawn/Descriptor_Unit_pion_US_11ACR_1'
     AutoNameBase          = 'pion_US_11ACR_1'
@@ -16440,6 +17335,134 @@ unnamed Template_SceneryDescriptorSpawn
     ClassName             = '$/GFX/Pawn/Descriptor_Unit_pion_US_1ID_5Art_4'
     AutoNameBase          = 'pion_US_1ID_5Art_4'
     ModelResource         = $/GFX/DepictionResources/Modele_DEP_M109A2
+    ThumbstackScale       = 7
+)
+unnamed Template_SceneryDescriptorSpawn
+(
+    RegistrationName      = 'pion_US_26ID'
+    ClassName             = '$/GFX/Pawn/Descriptor_Unit_pion_US_26ID'
+    AutoNameBase          = 'pion_US_26ID'
+    ModelResource         = $/GFX/DepictionResources/Modele_M151_MUTT_trans_US
+    ThumbstackScale       = 7
+)
+unnamed Template_SceneryDescriptorSpawn
+(
+    RegistrationName      = 'pion_US_26ID_26DivArty_101Art_1'
+    ClassName             = '$/GFX/Pawn/Descriptor_Unit_pion_US_26ID_26DivArty_101Art_1'
+    AutoNameBase          = 'pion_US_26ID_26DivArty_101Art_1'
+    ModelResource         = $/GFX/DepictionResources/Modele_Howz_M114_155mm_NG_US
+    ThumbstackScale       = 7
+)
+unnamed Template_SceneryDescriptorSpawn
+(
+    RegistrationName      = 'pion_US_26ID_26DivArty_211Art_1'
+    ClassName             = '$/GFX/Pawn/Descriptor_Unit_pion_US_26ID_26DivArty_211Art_1'
+    AutoNameBase          = 'pion_US_26ID_26DivArty_211Art_1'
+    ModelResource         = $/GFX/DepictionResources/Modele_M110A2_Howz_NG_US
+    ThumbstackScale       = 7
+)
+unnamed Template_SceneryDescriptorSpawn
+(
+    RegistrationName      = 'pion_US_26ID_3NGBrig_101Mech_1'
+    ClassName             = '$/GFX/Pawn/Descriptor_Unit_pion_US_26ID_3NGBrig_101Mech_1'
+    AutoNameBase          = 'pion_US_26ID_3NGBrig_101Mech_1'
+    ModelResource         = $/GFX/DepictionResources/Modele_M113A1_NG_US
+    ThumbstackScale       = 7
+)
+unnamed Template_SceneryDescriptorSpawn
+(
+    RegistrationName      = 'pion_US_26ID_3NGBrig_104Inf_1'
+    ClassName             = '$/GFX/Pawn/Descriptor_Unit_pion_US_26ID_3NGBrig_104Inf_1'
+    AutoNameBase          = 'pion_US_26ID_3NGBrig_104Inf_1'
+    ModelResource         = $/GFX/DepictionResources/Modele_M35_trans_US
+    ThumbstackScale       = 7
+)
+unnamed Template_SceneryDescriptorSpawn
+(
+    RegistrationName      = 'pion_US_26ID_3NGBrig_104Inf_2'
+    ClassName             = '$/GFX/Pawn/Descriptor_Unit_pion_US_26ID_3NGBrig_104Inf_2'
+    AutoNameBase          = 'pion_US_26ID_3NGBrig_104Inf_2'
+    ModelResource         = $/GFX/DepictionResources/Modele_M35_trans_US
+    ThumbstackScale       = 7
+)
+unnamed Template_SceneryDescriptorSpawn
+(
+    RegistrationName      = 'pion_US_26ID_3NGBrig_181Inf_1'
+    ClassName             = '$/GFX/Pawn/Descriptor_Unit_pion_US_26ID_3NGBrig_181Inf_1'
+    AutoNameBase          = 'pion_US_26ID_3NGBrig_181Inf_1'
+    ModelResource         = $/GFX/DepictionResources/Modele_M35_trans_US
+    ThumbstackScale       = 7
+)
+unnamed Template_SceneryDescriptorSpawn
+(
+    RegistrationName      = 'pion_US_26ID_3NGBrig_182Inf_1'
+    ClassName             = '$/GFX/Pawn/Descriptor_Unit_pion_US_26ID_3NGBrig_182Inf_1'
+    AutoNameBase          = 'pion_US_26ID_3NGBrig_182Inf_1'
+    ModelResource         = $/GFX/DepictionResources/Modele_M35_trans_US
+    ThumbstackScale       = 7
+)
+unnamed Template_SceneryDescriptorSpawn
+(
+    RegistrationName      = 'pion_US_26ID_43NGBrig_102Inf_1'
+    ClassName             = '$/GFX/Pawn/Descriptor_Unit_pion_US_26ID_43NGBrig_102Inf_1'
+    AutoNameBase          = 'pion_US_26ID_43NGBrig_102Inf_1'
+    ModelResource         = $/GFX/DepictionResources/Modele_M35_trans_US
+    ThumbstackScale       = 7
+)
+unnamed Template_SceneryDescriptorSpawn
+(
+    RegistrationName      = 'pion_US_26ID_43NGBrig_102Inf_2'
+    ClassName             = '$/GFX/Pawn/Descriptor_Unit_pion_US_26ID_43NGBrig_102Inf_2'
+    AutoNameBase          = 'pion_US_26ID_43NGBrig_102Inf_2'
+    ModelResource         = $/GFX/DepictionResources/Modele_M35_trans_US
+    ThumbstackScale       = 7
+)
+unnamed Template_SceneryDescriptorSpawn
+(
+    RegistrationName      = 'pion_US_26ID_43NGBrig_169Inf_1'
+    ClassName             = '$/GFX/Pawn/Descriptor_Unit_pion_US_26ID_43NGBrig_169Inf_1'
+    AutoNameBase          = 'pion_US_26ID_43NGBrig_169Inf_1'
+    ModelResource         = $/GFX/DepictionResources/Modele_M35_trans_US
+    ThumbstackScale       = 7
+)
+unnamed Template_SceneryDescriptorSpawn
+(
+    RegistrationName      = 'pion_US_26ID_86NGBrig_172Inf_3'
+    ClassName             = '$/GFX/Pawn/Descriptor_Unit_pion_US_26ID_86NGBrig_172Inf_3'
+    AutoNameBase          = 'pion_US_26ID_86NGBrig_172Inf_3'
+    ModelResource         = $/GFX/DepictionResources/Modele_UH1H_Huey_US
+    ThumbstackScale       = 7
+)
+unnamed Template_SceneryDescriptorSpawn
+(
+    RegistrationName      = 'pion_US_26ID_86NGBrig_172Tank_1'
+    ClassName             = '$/GFX/Pawn/Descriptor_Unit_pion_US_26ID_86NGBrig_172Tank_1'
+    AutoNameBase          = 'pion_US_26ID_86NGBrig_172Tank_1'
+    ModelResource         = $/GFX/DepictionResources/Modele_M48A5_US
+    ThumbstackScale       = 7
+)
+unnamed Template_SceneryDescriptorSpawn
+(
+    RegistrationName      = 'pion_US_26ID_86NGBrig_172Tank_2'
+    ClassName             = '$/GFX/Pawn/Descriptor_Unit_pion_US_26ID_86NGBrig_172Tank_2'
+    AutoNameBase          = 'pion_US_26ID_86NGBrig_172Tank_2'
+    ModelResource         = $/GFX/DepictionResources/Modele_M48A5_US
+    ThumbstackScale       = 7
+)
+unnamed Template_SceneryDescriptorSpawn
+(
+    RegistrationName      = 'pion_US_26ID_AviaBrig_110Cav_1'
+    ClassName             = '$/GFX/Pawn/Descriptor_Unit_pion_US_26ID_AviaBrig_110Cav_1'
+    AutoNameBase          = 'pion_US_26ID_AviaBrig_110Cav_1'
+    ModelResource         = $/GFX/DepictionResources/Modele_M113A1_ACAV_NG_US
+    ThumbstackScale       = 7
+)
+unnamed Template_SceneryDescriptorSpawn
+(
+    RegistrationName      = 'pion_US_26ID_AviaBrig_126Helo_1'
+    ClassName             = '$/GFX/Pawn/Descriptor_Unit_pion_US_26ID_AviaBrig_126Helo_1'
+    AutoNameBase          = 'pion_US_26ID_AviaBrig_126Helo_1'
+    ModelResource         = $/GFX/DepictionResources/Modele_AH1F_Cobra_NG_US
     ThumbstackScale       = 7
 )
 unnamed Template_SceneryDescriptorSpawn
@@ -16920,6 +17943,126 @@ unnamed Template_SceneryDescriptorSpawn
     ClassName             = '$/GFX/Pawn/Descriptor_Unit_pion_US_3ID_AviaBrigade'
     AutoNameBase          = 'pion_US_3ID_AviaBrigade'
     ModelResource         = $/GFX/DepictionResources/Modele_AH1F_Cobra_US
+    ThumbstackScale       = 7
+)
+unnamed Template_SceneryDescriptorSpawn
+(
+    RegistrationName      = 'pion_US_4MARDIV'
+    ClassName             = '$/GFX/Pawn/Descriptor_Unit_pion_US_4MARDIV'
+    AutoNameBase          = 'pion_US_4MARDIV'
+    ModelResource         = $/GFX/DepictionResources/Modele_M1025_Humvee_CMD_US
+    ThumbstackScale       = 7
+)
+unnamed Template_SceneryDescriptorSpawn
+(
+    RegistrationName      = 'pion_US_4MARDIV_14MR_4'
+    ClassName             = '$/GFX/Pawn/Descriptor_Unit_pion_US_4MARDIV_14MR_4'
+    AutoNameBase          = 'pion_US_4MARDIV_14MR_4'
+    ModelResource         = $/GFX/DepictionResources/Modele_M109A2_USMC_US
+    ThumbstackScale       = 7
+)
+unnamed Template_SceneryDescriptorSpawn
+(
+    RegistrationName      = 'pion_US_4MARDIV_14MR_5'
+    ClassName             = '$/GFX/Pawn/Descriptor_Unit_pion_US_4MARDIV_14MR_5'
+    AutoNameBase          = 'pion_US_4MARDIV_14MR_5'
+    ModelResource         = $/GFX/DepictionResources/Modele_M110A2_USMC_US
+    ThumbstackScale       = 7
+)
+unnamed Template_SceneryDescriptorSpawn
+(
+    RegistrationName      = 'pion_US_4MARDIV_23MR_1'
+    ClassName             = '$/GFX/Pawn/Descriptor_Unit_pion_US_4MARDIV_23MR_1'
+    AutoNameBase          = 'pion_US_4MARDIV_23MR_1'
+    ModelResource         = $/GFX/DepictionResources/Modele_M1038_Humvee_US
+    ThumbstackScale       = 7
+)
+unnamed Template_SceneryDescriptorSpawn
+(
+    RegistrationName      = 'pion_US_4MARDIV_23MR_2'
+    ClassName             = '$/GFX/Pawn/Descriptor_Unit_pion_US_4MARDIV_23MR_2'
+    AutoNameBase          = 'pion_US_4MARDIV_23MR_2'
+    ModelResource         = $/GFX/DepictionResources/Modele_M1038_Humvee_US
+    ThumbstackScale       = 7
+)
+unnamed Template_SceneryDescriptorSpawn
+(
+    RegistrationName      = 'pion_US_4MARDIV_23MR_3'
+    ClassName             = '$/GFX/Pawn/Descriptor_Unit_pion_US_4MARDIV_23MR_3'
+    AutoNameBase          = 'pion_US_4MARDIV_23MR_3'
+    ModelResource         = $/GFX/DepictionResources/Modele_M1038_Humvee_US
+    ThumbstackScale       = 7
+)
+unnamed Template_SceneryDescriptorSpawn
+(
+    RegistrationName      = 'pion_US_4MARDIV_24MR_1'
+    ClassName             = '$/GFX/Pawn/Descriptor_Unit_pion_US_4MARDIV_24MR_1'
+    AutoNameBase          = 'pion_US_4MARDIV_24MR_1'
+    ModelResource         = $/GFX/DepictionResources/Modele_UH1N_TwinHuey_US
+    ThumbstackScale       = 7
+)
+unnamed Template_SceneryDescriptorSpawn
+(
+    RegistrationName      = 'pion_US_4MARDIV_24MR_2'
+    ClassName             = '$/GFX/Pawn/Descriptor_Unit_pion_US_4MARDIV_24MR_2'
+    AutoNameBase          = 'pion_US_4MARDIV_24MR_2'
+    ModelResource         = $/GFX/DepictionResources/Modele_AAVP_7_USMC_US
+    ThumbstackScale       = 7
+)
+unnamed Template_SceneryDescriptorSpawn
+(
+    RegistrationName      = 'pion_US_4MARDIV_24MR_3'
+    ClassName             = '$/GFX/Pawn/Descriptor_Unit_pion_US_4MARDIV_24MR_3'
+    AutoNameBase          = 'pion_US_4MARDIV_24MR_3'
+    ModelResource         = $/GFX/DepictionResources/Modele_AAVP_7_USMC_US
+    ThumbstackScale       = 7
+)
+unnamed Template_SceneryDescriptorSpawn
+(
+    RegistrationName      = 'pion_US_4MARDIV_25MR_1'
+    ClassName             = '$/GFX/Pawn/Descriptor_Unit_pion_US_4MARDIV_25MR_1'
+    AutoNameBase          = 'pion_US_4MARDIV_25MR_1'
+    ModelResource         = $/GFX/DepictionResources/Modele_M1038_Humvee_US
+    ThumbstackScale       = 7
+)
+unnamed Template_SceneryDescriptorSpawn
+(
+    RegistrationName      = 'pion_US_4MARDIV_25MR_2'
+    ClassName             = '$/GFX/Pawn/Descriptor_Unit_pion_US_4MARDIV_25MR_2'
+    AutoNameBase          = 'pion_US_4MARDIV_25MR_2'
+    ModelResource         = $/GFX/DepictionResources/Modele_M1038_Humvee_US
+    ThumbstackScale       = 7
+)
+unnamed Template_SceneryDescriptorSpawn
+(
+    RegistrationName      = 'pion_US_4MARDIV_25MR_3'
+    ClassName             = '$/GFX/Pawn/Descriptor_Unit_pion_US_4MARDIV_25MR_3'
+    AutoNameBase          = 'pion_US_4MARDIV_25MR_3'
+    ModelResource         = $/GFX/DepictionResources/Modele_M1038_Humvee_US
+    ThumbstackScale       = 7
+)
+unnamed Template_SceneryDescriptorSpawn
+(
+    RegistrationName      = 'pion_US_4MARDIV_4LAI'
+    ClassName             = '$/GFX/Pawn/Descriptor_Unit_pion_US_4MARDIV_4LAI'
+    AutoNameBase          = 'pion_US_4MARDIV_4LAI'
+    ModelResource         = $/GFX/DepictionResources/Modele_LAV_25_US
+    ThumbstackScale       = 7
+)
+unnamed Template_SceneryDescriptorSpawn
+(
+    RegistrationName      = 'pion_US_4MARDIV_4Tk'
+    ClassName             = '$/GFX/Pawn/Descriptor_Unit_pion_US_4MARDIV_4Tk'
+    AutoNameBase          = 'pion_US_4MARDIV_4Tk'
+    ModelResource         = $/GFX/DepictionResources/Modele_M1A1HA_USMC_Abrams_US
+    ThumbstackScale       = 7
+)
+unnamed Template_SceneryDescriptorSpawn
+(
+    RegistrationName      = 'pion_US_4MARDIV_8Tk'
+    ClassName             = '$/GFX/Pawn/Descriptor_Unit_pion_US_4MARDIV_8Tk'
+    AutoNameBase          = 'pion_US_4MARDIV_8Tk'
+    ModelResource         = $/GFX/DepictionResources/Modele_M60A1_RISE_Passive_USMC_US
     ThumbstackScale       = 7
 )
 unnamed Template_SceneryDescriptorSpawn
@@ -17652,26 +18795,17 @@ unnamed Template_SceneryDescriptorSpawn
 )
 unnamed Template_SceneryDescriptorSpawn
 (
+    RegistrationName      = 'pion_US_JTF_Cuba'
+    ClassName             = '$/GFX/Pawn/Descriptor_Unit_pion_US_JTF_Cuba'
+    AutoNameBase          = 'pion_US_JTF_Cuba'
+    ModelResource         = $/GFX/DepictionResources/Modele_M1025_Humvee_CMD_US
+    ThumbstackScale       = 7
+)
+unnamed Template_SceneryDescriptorSpawn
+(
     RegistrationName      = 'pion_US_NG_AviaBrigade'
     ClassName             = '$/GFX/Pawn/Descriptor_Unit_pion_US_NG_AviaBrigade'
     AutoNameBase          = 'pion_US_NG_AviaBrigade'
     ModelResource         = $/GFX/DepictionResources/Modele_AH1F_Cobra_US
-    ThumbstackScale       = 7
-)
-
-unnamed Template_SceneryDescriptorSpawn
-(
-    RegistrationName      = 'TestAirport'
-    ClassName             = '$/GFX/Pawn/Descriptor_Unit_TestAirport'
-    AutoNameBase          = 'TestAirport'
-    ModelResource         = nil
-    ThumbstackScale       = 7
-)
-unnamed Template_SceneryDescriptorSpawn
-(
-    RegistrationName      = 'TestDepotRavitaillement'
-    ClassName             = '$/GFX/Pawn/Descriptor_Unit_TestDepotRavitaillement'
-    AutoNameBase          = 'TestDepotRavitaillement'
-    ModelResource         = nil
     ThumbstackScale       = 7
 )

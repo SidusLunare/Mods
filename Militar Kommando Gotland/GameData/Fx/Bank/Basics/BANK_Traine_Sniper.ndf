@@ -6,12 +6,12 @@ template Template_FX_BANK_Traine_Fusil_de_sniper
     Params =
     [
         private parPower                   is Template_Param_Float  ( DefaultValue = 0),
-        private parShotOnGround            is Template_Param_Bool   ( DefaultValue = False),
+        private parShotOnGround            is Template_Param_Bool   ( DefaultValue = false),
         private parDestination             is Template_Param_Float3 ( DefaultValue = float3[1, 0, 0]),
         private parInitialSpeed            is Template_Param_Float3 ( DefaultValue = float3[1000, 0, 0]),
         private parFlyDuration             is Template_Param_Float  ( DefaultValue = 0),
         private parWaitBetweenShot         is Template_Param_Float  ( DefaultValue = 0),
-        private parImpactOnGround          is Template_Param_Bool   ( DefaultValue = False),
+        private parImpactOnGround          is Template_Param_Bool   ( DefaultValue = false),
     ]
     Actions =
     [
@@ -26,7 +26,7 @@ template Template_FX_BANK_Traine_Fusil_de_sniper
                 ParticleLifetime = parFlyDuration + RandomRange[-1, 1] * Min[ 0.2 ,Min[0.5 * parWaitBetweenShot, parFlyDuration * 0.25]]
                 Initialisers =
                 [
-                    Initialiser_CreateTrailId( OverrideValueFromSpawner = False ),
+                    Initialiser_CreateTrailId( OverrideValueFromSpawner = false ),
                     ParticleInitialiserList
                     (
                         Size = 300
@@ -56,8 +56,8 @@ template Template_FX_BANK_Traine_Fusil_de_sniper
                         TextureName = 'GameData:/Assets/2D/Fx/fx_fumee_traine.png'
                         ZTest = true
                         Calque = 'Particles'
-                        EmissiveParticle = True
-                        SortTriangles = True
+                        EmissiveParticle = true
+                        SortTriangles = true
                     )
                     ParticleRenderer = $/VFX_Bank/LitParticleRendererNoCentroidPositioning
                     Evolvers = ParticleStandardEvolverList
@@ -96,7 +96,7 @@ template Template_FX_BANK_Traine_Fusil_de_sniper
                                     (
                                         RenderInfo = DeferredParticleRenderInfo
                                         (
-                                            Use3DRotation = False
+                                            Use3DRotation = false
                                             TextureName = 'GameData:/Assets/2D/Fx/fx_fumee_traine.png'
                                             Calque = 'First'
                                         )
@@ -137,12 +137,12 @@ template template_BANK_Traine_Fusil_de_sniper_Simple
     Params =
     [
         private parPinPower                     is Template_Param_Float  ( DefaultValue = 0 ),
-        private parPinShotOnGround              is Template_Param_Bool   ( DefaultValue = False),
+        private parPinShotOnGround              is Template_Param_Bool   ( DefaultValue = false),
         private AbsoluteEndPosition             is Template_Param_Float3 ( DefaultValue = float3[1, 0, 0]),
         private InitialSpeed                    is Template_Param_Float3 ( DefaultValue = float3[1000, 0, 0]),
         private DurationInSec                   is Template_Param_Float  ( DefaultValue = 0),
         private parPinWaitBetweenShot           is Template_Param_Float  ( DefaultValue = 0),
-        private parPinImpactOnGround            is Template_Param_Bool   ( DefaultValue = False),
+        private parPinImpactOnGround            is Template_Param_Bool   ( DefaultValue = false),
     ]
     NamedParameters = MAP
     [

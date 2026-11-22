@@ -104,7 +104,7 @@ export FX_BANK_Beacon is SimultaneousActionDeclaration
                                         ParticleRenderer = $/VFX_Bank/LitParticleRenderer
                                         RenderInfo = ParticleRenderInfo
                                         (
-                                            SortTriangles = True
+                                            SortTriangles = true
                                             TextureName = 'GameData:/Assets/2D/Fx/poussiere.png'
                                             EmissiveParticle = true
                                         )
@@ -149,7 +149,7 @@ export FX_BANK_Beacon is SimultaneousActionDeclaration
                                         ParticleRenderer = $/VFX_Bank/LitParticleRenderer
                                         RenderInfo = ParticleRenderInfo
                                         (
-                                            SortTriangles = True
+                                            SortTriangles = true
                                             TextureName = 'GameData:/Assets/2D/Fx/flare_gris.png'
                                             EmissiveParticle = true
                                         )
@@ -197,7 +197,7 @@ export FX_BANK_Beacon is SimultaneousActionDeclaration
                     ParticleRenderer = $/VFX_Bank/LitParticleRenderer
                     RenderInfo = ParticleRenderInfo
                     (
-                        SortTriangles = True
+                        SortTriangles = true
                         TextureName = 'GameData:/Assets/2D/Fx/flare_blanc_02.png'
                         EmissiveParticle = true
                     )
@@ -242,9 +242,9 @@ export FX_BANK_Beacon is SimultaneousActionDeclaration
                     ParticleRenderer = $/VFX_Bank/StandardRenderer
                     RenderInfo = ParticleRenderInfo
                     (
-                        SortTriangles = True
+                        SortTriangles = true
                         TextureName = 'GameData:/Assets/2D/Fx/flare_blanc_02.png'
-                        Use3DRotation = False
+                        Use3DRotation = false
                         EmissiveParticle = true
                     )
                     Evolvers = private Fumigen_glow_evolver is ParticleStandardEvolverList
@@ -288,9 +288,9 @@ export FX_BANK_Beacon is SimultaneousActionDeclaration
                     ParticleRenderer = Template_ParticleRendererPlane()
                     RenderInfo = ParticleRenderInfo
                     (
-                        SortTriangles = True
+                        SortTriangles = true
                         TextureName = 'GameData:/Assets/2D/Fx/flare_jaune_00.png'
-                        Use3DRotation = False
+                        Use3DRotation = false
                         EmissiveParticle = true
                     )
                     Evolvers = private Fumigen_glow_evolver is ParticleStandardEvolverList

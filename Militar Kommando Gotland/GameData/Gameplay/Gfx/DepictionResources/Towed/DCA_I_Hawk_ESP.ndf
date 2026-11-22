@@ -13,5 +13,5 @@ export Modele_DCA_I_Hawk_ESP_MID is TResourceMesh
 export Modele_DCA_I_Hawk_ESP_LOW is TResourceMesh
 (
     Mesh="GameData:/Assets/3D/Units/US/DCA/DCA_I_Hawk_LOW/DCA_I_Hawk_LOW.fbx"
-    Textures="GameData:/Assets/3D/Units/ESP/DCA/DCA_I_Hawk"
+    Textures="GameData:/Assets/3D/Units/ESP/DCA/DCA_I_Hawk_LOW"
 )

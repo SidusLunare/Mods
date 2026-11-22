@@ -14,6 +14,68 @@ export fx_impact_bat_he_trestresgros is SimultaneousActionDeclaration
     [
         TSimultaneousAction
         (
+            Mobile = TMobileWithLocalRepereMatrixFactory
+            (
+                Position = parPosition
+            )
+            Actions =
+            [
+                TActionCall
+                (
+                    Action = $/VFX_Bank/BANK_Bomb_Distort_Simple
+                    NamedParams = MAP[
+                        ( 'parDuration', 0.7000002 ),
+                        ( 'parFinalSize', 6300 ),
+                        ( 'parInitialSize', 10000 ),
+                        ( 'parIntensity', 5000 ),
+                        ( 'parPositionRelative', float3[0,0,0] ),
+                    ]
+                ),
+                TActionCall
+                (
+                    Action = $/VFX_Bank/DestroyVegetAndLB
+                    NamedParams = MAP[
+                        ( 'parRadius', parRadiusPhysical ),
+                    ]
+                ),
+                TSequentialAction
+                (Actions =
+                    [
+                        TWaitInSec( Duration = 0.2600001 ),
+                        TActionCall
+                        (
+                            Action = $/VFX_Bank/BANK_Ground_Sticker_Big_Simple
+                            NamedParams = MAP[
+                                ( 'parColor', float3[1,1,1] ),
+                                ( 'parDeltaPosition', 0 ),
+                                ( 'parFadeInTime', 0.25 ),
+                                ( 'parLifetime', 10 ),
+                                ( 'parSize', 5000 ),
+                            ]
+                        ),
+                    ]
+                ),
+                TSequentialAction
+                (Actions =
+                    [
+                        TWaitInSec( Duration = 0.15 ),
+                        TActionCall
+                        (
+                            Action = $/VFX_Bank/ShakeCamera
+                            NamedParams = MAP[
+                                ( 'parDuration', 2 ),
+                                ( 'parFrequency', 4.5 ),
+                                ( 'parPeriod', 0.05 ),
+                                ( 'parPower', 1.5 ),
+                                ( 'parRadius', 100000 ),
+                            ]
+                        ),
+                    ]
+                ),
+            ]
+        ),
+        TSimultaneousAction
+        (
             Mobile = nil
             Actions =
             [
@@ -79,68 +141,6 @@ export fx_impact_bat_he_trestresgros is SimultaneousActionDeclaration
             Mobile = TMobileWithLocalRepereMatrixFactory
             (
                 Position = parPosition
-            )
-            Actions =
-            [
-                TActionCall
-                (
-                    Action = $/VFX_Bank/BANK_Bomb_Distort_Simple
-                    NamedParams = MAP[
-                        ( 'parDuration', 0.7000002 ),
-                        ( 'parFinalSize', 6300 ),
-                        ( 'parInitialSize', 10000 ),
-                        ( 'parIntensity', 5000 ),
-                        ( 'parPositionRelative', float3[0,0,0] ),
-                    ]
-                ),
-                TActionCall
-                (
-                    Action = $/VFX_Bank/DestroyVegetAndLB
-                    NamedParams = MAP[
-                        ( 'parRadius', parRadiusPhysical ),
-                    ]
-                ),
-                TSequentialAction
-                (Actions =
-                    [
-                        TWaitInSec( Duration = 0.2600001 ),
-                        TActionCall
-                        (
-                            Action = $/VFX_Bank/BANK_Ground_Sticker_Big_Simple
-                            NamedParams = MAP[
-                                ( 'parColor', float3[1,1,1] ),
-                                ( 'parDeltaPosition', 0 ),
-                                ( 'parFadeInTime', 0.25 ),
-                                ( 'parLifetime', 10 ),
-                                ( 'parSize', 5000 ),
-                            ]
-                        ),
-                    ]
-                ),
-                TSequentialAction
-                (Actions =
-                    [
-                        TWaitInSec( Duration = 0.15 ),
-                        TActionCall
-                        (
-                            Action = $/VFX_Bank/ShakeCamera
-                            NamedParams = MAP[
-                                ( 'parDuration', 2 ),
-                                ( 'parFrequency', 4.5 ),
-                                ( 'parPeriod', 0.05 ),
-                                ( 'parPower', 1.5 ),
-                                ( 'parRadius', 100000 ),
-                            ]
-                        ),
-                    ]
-                ),
-            ]
-        ),
-        TSimultaneousAction
-        (
-            Mobile = TMobileWithLocalRepereMatrixFactory
-            (
-                Position = parPosition
                 EulerAngles = float3[1.570796,0,0]
             )
             Actions =
@@ -171,6 +171,30 @@ export fx_impact_bat_he_trestresgros is SimultaneousActionDeclaration
                 ),
                 TActionCall
                 (
+                    Action = $/VFX_Bank/BANK_Rubble2_Simple
+                    NamedParams = MAP[
+                        ( 'parCountDebrits', 0 ),
+                        ( 'parCountDebritsWithFire', 20 ),
+                        ( 'parCountDebritsWithSmoke', 0 ),
+                        ( 'parDebritSizeMul', 2 ),
+                        ( 'parDispersion', 1200 ),
+                        ( 'parFireParticleEndSize', 500 ),
+                        ( 'parFireParticleStartSize', 100 ),
+                        ( 'parLifetime', 8 ),
+                        ( 'parMeshType', 1 ),
+                        ( 'parMinSpeedRatio', 1 ),
+                        ( 'parParticleOpacity', 0.3400001 ),
+                        ( 'parSmokeColor', float3[0.06666667,0.06666667,0.0627451] ),
+                        ( 'parSmokeColorMultiplier', 0.3 ),
+                        ( 'parSmokeDensity', 100 ),
+                        ( 'parSmokeParticleEndSize', 2000 ),
+                        ( 'parSmokeParticleStartSize', 400 ),
+                        ( 'parSpeed', float3[4250,4360,9983] ),
+                        ( 'parSpeedDispersion', 0 ),
+                    ]
+                ),
+                TActionCall
+                (
                     Action = $/VFX_Bank/BANK_Rubble2_Oriented_Simple
                     NamedParams = MAP[
                         ( 'parCountDebrits', 5 ),
@@ -192,30 +216,6 @@ export fx_impact_bat_he_trestresgros is SimultaneousActionDeclaration
                         ( 'parSmokeParticleEndSize', 2100 ),
                         ( 'parSmokeParticleStartSize', 600 ),
                         ( 'parSpeed', float3[4280,4350,8000] ),
-                    ]
-                ),
-                TActionCall
-                (
-                    Action = $/VFX_Bank/BANK_Rubble2_Simple
-                    NamedParams = MAP[
-                        ( 'parCountDebrits', 0 ),
-                        ( 'parCountDebritsWithFire', 20 ),
-                        ( 'parCountDebritsWithSmoke', 0 ),
-                        ( 'parDebritSizeMul', 2 ),
-                        ( 'parDispersion', 1200 ),
-                        ( 'parFireParticleEndSize', 500 ),
-                        ( 'parFireParticleStartSize', 100 ),
-                        ( 'parLifetime', 8 ),
-                        ( 'parMeshType', 1 ),
-                        ( 'parMinSpeedRatio', 1 ),
-                        ( 'parParticleOpacity', 0.3400001 ),
-                        ( 'parSmokeColor', float3[0.06666667,0.06666667,0.0627451] ),
-                        ( 'parSmokeColorMultiplier', 0.3 ),
-                        ( 'parSmokeDensity', 100 ),
-                        ( 'parSmokeParticleEndSize', 2000 ),
-                        ( 'parSmokeParticleStartSize', 400 ),
-                        ( 'parSpeed', float3[4250,4360,9983] ),
-                        ( 'parSpeedDispersion', 0 ),
                     ]
                 ),
                 TWaitInSec( Duration = 8),

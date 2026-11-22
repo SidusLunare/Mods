@@ -1,20 +1,19 @@
 export Modele_MTLB_CMD_DDR is TResourceMesh
 (
-    Mesh="GameData:/Assets/3D/Units/URSS/Antichar/MTLB_CMD/MTLB_CMD.fbx"
-    Textures="GameData:/Assets/3D/Units/DDR/Antichar/MTLB_CMD"
-
+    Mesh=ModelFile_MTLB_CMD_SOV
+    Textures="GameData:/Assets/3D/Units/DDR/APC/MTLBu_CMD"
 )
 
 export Modele_MTLB_CMD_DDR_MID is TResourceMesh
 (
-    Mesh="GameData:/Assets/3D/Units/URSS/Antichar/MTLB_CMD_MID/MTLB_CMD_MID.fbx"
-    Textures="GameData:/Assets/3D/Units/DDR/Antichar/MTLB_CMD_MID"
+    Mesh=ModelFile_MTLB_CMD_SOV_MID
+    Textures="GameData:/Assets/3D/Units/DDR/APC/MTLBu_CMD_MID"
 )
 
 export Modele_MTLB_CMD_DDR_LOW is TResourceMesh
 (
-    Mesh="GameData:/Assets/3D/Units/URSS/Antichar/MTLB_CMD_LOW/MTLB_CMD_LOW.fbx"
-    Textures="GameData:/Assets/3D/Units/DDR/Antichar/MTLB_CMD_LOW"
+    Mesh=ModelFile_MTLB_CMD_SOV_LOW
+    Textures="GameData:/Assets/3D/Units/DDR/APC/MTLBu_CMD_LOW"
 )
 
 

@@ -1,0 +1,22 @@
+export Modele_MiG_21bis_CLU_HON is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/DDR/Avion/MiG_21_PFM/MiG_21_PFM_AS.fbx"
+    Textures="GameData:/Assets/3D/Units/TCH/Avion/MiG_21_PFM"
+)
+
+export Modele_MiG_21bis_CLU_HON_MID is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/DDR/Avion/MiG_21_PFM_MID/MiG_21_PFM_AS_MID.fbx"
+    Textures="GameData:/Assets/3D/Units/TCH/Avion/MiG_21_PFM_MID"
+)
+
+export Modele_MiG_21bis_CLU_HON_LOW is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/DDR/Avion/MiG_21_PFM_LOW/MiG_21_PFM_AS_LOW.fbx"
+    Textures="GameData:/Assets/3D/Units/TCH/Avion/MiG_21_PFM_LOW"
+)
+
+export Modele_MiG_21bis_CLU_HON_train is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/DDR/Avion/MiG_21_PFM/MiG_21_PFM_train.fbx"
+)

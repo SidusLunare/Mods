@@ -1,0 +1,17 @@
+export Modele_BRDM_2_Naval_SOV is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/URSS/Vehicule/BRDM2/BRDM2.fbx"
+    Textures="GameData:/Assets/3D/Units/URSS/Vehicule/BRDM2_Navy"
+)
+
+export Modele_BRDM_2_Naval_SOV_MID is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/URSS/Vehicule/BRDM2_MID/BRDM2_MID.fbx"
+    Textures="GameData:/Assets/3D/Units/URSS/Vehicule/BRDM2_Navy_MID"
+)
+
+export Modele_BRDM_2_Naval_SOV_LOW is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/URSS/Vehicule/BRDM2_LOW/BRDM2_LOW.fbx"
+    Textures="GameData:/Assets/3D/Units/URSS/Vehicule/BRDM2_Navy_LOW"
+)

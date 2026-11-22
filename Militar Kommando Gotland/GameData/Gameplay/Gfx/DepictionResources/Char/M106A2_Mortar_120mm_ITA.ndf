@@ -1,0 +1,15 @@
+export Modele_M106A2_Mortar_120mm_ITA is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/ITA/Artillerie/M106A1_120mm/M106A1_120mm.fbx"
+
+)
+
+export Modele_M106A2_Mortar_120mm_ITA_MID is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/ITA/Artillerie/M106A1_120mm_MID/M106A1_120mm_MID.fbx"
+)
+
+export Modele_M106A2_Mortar_120mm_ITA_LOW is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/ITA/Artillerie/M106A1_120mm_LOW/M106A1_120mm_LOW.fbx"
+)

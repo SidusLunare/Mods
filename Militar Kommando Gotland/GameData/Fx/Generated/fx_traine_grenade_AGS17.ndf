@@ -4,8 +4,8 @@ export fx_traine_grenade_AGS17 is SimultaneousActionDeclaration
 (
     Params =
     [
+        private parBombTrajectory is TActionAlias( ExpectedType = 'bool' DefaultValue = false ),
         private parDestination is TActionAlias( ExpectedType = 'float3' DefaultValue = float3[0,0,0] ),
-        private parFluidFriction is TActionAlias( ExpectedType = 'float' DefaultValue = 1 ),
         private parFlyDuration is TActionAlias( ExpectedType = 'float' DefaultValue = 5 ),
         private parImpactOnGround is TActionAlias( ExpectedType = 'bool' DefaultValue = false ),
         private parInitialShotDelay is TActionAlias( ExpectedType = 'float' DefaultValue = 0 ),
@@ -32,14 +32,35 @@ export fx_traine_grenade_AGS17 is SimultaneousActionDeclaration
                     Action = $/VFX_Bank/ProjectileMover
                     NamedParams = MAP[
                         ( 'AbsoluteEndPosition', parDestination ),
+                        ( 'BombTrajectory', parBombTrajectory ),
                         ( 'DurationInSec', parFlyDuration ),
-                        ( 'FluidFriction', parFluidFriction ),
                         ( 'InitialSpeed', parInitialSpeed ),
                         ( 'UsePhysicSolver', parTirPhysic ),
                         ( 'UseTirTendu', parTirTendu ),
                     ]
                 ),
                 TWaitInSec( Duration = parFlyDuration ),
+                TSimultaneousAction
+                (
+                    Mobile = TMobileWithLocalRepereMatrixFactory
+                    (
+                        Position = float3[-92,-1,0]
+                    )
+                    Actions =
+                    [
+                        TActionCall
+                        (
+                            Action = $/VFX_Bank/FX_BANK_Rocket_Fire_Simple
+                            NamedParams = MAP[
+                                ( 'DurationInSec', parFlyDuration ),
+                                ( 'parLength', 5 ),
+                                ( 'parOpacity', 1 ),
+                                ( 'parStopSpawnerRatio', 0.9 ),
+                                ( 'parWidth', 4 ),
+                            ]
+                        ),
+                    ]
+                ),
                 TSimultaneousAction
                 (
                     Mobile = nil
@@ -62,13 +83,13 @@ export fx_traine_grenade_AGS17 is SimultaneousActionDeclaration
                                 ( 'parColor1', float3[1,1,1] ),
                                 ( 'parColor2', float3[0.8274511,0.8078432,0.8078432] ),
                                 ( 'parColor3', float3[0.6156863,0.6156863,0.6156863] ),
-                                ( 'parColorKey1', 1 ),
+                                ( 'parColorKey1', 0.5 ),
                                 ( 'parColorKey2', 0.5 ),
-                                ( 'parDispersion', 50 ),
-                                ( 'parDistance', 50 ),
-                                ( 'parLifeDuration', 0.05 ),
-                                ( 'parOpacity', 0.2 ),
-                                ( 'parSize1', 100 ),
+                                ( 'parDispersion', 20 ),
+                                ( 'parDistance', 25 ),
+                                ( 'parLifeDuration', 0.02 ),
+                                ( 'parOpacity', 0.5 ),
+                                ( 'parSize1', 150 ),
                                 ( 'parSize2', 400 ),
                                 ( 'parStopSpawnerRatio', 1 ),
                             ]
@@ -77,8 +98,8 @@ export fx_traine_grenade_AGS17 is SimultaneousActionDeclaration
                         (
                             Action = $/VFX_Bank/Dummy_Traine
                             NamedParams = MAP[
+                                ( 'parDummyBombTrajectory', parBombTrajectory ),
                                 ( 'parDummyDestination', parDestination ),
-                                ( 'parDummyFluidFriction', parFluidFriction ),
                                 ( 'parDummyFlyDuration', parFlyDuration ),
                                 ( 'parDummyImpactOnGround', parImpactOnGround ),
                                 ( 'parDummyInitialSpeed', parInitialSpeed ),

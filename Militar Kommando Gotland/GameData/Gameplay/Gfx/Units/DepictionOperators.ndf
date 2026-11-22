@@ -10,20 +10,6 @@ DepictionDeviator_Airplane is TAirplaneDeviatorDesc()
 // *** Operators **************************************************************************************************************************
 // ****************************************************************************************************************************************
 
-//Operator de "shader" (ex-renderstyle), qui n'affecte pas la pose
-DepictionOperator_Shader_Selection is TCosmeticSelectionStyleOperatorDesc()
-DepictionOperator_Shader_Spotted is TCosmeticSpottedStyleOperatorDesc()
-DepictionOperator_Shader_Ghost is TCosmeticGhostColorOperatorDesc()
-DepictionOperator_Shader_GhostPawn is TCosmeticPawnGhostColorOperatorDesc()
-DepictionOperator_Shader_GhostTactic is TCosmeticTacticGhostColorOperatorDesc
-(
-    Color = [255, 255, 255, 255]
-    Alphas = [0.4, 0.2]
-    Blends = [1, 0.1]
-)
-DepictionOperator_Shader_TeamColor is TCosmeticTeamColorOperatorDesc()
-DepictionOperator_Shader_Exploded is TCosmeticExplodedStyleOperatorDesc( ExplodedDamageTextures = $/M3D/Shader/VehicleDestTextures )
-
 // ****************************************************************************************************************************************
 // *** Reset (doit être le premier Operator de toute liste qu'on souhaite réinitialiser à chaque frame) ***********************************
 // ****************************************************************************************************************************************

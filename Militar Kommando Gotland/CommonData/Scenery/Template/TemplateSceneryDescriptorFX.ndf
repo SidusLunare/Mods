@@ -1,0 +1,279 @@
+//-----------------------------------------------------------------------------------
+//***********************************************************************************
+//-----------------------------------------------------------------------------------
+template SceneryDescriptor_TransitionSingleFX
+[
+    ActionDescriptor,
+] is TSceneryDescriptorFX
+(
+    ActionDescriptors = [ <ActionDescriptor> ]
+    PlayOnlyOnce = true
+    Mode = SDMode_FXModel
+)
+//-----------------------------------------------------------------------------------
+template SceneryDescriptor_TransitionFX
+[
+    ActionDescriptors,
+] is TSceneryDescriptorFX
+(
+    ActionDescriptors = <ActionDescriptors>
+    PlayOnlyOnce = true
+    Mode = SDMode_FXModel
+)
+//-----------------------------------------------------------------------------------
+//***********************************************************************************
+//-----------------------------------------------------------------------------------
+template SceneryDescriptor_Light_Static
+[
+    RegistrationName    : string            = '',
+    Tags                : LIST<string>      = [],
+    Color               : float3,
+    Falloff             : float,
+    RadiusInMeters      : float             = 20,
+] is TSceneryDescriptorFX
+(
+    SymbolDatabaseProxy = $/M3D/Scene/LevelBuildSymbolDatabaseProxy
+    RegistrationName = <RegistrationName>
+    Tags = <Tags>
+    Mode = SDMode_StaticFX
+    ActionDescriptors =
+    [
+        // (Vivien 13/10/2021) Le FX doit être déclaré export car on le retrouve InGame via le TNDFDatabase.
+        export Fx is TActionCall
+        (
+            Action = $/VFX_Bank/FX_Binder_Light_Static
+            NamedParams = MAP[
+                ('parRadiusLBU' , <RadiusInMeters>),
+                ('parColor'  , <Color>),
+                ('parFallOff', <Falloff>),
+            ]
+        )
+    ]
+)
+//-----------------------------------------------------------------------------------
+//***********************************************************************************
+//-----------------------------------------------------------------------------------
+template SceneryDescriptor_FX
+[
+    RegistrationName    : string,
+    Tags                : LIST<string>      = [],
+    Action,
+] is TSceneryDescriptorFX
+(
+    SymbolDatabaseProxy = $/M3D/Scene/LevelBuildSymbolDatabaseProxy
+    RegistrationName = <RegistrationName>
+    Tags = <Tags>
+    Mode = SDMode_StaticFX
+    ActionDescriptors =
+    [
+        export Fx is TActionCall (Action = <Action> )
+    ]
+)
+//-----------------------------------------------------------------------------------
+//***********************************************************************************
+//-----------------------------------------------------------------------------------
+template Template_FXWithRandomDuration
+[
+    Action : TActionDescriptor,
+    DurationMinInSec : float,
+    DurationMaxInSec : float,
+]is TCompetitionAction
+(
+    Actions =
+    [
+        TActionCall
+        (
+            Action = <Action>
+        ),
+        TWaitInSec(Duration = $/VFX_Bank/RandomRange[<DurationMinInSec>, <DurationMaxInSec>])
+    ]
+)
+
+template SceneryDescriptor_FXWithRandomDuration
+[
+    RegistrationName    : string,
+    Tags                : LIST<string> = [],
+    Action,
+    DurationMinInSec    : float,
+    DurationMaxInSec    : float,
+] is TSceneryDescriptorFX
+(
+    SymbolDatabaseProxy = $/M3D/Scene/LevelBuildSymbolDatabaseProxy
+    RegistrationName = <RegistrationName>
+    Tags = <Tags>
+    Mode = SDMode_StaticFX
+    ActionDescriptors =
+    [
+        export Fx is Template_FXWithRandomDuration
+        (
+            Action = <Action>
+            DurationMinInSec = <DurationMinInSec>
+            DurationMaxInSec = <DurationMaxInSec>
+        )
+    ]
+)
+//-----------------------------------------------------------------------------------
+//***********************************************************************************
+//-----------------------------------------------------------------------------------
+SceneryDescriptorFX_BuildingDestruction_Petit is SceneryDescriptor_TransitionFX
+(
+    ActionDescriptors =
+    [
+        TActionCall( Action = $/GFX/GameFx/fx_destruction_quartier_petit_01 ),
+        TActionCall( Action = $/GFX/GameFx/fx_destruction_quartier_petit_02 ),
+        TActionCall( Action = $/GFX/GameFx/fx_destruction_quartier_petit_03 ),
+        TActionCall( Action = $/GFX/GameFx/fx_destruction_quartier_petit_04 ),
+        TActionCall( Action = $/GFX/GameFx/fx_destruction_quartier_petit_05 ),
+        TActionCall( Action = $/GFX/GameFx/fx_destruction_quartier_petit_06 ),
+        TActionCall( Action = $/GFX/GameFx/fx_destruction_quartier_petit_07 ),
+        TActionCall( Action = $/GFX/GameFx/fx_destruction_quartier_petit_08 ),
+    ]
+)
+//-----------------------------------------------------------------------------------
+SceneryDescriptorFX_BuildingDestruction_Moyen is SceneryDescriptor_TransitionFX
+(
+    ActionDescriptors =
+    [
+        TActionCall( Action = $/GFX/GameFx/fx_destruction_quartier_petit_01 ),
+        TActionCall( Action = $/GFX/GameFx/fx_destruction_quartier_petit_02 ),
+        TActionCall( Action = $/GFX/GameFx/fx_destruction_quartier_petit_03 ),
+        TActionCall( Action = $/GFX/GameFx/fx_destruction_quartier_petit_04 ),
+        TActionCall( Action = $/GFX/GameFx/fx_destruction_quartier_petit_05 ),
+        TActionCall( Action = $/GFX/GameFx/fx_destruction_quartier_petit_06 ),
+        TActionCall( Action = $/GFX/GameFx/fx_destruction_quartier_petit_07 ),
+        TActionCall( Action = $/GFX/GameFx/fx_destruction_quartier_petit_08 ),
+        TActionCall( Action = $/GFX/GameFx/fx_destruction_quartier_01 ),
+        TActionCall( Action = $/GFX/GameFx/fx_destruction_quartier_02 ),
+        TActionCall( Action = $/GFX/GameFx/fx_destruction_quartier_03 ),
+        TActionCall( Action = $/GFX/GameFx/fx_destruction_quartier_04 ),
+        TActionCall( Action = $/GFX/GameFx/fx_destruction_quartier_05 ),
+        TActionCall( Action = $/GFX/GameFx/fx_destruction_quartier_06 ),
+        TActionCall( Action = $/GFX/GameFx/fx_destruction_quartier_07 ),
+        TActionCall( Action = $/GFX/GameFx/fx_destruction_quartier_08 ),
+
+
+    ]
+)
+//-----------------------------------------------------------------------------------
+SceneryDescriptorFX_BuildingDestruction_Grand is SceneryDescriptor_TransitionFX
+(
+    ActionDescriptors =
+    [
+        TActionCall( Action = $/GFX/GameFx/fx_destruction_quartier_01 ),
+        TActionCall( Action = $/GFX/GameFx/fx_destruction_quartier_02 ),
+        TActionCall( Action = $/GFX/GameFx/fx_destruction_quartier_03 ),
+        TActionCall( Action = $/GFX/GameFx/fx_destruction_quartier_04 ),
+        TActionCall( Action = $/GFX/GameFx/fx_destruction_quartier_05 ),
+        TActionCall( Action = $/GFX/GameFx/fx_destruction_quartier_06 ),
+        TActionCall( Action = $/GFX/GameFx/fx_destruction_quartier_07 ),
+        TActionCall( Action = $/GFX/GameFx/fx_destruction_quartier_08 ),
+    ]
+)
+//-----------------------------------------------------------------------------------
+SceneryDescriptorFX_BuildingDestruction_Industriel is SceneryDescriptor_TransitionFX
+(
+    ActionDescriptors =
+    [
+        TActionCall( Action = $/GFX/GameFx/fx_destruction_industriel_01 ),
+        TActionCall( Action = $/GFX/GameFx/fx_destruction_industriel_02 ),
+        TActionCall( Action = $/GFX/GameFx/fx_destruction_industriel_03 ),
+        TActionCall( Action = $/GFX/GameFx/fx_destruction_industriel_04 ),
+        TActionCall( Action = $/GFX/GameFx/fx_destruction_industriel_05 ),
+        TActionCall( Action = $/GFX/GameFx/fx_destruction_industriel_06 ),
+
+    ]
+)
+
+SceneryDescriptorFX_BuildingDestruction_HLM_Petit is SceneryDescriptor_TransitionFX
+(
+    DurationMinInSec is 420
+    DurationMaxInSec is 780
+    ActionDescriptors =
+    [
+        Template_FXWithRandomDuration( Action = $/GFX/GameFx/fx_destruction_HLM_Petit_01 DurationMinInSec = DurationMinInSec DurationMaxInSec = DurationMaxInSec),
+        Template_FXWithRandomDuration( Action = $/GFX/GameFx/fx_destruction_HLM_Petit_02 DurationMinInSec = DurationMinInSec DurationMaxInSec = DurationMaxInSec),
+        Template_FXWithRandomDuration( Action = $/GFX/GameFx/fx_destruction_HLM_Petit_03 DurationMinInSec = DurationMinInSec DurationMaxInSec = DurationMaxInSec),
+        Template_FXWithRandomDuration( Action = $/GFX/GameFx/fx_destruction_HLM_Petit_04 DurationMinInSec = DurationMinInSec DurationMaxInSec = DurationMaxInSec),
+        Template_FXWithRandomDuration( Action = $/GFX/GameFx/fx_destruction_HLM_Petit_05 DurationMinInSec = DurationMinInSec DurationMaxInSec = DurationMaxInSec),
+        Template_FXWithRandomDuration( Action = $/GFX/GameFx/fx_destruction_HLM_Petit_06 DurationMinInSec = DurationMinInSec DurationMaxInSec = DurationMaxInSec),
+
+    ]
+)
+
+SceneryDescriptorFX_BuildingDestruction_HLM_Petit_Long is SceneryDescriptor_TransitionFX
+(
+    DurationMinInSec is 420
+    DurationMaxInSec is 780
+    ActionDescriptors =
+    [
+        Template_FXWithRandomDuration( Action = $/GFX/GameFx/fx_destruction_HLM_Petit_Long_01 DurationMinInSec = DurationMinInSec DurationMaxInSec = DurationMaxInSec),
+        Template_FXWithRandomDuration( Action = $/GFX/GameFx/fx_destruction_HLM_Petit_Long_02 DurationMinInSec = DurationMinInSec DurationMaxInSec = DurationMaxInSec),
+        Template_FXWithRandomDuration( Action = $/GFX/GameFx/fx_destruction_HLM_Petit_Long_03 DurationMinInSec = DurationMinInSec DurationMaxInSec = DurationMaxInSec),
+        Template_FXWithRandomDuration( Action = $/GFX/GameFx/fx_destruction_HLM_Petit_Long_04 DurationMinInSec = DurationMinInSec DurationMaxInSec = DurationMaxInSec),
+        Template_FXWithRandomDuration( Action = $/GFX/GameFx/fx_destruction_HLM_Petit_Long_05 DurationMinInSec = DurationMinInSec DurationMaxInSec = DurationMaxInSec),
+
+    ]
+)
+
+
+SceneryDescriptorFX_BuildingDestruction_HLM is SceneryDescriptor_TransitionFX
+(
+    DurationMinInSec is 420
+    DurationMaxInSec is 900
+    ActionDescriptors =
+    [
+        Template_FXWithRandomDuration( Action = $/GFX/GameFx/fx_destruction_HLM_01 DurationMinInSec = DurationMinInSec DurationMaxInSec = DurationMaxInSec),
+        Template_FXWithRandomDuration( Action = $/GFX/GameFx/fx_destruction_HLM_02 DurationMinInSec = DurationMinInSec DurationMaxInSec = DurationMaxInSec),
+        Template_FXWithRandomDuration( Action = $/GFX/GameFx/fx_destruction_HLM_03 DurationMinInSec = DurationMinInSec DurationMaxInSec = DurationMaxInSec),
+        Template_FXWithRandomDuration( Action = $/GFX/GameFx/fx_destruction_HLM_04 DurationMinInSec = DurationMinInSec DurationMaxInSec = DurationMaxInSec),
+        Template_FXWithRandomDuration( Action = $/GFX/GameFx/fx_destruction_HLM_05 DurationMinInSec = DurationMinInSec DurationMaxInSec = DurationMaxInSec),
+        Template_FXWithRandomDuration( Action = $/GFX/GameFx/fx_destruction_HLM_06 DurationMinInSec = DurationMinInSec DurationMaxInSec = DurationMaxInSec),
+
+    ]
+)
+
+SceneryDescriptorFX_BuildingDestruction_HLM_Long is SceneryDescriptor_TransitionFX
+(
+    DurationMinInSec is 420
+    DurationMaxInSec is 900
+    ActionDescriptors =
+    [
+        Template_FXWithRandomDuration( Action = $/GFX/GameFx/fx_destruction_HLM_Petit_Long_01 DurationMinInSec = DurationMinInSec DurationMaxInSec = DurationMaxInSec),
+        Template_FXWithRandomDuration( Action = $/GFX/GameFx/fx_destruction_HLM_Petit_Long_02 DurationMinInSec = DurationMinInSec DurationMaxInSec = DurationMaxInSec),
+        Template_FXWithRandomDuration( Action = $/GFX/GameFx/fx_destruction_HLM_Petit_Long_03 DurationMinInSec = DurationMinInSec DurationMaxInSec = DurationMaxInSec),
+        Template_FXWithRandomDuration( Action = $/GFX/GameFx/fx_destruction_HLM_Petit_Long_04 DurationMinInSec = DurationMinInSec DurationMaxInSec = DurationMaxInSec),
+        Template_FXWithRandomDuration( Action = $/GFX/GameFx/fx_destruction_HLM_Petit_Long_05 DurationMinInSec = DurationMinInSec DurationMaxInSec = DurationMaxInSec),
+
+    ]
+)
+
+SceneryDescriptorFX_BuildingDestruction_HLM_Haut is SceneryDescriptor_TransitionFX
+(
+    DurationMinInSec is 480
+    DurationMaxInSec is 960
+    ActionDescriptors =
+    [
+        Template_FXWithRandomDuration( Action = $/GFX/GameFx/fx_destruction_HLM_01 DurationMinInSec = DurationMinInSec DurationMaxInSec = DurationMaxInSec),
+        Template_FXWithRandomDuration( Action = $/GFX/GameFx/fx_destruction_HLM_02 DurationMinInSec = DurationMinInSec DurationMaxInSec = DurationMaxInSec),
+        Template_FXWithRandomDuration( Action = $/GFX/GameFx/fx_destruction_HLM_03 DurationMinInSec = DurationMinInSec DurationMaxInSec = DurationMaxInSec),
+        Template_FXWithRandomDuration( Action = $/GFX/GameFx/fx_destruction_HLM_04 DurationMinInSec = DurationMinInSec DurationMaxInSec = DurationMaxInSec),
+        Template_FXWithRandomDuration( Action = $/GFX/GameFx/fx_destruction_HLM_05 DurationMinInSec = DurationMinInSec DurationMaxInSec = DurationMaxInSec),
+        Template_FXWithRandomDuration( Action = $/GFX/GameFx/fx_destruction_HLM_06 DurationMinInSec = DurationMinInSec DurationMaxInSec = DurationMaxInSec),
+
+    ]
+)
+
+SceneryDescriptorFX_BuildingDestruction_HLM_Haut_Long is SceneryDescriptor_TransitionFX
+(
+    DurationMinInSec is 480
+    DurationMaxInSec is 960
+    ActionDescriptors =
+    [
+        Template_FXWithRandomDuration( Action = $/GFX/GameFx/fx_destruction_HLM_Petit_Long_01 DurationMinInSec = DurationMinInSec DurationMaxInSec = DurationMaxInSec),
+        Template_FXWithRandomDuration( Action = $/GFX/GameFx/fx_destruction_HLM_Petit_Long_02 DurationMinInSec = DurationMinInSec DurationMaxInSec = DurationMaxInSec),
+        Template_FXWithRandomDuration( Action = $/GFX/GameFx/fx_destruction_HLM_Petit_Long_03 DurationMinInSec = DurationMinInSec DurationMaxInSec = DurationMaxInSec),
+        Template_FXWithRandomDuration( Action = $/GFX/GameFx/fx_destruction_HLM_Petit_Long_04 DurationMinInSec = DurationMinInSec DurationMaxInSec = DurationMaxInSec),
+        Template_FXWithRandomDuration( Action = $/GFX/GameFx/fx_destruction_HLM_Petit_Long_05 DurationMinInSec = DurationMinInSec DurationMaxInSec = DurationMaxInSec),
+
+    ]
+)

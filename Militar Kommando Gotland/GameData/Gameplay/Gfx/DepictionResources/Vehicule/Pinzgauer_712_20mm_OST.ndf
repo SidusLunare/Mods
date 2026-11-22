@@ -1,0 +1,14 @@
+export Modele_Pinzgauer_712_20mm_OST is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/OST/Vehicule/Pinzgauer_712_20mm/Pinzgauer_712_20mm.fbx"
+)
+
+export Modele_Pinzgauer_712_20mm_OST_MID is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/OST/Vehicule/Pinzgauer_712_20mm_MID/Pinzgauer_712_20mm_MID.fbx"
+)
+
+export Modele_Pinzgauer_712_20mm_OST_LOW is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/OST/Vehicule/Pinzgauer_712_20mm_LOW/Pinzgauer_712_20mm_LOW.fbx"
+)

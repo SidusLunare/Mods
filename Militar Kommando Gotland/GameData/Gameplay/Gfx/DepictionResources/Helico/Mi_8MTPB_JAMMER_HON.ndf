@@ -1,0 +1,14 @@
+export Modele_Mi_8MTPB_JAMMER_HON is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/URSS/Helico/Mi_8PPA/Mi_8PPA.fbx"
+)
+
+export Modele_Mi_8MTPB_JAMMER_HON_MID is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/URSS/Helico/Mi_8PPA_MID/Mi_8PPA_MID.fbx"
+)
+
+export Modele_Mi_8MTPB_JAMMER_HON_LOW is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/URSS/Helico/Mi_8PPA_LOW/Mi_8PPA_LOW.fbx"
+)

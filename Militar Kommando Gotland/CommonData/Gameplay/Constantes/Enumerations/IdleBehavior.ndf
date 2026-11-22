@@ -1,0 +1,8 @@
+// Keep this list synchronized with IdleBehavior.h
+
+EIdleBehavior is TBaseClass
+(
+    Nothing is 0
+    AutoCover is 1
+    IADefend is 2
+)

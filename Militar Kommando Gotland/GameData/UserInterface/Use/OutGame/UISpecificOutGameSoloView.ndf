@@ -144,8 +144,8 @@ template ThumbnailSoloDescriptor
 [
     TextToken : string,
     ElementName: string,
-    DefaultToggleValue: boolean = false,
-    ForceEvents: boolean = false,
+    DefaultToggleValue: bool = false,
+    ForceEvents: bool = false,
     TextColor : string = "menu_titre_solo",
     TextSize : string = "28",
     DecalageTextureSurvol : float2 = [-15.0, 40.0],
@@ -227,7 +227,7 @@ template ThumbnailSoloDescriptor
                 MagnifiableOffset = [2,47]
             )
 
-            HasBackground = True
+            HasBackground = true
             BackgroundBlockColorToken = "SD2_Blanc184_70"
 
             Components =

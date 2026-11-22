@@ -1,0 +1,34 @@
+export ModelFile_F104S_ASA_AA1_ITA is "GameData:/Assets/3D/Units/ITA/Avion/F104S_ASA_AA1/F104S_ASA_AA1.fbx"
+export Modele_F104S_ASA_AA1_ITA is TResourceMesh
+(
+    Mesh=ModelFile_F104S_ASA_AA1_ITA
+)
+export ModelFile_F104S_ASA_AA1_ITA_MID is "GameData:/Assets/3D/Units/ITA/Avion/F104S_ASA_AA1_MID/F104S_ASA_AA1_MID.fbx"
+export Modele_F104S_ASA_AA1_ITA_MID is TResourceMesh
+(
+    Mesh=ModelFile_F104S_ASA_AA1_ITA_MID
+)
+export ModelFile_F104S_ASA_AA1_ITA_LOW is "GameData:/Assets/3D/Units/ITA/Avion/F104S_ASA_AA1_LOW/F104S_ASA_AA1_LOW.fbx"
+export Modele_F104S_ASA_AA1_ITA_LOW is TResourceMesh
+(
+    Mesh=ModelFile_F104S_ASA_AA1_ITA_LOW
+)
+export ModelFile_F104S_ASA_AA1_ITA_train is "GameData:/Assets/3D/Units/ITA/Avion/F104S_ASA_AA1/F104S_ASA_AA1_train.fbx"
+export Modele_F104S_ASA_AA1_ITA_train is TResourceMesh
+(
+    Mesh=ModelFile_F104S_ASA_AA1_ITA_train
+)
+
+//------------------------------------------------------------------------------
+//------------------------------------ARMES ITA---------------------------------
+//------------------------------------------------------------------------------
+export Modele_AR70   is TResourceMesh( Mesh="GameData:/Assets/3D/Ammo/Armes/ITA/AR70/AR70.fbx" )
+export Modele_AR70_90   is TResourceMesh( Mesh="GameData:/Assets/3D/Ammo/Armes/ITA/AR70_90/AR70_90.fbx" )
+export Modele_AR70_90_SCP   is TResourceMesh( Mesh="GameData:/Assets/3D/Ammo/Armes/ITA/AR70_90_SCP/AR70_90_SCP.fbx" )
+export Modele_BM59   is TResourceMesh( Mesh="GameData:/Assets/3D/Ammo/Armes/ITA/BM59/BM59.fbx" )
+export Modele_BM59_TA   is TResourceMesh( Mesh="GameData:/Assets/3D/Ammo/Armes/ITA/BM59_TA/BM59_TA.fbx" )
+export Modele_FOLGORE_RR   is TResourceMesh( Mesh="GameData:/Assets/3D/Ammo/Armes/ITA/FOLGORE_RR/FOLGORE_RR.fbx" )
+export Modele_M12   is TResourceMesh( Mesh="GameData:/Assets/3D/Ammo/Armes/ITA/M12/M12.fbx" )
+export Modele_MG42_59   is TResourceMesh( Mesh="GameData:/Assets/3D/Ammo/Armes/ITA/MG42_59/MG42_59.fbx" )
+export Modele_T148   is TResourceMesh( Mesh="GameData:/Assets/3D/Ammo/Armes/ITA/T148/T148.fbx" )
+export Modele_T148_fuel   is TResourceMesh( Mesh="GameData:/Assets/3D/Ammo/Armes/ITA/T148/T148_bidon.fbx" )

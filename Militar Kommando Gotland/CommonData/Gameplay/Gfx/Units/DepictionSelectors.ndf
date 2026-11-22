@@ -33,7 +33,7 @@ export CommonPilotDepictionSelector is TPilotLodSelector
 (
     HighLowLimitInMeter = LodHighLowLimit_Infantry
     LowNoneLimitInMeter = LodLowNoneLimit_Infantry
-    CameraMoverManager = $/Camera/CameraMoverManager
+    Camera = $/M3D/Misc/CameraPrincipale
     OptionalLimit = $/GraphicOption/ModelQuality
 )
 

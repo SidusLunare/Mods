@@ -73,10 +73,10 @@ export BANK_DarkFireCompo is SimultaneousActionDeclaration
             Mobile = Template_MobileWithLocalRepereMatrixFactory
             (
                 Position = float3[0.00, 0.00, 0.00]
-                IntroduceCentroid = false //True
+                IntroduceCentroid = false //true
                 InitialScale = BANK_ScaleFactor
                 MaxScale = 1
-                CentroidRelative = True
+                CentroidRelative = true
             )
             Actions =
             [
@@ -226,13 +226,13 @@ public BANK_DarkFire_AD is SimultaneousActionDeclaration
                                             ParticleRenderer = $/VFX_Bank/LitParticleRenderer
                                             RenderInfo = ParticleRenderInfo
                                             (
-                                                ZTest = True
-                                                SortTriangles = True
-                                                Use3DRotation = True
+                                                ZTest = true
+                                                SortTriangles = true
+                                                Use3DRotation = true
                                                 TextureName = 'GameData:/Assets/2D/Fx/anim_flame_01_000.png'
-                                                ZWrite = False
+                                                ZWrite = false
                                                 Calque = 'Particles'
-                                                EmissiveParticle = True
+                                                EmissiveParticle = true
                                             )
                                             Evolvers = ParticleStandardEvolverListWithPhysic
                                             (
@@ -241,7 +241,7 @@ public BANK_DarkFire_AD is SimultaneousActionDeclaration
                                                 EmissivePower = ( ( getX[ParticleCustomFloat3_1] + RandomRange[1, 2] ) * ParticleCustomFloat_6 ) * Triangle[ParticleLifeRatio]
                                                                 * AttackSustainDecay[ParticleLifeRatio, 0.2, 0.8] * ParticleCustomFloat_6 * ParticleCustomFloat_4 * 0.01
                                                 ZBias = ( ParticleCustomFloat_1 + ( 40 * ParticleCustomFloat_5 * ParticleCustomFloat_4 * ParticleElapsedTime ) ) * ParticleCustomFloat_2 * lerp[Min[Distance[ParticlePosition, $/VFX_Bank/CameraPosition] div 500000, 1], 1, 3] * 2
-                                                UseHardCodedRotation = False
+                                                UseHardCodedRotation = false
                                                 Stretching = 1 div ParticleCustomFloat_3
                                                 Direction = float3[0.05, 0.05, 1.00] * $/VFX_Bank/MapWind
                                                 AdditionnalEvolvers =
@@ -340,7 +340,7 @@ public BANK_DarkFire_AD is SimultaneousActionDeclaration
                                                     ColorModifier = ParticleRemainingLifeRatio * LinearColor[0.50, 0.20, 0.05] * ParticleCustomFloat_5 * lerp[ParticleLifeRatio, 2, 1] * ParticleCustomFloat_5
                                                     Opacity = AttackSustainDecay[ParticleLifeRatio, 0.33, 0.66] * lerp[ParticleCustomFloat_5, 0.1, 0.66] * ParticleCustomFloat_6
                                                     RotationSpeed = ParticleCustomFloat3_1 * ParticleRemainingLifeRatio
-                                                    UseHardCodedRotation = True
+                                                    UseHardCodedRotation = true
                                                     AdditionnalEvolvers =
                                                     [
                                                         Template_TextureAnimation
@@ -449,7 +449,7 @@ public BANK_DarkFire_AD is SimultaneousActionDeclaration
                                                     Opacity = AttackSustainDecay[ParticleLifeRatio, ParticleCustomFloat_4, 0.8] * ParticleCustomFloat_6 * 0.6  // * 0.75
                                                     RotationSpeed = ParticleCustomFloat3_1 * ParticleRemainingLifeRatio
                                                     Stretching = ParticleCustomFloat_3
-                                                    UseHardCodedRotation = True
+                                                    UseHardCodedRotation = true
                                                     AdditionnalEvolvers =
                                                     [
                                                         Template_TextureAnimation
@@ -543,7 +543,7 @@ public BANK_DarkFire_AD is SimultaneousActionDeclaration
                                                 Size = ( ParticleCustomFloat_1 + ( 200 * ParticleElapsedTime ) ) * ParticleCustomFloat_2
                                                 Opacity = AttackSustainDecay[ParticleLifeRatio, 0.1, 0.66] * ParticleCustomFloat_6
                                                 RotationSpeed = ParticleCustomFloat3_1 * ParticleRemainingLifeRatio
-                                                UseHardCodedRotation = True
+                                                UseHardCodedRotation = true
                                                 AdditionnalEvolvers =
                                                 [
                                                     Template_TextureAnimation
@@ -630,13 +630,13 @@ public BANK_DarkFire_AD is SimultaneousActionDeclaration
                                             ParticleRenderer = $/VFX_Bank/LitParticleRenderer
                                             RenderInfo = ParticleRenderInfo
                                             (
-                                                ZTest = True
-                                                SortTriangles = True
-                                                Use3DRotation = True
+                                                ZTest = true
+                                                SortTriangles = true
+                                                Use3DRotation = true
                                                 TextureName = 'GameData:/Assets/2D/Fx/anim_flame_01_000.png'
-                                                ZWrite = False
+                                                ZWrite = false
                                                 Calque = 'Particles'
-                                                EmissiveParticle = True
+                                                EmissiveParticle = true
                                             )
                                             Evolvers = ParticleStandardEvolverListWithPhysic
                                             (
@@ -647,7 +647,7 @@ public BANK_DarkFire_AD is SimultaneousActionDeclaration
                                                 ZBias = lerp[ParticleLifeRatio, 0.375, 0.625] * ParticleCustomFloat_1
                                                 Stretching = 1 div ParticleCustomFloat_3
                                                 Direction = float3[0.10, 0.10, 1.00] * $/VFX_Bank/MapWind
-                                                UseHardCodedRotation = False
+                                                UseHardCodedRotation = false
                                                 AdditionnalEvolvers =
                                                 [
                                                     Template_TextureAnimation
@@ -680,7 +680,7 @@ private DarkFire_Color_Table is Template_Float3Table
         [0.20, 0.20, 0.20],
         [0.30, 0.30, 0.30],
     ]
-    Interpolate = True
+    Interpolate = true
 )
 public DarkFire_SmokeSpeed_Behavior is Template_FloatTable
 (
@@ -692,7 +692,7 @@ public DarkFire_SmokeSpeed_Behavior is Template_FloatTable
         0.1,
         0,
     ]
-    Interpolate = True
+    Interpolate = true
 )
 public DarkFire_Textures_Anim_Table is Template_EvaluableTable
 (

@@ -4,7 +4,7 @@ template Template_TimeServerWithVisibilityRange
 [
     VisibilityRange : TVisibilityRange,
     DebugInfo       : string = "none",
-    UpdateTimeMode  : integer = UpdateTimeModeUseIATime
+    UpdateTimeMode  : int = UpdateTimeModeUseIATime
 ] is TTimeServerWithVisibilityRange
 (
     TimeServer = TTimeServer(SpeedFactor = 1 PauseStateTransitionDuration = 1 UpdateTimeMode = <UpdateTimeMode>)

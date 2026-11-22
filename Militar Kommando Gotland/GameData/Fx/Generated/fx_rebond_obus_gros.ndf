@@ -54,27 +54,6 @@ export fx_rebond_obus_gros is SimultaneousActionDeclaration
                 ),
                 TActionCall
                 (
-                    Action = $/VFX_Bank/BANK_Bomb_NewSparks_Simple_Reverse
-                    NamedParams = MAP[
-                        ( 'parColor', float3[0.7490196,0.2509804,0] ),
-                        ( 'parColorMultiplier', 12 ),
-                        ( 'parCount', 75 ),
-                        ( 'parDir', parDirection ),
-                        ( 'parFluidFriction', 0.4 ),
-                        ( 'parGravity', 1500 ),
-                        ( 'parLifetime', 0.5 ),
-                        ( 'parNarrowness', 2 ),
-                        ( 'parPositionRadius', 0 ),
-                        ( 'parPositionRelative', parPosition ),
-                        ( 'parSize', 10 ),
-                        ( 'parSpeedMax', 8000 ),
-                        ( 'parSpeedMin', 6000 ),
-                        ( 'parStretch', 2 ),
-                        ( 'parWindFactor', 1 ),
-                    ]
-                ),
-                TActionCall
-                (
                     Action = $/VFX_Bank/BANK_Bomb_NewSparks_Simple
                     NamedParams = MAP[
                         ( 'parColor', float3[0.7490196,0.2509804,0] ),
@@ -94,6 +73,27 @@ export fx_rebond_obus_gros is SimultaneousActionDeclaration
                         ( 'parPositionRelative', float3[-44,-6,0] + parPosition ),
                     ]
                 ),
+                TActionCall
+                (
+                    Action = $/VFX_Bank/BANK_Bomb_NewSparks_Simple_Reverse
+                    NamedParams = MAP[
+                        ( 'parColor', float3[0.7490196,0.2509804,0] ),
+                        ( 'parColorMultiplier', 12 ),
+                        ( 'parCount', 75 ),
+                        ( 'parDir', parDirection ),
+                        ( 'parFluidFriction', 0.4 ),
+                        ( 'parGravity', 1500 ),
+                        ( 'parLifetime', 0.5 ),
+                        ( 'parNarrowness', 2 ),
+                        ( 'parPositionRadius', 0 ),
+                        ( 'parPositionRelative', parPosition ),
+                        ( 'parSize', 10 ),
+                        ( 'parSpeedMax', 8000 ),
+                        ( 'parSpeedMin', 6000 ),
+                        ( 'parStretch', 2 ),
+                        ( 'parWindFactor', 1 ),
+                    ]
+                ),
             ]
         ),
         TSimultaneousAction
@@ -104,31 +104,6 @@ export fx_rebond_obus_gros is SimultaneousActionDeclaration
             )
             Actions =
             [
-                TActionCall
-                (
-                    Action = $/VFX_Bank/BANK_Rubble2_Oriented_Simple_Reverse
-                    NamedParams = MAP[
-                        ( 'parCountDebrits', 10 ),
-                        ( 'parCountDebritsWithFire', 0 ),
-                        ( 'parCountDebritsWithSmoke', 0 ),
-                        ( 'parDebritSizeMul', 1.2 ),
-                        ( 'parDir', parDirection ),
-                        ( 'parDispersion', 1000 ),
-                        ( 'parFireParticleEndSize', 750 ),
-                        ( 'parFireParticleStartSize', 100 ),
-                        ( 'parGravity', 2000 ),
-                        ( 'parLifetime', 10 ),
-                        ( 'parMeshType', 0 ),
-                        ( 'parNarrowness', 5 ),
-                        ( 'parParticleOpacity', 0.1 ),
-                        ( 'parSmokeColor', float3[1,1,1] ),
-                        ( 'parSmokeColorMultiplier', 1 ),
-                        ( 'parSmokeDensity', 100 ),
-                        ( 'parSmokeParticleEndSize', 500 ),
-                        ( 'parSmokeParticleStartSize', 100 ),
-                        ( 'parSpeed', float3[3750,3750,3750] ),
-                    ]
-                ),
                 TActionCall
                 (
                     Action = $/VFX_Bank/BANK_Rubble2_Oriented_Simple
@@ -152,6 +127,31 @@ export fx_rebond_obus_gros is SimultaneousActionDeclaration
                         ( 'parSmokeParticleEndSize', 2000 ),
                         ( 'parSmokeParticleStartSize', 250 ),
                         ( 'parSpeed', float3[4050,4100,5400] ),
+                    ]
+                ),
+                TActionCall
+                (
+                    Action = $/VFX_Bank/BANK_Rubble2_Oriented_Simple_Reverse
+                    NamedParams = MAP[
+                        ( 'parCountDebrits', 10 ),
+                        ( 'parCountDebritsWithFire', 0 ),
+                        ( 'parCountDebritsWithSmoke', 0 ),
+                        ( 'parDebritSizeMul', 1.2 ),
+                        ( 'parDir', parDirection ),
+                        ( 'parDispersion', 1000 ),
+                        ( 'parFireParticleEndSize', 750 ),
+                        ( 'parFireParticleStartSize', 100 ),
+                        ( 'parGravity', 2000 ),
+                        ( 'parLifetime', 10 ),
+                        ( 'parMeshType', 0 ),
+                        ( 'parNarrowness', 5 ),
+                        ( 'parParticleOpacity', 0.1 ),
+                        ( 'parSmokeColor', float3[1,1,1] ),
+                        ( 'parSmokeColorMultiplier', 1 ),
+                        ( 'parSmokeDensity', 100 ),
+                        ( 'parSmokeParticleEndSize', 500 ),
+                        ( 'parSmokeParticleStartSize', 100 ),
+                        ( 'parSpeed', float3[3750,3750,3750] ),
                     ]
                 ),
                 TActionCall

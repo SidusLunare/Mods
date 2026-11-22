@@ -68,6 +68,22 @@ CombatGroupsTab is BUCKButtonDescriptor
 
 //-------------------------------------------------------------------------------------
 
+SmartGroupNameFrame is TUIFramePropertyRTTI
+(
+    RelativeWidthHeight = [1.0, 0.0]
+    MagnifiableWidthHeight = [0.0, 21.0]
+)
+
+SmartGroupNameBackground is PanelRoundedCorner
+(
+    BackgroundBlockColorToken = "NomGroupe"
+    BorderLineColorToken = "Transparent"
+    Radius = 10
+    RoundedVertexes = [false, true, true, false] // le 1er est en bas à gauche
+)
+
+//-------------------------------------------------------------------------------------
+
 template SmartGroupInfosContainer
 [
     ComponentFrame : TUIFramePropertyRTTI = TUIFramePropertyRTTI
@@ -78,6 +94,7 @@ template SmartGroupInfosContainer
         AlignementToAnchor = [0.5, 0.0]
     ),
     IsEditable : bool,
+    ForegroundComponents : LIST<TBUCKContainerDescriptor> = [],
 ] is BUCKListDescriptor
 (
     ElementName = "SmartGroupInfosContainer"
@@ -92,42 +109,56 @@ template SmartGroupInfosContainer
     [
         BUCKListElementDescriptor
         (
-            ComponentDescriptor = BUCKEditableTextDescriptor
-            (
-                ElementName = "SmartGroupNameEditableText"
-                ComponentFrame = TUIFramePropertyRTTI
+            ComponentDescriptor = (<IsEditable> ?
+                BUCKEditableTextDescriptor
                 (
-                    RelativeWidthHeight = [1.0, 0.0]
-                    MagnifiableWidthHeight = [0.0, 21.0]
-                )
+                    ElementName = "SmartGroupNameEditableText"
+                    ComponentFrame = ~/SmartGroupNameFrame
 
-                ClippingContainerFrameProperty = TUIFramePropertyRTTI
-                (
-                    RelativeWidthHeight = [1.0, 1.0]
-                    MagnifiableWidthHeight = [-6.0, -6.0]
-                    AlignementToFather = [0.5, 0.5]
-                    AlignementToAnchor = [0.5, 0.5]
-                )
-
-                Flags = ~/EditableTextFlag/H_CENTER | ~/EditableTextFlag/ONE_LINE
-
-                SelectionColorToken = "DeckOverview/CaseGrisee/EditableText/Selected"
-                TypefaceToken = "Liberator"
-                TextColorToken = "blanc_contour"
-                TextSizeToken = "16"
-
-                MaxChars = 30
-
-                Components =
-                [
-                    PanelRoundedCorner
+                    ClippingContainerFrameProperty = TUIFramePropertyRTTI
                     (
-                        BackgroundBlockColorToken = "NomGroupe"
-                        BorderLineColorToken = "Transparent"
-                        Radius = 10
-                        RoundedVertexes = [false, true, true, false] // le 1er est en bas à gauche
+                        RelativeWidthHeight = [1.0, 1.0]
+                        MagnifiableWidthHeight = [-6.0, -6.0]
+                        AlignementToFather = [0.5, 0.5]
+                        AlignementToAnchor = [0.5, 0.5]
                     )
-                ]
+
+                    Flags = ~/EditableTextFlag/H_CENTER | ~/EditableTextFlag/ONE_LINE
+
+                    SelectionColorToken = "DeckOverview/CaseGrisee/EditableText/Selected"
+                    TypefaceToken = "Liberator"
+                    TextColorToken = "blanc_contour"
+                    TextSizeToken = "16"
+
+                    MaxChars = 30
+
+                    Components = [~/SmartGroupNameBackground]
+                )
+                : BUCKTextDescriptor
+                (
+                    ElementName = "SmartGroupNameText"
+                    ComponentFrame = ~/SmartGroupNameFrame
+
+                    ParagraphStyle = TParagraphStyle
+                    (
+                        Alignment = UIText_Center
+                        VerticalAlignment = UIText_VerticalCenter
+                    )
+                    TextPadding = TRTTILength4(Magnifiable = [3.0, 3.0, 3.0, 3.0])
+
+                    TextStyle = "Default"
+
+                    HorizontalFitStyle = ~/FitStyle/UserDefined
+                    VerticalFitStyle = ~/FitStyle/UserDefined
+
+                    TypefaceToken = "Liberator"
+                    BigLineAction = ~/BigLineAction/CutByDots
+
+                    TextColor = "blanc_contour"
+                    TextSize = "16"
+
+                    Components = [~/SmartGroupNameBackground]
+                )
             )
         ),
         BUCKListElementDescriptor
@@ -136,32 +167,7 @@ template SmartGroupInfosContainer
         )
     ]
 
-    ForegroundComponents = (<IsEditable> ?
-        []
-        : [
-            BUCKButtonDescriptor
-            (
-                ElementName = "SmartGroupProductionButton"
-
-                ComponentFrame = TUIFramePropertyRTTI
-                (
-                    RelativeWidthHeight = [1.0, 1.0]
-                )
-
-                IsTogglable = true
-                CannotDeselect = true
-                ForceEvents = true
-
-                MaskEvents = false
-                HidePointerEvents = true
-                PointerEventsToAllow = ~/EAllowablePointerEventType/Move
-
-                HasBorder = true
-                BorderLineColorToken = "BoutonVignetteAchat"
-                BorderThicknessToken = "2"
-            ),
-        ]
-    )
+    ForegroundComponents = <ForegroundComponents>
 )
 
 //-------------------------------------------------------------------------------------
@@ -318,7 +324,10 @@ SmartGroupUnitSlot is BUCKButtonDescriptor
 
 //-------------------------------------------------------------------------------------
 
-SmartGroupContainer is BUCKButtonDescriptor
+template SmartGroupContainer
+[
+    IsSmartGroupNameEditable : bool,
+] is BUCKButtonDescriptor
 (
     ElementName = "SmartGroupContainer"
 
@@ -387,7 +396,7 @@ SmartGroupContainer is BUCKButtonDescriptor
                 (
                     ComponentDescriptor = SmartGroupInfosContainer
                     (
-                        IsEditable = true
+                        IsEditable = <IsSmartGroupNameEditable>
                     )
                 ),
                 BUCKListElementDescriptor
@@ -555,7 +564,10 @@ template SmartGroupsConfigurationMainPanel
                                 InterItemMargin = TRTTILength(Magnifiable = 5.0)
                                 LastMargin = TRTTILength(Magnifiable = 5.0)
 
-                                BladeDescriptor = ~/SmartGroupContainer
+                                BladeDescriptor = SmartGroupContainer
+                                (
+                                    IsSmartGroupNameEditable = true
+                                )
                             ),
                         ]
                     ),
@@ -1386,13 +1398,13 @@ template BUCKSpecificShowRoomGroupsDeckCreatorScreenMainComponentDescriptor
     ] +
     (<IsForChallenge> ?
         [
-            AnimationPanelUnitInfos(),
+            ~/AnimationPanelUnitInfos,
 
             ~/DeckEditorCloseButton,
             ~/ChallengeDescriptionContainer,
         ] :
         [
-            AnimationPanelUnitInfos(),
+            ~/AnimationPanelUnitInfos,
             ~/DeckEditorCloseButton,
         ]
     )
@@ -1414,14 +1426,14 @@ template UISpecificShowRoomGroupsDeckCreatorScreenViewDescriptor
 
     FactoryDisplayOrder =
     [
-        EFactory/Logistic,
-        EFactory/Infantry,
-        EFactory/Art,
-        EFactory/Tanks,
-        EFactory/Recons,
-        EFactory/DCA,
-        EFactory/Helis,
-        EFactory/Planes,
+        Factory/Logistic,
+        Factory/Infantry,
+        Factory/Art,
+        Factory/Tanks,
+        Factory/Recons,
+        Factory/DCA,
+        Factory/Helis,
+        Factory/Planes,
     ]
 
     UnitPackComponentDescriptor = UnitButtonPackDescriptor
@@ -1458,8 +1470,7 @@ template UISpecificShowRoomGroupsDeckCreatorScreenViewDescriptor
             IsTogglable = false
             RadioButtonManager = nil
             MagnifierMultiplication = 0.8
-            HasBattlegroup = false
-            DivisionNameWidth = 400.0
+            HasBattlegroup = true
         )
     )
 

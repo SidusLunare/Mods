@@ -1,0 +1,59 @@
+unnamed TLocalisationDicoResource
+(
+    DicoToken = ~/LocalisationConstantes/dico_lang
+    FileName = "GameData:/Localisation/Core/LANG.csv"
+)
+
+unnamed TLocalisationDicoResource
+(
+    DicoToken = ~/LocalisationConstantes/dico_input
+    FileName = "CommonData:/Localisation/Core/INPUT.csv"
+)
+
+unnamed TLocalisationDicoResource
+(
+    DicoToken = ~/LocalisationConstantes/dico_maps
+    FileName = "GameData:/Localisation/Core/MAPS.csv"
+)
+
+unnamed TLocalisationDicoResource
+(
+    DicoToken = ~/LocalisationConstantes/dico_maps
+    FileName = "GameData:/Localisation/Core/MAPS_INTERFACE.csv"
+)
+
+unnamed TLocalisationDicoResource
+(
+    DicoToken = ~/LocalisationConstantes/dico_trophies
+    FileName = "GameData:/Localisation/Core/TROPHIES.csv"
+)
+
+unnamed TLocalisationDicoResource
+(
+    DicoToken = ~/LocalisationConstantes/dico_interface_options
+    FileName = "GameData:/Localisation/Core/OPTIONS.csv"
+)
+
+unnamed TLocalisationDicoResource
+(
+    DicoToken = ~/LocalisationConstantes/dico_interface_outgame
+    FileName = "GameData:/Localisation/Core/INTERFACE_OUTGAME.csv"
+)
+
+unnamed TLocalisationDicoResource
+(
+    DicoToken = ~/LocalisationConstantes/dico_units
+    FileName = "GameData:/Localisation/Core/UNITS.csv"
+)
+
+unnamed TLocalisationDicoResource
+(
+    DicoToken = ~/LocalisationConstantes/dico_interface_ingame
+    FileName = "GameData:/Localisation/Core/INTERFACE_INGAME.csv"
+)
+
+unnamed TLocalisationDicoResource
+(
+    DicoToken = ~/LocalisationConstantes/dico_manual
+    FileName = "GameData:/Localisation/Core/MANUAL.csv"
+)

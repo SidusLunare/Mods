@@ -26,7 +26,7 @@ export Launch_FX_Flare is TActionCall
 (
     LocalVariables =
     [
-        parInitialSpeed is TPinnableValue ( ExpectedType : float3 InitialValue = GenFloat3[10000, 0, 0]),
+        parInitialSpeed is TPinnableValue ( ExpectedType="float3" InitialValue = GenFloat3[10000, 0, 0]),
     ]
     NamedParams = MAP[('parInitialSpeed', parInitialSpeed),]
     Action = Fx_Flare

@@ -1,0 +1,26 @@
+export ModelFile_UH1H_Huey_OST is 'GameData:/Assets/3D/Units/US/Helico/UH_1H_Huey/UH_1H_Huey.fbx'
+export Modele_UH1H_Huey_OST is TResourceMesh
+(
+    Mesh=ModelFile_UH1H_Huey_OST
+)
+
+export ModelFile_UH1H_Huey_OST_MID is 'GameData:/Assets/3D/Units/US/Helico/UH_1H_Huey_MID/UH_1H_Huey_MID.fbx'
+export Modele_UH1H_Huey_OST_MID is TResourceMesh
+(
+    Mesh=ModelFile_UH1H_Huey_OST_MID
+)
+
+export ModelFile_UH1H_Huey_OST_LOW is 'GameData:/Assets/3D/Units/US/Helico/UH_1H_Huey_LOW/UH_1H_Huey_LOW.fbx'
+export Modele_UH1H_Huey_OST_LOW is TResourceMesh
+(
+    Mesh=ModelFile_UH1H_Huey_OST_LOW
+)
+
+export Modele_UH1H_Huey_OST_Tourelle_01 is TResourceMesh
+(
+    Mesh=ModelFile_M60_t1
+)
+export Modele_UH1H_Huey_OST_Tourelle_02 is TResourceMesh
+(
+    Mesh=ModelFile_M60_t2
+)

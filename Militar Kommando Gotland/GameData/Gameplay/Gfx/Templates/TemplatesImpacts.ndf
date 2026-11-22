@@ -8,10 +8,10 @@ is TSequencingActionHappening
     (
         LocalVariables =
         [
-            parPosition is TPinnableValue(ExpectedType: float3),
-            parDirection is TPinnableValue(ExpectedType: float3),
-            parRadiusPhysical is TPinnableValue(ExpectedType: float InitialValue = 0),
-            parRadiusSuppress is TPinnableValue(ExpectedType: float InitialValue = 0),
+            parPosition is TPinnableValue(ExpectedType = "float3"),
+            parDirection is TPinnableValue(ExpectedType = "float3"),
+            parRadiusPhysical is TPinnableValue(ExpectedType = "float" InitialValue = 0),
+            parRadiusSuppress is TPinnableValue(ExpectedType = "float" InitialValue = 0),
         ]
         Mobile = TMobileWithLocalRepereMatrixFactory
         (

@@ -803,9 +803,9 @@ private Flare_Happening is TCompositeHappening
             (
                 LocalVariables =
                 [
-                    parInitialSpeed     is TPinnableValue ( ExpectedType : float3   InitialValue = float3[0,0,0]),
-                    parTimeBetweenFlare is TPinnableValue ( ExpectedType : float    InitialValue = 0.5),
-                    parLateralSpeed     is TPinnableValue ( ExpectedType : float    InitialValue = 5000),
+                    parInitialSpeed     is TPinnableValue ( ExpectedType = "float3" InitialValue = float3[0,0,0]),
+                    parTimeBetweenFlare is TPinnableValue ( ExpectedType = "float"  InitialValue = 0.5),
+                    parLateralSpeed     is TPinnableValue ( ExpectedType = "float"  InitialValue = 5000),
                 ]
                 NamedParams = MAP[
                             ('parInitialSpeed'      , parInitialSpeed),
@@ -849,4 +849,3 @@ DepictionAction_Flare_Double is MAP
         )
     )
 ]
-

@@ -51,9 +51,9 @@ export FX_Binder_Rotor is SimultaneousActionDeclaration
                         ]
                     )
                     ParticleRenderer = ParticleRendererRotor()
-                    InfiniteParticles = True
+                    InfiniteParticles = true
                 )
-                PositionIndependentFromEmitter = False
+                PositionIndependentFromEmitter = false
                 Initialisers =
                 [
                     ParticleInitialiserList

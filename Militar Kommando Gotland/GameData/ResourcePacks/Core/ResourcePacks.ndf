@@ -1,0 +1,16 @@
+unnamed TResourcePackLoader
+(
+    Packs =
+    [
+        TResourceDescriptorMeshPack
+        (
+            PackName = "Base"
+            PackRelativePath = "MeshPack/Base.spk"
+        ),
+        TResourceDescriptorProxyPack
+        (
+            PackName = "Base"
+            PackRelativePath = "TextureProxy/Base.ppk"
+        ),
+    ]
+)

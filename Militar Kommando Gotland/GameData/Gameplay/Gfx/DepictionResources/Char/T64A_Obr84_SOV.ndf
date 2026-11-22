@@ -1,0 +1,19 @@
+export Modele_T64A_Obr84_SOV is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/URSS/Char/T64_obr84/T64_obr84.fbx"
+)
+
+export Modele_T64A_Obr84_SOV_MID is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/URSS/Char/T64_obr84_MID/T64_obr84_MID.fbx"
+)
+
+export Modele_T64A_Obr84_SOV_LOW is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/URSS/Char/T64_obr84_LOW/T64_obr84_LOW.fbx"
+)
+
+export Modele_T64A_Obr84_SOV_Tourelle_02 is TResourceMesh
+(
+    Mesh=ModelFile_NSVT_no_ammo
+)

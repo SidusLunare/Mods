@@ -1,0 +1,24 @@
+export SFX_Office_Ambiance_Army_General is SimultaneousActionDeclaration
+(
+    Params = []
+    Actions =
+    [
+        Ambiance_Office_Army_General,
+    ]
+)
+
+export Ambiance_Office_Army_General is Template_RepeatSequential
+(
+    Actions =
+    [
+        WaitInSec
+        (
+            Duration = RandomRange [8,15]
+        ),
+        TActionDescriptorPlaySoundList
+        (
+            SoundDescriptor = $/GFX/Sound/Sound_AmbianceOfficeArmyGeneral
+        ),
+    ]
+    Forever = true
+)

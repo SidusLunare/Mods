@@ -69,17 +69,6 @@ TargetHelicopterWeights is THelicopterWaypointWeightsDescriptor
     AnglularZSpeed = 4.0
 )
 
-// Poids par défaut utilisés pour les waypoints intermediaires
-DefaultIntermediateHelicopterWeights is THelicopterWaypointWeightsDescriptor
-(
-    Position = 1.0
-    Speed = 0
-    AnglesXY = 0
-    AngleZ = 2.0
-    AngularSpeedXY = 0
-    AnglularZSpeed = 0
-)
-
 // Poids utilisés pour les waypoints intermediaires lors d'un déplacement vers une cible
 TargetIntermediateHelicopterWeights is THelicopterWaypointWeightsDescriptor
 (
@@ -118,7 +107,6 @@ export HelicopterWeightsManager is THelicopterWeightsManager
     ]
 
     DefaultHelicopterWeights = ~/DefaultHelicopterWeights
-    DefaultIntermediateWaypointsHelicopterWeights = ~/DefaultIntermediateHelicopterWeights
 
     WaypointScoreThresholds = MAP [
         (~/StoppedFlying, (40.0, 6.0)),

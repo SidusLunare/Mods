@@ -1,0 +1,246 @@
+export BANK_Propulsion_Missile_Simple is ActionCallWithParameters
+(
+    Action = BANK_Propulsion_Missile
+    Params =
+    [
+        private parDisableSFX                          is Template_Param_Bool  ( DefaultValue = false ),
+        private parDisableLight                        is Template_Param_Bool  ( DefaultValue = false ),
+        private parLightColor                          is Template_Param_Float3 ( DefaultValue = LinearColor[1, 1, 1]),
+        private parLightSize                           is Template_Param_Float ( DefaultValue = 1 ),
+        private parLightSizeJittering                  is Template_Param_Float ( DefaultValue = 1 ),
+        private parLightPower                          is Template_Param_Float ( DefaultValue = 1 ),
+        private parLightPowerJittering                 is Template_Param_Float ( DefaultValue = 1 ),
+        private parDisableFlame                        is Template_Param_Bool  ( DefaultValue = false ),
+        private parFlameOffset                         is Template_Param_Float ( DefaultValue = 1 ),
+        private parFlameFrequency                      is Template_Param_Float ( DefaultValue = 1 ),
+        private parFlameIntensity                      is Template_Param_Float ( DefaultValue = 1 ),
+        private parFlameColorMultiplier                is Template_Param_Float ( DefaultValue = 1 ),
+        private parFlameOpacity                        is Template_Param_Float ( DefaultValue = 1 ),
+        private parFlameSize                           is Template_Param_Float ( DefaultValue = 1 ),
+        private parFlameStretch                        is Template_Param_Float ( DefaultValue = 1 ),
+        private parSFXId                               is Template_Param_Int ( DefaultValue = 0 ),
+    ]
+    NamedParameters = MAP
+    [
+        ( 'parDisableSFX'                               , parDisableSFX ),
+        ( 'parDisableLight'                             , parDisableLight ),
+        ( 'parLightColor'                               , LinearColor[parLightColor] ),
+        ( 'parLightSize'                                , parLightSize ),
+        ( 'parLightSizeJittering'                       , parLightSizeJittering ),
+        ( 'parLightPower'                               , parLightPower * 0.1),
+        ( 'parLightPowerJittering'                      , parLightPowerJittering * RandomRange[0.5, 2] ),
+        ( 'parDisableFlame'                             , parDisableFlame ),
+        ( 'parFlameOffset'                              , parFlameOffset ),
+        ( 'parFlameFrequency'                           , parFlameFrequency ),
+        ( 'parFlameIntensity'                           , parFlameIntensity *0.1),
+        ( 'parFlameColorMultiplier'                     , parFlameColorMultiplier ),
+        ( 'parFlameOpacity'                             , parFlameOpacity ),
+        ( 'parFlameSize'                                , parFlameSize ),
+        ( 'parFlameStretch'                             , parFlameStretch ),
+        ( 'parSFXId'                                    , parSFXId ),
+    ]
+)
+
+BANK_Propulsion_Missile is SimultaneousActionDeclaration
+(
+    Params =
+    [
+        private parDisableSFX                          is Template_Param_Bool  ( DefaultValue = false ),
+        private parDisableLight                        is Template_Param_Bool  ( DefaultValue = 0 ),
+        private parLightColor                          is Template_Param_Float3 (),
+        private parLightSize                           is Template_Param_Float ( DefaultValue = 1 ),
+        private parLightSizeJittering                  is Template_Param_Float ( DefaultValue = float3[1, 1, 1] ),
+        private parLightPower                          is Template_Param_Float ( DefaultValue = 1 ),
+        private parLightPowerJittering                 is Template_Param_Float ( DefaultValue = 1 ),
+        private parDisableFlame                        is Template_Param_Bool  ( DefaultValue = false ),
+        private parFlameOffset                         is Template_Param_Float ( DefaultValue = 1 ),
+        private parFlameFrequency                      is Template_Param_Float ( DefaultValue = 1 ),
+        private parFlameIntensity                      is Template_Param_Float ( DefaultValue = 1 ),
+        private parFlameColorMultiplier                is Template_Param_Float ( DefaultValue = 1 ),
+        private parFlameOpacity                        is Template_Param_Float ( DefaultValue = 1 ),
+        private parFlameSize                           is Template_Param_Float ( DefaultValue = 1 ),
+        private parFlameStretch                        is Template_Param_Float ( DefaultValue = 1 ),
+        private parSFXId                               is Template_Param_Int ( DefaultValue = 0 ),
+    ]
+
+    Actions =
+    [
+        Template_WaitForEver(),
+        Light is ParticleBombSpawner
+        (
+            ParticleMaxDurationForSpawnSkip = 200
+            Disabled = parDisableLight
+            // il s'agit de la lumiere face cam qui brille fort. C'est l'element qu'on voit de loin.
+            Count = 1
+            Spawner = ParticleSpawner
+            (
+                ParticleLifetime = 200
+                ParticleDescriptor = ParticleDescriptor
+                (
+                    ParticleRenderer = $/VFX_Bank/LitParticleRenderer
+                    RenderInfo = ParticleRenderInfo
+                    (
+                        SortTriangles = True
+                        TextureName = 'GameData:/Assets/2D/Fx/impactflash.png'
+                        Calque = 'Particles'
+                        EmissiveParticle = True
+                    )
+                    Evolvers = ParticleStandardEvolverList
+                    (
+                        UseHardCodedRotation = False // ne pas effacer ce n'est pas la valeur par defaut.
+                        Size = RandomRange[1.0 - ParticleCustomFloat_2, 1.0 + ParticleCustomFloat_2] * ParticleCustomFloat_1 * Clamp[ length[ParticlePosition-CameraPosition] div 25000, 1, 1.5] // on grossit la particule lorsqu'on s'eloigne pour qu'elle reste visible.
+                        EmissivePower = RandomRange[1.0 - ParticleCustomFloat_4, 1.0 + ParticleCustomFloat_4] * ParticleCustomFloat_3 * (1 + 0.75* Dot[normalized[ParticleMobileWrapperAxeX],CameraDirection]) // ca brille plus fort quand on voit la flamme de derriere
+                        Position = ParticleMobileWrapperPositionUnScaled - normalized[ParticleMobileWrapperAxeX] * ParticleCustomFloat_1 * 0.15
+                    )
+                )
+                Initialisers =
+                [
+                    Initialiser_SetMobileWrapper(), //nécessaire pour utiliser ParticleMobileWrapperPositionUnScaled
+                    ParticleInitialiserList
+                    (
+                        Opacity = 0
+                        ColorModifier = parLightColor
+                        CustomFloat_1 = parLightSize
+                        CustomFloat_2 = parLightSizeJittering
+                        CustomFloat_3 = parLightPower
+                        CustomFloat_4 = parLightPowerJittering
+                    ),
+                ]
+            )
+        ),
+        private Flame is ParticleBombSpawner
+        (
+            ParticleMaxDurationForSpawnSkip = 0
+            Count = 1
+            Disabled = parDisableFlame
+            Spawner = ParticleSpawner
+            (
+                ParticleLifetime = 1 // en fait infini
+                Initialisers =
+                [
+                    Initialiser_SetMobileWrapper(),
+                    ParticleInitialiserList
+                    (
+                        CustomFloat_1 = parFlameFrequency
+                        CustomFloat_4 = parFlameColorMultiplier
+                        CustomFloat_5 = parFlameStretch
+                        CustomFloat_6 = parFlameIntensity
+                        CustomFloat_7 = parFlameSize
+                        CustomFloat_8 = parFlameOpacity
+                        CustomFloat_9 = parFlameOffset
+                    ),
+                ]
+                ParticleDescriptor = ParticleDescriptor
+                (
+                    InfiniteParticles = true
+                    ParticleRenderer = $/VFX_Bank/NullRenderer
+                    RenderInfo = $/VFX_Bank/NullRenderInfo
+                    Evolvers = ParticleStandardEvolverList
+                    (
+                        AdditionnalEvolvers =
+                        [
+                            EvolverSpraySpawner
+                            (
+                                // l'idée de base est de créer avec une certaine frequence des particules qui grandissent en s'alongeant pour donner l'impression de defilement.
+                                Frequency = ParticleCustomFloat_1
+                                MaxSpawnedParticleLifetime = 2.0  div ParticleCustomFloat_1
+                                //StabilisationTime = 0.5
+                                Spawner = ParticleSpawner
+                                (
+                                    ParticleLifetime = 2.0  div SpawningParticleCustomFloat_1 * RandomRange[0.8, 1.2]
+                                    Initialisers =
+                                    [
+                                        Initialiser_SetSpawningParticleMobileWrapper(),
+                                        ParticleInitialiserList
+                                        (
+                                            CustomFloat_2 = 0
+                                            ColorModifier = SpawningParticleCustomFloat_4
+                                            Opacity = 0
+                                            EmissivePower = 0
+
+
+                                            CustomFloat_5 = SpawningParticleCustomFloat_5   // parFlameStretch
+                                            CustomFloat_6 = SpawningParticleCustomFloat_6   // parFlameIntensity
+                                            CustomFloat_7 = SpawningParticleCustomFloat_7 * RandomRange[0.5, 1] * MapToLinearSmoothStep[SpawningParticleElapsedTime, 0.2, 0.8]  // parFlameSize
+                                            CustomFloat_8 = SpawningParticleCustomFloat_8   // parFlameOpacity
+                                            CustomFloat_9 = SpawningParticleCustomFloat_9   // parFlameOffset
+                                        )
+                                    ]
+                                    ParticleDescriptor = ParticleDescriptor
+                                    (
+                                        ParticleRenderer = $/VFX_Bank/LitParticleRenderer
+                                        RenderInfo = ParticleRenderInfo
+                                        (
+                                            SortTriangles = true
+                                            TextureName = 'GameData:/Assets/2D/Fx/reactor2.png'
+                                            Calque = 'Particles'
+                                            EmissiveParticle = True
+                                        )
+                                        Evolvers = ParticleStandardEvolverList
+                                        (
+                                            UseHardCodedRotation = false
+                                            CustomFloat_2 = AttackSustainDecay[ParticleLifeRatio, 0.05, 0.9 ]
+                                            Position = ParticleMobileWrapperPositionUnScaled - normalized[ParticleMobileWrapperAxeX] * ParticleCustomFloat_9
+                                            OffsetAlongDirection = - ($/VFX_Bank/ParticleSize * $/VFX_Bank/ParticleStretching) * 0.44 - 215
+                                            EmissivePower = ParticleCustomFloat_6 * ParticleCustomFloat_2
+                                            Opacity = ParticleCustomFloat_8 * ParticleCustomFloat_2
+                                            Stretching = lerp[ParticleLifeRatio, 0.25, ParticleCustomFloat_5]
+                                            Direction = normalized[ParticleMobileWrapperAxeX]
+                                            Size = lerp[ParticleLifeRatio, 0.9925, 1 ] * ParticleCustomFloat_7 * ParticleCustomFloat_2
+                                        )
+                                    )
+                                )
+                            ),
+                        ]
+                    )
+                )
+            )
+        ),
+        Competition
+        (
+            Mobile = Template_MobileSoundSlotFactory()
+            Disabled = parDisableSFX
+            Actions =
+            [
+                Template_Select
+                (
+                    Actions = [
+                        Petit is Template_SFX_Propulsion_x3
+                        (
+                            SoundFile1 = 'GameData:/Assets/Sounds/SFX/Missiles/Traine_Missile_Petit_01.wav'
+                            SoundFile2 = 'GameData:/Assets/Sounds/SFX/Missiles/Traine_Missile_Petit_02.wav'
+                            SoundFile3 = 'GameData:/Assets/Sounds/SFX/Missiles/Traine_Missile_Petit_03.wav'
+                            SoundSettings_Default = $/SoundSettings/SoundSettings_Propulsion_Missile_Petit
+                        ),
+                        Moyen is Template_SFX_Propulsion_x3
+                        (
+                            SoundFile1 = 'GameData:/Assets/Sounds/SFX/Missiles/Traine_Missile_Moyen_01.wav'
+                            SoundFile2 = 'GameData:/Assets/Sounds/SFX/Missiles/Traine_Missile_Moyen_01.wav'
+                            SoundFile3 = 'GameData:/Assets/Sounds/SFX/Missiles/Traine_Missile_Moyen_01.wav'
+                            SoundSettings_Default = $/SoundSettings/SoundSettings_Propulsion_Missile_Moyen
+                        ),
+                        Gros is Template_SFX_Propulsion_x3
+                        (
+                            SoundFile1 = 'GameData:/Assets/Sounds/SFX/Missiles/Traine_Missile_Gros_01.wav'
+                            SoundFile2 = 'GameData:/Assets/Sounds/SFX/Missiles/Traine_Missile_Gros_01.wav'
+                            SoundFile3 = 'GameData:/Assets/Sounds/SFX/Missiles/Traine_Missile_Gros_01.wav'
+                            SoundSettings_Default = $/SoundSettings/SoundSettings_Propulsion_Missile_Gros
+                        ),
+                    ]
+                    Index = parSFXId +1
+                )
+            ]
+        )
+    ]
+)
+
+
+export Propulsion_Missile_Sfx_List is TEugBListPBaseClass
+(
+    Value =
+    [
+        public Petit is TConstant( Value = '' ),
+        public Moyen is TConstant( Value = '' ),
+        public Gros is TConstant( Value = '' ),
+    ]
+)

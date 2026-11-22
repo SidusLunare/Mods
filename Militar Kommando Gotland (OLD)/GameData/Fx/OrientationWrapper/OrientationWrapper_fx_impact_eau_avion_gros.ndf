@@ -1,0 +1,5 @@
+export OrientationWrapper_fx_impact_eau_avion_gros is OrientationWrapper
+(
+    Action = fx_impact_eau_avion
+    Angle = float3[-1, 0, 0]
+)

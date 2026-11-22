@@ -1,0 +1,319 @@
+export Trail_Lance_Flammes is SimultaneousActionDeclaration
+(
+    Params =
+    [
+        public DurationInSec is Template_Param_Float (DefaultValue = 1.4 ),
+        public parLuminosity is Template_Param_Float (DefaultValue = 5 ),
+        public parWidth is Template_Param_Float (DefaultValue = 200 ),
+        public parWidthGrowthFactor is Template_Param_Float (DefaultValue = 10 ),
+        public parParticleDensity is Template_Param_Float (DefaultValue = 20 ),
+        public parDuration is Template_Param_Float (DefaultValue = 1 ),
+        public parTextureScale is Template_Param_Float (DefaultValue = 1 ),
+    ]
+    Actions =
+    [
+        public TrailHead is ParticleBombSpawner
+        (
+            Count = 1
+            ParticleMaxDurationForSpawnSkip = DurationInSec
+            Spawner = ParticleSpawner
+            (
+                ParticleLifetime = DurationInSec
+                Initialisers =
+                [
+                    Initialiser_SetMobileWrapper(),
+                    Initialiser_CreateTrailId(),
+                    ParticleInitialiserList
+                    (
+                        Size = 300
+                        ColorRGB = float3[1, 1, 1]
+                        ColorModifier = float3[1, 1, 1]
+                        Alpha = 1.0
+                        ColorMultiplier = 1.0
+
+                        CustomFloat_1 = 46.511627907 div parParticleDensity
+                        CustomFloat_2 = parDuration
+                        CustomFloat_3 = parTextureScale
+                        CustomFloat_4 = parWidth
+                        CustomFloat_5 = parWidthGrowthFactor * parWidth
+                        CustomFloat_6 = parLuminosity * 0.1
+                    ),
+                ]
+                ParticleDescriptor = ParticleDescriptor
+                (
+                    Evolvers = ParticleStandardEvolverList
+                    (
+                        Position = ParticleMobileWrapperPosition
+                        AdditionnalEvolvers =
+                        [
+                            TrailSpawner
+                            (
+                                DistanceBetweenSpawn = ParticleCustomFloat_1
+                                Spawner = ParticleSpawner
+                                (
+                                    ParticleLifetime = SpawningParticleCustomFloat_2
+                                    Initialisers =
+                                    [
+                                        ParticleInitialiserList
+                                        (
+                                            CustomFloat_3 = SpawningParticleCustomFloat_3
+                                            CustomFloat_4 = SpawningParticleCustomFloat_4
+                                            CustomFloat_5 = SpawningParticleCustomFloat_5
+                                            CustomFloat_1 = SpawningParticleLifeRatio
+                                            EmissivePower = SpawningParticleCustomFloat_6
+                                            Opacity = 0
+                                            ColorRGB = float3[1,1,1]
+                                            ColorMultiplier = 1
+                                        ),
+                                    ]
+                                    ParticleDescriptor = ParticleDescriptor
+                                    (
+                                        Evolvers = ParticleStandardEvolverList
+                                        (
+                                            Alpha = AttackSustainDecay[ParticleCustomFloat_1, 0.08, 0.92] * AttackSustainDecay[ParticleLifeRatio, 0.25, 0.9]
+                                            TexCoordU = ParticleCurvilinearAbscissa * ParticleCustomFloat_3 * 0.001
+                                            Size = lerp[ParticleCustomFloat_1, ParticleCustomFloat_4, ParticleCustomFloat_5]
+                                        )
+                                        RenderInfo = ParticleRenderInfo
+                                        (
+                                            ZTest = True
+                                            ZWrite = False
+                                            Use3DRotation = False
+                                            TextureName = 'GameData:/Assets/2D/Fx/flamestrip.png'
+                                            Calque = 'Particles'
+                                            EmissiveParticle = True
+                                        )
+                                        ParticleRenderer = ParticleRendererMeshTrail ( ScalingMode = 1 )
+                                    )
+                                )
+                            )
+                        ]
+                    )
+                    ParticleRenderer = $/VFX_Bank/NullRenderer
+                    RenderInfo = $/VFX_Bank/NullRenderInfo
+                )
+            )
+        )
+    ]
+)
+export Trail_Feu is SimultaneousActionDeclaration
+(
+    Params =
+    [
+        public DurationInSec is Template_Param_Float (DefaultValue = 2 ),
+        public parLuminosity is Template_Param_Float (DefaultValue = 1 ),
+        public parSize is Template_Param_Float (DefaultValue = 250 ),
+        public parEndSize is Template_Param_Float (DefaultValue = 500 ),
+        public parSizeGrowthFactor is Template_Param_Float (DefaultValue = 10 ),
+        public parParticleDensity is Template_Param_Float (DefaultValue = 30 ),
+        public parDuration is Template_Param_Float (DefaultValue = 2 ),
+    ]
+    Actions =
+    [
+        public TrailHead is ParticleBombSpawner
+        (
+            Count = 1
+            ParticleMaxDurationForSpawnSkip = DurationInSec
+            Spawner = ParticleSpawner
+            (
+                ParticleLifetime = DurationInSec
+                Initialisers =
+                [
+                    Initialiser_SetMobileWrapper(),
+                    Initialiser_CreateTrailId(),
+                    ParticleInitialiserList
+                    (
+                        Size = 300
+                        ColorRGB = float3[1, 1, 1]
+                        ColorModifier = float3[1, 1, 1]
+                        Alpha = 1.0
+                        ColorMultiplier = 1.0
+
+                        CustomFloat_1 = parParticleDensity
+                        CustomFloat_2 = parDuration
+                        CustomFloat_3 = parLuminosity
+                        CustomFloat_4 = parSize
+                        CustomFloat_5 = parEndSize
+                        CustomFloat_6 = parSizeGrowthFactor
+                    ),
+                ]
+                ParticleDescriptor = ParticleDescriptor
+                (
+                    Evolvers = ParticleStandardEvolverList
+                    (
+                        Position = ParticleMobileWrapperPosition
+                        AdditionnalEvolvers =
+                        [
+                            Template_StandardComputeSpeed(),
+                            TrailSpawner
+                            (
+                                ForceSlicing = true
+                                DistanceBetweenSpawn = 9.3023255814 div (ParticleCustomFloat_1 * lerp[Decay[1 - ParticleLifeRatio, 0.7] , 4, 1])
+                                Spawner = ParticleSpawner
+                                (
+                                    ParticleLifetime = SpawningParticleCustomFloat_2 * RandomRange[0.75, 1.333]
+                                    Initialisers =
+                                    [
+                                        ParticleInitialiserList
+                                        (
+                                            Size = 300
+                                            Alpha = 1.0
+
+                                            Opacity = 0
+                                            ColorModifier = LinearColor[1.00, 1.00, 1.00]
+                                            Rotation = RandomUnit
+                                            Speed = ( SpawningParticleSpeed * 0.125)
+                                            CustomFloat_1 = SpawningParticleLifeRatio
+                                            CustomFloat_2 = SpawningParticleCustomFloat_4
+                                            CustomFloat_3 = SpawningParticleCustomFloat_5
+                                            CustomFloat_4 = SpawningParticleCustomFloat_6
+                                            CustomFloat_5 = SpawningParticleCustomFloat_3 * RandomRange[0.5, 2]
+                                        ),
+                                    ]
+                                    ParticleDescriptor = ParticleDescriptor
+                                    (
+                                        Evolvers = ParticleStandardEvolverListWithPhysic
+                                        (
+                                            FluidFriction = 2
+                                            UseHardCodedRotation = True
+                                            PhysicWindField = MapWind * 0.40
+                                            Animation = sat[ParticleLifeRatio + 0.1]
+                                            EmissivePower = ParticleCustomFloat_5 * AttackSustainDecay[ParticleLifeRatio, 0.6, 0.7]
+                                            Size = lerp[ParticleLifeRatio, ParticleCustomFloat_2, ParticleCustomFloat_3] * lerp[ParticleCustomFloat_1, 1, ParticleCustomFloat_4]
+                                        )
+                                        ParticleRenderer = $/VFX_Bank/LitParticleRendererNoCentroidPositioning
+                                        RenderInfo = ParticleRenderInfo
+                                        (
+                                            ZTest = True
+                                            ZWrite = False
+                                            SortTriangles = True
+                                            Use3DRotation = True
+                                            TextureName = 'GameData:/Assets/2D/Fx/anim_fireball_000.png'
+                                            Calque = 'Particles'
+                                            EmissiveParticle = True
+                                        )
+                                    )
+                                )
+                            )
+                        ]
+                    )
+                    ParticleRenderer = $/VFX_Bank/NullRenderer
+                    RenderInfo = $/VFX_Bank/NullRenderInfo
+                )
+            )
+        )
+    ]
+)
+
+export Trail_Ashes is SimultaneousActionDeclaration
+(
+    Params =
+    [
+        public DurationInSec is Template_Param_Float (DefaultValue = 2 ),
+        public parLuminosity is Template_Param_Float (DefaultValue = 10 ),
+        public parSize is Template_Param_Float (DefaultValue = 25 ),
+        public parEndSize is Template_Param_Float (DefaultValue = 50 ),
+        public parParticleDensity is Template_Param_Float (DefaultValue = 10 ),
+        public parDuration is Template_Param_Float (DefaultValue = 2 ),
+        public parColor is Template_Param_Float3 (DefaultValue = LinearColor[1.00, 0.05, 0.00] ),
+    ]
+    Actions =
+    [
+        public TrailHead is ParticleBombSpawner
+        (
+            Count = 1
+            ParticleMaxDurationForSpawnSkip = DurationInSec
+            Spawner = ParticleSpawner
+            (
+                ParticleLifetime = DurationInSec
+                Initialisers =
+                [
+                    Initialiser_SetMobileWrapper(),
+                    Initialiser_CreateTrailId(),
+                    ParticleInitialiserList
+                    (
+                        Size = 300
+                        ColorRGB = float3[1, 1, 1]
+                        ColorModifier = float3[1, 1, 1]
+                        Alpha = 1.0
+                        ColorMultiplier = 1.0
+
+                        CustomFloat_1 = parParticleDensity
+                        CustomFloat_2 = parDuration
+                        CustomFloat_3 = parLuminosity
+                        CustomFloat_4 = parSize
+                        CustomFloat_5 = parEndSize
+                        CustomFloat3_1 = parColor
+                    ),
+                ]
+                ParticleDescriptor = ParticleDescriptor
+                (
+                    Evolvers = ParticleStandardEvolverList
+                    (
+                        Position = ParticleMobileWrapperPosition
+                        AdditionnalEvolvers =
+                        [
+                            Template_StandardComputeSpeed(),
+                            EvolverSpraySpawner
+                            (
+                                Frequency = ParticleCustomFloat_1 * RandomRange[0.75, 1.3]
+                                MaxSpawnedParticleLifetime = ParticleCustomFloat_2
+                                Spawner = ParticleSpawner
+                                (
+                                    ParticleLifetime = SpawningParticleCustomFloat_2 * RandomRange[0.75, 1.3]
+                                    Initialisers =
+                                    [
+                                        ParticleInitialiserList
+                                        (
+                                            Size = 300
+                                            Alpha = 1.0
+
+                                            ColorModifier = SpawningParticleCustomFloat3_1
+                                            EmissivePower = SpawningParticleCustomFloat_3 * RandomRange[0.5, 2]
+                                            Rotation = RandomRangeSymetric[0, 2 * $/VFX_Bank/PI]
+                                            RotationSpeed = float3[0,0,0]
+                                            Position = MinusOneToOneRandomSphereVolume * 250 * SpawningParticleLifeRatio
+                                            Speed = ( SpawningParticleSpeed * 0.33  ) * lerp[SpawningParticleLifeRatio, 0.25, 1]
+                                            CustomFloat_1 = $/VFX_Bank/SpawnerLifeRatio
+                                            CustomFloat_2 = SpawningParticleCustomFloat_4 * ParticleCustomFloat_4
+                                            CustomFloat_3 = SpawningParticleCustomFloat_5 * ParticleCustomFloat_4
+                                            CustomFloat_4 = RandomRange[0.66, 1.5]
+                                            CustomFloat_5 = $/VFX_Bank/RandomUnit
+                                            CustomFloat_6 = ParticleEmissivePower
+                                            CustomFloat3_1 = MinusOneToOneRandomSphereVolume * 500
+                                        )
+                                    ]
+                                    ParticleDescriptor = ParticleDescriptor
+                                    (
+                                        Evolvers = ParticleStandardEvolverListWithPhysic
+                                        (
+                                            FluidFriction = 2
+                                            PhysicAccelerationField = float3[0.00, 0.00, -500.00] + ParticleCustomFloat3_1
+                                            PhysicWindField = MapWind * 0.5
+                                            UseHardCodedRotation = True
+                                            Size = lerp[ParticleCustomFloat_1, ParticleCustomFloat_2, ParticleCustomFloat_3]
+                                            EmissivePower = ParticleCustomFloat_6 * AttackDecay[CurvedRamp[ParticleLifeRatio, 0.5], 0.1]
+                                        )
+                                        ParticleRenderer = $/VFX_Bank/LitParticleRendererNoCentroidPositioning
+                                        RenderInfo = ParticleRenderInfo
+                                        (
+                                            ZTest = True
+                                            ZWrite = False
+                                            SortTriangles = True
+                                            Use3DRotation = True
+                                            TextureName = 'GameData:/Assets/2D/Fx/ashe.png'
+                                            Calque = 'Particles'
+                                            EmissiveParticle = True
+                                        )
+                                    )
+                                )
+                            ),
+                        ]
+                    )
+                    ParticleRenderer = $/VFX_Bank/NullRenderer
+                    RenderInfo = $/VFX_Bank/NullRenderInfo
+                )
+            )
+        )
+    ]
+)

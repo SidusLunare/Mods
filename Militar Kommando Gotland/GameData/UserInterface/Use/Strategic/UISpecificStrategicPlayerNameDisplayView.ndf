@@ -27,7 +27,7 @@ BUCKSpecificStrategicPlayerNameDisplayMainComponentDescriptor is BUCKContainerDe
             Axis = ~/ListAxis/Horizontal
 
             HidePointerEvents = true
-            PointerEventsToAllow = ~/EAllowablePointerEventType/Scroll
+            PointerEventsToAllow = ~/EAllowablePointerEventType/Move | ~/EAllowablePointerEventType/Scroll
 
             Elements =
             [

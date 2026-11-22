@@ -1,0 +1,19 @@
+export Modele_Yak_38M_AA_SOV is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/URSS/Avion/Yak_38M_AA/Yak_38M_AA.fbx"
+)
+
+export Modele_Yak_38M_AA_SOV_MID is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/URSS/Avion/Yak_38M_AA/Yak_38M_AA.fbx"
+)
+
+export Modele_Yak_38M_AA_SOV_LOW is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/URSS/Avion/Yak_38M_AA/Yak_38M_AA.fbx"
+)
+
+export Modele_Yak_38M_AA_SOV_train is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/URSS/Avion/Yak_38M_AA/Yak_38M_AA_train.fbx"
+)

@@ -1,7 +1,7 @@
 template Template_StickMobileOnGround
 [
-    MobileUpMatchWithGroundNormal   : boolean = false,
-    ResetOrientation                : boolean = false,
+    MobileUpMatchWithGroundNormal   : bool = false,
+    ResetOrientation                : bool = false,
     Disabled                        : TEvaluable = nil
 ] is TStickMobileOnGround
 (

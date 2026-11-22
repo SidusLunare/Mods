@@ -5,42 +5,37 @@ InfluencePositionModuleDescriptor is TInfluencePositionModuleDescriptor()
 LinkTeamModuleDescriptor is TLinkTeamModuleDescriptor()
 SimpleTypeUnitModuleDescriptor is TTypeUnitModuleDescriptor()
 TargetDataModuleDescriptor is TTargetDataModuleDescriptor()
-TerrainSpeedModifierModuleDescriptor is TTerrainSpeedModifierModuleDescriptor()
 
 BuildingPositionModuleDescriptor is TPositionModuleDescriptor
 (
-    InGeoDb                    = True
-    ClampInWorld               = True
-    ClampOutMap                = False
+    InitialCollisionPlane      = TCollisionPlane/Ground
+    InGeoDb                    = true
 )
 
 FirePositionModuleDescriptor is TPositionModuleDescriptor
 (
-    InGeoDb                    = False
-    ClampInWorld               = True
-    ClampOutMap                = False
+    InitialCollisionPlane      = TCollisionPlane/Ground
+    InGeoDb                    = false
 )
 
 MissilePositionModuleDescriptor is TPositionModuleDescriptor
 (
-    InGeoDb                    = True
-    ClampInWorld               = False
-    ClampOutMap                = True
+    InitialCollisionPlane      = TCollisionPlane/ProjectileAltitude
+    InGeoDb                    = true
 )
 
 IAStratZoneIndexModuleDescriptor is TIAStratZoneIndexModuleDescriptor()
 
 SmokePositionModuleDescriptor is TPositionModuleDescriptor
 (
-    InGeoDb                    = False
-    ClampInWorld               = True
-    ClampOutMap                = False
+    InitialCollisionPlane      = TCollisionPlane/Ground
+    InGeoDb                    = false
 )
 
-template Descriptor_Unit_MimeticUnit[ DescriptorId, MimeticName ] is TEntityDescriptor
+template Descriptor_Unit_MimeticUnit[ DescriptorId, BlackHoleKey ] is TEntityDescriptor
 (
     DescriptorId      = <DescriptorId>
-    ClassNameForDebug = 'Unit_MimeticUnit_' + <MimeticName>
+    ClassNameForDebug = 'Unit_MimeticUnit_' + <BlackHoleKey>
     World = WorldIndices_Mimetic_Units
     ModulesDescriptors = [
         // Position
@@ -50,8 +45,8 @@ template Descriptor_Unit_MimeticUnit[ DescriptorId, MimeticName ] is TEntityDesc
             TLinkToOwnerModuleDescriptor(),
             TApparenceModuleDescriptor
             (
-                PickableObject = True
-                Depiction      = TTimelyDepictionReceiverFactory( MimeticName = <MimeticName> )
+                PickableObject = true
+                Depiction      = TTimelyDepictionReceiverFactory( BlackHoleKey = <BlackHoleKey> )
             ),
             TSoldierAnimationModuleDescriptor
             (
@@ -64,11 +59,6 @@ template Descriptor_Unit_MimeticUnit[ DescriptorId, MimeticName ] is TEntityDesc
 
 MissileFlagsModuleDescriptor is TFlagsModuleDescriptor
 (
-    InitialFlagSet =
-    [
-        Flag_Detectable,
-        Flag_ProjectileFlying,
-    ]
 )
 
 BuildingFlagsModuleDescriptor is TFlagsModuleDescriptor
@@ -76,16 +66,6 @@ BuildingFlagsModuleDescriptor is TFlagsModuleDescriptor
     InitialFlagSet =
     [
         Flag_Batiment,
-        Flag_Detectable,
-        Flag_LdDetectable,
-    ]
-)
-
-CadavreFlagsModuleDescriptor is TFlagsModuleDescriptor
-(
-    InitialFlagSet =
-    [
-        Flag_Detectable,
         Flag_LdDetectable,
     ]
 )
@@ -94,7 +74,6 @@ DistrictFlagsModuleDescriptor is TFlagsModuleDescriptor
 (
     InitialFlagSet =
     [
-        Flag_Detectable,
         Flag_Batiment,
     ]
 )
@@ -103,28 +82,8 @@ TankFlagsModuleDescriptor is TFlagsModuleDescriptor
 (
     InitialFlagSet =
     [
-        Flag_Detectable,
         Flag_LdDetectable,
         Flag_Tank,
-    ]
-)
-
-CanonFlagsModuleDescriptor is TFlagsModuleDescriptor
-(
-    InitialFlagSet =
-    [
-        Flag_Detectable,
-        Flag_LdDetectable,
-    ]
-)
-
-HelicoFlagsModuleDescriptor is TFlagsModuleDescriptor
-(
-    InitialFlagSet =
-    [
-        Flag_Detectable,
-        Flag_LdDetectable,
-        Flag_NearGroundFlying,
     ]
 )
 
@@ -132,10 +91,8 @@ AirplaneFlagsModuleDescriptor is TFlagsModuleDescriptor
 (
     InitialFlagSet =
     [
-        Flag_Detectable,
         Flag_LdDetectable,
         Flag_Avion,
-        Flag_HighAltitudeFlying,
     ]
 )
 
@@ -143,7 +100,6 @@ InfantryFlagsModuleDescriptor is TFlagsModuleDescriptor
 (
     InitialFlagSet =
     [
-        Flag_Detectable,
         Flag_LdDetectable,
         Flag_Infanterie,
     ]
@@ -153,11 +109,11 @@ DefaultFlagsModuleDescriptor is TFlagsModuleDescriptor
 (
     InitialFlagSet =
     [
-        Flag_Detectable,
         Flag_LdDetectable,
     ]
 )
 
 LinkToDistrictModuleDescriptor is TLinkToDistrictModuleDescriptor()
 
-SellModuleDescriptor is TSellModuleDescriptor()
+SellModuleDescriptor is TSellModuleDescriptor(AllowAutosell = True)
+SellNoAutoSellModuleDescriptor is TSellModuleDescriptor(AllowAutosell = False)

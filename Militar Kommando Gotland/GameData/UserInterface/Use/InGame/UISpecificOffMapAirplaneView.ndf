@@ -252,15 +252,6 @@ IconeUnite is BUCKContainerDescriptor
             ComponentFrame = TUIFramePropertyRTTI( RelativeWidthHeight = [1.0, 1.0] )
             TextureFrame   = TUIFramePropertyRTTI( RelativeWidthHeight = [1.0, 1.0] )
         ),
-
-        BUCKSpecificHintableArea
-        (
-            ElementName = 'UnitTextureHint'
-            DicoToken = ~/LocalisationConstantes/dico_units
-            HintTitleToken = "UNKNOWN"
-            HintBodyToken = "UNKNOWN"
-            HintExtendedToken = "UNKNOWN"
-        ),
     ]
 )
 

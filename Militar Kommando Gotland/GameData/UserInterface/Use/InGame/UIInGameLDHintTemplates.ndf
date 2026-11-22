@@ -1558,8 +1558,6 @@ is BUCKContainerDescriptor
                         ComponentFrame = TUIFramePropertyRTTI
                         (
                             MagnifiableWidthHeight = [494.0, 558.0]
-                            AlignementToAnchor = [0.0, 0.0]
-                            AlignementToFather = [0.0, 0.0]
                         )
 
                         HasBorder = true
@@ -1639,8 +1637,8 @@ is BUCKContainerDescriptor
 //-------------------------------------------------------------------------------------
 template SuperHint
 [
-    alignementGauche : boolean = true,
-    challenge : boolean = false,
+    alignementGauche : bool = true,
+    challenge : bool = false,
     hasImage : bool = false,
 ]
  is BUCKListDescriptor

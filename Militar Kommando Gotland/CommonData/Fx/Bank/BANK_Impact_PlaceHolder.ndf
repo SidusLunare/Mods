@@ -43,9 +43,9 @@ export BANK_Test_Flash is SimultaneousActionDeclaration
                 (
                     RenderInfo = ParticleRenderInfo
                     (
-                        ZTest = True
-                        ZWrite = False
-                        SortTriangles = True
+                        ZTest = true
+                        ZWrite = false
+                        SortTriangles = true
                         TextureName = 'GameData:/Assets/2D/Fx/spot.png'
                         Calque = 'Particles'
                         EmissiveParticle = true
@@ -104,10 +104,10 @@ export BANK_Test_Flash_Flat is SimultaneousActionDeclaration
                 (
                     RenderInfo = ParticleRenderInfo
                     (
-                        ZTest = True
-                        ZWrite = False
-                        SortTriangles = True
-                        Use3DRotation = False
+                        ZTest = true
+                        ZWrite = false
+                        SortTriangles = true
+                        Use3DRotation = false
                         TextureName = 'GameData:/Assets/2D/Fx/spot.png'
                         Calque = 'Particles'
                         EmissiveParticle = true

@@ -14,6 +14,38 @@ export fx_impact_DCA_Proximity_Fuze_air_3 is SimultaneousActionDeclaration
     [
         TSimultaneousAction
         (
+            Mobile = TMobileWithLocalRepereMatrixFactory
+            (
+                Position = parPosition
+            )
+            Actions =
+            [
+                TActionCall
+                (
+                    Action = $/VFX_Bank/BANK_Bomb_Distort_Simple
+                    NamedParams = MAP[
+                        ( 'parDuration', 0.2 ),
+                        ( 'parFinalSize', 2600 ),
+                        ( 'parInitialSize', 25 ),
+                        ( 'parIntensity', 120 ),
+                        ( 'parPositionRelative', float3[4193,3965,2991] ),
+                    ]
+                ),
+                TActionCall
+                (
+                    Action = $/VFX_Bank/ShakeCamera
+                    NamedParams = MAP[
+                        ( 'parDuration', 0.2 ),
+                        ( 'parFrequency', 2 ),
+                        ( 'parPeriod', 0.05 ),
+                        ( 'parPower', 0.25 ),
+                        ( 'parRadius', 20000 ),
+                    ]
+                ),
+            ]
+        ),
+        TSimultaneousAction
+        (
             Mobile = nil
             Actions =
             [
@@ -244,38 +276,6 @@ export fx_impact_DCA_Proximity_Fuze_air_3 is SimultaneousActionDeclaration
                     ]
                 ),
                 TWaitInSec( Duration = 0.1),
-            ]
-        ),
-        TSimultaneousAction
-        (
-            Mobile = TMobileWithLocalRepereMatrixFactory
-            (
-                Position = parPosition
-            )
-            Actions =
-            [
-                TActionCall
-                (
-                    Action = $/VFX_Bank/BANK_Bomb_Distort_Simple
-                    NamedParams = MAP[
-                        ( 'parDuration', 0.2 ),
-                        ( 'parFinalSize', 2600 ),
-                        ( 'parInitialSize', 25 ),
-                        ( 'parIntensity', 120 ),
-                        ( 'parPositionRelative', float3[4193,3965,2991] ),
-                    ]
-                ),
-                TActionCall
-                (
-                    Action = $/VFX_Bank/ShakeCamera
-                    NamedParams = MAP[
-                        ( 'parDuration', 0.2 ),
-                        ( 'parFrequency', 2 ),
-                        ( 'parPeriod', 0.05 ),
-                        ( 'parPower', 0.25 ),
-                        ( 'parRadius', 20000 ),
-                    ]
-                ),
             ]
         ),
         TSimultaneousAction

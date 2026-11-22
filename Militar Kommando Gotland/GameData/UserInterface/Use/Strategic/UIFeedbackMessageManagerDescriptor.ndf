@@ -12,7 +12,7 @@
 //     AlertMessageType    = AlertMsg_Per_UniteDetruite
 //     TimeBeforeRepeat    = 30 (Seulement pour OnResourceEmpty, OnMaxStock, OnEnemyContact)
 //
-//     UseTeamColorForMinimap = False
+//     UseTeamColorForMinimap = false
 //     BaseFilterColorForMinimap = RGBA[255,0,0,255]
 //
 
@@ -22,26 +22,6 @@ StrategicOnUnitLost is TUIFeedbackDispatchedMessageDescriptor
     TimeBeforeRepeat = 10
     AllowFocusOnEvent = true
     IsActiveForPlayer = true
-)
-
-StrategicOnObjectiveCaptured is TUIFeedbackDispatchedMessageDescriptor
-(
-    IsActiveForPlayer = true
-    IsActiveForAllies = true
-    IsActiveForEnemies = false
-    AllowFocusOnEvent = true
-    HudSound = ~/HudSoundOnObjectiveCaptured
-    TimeBeforeRepeat = 20
-)
-
-StrategicOnObjectiveLost is TUIFeedbackDispatchedMessageDescriptor
-(
-    IsActiveForPlayer = true
-    IsActiveForAllies = true
-    IsActiveForEnemies = false
-    AllowFocusOnEvent = true
-    HudSound = ~/HudSoundOnObjectiveLost
-    TimeBeforeRepeat = 20
 )
 
 StrategicOnBeaconAttackPlaced is TUIFeedbackDispatchedMessageDescriptor
@@ -435,8 +415,6 @@ StrategicFeedbackMessageManagerDescriptor is TUISpecificFeedbackMessageManagerDe
     MessagesByType = MAP
     [
         ( FeedbackMessage_OnUnitLost, ~/StrategicOnUnitLost ),
-        ( FeedbackMessage_OnObjectiveCaptured, ~/StrategicOnObjectiveCaptured ),
-        ( FeedbackMessage_OnObjectiveLost, ~/StrategicOnObjectiveLost ),
         ( FeedbackMessage_OnBeaconAttackPlaced, ~/StrategicOnBeaconAttackPlaced ),
         ( FeedbackMessage_OnBeaconDefendPlaced, ~/StrategicOnBeaconDefendPlaced ),
         ( FeedbackMessage_OnBeaconHelpPlaced, ~/StrategicOnBeaconHelpPlaced ),

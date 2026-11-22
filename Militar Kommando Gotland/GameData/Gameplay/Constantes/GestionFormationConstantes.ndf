@@ -11,7 +11,6 @@ FormationResource is TUnitFormationDescriptor
 (
     SpacingWidthLBU = 50
     SpacingDepthLBU = 35
-    FrontMarginLBU = 35
     FormationLines = [
         TUnitFormationLineDescriptor
         (
@@ -42,7 +41,6 @@ DeploymentFormationResource is TUnitFormationDescriptor
 (
     SpacingWidthLBU = 24
     SpacingDepthLBU = 16
-    FrontMarginLBU = 16
     FormationLines = [
         TUnitFormationLineDescriptor
         (

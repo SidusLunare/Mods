@@ -1,0 +1,35 @@
+unnamed TLocalisationDicoResource
+(
+    DicoToken = ~/LocalisationConstantes/dico_units
+    FileName = 'GameData:/Localisation/Militar Kommando Gotland/UNITS.csv'
+    CanBeMissing = true
+)
+
+unnamed TLocalisationDicoResource
+(
+    DicoToken = ~/LocalisationConstantes/dico_companies
+    FileName = 'GameData:/Localisation/Militar Kommando Gotland/COMPANIES.csv'
+    CanBeMissing = true
+)
+
+unnamed TLocalisationDicoResource
+(
+    DicoToken = ~/LocalisationConstantes/dico_platoons
+    FileName = 'GameData:/Localisation/Militar Kommando Gotland/PLATOONS.csv'
+    CanBeMissing = true
+)
+
+unnamed TLocalisationDicoResource
+(
+    DicoToken = ~/LocalisationConstantes/dico_interface_ingame
+    FileName = 'GameData:/Localisation/Militar Kommando Gotland/INTERFACE_INGAME.csv'
+    CanBeMissing = true
+)
+
+unnamed TLocalisationDicoResource
+(
+    DicoToken = ~/LocalisationConstantes/dico_interface_outgame
+    FileName = 'GameData:/Localisation/Militar Kommando Gotland/INTERFACE_OUTGAME.csv'
+    CanBeMissing = true
+)
+

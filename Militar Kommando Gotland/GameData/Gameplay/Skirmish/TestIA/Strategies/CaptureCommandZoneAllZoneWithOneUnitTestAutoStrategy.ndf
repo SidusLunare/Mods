@@ -2,7 +2,8 @@ export CaptureCommandZone_AllZoneOneUnit_TestAuto_Strategy is TIAGeneralStrategy
 (
     StrategyName = "CczAllIA"
     FirstGenerator = TestAuto_CommandCaptureZone_AllZoneWithOneUnit
-    TransitionList =[]
+    TransitionList = []
+    AuthorizedCorridorList = [1, 5, 6, 10]
 )
 
 

@@ -15,5 +15,5 @@ export Modele_MQM_105_Aquila_US_LOW is TResourceMesh
 
 export Modele_MQM_105_Aquila_US_train is TResourceMesh
 (
-    Mesh="GameData:/Assets/3D/Units/Ammo/Drones/support_drones_Aquila.fbx"
+    Mesh="GameData:/Assets/3D/Ammo/Drones/support_drones_Aquila.fbx"
 )

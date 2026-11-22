@@ -38,9 +38,9 @@ export BANK_WasteCanonSmoke is SimultaneousActionDeclaration
     ]
     LocalVariables =
     [
-        private Duration         is TPinnableValue (InitialValue = Min[BANK_Duration, BANK_WaitBeforeRepeat] ExpectedType: float ),
-        private WaitBeforeRepeat is TPinnableValue (InitialValue = BANK_WaitBeforeRepeat ExpectedType: float ),
-        private PositionAtSpawn  is TPinnableValue (InitialValue = BANK_OffsetPos + MobilePosition ExpectedType: float3 ),
+        private Duration         is TPinnableValue (InitialValue = Min[BANK_Duration, BANK_WaitBeforeRepeat] ExpectedType="float" ),
+        private WaitBeforeRepeat is TPinnableValue (InitialValue = BANK_WaitBeforeRepeat ExpectedType="float" ),
+        private PositionAtSpawn  is TPinnableValue (InitialValue = BANK_OffsetPos + MobilePosition ExpectedType="float3" ),
     ]
     Actions =
     [

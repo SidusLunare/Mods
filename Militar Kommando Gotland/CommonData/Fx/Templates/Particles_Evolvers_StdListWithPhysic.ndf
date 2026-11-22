@@ -4,9 +4,9 @@ template ParticleStandardEvolverListWithPhysic
     FluidFriction               : TEvaluable[GroupBy = "physic", >=0] = nil,
     PhysicAccelerationField     : TEvaluable[GroupBy = "physic"] = nil,
     PhysicWindField             : TEvaluable[GroupBy = "physic"] = nil,
-    Disabled                    : boolean = false,
+    Disabled                    : bool = false,
     UseCollisions               : TEvaluable[GroupBy = "physic"] = nil,
-    ForceSlicing                : boolean = false,
+    ForceSlicing                : bool = false,
     WorldFloorProxy             = $/M3D/Scene/WorldFloorForRubbleProxy,
 
     Size                        : TEvaluable[GroupBy = "Standard fields"] = nil,
@@ -44,7 +44,7 @@ template ParticleStandardEvolverListWithPhysic
     CustomFloat3_7              : TEvaluable[GroupBy = "Custom fields (float3)"] = nil,
     CustomFloat3_8              : TEvaluable[GroupBy = "Custom fields (float3)"] = nil,
     CustomFloat3_9              : TEvaluable[GroupBy = "Custom fields (float3)"] = nil,
-    UseHardCodedRotation        : boolean = false,
+    UseHardCodedRotation        : bool = false,
     AdditionnalEvolvers         : LIST<TParticleEvolverDescriptor> = []
 ]   is TParticleEvolver_List
 (

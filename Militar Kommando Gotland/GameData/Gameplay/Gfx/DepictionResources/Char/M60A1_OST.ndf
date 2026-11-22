@@ -1,0 +1,14 @@
+export Modele_M60A1_OST is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/ITA/Char/M60A1/M60A1.fbx"
+)
+
+export Modele_M60A1_OST_MID is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/ITA/Char/M60A1_MID/M60A1_MID.fbx"
+)
+
+export Modele_M60A1_OST_LOW is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/ITA/Char/M60A1_LOW/M60A1_LOW.fbx"
+)

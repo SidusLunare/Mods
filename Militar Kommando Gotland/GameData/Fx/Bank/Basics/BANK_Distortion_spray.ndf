@@ -64,7 +64,7 @@ export BANK_DistortionSpray is SimultaneousActionDeclaration
                                     (
                                         RenderInfo = Template_DistortionParticleRenderInfo
                                         (
-                                            SortTriangles = True
+                                            SortTriangles = true
                                             TextureName = 'GameData:/Assets/2D/Fx/Distortion/distort.png'
                                         )
                                         Evolvers = Template_List

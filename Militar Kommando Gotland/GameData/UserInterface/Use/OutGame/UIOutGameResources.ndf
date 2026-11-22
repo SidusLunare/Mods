@@ -21,13 +21,12 @@ export OutGameResourceSpecific is TUISpecificOutGameResources
     DragAndDropUILayer          = $/UserInterface/UILayer_DragAndDrop
     WarningUILayer              = $/UserInterface/UILayer_2DInterface_OutGame_Warning
     CommonResources             = ~/UICommonResource
-    OptionManager               = $/GameOptionsInterface/GameOptionsInterfaceWrapper
 
     MainStyleGuide              = ~/DefaultStyleGuide
 
     HUBContainerResource        = $/UI/HUBContainer/OutGameHUBContainerResource
     HUBContainerHandler         = $/UI/HUBContainer/OutGameHUBContainerHandler
-    ActionScreensContainerResource = ~/outGameActionScreensContainerResource
+    UnitNameResources           = ~/UICommonUnitNameResources
 
     UserInputBinder             = $/GameOptionsInterface/UserInputBinder
     UIOffscreenSceneFactory     = $/M3D/Scene/SceneFactory_UIOffscreen
@@ -43,6 +42,7 @@ export OutGameResourceSpecific is TUISpecificOutGameResources
     UISpecificDivisionSelectionViewDescriptor = ~/UISpecificDivisionSelectionViewDescriptor
     CreditsResource             = ~/SpecificCreditsResource
     PlayerPropertyResource      = ~/specificPlayerPropertyResource
+    DivisionTypeDescriptions    = ~/DivisionTypeDescriptions
 
     NicknameChangeResource      = ~/NicknameChangeResource
     ModaleResource              = ~/ModaleResource

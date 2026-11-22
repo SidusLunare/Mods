@@ -288,17 +288,10 @@ UISpecificHUDAlertPanelViewDescriptor is TUISpecificHUDAlertPanelViewDescriptor
             )
         ),
         (
-            ~/AlertMsg_Arei_UnitSurrender,
-            (
-                "SURREND",
-                "AlertPanel/Line/Arei_UnitSurrender"
-            )
-        ),
-        (
-            ~/AlertMsg_Arei_UnitSurrender_En,
+            ~/AlertMsg_Arei_EnemyUnitSurrender,
             (
                 "SURREND_EN",
-                "AlertPanel/Line/Arei_UnitSurrenderEn"
+                "AlertPanel/Line/Arei_EnemyUnitSurrender"
             )
         ),
         (
@@ -313,20 +306,6 @@ UISpecificHUDAlertPanelViewDescriptor is TUISpecificHUDAlertPanelViewDescriptor
             (
                 "PAR_NXPHSC",
                 "AlertPanel/Line/Arei_NewPhaseStartedForCampaign"
-            )
-        ),
-        (
-            ~/AlertMsg_Par_OnObjectiveCaptured,
-            (
-                "SH_OBJS",
-                "AlertPanel/Line/Arei_OnObjectiveCaptured"
-            )
-        ),
-        (
-            ~/AlertMsg_Par_OnObjectiveLost,
-            (
-                "SH_OBJL",
-                "AlertPanel/Line/Arei_OnObjectiveLost"
             )
         ),
     ]

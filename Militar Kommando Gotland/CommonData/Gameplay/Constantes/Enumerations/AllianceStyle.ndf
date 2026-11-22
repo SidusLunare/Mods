@@ -1,5 +1,5 @@
-//A maintenir synchro avec EnumAllianceStyle.h
-EAllianceStyle is TBaseClass
+// Sync with EnumAllianceStyle.h
+TAllianceStyle is TBaseClass
 (
     Neutral       is 0
     AlliedWithAll is 1

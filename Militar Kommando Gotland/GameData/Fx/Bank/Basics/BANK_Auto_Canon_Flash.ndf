@@ -164,8 +164,8 @@ export Auto_Canon_Flash is SimultaneousActionDeclaration
                 (
                     RenderInfo = ParticleRenderInfo
                     (
-                        ZTest = True
-                        SortTriangles = True
+                        ZTest = true
+                        SortTriangles = true
                         ZWrite = false
                         TextureName = 'GameData:/Assets/2D/Fx/fx_front.png'
                         Calque = 'Particles'

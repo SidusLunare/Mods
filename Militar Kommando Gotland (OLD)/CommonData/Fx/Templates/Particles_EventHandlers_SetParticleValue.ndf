@@ -1,0 +1,8 @@
+template Template_EventHandlerSetCustomFloat_1
+[
+    Value  : TEvaluable[required] = nil,
+] is TParticleEventSetParticleField
+(
+    Value = <Value>
+    Field = $/Particle/CustomFloat_1
+)

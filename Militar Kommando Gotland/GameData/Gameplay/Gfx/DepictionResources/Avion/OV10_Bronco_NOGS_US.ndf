@@ -1,0 +1,22 @@
+export ModelFile_OV10_Bronco_NOGS_US is 'GameData:/Assets/3D/Units/US/Avion/OV10_Bronco_NOGS/OV10_Bronco_NOGS.fbx'
+export Modele_OV10_Bronco_NOGS_US is TResourceMesh
+(
+    Mesh=ModelFile_OV10_Bronco_NOGS_US
+)
+
+export ModelFile_OV10_Bronco_NOGS_US_MID is 'GameData:/Assets/3D/Units/US/Avion/OV10_Bronco_NOGS_MID/OV10_Bronco_NOGS_MID.fbx'
+export Modele_OV10_Bronco_NOGS_US_MID is TResourceMesh
+(
+    Mesh=ModelFile_OV10_Bronco_NOGS_US_MID
+)
+
+export ModelFile_OV10_Bronco_NOGS_US_LOW is 'GameData:/Assets/3D/Units/US/Avion/OV10_Bronco_NOGS_LOW/OV10_Bronco_NOGS_LOW.fbx'
+export Modele_OV10_Bronco_NOGS_US_LOW is TResourceMesh
+(
+    Mesh=ModelFile_OV10_Bronco_NOGS_US_LOW
+)
+export ModelFile_OV10_Bronco_NOGS_US_train is 'GameData:/Assets/3D/Units/US/Avion/OV10_Bronco_NOGS/OV10_Bronco_NOGS_train.fbx'
+export Modele_OV10_Bronco_NOGS_US_train is TResourceMesh
+(
+    Mesh=ModelFile_OV10_Bronco_NOGS_US_train
+)

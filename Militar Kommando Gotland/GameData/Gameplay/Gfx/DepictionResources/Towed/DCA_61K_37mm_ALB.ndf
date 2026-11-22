@@ -1,0 +1,3 @@
+export Modele_DCA_61K_37mm_ALB is TResourceMesh( Mesh="GameData:/Assets/3D/Units/CUBA/Canon/DCA_61K_37mm/DCA_61K_37mm.fbx")
+export Modele_DCA_61K_37mm_ALB_MID is TResourceMesh( Mesh="GameData:/Assets/3D/Units/CUBA/Canon/DCA_61K_37mm_MID/DCA_61K_37mm_MID.fbx")
+export Modele_DCA_61K_37mm_ALB_LOW is TResourceMesh( Mesh="GameData:/Assets/3D/Units/CUBA/Canon/DCA_61K_37mm_LOW/DCA_61K_37mm_LOW.fbx")

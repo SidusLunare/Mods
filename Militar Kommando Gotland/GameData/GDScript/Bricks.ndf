@@ -1,0 +1,4008 @@
+template AbstractGameRules
+[
+] is TGDAbstractGameRules
+meta
+(
+    Abstract     = 'true',
+    Family       = '25_Base',
+    FriendlyName = 'AbstractGameRules',
+    Parent       = 'TBaseClass',
+)
+(
+)
+template BankObject
+[
+    PrefixWhenExport: string = "",
+] is TGDBankObject
+meta
+(
+    Abstract     = 'true',
+    Family       = '25_Base',
+    FriendlyName = 'BankObject',
+    Parent       = 'TBaseClass',
+)
+(
+    PrefixWhenExport = <PrefixWhenExport>
+)
+template BuildingType
+[
+    PrefixWhenExport: string = "",
+] is TGDBuildingType
+meta
+(
+    Abstract     = 'true',
+    BankModule   = 'parametres_specific.Classes',
+    Family       = '25_Base',
+    FriendlyName = 'BuildingType',
+    Parent       = 'UnitType',
+)
+(
+    PrefixWhenExport = <PrefixWhenExport>
+)
+template ChangePawnActionsPoint
+[
+    ActionPointNumber: float = 0.000000,
+    UnitsGroup       : TGDVariableUnitGroup [required = true, GDType = 'VariableUnitGroup'] = nil,
+] is TGDDescriptorChangePawnActionPoint
+meta
+(
+    AutoName     = 'Set action point at <%ActionPointNumber%> for <%UnitsGroup%>',
+    Family       = '19_Steelman',
+    FriendlyName = 'SetActionPointTo',
+    Parent       = 'Descriptor',
+)
+(
+    ActionPointNumber = <ActionPointNumber>
+    UnitsGroup = <UnitsGroup>
+)
+template Condition
+[
+] is TGDCondition
+meta
+(
+    Abstract     = 'true',
+    Family       = '11_Condition',
+    FriendlyName = 'Condition',
+    Parent       = 'TBaseClass',
+)
+(
+)
+template ConditionAnd
+[
+    SousConditions: List<TGDCondition> [required = true, GDType = 'Condition'] = [],
+] is TGDConditionAnd
+meta
+(
+    AutoName     = 'ConditionAnd',
+    Family       = '11_Condition/11 Boolean',
+    FriendlyName = '01 ConditionAnd',
+    Parent       = 'ConditionMultiple',
+)
+(
+    SousConditions = <SousConditions>
+)
+template ConditionAreUnitsIdentifiedByCamp
+[
+    Camp                       : TGDVariableCamp [required = true, GDType = 'VariableCamp'] = nil,
+    NbUnitsConcernees          : TGDOperatorIntegerCompare [required = false, GDType = 'OperatorIntegerCompare'] = nil,
+    UnitesScannees             : TGDVariableUnitGroup [required = true, GDType = 'VariableUnitGroup'] = nil,
+    VisibilityLevel            : TBaseClass [EnumName = 'TVisibilityLevel', Enum = true, Values = ['INVISIBLE', 'REVEALED', 'SPOTTED'], GDType = 'TBaseClass'] = TVisibilityLevel/SPOTTED,
+    VisibilityLevelOperatorType: TBaseClass [EnumName = 'EGDOperator', Enum = true, Values = ['Different', 'Equal', 'LessOrEqual', 'MoreOrEqual', 'StrictlyLess', 'StrictlyMore'], GDType = 'TBaseClass'] = EGDOperator/Equal,
+] is TGDConditionAreUnitsIdentifiedByCamp
+meta
+(
+    AutoName     = 'Cond visibility of <%UnitesScannees%> for <%Camp%> is <%VisibilityLevelOperatorType%> to <%VisibilityLevel%>',
+    Family       = '11_Condition',
+    FriendlyName = 'ConditionVisibilityOfUnitsForCamp',
+    Parent       = 'Condition',
+)
+(
+    Camp = <Camp>
+    NbUnitsConcernees = <NbUnitsConcernees>
+    UnitesScannees = <UnitesScannees>
+    VisibilityLevel = <VisibilityLevel>
+    VisibilityLevelOperatorType = <VisibilityLevelOperatorType>
+)
+template ConditionCampControleZone
+[
+    AutoriseControleAllie: bool = true,
+    Camp                 : TGDVariableCamp [required = true, GDType = 'VariableCamp'] = nil,
+    Position             : TGDTagPosition [required = true, GDType = 'LDPosition'] = nil,
+    ZoneType             : TBaseClass [EnumName = 'EZoneManagerType', Enum = true, Values = ['CommandementZoneManager', 'DeploiementZoneManager', 'IAStratZoneManager'], GDType = 'TBaseClass'] = EZoneManagerType/CommandementZoneManager,
+] is TGDConditionTeamControleZone
+meta
+(
+    AutoName     = 'Cond Camp <%Camp%> Controle Zone <%Position%>',
+    Family       = '11_Condition',
+    FriendlyName = '02 ConditionCampControleZone',
+    Parent       = 'Condition',
+)
+(
+    AutoriseControleAllie = <AutoriseControleAllie>
+    Camp = <Camp>
+    Position = <Position>
+    ZoneType = <ZoneType>
+)
+template ConditionCampHasBestScore
+[
+    Camp          : TGDVariableCamp [required = true, GDType = 'VariableCamp'] = nil,
+    ScorePointType: TBaseClass [EnumName = 'TScorePointType', Enum = true, Values = ['MapObjective', 'OverTimeMapObjective', 'ScriptedEvent', 'TotalScore', 'UnitDestruction', 'UnitLoss', 'ZonePoint'], GDType = 'TBaseClass'] = TScorePointType/UnitDestruction,
+] is TGDConditionCampHasBestScore
+meta
+(
+    AutoName     = 'Condition Camp avec le score le plus \xc3\xa9lev\xc3\xa9: <%Camp%>',
+    Family       = '11_Condition',
+    FriendlyName = 'ConditionCampHasBestScore',
+    Parent       = 'Condition',
+)
+(
+    Camp = <Camp>
+    ScorePointType = <ScorePointType>
+)
+template ConditionCampHasDifficulty
+[
+    Camp      : TGDVariableCamp [required = true, GDType = 'VariableCamp'] = nil,
+    Difficulty: TBaseClass [EnumName = 'EIADifficulty', Enum = true, Values = [HumanDifficulty, TresFacile, Facile, Normal, Difficile, TresDifficile, PlusDifficile, Scripted], GDType = 'TBaseClass'],
+] is TGDConditionCampHasDifficulty
+meta
+(
+    AutoName     = '07 Condition - Does Camp <%Camp%> Have Difficulty Level <%Difficulty%>',
+    Family       = '11_Condition',
+    FriendlyName = '07 ConditionCampHasDifficulty',
+    Parent       = 'Condition',
+)
+(
+    Camp = <Camp>
+    Difficulty = <Difficulty>
+)
+template ConditionCutSceneIsCampControllableByLocalPlayer
+[
+    Camp: TGDVariableCamp [required = true, GDType = 'VariableCamp'] = nil,
+] is TGDConditionCutSceneIsCampControllableByLocalPlayer
+meta
+(
+    AutoName     = 'Is Camp <%Camp%> controllable by local Player (Use only as child of CutScene)',
+    Family       = '23_Cutscenes',
+    FriendlyName = 'ConditionIsCampControllableByLocalPlayer',
+    Parent       = 'Condition',
+)
+(
+    Camp = <Camp>
+)
+template ConditionDetectUnit
+[
+    ComparaisonNbUnits: TGDOperatorIntegerCompare [required = false, GDType = 'OperatorIntegerCompare'] = nil,
+] is TGDConditionDetectUnit
+meta
+(
+    Abstract     = 'true',
+    Family       = '11_Condition',
+    FriendlyName = 'ConditionDetectUnit',
+    Parent       = 'Condition',
+)
+(
+    ComparaisonNbUnits = <ComparaisonNbUnits>
+)
+template ConditionDetectUnitDansDetecteur
+[
+    ComparaisonNbUnits: TGDOperatorIntegerCompare [required = false, GDType = 'OperatorIntegerCompare'] = nil,
+    Contrainte        : TGDConstraintOnUnit [required = true, GDType = 'ContrainteOnUnit'] = nil,
+    Detecteur         : TGDTagDetecteur [required = true, GDType = 'Detecteur'] = nil,
+] is TGDConditionDetectUnitDansDetecteur
+meta
+(
+    AutoName     = 'Cond unit dans detecteur <%Detecteur%>',
+    Family       = '11_Condition',
+    FriendlyName = '01 ConditionDetectUnitDansDetecteur',
+    Parent       = 'ConditionDetectUnit',
+)
+(
+    ComparaisonNbUnits = <ComparaisonNbUnits>
+    Contrainte = <Contrainte>
+    Detecteur = <Detecteur>
+)
+template ConditionDeviseCamp
+[
+    Operator    : TGDOperatorIntegerCompare [required = true, GDType = 'OperatorIntegerCompare'] = nil,
+    ResourceType: TBaseClass [EnumName = 'EnumResourceList', Enum = true, Values = [Resource_Invalid, Resource_CommandPoints, Resource_Tickets], GDType = 'TBaseClass'] = EnumResourceList/Resource_CommandPoints,
+    Variable    : TGDVariableCamp [required = true, GDType = 'VariableCamp'] = nil,
+] is TGDConditionDeviseCamp
+meta
+(
+    AutoName     = 'Cond DC sur <%Variable%>',
+    Family       = '11_Condition',
+    FriendlyName = '03 ConditionDeviseCamp',
+    Parent       = 'Condition',
+)
+(
+    Operator = <Operator>
+    ResourceType = <ResourceType>
+    Variable = <Variable>
+)
+template ConditionFalse
+[
+] is TGDConditionFalse
+meta
+(
+    Family       = 'z_Dev_only',
+    FriendlyName = 'z ConditionFalse',
+    Parent       = 'Condition',
+)
+(
+)
+template ConditionFinDePartie
+[
+] is TGDConditionEndGame
+meta
+(
+    AutoName     = 'Condition fin de partie',
+    Family       = '11_Condition/12 Variable',
+    FriendlyName = 'ConditionFinDePartie',
+    Parent       = 'Condition',
+)
+(
+)
+template ConditionHasSupplyStock
+[
+    SupplyStock: int [>= 0, <= 100] = 0,
+    UnitGroup  : TGDVariableUnitGroup [required = true, GDType = 'VariableUnitGroup'] = nil,
+] is TGDConditionHasSupplyStock
+meta
+(
+    AutoName     = 'All units in group <%UnitGroup%> have Supply Stock more than <%SupplyStock%>% supply stock',
+    Family       = '11_Condition',
+    FriendlyName = 'Condition HasSupplyStock',
+    Parent       = 'Condition',
+)
+(
+    SupplyStock = <SupplyStock>
+    UnitGroup = <UnitGroup>
+)
+template ConditionInfluencePercentageOnMap
+[
+    Camp    : TGDVariableCamp [required = true, GDType = 'VariableCamp'] = nil,
+    Operator: TGDOperatorIntegerCompare [required = true, GDType = 'OperatorIntegerCompare'] = nil,
+] is TGDConditionInfluencePercentageOnMap
+meta
+(
+    AutoName     = 'CondInfluPercentInfluMap',
+    Family       = '11_Condition',
+    FriendlyName = 'ConditionInfluencePercentageOnMap',
+    Parent       = 'Condition',
+)
+(
+    Camp = <Camp>
+    Operator = <Operator>
+)
+template ConditionIsFortifiedAA
+[
+    UnitGroup: TGDVariableUnitGroup [required = true, GDType = 'VariableUnitGroup'] = nil,
+] is TGDConditionIsFortifiedAA
+meta
+(
+    AutoName     = 'Every AA units in group <%UnitGroup%> are fortified',
+    Family       = '11_Condition',
+    FriendlyName = 'Condition AAIsFortified',
+    Parent       = 'Condition',
+)
+(
+    UnitGroup = <UnitGroup>
+)
+template ConditionIsPositionSeen
+[
+    Camp    : TGDVariableCamp [required = true, GDType = 'VariableCamp'] = nil,
+    Position: TGDTagPosition [required = true, GDType = 'LDPosition'] = nil,
+] is TGDConditionIsPositionSeen
+meta
+(
+    AutoName     = 'Conditions point est vu par le camp <%Camp%>',
+    Family       = '11_Condition',
+    FriendlyName = '05 ConditionIsPositionSeen',
+    Parent       = 'Condition',
+)
+(
+    Camp = <Camp>
+    Position = <Position>
+)
+template ConditionIsVictoryType
+[
+    Variable   : TGDVariableInteger [required = true, GDType = 'VariableInteger'] = nil,
+    VictoryType: TBaseClass [EnumName = 'EVictoryType', Enum = true, Values = ['Draw', 'MajorDefeat', 'MajorVictory', 'MinorDefeat', 'MinorVictory', 'NotSpecified', 'TotalDefeat', 'TotalVictory'], GDType = 'TBaseClass'] = EVictoryType/Draw,
+] is TGDConditionIsVictoryType
+meta
+(
+    AutoName     = 'Condition Is VictoryType <%VictoryType%>',
+    Family       = '11_Condition',
+    FriendlyName = '09 ConditionIsVictoryType',
+    Parent       = 'Condition',
+)
+(
+    Variable = <Variable>
+    VictoryType = <VictoryType>
+)
+template ConditionMultiple
+[
+    SousConditions: List<TGDCondition> [required = true, GDType = 'Condition'] = [],
+] is TGDConditionMultiple
+meta
+(
+    Abstract     = 'true',
+    Family       = '11_Condition',
+    FriendlyName = 'ConditionMultiple',
+    Parent       = 'Condition',
+)
+(
+    SousConditions = <SousConditions>
+)
+template ConditionNone
+[
+    SousConditions: List<TGDCondition> [required = true, GDType = 'Condition'] = [],
+] is TGDConditionNone
+meta
+(
+    AutoName     = 'ConditionNone',
+    Family       = '11_Condition/11 Boolean',
+    FriendlyName = '03 ConditionNone',
+    Parent       = 'ConditionMultiple',
+)
+(
+    SousConditions = <SousConditions>
+)
+template ConditionOnGameDifficulty
+[
+    Difficulty: TBaseClass [EnumName = 'EGameDifficulty', Enum = true, Values = [Easy, Medium, Hard], GDType = 'TBaseClass'],
+] is TGDConditionOnGameDifficulty
+meta
+(
+    AutoName     = '08 Condition - GameDifficulty is <%Difficulty%>',
+    Family       = '11_Condition',
+    FriendlyName = '08 ConditionOnGameDifficulty',
+    Parent       = 'Condition',
+)
+(
+    Difficulty = <Difficulty>
+)
+template ConditionOr
+[
+    SousConditions: List<TGDCondition> [required = true, GDType = 'Condition'] = [],
+] is TGDConditionOr
+meta
+(
+    AutoName     = 'ConditionOr',
+    Family       = '11_Condition/11 Boolean',
+    FriendlyName = '02 ConditionOr',
+    Parent       = 'ConditionMultiple',
+)
+(
+    SousConditions = <SousConditions>
+)
+template ConditionPhase
+[
+    Phase: TBaseClass [EnumName = 'TGamePhase', Enum = true, Values = ['Command', 'Deploiement', 'NotInitialized', 'StrategicGame'], GDType = 'TBaseClass'] = TGamePhase/NotInitialized,
+] is TGDConditionPhase
+meta
+(
+    AutoName     = 'ConditionPhase',
+    Family       = '11_Condition',
+    FriendlyName = '06 ConditionPhase',
+    Parent       = 'Condition',
+)
+(
+    Phase = <Phase>
+)
+template ConditionPositionInInfluenceMap
+[
+    Alliance             : int [>= 0] = 0,
+    MinimumeDurationInSec: float [>= 0.000000] = 1.000000,
+    Position             : TGDTagPosition [required = true, GDType = 'LDPosition'] = nil,
+] is TGDConditionPositionInInfluenceMap
+meta
+(
+    AutoName     = 'CondPositionDansInfluMap',
+    Family       = '11_Condition',
+    FriendlyName = 'ConditionPositionDansInfluenceMap',
+    Parent       = 'Condition',
+)
+(
+    Alliance = <Alliance>
+    MinimumeDurationInSec = <MinimumeDurationInSec>
+    Position = <Position>
+)
+template ConditionStrategicAbortStatus
+[
+    AbortStatus: TBaseClass [EnumName = 'EStrategicAbortStatus', Enum = true, Values = ['AbortAttackerIntercept', 'AbortDefenserSurrender', 'NotAborted'], GDType = 'TBaseClass'] = EStrategicAbortStatus/NotAborted,
+] is TGDConditionStrategicAbortStatus
+meta
+(
+    AutoName     = 'Condition Strategic Battle Aborted Status is <%AbortStatus%>',
+    Family       = '11_Condition',
+    FriendlyName = 'ConditionStrategicAbortStatus',
+    Parent       = 'Condition',
+)
+(
+    AbortStatus = <AbortStatus>
+)
+template ConditionStrategicAreAllUnitsOutOfCombat
+[
+    UnitGroup: List<TGDVariableUnitGroup> [required = true, GDType = 'VariableUnitGroup'] = [],
+] is TGDConditionStrategicAreAllUnitsOutOfCombat
+meta
+(
+    AutoName     = 'les unites du groupe <%UnitGroup%> sont elles toutes hors combat',
+    Family       = '11_Condition',
+    FriendlyName = 'ConditionStrategicAreAllUnitsOutOfCombat',
+    Parent       = 'Condition',
+)
+(
+    UnitGroup = <UnitGroup>
+)
+template ConditionStrategicBattleStatus
+[
+    BattleState: TBaseClass [EnumName = 'EStrategicBattleState', Enum = true, Values = ['AutoresolveComputeForCurrentPhase', 'AutoresolveMovementExec', 'AutoresolveMovementStart', 'AutoresolvePostPhaseMovementEnding', 'AutoresolvePostPhaseMovementExec', 'AutoresolvePostPhaseMovementPending', 'AutoresolvePrepare', 'Ended', 'FightingPhaseResolutionExec', 'FightingResolutionEnded', 'FightingResolutionStart', 'PostFightingMovementExec', 'PostFightingMovementPending', 'PostFightingResolutionEnded', 'PostFightingResolutionExec', 'PostFightingResolutionPending', 'PostFightingSynchro', 'PrepareFighting', 'WaitingBattlegroupsPlayedByHumanForTacticalBattle', 'WaitingPlayersNotReady', 'WaitingTacticResult'], GDType = 'TBaseClass'] = EStrategicBattleState/Ended,
+] is TGDConditionStrategicBattleStatus
+meta
+(
+    AutoName     = 'Condition Strategic Battle Status is <%BattleState%>',
+    Family       = '11_Condition',
+    FriendlyName = 'ConditionStrategicBattleStatus',
+    Parent       = 'Condition',
+)
+(
+    BattleState = <BattleState>
+)
+template ConditionStrategicIsPlayerTurn
+[
+    Camp: TGDVariableCamp [required = true, GDType = 'VariableCamp'] = nil,
+] is TGDConditionStrategicIsPlayerTurn
+meta
+(
+    AutoName     = 'Condition Strategic Is Player Turn <%Camp%>',
+    Family       = '11_Condition',
+    FriendlyName = 'ConditionStrategicIsPlayerTurn',
+    Parent       = 'Condition',
+)
+(
+    Camp = <Camp>
+)
+template ConditionStrategicIsTurn
+[
+    TurnNum: int [>= 0] = 0,
+] is TGDConditionStrategicIsTurn
+meta
+(
+    AutoName     = 'Condition Strategic Is Turn <%TurnNum%>',
+    Family       = '11_Condition',
+    FriendlyName = 'ConditionStrategicIsTurn',
+    Parent       = 'Condition',
+)
+(
+    TurnNum = <TurnNum>
+)
+template ConditionTeamInDistrict
+[
+    Camp    : TGDVariableCamp [required = true, GDType = 'VariableCamp'] = nil,
+    Position: TGDTagPosition [required = true, GDType = 'LDPosition'] = nil,
+] is TGDConditionTeamInDistrict
+meta
+(
+    AutoName     = 'CondCampInDistrict',
+    Family       = '11_Condition',
+    FriendlyName = '04 CondCampInDistrict',
+    Parent       = 'Condition',
+)
+(
+    Camp = <Camp>
+    Position = <Position>
+)
+template ConditionTimer
+[
+    Operator: TGDOperatorIntegerCompare [required = true, GDType = 'OperatorIntegerCompare'] = nil,
+    Variable: TGDVariableTimer [required = true, GDType = 'VariableTimer'] = nil,
+] is TGDConditionVariable
+meta
+(
+    AutoName     = 'Condition on <%Variable%>',
+    Family       = '11_Condition/12 Variable',
+    FriendlyName = 'ConditionVariableTimer',
+    Parent       = 'ConditionVariable',
+)
+(
+    Operator = <Operator>
+    Variable = <Variable>
+)
+template ConditionTrue
+[
+] is TGDConditionTrue
+meta
+(
+    Family       = 'z_Dev_only',
+    FriendlyName = 'z ConditionTrue',
+    Parent       = 'Condition',
+)
+(
+)
+template ConditionUnitCampWithFilter
+[
+    Contrainte: TGDConstraintOnUnit [required = true, GDType = 'ContrainteOnUnit'] = nil,
+    Operator  : TGDOperatorIntegerCompare [required = true, GDType = 'OperatorIntegerCompare'] = nil,
+    Variable  : TGDVariableCamp [required = true, GDType = 'VariableCamp'] = nil,
+] is TGDConditionUnitCampWithFilter
+meta
+(
+    AutoName     = 'Cond UCamp with filter on <%Variable%>',
+    Family       = '11_Condition/12 Variable',
+    FriendlyName = 'ConditionUnitCampWithFilter',
+    Parent       = 'Condition',
+)
+(
+    Contrainte = <Contrainte>
+    Operator = <Operator>
+    Variable = <Variable>
+)
+template ConditionUnitDansZone
+[
+    ComparaisonNbUnits: TGDOperatorIntegerCompare [required = false, GDType = 'OperatorIntegerCompare'] = nil,
+    Contrainte        : TGDConstraintOnUnit [required = false, GDType = 'ContrainteOnUnit'] = nil,
+    Detecteurs        : List<TGDTagPosition> [required = true, GDType = 'LDPosition'] = [],
+    ZoneType          : TBaseClass [EnumName = 'EZoneManagerType', Enum = true, Values = ['CommandementZoneManager', 'DeploiementZoneManager', 'IAStratZoneManager'], GDType = 'TBaseClass'] = EZoneManagerType/CommandementZoneManager,
+] is TGDConditionUnitDansZone
+meta
+(
+    AutoName     = 'Cond unit dans zones posees via le MapEditor',
+    Family       = '11_Condition',
+    FriendlyName = '03 ConditionUnitDansGEditorZone',
+    Parent       = 'ConditionDetectUnit',
+)
+(
+    ComparaisonNbUnits = <ComparaisonNbUnits>
+    Contrainte = <Contrainte>
+    Detecteurs = <Detecteurs>
+    ZoneType = <ZoneType>
+)
+template ConditionUnitGroup
+[
+    Operator: TGDOperatorIntegerCompare [required = true, GDType = 'OperatorIntegerCompare'] = nil,
+    Variable: TGDVariableUnitGroup [required = true, GDType = 'VariableUnitGroup'] = nil,
+] is TGDConditionVariable
+meta
+(
+    AutoName     = 'Cond UG sur <%Variable%>',
+    Family       = '11_Condition/13 UnitGroup',
+    FriendlyName = 'ConditionUnitGroup',
+    Parent       = 'ConditionVariable',
+)
+(
+    Operator = <Operator>
+    Variable = <Variable>
+)
+template ConditionUnitGroupWithFilter
+[
+    Contrainte: TGDConstraintOnUnit [required = true, GDType = 'ContrainteOnUnit'] = nil,
+    Operator  : TGDOperatorIntegerCompare [required = true, GDType = 'OperatorIntegerCompare'] = nil,
+    Variable  : TGDVariableUnitGroup [required = true, GDType = 'VariableUnitGroup'] = nil,
+] is TGDConditionUnitGroupWithFilter
+meta
+(
+    AutoName     = 'Cond UG with filter on <%Variable%>',
+    Family       = '11_Condition/13 UnitGroup',
+    FriendlyName = 'ConditionUnitGroupWithFilter',
+    Parent       = 'Condition',
+)
+(
+    Contrainte = <Contrainte>
+    Operator = <Operator>
+    Variable = <Variable>
+)
+template ConditionVariable
+[
+    Operator: TGDOperator [required = true, GDType = 'Operator'] = nil,
+    Variable: TGDVariable [required = true, GDType = 'Variable'] = nil,
+] is TGDConditionVariable
+meta
+(
+    Abstract     = 'true',
+    Family       = '11_Condition/12 Variable',
+    FriendlyName = 'ConditionVariable',
+    Parent       = 'Condition',
+)
+(
+    Operator = <Operator>
+    Variable = <Variable>
+)
+template ConditionVariableInteger
+[
+    Operator: TGDOperatorIntegerCompare [required = true, GDType = 'OperatorIntegerCompare'] = nil,
+    Variable: TGDVariableInteger [required = true, GDType = 'VariableInteger'] = nil,
+] is TGDConditionVariable
+meta
+(
+    AutoName     = 'Condition on <%Variable%>',
+    Family       = '11_Condition/12 Variable',
+    FriendlyName = 'ConditionVariableInteger',
+    Parent       = 'ConditionVariable',
+)
+(
+    Operator = <Operator>
+    Variable = <Variable>
+)
+template ContrainteIsAtAltitudeLevel
+[
+    AltitudeLevel: TBaseClass [EnumName = 'TCollisionPlane', Enum = true, Values = ['Ground', 'HighAltitude', 'LowAltitude', 'NearGround', 'NoCollision', 'ProjectileAltitude'], GDType = 'TBaseClass'] = TCollisionPlane/Ground,
+    UnitGroup    : TGDVariableUnitGroup [required = false, GDType = 'VariableUnitGroup'] = nil,
+] is TGDContrainteIsAtAltitudeLevel
+meta
+(
+    AutoName     = 'Contrainte <%UnitGroup%> at altitude level <%AltitudeLevel%>',
+    Family       = '15_Contrainte',
+    FriendlyName = 'Contrainte_IsAtAltitudeLevel',
+    Parent       = 'ContrainteOnUnit',
+)
+(
+    AltitudeLevel = <AltitudeLevel>
+    UnitGroup = <UnitGroup>
+)
+template ContrainteIsTransported
+[
+    UnitGroup: TGDVariableUnitGroup [required = false, GDType = 'VariableUnitGroup'] = nil,
+] is TGDContrainteIsTransported
+meta
+(
+    AutoName     = 'Contrainte transported <%UnitGroup%>',
+    Family       = '15_Contrainte',
+    FriendlyName = 'Contrainte_IsTransported',
+    Parent       = 'ContrainteOnUnit',
+)
+(
+    UnitGroup = <UnitGroup>
+)
+template ContrainteOnUnit
+[
+] is TGDConstraintOnUnit
+meta
+(
+    Abstract     = 'true',
+    Family       = '15_Contrainte',
+    FriendlyName = 'ContrainteOnUnit',
+    Parent       = 'TBaseClass',
+)
+(
+)
+template ContrainteOnUnitAllContrainte
+[
+    ContrainteList: List<TGDConstraintOnUnit> [required = true, GDType = 'ContrainteOnUnit'] = [],
+] is TGDContrainteOnUnitAllContrainte
+meta
+(
+    Family       = '15_Contrainte',
+    FriendlyName = 'ContrainteList_AND',
+    Parent       = 'ContrainteOnUnitWithContrainteList',
+)
+(
+    ContrainteList = <ContrainteList>
+)
+template ContrainteOnUnitAnyContrainte
+[
+    ContrainteList: List<TGDConstraintOnUnit> [required = true, GDType = 'ContrainteOnUnit'] = [],
+] is TGDContrainteOnUnitAnyContrainte
+meta
+(
+    Family       = '15_Contrainte',
+    FriendlyName = 'ContrainteList_OR',
+    Parent       = 'ContrainteOnUnitWithContrainteList',
+)
+(
+    ContrainteList = <ContrainteList>
+)
+template ContrainteOnUnitCategory
+[
+    IsAttacked         : bool = false,
+    IsAvion            : bool = false,
+    IsAvionEnVol       : bool = false,
+    IsBatiment         : bool = false,
+    IsEnCombat         : bool = false,
+    IsInfanterie       : bool = false,
+    IsPanicked         : bool = false,
+    IsSousTirArtillerie: bool = false,
+    IsTank             : bool = false,
+    IsUberStress       : bool = false,
+    MatchType          : TBaseClass [EnumName = 'EMatchTypeFilter', Enum = true, Values = ['MatchAll', 'MatchNone', 'MatchOne'], GDType = 'TBaseClass'] = EMatchTypeFilter/MatchAll,
+    UnitGroup          : TGDVariableUnitGroup [required = false, GDType = 'VariableUnitGroup'] = nil,
+] is TGDContrainteOnUnitCategory
+meta
+(
+    AutoName     = 'Contrainte status <%UnitGroup%>',
+    Family       = '15_Contrainte',
+    FriendlyName = 'Contrainte_Status',
+    Parent       = 'ContrainteOnUnit',
+)
+(
+    IsAttacked = <IsAttacked>
+    IsAvion = <IsAvion>
+    IsAvionEnVol = <IsAvionEnVol>
+    IsBatiment = <IsBatiment>
+    IsEnCombat = <IsEnCombat>
+    IsInfanterie = <IsInfanterie>
+    IsPanicked = <IsPanicked>
+    IsSousTirArtillerie = <IsSousTirArtillerie>
+    IsTank = <IsTank>
+    IsUberStress = <IsUberStress>
+    MatchType = <MatchType>
+    UnitGroup = <UnitGroup>
+)
+template ContrainteOnUnitExperience
+[
+    CompareInteger: TGDOperatorIntegerCompare [required = true, GDType = 'OperatorIntegerCompare'] = nil,
+] is TGDContrainteOnUnitExperience
+meta
+(
+    AutoName     = 'Contrainte on Experience level',
+    Family       = '15_Contrainte',
+    FriendlyName = 'Contrainte_Experience',
+    Parent       = 'ContrainteOnUnit',
+)
+(
+    CompareInteger = <CompareInteger>
+)
+template ContrainteOnUnitLogistic
+[
+    CompareInteger: TGDOperatorIntegerCompare [required = true, GDType = 'OperatorIntegerCompare'] = nil,
+    OperatorType  : TBaseClass [EnumName = 'EQuerySupply', Enum = true, Values = ['Bullet', 'Fuel', 'Health', 'Missile', 'Shell'], GDType = 'TBaseClass'] = EQuerySupply/Fuel,
+] is TGDContrainteOnUnitLogistic
+meta
+(
+    AutoName     = 'Contrainte on logistic',
+    Family       = '15_Contrainte',
+    FriendlyName = 'Contrainte_Logistique',
+    Parent       = 'ContrainteOnUnit',
+)
+(
+    CompareInteger = <CompareInteger>
+    OperatorType = <OperatorType>
+)
+template ContrainteOnUnitNoContrainte
+[
+    ContrainteList: List<TGDConstraintOnUnit> [required = true, GDType = 'ContrainteOnUnit'] = [],
+] is TGDContrainteOnUnitNoContrainte
+meta
+(
+    Family       = '15_Contrainte',
+    FriendlyName = 'ContrainteList_NO',
+    Parent       = 'ContrainteOnUnitWithContrainteList',
+)
+(
+    ContrainteList = <ContrainteList>
+)
+template ContrainteOnUnitTag
+[
+    Tag: string = "",
+] is TGDContrainteOnUnitTag
+meta
+(
+    Family       = '15_Contrainte',
+    FriendlyName = 'Contrainte_UnitTag',
+    Parent       = 'ContrainteOnUnit',
+)
+(
+    Tag = <Tag>
+)
+template ContrainteOnUnitTeam
+[
+    Camp        : TGDVariableCamp [required = true, GDType = 'VariableCamp'] = nil,
+    OperatorType: TBaseClass [EnumName = 'EMatchTeamFilter', Enum = true, Values = ['AlliedTeam', 'HostileTeam', 'SameTeam'], GDType = 'TBaseClass'] = EMatchTeamFilter/SameTeam,
+] is TGDContrainteOnUnitTeam
+meta
+(
+    AutoName     = 'Contrainte camp <%Camp%>',
+    Family       = '15_Contrainte',
+    FriendlyName = 'Contrainte_Camp',
+    Parent       = 'ContrainteOnUnit',
+)
+(
+    Camp = <Camp>
+    OperatorType = <OperatorType>
+)
+template ContrainteOnUnitType
+[
+    InvertResult: bool = false,
+    TypeUnit    : TEntityDescriptor [required = true, GDType = 'UnitType'] = nil,
+] is TGDContrainteOnUnitType
+meta
+(
+    Family       = '15_Contrainte',
+    FriendlyName = 'Contrainte_UnitType',
+    Parent       = 'ContrainteOnUnit',
+)
+(
+    InvertResult = <InvertResult>
+    TypeUnit = <TypeUnit>
+)
+template ContrainteOnUnitWithContrainteList
+[
+    ContrainteList: List<TGDConstraintOnUnit> [required = true, GDType = 'ContrainteOnUnit'] = [],
+] is TGDContrainteOnUnitWithContrainteList
+meta
+(
+    Abstract     = 'true',
+    Family       = '15_Contrainte',
+    FriendlyName = 'ContrainteOnUnitWithContrainteList',
+    Parent       = 'ContrainteOnUnit',
+)
+(
+    ContrainteList = <ContrainteList>
+)
+template DeckUnit
+[
+    ExperienceLevel: TGDVariableInteger [required = false, GDType = 'VariableInteger'] = nil,
+    Transporter    : TEntityDescriptor [required = false, GDType = 'UnitType'] = nil,
+    Unit           : TEntityDescriptor [required = true, GDType = 'UnitType'] = nil,
+] is TGDDeckUnit
+meta
+(
+    Family       = '25_Base',
+    FriendlyName = 'DeckUnit',
+    Parent       = 'TBaseClass',
+)
+(
+    ExperienceLevel = <ExperienceLevel>
+    Transporter = <Transporter>
+    Unit = <Unit>
+)
+template Descriptor
+[
+] is TGDDescriptor
+meta
+(
+    Abstract     = 'true',
+    Family       = '24_Divers',
+    FriendlyName = 'Descriptor',
+    Parent       = 'TBaseClass',
+)
+(
+)
+template DescriptorActionSpotlightUIElement
+[
+    AnimationBlinkDuration: float = 0.000000,
+    AnimationDuration     : int = 0,
+    ComponentUniqueName   : string [required = true] = "",
+    Play                  : bool = false,
+] is TGDDescriptorSpotlightUIElement
+meta
+(
+    Autoname     = 'Spotlight UI Element',
+    Family       = '32_UserInterface',
+    FriendlyName = 'Spotlight UI Element',
+    Parent       = 'Descriptor',
+)
+(
+    AnimationBlinkDuration = <AnimationBlinkDuration>
+    AnimationDuration = <AnimationDuration>
+    ComponentUniqueName = <ComponentUniqueName>
+    Play = <Play>
+)
+template DescriptorAddAllCampUnitsToUnitGroup
+[
+    Camp               : TGDVariableCamp [required = true, GDType = 'VariableCamp'] = nil,
+    ExcludeInProduction: bool = true,
+    Group              : TGDVariableUnitGroup [required = true, GDType = 'VariableUnitGroup'] = nil,
+] is TGDDescriptorAddAllCampUnitsToUnitGroup
+meta
+(
+    AutoName     = 'Add all <%Camp%> dans <%Group%>',
+    Family       = '30_UnitGroup',
+    FriendlyName = 'AddAllCampUnitsToUnitGroup',
+    Parent       = 'Descriptor',
+)
+(
+    Camp = <Camp>
+    ExcludeInProduction = <ExcludeInProduction>
+    Group = <Group>
+)
+template DescriptorAddCasualtiesToPawn
+[
+    Casualties    : int = 10,
+    Group         : TGDVariableUnitGroup [required = true, GDType = 'VariableUnitGroup'] = nil,
+    RandomRange   : int = 0,
+    TypeCasualties: TBaseClass [EnumName = 'ECasualties', Enum = true, Values = ['Casualties', 'Disabled', 'NoCasualties'], GDType = 'TBaseClass'] = ECasualties/Casualties,
+] is TGDDescriptorAddCasualtiesToPawn
+meta
+(
+    AutoName     = "Inflige des pertes d'une valeur de <%Casualties%> (+/- <%RandomRange%>) a <%Group%>",
+    Family       = '19_Steelman',
+    FriendlyName = 'AddCasualtiesToPawn',
+    Parent       = 'Descriptor',
+)
+(
+    Casualties = <Casualties>
+    Group = <Group>
+    RandomRange = <RandomRange>
+    TypeCasualties = <TypeCasualties>
+)
+template DescriptorAddDetectedUnitsToUnitGroup
+[
+    Detector: TGDConditionDetectUnit [required = true, GDType = 'ConditionDetectUnit'] = nil,
+    Group   : TGDVariableUnitGroup [required = true, GDType = 'VariableUnitGroup'] = nil,
+] is TGDDescriptorAddDetectedUnitsToUnitGroup
+meta
+(
+    AutoName     = 'Add detected units to <%Group%>',
+    Family       = '30_UnitGroup',
+    FriendlyName = '03 AddDetectedUnitsToUnitGroup',
+    Parent       = 'Descriptor',
+)
+(
+    Detector = <Detector>
+    Group = <Group>
+)
+template DescriptorAddIgnoredUnitByScript
+[
+    UnitGroup: TGDVariableUnitGroup [required = true, GDType = 'VariableUnitGroup'] = nil,
+] is TGDDescriptorAddIgnoredUnitByScript
+meta
+(
+    AutoName     = "L'IAStrat ne donnera plus d'ordres toutes les unites du group <%UnitGroup%>",
+    Family       = '10_ActionsIAStrategique',
+    FriendlyName = '05 Add IAStrat Ignored Units',
+    Parent       = 'Descriptor',
+)
+(
+    UnitGroup = <UnitGroup>
+)
+template DescriptorAddPawnToTeamForCurrentBattle
+[
+    IsAutoResolve    : bool = true,
+    NbPawnReallyAdded: TGDVariableInteger [required = true, GDType = 'VariableInteger'] = nil,
+    TeamCamp         : TGDVariableCamp [required = true, GDType = 'VariableCamp'] = nil,
+    TeamUnitGroup    : TGDVariableUnitGroup [required = true, GDType = 'VariableUnitGroup'] = nil,
+] is TGDDescriptorAddPawnToTeamForCurrentBattle
+meta
+(
+    AutoName     = 'Add <%TeamUnitGroup%> pawn group for <%TeamCamp%>',
+    Family       = '19_Steelman',
+    FriendlyName = 'AddPawnToTeamForCurrentBattle',
+    Parent       = 'Descriptor',
+)
+(
+    IsAutoResolve = <IsAutoResolve>
+    NbPawnReallyAdded = <NbPawnReallyAdded>
+    TeamCamp = <TeamCamp>
+    TeamUnitGroup = <TeamUnitGroup>
+)
+template DescriptorAddPossibleProduction
+[
+    Camp                : TGDVariableCamp [required = true, GDType = 'VariableCamp'] = nil,
+    DisplayName         : string [AllowNull = false, Localization = 'Label'] = "",
+    Pawns               : List<TEntityDescriptor> [required = true, GDType = 'UnitType'] = [],
+    ReinforcementGroup  : TGDStrategicReinforcementGroup [required = true, GDType = 'ReinforcementGroup'] = nil,
+    UnlockAtTurnVariable: TGDVariableInteger [required = true, GDType = 'VariableInteger'] = nil,
+] is TGDDescriptorStrategicAddPossibleProduction
+meta
+(
+    AutoName     = 'Ajoute une production possible pour le camp <%Camp%>',
+    Family       = '19_Steelman',
+    FriendlyName = 'AddPossibleProduction',
+    Parent       = 'Descriptor',
+)
+(
+    Camp = <Camp>
+    DisplayName = <DisplayName>
+    Pawns = <Pawns>
+    ReinforcementGroup = <ReinforcementGroup>
+    UnlockAtTurnVariable = <UnlockAtTurnVariable>
+)
+template DescriptorAddScoreCamp
+[
+    AddToScore: int = 0,
+    Camp      : TGDVariableCamp [required = true, GDType = 'VariableCamp'] = nil,
+    ScoreType : TBaseClass [EnumName = 'TScorePointType', Enum = true, Values = ['MapObjective', 'OverTimeMapObjective', 'ScriptedEvent', 'TotalScore', 'UnitDestruction', 'UnitLoss', 'ZonePoint'], GDType = 'TBaseClass'] = TScorePointType/UnitDestruction,
+    Variable  : TGDVariableInteger [required = false, GDType = 'VariableInteger'] = nil,
+] is TGDDescriptorAddScoreCamp
+meta
+(
+    AutoName     = 'Augmente le score du camp <%Camp%>',
+    Family       = '03_ActionsSurCamps',
+    FriendlyName = '21 AddScoreCamp',
+    Parent       = 'Descriptor',
+)
+(
+    AddToScore = <AddToScore>
+    Camp = <Camp>
+    ScoreType = <ScoreType>
+    Variable = <Variable>
+)
+template DescriptorAddUnitGroupListToUnitGroup
+[
+    ConditionKeepUnit: TGDConstraintOnUnit [required = false, GDType = 'ContrainteOnUnit'] = nil,
+    GroupDestination : TGDVariableUnitGroup [required = true, GDType = 'VariableUnitGroup'] = nil,
+    ListGroupSource  : List<TGDVariableUnitGroup> [required = true, GDType = 'VariableUnitGroup'] = [],
+] is TGDDescriptorAddUnitGroupListToUnitGroup
+meta
+(
+    AutoName     = 'Add UnitGroupList To <%GroupDestination%>',
+    Family       = '30_UnitGroup',
+    FriendlyName = '02 AddUnitGroupListToUnitGroup',
+    Parent       = 'Descriptor',
+)
+(
+    ConditionKeepUnit = <ConditionKeepUnit>
+    GroupDestination = <GroupDestination>
+    ListGroupSource = <ListGroupSource>
+)
+template DescriptorAddUnitToDeck
+[
+    Camp        : TGDVariableCamp [required = true, GDType = 'VariableCamp'] = nil,
+    Experience  : int [>= 0] = 0,
+    NbUnitsToAdd: int [>= 0] = 1,
+    Transporter : TEntityDescriptor [required = false, GDType = 'UnitType'] = nil,
+    TypeUnit    : TEntityDescriptor [required = true, GDType = 'UnitType'] = nil,
+] is TGDDescriptorAddUnitToDeck
+meta
+(
+    AutoName     = 'Ajoute <%NbUnitsToAdd%> unites <%TypeUnit%> au deck du camp <%Camp%>',
+    Family       = '03_ActionsSurCamps',
+    FriendlyName = 'AddUnitToDeck',
+    Parent       = 'Descriptor',
+)
+(
+    Camp = <Camp>
+    Experience = <Experience>
+    NbUnitsToAdd = <NbUnitsToAdd>
+    Transporter = <Transporter>
+    TypeUnit = <TypeUnit>
+)
+template DescriptorAfficheHint
+[
+    ComponentName                 : string = "HintComponent",
+    Info                          : string [AllowNull = false, Localization = 'Hint'] = "No message specified",
+    ListVariables                 : List<TGDVariableInteger> [required = false, GDType = 'VariableInteger'] = [],
+    Time                          : float = 2.000000,
+    VisibleByAlliedOfSpecifiedCamp: bool = true,
+    VisibleByCamp                 : TGDVariableCamp [required = false, GDType = 'VariableCamp'] = nil,
+] is TGDDescriptorLDHint
+meta
+(
+    AutoName     = 'Affiche Hint, time <%Time%>',
+    Family       = '24_Divers',
+    FriendlyName = '01 AfficheHint',
+    Parent       = 'Descriptor',
+)
+(
+    ComponentName = <ComponentName>
+    Info = <Info>
+    ListVariables = <ListVariables>
+    Time = <Time>
+    VisibleByAlliedOfSpecifiedCamp = <VisibleByAlliedOfSpecifiedCamp>
+    VisibleByCamp = <VisibleByCamp>
+)
+template DescriptorAssert
+[
+    Condition: TGDCondition [required = false, GDType = 'Condition'] = nil,
+    Message  : string = "Unknown",
+] is TGDDescriptorAssert
+meta
+(
+    Family       = 'z_Dev_only/z_TestSuite',
+    FriendlyName = 'Assert',
+    Parent       = 'Descriptor',
+)
+(
+    Condition = <Condition>
+    Message = <Message>
+)
+template DescriptorAssertWithDelai
+[
+    Condition: TGDCondition [required = false, GDType = 'Condition'] = nil,
+    Message  : string = "",
+    Timeout  : float [>= 0.000000] = 60.000000,
+] is TGDDescriptorAssertWithTimeout
+meta
+(
+    Family       = 'z_Dev_only/z_TestSuite',
+    FriendlyName = 'AssertWaitCondition',
+    Parent       = 'Descriptor',
+)
+(
+    Condition = <Condition>
+    Message = <Message>
+    Timeout = <Timeout>
+)
+template DescriptorAssignFakeDeckForTestAuto
+[
+    Camp: TGDVariableCamp [required = true, GDType = 'VariableCamp'] = nil,
+] is TGDDescriptorAssignFakeDeckForTestAuto
+meta
+(
+    AutoName     = 'Cree un fake deck pour le camp <%Camp%>',
+    Family       = 'z_Dev_only',
+    FriendlyName = '01 Assign fake deck for test auto',
+    Parent       = 'Descriptor',
+)
+(
+    Camp = <Camp>
+)
+template DescriptorAttack
+[
+    AttackEnPrioriteUniteNotUbserstress: bool = true,
+    Blocking                           : bool [GroupBy = "Primaire"] = true,
+    ForceNoRoad                        : bool = false,
+    ForceRoad                          : bool = false,
+    Group                              : TGDVariableUnitGroup [required = true, GDType = 'VariableUnitGroup'] = nil,
+    IgnoreInvisibleUnits               : bool = false,
+    OrderCancelable                    : bool [GroupBy = "Secondaire"] = false,
+    Targets                            : TGDVariableUnitGroup [required = true, GDType = 'VariableUnitGroup'] = nil,
+] is TGDDescriptorAttack
+meta
+(
+    AutoName     = '<%Group%> Attaque <%Targets%>',
+    Family       = '02_ActionsTactiques',
+    FriendlyName = '03 AttaqueUnites',
+    Parent       = 'Descriptor',
+)
+(
+    AttackEnPrioriteUniteNotUbserstress = <AttackEnPrioriteUniteNotUbserstress>
+    Blocking = <Blocking>
+    ForceNoRoad = <ForceNoRoad>
+    ForceRoad = <ForceRoad>
+    Group = <Group>
+    IgnoreInvisibleUnits = <IgnoreInvisibleUnits>
+    OrderCancelable = <OrderCancelable>
+    Targets = <Targets>
+)
+template DescriptorCameraFollowMode
+[
+    Duration                  : float = 0.000000,
+    Group                     : TGDVariableUnitGroup [required = true, GDType = 'VariableUnitGroup'] = nil,
+    StopFollowWhenDurationExpired: bool = true,
+] is TGDDescriptorCameraFollowMode
+meta
+(
+    Family       = '22_Camera',
+    FriendlyName = '02 CameraFollowMode',
+    Parent       = 'Descriptor',
+)
+(
+    Duration = <Duration>
+    Group = <Group>
+    StopFollowWhenDurationExpired = <StopFollowWhenDurationExpired>
+)
+template DescriptorChangeCamp
+[
+    Camp : TGDVariableCamp [required = true, GDType = 'VariableCamp'] = nil,
+    Group: TGDVariableUnitGroup [required = true, GDType = 'VariableUnitGroup'] = nil,
+] is TGDDescriptorChangeCamp
+meta
+(
+    AutoName     = 'Change Camp of <%Group%> to <%Camp%>',
+    Family       = '30_UnitGroup',
+    FriendlyName = '07 ChangeCamp',
+    Parent       = 'Descriptor',
+)
+(
+    Camp = <Camp>
+    Group = <Group>
+)
+template DescriptorChangeDureeTimer
+[
+    NouvelleDuree: int [>= 1] = 60,
+    Timer        : TGDVariableTimer [required = true, GDType = 'VariableTimer'] = nil,
+] is TGDDescriptorChangeDureeTimer
+meta
+(
+    AutoName     = 'Set <%Timer%> to  <%NouvelleDuree%>',
+    Family       = '08_ModifieTimer',
+    FriendlyName = '05 ChangeDuree',
+    Parent       = 'Descriptor',
+)
+(
+    NouvelleDuree = <NouvelleDuree>
+    Timer = <Timer>
+)
+template DescriptorChangeIAStratPhase
+[
+    Camp : TGDVariableCamp [required = true, GDType = 'VariableCamp'] = nil,
+    Phase: string [required = true] = "",
+] is TGDDescriptorChangeIAStratPhase
+meta
+(
+    AutoName     = 'Change la phase du camp <%Camp%> vers <%Phase%>',
+    Family       = '10_ActionsIAStrategique',
+    FriendlyName = '02 Change IA Strat Phase',
+    Parent       = 'Descriptor',
+)
+(
+    Camp = <Camp>
+    Phase = <Phase>
+)
+template DescriptorChangeProductionType
+[
+    ProductionType: TBaseClass [EnumName = 'EGDBrickProduction', Enum = true, Values = ['Deck', 'Groups'], GDType = 'TBaseClass'] = EGDBrickProduction/Deck,
+] is TGDDescriptorChangeProductionType
+meta
+(
+    Autoname     = 'Changer type de menu de production',
+    Family       = '32_UserInterface',
+    FriendlyName = 'Changer type de menu de production',
+    Parent       = 'Descriptor',
+)
+(
+    ProductionType = <ProductionType>
+)
+template DescriptorChangeStress
+[
+    DamageType: TBaseClass [EnumName = 'EDamageType', Enum = true, Values = ['Physical', 'Stun', 'Suppress'], GDType = 'TBaseClass'] = EDamageType/Physical,
+    Group     : TGDVariableUnitGroup [required = true, GDType = 'VariableUnitGroup'] = nil,
+    Value     : int = 0,
+] is TGDDescriptorChangeStress
+meta
+(
+    Family       = '29_ModifieUnitGroup',
+    FriendlyName = 'ChangeStress',
+    Parent       = 'Descriptor',
+)
+(
+    DamageType = <DamageType>
+    Group = <Group>
+    Value = <Value>
+)
+template DescriptorClearUnitGroup
+[
+    Group: TGDVariableUnitGroup [required = true, GDType = 'VariableUnitGroup'] = nil,
+] is TGDDescriptorClearUnitGroup
+meta
+(
+    AutoName     = 'Clear <%Group%>',
+    Family       = '30_UnitGroup',
+    FriendlyName = '05 ClearUnitGroup',
+    Parent       = 'Descriptor',
+)
+(
+    Group = <Group>
+)
+template DescriptorCompetition
+[
+    NbExecutions: int = 1,
+    SubActions  : List<TGDDescriptor> [required = false, GDType = 'Descriptor'] = [],
+] is TGDDescriptorCompetition
+meta
+(
+    AutoName     = 'Competition (NbExecutions : <%NbExecutions%>)',
+    Family       = '01_Sequenceur',
+    FriendlyName = '03 Competition',
+    Parent       = 'Descriptor',
+)
+(
+    NbExecutions = <NbExecutions>
+    SubActions = <SubActions>
+)
+template DescriptorCreateUnitOnPosition
+[
+    Camp           : TGDVariableCamp [required = true, GDType = 'VariableCamp'] = nil,
+    ExperienceLevel: int [>= 0] = 0,
+    Group          : TGDVariableUnitGroup [required = false, GDType = 'VariableUnitGroup'] = nil,
+    NbUnit         : int [>= 1] = 1,
+    Position       : TGDTagPosition [required = true, GDType = 'LDPosition'] = nil,
+    TypeUnit       : TEntityDescriptor [required = true, GDType = 'UnitType'] = nil,
+] is TGDDescriptorCreateUnitOnPosition
+meta
+(
+    AutoName     = 'Spawn <%NbUnit%> <%TypeUnit%> in <%Group%> for <%Camp%>',
+    Family       = '04_ActionsProduction',
+    FriendlyName = '01 SpawnUnit',
+    Parent       = 'Descriptor',
+)
+(
+    Camp = <Camp>
+    ExperienceLevel = <ExperienceLevel>
+    Group = <Group>
+    NbUnit = <NbUnit>
+    Position = <Position>
+    TypeUnit = <TypeUnit>
+)
+template DescriptorCutscene
+[
+] is TGDAbstractDescriptorCutscene
+meta
+(
+    Abstract     = 'true',
+    Family       = '23_Cutscenes',
+    FriendlyName = 'DescriptorCutscene',
+    Parent       = 'TBaseClass',
+)
+(
+)
+template DescriptorCutsceneAfficheHint
+[
+    ComponentName                 : string = "HintComponent",
+    Info                          : string [AllowNull = false, Localization = 'Hint'] = "No message specified",
+    Time                          : float = 2.000000,
+    VisibleByAlliedOfSpecifiedCamp: bool = true,
+    VisibleByCamp                 : TGDVariableCamp [required = false, GDType = 'VariableCamp'] = nil,
+] is TGDDescriptorCutsceneAfficheHint
+meta
+(
+    AutoName     = 'Affiche Hint, time <%Time%>',
+    Family       = '23_Cutscenes',
+    FriendlyName = 'CutsceneAfficheHint',
+    Parent       = 'DescriptorCutscene',
+)
+(
+    ComponentName = <ComponentName>
+    Info = <Info>
+    Time = <Time>
+    VisibleByAlliedOfSpecifiedCamp = <VisibleByAlliedOfSpecifiedCamp>
+    VisibleByCamp = <VisibleByCamp>
+)
+template DescriptorCutsceneCompetition
+[
+    SubActions: List<TGDAbstractDescriptorCutscene> [required = true, GDType = 'DescriptorCutscene'] = [],
+] is TGDDescriptorCutsceneCompetition
+meta
+(
+    Family       = '23_Cutscenes',
+    FriendlyName = 'CutsceneCompetition',
+    Parent       = 'DescriptorCutscene',
+)
+(
+    SubActions = <SubActions>
+)
+template DescriptorCutsceneDialog
+[
+    AfficherBoutonPause              : bool = false,
+    AfficherDevantFlou               : bool = false,
+    CanBeSkippedWithEscape           : bool = true,
+    ComponentName                    : string = "CampaignComponent",
+    DelayToWaitAfterEndingDialogSound: float [>= 0.000000] = 0.000000,
+    DureePause                       : float [>= -1.000000] = -1.000000,
+    Pause                            : bool = false,
+    TextComponentsToFill             : List<TGDDescriptorCutsceneTextComponent> [required = true, GDType = 'DescriptorCutsceneTextComponent'] = [],
+    TextureComponentsToFill          : List<TGDDescriptorCutsceneTextureComponent> [required = false, GDType = 'DescriptorCutsceneTextureComponent'] = [],
+    TokenBoutonChoix0                : string = "SI_NEXT",
+    VideoComponentsToFill            : List<TGDDescriptorCutsceneVideoComponent> [required = false, GDType = 'DescriptorCutsceneVideoComponent'] = [],
+    VisibleByAlliedOfSpecifiedCamp   : bool = true,
+    VisibleByCamp                    : TGDVariableCamp [required = false, GDType = 'VariableCamp'] = nil,
+] is TGDDescriptorCutsceneDialog
+meta
+(
+    AutoName     = 'CutsceneDialog',
+    Family       = '23_Cutscenes',
+    FriendlyName = 'CutsceneDialog',
+    Parent       = 'DescriptorCutscene',
+)
+(
+    AfficherBoutonPause = <AfficherBoutonPause>
+    AfficherDevantFlou = <AfficherDevantFlou>
+    CanBeSkippedWithEscape = <CanBeSkippedWithEscape>
+    ComponentName = <ComponentName>
+    DelayToWaitAfterEndingDialogSound = <DelayToWaitAfterEndingDialogSound>
+    DureePause = <DureePause>
+    Pause = <Pause>
+    TextComponentsToFill = <TextComponentsToFill>
+    TextureComponentsToFill = <TextureComponentsToFill>
+    TokenBoutonChoix0 = <TokenBoutonChoix0>
+    VideoComponentsToFill = <VideoComponentsToFill>
+    VisibleByAlliedOfSpecifiedCamp = <VisibleByAlliedOfSpecifiedCamp>
+    VisibleByCamp = <VisibleByCamp>
+)
+template DescriptorCutsceneDialogWithMultipleChoice
+[
+    AfficherBoutonPause              : bool = false,
+    AfficherDevantFlou               : bool = false,
+    ComponentName                    : string = "CampaignComponent",
+    DefaultButtonChoice              : int [<= 1] = 0,
+    DelayToWaitAfterEndingDialogSound: float [>= 0.000000] = 0.000000,
+    DureePause                       : float [>= -1.000000] = -1.000000,
+    Pause                            : bool = false,
+    SelectedButton                   : TGDVariableInteger [required = false, GDType = 'VariableInteger'] = nil,
+    TextComponentsToFill             : List<TGDDescriptorCutsceneTextComponent> [required = true, GDType = 'DescriptorCutsceneTextComponent'] = [],
+    TextureComponentsToFill          : List<TGDDescriptorCutsceneTextureComponent> [required = false, GDType = 'DescriptorCutsceneTextureComponent'] = [],
+    TokenBoutonChoix0                : string = "SI_NEXT",
+    TokenBoutonChoix1                : string = "",
+    VideoComponentsToFill            : List<TGDDescriptorCutsceneVideoComponent> [required = false, GDType = 'DescriptorCutsceneVideoComponent'] = [],
+    VisibleByAlliedOfSpecifiedCamp   : bool = true,
+    VisibleByCamp                    : TGDVariableCamp [required = false, GDType = 'VariableCamp'] = nil,
+] is TGDDescriptorCutsceneDialogWithMultipleChoice
+meta
+(
+    AutoName     = 'CutsceneDialogMultipleChoice',
+    Family       = '23_Cutscenes',
+    FriendlyName = 'CutsceneDialogWithMultipleChoice',
+    Parent       = 'TBaseClass',
+)
+(
+    AfficherBoutonPause = <AfficherBoutonPause>
+    AfficherDevantFlou = <AfficherDevantFlou>
+    ComponentName = <ComponentName>
+    DefaultButtonChoice = <DefaultButtonChoice>
+    DelayToWaitAfterEndingDialogSound = <DelayToWaitAfterEndingDialogSound>
+    DureePause = <DureePause>
+    Pause = <Pause>
+    SelectedButton = <SelectedButton>
+    TextComponentsToFill = <TextComponentsToFill>
+    TextureComponentsToFill = <TextureComponentsToFill>
+    TokenBoutonChoix0 = <TokenBoutonChoix0>
+    TokenBoutonChoix1 = <TokenBoutonChoix1>
+    VideoComponentsToFill = <VideoComponentsToFill>
+    VisibleByAlliedOfSpecifiedCamp = <VisibleByAlliedOfSpecifiedCamp>
+    VisibleByCamp = <VisibleByCamp>
+)
+template DescriptorCutsceneIfThenElse
+[
+    Condition   : TGDCondition [required = true, GDType = 'Condition'] = nil,
+    EffetIfFalse: TGDAbstractDescriptorCutscene [required = false, GDType = 'DescriptorCutscene'] = nil,
+    EffetIfTrue : TGDAbstractDescriptorCutscene [required = false, GDType = 'DescriptorCutscene'] = nil,
+] is TGDDescriptorCutsceneIfThenElse
+meta
+(
+    Family       = '23_Cutscenes',
+    FriendlyName = 'CutsceneIfThenElse',
+    Parent       = 'DescriptorCutscene',
+)
+(
+    Condition = <Condition>
+    EffetIfFalse = <EffetIfFalse>
+    EffetIfTrue = <EffetIfTrue>
+)
+template DescriptorCutscenePlayDialogList
+[
+    DelayToWaitAfterEndingLastDialogSound: float [>= 0.000000] = 1.000000,
+    DialogList                           : List<TGDDescriptorCutsceneDialog> [required = true, GDType = 'DescriptorCutsceneDialog'] = [],
+] is TGDDescriptorCutscenePlayDialogList
+meta
+(
+    Family       = '23_Cutscenes',
+    FriendlyName = 'CutscenePlayDialogList',
+    Parent       = 'DescriptorCutscene',
+)
+(
+    DelayToWaitAfterEndingLastDialogSound = <DelayToWaitAfterEndingLastDialogSound>
+    DialogList = <DialogList>
+)
+template DescriptorCutsceneSequential
+[
+    SubActions: List<TGDAbstractDescriptorCutscene> [required = true, GDType = 'DescriptorCutscene'] = [],
+] is TGDDescriptorCutsceneSequential
+meta
+(
+    Family       = '23_Cutscenes',
+    FriendlyName = 'CutsceneSequential',
+    Parent       = 'DescriptorCutscene',
+)
+(
+    SubActions = <SubActions>
+)
+template DescriptorCutsceneSimultaneous
+[
+    SubActions: List<TGDAbstractDescriptorCutscene> [required = true, GDType = 'DescriptorCutscene'] = [],
+] is TGDDescriptorCutsceneSimultaneous
+meta
+(
+    Family       = '23_Cutscenes',
+    FriendlyName = 'CutsceneSimultaneous',
+    Parent       = 'DescriptorCutscene',
+)
+(
+    SubActions = <SubActions>
+)
+template DescriptorCutsceneStartCameraPath
+[
+    AccelerationActivated         : bool = true,
+    CameraPathName                : string = "",
+    CanBeSkippedWithEscape        : bool = true,
+    DecelerationActivated         : bool = true,
+    StartFromCurrentCameraPosition: bool = false,
+    TimeInSecond                  : float [>= 0.000000] = 30.000000,
+    VisibleByAlliedOfSpecifiedCamp: bool = true,
+    VisibleByCamp                 : TGDVariableCamp [required = false, GDType = 'VariableCamp'] = nil,
+] is TGDDescriptorCutsceneStartCameraPath
+meta
+(
+    AutoName     = 'Start CameraPath <%CameraPathName%> pendant <%TimeInSecond%>',
+    Family       = '23_Cutscenes',
+    FriendlyName = 'CutsceneStartCameraPath',
+    Parent       = 'DescriptorCutscene',
+)
+(
+    AccelerationActivated = <AccelerationActivated>
+    CameraPathName = <CameraPathName>
+    CanBeSkippedWithEscape = <CanBeSkippedWithEscape>
+    DecelerationActivated = <DecelerationActivated>
+    StartFromCurrentCameraPosition = <StartFromCurrentCameraPosition>
+    TimeInSecond = <TimeInSecond>
+    VisibleByAlliedOfSpecifiedCamp = <VisibleByAlliedOfSpecifiedCamp>
+    VisibleByCamp = <VisibleByCamp>
+)
+template DescriptorCutsceneTextComponent
+[
+    LocalizedText  : string [Dialog = true],
+    UIComponentName: string [Enum = true, Values = [Text1, Text2, Text3, Text4, Text5]] = 'Text1',
+] is TGDDescriptorCutsceneTextComponent
+meta
+(
+    Family       = '23_Cutscenes',
+    FriendlyName = 'DescriptorCutsceneTextComponent',
+    Parent       = 'TBaseClass',
+)
+(
+    LocalizedText = <LocalizedText>
+    UIComponentName = <UIComponentName>
+)
+template DescriptorCutsceneTextureComponent
+[
+    TextureFile    : string [required = true, TextureFile = true],
+    UIComponentName: string [Enum = true, Values = [Texture1, Texture2, Texture3]] = 'Texture1',
+] is TGDDescriptorCutsceneTextureComponent
+meta
+(
+    Family       = '23_Cutscenes',
+    FriendlyName = 'DescriptorCutsceneTextureComponent',
+    Parent       = 'TBaseClass',
+)
+(
+    TextureFile = <TextureFile>
+    UIComponentName = <UIComponentName>
+)
+template DescriptorCutsceneVideoComponent
+[
+    UIComponentName: string [Enum = true, Values = [Video1]] = 'Video1',
+    VideoFile      : string [required = true, VideoFile = true],
+] is TGDDescriptorCutsceneVideoComponent
+meta
+(
+    Family       = '23_Cutscenes',
+    FriendlyName = 'DescriptorCutsceneVideoComponent',
+    Parent       = 'TBaseClass',
+)
+(
+    UIComponentName = <UIComponentName>
+    VideoFile = <VideoFile>
+)
+template DescriptorCutsceneWaitDuree
+[
+    WaitDuration: float [>= 0.000000] = 1.000000,
+] is TGDDescriptorCutsceneWaitDuree
+meta
+(
+    AutoName     = 'Wait <%WaitDuration%> sec',
+    Family       = '23_Cutscenes',
+    FriendlyName = 'CutsceneWaitDuree',
+    Parent       = 'DescriptorCutscene',
+)
+(
+    WaitDuration = <WaitDuration>
+)
+template DescriptorCutsceneWaitForEver
+[
+] is TGDDescriptorCutsceneWaitForEver
+meta
+(
+    Family       = '23_Cutscenes',
+    FriendlyName = 'CutsceneWaitForEver',
+    Parent       = 'DescriptorCutscene',
+)
+(
+)
+template DescriptorDefinirIncomeACamp
+[
+    Camp    : TGDVariableCamp [required = true, GDType = 'VariableCamp'] = nil,
+    Quantite: int = 0,
+] is TGDDescriptorSetIncomeToTeam
+meta
+(
+    AutoName     = 'Definir income <%Quantite%> a <%Camp%>',
+    Family       = '03_ActionsSurCamps',
+    FriendlyName = 'DescriptorDefinirIncomeACamp',
+    Parent       = 'Descriptor',
+)
+(
+    Camp = <Camp>
+    Quantite = <Quantite>
+)
+template DescriptorDeselectUnitGroup
+[
+    Group: TGDVariableUnitGroup [required = true, GDType = 'VariableUnitGroup'] = nil,
+] is TGDDescriptorDeselectUnitGroup
+meta
+(
+    AutoName     = 'Deselect <%Group%>',
+    Family       = '29_ModifieUnitGroup',
+    FriendlyName = 'Deselect UnitGroup',
+    Parent       = 'Descriptor',
+)
+(
+    Group = <Group>
+)
+template DescriptorDonneIncomeACamp
+[
+    Camp    : TGDVariableCamp [required = true, GDType = 'VariableCamp'] = nil,
+    Quantite: int = 0,
+] is TGDDescriptorGiveIncomeToTeam
+meta
+(
+    AutoName     = 'Donne income <%Quantite%> a <%Camp%>',
+    Family       = '03_ActionsSurCamps',
+    FriendlyName = 'DescriptorDonneIncomeACamp',
+    Parent       = 'Descriptor',
+)
+(
+    Camp = <Camp>
+    Quantite = <Quantite>
+)
+template DescriptorDonneRessourceACamp
+[
+    Camp        : TGDVariableCamp [required = true, GDType = 'VariableCamp'] = nil,
+    Quantite    : int = 10,
+    ResourceType: TBaseClass [EnumName = 'EnumResourceList', Enum = true, Values = [Resource_Invalid, Resource_CommandPoints, Resource_Tickets], GDType = 'TBaseClass'] = EnumResourceList/Resource_CommandPoints,
+] is TGDDescriptorGiveRessourceToTeam
+meta
+(
+    AutoName     = 'Donne <%Quantite%> <%ResourceType%> a <%Camp%>',
+    Family       = '03_ActionsSurCamps',
+    FriendlyName = '02 DonneRessourceACamp',
+    Parent       = 'Descriptor',
+)
+(
+    Camp = <Camp>
+    Quantite = <Quantite>
+    ResourceType = <ResourceType>
+)
+template DescriptorDrawLabelOnPosition
+[
+    FoldedText                    : string [AllowNull = true, Localization = 'Label'] = "",
+    Group                         : TGDVariableUnitGroup [required = false, GDType = 'VariableUnitGroup'] = nil,
+    LabelComponent                : string = "Primary",
+    ListTimers                    : List<TGDVariableTimer> [required = false, GDType = 'VariableTimer'] = [],
+    ListTimersForFoldedText       : List<TGDVariableTimer> [required = false, GDType = 'VariableTimer'] = [],
+    ListVariables                 : List<TGDVariableInteger> [required = false, GDType = 'VariableInteger'] = [],
+    ListVariablesForFoldedText    : List<TGDVariableInteger> [required = false, GDType = 'VariableInteger'] = [],
+    PlayAnimWhenShown             : bool = true,
+    Position                      : TGDTagPosition [required = false, GDType = 'LDPosition'] = nil,
+    Text                          : string [AllowNull = false, Localization = 'Label'] = "Default Label",
+    VisibleByAlliedOfSpecifiedCamp: bool = true,
+    VisibleByCamps                : List<TGDVariableCamp> [required = false, GDType = 'VariableCamp'] = [],
+] is TGDDescriptorDrawLabelOnPosition
+meta
+(
+    AutoName     = 'Label <%LabelComponent%> <%Text%> sur <%Group%>',
+    Family       = '32_UserInterface',
+    FriendlyName = 'DrawLabel',
+    Parent       = 'Descriptor',
+)
+(
+    FoldedText = <FoldedText>
+    Group = <Group>
+    LabelComponent = <LabelComponent>
+    ListTimers = <ListTimers>
+    ListTimersForFoldedText = <ListTimersForFoldedText>
+    ListVariables = <ListVariables>
+    ListVariablesForFoldedText = <ListVariablesForFoldedText>
+    PlayAnimWhenShown = <PlayAnimWhenShown>
+    Position = <Position>
+    Text = <Text>
+    VisibleByAlliedOfSpecifiedCamp = <VisibleByAlliedOfSpecifiedCamp>
+    VisibleByCamps = <VisibleByCamps>
+)
+template DescriptorEmbarquement
+[
+    Blocking       : bool [GroupBy = "Primaire"] = true,
+    ForceNoRoad    : bool [GroupBy = "Secondaire"] = false,
+    ForceRoad      : bool [GroupBy = "Secondaire"] = false,
+    Group          : TGDVariableUnitGroup [required = true, GDType = 'VariableUnitGroup'] = nil,
+    OrderCancelable: bool [GroupBy = "Secondaire"] = false,
+    Targets        : TGDVariableUnitGroup [required = true, GDType = 'VariableUnitGroup'] = nil,
+] is TGDDescriptorLoadIntoTransporter
+meta
+(
+    AutoName     = '<%Group%> Embarque dans <%Targets%>',
+    Family       = '02_ActionsTactiques',
+    FriendlyName = '12 EmbarquementUnites',
+    Parent       = 'Descriptor',
+)
+(
+    Blocking = <Blocking>
+    ForceNoRoad = <ForceNoRoad>
+    ForceRoad = <ForceRoad>
+    Group = <Group>
+    OrderCancelable = <OrderCancelable>
+    Targets = <Targets>
+)
+template DescriptorEncapsuleCutscene
+[
+    BlockPlayerActions: bool = true,
+    SubActions        : List<TGDAbstractDescriptorCutscene> [required = false, GDType = 'DescriptorCutscene'] = [],
+] is TGDDescriptorEncapsuleCutscene
+meta
+(
+    Family       = '23_Cutscenes',
+    FriendlyName = 'EncapsuleCutscene',
+    Parent       = 'DescriptorSynchroniseSubAction',
+)
+(
+    BlockPlayerActions = <BlockPlayerActions>
+    SubActions = <SubActions>
+)
+template DescriptorEncapsuleCutsceneDialogListWithMultipleChoice
+[
+    DialogList: List<TGDDescriptorCutsceneDialogWithMultipleChoice> [required = false, GDType = 'DescriptorCutsceneDialogWithMultipleChoice'] = [],
+] is TGDDescriptorEncapsuleCutsceneDialogListWithMultipleChoice
+meta
+(
+    Family       = '23_Cutscenes',
+    FriendlyName = 'EncapsuleCutsceneDialogListWithMultipleChoice',
+    Parent       = 'Descriptor',
+)
+(
+    DialogList = <DialogList>
+)
+template DescriptorEndTurnForCamp
+[
+    Camp: TGDVariableCamp [required = true, GDType = 'VariableCamp'] = nil,
+] is TGDDescriptorEndTurnForTeam
+meta
+(
+    AutoName     = 'Fin du tour pour le camp <%Camp%>.',
+    Family       = '19_Steelman',
+    FriendlyName = 'EndTurnForCamp',
+    Parent       = 'Descriptor',
+)
+(
+    Camp = <Camp>
+)
+template DescriptorExecuteNamedActionWithTimerCPP
+[
+    CppActionName: string = "",
+    IsTestUI     : bool = false,
+] is TGDDescriptorExecuteNamedActionWithTimerCPP
+meta
+(
+    Family       = 'z_Dev_only',
+    FriendlyName = 'ExecuteActionCPP',
+    Parent       = 'Descriptor',
+)
+(
+    CppActionName = <CppActionName>
+    IsTestUI = <IsTestUI>
+)
+template DescriptorForceAllAmmoPiercing
+[
+    Group     : TGDVariableUnitGroup [required = true, GDType = 'VariableUnitGroup'] = nil,
+    MustPierce: bool = true,
+] is TGDDescriptorForceAllAmmoPiercing
+meta
+(
+    AutoName     = "Force tous les tirs a etre per\xc3\xa7ant/non per\xc3\xa7ant pour l'unitgroup <%Group%>",
+    Family       = 'z_Dev_only',
+    FriendlyName = 'Force All Ammo Piercing',
+    Parent       = 'Descriptor',
+)
+(
+    Group = <Group>
+    MustPierce = <MustPierce>
+)
+template DescriptorForceDisplayStrategicUIElement
+[
+    ForceHideAll                   : bool = false,
+    ForceShowAll                   : bool = false,
+    ShowBattlePlanning             : TBaseClass [EnumName = 'EGDBrickStatus', Enum = true, Values = ['Default', 'ForceHide', 'ForceShow'], GDType = 'TBaseClass'] = EGDBrickStatus/Default,
+    ShowBattleResult               : TBaseClass [EnumName = 'EGDBrickStatus', Enum = true, Values = ['Default', 'ForceHide', 'ForceShow'], GDType = 'TBaseClass'] = EGDBrickStatus/Default,
+    ShowDate                       : TBaseClass [EnumName = 'EGDBrickStatus', Enum = true, Values = ['Default', 'ForceHide', 'ForceShow'], GDType = 'TBaseClass'] = EGDBrickStatus/Default,
+    ShowEndTurn                    : TBaseClass [EnumName = 'EGDBrickStatus', Enum = true, Values = ['Default', 'ForceHide', 'ForceShow'], GDType = 'TBaseClass'] = EGDBrickStatus/Default,
+    ShowHeaderComponent            : TBaseClass [EnumName = 'EGDBrickStatus', Enum = true, Values = ['Default', 'ForceHide', 'ForceShow'], GDType = 'TBaseClass'] = EGDBrickStatus/Default,
+    ShowMenuButtons                : TBaseClass [EnumName = 'EGDBrickStatus', Enum = true, Values = ['Default', 'ForceHide', 'ForceShow'], GDType = 'TBaseClass'] = EGDBrickStatus/Default,
+    ShowObjectiveScore             : TBaseClass [EnumName = 'EGDBrickStatus', Enum = true, Values = ['Default', 'ForceHide', 'ForceShow'], GDType = 'TBaseClass'] = EGDBrickStatus/Default,
+    ShowPlayerName                 : TBaseClass [EnumName = 'EGDBrickStatus', Enum = true, Values = ['Default', 'ForceHide', 'ForceShow'], GDType = 'TBaseClass'] = EGDBrickStatus/Default,
+    ShowStartBattle                : TBaseClass [EnumName = 'EGDBrickStatus', Enum = true, Values = ['Default', 'ForceHide', 'ForceShow'], GDType = 'TBaseClass'] = EGDBrickStatus/Default,
+    ShowStrategicInfoPlayerAndScore: TBaseClass [EnumName = 'EGDBrickStatus', Enum = true, Values = ['Default', 'ForceHide', 'ForceShow'], GDType = 'TBaseClass'] = EGDBrickStatus/Default,
+    ShowTacticalPreparation        : TBaseClass [EnumName = 'EGDBrickStatus', Enum = true, Values = ['Default', 'ForceHide', 'ForceShow'], GDType = 'TBaseClass'] = EGDBrickStatus/Default,
+    ShowUnitInfoPanel              : TBaseClass [EnumName = 'EGDBrickStatus', Enum = true, Values = ['Default', 'ForceHide', 'ForceShow'], GDType = 'TBaseClass'] = EGDBrickStatus/Default,
+] is TGDDescriptorForceDisplayStrategicUIElement
+meta
+(
+    Autoname     = 'Specifier affichage Element Strategique UI',
+    Family       = '32_UserInterface',
+    FriendlyName = 'Specifier affichage Element Strategique UI',
+    Parent       = 'Descriptor',
+)
+(
+    ForceHideAll = <ForceHideAll>
+    ForceShowAll = <ForceShowAll>
+    ShowBattlePlanning = <ShowBattlePlanning>
+    ShowBattleResult = <ShowBattleResult>
+    ShowDate = <ShowDate>
+    ShowEndTurn = <ShowEndTurn>
+    ShowHeaderComponent = <ShowHeaderComponent>
+    ShowMenuButtons = <ShowMenuButtons>
+    ShowObjectiveScore = <ShowObjectiveScore>
+    ShowPlayerName = <ShowPlayerName>
+    ShowStartBattle = <ShowStartBattle>
+    ShowStrategicInfoPlayerAndScore = <ShowStrategicInfoPlayerAndScore>
+    ShowTacticalPreparation = <ShowTacticalPreparation>
+    ShowUnitInfoPanel = <ShowUnitInfoPanel>
+)
+template DescriptorForceDisplayUIElement
+[
+    ForceHideAll                     : bool = false,
+    ForceShowAll                     : bool = false,
+    ShowAlertPanel                   : TBaseClass [EnumName = 'EGDBrickStatus', Enum = true, Values = ['Default', 'ForceHide', 'ForceShow'], GDType = 'TBaseClass'] = EGDBrickStatus/Default,
+    ShowAutoDeployPanel              : TBaseClass [EnumName = 'EGDBrickStatus', Enum = true, Values = ['Default', 'ForceHide', 'ForceShow'], GDType = 'TBaseClass'] = EGDBrickStatus/Default,
+    ShowBeaconPanel                  : TBaseClass [EnumName = 'EGDBrickStatus', Enum = true, Values = ['Default', 'ForceHide', 'ForceShow'], GDType = 'TBaseClass'] = EGDBrickStatus/Default,
+    ShowCubeAction                   : TBaseClass [EnumName = 'EGDBrickStatus', Enum = true, Values = ['Default', 'ForceHide', 'ForceShow'], GDType = 'TBaseClass'] = EGDBrickStatus/Default,
+    ShowIncomeOnScorePanel           : TBaseClass [EnumName = 'EGDBrickStatus', Enum = true, Values = ['Default', 'ForceHide', 'ForceShow'], GDType = 'TBaseClass'] = EGDBrickStatus/Default,
+    ShowLaunchBattleButton           : TBaseClass [EnumName = 'EGDBrickStatus', Enum = true, Values = ['Default', 'ForceHide', 'ForceShow'], GDType = 'TBaseClass'] = EGDBrickStatus/Default,
+    ShowMinimap                      : TBaseClass [EnumName = 'EGDBrickStatus', Enum = true, Values = ['Default', 'ForceHide', 'ForceShow'], GDType = 'TBaseClass'] = EGDBrickStatus/Default,
+    ShowMultiSelectionPanel          : TBaseClass [EnumName = 'EGDBrickStatus', Enum = true, Values = ['Default', 'ForceHide', 'ForceShow'], GDType = 'TBaseClass'] = EGDBrickStatus/Default,
+    ShowOffMapUnitPanel              : TBaseClass [EnumName = 'EGDBrickStatus', Enum = true, Values = ['Default', 'ForceHide', 'ForceShow'], GDType = 'TBaseClass'] = EGDBrickStatus/Default,
+    ShowProdMenu                     : TBaseClass [EnumName = 'EGDBrickStatus', Enum = true, Values = ['Default', 'ForceHide', 'ForceShow'], GDType = 'TBaseClass'] = EGDBrickStatus/Default,
+    ShowProdMenuSwitchMenuTypeButtons: TBaseClass [EnumName = 'EGDBrickStatus', Enum = true, Values = ['Default', 'ForceHide', 'ForceShow'], GDType = 'TBaseClass'] = EGDBrickStatus/Default,
+    ShowScoreFeedbackMessages        : TBaseClass [EnumName = 'EGDBrickStatus', Enum = true, Values = ['Default', 'ForceHide', 'ForceShow'], GDType = 'TBaseClass'] = EGDBrickStatus/Default,
+    ShowScoreOnMapControlPanel       : TBaseClass [EnumName = 'EGDBrickStatus', Enum = true, Values = ['Default', 'ForceHide', 'ForceShow'], GDType = 'TBaseClass'] = EGDBrickStatus/Default,
+    ShowScorePanel                   : TBaseClass [EnumName = 'EGDBrickStatus', Enum = true, Values = ['Default', 'ForceHide', 'ForceShow'], GDType = 'TBaseClass'] = EGDBrickStatus/Default,
+    ShowSpeedDropdown                : TBaseClass [EnumName = 'EGDBrickStatus', Enum = true, Values = ['Default', 'ForceHide', 'ForceShow'], GDType = 'TBaseClass'] = EGDBrickStatus/Default,
+    ShowStartingInformationPanel     : TBaseClass [EnumName = 'EGDBrickStatus', Enum = true, Values = ['Default', 'ForceHide', 'ForceShow'], GDType = 'TBaseClass'] = EGDBrickStatus/Default,
+    ShowTopBar                       : TBaseClass [EnumName = 'EGDBrickStatus', Enum = true, Values = ['Default', 'ForceHide', 'ForceShow'], GDType = 'TBaseClass'] = EGDBrickStatus/Default,
+] is TGDDescriptorForceDisplayUIElement
+meta
+(
+    Autoname     = 'Specifier affichage Element UI',
+    Family       = '32_UserInterface',
+    FriendlyName = 'Specifier affichage Element UI',
+    Parent       = 'Descriptor',
+)
+(
+    ForceHideAll = <ForceHideAll>
+    ForceShowAll = <ForceShowAll>
+    ShowAlertPanel = <ShowAlertPanel>
+    ShowAutoDeployPanel = <ShowAutoDeployPanel>
+    ShowBeaconPanel = <ShowBeaconPanel>
+    ShowCubeAction = <ShowCubeAction>
+    ShowIncomeOnScorePanel = <ShowIncomeOnScorePanel>
+    ShowLaunchBattleButton = <ShowLaunchBattleButton>
+    ShowMinimap = <ShowMinimap>
+    ShowMultiSelectionPanel = <ShowMultiSelectionPanel>
+    ShowOffMapUnitPanel = <ShowOffMapUnitPanel>
+    ShowProdMenu = <ShowProdMenu>
+    ShowProdMenuSwitchMenuTypeButtons = <ShowProdMenuSwitchMenuTypeButtons>
+    ShowScoreFeedbackMessages = <ShowScoreFeedbackMessages>
+    ShowScoreOnMapControlPanel = <ShowScoreOnMapControlPanel>
+    ShowScorePanel = <ShowScorePanel>
+    ShowSpeedDropdown = <ShowSpeedDropdown>
+    ShowStartingInformationPanel = <ShowStartingInformationPanel>
+    ShowTopBar = <ShowTopBar>
+)
+template DescriptorForceEndBattle
+[
+] is TGDDescriptorForceEndBattle
+meta
+(
+    AutoName     = 'Force end steelman battle',
+    Family       = '19_Steelman',
+    FriendlyName = 'ForceEndBattle',
+    Parent       = 'Descriptor',
+)
+(
+)
+template DescriptorFow
+[
+    Fow: bool = true,
+] is TGDDescriptorFow
+meta
+(
+    Family       = 'z_Dev_only/z_Deprecated',
+    FriendlyName = '10 Fow',
+    Parent       = 'Descriptor',
+)
+(
+    Fow = <Fow>
+)
+template DescriptorGereObjectif
+[
+    ActionsEchec                 : TGDDescriptor [required = false, GDType = 'Descriptor'] = nil,
+    ActionsReussi                : TGDDescriptor [required = false, GDType = 'Descriptor'] = nil,
+    Condition                    : TGDCondition [required = false, GDType = 'Condition'] = nil,
+    ConditionEchec               : TGDCondition [required = false, GDType = 'Condition'] = nil,
+    LabelComponent               : string = "Primary",
+    ListTimersForEtiquetteText   : List<TGDVariableTimer> [required = false, GDType = 'VariableTimer'] = [],
+    ListVariables                : List<TGDVariableInteger> [required = false, GDType = 'VariableInteger'] = [],
+    ListVariablesForEtiquetteText: List<TGDVariableInteger> [required = false, GDType = 'VariableInteger'] = [],
+    ObjectiveEtiquetteText       : string [AllowNull = false, Localization = 'Label'] = "",
+    ObjectiveText                : string [AllowNull = false, Localization = 'Label'] = "",
+    Position                     : TGDTagPosition [required = false, GDType = 'LDPosition'] = nil,
+    ShowAddAnimation             : bool = true,
+    ShowBaseAnimation            : bool = true,
+    ShowEtiquette                : bool = true,
+    ShowFailAnimation            : bool = true,
+    ShowSuccessAnimation         : bool = true,
+    UnitGroupPositionList        : List<TGDVariableUnitGroup> [required = false, GDType = 'VariableUnitGroup'] = [],
+] is TGDDescriptorGereObjectif
+meta
+(
+    AutoName     = 'GereObj, Condition: <%Condition%>, Reussi: <%ActionsReussi%>',
+    Family       = '20_Objectif',
+    FriendlyName = 'GereObjectif',
+    Parent       = 'Descriptor',
+)
+(
+    ActionsEchec = <ActionsEchec>
+    ActionsReussi = <ActionsReussi>
+    Condition = <Condition>
+    ConditionEchec = <ConditionEchec>
+    LabelComponent = <LabelComponent>
+    ListTimersForEtiquetteText = <ListTimersForEtiquetteText>
+    ListVariables = <ListVariables>
+    ListVariablesForEtiquetteText = <ListVariablesForEtiquetteText>
+    ObjectiveEtiquetteText = <ObjectiveEtiquetteText>
+    ObjectiveText = <ObjectiveText>
+    Position = <Position>
+    ShowAddAnimation = <ShowAddAnimation>
+    ShowBaseAnimation = <ShowBaseAnimation>
+    ShowEtiquette = <ShowEtiquette>
+    ShowFailAnimation = <ShowFailAnimation>
+    ShowSuccessAnimation = <ShowSuccessAnimation>
+    UnitGroupPositionList = <UnitGroupPositionList>
+)
+template DescriptorGereObjectifWithVariableOwner
+[
+    ActionsEchec               : TGDDescriptor [required = false, GDType = 'Descriptor'] = nil,
+    ActionsReussi              : TGDDescriptor [required = false, GDType = 'Descriptor'] = nil,
+    BonusScoreIncomeMission    : int [>= 0] = 5,
+    BonusScoreMission          : int [>= 0] = 50,
+    ConditionEchec             : TGDCondition [required = false, GDType = 'Condition'] = nil,
+    ConditionReussite          : TGDCondition [required = false, GDType = 'Condition'] = nil,
+    LabelComponent             : string = "CapturePoint",
+    ObjectiveName              : string [AllowNull = false, Localization = 'Label'] = "",
+    OwnerInfoList              : List<TGDGereObjectifOwnerInfo> [required = true, GDType = 'GereObjectifOwnerInfo'] = [],
+    Position                   : TGDTagPosition [required = true, GDType = 'LDPosition'] = nil,
+    ShowAddAnimation           : bool = true,
+    ShowBaseAnimation          : bool = true,
+    ShowEtiquette              : bool = true,
+    ShowFailAnimation          : bool = true,
+    ShowSuccessAnimation       : bool = true,
+] is TGDDescriptorGereObjectifWithVariableOwner
+meta
+(
+    AutoName     = 'GereObjectifWithVariableOwner, ConditionReussite: <%ConditionReussite%>, Reussi: <%ActionsReussi%>, Position: <%Position%>',
+    Family       = '20_Objectif',
+    FriendlyName = 'GereObjectifWithVariableOwner',
+    Parent       = 'Descriptor',
+)
+(
+    ActionsEchec = <ActionsEchec>
+    ActionsReussi = <ActionsReussi>
+    BonusScoreIncomeMission = <BonusScoreIncomeMission>
+    BonusScoreMission = <BonusScoreMission>
+    ConditionEchec = <ConditionEchec>
+    ConditionReussite = <ConditionReussite>
+    LabelComponent = <LabelComponent>
+    ObjectiveName = <ObjectiveName>
+    OwnerInfoList = <OwnerInfoList>
+    Position = <Position>
+    ShowAddAnimation = <ShowAddAnimation>
+    ShowBaseAnimation = <ShowBaseAnimation>
+    ShowEtiquette = <ShowEtiquette>
+    ShowFailAnimation = <ShowFailAnimation>
+    ShowSuccessAnimation = <ShowSuccessAnimation>
+)
+template DescriptorGetActionPoints
+[
+    UnitGroup: TGDVariableUnitGroup [required = true, GDType = 'VariableUnitGroup'] = nil,
+    Variable : TGDVariableInteger [required = true, GDType = 'VariableInteger'] = nil,
+] is TGDDescriptorGetActionPoints
+meta
+(
+    AutoName     = 'Recupere le nombre de point d action pour le unitgroup <%UnitGroup%>.',
+    Family       = '19_Steelman',
+    FriendlyName = 'GetActionPoints',
+    Parent       = 'Descriptor',
+)
+(
+    UnitGroup = <UnitGroup>
+    Variable = <Variable>
+)
+template DescriptorGetActiveTeam
+[
+    Variable: TGDVariableInteger [required = true, GDType = 'VariableInteger'] = nil,
+] is TGDDescriptorGetActiveTeam
+meta
+(
+    AutoName     = 'Num du joueur actif',
+    Family       = '19_Steelman',
+    FriendlyName = 'GetActiveTeam',
+    Parent       = 'Descriptor',
+)
+(
+    Variable = <Variable>
+)
+template DescriptorGetAllianceActualScore
+[
+    Alliance      : int [>= 0] = 0,
+    ScorePointType: TBaseClass [EnumName = 'TScorePointType', Enum = true, Values = ['MapObjective', 'OverTimeMapObjective', 'ScriptedEvent', 'TotalScore', 'UnitDestruction', 'UnitLoss', 'ZonePoint'], GDType = 'TBaseClass'] = TScorePointType/UnitDestruction,
+    Variable      : TGDVariableInteger [required = true, GDType = 'VariableInteger'] = nil,
+] is TGDDescriptorGetAllianceActualScore
+meta
+(
+    AutoName     = "Score actuel de l'alliance <%Alliance%>",
+    Family       = '12_ActionsSurAlliances',
+    FriendlyName = 'GetActualScore',
+    Parent       = 'Descriptor',
+)
+(
+    Alliance = <Alliance>
+    ScorePointType = <ScorePointType>
+    Variable = <Variable>
+)
+template DescriptorGetDamage
+[
+    DamageType: TBaseClass [EnumName = 'EDamageType', Enum = true, Values = ['Physical', 'Stun', 'Suppress'], GDType = 'TBaseClass'] = EDamageType/Physical,
+    Group     : TGDVariableUnitGroup [required = true, GDType = 'VariableUnitGroup'] = nil,
+    Variable  : TGDVariableInteger [required = true, GDType = 'VariableInteger'] = nil,
+] is TGDDescriptorGetDamage
+meta
+(
+    AutoName     = 'Set <%Variable%> with <%DamageType%> damages for <%Group%>',
+    Family       = '29_ModifieUnitGroup',
+    FriendlyName = 'GetDamage',
+    Parent       = 'Descriptor',
+)
+(
+    DamageType = <DamageType>
+    Group = <Group>
+    Variable = <Variable>
+)
+template DescriptorGetNbKillsCamp
+[
+    Camp        : TGDVariableCamp [required = true, GDType = 'VariableCamp'] = nil,
+    TypeUnitList: List<TEntityDescriptor> [required = false, GDType = 'UnitType'] = [],
+    Variable    : TGDVariableInteger [required = true, GDType = 'VariableInteger'] = nil,
+] is TGDDescriptorGetNbKillsCamp
+meta
+(
+    AutoName     = 'Nombre de kills du camp <%Camp%>',
+    Family       = '03_ActionsSurCamps',
+    FriendlyName = 'GetNbKillsCamp',
+    Parent       = 'Descriptor',
+)
+(
+    Camp = <Camp>
+    TypeUnitList = <TypeUnitList>
+    Variable = <Variable>
+)
+template DescriptorGetNbLossCamp
+[
+    Camp        : TGDVariableCamp [required = true, GDType = 'VariableCamp'] = nil,
+    TypeUnitList: List<TEntityDescriptor> [required = false, GDType = 'UnitType'] = [],
+    Variable    : TGDVariableInteger [required = true, GDType = 'VariableInteger'] = nil,
+] is TGDDescriptorGetNbLossCamp
+meta
+(
+    AutoName     = 'Nombre de loss du camp <%Camp%>',
+    Family       = '03_ActionsSurCamps',
+    FriendlyName = 'GetNbLossCamp',
+    Parent       = 'Descriptor',
+)
+(
+    Camp = <Camp>
+    TypeUnitList = <TypeUnitList>
+    Variable = <Variable>
+)
+template DescriptorGetNbSelectedUnits
+[
+    UnitGroup: TGDVariableUnitGroup [required = true, GDType = 'VariableUnitGroup'] = nil,
+    Variable : TGDVariableInteger [required = true, GDType = 'VariableInteger'] = nil,
+] is TGDDescriptorGetNbSelectedUnits
+meta
+(
+    AutoName     = 'Get Nb selected units in <%UnitGroup%>',
+    Family       = '17_SoloOnly',
+    FriendlyName = 'GetNbSelectedUnits',
+    Parent       = 'Descriptor',
+)
+(
+    UnitGroup = <UnitGroup>
+    Variable = <Variable>
+)
+template DescriptorGetRessourceCamp
+[
+    Camp        : TGDVariableCamp [required = true, GDType = 'VariableCamp'] = nil,
+    ResourceType: TBaseClass [EnumName = 'EnumResourceList', Enum = true, Values = [Resource_Invalid, Resource_CommandPoints, Resource_Tickets], GDType = 'TBaseClass'] = EnumResourceList/Resource_CommandPoints,
+    Variable    : TGDVariableInteger [required = true, GDType = 'VariableInteger'] = nil,
+] is TGDDescriptorGetRessourceOfTeam
+meta
+(
+    AutoName     = 'Ressource <%ResourceType%> du camp <%Camp%>',
+    Family       = '03_ActionsSurCamps',
+    FriendlyName = 'GetRessourceCamp',
+    Parent       = 'Descriptor',
+)
+(
+    Camp = <Camp>
+    ResourceType = <ResourceType>
+    Variable = <Variable>
+)
+template DescriptorGetScoreCamp
+[
+    Camp     : TGDVariableCamp [required = true, GDType = 'VariableCamp'] = nil,
+    ScoreType: TBaseClass [EnumName = 'TScorePointType', Enum = true, Values = ['MapObjective', 'OverTimeMapObjective', 'ScriptedEvent', 'TotalScore', 'UnitDestruction', 'UnitLoss', 'ZonePoint'], GDType = 'TBaseClass'] = TScorePointType/UnitDestruction,
+    Variable : TGDVariableInteger [required = true, GDType = 'VariableInteger'] = nil,
+] is TGDDescriptorGetScoreCamp
+meta
+(
+    AutoName     = 'Score du camp <%Camp%>',
+    Family       = '03_ActionsSurCamps',
+    FriendlyName = 'GetScoreCamp',
+    Parent       = 'Descriptor',
+)
+(
+    Camp = <Camp>
+    ScoreType = <ScoreType>
+    Variable = <Variable>
+)
+template DescriptorGetStrategicCurrentVictoryTypeForTeam
+[
+    VariableCamp  : TGDVariableCamp [required = true, GDType = 'VariableCamp'] = nil,
+    VariableToFill: TGDVariableInteger [required = true, GDType = 'VariableInteger'] = nil,
+] is TGDDescriptorGetStrategicCurrentVictoryTypeForTeam
+meta
+(
+    AutoName     = 'Get current victory type for Team <%VariableCamp%>',
+    Family       = '19_Steelman',
+    FriendlyName = 'GetCurrentVictoryTypeForTeam',
+    Parent       = 'Descriptor',
+)
+(
+    VariableCamp = <VariableCamp>
+    VariableToFill = <VariableToFill>
+)
+template DescriptorGetTurnNum
+[
+    Variable: TGDVariableInteger [required = true, GDType = 'VariableInteger'] = nil,
+] is TGDDescriptorGetTurnNum
+meta
+(
+    AutoName     = 'Num du tour en cours',
+    Family       = '19_Steelman',
+    FriendlyName = 'GetTurnNum',
+    Parent       = 'Descriptor',
+)
+(
+    Variable = <Variable>
+)
+template DescriptorGiveOrderStandard
+[
+    Blocking       : bool [GroupBy = "Primaire"] = true,
+    Group          : TGDVariableUnitGroup [required = true, GDType = 'VariableUnitGroup'] = nil,
+    OrderCancelable: bool [GroupBy = "Secondaire"] = false,
+    OrderParamGUID : string [required = false] = "",
+    OrderType      : TBaseClass [EnumName = 'EOrderType', Enum = true, Values = ['AIAirplaneAutoManage', 'AIAttack', 'AIDefend', 'AIManageArtillery_Auto', 'AIManageArtillery_CounterBattery', 'AIManageArtillery_Focus', 'AIStop', 'AISupply', 'AirplaneAttack', 'AirplaneEvacuate', 'AirplaneMoveAndEngage', 'AirplanePatrol', 'AirplaneShoot', 'AskForSupply', 'AssaultDistrict', 'Attack', 'ChangeAltitude', 'Deprecated_KeptForCompatibility', 'Deprecated_KeptForCompatibility2', 'Deprecated_KeptForCompatibility3', 'DoNothing', 'EnterDistrict', 'FastMoveAndAttack', 'FollowFormation', 'FollowUnit', 'FortifyAntiAir', 'GoDown', 'GoUp', 'Land', 'Load', 'Move', 'MoveAndAttack', 'PositionInterdite', 'QuickMove', 'Reverse', 'Sell', 'Shoot', 'ShootDefensiveSmoke', 'ShootOnPosition', 'ShootOnPositionSmoke', 'ShootOnPositionWithoutCorrection', 'ShootOnPositionWithoutCorrectionSmoke', 'SmartMove', 'SmartMoveAndAttack', 'Stop', 'SupplyUnit', 'UnloadAtPosition', 'UnloadFromTransport', 'UseCapacite'], GDType = 'TBaseClass'] = EOrderType/DoNothing,
+    Position       : TGDTagPosition [required = false, GDType = 'LDPosition'] = nil,
+    Target         : TGDVariableUnitGroup [required = false, GDType = 'VariableUnitGroup'] = nil,
+] is TGDDescriptorGiveOrderStandard
+meta
+(
+    AutoName     = "Donne l'ordre <%OrderType%> a <%Group%>",
+    Family       = '02_ActionsTactiques',
+    FriendlyName = 'GiveOrderStandard',
+    Parent       = 'Descriptor',
+)
+(
+    Blocking = <Blocking>
+    Group = <Group>
+    OrderCancelable = <OrderCancelable>
+    OrderParamGUID = <OrderParamGUID>
+    OrderType = <OrderType>
+    Position = <Position>
+    Target = <Target>
+)
+template DescriptorHotReloadNDF
+[
+    NbReloadAllowed: int [>= 0, GroupBy = "Nombre de rechargement max"] = 1,
+] is TGDDescriptorHotReloadNDF
+meta
+(
+    AutoName     = 'Recharge a chaud les NDF (attention, cette brique detruit le script courant)',
+    Family       = 'z_Dev_only/z_TestSuite',
+    FriendlyName = 'HotReloadNDF',
+    Parent       = 'Descriptor',
+)
+(
+    NbReloadAllowed = <NbReloadAllowed>
+)
+template DescriptorIASkirmish
+[
+    Camp      : TGDVariableCamp [required = true, GDType = 'VariableCamp'] = nil,
+    Difficulty: TBaseClass [EnumName = 'EIADifficulty', Enum = true, Values = [HumanDifficulty, TresFacile, Facile, Normal, Difficile, TresDifficile, PlusDifficile, Scripted], GDType = 'TBaseClass'],
+    Strategy  : string = "GenericStrategy",
+] is TGDDescriptorIASkirmish
+meta
+(
+    AutoName     = "Lance l'IA en mode skirmish pour le camp <%Camp%> avec la strategie <%Strategy%>, la difficulte <%Difficulty%>",
+    Family       = '10_ActionsIAStrategique',
+    FriendlyName = '00 Launch IA Skirmish',
+    Parent       = 'Descriptor',
+)
+(
+    Camp = <Camp>
+    Difficulty = <Difficulty>
+    Strategy = <Strategy>
+)
+template DescriptorIAStrategicScripted
+[
+    Camp    : TGDVariableCamp [required = true, GDType = 'VariableCamp'] = nil,
+    Strategy: TBaseClass [EnumName = 'EStrategicTeamStrategy', Enum = true, Values = ['TeamStrategyAttacker', 'TeamStrategyDefender'], GDType = 'TBaseClass'],
+] is TGDDescriptorIAStrategicScripted
+meta
+(
+    AutoName     = 'Lance une IA scriptee <%Strategy%> pour le camp <%Camp%> (mode Strategique)',
+    Family       = '19_Steelman',
+    FriendlyName = 'Launch IA Scripted For Strategic',
+    Parent       = 'Descriptor',
+)
+(
+    Camp = <Camp>
+    Strategy = <Strategy>
+)
+template DescriptorIfThenElse
+[
+    Condition   : TGDCondition [required = true, GDType = 'Condition'] = nil,
+    EffetIfFalse: TGDDescriptor [required = false, GDType = 'Descriptor'] = nil,
+    EffetIfTrue : TGDDescriptor [required = false, GDType = 'Descriptor'] = nil,
+] is TGDDescriptorIfThenElse
+meta
+(
+    AutoName     = 'If <%Condition%> Then <%EffetIfTrue%> Else <%EffetIfFalse%> ',
+    Family       = '01_Sequenceur',
+    FriendlyName = 'IfThenElse',
+    Parent       = 'Descriptor',
+)
+(
+    Condition = <Condition>
+    EffetIfFalse = <EffetIfFalse>
+    EffetIfTrue = <EffetIfTrue>
+)
+template DescriptorIterationOnUnits
+[
+    Camp     : TGDVariableCamp [required = true, GDType = 'VariableCamp'] = nil,
+    Group    : TGDVariableUnitGroup [required = false, GDType = 'VariableUnitGroup'] = nil,
+    Position : TGDTagPosition [required = true, GDType = 'LDPosition'] = nil,
+    UnitIndex: TGDVariableInteger [required = true, GDType = 'VariableInteger'] = nil,
+] is TGDDescriptorIterationOnUnits
+meta
+(
+    AutoName     = 'IterationOnUnits',
+    Family       = 'z_Dev_only',
+    FriendlyName = 'IterationOnUnits',
+    Parent       = 'Descriptor',
+)
+(
+    Camp = <Camp>
+    Group = <Group>
+    Position = <Position>
+    UnitIndex = <UnitIndex>
+)
+template DescriptorKillAllCadaver
+[
+] is TGDDescriptorKillAllCadaver
+meta
+(
+    AutoName     = 'Detruire tous les cadavres',
+    Family       = '30_UnitGroup',
+    FriendlyName = '20 Detruire tous les cadavres',
+    Parent       = 'Descriptor',
+)
+(
+)
+template DescriptorKillAllUnit
+[
+    DeathCause: TBaseClass [EnumName = 'EDeathCause', Enum = true, Values = ['DieDieDie', 'Penetration', 'TeamDefeated', 'Vanished'], GDType = 'TBaseClass'] = EDeathCause/Vanished,
+    GroupList : List<TGDVariableUnitGroup> [required = true, GDType = 'VariableUnitGroup'] = [],
+] is TGDDescriptorKillAllUnit
+meta
+(
+    AutoName     = 'Kill all units of groups',
+    Family       = '02_ActionsTactiques',
+    FriendlyName = 'KillAllUnitsOfGroups',
+    Parent       = 'Descriptor',
+)
+(
+    DeathCause = <DeathCause>
+    GroupList = <GroupList>
+)
+template DescriptorKillGame
+[
+] is TGDDescriptorKillGame
+meta
+(
+    Family       = 'z_Dev_only/z_TestSuite',
+    FriendlyName = 'z KillGame',
+    Parent       = 'Descriptor',
+)
+(
+)
+template DescriptorLaunchEffetMap
+[
+    CampList : List<TGDVariableCamp> [required = true, GDType = 'VariableCamp'] = [],
+    EffetMap : TGDDescriptor [required = false, GDType = 'Descriptor'] = nil,
+    GameRules: TGDAbstractGameRules [required = false, GDType = 'AbstractGameRules'] = nil,
+] is TGDDescriptorLaunchEffetMap
+meta
+(
+    AutoName     = 'LaunchEffetMap',
+    CanBeRoot    = 'true',
+    Family       = '25_Base',
+    FriendlyName = '01 LaunchEffetMap',
+    Parent       = 'Descriptor',
+    RunPostInit  = 'true',
+)
+(
+    CampList = <CampList>
+    EffetMap = <EffetMap>
+    GameRules = <GameRules>
+)
+template DescriptorLaunchFXFireAndForgetOnPosition
+[
+    DatabaseName: string = "",
+    Position    : TGDTagPosition [required = true, GDType = 'LDPosition'] = nil,
+] is TGDDescriptorLaunchFXFireAndForgetOnPosition
+meta
+(
+    AutoName     = 'LaunchFXFireAndForget <%DatabaseName%>',
+    Family       = '24_Divers',
+    FriendlyName = 'LaunchFXFireAndForget',
+    Parent       = 'Descriptor',
+)
+(
+    DatabaseName = <DatabaseName>
+    Position = <Position>
+)
+template DescriptorLaunchFortifyAntiAir
+[
+    Blocking                : bool [GroupBy = "Primaire"] = true,
+    ExecuteOnlyOnIAActivated: bool = true,
+    FreeOrder               : bool = false,
+    Group                   : TGDVariableUnitGroup [required = true, GDType = 'VariableUnitGroup'] = nil,
+    OrderCancelable         : bool [GroupBy = "Secondaire"] = false,
+] is TGDDescriptorLaunchFortifyAntiAir
+meta
+(
+    AutoName     = 'Met En mode DCA <%Group%>',
+    Family       = '19_Steelman',
+    FriendlyName = 'LaunchDCAMode',
+    Parent       = 'Descriptor',
+)
+(
+    Blocking = <Blocking>
+    ExecuteOnlyOnIAActivated = <ExecuteOnlyOnIAActivated>
+    FreeOrder = <FreeOrder>
+    Group = <Group>
+    OrderCancelable = <OrderCancelable>
+)
+template DescriptorLaunchPhase
+[
+    PhaseToLaunch: TBaseClass [EnumName = 'TGamePhase', Enum = true, Values = ['Command', 'Deploiement', 'NotInitialized', 'StrategicGame'], GDType = 'TBaseClass'] = TGamePhase/NotInitialized,
+] is TGDDescriptorLaunchPhase
+meta
+(
+    AutoName     = 'Lance la phase <%PhaseToLaunch%>',
+    Family       = 'z_Dev_only',
+    FriendlyName = 'LancementPhase',
+    Parent       = 'Descriptor',
+)
+(
+    PhaseToLaunch = <PhaseToLaunch>
+)
+template DescriptorLaunchSmartOrder
+[
+    Position      : TGDTagPosition [required = true, GDType = 'LDPosition'] = nil,
+    SmartOrderType: TBaseClass [EnumName = 'PlayerMissionRequest', Enum = true, Values = ['AirplaneAutoManage', 'Hold', 'ManageArtillery_Auto', 'ManageArtillery_CounterBattery', 'ManageArtillery_Focus', 'Seize', 'Stop', 'Supply', 'Support', 'Unknown'], GDType = 'TBaseClass'] = PlayerMissionRequest/Unknown,
+    UnitGroup     : TGDVariableUnitGroup [required = true, GDType = 'VariableUnitGroup'] = nil,
+] is TGDDescriptorLaunchSmartOrder
+meta
+(
+    AutoName     = 'Lance le smart order <%SmartOrderType%> pour le unit group <%UnitGroup%> a la position <%Position%>',
+    Family       = '10_ActionsIAStrategique',
+    FriendlyName = '04 Launch Smart Order',
+    Parent       = 'Descriptor',
+)
+(
+    Position = <Position>
+    SmartOrderType = <SmartOrderType>
+    UnitGroup = <UnitGroup>
+)
+template DescriptorLaunchSurrender
+[
+    Camp: TGDVariableCamp [required = true, GDType = 'VariableCamp'] = nil,
+] is TGDDescriptorLaunchSurrender
+meta
+(
+    AutoName     = 'Surrender <%Camp%>',
+    Family       = '25_Base',
+    FriendlyName = '08 Apply Surrender',
+    Parent       = 'Descriptor',
+)
+(
+    Camp = <Camp>
+)
+template DescriptorLaunchVideo
+[
+    CanBeSkippedWithEscape        : bool = true,
+    HideMouseCursor               : bool = true,
+    Subtitles                     : List<TCutSceneVideoSubtitle> [required = false, GDType = 'VideoSubtitle'] = [],
+    SubtitlesComponent            : string = "DefaultSubtitleDescriptor",
+    VideoComponent                : string [required = true] = "FullScreenCutSceneVideo",
+    VideoFile                     : string [required = true, VideoFile = true],
+    VisibleByAlliedOfSpecifiedCamp: bool = true,
+    VisibleByCamp                 : TGDVariableCamp [required = false, GDType = 'VariableCamp'] = nil,
+] is TGDDescriptorCutSceneLaunchVideo
+meta
+(
+    AutoName     = 'Video <%VideoFile%>',
+    Family       = '23_Cutscenes',
+    FriendlyName = 'CutscenePlayVideo',
+    Parent       = 'DescriptorCutscene',
+)
+(
+    CanBeSkippedWithEscape = <CanBeSkippedWithEscape>
+    HideMouseCursor = <HideMouseCursor>
+    Subtitles = <Subtitles>
+    SubtitlesComponent = <SubtitlesComponent>
+    VideoComponent = <VideoComponent>
+    VideoFile = <VideoFile>
+    VisibleByAlliedOfSpecifiedCamp = <VisibleByAlliedOfSpecifiedCamp>
+    VisibleByCamp = <VisibleByCamp>
+)
+template DescriptorLoadingDone
+[
+] is TGDDescriptorLoadingDone
+meta
+(
+    AutoName     = 'LoadingDone',
+    Family       = '25_Base',
+    FriendlyName = '02 LoadingDone',
+    Parent       = 'Descriptor',
+)
+(
+)
+template DescriptorLockCombatGroup
+[
+    Camp              : TGDVariableCamp [required = true, GDType = 'VariableCamp'] = nil,
+    CombatGroupIndexes: List<TGDVariableInteger> [required = false, GDType = 'VariableInteger'] = [],
+] is TGDDescriptorLockCombatGroup
+meta
+(
+    AutoName     = 'Bloque des Combat Groups pour <%Camp%> (unlock quand brique termine)',
+    Family       = '03_ActionsSurCamps',
+    FriendlyName = "063 Bloquer la production d'unite dans un Combat Group",
+    Parent       = 'Descriptor',
+)
+(
+    Camp = <Camp>
+    CombatGroupIndexes = <CombatGroupIndexes>
+)
+template DescriptorLockDeckUnit
+[
+    Camp : TGDVariableCamp [required = true, GDType = 'VariableCamp'] = nil,
+    Units: List<TGDDeckUnit> [required = false, GDType = 'DeckUnit'] = [],
+] is TGDDescriptorLockDeckUnit
+meta
+(
+    AutoName     = 'Bloque des unites pour <%Camp%> (unlock quand brique termine)',
+    Family       = '03_ActionsSurCamps',
+    FriendlyName = "061 Bloquer la production d'unite",
+    Parent       = 'Descriptor',
+)
+(
+    Camp = <Camp>
+    Units = <Units>
+)
+template DescriptorLockIncome
+[
+    Camp: TGDVariableCamp [required = true, GDType = 'VariableCamp'] = nil,
+] is TGDDescriptorLockIncome
+meta
+(
+    AutoName     = "Bloque l'income pour le camp <%Camp%> (unlock quand brique termine)",
+    Family       = '03_ActionsSurCamps',
+    FriendlyName = "062 Bloquer l'income",
+    Parent       = 'Descriptor',
+)
+(
+    Camp = <Camp>
+)
+template DescriptorModifieDegatsInfliges
+[
+    Group         : TGDVariableUnitGroup [required = true, GDType = 'VariableUnitGroup'] = nil,
+    Multiplicateur: float = 1.000000,
+] is TGDDescriptorModifyUnitDamageDealt
+meta
+(
+    AutoName     = 'Degats <%Group%> x <%Multiplicateur%>',
+    Family       = '06_Sortilege',
+    FriendlyName = '03 ModifieDegatsInfliges',
+    Parent       = 'Descriptor',
+)
+(
+    Group = <Group>
+    Multiplicateur = <Multiplicateur>
+)
+template DescriptorModifieIntegerFromTimer
+[
+    VariableInt  : TGDVariableInteger [required = true, GDType = 'VariableInteger'] = nil,
+    VariableTimer: TGDVariableTimer [required = true, GDType = 'VariableTimer'] = nil,
+] is TGDDescriptorModifieIntegerFromTimer
+meta
+(
+    AutoName     = 'Set <%VariableInt%> to <%VariableTimer%>',
+    Family       = '07_ModifieInteger',
+    FriendlyName = 'ModifieIntegerFromTimer',
+    Parent       = 'Descriptor',
+)
+(
+    VariableInt = <VariableInt>
+    VariableTimer = <VariableTimer>
+)
+template DescriptorModifiePrecision
+[
+    Group    : TGDVariableUnitGroup [required = true, GDType = 'VariableUnitGroup'] = nil,
+    Precision: float = 100.000000,
+] is TGDDescriptorModifyUnitPrecision
+meta
+(
+    AutoName     = 'Precision <%Group%> = <%Precision%> %',
+    Family       = '06_Sortilege',
+    FriendlyName = '06 ModifiePrecision',
+    Parent       = 'Descriptor',
+)
+(
+    Group = <Group>
+    Precision = <Precision>
+)
+template DescriptorModifieVariableInteger
+[
+    ModificationType: TBaseClass [EnumName = 'EVariableIntegerModification', Enum = true, Values = ['Add', 'Divide', 'Modulo', 'Multiply', 'Set', 'Substract'], GDType = 'TBaseClass'] = EVariableIntegerModification/Set,
+    Value           : int = 0,
+    Variable1       : TGDVariableInteger [required = true, GDType = 'VariableInteger'] = nil,
+    Variable2       : TGDVariableInteger [required = false, GDType = 'VariableInteger'] = nil,
+] is TGDDescriptorModifieVariableInteger
+meta
+(
+    AutoName     = '<%ModificationType%> applique entre <%Variable1%> et (<%Value%> ou <%Variable2%>)',
+    Family       = '07_ModifieInteger',
+    FriendlyName = 'ModifieVariableInteger',
+    Parent       = 'Descriptor',
+)
+(
+    ModificationType = <ModificationType>
+    Value = <Value>
+    Variable1 = <Variable1>
+    Variable2 = <Variable2>
+)
+template DescriptorModifieVitesseUnit
+[
+    Group         : TGDVariableUnitGroup [required = true, GDType = 'VariableUnitGroup'] = nil,
+    Multiplicateur: float = 1.000000,
+] is TGDDescriptorModifyUnitSpeed
+meta
+(
+    AutoName     = 'Speed <%Group%> x <%Multiplicateur%>',
+    Family       = '06_Sortilege',
+    FriendlyName = '15 ModifieVitesseUnit',
+    Parent       = 'Descriptor',
+)
+(
+    Group = <Group>
+    Multiplicateur = <Multiplicateur>
+)
+template DescriptorModifyUnitGroupVision
+[
+    Distance: float [>= 0.000000] = 0.000000,
+    Group   : TGDVariableUnitGroup [required = true, GDType = 'VariableUnitGroup'] = nil,
+] is TGDDescriptorModifyUnitVision
+meta
+(
+    AutoName     = 'Vision <%Group%>, <%Distance%> GRU',
+    Family       = '06_Sortilege',
+    FriendlyName = '16 LimiterVisionUnitGroup',
+    Parent       = 'Descriptor',
+)
+(
+    Distance = <Distance>
+    Group = <Group>
+)
+template DescriptorMoveUnitGroup
+[
+    Blocking       : bool [GroupBy = "Primaire"] = true,
+    ForceNoRoad    : bool [GroupBy = "Secondaire"] = false,
+    ForceRoad      : bool [GroupBy = "Secondaire"] = false,
+    Group          : TGDVariableUnitGroup [required = true, GDType = 'VariableUnitGroup'] = nil,
+    Loop           : bool [GroupBy = "Primaire"] = false,
+    OrderCancelable: bool [GroupBy = "Secondaire"] = false,
+    Positions      : List<TGDTagPosition> [required = true, GDType = 'LDPosition', GroupBy = "Primaire"] = [],
+] is TGDDescriptorMoveUnitGroup
+meta
+(
+    AutoName     = 'Move <%Group%> (Loop=<%Loop%>; NoRoad=<%ForceNoRoad%>)',
+    Family       = '02_ActionsTactiques',
+    FriendlyName = '01 Move',
+    Parent       = 'Descriptor',
+)
+(
+    Blocking = <Blocking>
+    ForceNoRoad = <ForceNoRoad>
+    ForceRoad = <ForceRoad>
+    Group = <Group>
+    Loop = <Loop>
+    OrderCancelable = <OrderCancelable>
+    Positions = <Positions>
+)
+template DescriptorOverrideEfficientShot
+[
+    EfficientShot: bool = true,
+    Group        : TGDVariableUnitGroup [required = true, GDType = 'VariableUnitGroup'] = nil,
+] is TGDDescriptorOverrideEfficientShot
+meta
+(
+    AutoName     = "Utilise les regles d'Efficient Shot ou non pour l'unitgroup <%Group%>",
+    Family       = 'z_Dev_only',
+    FriendlyName = 'Override Efficient Shot',
+    Parent       = 'Descriptor',
+)
+(
+    EfficientShot = <EfficientShot>
+    Group = <Group>
+)
+template DescriptorPauseTimer
+[
+    Timer: TGDVariableTimer [required = true, GDType = 'VariableTimer'] = nil,
+] is TGDDescriptorPauseTimer
+meta
+(
+    AutoName     = 'Pause <%Timer%>',
+    Family       = '08_ModifieTimer',
+    FriendlyName = '02 PauseTimer',
+    Parent       = 'Descriptor',
+)
+(
+    Timer = <Timer>
+)
+template DescriptorPointCameraToPosition
+[
+    Actions     : TGDDescriptor [required = false, GDType = 'Descriptor'] = nil,
+    Duration : float = 0.000000,
+    WaitingDuration : float [GroupBy = "Secondaire"] = 0.000000,
+    Group       : TGDVariableUnitGroup [required = false, GDType = 'VariableUnitGroup'] = nil,
+    Position    : TGDTagPosition [required = false, GDType = 'LDPosition', GroupBy = "Secondaire"] = nil,
+    MustGoBack      : bool [GroupBy = "Primaire"] = false,
+    GoingBackDuration : float [GroupBy = "Primaire"] = 0.000000,
+] is TGDDescriptorMoveCameraToPosition
+meta
+(
+    Family       = 'z_Dev_only',
+    FriendlyName = 'PointCamera',
+    Parent       = 'Descriptor',
+)
+(
+    Actions = <Actions>
+    Duration = <Duration>
+    WaitingDuration = <WaitingDuration>
+    Group = <Group>
+    Position = <Position>
+    MustGoBack = <MustGoBack>
+    GoingBackDuration = <GoingBackDuration>
+)
+template DescriptorProductionUnites
+[
+    Camp           : TGDVariableCamp [required = true, GDType = 'VariableCamp'] = nil,
+    ExperienceLevel: int [>= 0] = 0,
+    Group          : TGDVariableUnitGroup [required = false, GDType = 'VariableUnitGroup'] = nil,
+    NbUnit         : int [>= 1] = 1,
+    Position       : TGDTagPosition [required = true, GDType = 'LDPosition'] = nil,
+    ProduceOutMap  : bool = false,
+    Transporter    : TEntityDescriptor [required = false, GDType = 'UnitType'] = nil,
+    TypeUnit       : TEntityDescriptor [required = true, GDType = 'UnitType'] = nil,
+] is TGDDescriptorProductionUnites
+meta
+(
+    AutoName     = 'Produce <%NbUnit%> <%TypeUnit%> in <%Group%> for <%Camp%>',
+    Family       = '04_ActionsProduction',
+    FriendlyName = '00 Produce Units',
+    Parent       = 'Descriptor',
+)
+(
+    Camp = <Camp>
+    ExperienceLevel = <ExperienceLevel>
+    Group = <Group>
+    NbUnit = <NbUnit>
+    Position = <Position>
+    ProduceOutMap = <ProduceOutMap>
+    Transporter = <Transporter>
+    TypeUnit = <TypeUnit>
+)
+template DescriptorRandomLauncher
+[
+    NbExecutions: int = 1,
+    SubActions  : List<TGDDescriptor> [required = false, GDType = 'Descriptor'] = [],
+] is TGDDescriptorRandomLauncher
+meta
+(
+    AutoName     = 'RandomLauncher (NbExecutions : <%NbExecutions%>)',
+    Family       = '01_Sequenceur',
+    FriendlyName = 'RandomLauncher',
+    Parent       = 'Descriptor',
+)
+(
+    NbExecutions = <NbExecutions>
+    SubActions = <SubActions>
+)
+template DescriptorRemoveIgnoredUnitByScript
+[
+    UnitGroup: TGDVariableUnitGroup [required = true, GDType = 'VariableUnitGroup'] = nil,
+] is TGDDescriptorRemoveIgnoredUnitByScript
+meta
+(
+    AutoName     = "L'IAStrat pourra redonner des ordres \xc3\xa0 toutes les unites du group <%UnitGroup%>",
+    Family       = '10_ActionsIAStrategique',
+    FriendlyName = '06 Remove IAStrat Ignored Units',
+    Parent       = 'Descriptor',
+)
+(
+    UnitGroup = <UnitGroup>
+)
+template DescriptorRemoveMatchingUnitFromUnitGroup
+[
+    ConditionRemoveUnit: TGDConstraintOnUnit [required = true, GDType = 'ContrainteOnUnit'] = nil,
+    Group              : TGDVariableUnitGroup [required = true, GDType = 'VariableUnitGroup'] = nil,
+] is TGDDescriptorRemoveUnitFromUnitGroup
+meta
+(
+    Family       = '30_UnitGroup',
+    FriendlyName = '06 RemoveMatchingUnitFromUnitGroup',
+    Parent       = 'Descriptor',
+)
+(
+    ConditionRemoveUnit = <ConditionRemoveUnit>
+    Group = <Group>
+)
+template DescriptorResetTimer
+[
+    Timer: TGDVariableTimer [required = true, GDType = 'VariableTimer'] = nil,
+] is TGDDescriptorResetTimer
+meta
+(
+    AutoName     = 'Reset <%Timer%>',
+    Family       = '08_ModifieTimer',
+    FriendlyName = '06 ResetTimer',
+    Parent       = 'Descriptor',
+)
+(
+    Timer = <Timer>
+)
+template DescriptorResumeTimer
+[
+    Timer: TGDVariableTimer [required = true, GDType = 'VariableTimer'] = nil,
+] is TGDDescriptorResumeTimer
+meta
+(
+    AutoName     = 'Resume <%Timer%>',
+    Family       = '08_ModifieTimer',
+    FriendlyName = '03 ResumeTimer',
+    Parent       = 'Descriptor',
+)
+(
+    Timer = <Timer>
+)
+template DescriptorSequential
+[
+    NbExecutions: int = 1,
+    SubActions  : List<TGDDescriptor> [required = false, GDType = 'Descriptor'] = [],
+] is TGDDescriptorSequential
+meta
+(
+    AutoName     = 'Sequential (NbExecutions : <%NbExecutions%>)',
+    Family       = '01_Sequenceur',
+    FriendlyName = '01 Sequential',
+    Parent       = 'Descriptor',
+)
+(
+    NbExecutions = <NbExecutions>
+    SubActions = <SubActions>
+)
+template DescriptorSetAmmo
+[
+    MaxAmmoRatio: int [>= 0, <= 100] = 100,
+    Units       : List<TGDVariableUnitGroup> [required = true, GDType = 'VariableUnitGroup'] = [],
+] is TGDDescriptorSetAmmo
+meta
+(
+    AutoName     = 'SetAmmo <%MaxAmmoRatio%>',
+    Family       = '29_ModifieUnitGroup',
+    FriendlyName = 'SetAmmo',
+    Parent       = 'Descriptor',
+)
+(
+    MaxAmmoRatio = <MaxAmmoRatio>
+    Units = <Units>
+)
+template DescriptorSetAutoResaleROEValue
+[
+    AutoResale: bool = true,
+    Group     : TGDVariableUnitGroup [required = true, GDType = 'VariableUnitGroup'] = nil,
+] is TGDDescriptorSetAutoResaleROEValue
+meta
+(
+    AutoName     = 'Set AutoResale RoE value to <%AutoResale%> on units <%Group%>',
+    Family       = '29_ModifieUnitGroup',
+    FriendlyName = 'SetAutoResale',
+    Parent       = 'Descriptor',
+)
+(
+    AutoResale = <AutoResale>
+    Group = <Group>
+)
+template DescriptorSetBattlegroundRegion
+[
+    RegionName: string [required = true] = "",
+] is TGDDescriptorSetBattlegroundRegion
+meta
+(
+    AutoName     = 'Choix du filtre regional pour les cartes tactiques',
+    Family       = '19_Steelman',
+    FriendlyName = 'SetBattlegroundRegion',
+    Parent       = 'Descriptor',
+)
+(
+    RegionName = <RegionName>
+)
+template DescriptorSetCommandZoneOwnerAndForceConvergence
+[
+    Camp     : TGDVariableCamp [required = true, GDType = 'VariableCamp'] = nil,
+    Positions: List<TGDTagPosition> [required = true, GDType = 'LDPosition'] = [],
+] is TGDDescriptorSetCommandZoneOwnerAndForceConvergence
+meta
+(
+    AutoName     = 'Capture de la zone de commandement par le camp <%Camp%>',
+    Family       = '03_ActionsSurCamps',
+    FriendlyName = 'CaptureCommandZone',
+    Parent       = 'Descriptor',
+)
+(
+    Camp = <Camp>
+    Positions = <Positions>
+)
+template DescriptorSetDeck
+[
+    Camp          : TGDVariableCamp [required = true, GDType = 'VariableCamp'] = nil,
+    DeckIdentifier: string = "",
+] is TGDDescriptorSetDeck
+meta
+(
+    AutoName     = 'Set deck <%DeckIdentifier%> to team <%Camp%>',
+    Family       = '03_ActionsSurCamps',
+    FriendlyName = 'SetDeck',
+    Parent       = 'Descriptor',
+)
+(
+    Camp = <Camp>
+    DeckIdentifier = <DeckIdentifier>
+)
+template DescriptorSetEffect
+[
+    Effet    : TGDEffets [required = true, GDType = 'Effets'] = nil,
+    UnitGroup: List<TGDVariableUnitGroup> [required = true, GDType = 'VariableUnitGroup'] = [],
+] is TGDDescriptorSetEffect
+meta
+(
+    AutoName     = 'SetEffet <%Effet%> On <%UnitGroup%>',
+    Family       = '29_ModifieUnitGroup',
+    FriendlyName = 'SetEffet',
+    Parent       = 'Descriptor',
+)
+(
+    Effet = <Effet>
+    UnitGroup = <UnitGroup>
+)
+template DescriptorSetFatigueToPawn
+[
+    Fatigue: int = 0,
+    Group  : TGDVariableUnitGroup [required = true, GDType = 'VariableUnitGroup'] = nil,
+] is TGDDescriptorSetFatigueToPawn
+meta
+(
+    AutoName     = 'Force la fatigue a une valeur de <%Fatigue%> a <%Group%>',
+    Family       = '19_Steelman',
+    FriendlyName = 'SetFatigueToPawn',
+    Parent       = 'Descriptor',
+)
+(
+    Fatigue = <Fatigue>
+    Group = <Group>
+)
+template DescriptorSetFuel
+[
+    MaxFuelRatio: int [>= 0, <= 100] = 100,
+    Units       : List<TGDVariableUnitGroup> [required = true, GDType = 'VariableUnitGroup'] = [],
+] is TGDDescriptorSetFuel
+meta
+(
+    AutoName     = 'SetFuel <%MaxFuelRatio%>',
+    Family       = '29_ModifieUnitGroup',
+    FriendlyName = 'SetFuel',
+    Parent       = 'Descriptor',
+)
+(
+    MaxFuelRatio = <MaxFuelRatio>
+    Units = <Units>
+)
+template DescriptorSetIdleROEBehavior
+[
+    Group       : TGDVariableUnitGroup [required = true, GDType = 'VariableUnitGroup'] = nil,
+    IdleBehavior: TBaseClass [EnumName = 'EIdleBehavior', Enum = true, Values = ['AutoCover', 'IADefend', 'Nothing'], GDType = 'TBaseClass'] = EIdleBehavior/Nothing,
+] is TGDDescriptorSetIdleROEBehavior
+meta
+(
+    AutoName     = 'Change la valeur de la RoE Idle a <%IdleBehavior%> on units <%Group%>',
+    Family       = '29_ModifieUnitGroup',
+    FriendlyName = 'SetIdleROEBehavior',
+    Parent       = 'Descriptor',
+)
+(
+    Group = <Group>
+    IdleBehavior = <IdleBehavior>
+)
+template DescriptorSetInitialDate
+[
+    Annee  : int = 1971,
+    Jour   : int [>= 1, <= 31] = 1,
+    Mois   : int [>= 1, <= 12] = 1,
+    Periode: TBaseClass [EnumName = 'ETimeOfDayEnvironment', Enum = true, Values = ['Afternoon', 'Evening', 'Length', 'Morning', 'Night', 'Noon'], GDType = 'TBaseClass'] = ETimeOfDayEnvironment/Morning,
+] is TGDDescriptorSetInitialDate
+meta
+(
+    AutoName     = 'Date initial du scenario et d\xc3\xa9but de partie',
+    Family       = '19_Steelman',
+    FriendlyName = 'SetInitialDate',
+    Parent       = 'Descriptor',
+)
+(
+    Annee = <Annee>
+    Jour = <Jour>
+    Mois = <Mois>
+    Periode = <Periode>
+)
+template DescriptorSetMaxMoneyForCamp
+[
+    Camp        : TGDVariableCamp [required = true, GDType = 'VariableCamp'] = nil,
+    MaxMoney    : int [>= 0] = 0,
+    ResourceType: TBaseClass [EnumName = 'EnumResourceList', Enum = true, Values = [Resource_Invalid, Resource_CommandPoints, Resource_Tickets], GDType = 'TBaseClass'] = EnumResourceList/Resource_CommandPoints,
+] is TGDDescriptorSetMaxMoneyForTeam
+meta
+(
+    AutoName     = 'MoneyMax <%MaxMoney%> pour <%ResourceType%> pour <%Camp%>',
+    Family       = '03_ActionsSurCamps',
+    FriendlyName = 'SetMaxMoneyForCamp',
+    Parent       = 'Descriptor',
+)
+(
+    Camp = <Camp>
+    MaxMoney = <MaxMoney>
+    ResourceType = <ResourceType>
+)
+template DescriptorSetMissilesRoEValue
+[
+    Group           : TGDVariableUnitGroup [required = true, GDType = 'VariableUnitGroup'] = nil,
+    MissilesBehavior: TBaseClass [EnumName = 'EMissilesBehaviour', Enum = true, Values = ['LookAtAllTransport', 'LookAtNonEmptyTransport', 'NeverLooktAtTransport'], GDType = 'TBaseClass'] = EMissilesBehaviour/NeverLooktAtTransport,
+] is TGDDescriptorSetMissilesRoEValue
+meta
+(
+    AutoName     = 'Change la valeur de la RoE Missiles a <%MissilesBehavior%> on units <%Group%>',
+    Family       = '29_ModifieUnitGroup',
+    FriendlyName = 'SetMissilesRoEValue',
+    Parent       = 'Descriptor',
+)
+(
+    Group = <Group>
+    MissilesBehavior = <MissilesBehavior>
+)
+template DescriptorSetNumberMaxTurn
+[
+    NbMaxTurn: int = 0,
+    Variable : TGDVariableInteger [required = false, GDType = 'VariableInteger'] = nil,
+] is TGDDescriptorSetNumberMaxTurn
+meta
+(
+    AutoName     = 'Nombre de tours de jeu max',
+    Family       = '19_Steelman',
+    FriendlyName = 'SetNumberMaxTurn',
+    Parent       = 'Descriptor',
+)
+(
+    NbMaxTurn = <NbMaxTurn>
+    Variable = <Variable>
+)
+template DescriptorSetPossibleSpawnPositionsForProduction
+[
+    Camp               : TGDVariableCamp [required = true, GDType = 'VariableCamp'] = nil,
+    ReinforcementGroups: List<TGDStrategicReinforcementGroup> [required = true, GDType = 'ReinforcementGroup'] = [],
+] is TGDDescriptorStrategicSetPossibleSpawnPositionsForProduction
+meta
+(
+    AutoName     = 'Remplace les groupes de renforts possibles pour le camp <%Camp%>',
+    Family       = '19_Steelman',
+    FriendlyName = 'SetReinforcementGroupsForCamp',
+    Parent       = 'Descriptor',
+)
+(
+    Camp = <Camp>
+    ReinforcementGroups = <ReinforcementGroups>
+)
+template DescriptorSetRelationAlliances
+[
+    Alliance     : int [>= 0] = 0,
+    OtherAlliance: int [>= 0] = 1,
+    RelationType : TBaseClass [EnumName = 'TRelationAlliance', Enum = true, Values = ['Allie', 'Ennemi', 'Neutre'], GDType = 'TBaseClass'] = TRelationAlliance/Ennemi,
+] is TGDDescriptorSetRelationAlliances
+meta
+(
+    AutoName     = 'Alliance <%Alliance%> et Alliance <%OtherAlliance%> -> <%RelationType%>',
+    Family       = '12_ActionsSurAlliances',
+    FriendlyName = 'SetRelationAlliances',
+    Parent       = 'Descriptor',
+)
+(
+    Alliance = <Alliance>
+    OtherAlliance = <OtherAlliance>
+    RelationType = <RelationType>
+)
+template DescriptorSetRessourceCamp
+[
+    Camp        : TGDVariableCamp [required = true, GDType = 'VariableCamp'] = nil,
+    Quantite    : int [>= 0] = 0,
+    ResourceType: TBaseClass [EnumName = 'EnumResourceList', Enum = true, Values = [Resource_Invalid, Resource_CommandPoints, Resource_Tickets], GDType = 'TBaseClass'] = EnumResourceList/Resource_CommandPoints,
+] is TGDDescriptorSetRessourceForTeam
+meta
+(
+    AutoName     = 'Set <%Quantite%> <%ResourceType%> a <%Camp%>',
+    Family       = '03_ActionsSurCamps',
+    FriendlyName = '01 SetRessourceCamp',
+    Parent       = 'Descriptor',
+)
+(
+    Camp = <Camp>
+    Quantite = <Quantite>
+    ResourceType = <ResourceType>
+)
+template DescriptorSetScoreCamp
+[
+    Camp     : TGDVariableCamp [required = true, GDType = 'VariableCamp'] = nil,
+    Score    : int = 0,
+    ScoreType: TBaseClass [EnumName = 'TScorePointType', Enum = true, Values = ['MapObjective', 'OverTimeMapObjective', 'ScriptedEvent', 'TotalScore', 'UnitDestruction', 'UnitLoss', 'ZonePoint'], GDType = 'TBaseClass'] = TScorePointType/UnitDestruction,
+] is TGDDescriptorSetScoreCamp
+meta
+(
+    AutoName     = 'Definit le score du camp <%Camp%>',
+    Family       = '03_ActionsSurCamps',
+    FriendlyName = '20 SetScoreCamp',
+    Parent       = 'Descriptor',
+)
+(
+    Camp = <Camp>
+    Score = <Score>
+    ScoreType = <ScoreType>
+)
+template DescriptorSetShotReactionROEBehavior
+[
+    Group               : TGDVariableUnitGroup [required = true, GDType = 'VariableUnitGroup'] = nil,
+    ShotReactionBehavior: TBaseClass [EnumName = 'EShotReactionBehaviour', Enum = true, Values = ['Agressive', 'Defensive', 'Passive'], GDType = 'TBaseClass'] = EShotReactionBehaviour/Passive,
+] is TGDDescriptorSetShotReactionROEBehavior
+meta
+(
+    AutoName     = 'Change la valeur de la RoE ShotReaction a <%ShotReactionBehavior%> on units <%Group%>',
+    Family       = '29_ModifieUnitGroup',
+    FriendlyName = 'SetShotReactionROEBehavior',
+    Parent       = 'Descriptor',
+)
+(
+    Group = <Group>
+    ShotReactionBehavior = <ShotReactionBehavior>
+)
+template DescriptorSetStartingTeam
+[
+    StartingTeam: TGDVariableCamp [required = true, GDType = 'VariableCamp'] = nil,
+] is TGDDescriptorSetStartingTeam
+meta
+(
+    AutoName     = 'Choix du camp commencant a jouer',
+    Family       = '19_Steelman',
+    FriendlyName = 'SetInitialTeam',
+    Parent       = 'Descriptor',
+)
+(
+    StartingTeam = <StartingTeam>
+)
+template DescriptorSetSupply
+[
+    MaxSupplyRatio: int [>= 0, <= 100] = 100,
+    Units         : List<TGDVariableUnitGroup> [required = true, GDType = 'VariableUnitGroup'] = [],
+] is TGDDescriptorSetSupply
+meta
+(
+    AutoName     = 'SetSupply <%MaxSupplyRatio%>',
+    Family       = '29_ModifieUnitGroup',
+    FriendlyName = 'SetSupply',
+    Parent       = 'Descriptor',
+)
+(
+    MaxSupplyRatio = <MaxSupplyRatio>
+    Units = <Units>
+)
+template DescriptorSetUnarmedVehiculesRoEValue
+[
+    Group                   : TGDVariableUnitGroup [required = true, GDType = 'VariableUnitGroup'] = nil,
+    UnarmedVehiculeBehaviour: TBaseClass [EnumName = 'EUnarmedVehiculeBehaviour', Enum = true, Values = ['FireAtWill', 'HoldFire'], GDType = 'TBaseClass'] = EUnarmedVehiculeBehaviour/HoldFire,
+] is TGDDescriptorSetUnarmedVehiculesRoEValue
+meta
+(
+    AutoName     = 'Change la valeur de la RoE Unarmed Vehicules a <%UnarmedVehiculeBehaviour%> on units <%Group%>',
+    Family       = '29_ModifieUnitGroup',
+    FriendlyName = 'SetUnarmedVehiculesRoEValue',
+    Parent       = 'Descriptor',
+)
+(
+    Group = <Group>
+    UnarmedVehiculeBehaviour = <UnarmedVehiculeBehaviour>
+)
+template DescriptorSetUnitsImmuneToAllDamage
+[
+    Group   : TGDVariableUnitGroup [required = true, GDType = 'VariableUnitGroup'] = nil,
+    IsImmune: bool = true,
+] is TGDDescriptorSetUnitsImmuneToAllDamage
+meta
+(
+    AutoName     = 'Immunise definitivement <%Group%> a tous les types de degats',
+    Family       = 'z_Dev_only',
+    FriendlyName = 'ImmunizeAllDamageType',
+    Parent       = 'Descriptor',
+)
+(
+    Group = <Group>
+    IsImmune = <IsImmune>
+)
+template DescriptorSetUpkeepPercentForCamp
+[
+    Camp         : TGDVariableCamp [required = true, GDType = 'VariableCamp'] = nil,
+    UpkeepPercent: int [>= 0] = 0,
+] is TGDDescriptorSetUpkeepPercentForTeam
+meta
+(
+    AutoName     = 'UpkeepPercent <%UpkeepPercent%> pour <%Camp%>',
+    Family       = '03_ActionsSurCamps',
+    FriendlyName = 'SetUpkeepPercentForCamp',
+    Parent       = 'Descriptor',
+)
+(
+    Camp = <Camp>
+    UpkeepPercent = <UpkeepPercent>
+)
+template DescriptorSetVariableIntegerFromUnitGroup
+[
+    Group   : TGDVariableUnitGroup [required = true, GDType = 'VariableUnitGroup'] = nil,
+    Variable: TGDVariableInteger [required = true, GDType = 'VariableInteger'] = nil,
+] is TGDDescriptorSetVariableIntegerFromUnitGroup
+meta
+(
+    AutoName     = 'Set <%Variable%>',
+    Family       = '07_ModifieInteger',
+    FriendlyName = '02 SetVariableIntegerFromUnitGroup',
+    Parent       = 'Descriptor',
+)
+(
+    Group = <Group>
+    Variable = <Variable>
+)
+template DescriptorSimultaneous
+[
+    NbExecutions: int = 1,
+    SubActions  : List<TGDDescriptor> [required = false, GDType = 'Descriptor'] = [],
+] is TGDDescriptorSimultaneous
+meta
+(
+    AutoName     = 'Simultaneous (NbExecutions : <%NbExecutions%>)',
+    Family       = '01_Sequenceur',
+    FriendlyName = '02 Simultaneous',
+    Parent       = 'Descriptor',
+)
+(
+    NbExecutions = <NbExecutions>
+    SubActions = <SubActions>
+)
+template DescriptorSpawnUnits
+[
+    Units: List<TGDTagUnitGroup> [required = true, GDType = 'UnitGroup'] = [],
+] is TGDDescriptorSpawnUnits
+meta
+(
+    AutoName     = 'SpawnUnits',
+    Family       = '30_UnitGroup',
+    FriendlyName = '00 SpawnUnits',
+    Parent       = 'Descriptor',
+)
+(
+    Units = <Units>
+)
+template DescriptorStartBattlePreparationPhase
+[
+    AttackerUnitGroup: TGDVariableUnitGroup [required = true, GDType = 'VariableUnitGroup'] = nil,
+    TargetUnitGroup  : TGDVariableUnitGroup [required = true, GDType = 'VariableUnitGroup'] = nil,
+] is TGDDescriptorStartBattlePreparationPhase
+meta
+(
+    AutoName     = 'Start Steelman Preparation Combat Phase',
+    Family       = '19_Steelman',
+    FriendlyName = 'StartBattlePreparation',
+    Parent       = 'Descriptor',
+)
+(
+    AttackerUnitGroup = <AttackerUnitGroup>
+    TargetUnitGroup = <TargetUnitGroup>
+)
+template DescriptorStartTimer
+[
+    Timer: TGDVariableTimer [required = true, GDType = 'VariableTimer'] = nil,
+] is TGDDescriptorStartTimer
+meta
+(
+    AutoName     = 'Start <%Timer%>',
+    Family       = '08_ModifieTimer',
+    FriendlyName = '01 StartTimer',
+    Parent       = 'Descriptor',
+)
+(
+    Timer = <Timer>
+)
+template DescriptorStopActionOfUnit
+[
+    Group: TGDVariableUnitGroup [required = true, GDType = 'VariableUnitGroup'] = nil,
+] is TGDDescriptorStopActionOfUnit
+meta
+(
+    AutoName     = 'Stop actions of <%Group%>',
+    Family       = '02_ActionsTactiques',
+    FriendlyName = '10 StopActionOfUnit',
+    Parent       = 'Descriptor',
+)
+(
+    Group = <Group>
+)
+template DescriptorStopTimer
+[
+    Timer: TGDVariableTimer [required = true, GDType = 'VariableTimer'] = nil,
+] is TGDDescriptorStopTimer
+meta
+(
+    AutoName     = 'Stop <%Timer%>',
+    Family       = '08_ModifieTimer',
+    FriendlyName = '04 StopTimer',
+    Parent       = 'Descriptor',
+)
+(
+    Timer = <Timer>
+)
+template DescriptorStrategicDefend
+[
+    AttackEnemyInRadius         : int [>= 0, GroupBy = "Primaire"] = 530,
+    Blocking                    : bool [GroupBy = "Primaire"] = true,
+    ExecuteOnlyOnIAActivated    : bool = true,
+    Fortify                     : bool [GroupBy = "Primaire"] = false,
+    Group                       : TGDVariableUnitGroup [required = true, GDType = 'VariableUnitGroup'] = nil,
+    OrderCancelable             : bool [GroupBy = "Secondaire"] = false,
+    Position                    : TGDTagPosition [required = true, GDType = 'LDPosition', GroupBy = "Primaire"] = nil,
+    StartBattleDescriptorType   : TBaseClass [EnumName = 'EStrategicBattleDescriptor', Enum = true, Values = ['Agressif', 'Default', 'Defensif', 'Draw', 'MajorDefeat', 'MajorVictor', 'MinorDefeat', 'MinorVictor', 'SuicideAttack'], GDType = 'TBaseClass'] = EStrategicBattleDescriptor/Default,
+    UseOnlyUnitInMissionToAttack: bool = true,
+    WaypointReachedRadius       : int [>= 0, GroupBy = "Primaire"] = 707,
+] is TGDDescriptorStrategicDefend
+meta
+(
+    AutoName     = 'Defend <%Group%> (Fortify=<%Fortify%>)',
+    Family       = '19_Steelman',
+    FriendlyName = 'Defend',
+    Parent       = 'Descriptor',
+)
+(
+    AttackEnemyInRadius = <AttackEnemyInRadius>
+    Blocking = <Blocking>
+    ExecuteOnlyOnIAActivated = <ExecuteOnlyOnIAActivated>
+    Fortify = <Fortify>
+    Group = <Group>
+    OrderCancelable = <OrderCancelable>
+    Position = <Position>
+    StartBattleDescriptorType = <StartBattleDescriptorType>
+    UseOnlyUnitInMissionToAttack = <UseOnlyUnitInMissionToAttack>
+    WaypointReachedRadius = <WaypointReachedRadius>
+)
+template DescriptorStrategicMoveAndAttack
+[
+    AttackEnemyInRadius         : int [>= 0, GroupBy = "Primaire"] = 530,
+    Blocking                    : bool [GroupBy = "Primaire"] = true,
+    ExecuteOnlyOnIAActivated    : bool = true,
+    Group                       : TGDVariableUnitGroup [required = true, GDType = 'VariableUnitGroup'] = nil,
+    OrderCancelable             : bool [GroupBy = "Secondaire"] = false,
+    Positions                   : List<TGDTagPosition> [required = true, GDType = 'LDPosition', GroupBy = "Primaire"] = [],
+    StartBattleDescriptorType   : TBaseClass [EnumName = 'EStrategicBattleDescriptor', Enum = true, Values = ['Agressif', 'Default', 'Defensif', 'Draw', 'MajorDefeat', 'MajorVictor', 'MinorDefeat', 'MinorVictor', 'SuicideAttack'], GDType = 'TBaseClass'] = EStrategicBattleDescriptor/Default,
+    UseOnlyUnitInMissionToAttack: bool = true,
+    WaypointReachedRadius       : int [>= 0, GroupBy = "Primaire"] = 707,
+] is TGDDescriptorStrategicMoveAndAttack
+meta
+(
+    AutoName     = 'MoveAndAttack <%Group%>',
+    Family       = '19_Steelman',
+    FriendlyName = 'MoveAndAttack',
+    Parent       = 'Descriptor',
+)
+(
+    AttackEnemyInRadius = <AttackEnemyInRadius>
+    Blocking = <Blocking>
+    ExecuteOnlyOnIAActivated = <ExecuteOnlyOnIAActivated>
+    Group = <Group>
+    OrderCancelable = <OrderCancelable>
+    Positions = <Positions>
+    StartBattleDescriptorType = <StartBattleDescriptorType>
+    UseOnlyUnitInMissionToAttack = <UseOnlyUnitInMissionToAttack>
+    WaypointReachedRadius = <WaypointReachedRadius>
+)
+template DescriptorSynchroniseSubAction
+[
+    SubActions: List<TGDAbstractDescriptorCutscene> [required = false, GDType = 'DescriptorCutscene'] = [],
+] is TGDDescriptorSynchroniseSubAction
+meta
+(
+    Abstract     = 'true',
+    Family       = '24_Divers',
+    FriendlyName = 'DescriptorSynchroniseSubAction',
+    Parent       = 'Descriptor',
+)
+(
+    SubActions = <SubActions>
+)
+template DescriptorTeleportCameraToPosition
+[
+    Actions         : TGDDescriptor [required = false, GDType = 'Descriptor'] = nil,
+    AltitudeLBU     : float [>= 1.000000, GroupBy = "Secondaire"] = 0.000000,
+    Azimuth         : float [>= -360.000000, <= 360.000000, GroupBy = "Secondaire"] = 0.000000,
+    Duration        : float = 0.000000,
+    WaitingDuration : float [GroupBy = "Secondaire"] = 0.000000,
+    Group           : TGDVariableUnitGroup [required = false, GDType = 'VariableUnitGroup'] = nil,
+    Position        : TGDTagPosition [required = false, GDType = 'LDPosition', GroupBy = "Secondaire"] = nil,
+    GoingStraight   : bool [GroupBy = "Secondaire"] = true,
+    MustGoBack      : bool [GroupBy = "Primaire"] = false,
+    GoingBackDuration : float [GroupBy = "Primaire"] = 0.000000,
+    GoingBackStraight : bool [GroupBy = "Secondaire"] = true,
+    Elevation         : float [GroupBy = "Secondaire"] = 0.000000,
+] is TGDDescriptorTeleportOrMoveCameraToPosition
+meta
+(
+    Family       = '22_Camera',
+    FriendlyName = '03 TeleportOrMoveCamera',
+    Parent       = 'Descriptor',
+)
+(
+    Actions = <Actions>
+    AltitudeLBU = <AltitudeLBU>
+    Azimuth = <Azimuth>
+    Duration = <Duration>
+    WaitingDuration = <WaitingDuration>
+    Group = <Group>
+    Position = <Position>
+    GoingStraight = <GoingStraight>
+    MustGoBack = <MustGoBack>
+    GoingBackDuration = <GoingBackDuration>
+    GoingBackStraight = <GoingBackStraight>
+    Elevation = <Elevation>
+)
+template DescriptorTransferUnitToUnitGroup
+[
+    ConditionTransfer: TGDConstraintOnUnit [required = false, GDType = 'ContrainteOnUnit'] = nil,
+    CopyUnits        : bool = false,
+    GroupDestination : TGDVariableUnitGroup [required = true, GDType = 'VariableUnitGroup'] = nil,
+    GroupSource      : TGDVariableUnitGroup [required = true, GDType = 'VariableUnitGroup'] = nil,
+    NBToTransfert    : int [>= 0] = 0,
+] is TGDDescriptorTransferUnitToUnitGroup
+meta
+(
+    AutoName     = 'Transfer from <%GroupSource%> to <%GroupDestination%> (Copy=<%CopyUnits%>)',
+    Family       = '30_UnitGroup',
+    FriendlyName = '04 TransferUnitToUnitGroup',
+    Parent       = 'Descriptor',
+)
+(
+    ConditionTransfer = <ConditionTransfer>
+    CopyUnits = <CopyUnits>
+    GroupDestination = <GroupDestination>
+    GroupSource = <GroupSource>
+    NBToTransfert = <NBToTransfert>
+)
+template DescriptorTriggerEndGame
+[
+    NextAction     : TBaseClass [EnumName = 'TNextActionEndGame', Enum = true, Values = ['BriefingPopUp', 'NextChapter', 'OutGame', 'Restart'], GDType = 'TBaseClass'] = TNextActionEndGame/BriefingPopUp,
+    VictoryReason  : TBaseClass [EnumName = 'TGameEndingCondition', Enum = true, Values = ['Invoke', 'NoMoreProd', 'NoMoreZone', 'NotSpecified', 'PlayerDisconnected', 'ScoreDefeat', 'ScoreVictory', 'ScriptDecided', 'Surrender', 'Time'], GDType = 'TBaseClass'],
+    VictoryType    : TBaseClass [EnumName = 'EVictoryType', Enum = true, Values = ['Draw', 'MajorDefeat', 'MajorVictory', 'MinorDefeat', 'MinorVictory', 'NotSpecified', 'TotalDefeat', 'TotalVictory'], GDType = 'TBaseClass'] = EVictoryType/NotSpecified,
+    WinningAlliance: int [>= 0] = 0,
+] is TGDDescriptorTriggerEndGame
+meta
+(
+    AutoName     = 'DeclencheFinDePartie',
+    Family       = '20_Objectif',
+    FriendlyName = 'DeclencheFinDePartie',
+    Parent       = 'Descriptor',
+)
+(
+    NextAction = <NextAction>
+    VictoryReason = <VictoryReason>
+    VictoryType = <VictoryType>
+    WinningAlliance = <WinningAlliance>
+)
+template DescriptorUnitGroupDeactivateWeapons
+[
+    Group: TGDVariableUnitGroup [required = true, GDType = 'VariableUnitGroup'] = nil,
+] is TGDDescriptorUnitGroupDeactivateWeapons
+meta
+(
+    AutoName     = 'Desactive les armes <%Group%>',
+    Family       = '06_Sortilege',
+    FriendlyName = '02 DesactiveArmes',
+    Parent       = 'Descriptor',
+)
+(
+    Group = <Group>
+)
+template DescriptorUnitGroupEnableMissiles
+[
+    EnableMissiles: bool = false,
+    Units         : List<TGDVariableUnitGroup> [required = true, GDType = 'VariableUnitGroup'] = [],
+] is TGDDescriptorUnitGroupEnableMissiles
+meta
+(
+    AutoName     = 'UnitGroupEnableMissiles <%EnableMissiles%>',
+    Family       = '29_ModifieUnitGroup',
+    FriendlyName = 'UnitGroupEnableMissiles',
+    Parent       = 'Descriptor',
+)
+(
+    EnableMissiles = <EnableMissiles>
+    Units = <Units>
+)
+template DescriptorUnitGroupIncontrolable
+[
+    Group          : TGDVariableUnitGroup [required = true, GDType = 'VariableUnitGroup'] = nil,
+    UnHighlightable: bool = false,
+] is TGDDescriptorUnitGroupIncontrolable
+meta
+(
+    Family       = '06_Sortilege',
+    FriendlyName = '17 UnitGroupIncontrolable',
+    Parent       = 'Descriptor',
+)
+(
+    Group = <Group>
+    UnHighlightable = <UnHighlightable>
+)
+template DescriptorUnitGroupInterditAttackReflex
+[
+    Group: TGDVariableUnitGroup [required = true, GDType = 'VariableUnitGroup'] = nil,
+] is TGDDescriptorUnitGroupInterditAttackReflex
+meta
+(
+    AutoName     = 'InterditAttackReflex <%Group%>',
+    Family       = '06_Sortilege',
+    FriendlyName = '01 InterditAttackReflex',
+    Parent       = 'Descriptor',
+)
+(
+    Group = <Group>
+)
+template DescriptorUnitGroupSetDispersion
+[
+    DispersionRate: int [>= 0] = 100,
+    Group         : TGDVariableUnitGroup [required = true, GDType = 'VariableUnitGroup'] = nil,
+] is TGDDescriptorModifyUnitDispersion
+meta
+(
+    AutoName     = 'SetDispersion <%Group%>, <%DispersionRate%> %',
+    Family       = '06_Sortilege',
+    FriendlyName = '19 SetDispersionUnitGroup',
+    Parent       = 'Descriptor',
+)
+(
+    DispersionRate = <DispersionRate>
+    Group = <Group>
+)
+template DescriptorUnload
+[
+    Blocking       : bool [GroupBy = "Primaire"] = true,
+    ForceNoRoad    : bool [GroupBy = "Secondaire"] = false,
+    ForceRoad      : bool [GroupBy = "Secondaire"] = false,
+    Group          : TGDVariableUnitGroup [required = true, GDType = 'VariableUnitGroup'] = nil,
+    OrderCancelable: bool [GroupBy = "Secondaire"] = false,
+    Position       : TGDTagPosition [required = false, GDType = 'LDPosition'] = nil,
+    Targets        : TGDVariableUnitGroup [required = false, GDType = 'VariableUnitGroup'] = nil,
+] is TGDDescriptorUnloadFromTransporter
+meta
+(
+    AutoName     = '<%Group%> Debarque a la position <%Position%> ou sur <%Targets%>',
+    Family       = '02_ActionsTactiques',
+    FriendlyName = '12 DebarquementUnites',
+    Parent       = 'Descriptor',
+)
+(
+    Blocking = <Blocking>
+    ForceNoRoad = <ForceNoRoad>
+    ForceRoad = <ForceRoad>
+    Group = <Group>
+    OrderCancelable = <OrderCancelable>
+    Position = <Position>
+    Targets = <Targets>
+)
+template DescriptorUnlockAchievementForObjective
+[
+    IdForAchievement : int [>= 0] = 0,
+    UnlockForAlliance: int [>= 0] = 0,
+] is TGDDescriptorUnlockAchievementForObjective
+meta
+(
+    AutoName     = 'Unlock achievement',
+    Family       = '20_Objectif',
+    FriendlyName = 'Unlock Achievement for objective',
+    Parent       = 'Descriptor',
+)
+(
+    IdForAchievement = <IdForAchievement>
+    UnlockForAlliance = <UnlockForAlliance>
+)
+template DescriptorWaitCondition
+[
+    Condition: TGDCondition [required = true, GDType = 'Condition'] = nil,
+] is TGDDescriptorWaitCondition
+meta
+(
+    AutoName     = 'Wait <%Condition%>',
+    Family       = '01_Sequenceur',
+    FriendlyName = '04 WaitCondition',
+    Parent       = 'Descriptor',
+)
+(
+    Condition = <Condition>
+)
+template DescriptorWaitDuree
+[
+    Duree: float [>= 0.000000] = 1.000000,
+] is TGDDescriptorWaitDuration
+meta
+(
+    AutoName     = 'Wait <%Duree%> sec',
+    Family       = '01_Sequenceur',
+    FriendlyName = '05 WaitDuree',
+    Parent       = 'Descriptor',
+)
+(
+    Duree = <Duree>
+)
+template DescriptorWaitForEver
+[
+] is TGDDescriptorWaitForEver
+meta
+(
+    Family       = '01_Sequenceur',
+    FriendlyName = 'WaitForEver',
+    Parent       = 'Descriptor',
+)
+(
+)
+template Detecteur
+[
+    GameDesignAddonId : TGUID,
+] is TGDTagDetecteur
+meta
+(
+    Abstract         = 'true',
+    AutoName         = 'Detecteur',
+    Family           = '31_Variable',
+    FriendlyName     = 'Detecteur',
+    IsScenarioGdItem = 'true',
+    Parent           = 'LDPosition',
+)
+(
+    GameDesignAddonId = <GameDesignAddonId>
+)
+template Effets
+[
+    PrefixWhenExport: string = "",
+] is TGDEffets
+meta
+(
+    Abstract     = 'true',
+    Family       = '25_Base',
+    FriendlyName = 'Effets',
+    Parent       = 'BankObject',
+)
+(
+    PrefixWhenExport = <PrefixWhenExport>
+)
+template EffetsSurUniteType
+[
+    PrefixWhenExport: string = "",
+] is TGDEffetsSurUniteType
+meta
+(
+    Abstract     = 'true',
+    BankModule   = 'parametres_specific.EffetsSurUnite',
+    Family       = '25_Base',
+    FriendlyName = 'EffetsSurUniteType',
+    Parent       = 'Effets',
+)
+(
+    PrefixWhenExport = <PrefixWhenExport>
+)
+template EffetsTest
+[
+    PrefixWhenExport: string = "",
+] is TGDEffetsTest
+meta
+(
+    Abstract     = 'true',
+    BankModule   = 'parametres_specific.EffetsSurUnite_Test',
+    Family       = '25_Base',
+    FriendlyName = 'EffetsTest',
+    Parent       = 'Effets',
+)
+(
+    PrefixWhenExport = <PrefixWhenExport>
+)
+template GereObjectifOwnerInfo
+[
+    Alliance         : int [>= 0] = 0,
+    InfoWhenNotOwning: TGDGereObjectifOwningInfo [required = true, GDType = 'GereObjectifOwningInfo'] = nil,
+    InfoWhenOwning   : TGDGereObjectifOwningInfo [required = true, GDType = 'GereObjectifOwningInfo'] = nil,
+    OwningCondition  : TGDCondition [required = true, GDType = 'Condition'] = nil,
+] is TGDGereObjectifOwnerInfo
+meta
+(
+    AutoName     = 'GereObjectifOwnerInfo <%Alliance%>',
+    Family       = '20_Objectif',
+    FriendlyName = 'GereObjectifOwnerInfo',
+    Parent       = 'TBaseClass',
+)
+(
+    Alliance = <Alliance>
+    InfoWhenNotOwning = <InfoWhenNotOwning>
+    InfoWhenOwning = <InfoWhenOwning>
+    OwningCondition = <OwningCondition>
+)
+template GereObjectifOwningInfo
+[
+    ObjectiveEtiquetteText: string [AllowNull = false, Localization = 'Label'] = "",
+    ObjectiveText         : string [AllowNull = false, Localization = 'Label'] = "",
+] is TGDGereObjectifOwningInfo
+meta
+(
+    AutoName     = 'GereObjectifOwningInfo',
+    Family       = '20_Objectif',
+    FriendlyName = 'GereObjectifOwningInfo',
+    Parent       = 'TBaseClass',
+)
+(
+    ObjectiveEtiquetteText = <ObjectiveEtiquetteText>
+    ObjectiveText = <ObjectiveText>
+)
+template LDPosition
+[
+    GameDesignAddonId : TGUID,
+] is TGDTagPosition
+meta
+(
+    Abstract         = 'true',
+    AutoName         = 'Position',
+    Family           = '31_Variable',
+    FriendlyName     = 'Position',
+    IsScenarioGdItem = 'true',
+    Parent           = 'TBaseClass',
+)
+(
+    GameDesignAddonId = <GameDesignAddonId>
+)
+template Object
+[
+] is TGDObject
+meta
+(
+    Abstract     = 'true',
+    Family       = '25_Base',
+    FriendlyName = 'Object',
+    Parent       = 'TBaseClass',
+)
+(
+)
+template ObjectList
+[
+    Values: List<TBaseClass> [required = false, GDType = 'TBaseClass'] = [],
+] is TGDObjectList
+meta
+(
+    Family       = '25_Base',
+    FriendlyName = 'ObjectList',
+    Parent       = 'TBaseClass',
+)
+(
+    Values = <Values>
+)
+template Operator
+[
+    Variable: TGDVariable [required = false, GDType = 'Variable'] = nil,
+] is TGDOperator
+meta
+(
+    Abstract     = 'true',
+    Family       = '14_Operator',
+    FriendlyName = 'Operator',
+    Parent       = 'TBaseClass',
+)
+(
+    Variable = <Variable>
+)
+template OperatorIntegerCompare
+[
+    OperatorType: TBaseClass [EnumName = 'EGDOperator', Enum = true, Values = ['Different', 'Equal', 'LessOrEqual', 'MoreOrEqual', 'StrictlyLess', 'StrictlyMore'], GDType = 'TBaseClass'] = EGDOperator/Equal,
+    Variable    : TGDVariableInteger [required = true, GDType = 'VariableInteger'] = nil,
+] is TGDOperatorIntegerCompare
+meta
+(
+    AutoName     = '<%OperatorType%>',
+    Family       = '14_Operator',
+    FriendlyName = 'OperatorInteger',
+    Parent       = 'Operator',
+)
+(
+    OperatorType = <OperatorType>
+    Variable = <Variable>
+)
+template ReinforcementGroup
+[
+    DisplayName                   : string [AllowNull = false, Localization = 'Label'] = "",
+    ShortDisplayName              : string [AllowNull = false, Localization = 'Label'] = "",
+    SpawnPositionsSortedByPriority: List<TGDTagPosition> [required = false, GDType = 'LDPosition'] = [],
+] is TGDStrategicReinforcementGroup
+meta
+(
+    AutoName     = 'Groupe de renforts (nom + spawns)',
+    Family       = '19_Steelman',
+    FriendlyName = 'ReinforcementGroup',
+    Parent       = 'TBaseClass',
+)
+(
+    DisplayName = <DisplayName>
+    ShortDisplayName = <ShortDisplayName>
+    SpawnPositionsSortedByPriority = <SpawnPositionsSortedByPriority>
+)
+template SectionType
+[
+    PrefixWhenExport: string = "",
+] is TGDSectionType
+meta
+(
+    Abstract     = 'true',
+    BankModule   = 'parametres_specific.Classes',
+    Family       = '25_Base',
+    FriendlyName = 'SectionType',
+    Parent       = 'UnitType',
+)
+(
+    PrefixWhenExport = <PrefixWhenExport>
+)
+template SpecificStrategicGameRules
+[
+    AutoresolveAleaStatus    : TBaseClass [EnumName = 'EAutoresolveAleaStatus', Enum = true, Values = ['AttackerAlwaysLucky', 'Default', 'DefenderAlwaysLucky', 'NoLuck'], GDType = 'TBaseClass'] = EAutoresolveAleaStatus/Default,
+    CheckEndGame             : bool = true,
+    DisableAutoresolve       : bool = false,
+    DisableTacticalResolution: bool = false,
+    Fow                      : bool = true,
+    InitialMoneyPerAlliance  : int = 2000,
+    ModeFixedRandomSeed      : bool = true,
+] is TGDSpecificStrategicGameRules
+meta
+(
+    Family       = '25_Base',
+    FriendlyName = 'StrategicGameRules',
+    Parent       = 'AbstractGameRules',
+)
+(
+    AutoresolveAleaStatus = <AutoresolveAleaStatus>
+    CheckEndGame = <CheckEndGame>
+    DisableAutoresolve = <DisableAutoresolve>
+    DisableTacticalResolution = <DisableTacticalResolution>
+    Fow = <Fow>
+    InitialMoneyPerAlliance = <InitialMoneyPerAlliance>
+    ModeFixedRandomSeed = <ModeFixedRandomSeed>
+)
+template SpecificTacticalGameRules
+[
+    CheckEndGame                : bool = false,
+    CombatRule                  : TBaseClass [EnumName = 'ECombatRule', Enum = true, Values = ['Conquest', 'Destruction', 'NotSpecified'], GDType = 'TBaseClass'] = ECombatRule/Conquest,
+    DeploymentMode              : TBaseClass [EnumName = 'EDeploymentMode', Enum = true, Values = ['Breakthrough', 'NotSpecified', 'Skirmish'], GDType = 'TBaseClass'] = EDeploymentMode/Skirmish,
+    DisableCriticFromTerrain    : bool = false,
+    DisableDeroute              : bool = false,
+    EnableOnlyScriptedIncome    : bool = false,
+    Fow                         : bool = true,
+    GameTime                    : int [>= 0] = 0,
+    InitialGamePhase            : TBaseClass [EnumName = 'TGamePhase', Enum = true, Values = ['Command', 'Deploiement', 'NotInitialized', 'StrategicGame'], GDType = 'TBaseClass'] = TGamePhase/NotInitialized,
+    InitialMoneyPerAlliance     : int = 2000,
+    MaxScore                    : int = 0,
+    ModeFixedRandomSeed         : bool = true,
+    UsePlayerBalanceIncomeSource: bool = true,
+] is TGDSpecificTacticalGameRules
+meta
+(
+    Family       = '25_Base',
+    FriendlyName = 'TacticalGameRules',
+    Parent       = 'AbstractGameRules',
+)
+(
+    CheckEndGame = <CheckEndGame>
+    CombatRule = <CombatRule>
+    DeploymentMode = <DeploymentMode>
+    DisableCriticFromTerrain = <DisableCriticFromTerrain>
+    DisableDeroute = <DisableDeroute>
+    EnableOnlyScriptedIncome = <EnableOnlyScriptedIncome>
+    Fow = <Fow>
+    GameTime = <GameTime>
+    InitialGamePhase = <InitialGamePhase>
+    InitialMoneyPerAlliance = <InitialMoneyPerAlliance>
+    MaxScore = <MaxScore>
+    ModeFixedRandomSeed = <ModeFixedRandomSeed>
+    UsePlayerBalanceIncomeSource = <UsePlayerBalanceIncomeSource>
+)
+template TestCase
+[
+    Comment   : string [GroupBy = "Summary"] = "",
+    Effet     : TGDDescriptor [required = true, GDType = 'Descriptor'] = nil,
+    Name      : string [required = true, GroupBy = "Name"] = "",
+    ObjectList: List<TBaseClass> [required = false, GDType = 'TBaseClass'] = [],
+    Timeout   : int [GroupBy = "Timeout"] = 0,
+] is TGDDescriptorTestCase
+meta
+(
+    Family       = 'z_Dev_only/z_TestSuite',
+    FriendlyName = 'TestCase',
+    Parent       = 'TBaseClass',
+)
+(
+    Comment = <Comment>
+    Effet = <Effet>
+    Name = <Name>
+    ObjectList = <ObjectList>
+    Timeout = <Timeout>
+)
+template TestType
+[
+    PrefixWhenExport: string = "",
+] is TGDTestType
+meta
+(
+    Abstract     = 'true',
+    BankModule   = 'parametres_specific.Classes_Test',
+    Family       = '25_Base',
+    FriendlyName = 'TestType',
+    Parent       = 'UnitType',
+)
+(
+    PrefixWhenExport = <PrefixWhenExport>
+)
+template UnitGroup
+[
+    GameDesignAddonId: TGUID,
+] is TGDTagUnitGroup
+meta
+(
+    Abstract         = 'true',
+    AutoName         = 'Unit',
+    Family           = '30_UnitGroup',
+    FriendlyName     = 'Unit',
+    IsScenarioGdItem = 'true',
+    Parent           = 'VariableUnitGroup',
+)
+(
+    GameDesignAddonId = <GameDesignAddonId>
+)
+template UnitType
+[
+    PrefixWhenExport: string = "",
+] is TEntityDescriptor
+meta
+(
+    Abstract     = 'true',
+    Family       = '25_Base',
+    FriendlyName = 'UnitType',
+    Parent       = 'BankObject',
+)
+(
+    PrefixWhenExport = <PrefixWhenExport>
+)
+template Variable
+[
+] is TGDVariable
+meta
+(
+    Abstract     = 'true',
+    Family       = '31_Variable',
+    FriendlyName = 'Variable',
+    Parent       = 'TBaseClass',
+)
+(
+)
+template VariableCamp
+[
+    Alliance     : int = 0,
+    AllianceStyle: TBaseClass [EnumName = 'TAllianceStyle', Enum = true, Values = ['AlliedWithAll', 'BLUFOR', 'EnemyWithAll', 'Neutral', 'REDFOR'], GDType = 'TBaseClass'],
+    Nationalite  : TBaseClass [EnumName = 'TWargameCoalition', Enum = true, Values = ['NATO', 'PACT'], GDType = 'TBaseClass'],
+    PlayerName   : string [AllowNull = true, Localization = 'Label'] = "",
+] is TGDVariableCamp
+meta
+(
+    AutoName     = 'Camp <%Nationalite%>',
+    Family       = '31_Variable',
+    FriendlyName = 'VariableCamp',
+    Parent       = 'Variable',
+)
+(
+    Alliance = <Alliance>
+    AllianceStyle = <AllianceStyle>
+    Nationalite = <Nationalite>
+    PlayerName = <PlayerName>
+)
+template VariableInteger
+[
+    Value: int = 0,
+] is TGDVariableInteger
+meta
+(
+    AutoName     = 'Variable <%Value%>',
+    Family       = '31_Variable',
+    FriendlyName = 'VariableInteger',
+    Parent       = 'Variable',
+)
+(
+    Value = <Value>
+)
+template VariableTimer
+[
+    Duree: int [>= 0] = 60,
+] is TGDVariableTimer
+meta
+(
+    Family       = '31_Variable',
+    FriendlyName = 'VariableTimer',
+    Parent       = 'Variable',
+)
+(
+    Duree = <Duree>
+)
+template VariableUnitGroup
+[
+] is TGDVariableUnitGroup
+meta
+(
+    Family       = '30_UnitGroup',
+    FriendlyName = '01 VariableUnitGroup',
+    Parent       = 'Variable',
+)
+(
+)
+template VideoSubtitle
+[
+    DurationInSeconds: int [>= 1] = 1,
+    Text             : string [Dialog = true],
+] is TCutSceneVideoSubtitle
+meta
+(
+    AutoName     = 'Show subtitle <%Text%> during <%DurationInSeconds%> seconds',
+    Family       = '23_Cutscenes',
+    FriendlyName = 'VideoSubtitle',
+    Parent       = 'TBaseClass',
+)
+(
+    DurationInSeconds = <DurationInSeconds>
+    Text = <Text>
+)

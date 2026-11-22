@@ -211,7 +211,7 @@ template template_BANK_Ground_Sticker
                     UseHardCodedRotation = false
                 )
                 ParticleRenderer = $/VFX_Bank/RealSticker
-                InfiniteParticles = False
+                InfiniteParticles = false
             )
             Initialisers =
             [

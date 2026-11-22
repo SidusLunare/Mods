@@ -63,31 +63,6 @@ export fx_impact_Vehicule_Cluster_M712_155mm_COPPERHEAD is SimultaneousActionDec
                 ),
                 TActionCall
                 (
-                    Action = $/VFX_Bank/BANK_Rubble2_Oriented_Simple_Reverse
-                    NamedParams = MAP[
-                        ( 'parCountDebrits', 20 ),
-                        ( 'parCountDebritsWithFire', 4 ),
-                        ( 'parCountDebritsWithSmoke', 2 ),
-                        ( 'parDebritSizeMul', 1.2 ),
-                        ( 'parDir', parDirection ),
-                        ( 'parDispersion', 1000 ),
-                        ( 'parFireParticleEndSize', 700 ),
-                        ( 'parFireParticleStartSize', 100 ),
-                        ( 'parGravity', 2000 ),
-                        ( 'parLifetime', 10 ),
-                        ( 'parMeshType', 0 ),
-                        ( 'parNarrowness', 5 ),
-                        ( 'parParticleOpacity', 0.1 ),
-                        ( 'parSmokeColor', float3[1,1,1] ),
-                        ( 'parSmokeColorMultiplier', 1 ),
-                        ( 'parSmokeDensity', 100 ),
-                        ( 'parSmokeParticleEndSize', 500 ),
-                        ( 'parSmokeParticleStartSize', 100 ),
-                        ( 'parSpeed', float3[3750,3750,3750] ),
-                    ]
-                ),
-                TActionCall
-                (
                     Action = $/VFX_Bank/BANK_Rubble2_Oriented_Simple
                     NamedParams = MAP[
                         ( 'parCountDebrits', 20 ),
@@ -109,6 +84,31 @@ export fx_impact_Vehicule_Cluster_M712_155mm_COPPERHEAD is SimultaneousActionDec
                         ( 'parSmokeParticleEndSize', 2000 ),
                         ( 'parSmokeParticleStartSize', 250 ),
                         ( 'parSpeed', float3[4050,4100,5400] ),
+                    ]
+                ),
+                TActionCall
+                (
+                    Action = $/VFX_Bank/BANK_Rubble2_Oriented_Simple_Reverse
+                    NamedParams = MAP[
+                        ( 'parCountDebrits', 20 ),
+                        ( 'parCountDebritsWithFire', 4 ),
+                        ( 'parCountDebritsWithSmoke', 2 ),
+                        ( 'parDebritSizeMul', 1.2 ),
+                        ( 'parDir', parDirection ),
+                        ( 'parDispersion', 1000 ),
+                        ( 'parFireParticleEndSize', 700 ),
+                        ( 'parFireParticleStartSize', 100 ),
+                        ( 'parGravity', 2000 ),
+                        ( 'parLifetime', 10 ),
+                        ( 'parMeshType', 0 ),
+                        ( 'parNarrowness', 5 ),
+                        ( 'parParticleOpacity', 0.1 ),
+                        ( 'parSmokeColor', float3[1,1,1] ),
+                        ( 'parSmokeColorMultiplier', 1 ),
+                        ( 'parSmokeDensity', 100 ),
+                        ( 'parSmokeParticleEndSize', 500 ),
+                        ( 'parSmokeParticleStartSize', 100 ),
+                        ( 'parSpeed', float3[3750,3750,3750] ),
                     ]
                 ),
                 TSequentialAction
@@ -140,6 +140,75 @@ export fx_impact_Vehicule_Cluster_M712_155mm_COPPERHEAD is SimultaneousActionDec
                     ]
                 ),
                 TWaitInSec( Duration = 10),
+            ]
+        ),
+        TSimultaneousAction
+        (
+            Mobile = TMobileWithLocalRepereMatrixFactory
+            (
+                Position = float3[370,40,0]
+            )
+            Actions =
+            [
+                TActionCall
+                (
+                    Action = $/VFX_Bank/BANK_Bomb_Distort_Plane_Simple
+                    NamedParams = MAP[
+                        ( 'parDuration', 0.5 ),
+                        ( 'parFinalSize', 60000 ),
+                        ( 'parInitialSize', 0 ),
+                        ( 'parIntensity', 1000 ),
+                    ]
+                ),
+                TSequentialAction
+                (Actions =
+                    [
+                        TWaitInSec( Duration = 0.15 ),
+                        TActionCall
+                        (
+                            Action = $/VFX_Bank/BANK_WasteGroundDustStickOnGround_Simple
+                            NamedParams = MAP[
+                                ( 'parAlphaStartDecayValue', 0.01 ),
+                                ( 'parCount', 50 ),
+                                ( 'parEndColor', float3[0.5529412,0.4313726,0.3333333] ),
+                                ( 'parEndSize', 2000 ),
+                                ( 'parFluidFriction', 5 ),
+                                ( 'parInitialDelay', parInitialShotDelay ),
+                                ( 'parLifetime', 6 ),
+                                ( 'parOpacity', 8 ),
+                                ( 'parRotationFactor', 1 ),
+                                ( 'parScaleSizeFactor', 2 ),
+                                ( 'parStartColor', float3[0.2784314,0.2156863,0.172549] ),
+                                ( 'parStartRandomRadius', 2500 ),
+                                ( 'parStartRotation', 0.25 ),
+                                ( 'parStartSize', 800 ),
+                                ( 'parStartSpeed', 5 ),
+                                ( 'parWindWeight', 2 ),
+                            ]
+                        ),
+                    ]
+                ),
+            ]
+        ),
+        TSimultaneousAction
+        (
+            Mobile = TMobileWithLocalRepereMatrixFactory
+            (
+                Position = float3[366,31,0] + parPosition
+            )
+            Actions =
+            [
+                TActionCall
+                (
+                    Action = $/VFX_Bank/BANK_Bomb_Distort_Simple
+                    NamedParams = MAP[
+                        ( 'parDuration', 0.15 ),
+                        ( 'parFinalSize', 40000 ),
+                        ( 'parInitialSize', 10000 ),
+                        ( 'parIntensity', 10000 ),
+                        ( 'parPositionRelative', float3[366,31,0] ),
+                    ]
+                ),
             ]
         ),
         TSimultaneousAction
@@ -213,27 +282,6 @@ export fx_impact_Vehicule_Cluster_M712_155mm_COPPERHEAD is SimultaneousActionDec
                 ),
                 TActionCall
                 (
-                    Action = $/VFX_Bank/BANK_Bomb_NewSparks_Omni_Simple
-                    NamedParams = MAP[
-                        ( 'parColor', float3[1,0.2509804,0] ),
-                        ( 'parColorMultiplier', 6.400001 ),
-                        ( 'parCount', 40 ),
-                        ( 'parFluidFriction', 0 ),
-                        ( 'parGravity', 2000 ),
-                        ( 'parLifetime', 3 ),
-                        ( 'parNarrowness', 0 ),
-                        ( 'parPositionRadius', 680 ),
-                        ( 'parSize', 10 ),
-                        ( 'parSpeedMax', 2800 ),
-                        ( 'parSpeedMin', 300 ),
-                        ( 'parStretch', 1 ),
-                        ( 'parWindFactor', 0 ),
-                        ( 'parDir', float3[0,0,1] ),
-                        ( 'parPositionRelative', parPosition ),
-                    ]
-                ),
-                TActionCall
-                (
                     Action = $/VFX_Bank/BANK_Bomb_NewSparks_Simple
                     NamedParams = MAP[
                         ( 'parColor', float3[0.7490196,0.2509804,0] ),
@@ -274,76 +322,28 @@ export fx_impact_Vehicule_Cluster_M712_155mm_COPPERHEAD is SimultaneousActionDec
                         ( 'parPositionRelative', parPosition ),
                     ]
                 ),
+                TActionCall
+                (
+                    Action = $/VFX_Bank/BANK_Bomb_NewSparks_Omni_Simple
+                    NamedParams = MAP[
+                        ( 'parColor', float3[1,0.2509804,0] ),
+                        ( 'parColorMultiplier', 6.400001 ),
+                        ( 'parCount', 40 ),
+                        ( 'parFluidFriction', 0 ),
+                        ( 'parGravity', 2000 ),
+                        ( 'parLifetime', 3 ),
+                        ( 'parNarrowness', 0 ),
+                        ( 'parPositionRadius', 680 ),
+                        ( 'parSize', 10 ),
+                        ( 'parSpeedMax', 2800 ),
+                        ( 'parSpeedMin', 300 ),
+                        ( 'parStretch', 1 ),
+                        ( 'parWindFactor', 0 ),
+                        ( 'parDir', float3[0,0,1] ),
+                        ( 'parPositionRelative', parPosition ),
+                    ]
+                ),
                 TWaitInSec( Duration = 0.8),
-            ]
-        ),
-        TSimultaneousAction
-        (
-            Mobile = TMobileWithLocalRepereMatrixFactory
-            (
-                Position = float3[370,40,0]
-            )
-            Actions =
-            [
-                TActionCall
-                (
-                    Action = $/VFX_Bank/BANK_Bomb_Distort_Plane_Simple
-                    NamedParams = MAP[
-                        ( 'parDuration', 0.5 ),
-                        ( 'parFinalSize', 60000 ),
-                        ( 'parInitialSize', 0 ),
-                        ( 'parIntensity', 1000 ),
-                    ]
-                ),
-                TSequentialAction
-                (Actions =
-                    [
-                        TWaitInSec( Duration = 0.15 ),
-                        TActionCall
-                        (
-                            Action = $/VFX_Bank/BANK_WasteGroundDustStickOnGround_Simple
-                            NamedParams = MAP[
-                                ( 'parAlphaStartDecayValue', 0.01 ),
-                                ( 'parCount', 50 ),
-                                ( 'parEndColor', float3[0.5529412,0.4313726,0.3333333] ),
-                                ( 'parEndSize', 2000 ),
-                                ( 'parFluidFriction', 5 ),
-                                ( 'parInitialDelay', parInitialShotDelay ),
-                                ( 'parLifetime', 6 ),
-                                ( 'parOpacity', 8 ),
-                                ( 'parRotationFactor', 1 ),
-                                ( 'parScaleSizeFactor', 2 ),
-                                ( 'parStartColor', float3[0.2784314,0.2156863,0.172549] ),
-                                ( 'parStartRandomRadius', 2500 ),
-                                ( 'parStartRotation', 0.25 ),
-                                ( 'parStartSize', 800 ),
-                                ( 'parStartSpeed', 5 ),
-                                ( 'parWindWeight', 2 ),
-                            ]
-                        ),
-                    ]
-                ),
-            ]
-        ),
-        TSimultaneousAction
-        (
-            Mobile = TMobileWithLocalRepereMatrixFactory
-            (
-                Position = float3[366,31,0] + parPosition
-            )
-            Actions =
-            [
-                TActionCall
-                (
-                    Action = $/VFX_Bank/BANK_Bomb_Distort_Simple
-                    NamedParams = MAP[
-                        ( 'parDuration', 0.15 ),
-                        ( 'parFinalSize', 40000 ),
-                        ( 'parInitialSize', 10000 ),
-                        ( 'parIntensity', 10000 ),
-                        ( 'parPositionRelative', float3[366,31,0] ),
-                    ]
-                ),
             ]
         ),
         TSimultaneousAction
@@ -432,6 +432,30 @@ export fx_impact_Vehicule_Cluster_M712_155mm_COPPERHEAD is SimultaneousActionDec
                 ),
                 TActionCall
                 (
+                    Action = $/VFX_Bank/BANK_Rubble2_Simple
+                    NamedParams = MAP[
+                        ( 'parCountDebrits', 10 ),
+                        ( 'parCountDebritsWithFire', 0 ),
+                        ( 'parCountDebritsWithSmoke', 0 ),
+                        ( 'parDebritSizeMul', 0.5 ),
+                        ( 'parDispersion', 1200 ),
+                        ( 'parFireParticleEndSize', 0 ),
+                        ( 'parFireParticleStartSize', 200 ),
+                        ( 'parLifetime', 5 ),
+                        ( 'parMeshType', 1 ),
+                        ( 'parMinSpeedRatio', 1 ),
+                        ( 'parParticleOpacity', 0.3400001 ),
+                        ( 'parSmokeColor', float3[0.1647059,0.1647059,0.1647059] ),
+                        ( 'parSmokeColorMultiplier', 0.3 ),
+                        ( 'parSmokeDensity', 100 ),
+                        ( 'parSmokeParticleEndSize', 600 ),
+                        ( 'parSmokeParticleStartSize', 100 ),
+                        ( 'parSpeed', float3[4250,4360,9983] ),
+                        ( 'parSpeedDispersion', 0 ),
+                    ]
+                ),
+                TActionCall
+                (
                     Action = $/VFX_Bank/BANK_Rubble2_Oriented_Simple
                     NamedParams = MAP[
                         ( 'parCountDebrits', 10 ),
@@ -453,30 +477,6 @@ export fx_impact_Vehicule_Cluster_M712_155mm_COPPERHEAD is SimultaneousActionDec
                         ( 'parSmokeParticleEndSize', 3000 ),
                         ( 'parSmokeParticleStartSize', 600 ),
                         ( 'parSpeed', float3[4280,4350,8000] ),
-                    ]
-                ),
-                TActionCall
-                (
-                    Action = $/VFX_Bank/BANK_Rubble2_Simple
-                    NamedParams = MAP[
-                        ( 'parCountDebrits', 10 ),
-                        ( 'parCountDebritsWithFire', 0 ),
-                        ( 'parCountDebritsWithSmoke', 0 ),
-                        ( 'parDebritSizeMul', 0.5 ),
-                        ( 'parDispersion', 1200 ),
-                        ( 'parFireParticleEndSize', 0 ),
-                        ( 'parFireParticleStartSize', 200 ),
-                        ( 'parLifetime', 5 ),
-                        ( 'parMeshType', 1 ),
-                        ( 'parMinSpeedRatio', 1 ),
-                        ( 'parParticleOpacity', 0.3400001 ),
-                        ( 'parSmokeColor', float3[0.1647059,0.1647059,0.1647059] ),
-                        ( 'parSmokeColorMultiplier', 0.3 ),
-                        ( 'parSmokeDensity', 100 ),
-                        ( 'parSmokeParticleEndSize', 600 ),
-                        ( 'parSmokeParticleStartSize', 100 ),
-                        ( 'parSpeed', float3[4250,4360,9983] ),
-                        ( 'parSpeedDispersion', 0 ),
                     ]
                 ),
                 TActionCall
@@ -557,6 +557,41 @@ export fx_impact_Vehicule_Cluster_M712_155mm_COPPERHEAD is SimultaneousActionDec
         (
             Mobile = TMobileWithLocalRepereMatrixFactory
             (
+                Position = float3[-46,41,0] + parPosition
+            )
+            Actions =
+            [
+                TActionCall
+                (
+                    Action = $/VFX_Bank/BANK_Rubble2_Simple
+                    NamedParams = MAP[
+                        ( 'parCountDebrits', 0 ),
+                        ( 'parCountDebritsWithFire', 4 ),
+                        ( 'parCountDebritsWithSmoke', 4 ),
+                        ( 'parDebritSizeMul', 0.2 ),
+                        ( 'parDispersion', 10 ),
+                        ( 'parFireParticleEndSize', 800 ),
+                        ( 'parFireParticleStartSize', 0 ),
+                        ( 'parLifetime', 3 ),
+                        ( 'parMeshType', 0 ),
+                        ( 'parMinSpeedRatio', 0.5 ),
+                        ( 'parParticleOpacity', 0.8 ),
+                        ( 'parSmokeColor', float3[0.8000001,0.6980392,0.5019608] ),
+                        ( 'parSmokeColorMultiplier', 0.1 ),
+                        ( 'parSmokeDensity', 100 ),
+                        ( 'parSmokeParticleEndSize', 1000 ),
+                        ( 'parSmokeParticleStartSize', 250 ),
+                        ( 'parSpeed', float3[4000,4000,4000] ),
+                        ( 'parSpeedDispersion', 1 ),
+                    ]
+                ),
+                TWaitInSec( Duration = 3),
+            ]
+        ),
+        TSimultaneousAction
+        (
+            Mobile = TMobileWithLocalRepereMatrixFactory
+            (
                 Position = parPosition
                 EulerAngles = float3[3.141593,0,0]
             )
@@ -588,41 +623,6 @@ export fx_impact_Vehicule_Cluster_M712_155mm_COPPERHEAD is SimultaneousActionDec
                     ]
                 ),
                 TWaitInSec( Duration = 4),
-            ]
-        ),
-        TSimultaneousAction
-        (
-            Mobile = TMobileWithLocalRepereMatrixFactory
-            (
-                Position = float3[-46,41,0] + parPosition
-            )
-            Actions =
-            [
-                TActionCall
-                (
-                    Action = $/VFX_Bank/BANK_Rubble2_Simple
-                    NamedParams = MAP[
-                        ( 'parCountDebrits', 0 ),
-                        ( 'parCountDebritsWithFire', 4 ),
-                        ( 'parCountDebritsWithSmoke', 4 ),
-                        ( 'parDebritSizeMul', 0.2 ),
-                        ( 'parDispersion', 10 ),
-                        ( 'parFireParticleEndSize', 800 ),
-                        ( 'parFireParticleStartSize', 0 ),
-                        ( 'parLifetime', 3 ),
-                        ( 'parMeshType', 0 ),
-                        ( 'parMinSpeedRatio', 0.5 ),
-                        ( 'parParticleOpacity', 0.8 ),
-                        ( 'parSmokeColor', float3[0.8000001,0.6980392,0.5019608] ),
-                        ( 'parSmokeColorMultiplier', 0.1 ),
-                        ( 'parSmokeDensity', 100 ),
-                        ( 'parSmokeParticleEndSize', 1000 ),
-                        ( 'parSmokeParticleStartSize', 250 ),
-                        ( 'parSpeed', float3[4000,4000,4000] ),
-                        ( 'parSpeedDispersion', 1 ),
-                    ]
-                ),
-                TWaitInSec( Duration = 3),
             ]
         ),
         TSimultaneousAction

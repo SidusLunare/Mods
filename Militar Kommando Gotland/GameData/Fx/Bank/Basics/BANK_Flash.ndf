@@ -41,9 +41,9 @@ export BANK_Bomb_Flash is SimultaneousActionDeclaration
                 (
                     RenderInfo = ParticleRenderInfo
                     (
-                        ZTest = True
-                        ZWrite = False
-                        SortTriangles = True
+                        ZTest = true
+                        ZWrite = false
+                        SortTriangles = true
                         TextureName = 'GameData:/Assets/2D/Fx/flare_jaune_00.png'
                         Calque = 'Particles'
                         EmissiveParticle = true

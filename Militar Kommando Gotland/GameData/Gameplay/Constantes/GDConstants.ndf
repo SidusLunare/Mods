@@ -31,8 +31,8 @@ Constantes is TTunableConstante
 
 //----------------------------- Constantes Avion -----------------------------------------//
 
-    CadavreOffsetMax = 0.3  // 0.33
-    CadavreOffsetMin = 0.1 // 0.18
+    CadaverOffsetMax = 0.3  // 0.33
+    CadaverOffsetMin = 0.1 // 0.18
 
 //--------------------------- Constantes Bâtiments ---------------------------------------//
 
@@ -77,7 +77,7 @@ Constantes is TTunableConstante
     // Si, au debut d'une partie, l'alliance attaquante n'est pas celle indiquee ici, alors il faudra sans doute ajuster les points de spawn
     BaseAttackingAllianceNum = 0
 
-    DefaultAIDifficultyForPlayerReplacement = IADifficulty/Normal
+    DefaultAIDifficultyForPlayerReplacement = EIADifficulty/Normal
 
     SuddenDeathTime = 5 * 60
     MinimumNumberOfUnitToStayInGameWithoutCmdOrProductionInDestructionMode = 5
@@ -119,12 +119,6 @@ Constantes is TTunableConstante
         GhostBlends = [1, 0.1]
     )
 
-//---------------------------- Constantes Lobby -------------------------------------------//
-
-    // 0 is No Time Limit
-    TimeLimitTable = [20, 30, 40, 60, 0]
-    DefaultTimeLimitInMinutes = 40
-
 //----------------------------- Constantes Missile --------------------------------------//
 
     TempsAutoriseHorsMondePourMissileSansCible = 5.0
@@ -158,7 +152,6 @@ Constantes is TTunableConstante
 
 //---------------------------- Constantes Visibilite --------------------------------------//
 
-    MultiplicateurBonusDissimulationParDistanceGRU = 0.0283 // = (Distance en GRU^-1)
     RelativeScanningHeightGRU = 7.0
 )
 
@@ -227,12 +220,12 @@ ModernWarfareConstantes is TModernWarfareTunableConstante
     // bonus en pourcentage donné à l'argent de départ
     RelativeBonusMoneyByIADifficulty = MAP
     [
-        (IADifficulty/TresFacile,       0.0),
-        (IADifficulty/Facile,           0.0),
-        (IADifficulty/Normal,           0.0),
-        (IADifficulty/Difficile,        0.0),
-        (IADifficulty/TresDifficile,    0.5),
-        (IADifficulty/PlusDifficile,    0.8),
+        (EIADifficulty/TresFacile,       0.0),
+        (EIADifficulty/Facile,           0.0),
+        (EIADifficulty/Normal,           0.0),
+        (EIADifficulty/Difficile,        0.0),
+        (EIADifficulty/TresDifficile,    0.5),
+        (EIADifficulty/PlusDifficile,    0.8),
     ]
 
 //---------------------------- Constantes Mouvement ---------------------------------------//
@@ -270,307 +263,56 @@ ModernWarfareConstantes is TModernWarfareTunableConstante
     SplashCollisionPlanes = MAP
     [
         (
-            ~/ECollisionPlane/NoCollision,
+            ~/TCollisionPlane/NoCollision,
             [
-                ~/ECollisionPlane/NoCollision,
-                ~/ECollisionPlane/Ground,
-                ~/ECollisionPlane/NearGround,
-                ~/ECollisionPlane/LowAltitude,
-                ~/ECollisionPlane/HighAltitude,
-                ~/ECollisionPlane/ProjectileAltitude,
+                ~/TCollisionPlane/NoCollision,
+                ~/TCollisionPlane/Ground,
+                ~/TCollisionPlane/NearGround,
+                ~/TCollisionPlane/LowAltitude,
+                ~/TCollisionPlane/HighAltitude,
+                ~/TCollisionPlane/ProjectileAltitude,
             ]
         ),
         (
-            ~/ECollisionPlane/Ground,
+            ~/TCollisionPlane/Ground,
             [
-                ~/ECollisionPlane/Ground,
-                ~/ECollisionPlane/NearGround,
-                ~/ECollisionPlane/ProjectileAltitude,
+                ~/TCollisionPlane/Ground,
+                ~/TCollisionPlane/NearGround,
+                ~/TCollisionPlane/ProjectileAltitude,
             ]
         ),
         (
-            ~/ECollisionPlane/NearGround,
+            ~/TCollisionPlane/NearGround,
             [
-                ~/ECollisionPlane/Ground,
-                ~/ECollisionPlane/NearGround,
-                ~/ECollisionPlane/LowAltitude,
-                ~/ECollisionPlane/ProjectileAltitude,
+                ~/TCollisionPlane/Ground,
+                ~/TCollisionPlane/NearGround,
+                ~/TCollisionPlane/LowAltitude,
+                ~/TCollisionPlane/ProjectileAltitude,
             ]
         ),
         (
-            ~/ECollisionPlane/LowAltitude,
+            ~/TCollisionPlane/LowAltitude,
             [
-                ~/ECollisionPlane/NearGround,
-                ~/ECollisionPlane/LowAltitude,
-                ~/ECollisionPlane/HighAltitude,
-                ~/ECollisionPlane/ProjectileAltitude,
+                ~/TCollisionPlane/NearGround,
+                ~/TCollisionPlane/LowAltitude,
+                ~/TCollisionPlane/HighAltitude,
+                ~/TCollisionPlane/ProjectileAltitude,
             ]
         ),
         (
-            ~/ECollisionPlane/HighAltitude,
+            ~/TCollisionPlane/HighAltitude,
             [
-                ~/ECollisionPlane/LowAltitude,
-                ~/ECollisionPlane/HighAltitude,
+                ~/TCollisionPlane/LowAltitude,
+                ~/TCollisionPlane/HighAltitude,
             ]
         ),
         (
-            ~/ECollisionPlane/ProjectileAltitude,
+            ~/TCollisionPlane/ProjectileAltitude,
             [
-                ~/ECollisionPlane/Ground,
-                ~/ECollisionPlane/NearGround,
-                ~/ECollisionPlane/ProjectileAltitude,
+                ~/TCollisionPlane/Ground,
+                ~/TCollisionPlane/NearGround,
+                ~/TCollisionPlane/ProjectileAltitude,
             ]
         ),
     ]
-)
-
-//---------------------------------------------------------------------------------//
-//---------------------------------------------------------------------------------//
-//------------------------ Spécifiques WARGAME ------------------------------------//
-//---------------------------------------------------------------------------------//
-//---------------------------------------------------------------------------------//
-
-WargameConstantes is TWargameTunableConstante
-(
-    // /!\ MERCI DE RESPECTER L'ORDRE ALPHABETIQUE !
-    // Par catégories puis par constante.
-
-//--------------------------- Constantes Conquest ---------------------------------------//
-
-    DefaultMoneyWinPerAllianceRateInConquestMode = 3 // medium
-    TimeBeforeEarningConquestPoints = 1.5 // en secondes
-
-    // Tokens de localisation pour le niveau d'income
-    //                                            none         very_low     low         medium      high         very_high
-    MoneyWinLocalisationTokensInConquestMode = [ 'CONQ_NONE', 'CONQ_VLOW', 'CONQ_LOW', 'CONQ_MED', 'CONQ_HIGH', 'CONQ_VHIGH' ]
-
-    // Multiplicateur de points de commandement gagnes par joueur par période de TimeBeforeEarningCommandPoints en mode conquete
-    //                                   none  very_low    low   medium   high    very_high
-    MoneyWinPerAllianceInConquestMode = [  0,      0.5,   0.75,      1,    1.5,       2]
-
-    ConquestPossibleScores =
-    [
-        1000,//1000 par défaut, 1800 (30mn) en limité
-        2000,//2000 par défaut, 2100 (35mn) en limité
-        4000,//4000 par défaut, 2400 (45mn) en limité
-    ]
-
-    CoeffMoneyMaxIfUsingUpkeep = 1.5
-
-//-------------------------- Constantes Economy -----------------------------------------//
-
-    BaseIncome = MAP
-    [
-        (ECombatRule/NotSpecified,   0),
-        (ECombatRule/Conquest,       260),
-        (ECombatRule/Destruction,    4),
-    ]
-    DefaultIncomeMultiplierIndex    = 3 // normal
-    //                   none   very_low   low      normal    high     very_high
-    IncomeMultiplier = [   0,    0.5,    0.75,       1,      1.25,       1.5 ]
-    TimeBeforeEarningCommandPointsSkirmish = MAP
-    [
-        (ECombatRule/NotSpecified,   60.0),
-        (ECombatRule/Conquest,       60.0),
-        (ECombatRule/Destruction,     4.0),
-    ]
-    TimeBeforeEarningCommandPointsStrategicBattleground = 60.0
-
-    TimeBeforeEarningCommandPointsFactorToAddByNbPlayers = //Facteur de TimeBeforeEarningCommandPoints à ajouter selon des paliers de joueurs
-                [
-                    (10,    0.1), // à partir de 10 joueurs, 10% de délai pour l'income
-                    (20,    0.3)  // à partir de 20 joueurs, 30% de délai pour l'income
-                ]
-
-//--------------------------- Constantes Destruction ---------------------------------------//
-
-    DefaultIncomeMultiplierIndexInDestructionMode = 3 // medium
-
-    // Tokens de localisation pour le niveau d'income
-    //                                            none         very_low     low         medium
-    IncomeMultiplierTokensInDestructionMode = [ 'CONQ_NONE', 'CONQ_VLOW', 'CONQ_LOW', 'CONQ_MED']
-
-    // Multiplicateur de points de commandement gagnes par joueur par période de TimeBeforeEarningCommandPoints en mode conquete
-    //                                   none  very_low    low   medium
-    IncomeMultiplierInDestructionMode = [  0,      0.5,   0.75,      1]
-
-//------------------------- Constantes IAStrat ------------------------------------------//
-    // Bonus en pourcentage donné à l'IA à l'income. Exemple : 0.0 = +0%, 0.10 = +10%
-    RelativeBonusFluxByIADifficulty = MAP
-    [
-        (IADifficulty/TresFacile,    0.0),
-        (IADifficulty/Facile,        0.0),
-        (IADifficulty/Normal,        0.0),
-        (IADifficulty/Difficile,     0.0),
-        (IADifficulty/TresDifficile, 0.5),
-        (IADifficulty/PlusDifficile, 1.0),
-    ]
-
-    // Multiplicateur sur le nombre d'unités dans le deck de l'IA (ex : 0.5 donnera 50% d'unités en plus à l'IA)
-    DeckUnitCountMultiplierByIADifficulty = MAP
-    [
-        (IADifficulty/TresFacile,       0),
-        (IADifficulty/Facile,           0),
-        (IADifficulty/Normal,           0),
-        (IADifficulty/Difficile,        0),
-        (IADifficulty/TresDifficile,    0.5),
-        (IADifficulty/PlusDifficile,    1.0),
-    ]
-
-    // Bonus d'exp additif donné à toutes les unités du deck de l'IA (ex: 1 donnera un niveau de plus à tout le monde)
-    DeckUnitExpLevelAdditiveModifierByIADifficulty = MAP
-    [
-        (IADifficulty/TresFacile,       -2),
-        (IADifficulty/Facile,           -1),
-        (IADifficulty/Normal,           0),
-        (IADifficulty/Difficile,        0),
-        (IADifficulty/TresDifficile,    0),
-        (IADifficulty/PlusDifficile,    0),
-    ]
-
-    // Reduction du coût d'entretien des unités
-    UpkeepReductionByIADifficulty = MAP
-    [
-        (IADifficulty/TresDifficile, 0.25),
-        (IADifficulty/PlusDifficile, 0.5),
-    ]
-
-//-------------------- Constantes InterfaceSpecific -------------------------------//
-
-    FactoriesWhichNeverCloseProductionMenuAfterValidation = [
-    ]
-
-    MaxNbMergedUnitsInGroup = 4 // Nombre maximum d'unites dans un groupe merge
-
-    NomDAffichageDesUnitesNonIdentifiees = "UNIDNM"
-
-    // Facteur utilisé pour la transformation des Plating et APValue pour l'affichage en mm dans l'UI
-    PlatingAndApDisplayFactor = 1 //10 pour du mm
-
-    PaliersDAgiliteGRU = MAP
-    [
-        (706,   'Value_6'), //Exceptional
-        (1413,  'Value_5'), //Very good
-        (2120,  'Value_4'), //Good
-        (2473,  'Value_3'), //Normal
-        (31802, 'Value_2'), //Mediocre
-        (3533,  'Value_1'), //Bad
-    ]
-
-    PaliersDeDissimulation = MAP
-    [
-        (1.0, 'Value_1'),
-        (1.5, 'Value_2'),
-        (2.0, 'Value_4'),
-        (4.0, 'Value_6'),
-    ]
-
-    PaliersDOptiqueDAltitude = MAP
-    [
-        (150, 'Value_3'),
-        (300, 'Value_4'),
-        (375, 'Value_5'),
-        (450, 'Value_6'),
-
-    ]
-
-    PaliersDOptique = MAP
-    [
-        (50, 'Value_1'),
-        (75, 'Value_2'),
-        (100, 'Value_3'),
-        (150, 'Value_4'),
-        (200, 'Value_5'),
-        (250, 'Value_6'),
-    ]
-
-    PaliersDeResilience = MAP
-    [
-        (2, 'Value_1'),
-        (5, 'Value_2'),
-        (10, 'Value_3'),
-    ]
-
-    TagDInfanteriePinned = "Infanterie_Cowering"
-    ValeurMinAffichageBarMoralLabel = 0 // compris entre 0 et 1
-    ValeurMaxBarMoralLabel = 1 // compris entre 0 et 1
-
-    ValeurOptionTailleNewLabelMinimal = 0.63
-    ValeurOptionTailleNewLabelVerySmall = 0.77
-    ValeurOptionTailleNewLabelSmall = 0.88
-    ValeurOptionTailleNewLabelNormal = 1.0
-    ValeurOptionTailleNewLabelLarge = 1.23
-    ValeurOptionTailleNewLabelVeryLarge = 1.4
-
-
-//------------------------ Constantes Lobby ---------------------------------------//
-
-    ConquestPointsDefaultIndex = 1 //Indice dans ConquestPossibleScores
-    DefaultArgentInitial = 1500
-    ArgentInitialSetting =
-    [
-        500,
-        1000,
-        1500,
-        2000,
-        2500,
-        3000,
-    ]
-
-    DefaultDestructionScoreToReachSetting =
-    [
-        3000,
-        4000,
-        5000,
-        6000,
-        8000,
-        0,
-    ]
-
-    ArgentInitialMinimumPourGererLIA = 250
-    VictoryTypeDestructionLevelsTable = MAP
-    [
-        // Syntaxe :
-        // (Argent Initial Courant, [liste des valeurs de scoreToReach possibles pour cette valeur d'argent initial avec 0 signifiant Total Destruction]),
-        //Toute nouvelle valeur d'ArgentInitial doit apparaitre dans VictoryTypeDestructionLevelsTable du fichier GDConstants.ndf
-        (500,  [3000, 4000, 5000, 6000, 8000, 0]),
-        (750,  [3000, 4000, 5000, 6000, 8000, 0]),
-        (1000, [3000, 4000, 5000, 6000, 8000, 0]),
-        (1500, [3000, 4000, 5000, 6000, 8000, 0]),
-        (2000, [3000, 4000, 5000, 6000, 8000, 0]),
-        (2500, [3000, 4000, 5000, 6000, 8000, 0]),
-        (3000, [3000, 4000, 5000, 6000, 8000, 0]),
-        //(6000, [5000, 5500, 6000, 6500, 7000, 0]),
-    ]
-
-    UpkeepPercentAvailableSettings =
-    [
-        0,
-        5,
-        7
-    ]
-    UpkeepPercentDefaultSetting = 0
-
-//---------------------------- Constantes Mouvement -------------------------------------//
-
-    AmphibiousSpawnLandSeaRatio = 1.5 // >=0, ponderation arbitraire pour determiner si une amphibie spawne au spawn marin ou terrestre (=1:elle prendra le plus proche a vol d'oiseau ; <1:elle preferera le marin, >1:elle preferera le terrestre)
-
-//------------------------------ Constantes Tactic --------------------------------------//
-
-    //Order Token bloqué lorsque que l'unité est sans essence
-    OrderBlockedWhenOutOfFuel = [EOrderType/Move, EOrderType/SmartMove, EOrderType/QuickMove, EOrderType/FastMoveAndAttack, EOrderType/Reverse, EOrderType/ChangeAltitude,
-        EOrderType/AirplaneEvacuate, EOrderType/AirplaneMoveAndEngage]
-    OrdersAcceptedByTransporterIfTransportedUnitsCanDo = [EOrderType/AIAttack, EOrderType/AIDefend]
-
-//------------------------------ Constantes Vision --------------------------------------//
-    DissimulationEnumToValue = MAP
-    [
-        (~/DissimulationValue/VEHICLE, 1.0),
-        (~/DissimulationValue/VEHICLE_RECO, 1.5),
-        (~/DissimulationValue/INFANTRY, 2.0),
-        (~/DissimulationValue/INFANTRY_RECO, 2.5),
-    ]
-
-//------------------------------ Constantes WargameBuilding --------------------------------------//
-    WargameBuildingAllowedTerrainsMask = ETerrainType/Default | ETerrainType/ForetLegere
 )

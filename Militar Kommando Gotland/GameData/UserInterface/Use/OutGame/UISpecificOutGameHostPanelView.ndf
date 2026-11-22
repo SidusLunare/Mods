@@ -80,10 +80,11 @@ BUCKListDescriptor
     ]
 )
 
+private NumberOfAdditionalCharsAfterNickname is 20
+
 BUCKSpecificOutGameHostPanelMainComponentDescriptor is SpecificModalWindow
 (
     TitleToken = "T_HOST"
-    ContentMagnifiableWidthHeight = [0.0, 450.0]
 
     ButtonList =
     [
@@ -121,7 +122,7 @@ BUCKSpecificOutGameHostPanelMainComponentDescriptor is SpecificModalWindow
                 TextToken = "gameName"
                 HasText = true
                 EditableTextElementName = "GameNameEditable"
-                MaxChars = 50
+                MaxChars = ~/NicknameMaximumLength + ~/NumberOfAdditionalCharsAfterNickname
             )
         ),
         BUCKListElementDescriptor

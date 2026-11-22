@@ -39,8 +39,8 @@ export Mortier_Model_List is TEugBListPBaseClass
 (
     Value =
     [
-        public Model_Mortier_petit  is Template_CallMortier(Mesh = 'GameData:/Assets/3D/Units/Ammo/Bombes/Mortier_petit.fbx'),
-        public Model_Mortier_gros   is Template_CallMortier(Mesh = 'GameData:/Assets/3D/Units/Ammo/Bombes/Mortier_petit.fbx'),
+        public Model_Mortier_petit  is Template_CallMortier(Mesh = 'GameData:/Assets/3D/Ammo/Bombes/Mortier_petit.fbx'),
+        public Model_Mortier_gros   is Template_CallMortier(Mesh = 'GameData:/Assets/3D/Ammo/Bombes/Mortier_petit.fbx'),
     ]
 )
 

@@ -1,0 +1,54 @@
+//-----------------------------------------------------------------------------------
+//***********************************************************************************
+//-----------------------------------------------------------------------------------
+template TemplateStateDBModifieurArea
+[
+    RegistrationName    ,
+    Tags                : LIST<string> = [],
+    ColorCode           : color = RGBA[0, 0, 0, 0],
+    Mask                ,
+    Color               ,
+    Mode                ,
+] is TSceneryDescriptorTriangleSurface
+(
+    RegistrationName            = <RegistrationName>
+    Tags                        = <Tags>
+    ColorCode                   = <ColorCode>
+    SymbolDatabaseProxy         = $/M3D/Scene/LevelBuildSymbolDatabaseProxy
+    MeshBucketHandler           = $/SceneryBase/SceneryMeshBucketHandler_VectorielArea
+    Color                       = <Color>
+    Mode                        = <Mode>
+    StateDBModifierAspect       = TSceneryDescriptorStateDBModifierAspect
+    (
+        Mask        = <Mask>
+        DoValue     = <Mask>
+    )
+)
+//-----------------------------------------------------------------------------------
+template TemplateLineCleaner
+[
+    RegistrationName      : string,
+    Tags                  : LIST<string> = [],
+    ColorCode             : color = RGBA[0, 0, 0, 0],
+    Mask                  = SDMask_Hidden,
+    ThicknessInLBU        : float,
+] is TSceneryDescriptorRectanglesSurfaceFromLine
+(
+    RegistrationName            = <RegistrationName>
+    Tags                        = <Tags>
+    ColorCode                   = <ColorCode>
+    SymbolDatabaseProxy         = $/M3D/Scene/LevelBuildSymbolDatabaseProxy
+    MeshBucketHandler           = $/SceneryBase/SceneryMeshBucketHandler_VectorielArea
+    Mode                        = SDMode_StateDB
+    Color                       = [255,0,0,50]
+    WidthInLBU                  = <ThicknessInLBU>
+    StateDBModifierAspect       = TSceneryDescriptorStateDBModifierAspect
+    (
+        Mask        = <Mask>
+        DoValue     = <Mask>
+    )
+
+)
+//-----------------------------------------------------------------------------------
+//***********************************************************************************
+//-----------------------------------------------------------------------------------

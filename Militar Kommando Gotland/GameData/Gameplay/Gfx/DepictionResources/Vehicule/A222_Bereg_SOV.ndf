@@ -42,7 +42,7 @@ export DepictionOperator_Deployable_A222_Bereg_SOV is DepictionOperator_Animatio
     MoveBackAnimation = TResourceMatrixArrayAnimation
     (
         FileName   = 'GameData:/Assets/3D/Units/URSS/Artillerie/A222_Bereg/A222_Bereg_fold.fbx'
-        PlayInLoop     = true
+        PlayInLoop     = false
     )
 
     DeployFromMoveTime  = 1

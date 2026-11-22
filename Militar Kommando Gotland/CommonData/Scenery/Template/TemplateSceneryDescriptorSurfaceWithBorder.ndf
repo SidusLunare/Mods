@@ -1,0 +1,27 @@
+template template_SurfaceWithBorder
+[
+    RegistrationName : string,
+    Tags : LIST<string> = [],
+    ColorCode : color = RGBA[0, 0, 0, 0],
+
+    FillerName       : string,
+    BorderName       : string,
+]
+is TSceneryDescriptorSurfaceWithBorder
+(
+    RegistrationName = <RegistrationName>
+    Tags = <Tags>
+    ColorCode = <ColorCode>
+    SymbolDatabaseProxy = $/M3D/Scene/LevelBuildSymbolDatabaseProxy
+
+    Surface = TSceneryDescriptorProxy
+    (
+        AliasedRegistrationName = <FillerName>
+        SymbolDatabaseProxy = $/M3D/Scene/LevelBuildSymbolDatabaseProxy
+    )
+    Border = TSceneryDescriptorProxy
+    (
+        AliasedRegistrationName = <BorderName>
+        SymbolDatabaseProxy = $/M3D/Scene/LevelBuildSymbolDatabaseProxy
+    )
+)

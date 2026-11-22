@@ -1,0 +1,17 @@
+export Modele_UAZ_469_CMD_Naval_SOV is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/URSS/Vehicule/UAZ_3151_CMD/UAZ_3151_CMD.fbx"
+    Textures="GameData:/Assets/3D/Units/URSS/Vehicule/UAZ_3151_Naval_CMD"
+)
+
+export Modele_UAZ_469_CMD_Naval_SOV_MID is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/URSS/Vehicule/UAZ_3151_CMD_MID/UAZ_3151_CMD_MID.fbx"
+    Textures="GameData:/Assets/3D/Units/URSS/Vehicule/UAZ_3151_Naval_CMD_MID"
+)
+
+export Modele_UAZ_469_CMD_Naval_SOV_LOW is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/URSS/Vehicule/UAZ_3151_CMD_LOW/UAZ_3151_CMD_LOW.fbx"
+    Textures="GameData:/Assets/3D/Units/URSS/Vehicule/UAZ_3151_Naval_CMD_LOW"
+)

@@ -359,9 +359,9 @@ Bomb_Flash is SimultaneousActionDeclaration
                 (
                     RenderInfo = ParticleRenderInfo
                     (
-                        ZTest = True
-                        ZWrite = False
-                        SortTriangles = True
+                        ZTest = true
+                        ZWrite = false
+                        SortTriangles = true
                         TextureName = 'GameData:/Assets/2D/Fx/flare_jaune_00.png'
                         Calque = 'Particles'
                         EmissiveParticle = true
@@ -634,11 +634,11 @@ Nuke_Bottom_Sparks is SimultaneousActionDeclaration
                 (
                     RenderInfo = ParticleRenderInfo
                     (
-                        ZTest = True
-                        SortTriangles = True
+                        ZTest = true
+                        SortTriangles = true
                         ZWrite = false
                         TextureName = 'GameData:/Assets/2D/Fx/fx_etincelle_00.png'
-                        EmissiveParticle = True
+                        EmissiveParticle = true
                     )
                     ParticleRenderer = $/VFX_Bank/LitParticleRenderer
                     Evolvers = ParticleStandardEvolverList
@@ -712,7 +712,7 @@ NukeMushroomTop is SimultaneousActionDeclaration
                         TextureName = 'GameData:/Assets/2D/Fx/flare_bleu_00.png'
                         ZTest = false
                         Calque = 'First'
-                        EmissiveParticle = True
+                        EmissiveParticle = true
                     )
                     Evolvers = ParticleStandardEvolverList
                     (
@@ -766,12 +766,12 @@ NukeMushroomTop is SimultaneousActionDeclaration
                 (
                     RenderInfo = ParticleRenderInfo
                     (
-                        ZTest = True
-                        SortTriangles = True
+                        ZTest = true
+                        SortTriangles = true
                         ZWrite = false
                         TextureName = 'GameData:/Assets/2D/Fx/anim_fireball_000.png'
-                        EmissiveParticle = True
-                        Use3DRotation = True
+                        EmissiveParticle = true
+                        Use3DRotation = true
                     )
                     ParticleRenderer = $/VFX_Bank/LitParticleRenderer
                     Evolvers = ParticleStandardEvolverList

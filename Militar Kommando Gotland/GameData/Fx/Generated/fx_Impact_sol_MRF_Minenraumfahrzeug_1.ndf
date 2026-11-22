@@ -14,211 +14,6 @@ export fx_Impact_sol_MRF_Minenraumfahrzeug_1 is SimultaneousActionDeclaration
     [
         TSimultaneousAction
         (
-            Mobile = nil
-            Actions =
-            [
-                TActionCall
-                (
-                    Action = $/VFX_Bank/BANK_Bomb_Flash
-                    NamedParams = MAP[
-                        ( 'parCount', 1 ),
-                        ( 'parDuration', 0.15 ),
-                        ( 'parFinalSize', 15000 ),
-                        ( 'parInitialSize', 10000 ),
-                        ( 'parZBias', 0 ),
-                        ( 'parPositionRelative', float3[2181,423,0] + parPosition ),
-                    ]
-                ),
-                TActionCall
-                (
-                    Action = $/VFX_Bank/BANK_Bomb_Flash
-                    NamedParams = MAP[
-                        ( 'parCount', 1 ),
-                        ( 'parDuration', 0.3 ),
-                        ( 'parFinalSize', 15000 ),
-                        ( 'parInitialSize', 6000 ),
-                        ( 'parZBias', 0 ),
-                        ( 'parPositionRelative', float3[2181,423,0] + parPosition ),
-                    ]
-                ),
-                TActionCall
-                (
-                    Action = $/VFX_Bank/BANK_Bomb_Flash
-                    NamedParams = MAP[
-                        ( 'parCount', 1 ),
-                        ( 'parDuration', 0.2 ),
-                        ( 'parFinalSize', 10000 ),
-                        ( 'parInitialSize', 5000 ),
-                        ( 'parZBias', 0 ),
-                        ( 'parPositionRelative', float3[6768,166,0] + parPosition ),
-                    ]
-                ),
-                TActionCall
-                (
-                    Action = $/VFX_Bank/BANK_Bomb_Flash
-                    NamedParams = MAP[
-                        ( 'parCount', 1 ),
-                        ( 'parDuration', 0.2 ),
-                        ( 'parFinalSize', 20000 ),
-                        ( 'parInitialSize', 5000 ),
-                        ( 'parZBias', 0 ),
-                        ( 'parPositionRelative', float3[-5959,523,0] + parPosition ),
-                    ]
-                ),
-                TActionCall
-                (
-                    Action = $/VFX_Bank/BANK_Bomb_Flash
-                    NamedParams = MAP[
-                        ( 'parCount', 1 ),
-                        ( 'parDuration', 0.25 ),
-                        ( 'parFinalSize', 15000 ),
-                        ( 'parInitialSize', 5000 ),
-                        ( 'parZBias', 0 ),
-                        ( 'parPositionRelative', float3[-1659,269,0] + parPosition ),
-                    ]
-                ),
-                TActionCall
-                (
-                    Action = $/VFX_Bank/BANK_Bomb_Flash
-                    NamedParams = MAP[
-                        ( 'parCount', 1 ),
-                        ( 'parDuration', 0.1 ),
-                        ( 'parFinalSize', 20000 ),
-                        ( 'parInitialSize', 10000 ),
-                        ( 'parZBias', 0 ),
-                        ( 'parPositionRelative', float3[-5959,523,0] + parPosition ),
-                    ]
-                ),
-                TActionCall
-                (
-                    Action = $/VFX_Bank/BANK_Bomb_NewSparks_Omni_Simple
-                    NamedParams = MAP[
-                        ( 'parColor', float3[1,0.2509804,0] ),
-                        ( 'parColorMultiplier', 6.400001 ),
-                        ( 'parCount', 20 ),
-                        ( 'parFluidFriction', 0 ),
-                        ( 'parGravity', 2000 ),
-                        ( 'parLifetime', 3 ),
-                        ( 'parNarrowness', 0 ),
-                        ( 'parPositionRadius', 680 ),
-                        ( 'parSize', 10 ),
-                        ( 'parSpeedMax', 2800 ),
-                        ( 'parSpeedMin', 300 ),
-                        ( 'parStretch', 1 ),
-                        ( 'parWindFactor', 0 ),
-                        ( 'parDir', float3[0,0,1] ),
-                        ( 'parPositionRelative', float3[2181,423,0] + parPosition ),
-                    ]
-                ),
-                TActionCall
-                (
-                    Action = $/VFX_Bank/BANK_Bomb_NewSparks_Omni_Simple
-                    NamedParams = MAP[
-                        ( 'parColor', float3[1,0.2509804,0] ),
-                        ( 'parColorMultiplier', 6.400001 ),
-                        ( 'parCount', 20 ),
-                        ( 'parFluidFriction', 0 ),
-                        ( 'parGravity', 2000 ),
-                        ( 'parLifetime', 3 ),
-                        ( 'parNarrowness', 0 ),
-                        ( 'parPositionRadius', 680 ),
-                        ( 'parSize', 10 ),
-                        ( 'parSpeedMax', 2800 ),
-                        ( 'parSpeedMin', 300 ),
-                        ( 'parStretch', 1 ),
-                        ( 'parWindFactor', 0 ),
-                        ( 'parDir', float3[0,0,1] ),
-                        ( 'parPositionRelative', float3[6768,166,0] + parPosition ),
-                    ]
-                ),
-                TActionCall
-                (
-                    Action = $/VFX_Bank/BANK_Bomb_NewSparks_Omni_Simple
-                    NamedParams = MAP[
-                        ( 'parColor', float3[1,0.2509804,0] ),
-                        ( 'parColorMultiplier', 6.400001 ),
-                        ( 'parCount', 20 ),
-                        ( 'parFluidFriction', 0 ),
-                        ( 'parGravity', 2000 ),
-                        ( 'parLifetime', 3 ),
-                        ( 'parNarrowness', 0 ),
-                        ( 'parPositionRadius', 680 ),
-                        ( 'parSize', 10 ),
-                        ( 'parSpeedMax', 2800 ),
-                        ( 'parSpeedMin', 300 ),
-                        ( 'parStretch', 1 ),
-                        ( 'parWindFactor', 0 ),
-                        ( 'parDir', float3[0,0,1] ),
-                        ( 'parPositionRelative', float3[-1659,269,0] + parPosition ),
-                    ]
-                ),
-                TActionCall
-                (
-                    Action = $/VFX_Bank/BANK_Bomb_NewSparks_Simple
-                    NamedParams = MAP[
-                        ( 'parColor', float3[0.8745099,0.4470589,0.2509804] ),
-                        ( 'parColorMultiplier', 3 ),
-                        ( 'parCount', 10 ),
-                        ( 'parFluidFriction', 1 ),
-                        ( 'parGravity', 2000 ),
-                        ( 'parLifetime', 2.5 ),
-                        ( 'parNarrowness', 0.1 ),
-                        ( 'parPositionRadius', 200 ),
-                        ( 'parSize', 10 ),
-                        ( 'parSpeedMax', 8000 ),
-                        ( 'parSpeedMin', 5000 ),
-                        ( 'parStretch', 1 ),
-                        ( 'parWindFactor', 1 ),
-                        ( 'parDir', float3[0,0,1] ),
-                        ( 'parPositionRelative', float3[2181,423,0] + parPosition ),
-                    ]
-                ),
-                TActionCall
-                (
-                    Action = $/VFX_Bank/BANK_Bomb_NewSparks_Simple
-                    NamedParams = MAP[
-                        ( 'parColor', float3[0.8745099,0.4470589,0.2509804] ),
-                        ( 'parColorMultiplier', 3 ),
-                        ( 'parCount', 10 ),
-                        ( 'parFluidFriction', 1 ),
-                        ( 'parGravity', 2000 ),
-                        ( 'parLifetime', 2.5 ),
-                        ( 'parNarrowness', 0.1 ),
-                        ( 'parPositionRadius', 200 ),
-                        ( 'parSize', 10 ),
-                        ( 'parSpeedMax', 8000 ),
-                        ( 'parSpeedMin', 5000 ),
-                        ( 'parStretch', 1 ),
-                        ( 'parWindFactor', 1 ),
-                        ( 'parDir', float3[0,0,1] ),
-                        ( 'parPositionRelative', float3[6768,166,0] + parPosition ),
-                    ]
-                ),
-                TActionCall
-                (
-                    Action = $/VFX_Bank/BANK_Bomb_NewSparks_Simple
-                    NamedParams = MAP[
-                        ( 'parColor', float3[0.8745099,0.4470589,0.2509804] ),
-                        ( 'parColorMultiplier', 3 ),
-                        ( 'parCount', 10 ),
-                        ( 'parFluidFriction', 1 ),
-                        ( 'parGravity', 2000 ),
-                        ( 'parLifetime', 2.5 ),
-                        ( 'parNarrowness', 0.1 ),
-                        ( 'parPositionRadius', 200 ),
-                        ( 'parSize', 10 ),
-                        ( 'parSpeedMax', 8000 ),
-                        ( 'parSpeedMin', 5000 ),
-                        ( 'parStretch', 1 ),
-                        ( 'parWindFactor', 1 ),
-                        ( 'parDir', float3[0,0,1] ),
-                        ( 'parPositionRelative', float3[-1659,269,0] + parPosition ),
-                    ]
-                ),
-            ]
-        ),
-        TSimultaneousAction
-        (
             Mobile = TMobileWithLocalRepereMatrixFactory
             (
                 Position = float3[6768,166,0]
@@ -489,6 +284,211 @@ export fx_Impact_sol_MRF_Minenraumfahrzeug_1 is SimultaneousActionDeclaration
                         ( 'parInitialSize', 10000 ),
                         ( 'parIntensity', 20000 ),
                         ( 'parPositionRelative', float3[-1663,260,0] ),
+                    ]
+                ),
+            ]
+        ),
+        TSimultaneousAction
+        (
+            Mobile = nil
+            Actions =
+            [
+                TActionCall
+                (
+                    Action = $/VFX_Bank/BANK_Bomb_Flash
+                    NamedParams = MAP[
+                        ( 'parCount', 1 ),
+                        ( 'parDuration', 0.15 ),
+                        ( 'parFinalSize', 15000 ),
+                        ( 'parInitialSize', 10000 ),
+                        ( 'parZBias', 0 ),
+                        ( 'parPositionRelative', float3[2181,423,0] + parPosition ),
+                    ]
+                ),
+                TActionCall
+                (
+                    Action = $/VFX_Bank/BANK_Bomb_Flash
+                    NamedParams = MAP[
+                        ( 'parCount', 1 ),
+                        ( 'parDuration', 0.3 ),
+                        ( 'parFinalSize', 15000 ),
+                        ( 'parInitialSize', 6000 ),
+                        ( 'parZBias', 0 ),
+                        ( 'parPositionRelative', float3[2181,423,0] + parPosition ),
+                    ]
+                ),
+                TActionCall
+                (
+                    Action = $/VFX_Bank/BANK_Bomb_Flash
+                    NamedParams = MAP[
+                        ( 'parCount', 1 ),
+                        ( 'parDuration', 0.2 ),
+                        ( 'parFinalSize', 10000 ),
+                        ( 'parInitialSize', 5000 ),
+                        ( 'parZBias', 0 ),
+                        ( 'parPositionRelative', float3[6768,166,0] + parPosition ),
+                    ]
+                ),
+                TActionCall
+                (
+                    Action = $/VFX_Bank/BANK_Bomb_Flash
+                    NamedParams = MAP[
+                        ( 'parCount', 1 ),
+                        ( 'parDuration', 0.2 ),
+                        ( 'parFinalSize', 20000 ),
+                        ( 'parInitialSize', 5000 ),
+                        ( 'parZBias', 0 ),
+                        ( 'parPositionRelative', float3[-5959,523,0] + parPosition ),
+                    ]
+                ),
+                TActionCall
+                (
+                    Action = $/VFX_Bank/BANK_Bomb_Flash
+                    NamedParams = MAP[
+                        ( 'parCount', 1 ),
+                        ( 'parDuration', 0.25 ),
+                        ( 'parFinalSize', 15000 ),
+                        ( 'parInitialSize', 5000 ),
+                        ( 'parZBias', 0 ),
+                        ( 'parPositionRelative', float3[-1659,269,0] + parPosition ),
+                    ]
+                ),
+                TActionCall
+                (
+                    Action = $/VFX_Bank/BANK_Bomb_Flash
+                    NamedParams = MAP[
+                        ( 'parCount', 1 ),
+                        ( 'parDuration', 0.1 ),
+                        ( 'parFinalSize', 20000 ),
+                        ( 'parInitialSize', 10000 ),
+                        ( 'parZBias', 0 ),
+                        ( 'parPositionRelative', float3[-5959,523,0] + parPosition ),
+                    ]
+                ),
+                TActionCall
+                (
+                    Action = $/VFX_Bank/BANK_Bomb_NewSparks_Simple
+                    NamedParams = MAP[
+                        ( 'parColor', float3[0.8745099,0.4470589,0.2509804] ),
+                        ( 'parColorMultiplier', 3 ),
+                        ( 'parCount', 10 ),
+                        ( 'parFluidFriction', 1 ),
+                        ( 'parGravity', 2000 ),
+                        ( 'parLifetime', 2.5 ),
+                        ( 'parNarrowness', 0.1 ),
+                        ( 'parPositionRadius', 200 ),
+                        ( 'parSize', 10 ),
+                        ( 'parSpeedMax', 8000 ),
+                        ( 'parSpeedMin', 5000 ),
+                        ( 'parStretch', 1 ),
+                        ( 'parWindFactor', 1 ),
+                        ( 'parDir', float3[0,0,1] ),
+                        ( 'parPositionRelative', float3[2181,423,0] + parPosition ),
+                    ]
+                ),
+                TActionCall
+                (
+                    Action = $/VFX_Bank/BANK_Bomb_NewSparks_Simple
+                    NamedParams = MAP[
+                        ( 'parColor', float3[0.8745099,0.4470589,0.2509804] ),
+                        ( 'parColorMultiplier', 3 ),
+                        ( 'parCount', 10 ),
+                        ( 'parFluidFriction', 1 ),
+                        ( 'parGravity', 2000 ),
+                        ( 'parLifetime', 2.5 ),
+                        ( 'parNarrowness', 0.1 ),
+                        ( 'parPositionRadius', 200 ),
+                        ( 'parSize', 10 ),
+                        ( 'parSpeedMax', 8000 ),
+                        ( 'parSpeedMin', 5000 ),
+                        ( 'parStretch', 1 ),
+                        ( 'parWindFactor', 1 ),
+                        ( 'parDir', float3[0,0,1] ),
+                        ( 'parPositionRelative', float3[6768,166,0] + parPosition ),
+                    ]
+                ),
+                TActionCall
+                (
+                    Action = $/VFX_Bank/BANK_Bomb_NewSparks_Simple
+                    NamedParams = MAP[
+                        ( 'parColor', float3[0.8745099,0.4470589,0.2509804] ),
+                        ( 'parColorMultiplier', 3 ),
+                        ( 'parCount', 10 ),
+                        ( 'parFluidFriction', 1 ),
+                        ( 'parGravity', 2000 ),
+                        ( 'parLifetime', 2.5 ),
+                        ( 'parNarrowness', 0.1 ),
+                        ( 'parPositionRadius', 200 ),
+                        ( 'parSize', 10 ),
+                        ( 'parSpeedMax', 8000 ),
+                        ( 'parSpeedMin', 5000 ),
+                        ( 'parStretch', 1 ),
+                        ( 'parWindFactor', 1 ),
+                        ( 'parDir', float3[0,0,1] ),
+                        ( 'parPositionRelative', float3[-1659,269,0] + parPosition ),
+                    ]
+                ),
+                TActionCall
+                (
+                    Action = $/VFX_Bank/BANK_Bomb_NewSparks_Omni_Simple
+                    NamedParams = MAP[
+                        ( 'parColor', float3[1,0.2509804,0] ),
+                        ( 'parColorMultiplier', 6.400001 ),
+                        ( 'parCount', 20 ),
+                        ( 'parFluidFriction', 0 ),
+                        ( 'parGravity', 2000 ),
+                        ( 'parLifetime', 3 ),
+                        ( 'parNarrowness', 0 ),
+                        ( 'parPositionRadius', 680 ),
+                        ( 'parSize', 10 ),
+                        ( 'parSpeedMax', 2800 ),
+                        ( 'parSpeedMin', 300 ),
+                        ( 'parStretch', 1 ),
+                        ( 'parWindFactor', 0 ),
+                        ( 'parDir', float3[0,0,1] ),
+                        ( 'parPositionRelative', float3[2181,423,0] + parPosition ),
+                    ]
+                ),
+                TActionCall
+                (
+                    Action = $/VFX_Bank/BANK_Bomb_NewSparks_Omni_Simple
+                    NamedParams = MAP[
+                        ( 'parColor', float3[1,0.2509804,0] ),
+                        ( 'parColorMultiplier', 6.400001 ),
+                        ( 'parCount', 20 ),
+                        ( 'parFluidFriction', 0 ),
+                        ( 'parGravity', 2000 ),
+                        ( 'parLifetime', 3 ),
+                        ( 'parNarrowness', 0 ),
+                        ( 'parPositionRadius', 680 ),
+                        ( 'parSize', 10 ),
+                        ( 'parSpeedMax', 2800 ),
+                        ( 'parSpeedMin', 300 ),
+                        ( 'parStretch', 1 ),
+                        ( 'parWindFactor', 0 ),
+                        ( 'parDir', float3[0,0,1] ),
+                        ( 'parPositionRelative', float3[6768,166,0] + parPosition ),
+                    ]
+                ),
+                TActionCall
+                (
+                    Action = $/VFX_Bank/BANK_Bomb_NewSparks_Omni_Simple
+                    NamedParams = MAP[
+                        ( 'parColor', float3[1,0.2509804,0] ),
+                        ( 'parColorMultiplier', 6.400001 ),
+                        ( 'parCount', 20 ),
+                        ( 'parFluidFriction', 0 ),
+                        ( 'parGravity', 2000 ),
+                        ( 'parLifetime', 3 ),
+                        ( 'parNarrowness', 0 ),
+                        ( 'parPositionRadius', 680 ),
+                        ( 'parSize', 10 ),
+                        ( 'parSpeedMax', 2800 ),
+                        ( 'parSpeedMin', 300 ),
+                        ( 'parStretch', 1 ),
+                        ( 'parWindFactor', 0 ),
+                        ( 'parDir', float3[0,0,1] ),
+                        ( 'parPositionRelative', float3[-1659,269,0] + parPosition ),
                     ]
                 ),
             ]
@@ -790,6 +790,36 @@ export fx_Impact_sol_MRF_Minenraumfahrzeug_1 is SimultaneousActionDeclaration
                         TWaitInSec( Duration = 0.1 ),
                         TActionCall
                         (
+                            Action = $/VFX_Bank/BANK_Rubble2_Simple
+                            NamedParams = MAP[
+                                ( 'parCountDebrits', 10 ),
+                                ( 'parCountDebritsWithFire', 0 ),
+                                ( 'parCountDebritsWithSmoke', 0 ),
+                                ( 'parDebritSizeMul', 0.5 ),
+                                ( 'parDispersion', 1200 ),
+                                ( 'parFireParticleEndSize', 0 ),
+                                ( 'parFireParticleStartSize', 200 ),
+                                ( 'parLifetime', 5 ),
+                                ( 'parMeshType', 1 ),
+                                ( 'parMinSpeedRatio', 1 ),
+                                ( 'parParticleOpacity', 0.3400001 ),
+                                ( 'parSmokeColor', float3[0.1647059,0.1647059,0.1647059] ),
+                                ( 'parSmokeColorMultiplier', 0.3 ),
+                                ( 'parSmokeDensity', 100 ),
+                                ( 'parSmokeParticleEndSize', 600 ),
+                                ( 'parSmokeParticleStartSize', 100 ),
+                                ( 'parSpeed', float3[4250,4360,9983] ),
+                                ( 'parSpeedDispersion', 0 ),
+                            ]
+                        ),
+                    ]
+                ),
+                TSequentialAction
+                (Actions =
+                    [
+                        TWaitInSec( Duration = 0.1 ),
+                        TActionCall
+                        (
                             Action = $/VFX_Bank/BANK_Rubble2_Oriented_Simple
                             NamedParams = MAP[
                                 ( 'parCountDebrits', 20 ),
@@ -842,36 +872,6 @@ export fx_Impact_sol_MRF_Minenraumfahrzeug_1 is SimultaneousActionDeclaration
                                 ( 'parSmokeParticleEndSize', 1000 ),
                                 ( 'parSmokeParticleStartSize', 500 ),
                                 ( 'parSpeed', float3[3750,4000,8000] ),
-                            ]
-                        ),
-                    ]
-                ),
-                TSequentialAction
-                (Actions =
-                    [
-                        TWaitInSec( Duration = 0.1 ),
-                        TActionCall
-                        (
-                            Action = $/VFX_Bank/BANK_Rubble2_Simple
-                            NamedParams = MAP[
-                                ( 'parCountDebrits', 10 ),
-                                ( 'parCountDebritsWithFire', 0 ),
-                                ( 'parCountDebritsWithSmoke', 0 ),
-                                ( 'parDebritSizeMul', 0.5 ),
-                                ( 'parDispersion', 1200 ),
-                                ( 'parFireParticleEndSize', 0 ),
-                                ( 'parFireParticleStartSize', 200 ),
-                                ( 'parLifetime', 5 ),
-                                ( 'parMeshType', 1 ),
-                                ( 'parMinSpeedRatio', 1 ),
-                                ( 'parParticleOpacity', 0.3400001 ),
-                                ( 'parSmokeColor', float3[0.1647059,0.1647059,0.1647059] ),
-                                ( 'parSmokeColorMultiplier', 0.3 ),
-                                ( 'parSmokeDensity', 100 ),
-                                ( 'parSmokeParticleEndSize', 600 ),
-                                ( 'parSmokeParticleStartSize', 100 ),
-                                ( 'parSpeed', float3[4250,4360,9983] ),
-                                ( 'parSpeedDispersion', 0 ),
                             ]
                         ),
                     ]
@@ -1040,6 +1040,36 @@ export fx_Impact_sol_MRF_Minenraumfahrzeug_1 is SimultaneousActionDeclaration
                         TWaitInSec( Duration = 0.2 ),
                         TActionCall
                         (
+                            Action = $/VFX_Bank/BANK_Rubble2_Simple
+                            NamedParams = MAP[
+                                ( 'parCountDebrits', 10 ),
+                                ( 'parCountDebritsWithFire', 0 ),
+                                ( 'parCountDebritsWithSmoke', 0 ),
+                                ( 'parDebritSizeMul', 0.5 ),
+                                ( 'parDispersion', 1200 ),
+                                ( 'parFireParticleEndSize', 0 ),
+                                ( 'parFireParticleStartSize', 200 ),
+                                ( 'parLifetime', 5 ),
+                                ( 'parMeshType', 1 ),
+                                ( 'parMinSpeedRatio', 1 ),
+                                ( 'parParticleOpacity', 0.3400001 ),
+                                ( 'parSmokeColor', float3[0.1647059,0.1647059,0.1647059] ),
+                                ( 'parSmokeColorMultiplier', 0.3 ),
+                                ( 'parSmokeDensity', 100 ),
+                                ( 'parSmokeParticleEndSize', 600 ),
+                                ( 'parSmokeParticleStartSize', 100 ),
+                                ( 'parSpeed', float3[4250,4360,9983] ),
+                                ( 'parSpeedDispersion', 0 ),
+                            ]
+                        ),
+                    ]
+                ),
+                TSequentialAction
+                (Actions =
+                    [
+                        TWaitInSec( Duration = 0.2 ),
+                        TActionCall
+                        (
                             Action = $/VFX_Bank/BANK_Rubble2_Oriented_Simple
                             NamedParams = MAP[
                                 ( 'parCountDebrits', 20 ),
@@ -1061,36 +1091,6 @@ export fx_Impact_sol_MRF_Minenraumfahrzeug_1 is SimultaneousActionDeclaration
                                 ( 'parSmokeParticleEndSize', 3000 ),
                                 ( 'parSmokeParticleStartSize', 600 ),
                                 ( 'parSpeed', float3[3750,3750,8000] ),
-                            ]
-                        ),
-                    ]
-                ),
-                TSequentialAction
-                (Actions =
-                    [
-                        TWaitInSec( Duration = 0.2 ),
-                        TActionCall
-                        (
-                            Action = $/VFX_Bank/BANK_Rubble2_Simple
-                            NamedParams = MAP[
-                                ( 'parCountDebrits', 10 ),
-                                ( 'parCountDebritsWithFire', 0 ),
-                                ( 'parCountDebritsWithSmoke', 0 ),
-                                ( 'parDebritSizeMul', 0.5 ),
-                                ( 'parDispersion', 1200 ),
-                                ( 'parFireParticleEndSize', 0 ),
-                                ( 'parFireParticleStartSize', 200 ),
-                                ( 'parLifetime', 5 ),
-                                ( 'parMeshType', 1 ),
-                                ( 'parMinSpeedRatio', 1 ),
-                                ( 'parParticleOpacity', 0.3400001 ),
-                                ( 'parSmokeColor', float3[0.1647059,0.1647059,0.1647059] ),
-                                ( 'parSmokeColorMultiplier', 0.3 ),
-                                ( 'parSmokeDensity', 100 ),
-                                ( 'parSmokeParticleEndSize', 600 ),
-                                ( 'parSmokeParticleStartSize', 100 ),
-                                ( 'parSpeed', float3[4250,4360,9983] ),
-                                ( 'parSpeedDispersion', 0 ),
                             ]
                         ),
                     ]
@@ -1259,6 +1259,36 @@ export fx_Impact_sol_MRF_Minenraumfahrzeug_1 is SimultaneousActionDeclaration
                         TWaitInSec( Duration = 0.3 ),
                         TActionCall
                         (
+                            Action = $/VFX_Bank/BANK_Rubble2_Simple
+                            NamedParams = MAP[
+                                ( 'parCountDebrits', 10 ),
+                                ( 'parCountDebritsWithFire', 0 ),
+                                ( 'parCountDebritsWithSmoke', 0 ),
+                                ( 'parDebritSizeMul', 0.5 ),
+                                ( 'parDispersion', 1200 ),
+                                ( 'parFireParticleEndSize', 0 ),
+                                ( 'parFireParticleStartSize', 200 ),
+                                ( 'parLifetime', 5 ),
+                                ( 'parMeshType', 1 ),
+                                ( 'parMinSpeedRatio', 1 ),
+                                ( 'parParticleOpacity', 0.3400001 ),
+                                ( 'parSmokeColor', float3[0.1647059,0.1647059,0.1647059] ),
+                                ( 'parSmokeColorMultiplier', 0.3 ),
+                                ( 'parSmokeDensity', 100 ),
+                                ( 'parSmokeParticleEndSize', 600 ),
+                                ( 'parSmokeParticleStartSize', 100 ),
+                                ( 'parSpeed', float3[4250,4360,9983] ),
+                                ( 'parSpeedDispersion', 0 ),
+                            ]
+                        ),
+                    ]
+                ),
+                TSequentialAction
+                (Actions =
+                    [
+                        TWaitInSec( Duration = 0.3 ),
+                        TActionCall
+                        (
                             Action = $/VFX_Bank/BANK_Rubble2_Oriented_Simple
                             NamedParams = MAP[
                                 ( 'parCountDebrits', 20 ),
@@ -1311,36 +1341,6 @@ export fx_Impact_sol_MRF_Minenraumfahrzeug_1 is SimultaneousActionDeclaration
                                 ( 'parSmokeParticleEndSize', 1000 ),
                                 ( 'parSmokeParticleStartSize', 500 ),
                                 ( 'parSpeed', float3[3750,15000,8000] ),
-                            ]
-                        ),
-                    ]
-                ),
-                TSequentialAction
-                (Actions =
-                    [
-                        TWaitInSec( Duration = 0.3 ),
-                        TActionCall
-                        (
-                            Action = $/VFX_Bank/BANK_Rubble2_Simple
-                            NamedParams = MAP[
-                                ( 'parCountDebrits', 10 ),
-                                ( 'parCountDebritsWithFire', 0 ),
-                                ( 'parCountDebritsWithSmoke', 0 ),
-                                ( 'parDebritSizeMul', 0.5 ),
-                                ( 'parDispersion', 1200 ),
-                                ( 'parFireParticleEndSize', 0 ),
-                                ( 'parFireParticleStartSize', 200 ),
-                                ( 'parLifetime', 5 ),
-                                ( 'parMeshType', 1 ),
-                                ( 'parMinSpeedRatio', 1 ),
-                                ( 'parParticleOpacity', 0.3400001 ),
-                                ( 'parSmokeColor', float3[0.1647059,0.1647059,0.1647059] ),
-                                ( 'parSmokeColorMultiplier', 0.3 ),
-                                ( 'parSmokeDensity', 100 ),
-                                ( 'parSmokeParticleEndSize', 600 ),
-                                ( 'parSmokeParticleStartSize', 100 ),
-                                ( 'parSpeed', float3[4250,4360,9983] ),
-                                ( 'parSpeedDispersion', 0 ),
                             ]
                         ),
                     ]
@@ -1509,6 +1509,36 @@ export fx_Impact_sol_MRF_Minenraumfahrzeug_1 is SimultaneousActionDeclaration
                         TWaitInSec( Duration = 0.4 ),
                         TActionCall
                         (
+                            Action = $/VFX_Bank/BANK_Rubble2_Simple
+                            NamedParams = MAP[
+                                ( 'parCountDebrits', 10 ),
+                                ( 'parCountDebritsWithFire', 0 ),
+                                ( 'parCountDebritsWithSmoke', 0 ),
+                                ( 'parDebritSizeMul', 0.5 ),
+                                ( 'parDispersion', 1200 ),
+                                ( 'parFireParticleEndSize', 0 ),
+                                ( 'parFireParticleStartSize', 200 ),
+                                ( 'parLifetime', 5 ),
+                                ( 'parMeshType', 1 ),
+                                ( 'parMinSpeedRatio', 1 ),
+                                ( 'parParticleOpacity', 0.3400001 ),
+                                ( 'parSmokeColor', float3[0.1647059,0.1647059,0.1647059] ),
+                                ( 'parSmokeColorMultiplier', 0.3 ),
+                                ( 'parSmokeDensity', 100 ),
+                                ( 'parSmokeParticleEndSize', 600 ),
+                                ( 'parSmokeParticleStartSize', 100 ),
+                                ( 'parSpeed', float3[4250,4360,9983] ),
+                                ( 'parSpeedDispersion', 0 ),
+                            ]
+                        ),
+                    ]
+                ),
+                TSequentialAction
+                (Actions =
+                    [
+                        TWaitInSec( Duration = 0.4 ),
+                        TActionCall
+                        (
                             Action = $/VFX_Bank/BANK_Rubble2_Oriented_Simple
                             NamedParams = MAP[
                                 ( 'parCountDebrits', 20 ),
@@ -1530,36 +1560,6 @@ export fx_Impact_sol_MRF_Minenraumfahrzeug_1 is SimultaneousActionDeclaration
                                 ( 'parSmokeParticleEndSize', 3000 ),
                                 ( 'parSmokeParticleStartSize', 600 ),
                                 ( 'parSpeed', float3[3750,15000,8000] ),
-                            ]
-                        ),
-                    ]
-                ),
-                TSequentialAction
-                (Actions =
-                    [
-                        TWaitInSec( Duration = 0.4 ),
-                        TActionCall
-                        (
-                            Action = $/VFX_Bank/BANK_Rubble2_Simple
-                            NamedParams = MAP[
-                                ( 'parCountDebrits', 10 ),
-                                ( 'parCountDebritsWithFire', 0 ),
-                                ( 'parCountDebritsWithSmoke', 0 ),
-                                ( 'parDebritSizeMul', 0.5 ),
-                                ( 'parDispersion', 1200 ),
-                                ( 'parFireParticleEndSize', 0 ),
-                                ( 'parFireParticleStartSize', 200 ),
-                                ( 'parLifetime', 5 ),
-                                ( 'parMeshType', 1 ),
-                                ( 'parMinSpeedRatio', 1 ),
-                                ( 'parParticleOpacity', 0.3400001 ),
-                                ( 'parSmokeColor', float3[0.1647059,0.1647059,0.1647059] ),
-                                ( 'parSmokeColorMultiplier', 0.3 ),
-                                ( 'parSmokeDensity', 100 ),
-                                ( 'parSmokeParticleEndSize', 600 ),
-                                ( 'parSmokeParticleStartSize', 100 ),
-                                ( 'parSpeed', float3[4250,4360,9983] ),
-                                ( 'parSpeedDispersion', 0 ),
                             ]
                         ),
                     ]
@@ -2403,6 +2403,30 @@ export fx_Impact_sol_MRF_Minenraumfahrzeug_1 is SimultaneousActionDeclaration
             [
                 TActionCall
                 (
+                    Action = $/VFX_Bank/BANK_Dynamic_Flash_Simple
+                    NamedParams = MAP[
+                        ( 'parColorEnd', float3[0.003921569,0.003921569,0] ),
+                        ( 'parColorStart', float3[0.6,0.2980392,0.09803922] ),
+                        ( 'parDuration', 0.1 ),
+                        ( 'parOpacity', 0.2 ),
+                        ( 'parSizeLBU', 46.51163 ),
+                        ( 'Position', float3[-5820,620,0] + parPosition ),
+                    ]
+                ),
+                TActionCall
+                (
+                    Action = $/VFX_Bank/BANK_Dynamic_Flash_Simple
+                    NamedParams = MAP[
+                        ( 'parColorEnd', float3[0.003921569,0.003921569,0] ),
+                        ( 'parColorStart', float3[0.6,0.2980392,0.09803922] ),
+                        ( 'parDuration', 2 ),
+                        ( 'parOpacity', 0.2 ),
+                        ( 'parSizeLBU', 46.51163 ),
+                        ( 'Position', float3[6907,263,0] + parPosition ),
+                    ]
+                ),
+                TActionCall
+                (
                     Action = $/VFX_Bank/BANK_Dynamic_Flash_Only_Two_Simple
                     NamedParams = MAP[
                         ( 'parColorEnd', float3[0.003921569,0.003921569,0] ),
@@ -2455,30 +2479,6 @@ export fx_Impact_sol_MRF_Minenraumfahrzeug_1 is SimultaneousActionDeclaration
                         ( 'parSize', 30000 ),
                         ( 'parSpeed', float3[0,0,0] ),
                         ( 'Position', float3[2202,182,0] + parPosition ),
-                    ]
-                ),
-                TActionCall
-                (
-                    Action = $/VFX_Bank/BANK_Dynamic_Flash_Simple
-                    NamedParams = MAP[
-                        ( 'parColorEnd', float3[0.003921569,0.003921569,0] ),
-                        ( 'parColorStart', float3[0.6,0.2980392,0.09803922] ),
-                        ( 'parDuration', 0.1 ),
-                        ( 'parOpacity', 0.2 ),
-                        ( 'parSizeLBU', 46.51163 ),
-                        ( 'Position', float3[-5820,620,0] + parPosition ),
-                    ]
-                ),
-                TActionCall
-                (
-                    Action = $/VFX_Bank/BANK_Dynamic_Flash_Simple
-                    NamedParams = MAP[
-                        ( 'parColorEnd', float3[0.003921569,0.003921569,0] ),
-                        ( 'parColorStart', float3[0.6,0.2980392,0.09803922] ),
-                        ( 'parDuration', 2 ),
-                        ( 'parOpacity', 0.2 ),
-                        ( 'parSizeLBU', 46.51163 ),
-                        ( 'Position', float3[6907,263,0] + parPosition ),
                     ]
                 ),
                 TWaitInSec( Duration = 2),

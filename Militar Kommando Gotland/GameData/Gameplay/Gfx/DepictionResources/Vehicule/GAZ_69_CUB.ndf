@@ -1,0 +1,14 @@
+export Modele_GAZ_69_CUB is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/CUBA/Vehicule/GAZ_69/GAZ_69.fbx"
+)
+
+export Modele_GAZ_69_CUB_MID is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/CUBA/Vehicule/GAZ_69_MID/GAZ_69_MID.fbx"
+)
+
+export Modele_GAZ_69_CUB_LOW is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/CUBA/Vehicule/GAZ_69_LOW/GAZ_69_LOW.fbx"
+)

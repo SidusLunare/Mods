@@ -1,0 +1,19 @@
+export Modele_EE9_Cascavel_noLRF_BRZ is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/BRZ/Vehicule/EE9_Cascavel_noLRF/EE9_Cascavel_noLRF.fbx"
+)
+
+export Modele_EE9_Cascavel_noLRF_BRZ_MID is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/BRZ/Vehicule/EE9_Cascavel_noLRF_MID/EE9_Cascavel_noLRF_MID.fbx"
+)
+
+export Modele_EE9_Cascavel_noLRF_BRZ_LOW is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/BRZ/Vehicule/EE9_Cascavel_noLRF_LOW/EE9_Cascavel_noLRF_LOW.fbx"
+)
+
+export Modele_EE9_Cascavel_noLRF_BRZ_Tourelle_02 is TResourceMesh
+(
+    Mesh=ModelFile_M2HB_12_7mm_no_ammo
+)

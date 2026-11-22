@@ -5,10 +5,10 @@ export Modele_M38A1_CMD_NL is TResourceMesh
 
 export Modele_M38A1_CMD_NL_MID is TResourceMesh
 (
-    Mesh="GameData:/Assets/3D/Units/NL/Vehicule/M38A1_CMD/M38A1_CMD.fbx"
+    Mesh="GameData:/Assets/3D/Units/NL/Vehicule/M38A1_CMD_MID/M38A1_CMD_MID.fbx"
 )
 
 export Modele_M38A1_CMD_NL_LOW is TResourceMesh
 (
-    Mesh="GameData:/Assets/3D/Units/NL/Vehicule/M38A1_CMD/M38A1_CMD.fbx"
+    Mesh="GameData:/Assets/3D/Units/NL/Vehicule/M38A1_CMD_LOW/M38A1_CMD_LOW.fbx"
 )

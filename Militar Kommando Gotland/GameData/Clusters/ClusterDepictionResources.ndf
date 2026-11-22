@@ -4,10 +4,10 @@ export Main is TClusterNdfTransactions
     [
         TNDFTransaction
         (
-            BaseName  = 'GFX/DepictionResources'
+            BaseName  = 'GFX/DepictionResources.txn'
             NameSpace = 'GFX/DepictionResources'
             ResourcePackName = 'Base'
-            Moddable = true
+            Public = true
 
             Files =
             [

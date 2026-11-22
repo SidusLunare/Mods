@@ -1,0 +1,3 @@
+export Modele_KTJ_AA_HON     is TResourceMesh( Mesh="GameData:/Assets/3D/Units/HON/Vehicule/KTJ_AA/KTJ_AA.fbx" )
+export Modele_KTJ_AA_HON_MID is TResourceMesh( Mesh="GameData:/Assets/3D/Units/HON/Vehicule/KTJ_AA/KTJ_AA.fbx" )
+export Modele_KTJ_AA_HON_LOW is TResourceMesh( Mesh="GameData:/Assets/3D/Units/HON/Vehicule/KTJ_AA/KTJ_AA.fbx" )

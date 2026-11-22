@@ -1,0 +1,17 @@
+export Modele_VAB_HOT_6x6_CYP is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/FR/Antichar/VAB_HOT/VAB_HOT.fbx"
+)
+
+export Modele_VAB_HOT_6x6_CYP_MID is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/FR/Antichar/VAB_HOT_MID/VAB_HOT_MID.fbx"
+)
+
+export Modele_VAB_HOT_6x6_CYP_LOW is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/FR/Antichar/VAB_HOT_LOW/VAB_HOT_LOW.fbx"
+)
+
+
+

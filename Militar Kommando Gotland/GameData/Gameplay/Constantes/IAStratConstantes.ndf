@@ -48,9 +48,6 @@ IAStratConstantes is TIAStratConstantesDescriptor_Specific
 
     //--------------- Connaissance des zones ----------------------------------------//
 
-    // Si on utilise le contrôle des zones par ratios de force, c'est la valeur minimale à dépasser pour contrôler la zone
-    ControlRatioMinToControl = 1.0
-
     ZoneKnowledgeDuration = 360 // Durée pendant laquelle une zone reste connue après reco
     CommandZoneWeight = ~/CommandZoneCustomWeighForIAStrat // Numero donné aux zones générées automatiquement autours des zones objectif.
 
@@ -90,9 +87,6 @@ IAStratConstantes is TIAStratConstantesDescriptor_Specific
 
     MaxNumberOfStackingUnits = 2
 
-    // Objectif Attack
-    ObjectiveAttackOwnershipRatio = 0.1
-
     DefenseMacroActionFleePowerRatio = 0.3
 
     //--------------- Points de défense -------------------------------------------//
@@ -125,7 +119,6 @@ IAStratConstantes is TIAStratConstantesDescriptor_Specific
 
             (EDefensePointScoringFeature/IsObjectifCoeff, 1.0),                     // Bonus si la case contient un objectif
             (EDefensePointScoringFeature/MalusDefaultDefensePoint, 10.0),           // Malus si la case a été prise à défaut d'autres possibilités
-            (EDefensePointScoringFeature/IsDefenseUnit, 2.0),                       // Bonus si la case contient une tranchée ou une position de tir
         ]
         DefensePointPositioning = EDefensePointPositioningType/Anywhere)
 
@@ -252,10 +245,10 @@ IAStratConstantes is TIAStratConstantesDescriptor_Specific
     // constante de l'idle des helico
     HelicoSafeCollisionPlanesOrderByTag =
     [
-        ("AllUnits", [ECollisionPlane/NearGround, ECollisionPlane/LowAltitude, ECollisionPlane/Ground]),
+        ("AllUnits", [TCollisionPlane/NearGround, TCollisionPlane/LowAltitude, TCollisionPlane/Ground]),
     ]
 
-    IAStratPathCostCacheFilePath = "CurrentScenarioData:/IAStratZone/ZonePathCache.ndfbin"
+    IAStratPathCostCacheFilePath = "CurrentScenarioData:/out/IAStrat_PathCache.ndfbin"
     IAStratDistanceFromNotDefendedCommandZoneGRU = 1413 //Un peu plus que la taille de 1 zone IAStrat
     HysteresisDistanceForCommandUnitAlreadyAssignToCommandZoneGRU = 530
 
@@ -264,32 +257,32 @@ IAStratConstantes is TIAStratConstantesDescriptor_Specific
     [
         //Fallback AnyDifficulty doit toujours être présent
         (EDeploymentMode/NotSpecified, MAP[
-            (IADifficulty/AnyDifficulty, (0.9, 1.25)),
-            (IADifficulty/TresFacile, (0.9, 1.25)),         // On ne prend pas de risque, mais on perd aussi en réactivitée
-            (IADifficulty/Facile, (0.9, 1.25)),
-            (IADifficulty/Normal, (0.7, 1.0)),
-            (IADifficulty/Difficile, (0.65, 0.9)),
-            (IADifficulty/TresDifficile, (0.65, 0.9)),     // On prend plus de risque a partir de very hard
-            (IADifficulty/PlusDifficile, (0.65, 0.9)),
+            (EIADifficulty/AnyDifficulty, (0.9, 1.25)),
+            (EIADifficulty/TresFacile, (0.9, 1.25)),         // On ne prend pas de risque, mais on perd aussi en réactivitée
+            (EIADifficulty/Facile, (0.9, 1.25)),
+            (EIADifficulty/Normal, (0.7, 1.0)),
+            (EIADifficulty/Difficile, (0.65, 0.9)),
+            (EIADifficulty/TresDifficile, (0.65, 0.9)),     // On prend plus de risque a partir de very hard
+            (EIADifficulty/PlusDifficile, (0.65, 0.9)),
         ]),
 
         (EDeploymentMode/Breakthrough, MAP[
-            (IADifficulty/AnyDifficulty, (-1.0, 1.0)), //On ne sort jamais, on capture si on a au moins autant de force
+            (EIADifficulty/AnyDifficulty, (-1.0, 1.0)), //On ne sort jamais, on capture si on a au moins autant de force
         ]),
     ]
 
     MinimumScoreRatioForStayInCommandZonePerIADifficulty = MAP
     [
         (EDeploymentMode/NotSpecified, MAP[
-                (IADifficulty/AnyDifficulty, 1.0),
-                (IADifficulty/Normal, 0.8),
-                (IADifficulty/Difficile, 0.7),     // On prend plus de risque a partir de hard
-                (IADifficulty/TresDifficile, 0.7),
-                (IADifficulty/PlusDifficile, 0.7),
+                (EIADifficulty/AnyDifficulty, 1.0),
+                (EIADifficulty/Normal, 0.8),
+                (EIADifficulty/Difficile, 0.7),     // On prend plus de risque a partir de hard
+                (EIADifficulty/TresDifficile, 0.7),
+                (EIADifficulty/PlusDifficile, 0.7),
         ]),
 
         (EDeploymentMode/Breakthrough, MAP[
-            (IADifficulty/AnyDifficulty, 0.0), //On ne sort jamais
+            (EIADifficulty/AnyDifficulty, 0.0), //On ne sort jamais
         ]),
     ]
 
@@ -401,13 +394,13 @@ VisionConstantes is TIAStratVisionConstantes
 
     VisionParametersByDifficulty = MAP
     [
-        (IADifficulty/TresFacile, ~/IAStratVisionNoShootDetection),
-        (IADifficulty/Facile, ~/IAStratVisionNoShootDetection),
-        (IADifficulty/Normal, ~/IAStratVisionShootDetectionLittleMemory),
-        (IADifficulty/Difficile, ~/IAStratVisionShootDetectionLittleMemory),
-        (IADifficulty/TresDifficile, ~/IAStratVisionShootDetectionInfiniteMemory),
-        (IADifficulty/PlusDifficile, ~/IAStratVisionShootDetectionInfiniteMemory),
-        (IADifficulty/AnyDifficulty, ~/IAStratVisionShootDetectionLittleMemory)
+        (EIADifficulty/TresFacile, ~/IAStratVisionNoShootDetection),
+        (EIADifficulty/Facile, ~/IAStratVisionNoShootDetection),
+        (EIADifficulty/Normal, ~/IAStratVisionShootDetectionLittleMemory),
+        (EIADifficulty/Difficile, ~/IAStratVisionShootDetectionLittleMemory),
+        (EIADifficulty/TresDifficile, ~/IAStratVisionShootDetectionInfiniteMemory),
+        (EIADifficulty/PlusDifficile, ~/IAStratVisionShootDetectionInfiniteMemory),
+        (EIADifficulty/AnyDifficulty, ~/IAStratVisionShootDetectionLittleMemory)
     ]
 
     //--------------- Test de vision ----------------------------------------------//

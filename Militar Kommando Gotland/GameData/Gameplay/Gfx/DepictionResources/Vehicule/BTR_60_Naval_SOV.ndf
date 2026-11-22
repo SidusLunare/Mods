@@ -1,0 +1,20 @@
+export ModelFile_BTR_60_Naval_SOV is 'GameData:/Assets/3D/Units/URSS/APC/BTR_60/BTR_60.fbx'
+export Modele_BTR_60_Naval_SOV is TResourceMesh
+(
+    Mesh=ModelFile_BTR_60_SOV
+    Textures="GameData:/Assets/3D/Units/URSS/APC/BTR_60_Naval"
+)
+
+export ModelFile_BTR_60_Naval_SOV_MID is 'GameData:/Assets/3D/Units/URSS/APC/BTR_60_MID/BTR_60_MID.fbx'
+export Modele_BTR_60_Naval_SOV_MID is TResourceMesh
+(
+    Mesh=ModelFile_BTR_60_SOV_MID
+    Textures="GameData:/Assets/3D/Units/URSS/APC/BTR_60_Naval_MID"
+)
+
+export ModelFile_BTR_60_Naval_SOV_LOW is 'GameData:/Assets/3D/Units/URSS/APC/BTR_60_LOW/BTR_60_LOW.fbx'
+export Modele_BTR_60_Naval_SOV_LOW is TResourceMesh
+(
+    Mesh=ModelFile_BTR_60_SOV_LOW
+    Textures="GameData:/Assets/3D/Units/URSS/APC/BTR_60_Naval_LOW"
+)

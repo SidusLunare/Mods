@@ -1,0 +1,22 @@
+// Keep in sync with ContentTypeCaption in StatisticsVideoMemory.cpp
+ContentType_Texture_Unknown              is 0
+ContentType_Texture_Sticker              is 1
+ContentType_Texture_LevelBuild_High      is 2
+ContentType_Texture_LevelBuild_Mid       is 3
+ContentType_Texture_LevelBuild_Low       is 4
+ContentType_Texture_Terrain              is 5
+ContentType_Texture_FX                   is 6
+
+ContentType_Texture_Shadow               is 7
+ContentType_Texture_GBuffer              is 8
+ContentType_Texture_Shooting             is 9
+
+ContentType_Texture_Imposteur            is 10
+ContentType_Texture_PostProcess          is 11
+ContentType_Texture_SparseDBRTex         is 12
+ContentType_Texture_FrameBuffer          is 13
+ContentType_Texture_CDLOD                is 14
+ContentType_Texture_Selection            is 15
+ContentType_Texture_Water                is 16
+ContentType_Texture_FogOfWar             is 17
+ContentType_Texture_LightProbe           is 18

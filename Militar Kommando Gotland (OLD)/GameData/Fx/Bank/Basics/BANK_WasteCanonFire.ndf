@@ -1,0 +1,184 @@
+export WasteCanonFire_Test is TSimultaneousAction
+        (
+            Mobile = TMobileWithLocalRepereMatrixFactory
+            (
+                Position = float3[176.25,44.15625,0]
+            )
+            Actions =
+            [
+                TSequentialAction
+                (Actions = private ActionList is
+                    [
+                        TWaitInSec( Duration = 0.15 ),
+                        TActionCall
+                        (
+                            Action = $/VFX_Bank/BANK_WasteCanonFire_WG_Simple
+                            NamedParams = MAP[
+                                ( 'parColorMul', 6 ),
+                                ( 'parDuration', 10 ),
+                                ( 'parEndColor', float3[1,1,1] ),
+                                ( 'parEndSize', 50 ),
+                                ( 'parFluidFriction', 1 ),
+                                ( 'parLifetime', 10 ),
+                                ( 'parStartColor', float3[1,0.0509804,0.0509804] ),
+                                ( 'parStartSize', 500 ),
+                                ( 'parStartSpeed', 2000 ),
+                            ]
+                        ),
+                    ]
+                ),
+                TWaitInSec( Duration = 11 ),
+            ]
+        )
+
+export BANK_WasteCanonFire_WG_Simple is ActionCallWithParameters
+(
+    Action = BANK_WasteCanonFire_WG
+    Params =
+    [
+        private parStartSpeed       is Template_Param_Float (),
+        private parLifetime         is Template_Param_Float (),
+        private parDuration         is Template_Param_Float (),
+        private parStartSize        is Template_Param_Float (),
+        private parEndSize          is Template_Param_Float (),
+        private parStartColor       is Template_Param_Float3(),
+        private parEndColor         is Template_Param_Float3(),
+        private parColorMul         is Template_Param_Float (),
+        private parFluidFriction    is Template_Param_Float (),
+    ]
+    NamedParameters = MAP
+    [
+        ( 'BANK_InitialSpeed' , parStartSpeed * RandomRange[0.9, 1.0] ),
+        ( 'BANK_Freqency' , lerp[$/VFX_Bank/ActionLifeRatio, 200, 15] * $/VFX_Bank/FxLodLevel_from_005to1 ),
+        ( 'BANK_ParticleLifetime' , parLifetime * RandomRange[0.8, 1.25]),
+        ( 'BANK_OffsetPos' , float3[-100.00, 0.00, 0.00] ),
+        ( 'BANK_Duration' , parDuration ),
+        ( 'BANK_ParticleStartSize' , parStartSize * RandomRange[0.8, 1.25] ),
+        ( 'BANK_ParticleEndSize' , parEndSize * RandomRange[0.8, 1.25] ),
+        ( 'BANK_StartColorRGB' , parStartColor ),
+        ( 'BANK_EndColorRGB' , parEndColor ),
+        ( 'BANK_RGBMul' , parColorMul * 0.1),
+        ( 'BANK_FluidFriction' , parFluidFriction ),
+    ]
+)
+
+export BANK_WasteCanonFire_WG is SimultaneousActionDeclaration
+(
+    Params =
+    [
+        private BANK_InitialSpeed is Template_ActionAlias
+        (
+            ExpectedType = 'float'
+            DefaultValue = 20000 * RandomRange[0.9, 1]
+        ),
+        private BANK_Freqency is Template_ActionAlias
+        (
+            ExpectedType = 'float'
+            DefaultValue = lerp[$/VFX_Bank/ActionLifeRatio, 200, 15] * $/VFX_Bank/FxLodLevel_from_005to1
+        ),
+        private BANK_ParticleLifetime is Template_ActionAlias
+        (
+            ExpectedType = 'float'
+            DefaultValue = RandomRange[0.1, 0.2]
+        ),
+        private BANK_OffsetPos is Template_ActionAlias
+        (
+            ExpectedType = 'float3'
+            DefaultValue = float3[-100.00, 0.00, 0.00]
+        ),
+        private BANK_Duration is Template_ActionAlias
+        (
+            ExpectedType = 'float'
+            DefaultValue = 0.1
+        ),
+        private BANK_ParticleStartSize is Template_ActionAlias
+        (
+            ExpectedType = 'float'
+            DefaultValue = 100
+        ),
+        private BANK_ParticleEndSize is Template_ActionAlias
+        (
+            ExpectedType = 'float'
+            DefaultValue = 666
+        ),
+        private BANK_StartColorRGB is Template_ActionAlias
+        (
+            ExpectedType = 'float3'
+            DefaultValue = float3[1.00, 0.05, 0.05]
+        ),
+        private BANK_EndColorRGB is Template_ActionAlias
+        (
+            ExpectedType = 'float3'
+            DefaultValue = float3[1.00, 1.00, 1.00]
+        ),
+        private BANK_RGBMul is Template_ActionAlias
+        (
+            ExpectedType = 'any'
+            DefaultValue = 6
+        ),
+        private BANK_FluidFriction is Template_ActionAlias
+        (
+            ExpectedType = 'any'
+            DefaultValue = 10
+        ),
+    ]
+    Actions =
+    [
+        private WasteCanonFire is ParticleSpraySpawnerWithEvaluable
+        (
+            Frequency = BANK_Freqency
+            Spawner = private SP is ParticleSpawner
+            (
+                ParticleLifetime = BANK_ParticleLifetime
+                Initialisers =
+                [
+                    ParticleInitialiserList
+                    (
+                        ColorModifier = float3[1, 1, 1]
+
+                        Speed = GenFloat3[BANK_InitialSpeed, 0, 0] * $/VFX_Bank/SpawnerRemainingLifeRatio
+                        Size = 1
+                        RotationSpeed = $/VFX_Bank/MinusOneToOneRandomSphereVolume * 0.1
+                        Rotation = RandomRange[-0.5, 0.5]
+                        CustomFloat_1 = $/VFX_Bank/SpawnerRemainingLifeRatio
+                        CustomFloat_2 = BANK_ParticleStartSize
+                        CustomFloat_3 = BANK_ParticleEndSize
+                        CustomFloat_4 = BANK_RGBMul
+                        CustomFloat_5 = BANK_FluidFriction
+                        CustomFloat3_1 = BANK_StartColorRGB
+                        CustomFloat3_2 = BANK_EndColorRGB
+                        Alpha = 1
+                        ColorMultiplier = 1
+                        Position = BANK_OffsetPos
+                    ),
+                ]
+                ParticleDescriptor = ParticleDescriptor
+                (
+                    RenderInfo = ParticleRenderInfo
+                    (
+                        ZTest = True
+                        ZWrite = False
+                        SortTriangles = True
+                        Use3DRotation = True
+                        TextureName = 'GameData:/Assets/2D/Fx/flame_03.png'
+                        EmissiveParticle = true
+                    )
+                    Evolvers = ParticleStandardEvolverListWithPhysic
+                    (
+                        FluidFriction = ParticleCustomFloat_5
+                        PhysicAccelerationField = $/VFX_Bank/MapWind
+                        Size = lerp[Pow[ParticleLifeRatio, 0.5], ParticleCustomFloat_2, ParticleCustomFloat_3 * ParticleCustomFloat_1]
+                        ColorModifier = lerp[ParticleLifeRatio, ParticleCustomFloat3_1, ParticleCustomFloat3_2]
+                        Opacity = AttackDecay[ParticleLifeRatio, 0.01] * ParticleCustomFloat_1
+                        EmissivePower = ParticleCustomFloat_4 * ParticleCustomFloat_1
+                        ZBias = ParticleSize * 0.5
+                    )
+                    ParticleRenderer = $/VFX_Bank/LitParticleRendererNoCentroidPositioning
+                )
+            )
+            StabilisationTime = BANK_ParticleLifetime + 1
+            Position = BANK_OffsetPos
+            DurationInSec = BANK_Duration
+        ),
+    ]
+)

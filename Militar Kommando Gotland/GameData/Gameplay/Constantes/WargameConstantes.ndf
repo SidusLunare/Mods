@@ -1,0 +1,95 @@
+//---------------------------------------------------------------------------------//
+//---------------------------------------------------------------------------------//
+//------------------------ Spécifiques WARGAME ------------------------------------//
+//---------------------------------------------------------------------------------//
+//---------------------------------------------------------------------------------//
+
+WargameConstantes is TWargameTunableConstante
+(
+    // /!\ MERCI DE RESPECTER L'ORDRE ALPHABETIQUE !
+    // Par catégories puis par constante.
+
+//------------------------- Constantes IAStrat ------------------------------------------//
+    // Bonus en pourcentage donné à l'IA à l'income. Exemple : 0.0 = +0%, 0.10 = +10%
+    RelativeBonusFluxByIADifficulty = MAP
+    [
+        (EIADifficulty/TresFacile,    0.0),
+        (EIADifficulty/Facile,        0.0),
+        (EIADifficulty/Normal,        0.0),
+        (EIADifficulty/Difficile,     0.0),
+        (EIADifficulty/TresDifficile, 0.5),
+        (EIADifficulty/PlusDifficile, 1.0),
+    ]
+
+    // Multiplicateur sur le nombre d'unités dans le deck de l'IA (ex : 0.5 donnera 50% d'unités en plus à l'IA)
+    DeckUnitCountMultiplierByIADifficulty = MAP
+    [
+        (EIADifficulty/TresFacile,       0),
+        (EIADifficulty/Facile,           0),
+        (EIADifficulty/Normal,           0),
+        (EIADifficulty/Difficile,        0),
+        (EIADifficulty/TresDifficile,    0.5),
+        (EIADifficulty/PlusDifficile,    1.0),
+    ]
+
+    // Bonus d'exp additif donné à toutes les unités du deck de l'IA (ex: 1 donnera un niveau de plus à tout le monde)
+    DeckUnitExpLevelAdditiveModifierByIADifficulty = MAP
+    [
+        (EIADifficulty/TresFacile,       -2),
+        (EIADifficulty/Facile,           -1),
+        (EIADifficulty/Normal,           0),
+        (EIADifficulty/Difficile,        0),
+        (EIADifficulty/TresDifficile,    0),
+        (EIADifficulty/PlusDifficile,    0),
+    ]
+
+    // Reduction du coût d'entretien des unités
+    UpkeepReductionByIADifficulty = MAP
+    [
+        (EIADifficulty/TresDifficile, 0.25),
+        (EIADifficulty/PlusDifficile, 0.5),
+    ]
+
+//-------------------- Constantes InterfaceSpecific -------------------------------//
+
+    FactoriesWhichNeverCloseProductionMenuAfterValidation = [
+    ]
+
+    MaxNbMergedUnitsInGroup = 4 // Nombre maximum d'unites dans un groupe merge
+
+    NomDAffichageDesUnitesNonIdentifiees = "UNIDNM"
+
+    TagDInfanteriePinned = "Infanterie_Cowering"
+    ValeurMinAffichageBarMoralLabel = 0 // compris entre 0 et 1
+    ValeurMaxBarMoralLabel = 1 // compris entre 0 et 1
+
+    ValeurOptionTailleNewLabelMinimal = 0.63
+    ValeurOptionTailleNewLabelVerySmall = 0.77
+    ValeurOptionTailleNewLabelSmall = 0.88
+    ValeurOptionTailleNewLabelNormal = 1.0
+    ValeurOptionTailleNewLabelLarge = 1.23
+    ValeurOptionTailleNewLabelVeryLarge = 1.4
+
+//---------------------------- Constantes Mouvement -------------------------------------//
+
+    AmphibiousSpawnLandSeaRatio = 1.5 // >=0, ponderation arbitraire pour determiner si une amphibie spawne au spawn marin ou terrestre (=1:elle prendra le plus proche a vol d'oiseau ; <1:elle preferera le marin, >1:elle preferera le terrestre)
+
+//------------------------------ Constantes Tactic --------------------------------------//
+
+    //Order Token bloqué lorsque que l'unité est sans essence
+    OrderBlockedWhenOutOfFuel = [EOrderType/Move, EOrderType/SmartMove, EOrderType/QuickMove, EOrderType/FastMoveAndAttack, EOrderType/Reverse, EOrderType/ChangeAltitude,
+        EOrderType/AirplaneEvacuate, EOrderType/AirplaneMoveAndEngage]
+    OrdersAcceptedByTransporterIfTransportedUnitsCanDo = [EOrderType/AIAttack, EOrderType/AIDefend]
+
+//------------------------------ Constantes Vision --------------------------------------//
+    DissimulationEnumToValue = MAP
+    [
+        (~/DissimulationValue/VEHICLE, 1.0),
+        (~/DissimulationValue/VEHICLE_RECO, 1.5),
+        (~/DissimulationValue/INFANTRY, 2.0),
+        (~/DissimulationValue/INFANTRY_RECO, 2.5),
+    ]
+
+//------------------------------ Constantes WargameBuilding --------------------------------------//
+    WargameBuildingAllowedTerrainsMask = ETerrainType/Default | ETerrainType/ForetLegere
+)

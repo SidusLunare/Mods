@@ -1,0 +1,26 @@
+template TemplateMultiMapInfo
+[
+    ScenarioName : string,
+    Description : string,
+    DefaultNbSlotsOpened : int,
+    GameMode : int,
+    CombatRule : int,
+    EnvironmentSettings : List<TEnvironmentGraphicSettings>,
+    MapSize : string,
+    Density : string,
+    HasRivers : bool,
+    RelevanceScoreForGameRoomList : int = 0,
+]
+is TMultiMapInfo
+(
+    ScenarioName = <ScenarioName>
+    Description = <Description>
+    DefaultNbSlotsOpened = <DefaultNbSlotsOpened>
+    GameMode = <GameMode>
+    CombatRule = <CombatRule>
+    EnvironmentSettings = <EnvironmentSettings>
+    MapSize = <MapSize>
+    Density = <Density>
+    HasRivers = <HasRivers>
+    RelevanceScoreForGameRoomList = <RelevanceScoreForGameRoomList>
+)

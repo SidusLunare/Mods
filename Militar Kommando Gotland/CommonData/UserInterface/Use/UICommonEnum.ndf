@@ -213,3 +213,16 @@ AreaShape is TBaseClass
     Disc           is 1
     Length         is 2
 )
+
+//-----------------------------------------------------------------------------
+// Constantes pour le UITextStyle, doit matcher le cpp
+UIText_Left is 0
+UIText_Center is 1
+UIText_Right is 2
+UIText_LeftJustified is 3
+
+UIText_FirstBaseLine is 0
+UIText_LastBaseLine is 1
+UIText_VerticalCenter is 2
+UIText_Up is 3
+UIText_Bottom is 4

@@ -5,12 +5,12 @@ export Modele_UAZ_469_AGL_Grenzer_DDR is TResourceMesh
 
 export Modele_UAZ_469_AGL_Grenzer_DDR_MID is TResourceMesh
 (
-    Mesh="GameData:/Assets/3D/Units/DDR/Vehicule/UAZ_469_AGL/UAZ_469_AGL.fbx"
+    Mesh="GameData:/Assets/3D/Units/DDR/Vehicule/UAZ_469_AGL_MID/UAZ_469_AGL_MID.fbx"
 )
 
 export Modele_UAZ_469_AGL_Grenzer_DDR_LOW is TResourceMesh
 (
-    Mesh="GameData:/Assets/3D/Units/DDR/Vehicule/UAZ_469_AGL/UAZ_469_AGL.fbx"
+    Mesh="GameData:/Assets/3D/Units/DDR/Vehicule/UAZ_469_AGL_LOW/UAZ_469_AGL_LOW.fbx"
 )
 
 

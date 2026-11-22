@@ -36,6 +36,7 @@ export DepictionOperator_MovementSound_SM_812 is TCosmeticDriveMovementSoundOper
             )
         ),
     ]
+    SplashSound = SplashSoundDescriptor
     StartSounds = 
     [
         TSoundDescriptor
@@ -95,6 +96,7 @@ export DepictionOperator_MovementSound_SM_AEC_Militant is TCosmeticDriveMovement
             )
         ),
     ]
+    SplashSound = SplashSoundDescriptor
     StartSounds = 
     [
         TSoundDescriptor
@@ -154,6 +156,7 @@ export DepictionOperator_MovementSound_SM_AML is TCosmeticDriveMovementSoundOper
             )
         ),
     ]
+    SplashSound = SplashSoundDescriptor
     StartSounds = 
     [
         TSoundDescriptor
@@ -213,6 +216,7 @@ export DepictionOperator_MovementSound_SM_AMX_10 is TCosmeticDriveMovementSoundO
             )
         ),
     ]
+    SplashSound = SplashSoundDescriptor
     StartSounds = 
     [
         TSoundDescriptor
@@ -272,6 +276,7 @@ export DepictionOperator_MovementSound_SM_AMX_10_RC is TCosmeticDriveMovementSou
             )
         ),
     ]
+    SplashSound = SplashSoundDescriptor
     StartSounds = 
     [
         TSoundDescriptor
@@ -331,6 +336,7 @@ export DepictionOperator_MovementSound_SM_AMX_13 is TCosmeticDriveMovementSoundO
             )
         ),
     ]
+    SplashSound = SplashSoundDescriptor
     StartSounds = 
     [
         TSoundDescriptor
@@ -390,6 +396,7 @@ export DepictionOperator_MovementSound_SM_AMX_30 is TCosmeticDriveMovementSoundO
             )
         ),
     ]
+    SplashSound = SplashSoundDescriptor
     StartSounds = 
     [
         TSoundDescriptor
@@ -449,6 +456,7 @@ export DepictionOperator_MovementSound_SM_AMX_AuF1 is TCosmeticDriveMovementSoun
             )
         ),
     ]
+    SplashSound = SplashSoundDescriptor
     StartSounds = 
     [
         TSoundDescriptor
@@ -508,6 +516,7 @@ export DepictionOperator_MovementSound_SM_AS_90 is TCosmeticDriveMovementSoundOp
             )
         ),
     ]
+    SplashSound = SplashSoundDescriptor
     StartSounds = 
     [
         TSoundDescriptor
@@ -567,6 +576,7 @@ export DepictionOperator_MovementSound_SM_Akatsiya is TCosmeticDriveMovementSoun
             )
         ),
     ]
+    SplashSound = SplashSoundDescriptor
     StartSounds = 
     [
         TSoundDescriptor
@@ -626,6 +636,7 @@ export DepictionOperator_MovementSound_SM_Auverland is TCosmeticDriveMovementSou
             )
         ),
     ]
+    SplashSound = SplashSoundDescriptor
     StartSounds = 
     [
         TSoundDescriptor
@@ -685,6 +696,7 @@ export DepictionOperator_MovementSound_SM_BAZ is TCosmeticDriveMovementSoundOper
             )
         ),
     ]
+    SplashSound = SplashSoundDescriptor
     StartSounds = 
     [
         TSoundDescriptor
@@ -744,6 +756,7 @@ export DepictionOperator_MovementSound_SM_BM30 is TCosmeticDriveMovementSoundOpe
             )
         ),
     ]
+    SplashSound = SplashSoundDescriptor
     StartSounds = 
     [
         TSoundDescriptor
@@ -803,6 +816,7 @@ export DepictionOperator_MovementSound_SM_BMD is TCosmeticDriveMovementSoundOper
             )
         ),
     ]
+    SplashSound = SplashSoundDescriptor
     StartSounds = 
     [
         TSoundDescriptor
@@ -862,6 +876,7 @@ export DepictionOperator_MovementSound_SM_BRDM is TCosmeticDriveMovementSoundOpe
             )
         ),
     ]
+    SplashSound = SplashSoundDescriptor
     StartSounds = 
     [
         TSoundDescriptor
@@ -921,6 +936,7 @@ export DepictionOperator_MovementSound_SM_BTR is TCosmeticDriveMovementSoundOper
             )
         ),
     ]
+    SplashSound = SplashSoundDescriptor
     StartSounds = 
     [
         TSoundDescriptor
@@ -980,6 +996,7 @@ export DepictionOperator_MovementSound_SM_BTR_152 is TCosmeticDriveMovementSound
             )
         ),
     ]
+    SplashSound = SplashSoundDescriptor
     StartSounds = 
     [
         TSoundDescriptor
@@ -1039,6 +1056,7 @@ export DepictionOperator_MovementSound_SM_Bedford is TCosmeticDriveMovementSound
             )
         ),
     ]
+    SplashSound = SplashSoundDescriptor
     StartSounds = 
     [
         TSoundDescriptor
@@ -1098,6 +1116,7 @@ export DepictionOperator_MovementSound_SM_Berliet_GBU15 is TCosmeticDriveMovemen
             )
         ),
     ]
+    SplashSound = SplashSoundDescriptor
     StartSounds = 
     [
         TSoundDescriptor
@@ -1157,6 +1176,7 @@ export DepictionOperator_MovementSound_SM_Bmp1 is TCosmeticDriveMovementSoundOpe
             )
         ),
     ]
+    SplashSound = SplashSoundDescriptor
     StartSounds = 
     [
         TSoundDescriptor
@@ -1216,6 +1236,7 @@ export DepictionOperator_MovementSound_SM_Bmp2 is TCosmeticDriveMovementSoundOpe
             )
         ),
     ]
+    SplashSound = SplashSoundDescriptor
     StartSounds = 
     [
         TSoundDescriptor
@@ -1275,6 +1296,7 @@ export DepictionOperator_MovementSound_SM_Bmp3 is TCosmeticDriveMovementSoundOpe
             )
         ),
     ]
+    SplashSound = SplashSoundDescriptor
     StartSounds = 
     [
         TSoundDescriptor
@@ -1334,6 +1356,7 @@ export DepictionOperator_MovementSound_SM_Bradley is TCosmeticDriveMovementSound
             )
         ),
     ]
+    SplashSound = SplashSoundDescriptor
     StartSounds = 
     [
         TSoundDescriptor
@@ -1393,6 +1416,7 @@ export DepictionOperator_MovementSound_SM_Buggy is TCosmeticDriveMovementSoundOp
             )
         ),
     ]
+    SplashSound = SplashSoundDescriptor
     StartSounds = 
     [
         TSoundDescriptor
@@ -1452,6 +1476,7 @@ export DepictionOperator_MovementSound_SM_CUCV is TCosmeticDriveMovementSoundOpe
             )
         ),
     ]
+    SplashSound = SplashSoundDescriptor
     StartSounds = 
     [
         TSoundDescriptor
@@ -1471,6 +1496,66 @@ export DepictionOperator_MovementSound_SM_CUCV is TCosmeticDriveMovementSoundOpe
             TheSoundStream = TSoundStream
             (
                 FileName = "GameData:/Assets/Sounds/SFX/Moteurs/Stop/CUCV_Wheeled_vehicle_Stop.wav"
+            )
+        ),
+    ]
+    VolumeIdleStop = 0.8
+)
+export DepictionOperator_MovementSound_SM_Centauro is TCosmeticDriveMovementSoundOperatorDesc
+(
+    IdleDuration = 10
+    IdleFadeInDuration = 0.5
+    IdleFadeOutDuration = 2
+    IdleSounds = 
+    [
+        TSoundDescriptor
+        (
+            SoundSettings = $/SoundSettings/SoundSettings_Moteur
+            TheSoundStream = TSoundStream
+            (
+                FileName = "GameData:/Assets/Sounds/SFX/Moteurs/Idle/Centauro_Wheeled_vehicle_LoopIdle.wav"
+            )
+        ),
+    ]
+    MaxVolume = 1
+    MaxVolumeSpeed = 80
+    MinVolume = 0.5
+    OperatorId = "driveSound"
+    RunFadeInDuration = 1
+    RunFadeOutDuration = 2
+    RunOutPitchToGo = 0
+    RunOutPitchVelocity = 0.4
+    RunSounds = 
+    [
+        TSoundDescriptor
+        (
+            SoundSettings = $/SoundSettings/SoundSettings_Moteur
+            TheSoundStream = TSoundStream
+            (
+                FileName = "GameData:/Assets/Sounds/SFX/Moteurs/Centauro_Wheeled_vehicle_Loop.wav"
+            )
+        ),
+    ]
+    SplashSound = SplashSoundDescriptor
+    StartSounds = 
+    [
+        TSoundDescriptor
+        (
+            SoundSettings = $/SoundSettings/SoundSettings_Moteur
+            TheSoundStream = TSoundStream
+            (
+                FileName = "GameData:/Assets/Sounds/SFX/Moteurs/Start/Centauro_Wheeled_vehicle_Start_Engine.wav"
+            )
+        ),
+    ]
+    StopSounds = 
+    [
+        TSoundDescriptor
+        (
+            SoundSettings = $/SoundSettings/SoundSettings_Moteur
+            TheSoundStream = TSoundStream
+            (
+                FileName = "GameData:/Assets/Sounds/SFX/Moteurs/Stop/AMX10RC_Wheeled_vehicle_Stop.wav"
             )
         ),
     ]
@@ -1511,6 +1596,7 @@ export DepictionOperator_MovementSound_SM_Centurion is TCosmeticDriveMovementSou
             )
         ),
     ]
+    SplashSound = SplashSoundDescriptor
     StartSounds = 
     [
         TSoundDescriptor
@@ -1570,6 +1656,7 @@ export DepictionOperator_MovementSound_SM_Challenger_1 is TCosmeticDriveMovement
             )
         ),
     ]
+    SplashSound = SplashSoundDescriptor
     StartSounds = 
     [
         TSoundDescriptor
@@ -1629,6 +1716,7 @@ export DepictionOperator_MovementSound_SM_Chieftain is TCosmeticDriveMovementSou
             )
         ),
     ]
+    SplashSound = SplashSoundDescriptor
     StartSounds = 
     [
         TSoundDescriptor
@@ -1688,6 +1776,7 @@ export DepictionOperator_MovementSound_SM_DAF is TCosmeticDriveMovementSoundOper
             )
         ),
     ]
+    SplashSound = SplashSoundDescriptor
     StartSounds = 
     [
         TSoundDescriptor
@@ -1747,6 +1836,7 @@ export DepictionOperator_MovementSound_SM_Daimler_Benz is TCosmeticDriveMovement
             )
         ),
     ]
+    SplashSound = SplashSoundDescriptor
     StartSounds = 
     [
         TSoundDescriptor
@@ -1766,6 +1856,66 @@ export DepictionOperator_MovementSound_SM_Daimler_Benz is TCosmeticDriveMovement
             TheSoundStream = TSoundStream
             (
                 FileName = "GameData:/Assets/Sounds/SFX/Moteurs/Stop/TRM2000_Wheeled_vehicle_Stop.wav"
+            )
+        ),
+    ]
+    VolumeIdleStop = 0.8
+)
+export DepictionOperator_MovementSound_SM_Dnepr_Moto is TCosmeticDriveMovementSoundOperatorDesc
+(
+    IdleDuration = 10
+    IdleFadeInDuration = 0.5
+    IdleFadeOutDuration = 2
+    IdleSounds = 
+    [
+        TSoundDescriptor
+        (
+            SoundSettings = $/SoundSettings/SoundSettings_Moteur
+            TheSoundStream = TSoundStream
+            (
+                FileName = "GameData:/Assets/Sounds/SFX/Moteurs/Idle/Moto_Dnepr_Wheeled_vehicle_LoopIdle.wav"
+            )
+        ),
+    ]
+    MaxVolume = 1
+    MaxVolumeSpeed = 80
+    MinVolume = 0.5
+    OperatorId = "driveSound"
+    RunFadeInDuration = 0.5
+    RunFadeOutDuration = 2
+    RunOutPitchToGo = 0
+    RunOutPitchVelocity = 0.4
+    RunSounds = 
+    [
+        TSoundDescriptor
+        (
+            SoundSettings = $/SoundSettings/SoundSettings_Moteur
+            TheSoundStream = TSoundStream
+            (
+                FileName = "GameData:/Assets/Sounds/SFX/Moteurs/Moto_Dnepr_Wheeled_vehicle_Loop.wav"
+            )
+        ),
+    ]
+    SplashSound = SplashSoundDescriptor
+    StartSounds = 
+    [
+        TSoundDescriptor
+        (
+            SoundSettings = $/SoundSettings/SoundSettings_Moteur
+            TheSoundStream = TSoundStream
+            (
+                FileName = "GameData:/Assets/Sounds/SFX/Moteurs/Start/Moto_Dnepr_Wheeled_vehicle_Start_Engine.wav"
+            )
+        ),
+    ]
+    StopSounds = 
+    [
+        TSoundDescriptor
+        (
+            SoundSettings = $/SoundSettings/SoundSettings_Moteur
+            TheSoundStream = TSoundStream
+            (
+                FileName = "GameData:/Assets/Sounds/SFX/Moteurs/Stop/Moto_Dnepr_Wheeled_vehicle_Stop.wav"
             )
         ),
     ]
@@ -1806,6 +1956,7 @@ export DepictionOperator_MovementSound_SM_EBR is TCosmeticDriveMovementSoundOper
             )
         ),
     ]
+    SplashSound = SplashSoundDescriptor
     StartSounds = 
     [
         TSoundDescriptor
@@ -1865,6 +2016,7 @@ export DepictionOperator_MovementSound_SM_FV_432 is TCosmeticDriveMovementSoundO
             )
         ),
     ]
+    SplashSound = SplashSoundDescriptor
     StartSounds = 
     [
         TSoundDescriptor
@@ -1924,6 +2076,7 @@ export DepictionOperator_MovementSound_SM_FV_721 is TCosmeticDriveMovementSoundO
             )
         ),
     ]
+    SplashSound = SplashSoundDescriptor
     StartSounds = 
     [
         TSoundDescriptor
@@ -1983,6 +2136,7 @@ export DepictionOperator_MovementSound_SM_FV_Scimitar is TCosmeticDriveMovementS
             )
         ),
     ]
+    SplashSound = SplashSoundDescriptor
     StartSounds = 
     [
         TSoundDescriptor
@@ -2042,6 +2196,7 @@ export DepictionOperator_MovementSound_SM_Ferret_Mk2 is TCosmeticDriveMovementSo
             )
         ),
     ]
+    SplashSound = SplashSoundDescriptor
     StartSounds = 
     [
         TSoundDescriptor
@@ -2101,6 +2256,7 @@ export DepictionOperator_MovementSound_SM_GAZ_66 is TCosmeticDriveMovementSoundO
             )
         ),
     ]
+    SplashSound = SplashSoundDescriptor
     StartSounds = 
     [
         TSoundDescriptor
@@ -2160,6 +2316,7 @@ export DepictionOperator_MovementSound_SM_GOAT is TCosmeticDriveMovementSoundOpe
             )
         ),
     ]
+    SplashSound = SplashSoundDescriptor
     StartSounds = 
     [
         TSoundDescriptor
@@ -2219,6 +2376,7 @@ export DepictionOperator_MovementSound_SM_GTMU is TCosmeticDriveMovementSoundOpe
             )
         ),
     ]
+    SplashSound = SplashSoundDescriptor
     StartSounds = 
     [
         TSoundDescriptor
@@ -2278,6 +2436,7 @@ export DepictionOperator_MovementSound_SM_Gepard is TCosmeticDriveMovementSoundO
             )
         ),
     ]
+    SplashSound = SplashSoundDescriptor
     StartSounds = 
     [
         TSoundDescriptor
@@ -2337,6 +2496,7 @@ export DepictionOperator_MovementSound_SM_HEMTT is TCosmeticDriveMovementSoundOp
             )
         ),
     ]
+    SplashSound = SplashSoundDescriptor
     StartSounds = 
     [
         TSoundDescriptor
@@ -2396,6 +2556,7 @@ export DepictionOperator_MovementSound_SM_HS30 is TCosmeticDriveMovementSoundOpe
             )
         ),
     ]
+    SplashSound = SplashSoundDescriptor
     StartSounds = 
     [
         TSoundDescriptor
@@ -2455,6 +2616,7 @@ export DepictionOperator_MovementSound_SM_Halftrack_GMC is TCosmeticDriveMovemen
             )
         ),
     ]
+    SplashSound = SplashSoundDescriptor
     StartSounds = 
     [
         TSoundDescriptor
@@ -2474,6 +2636,66 @@ export DepictionOperator_MovementSound_SM_Halftrack_GMC is TCosmeticDriveMovemen
             TheSoundStream = TSoundStream
             (
                 FileName = "GameData:/Assets/Sounds/SFX/Moteurs/Stop/Halftrack_GMC_Wheeled_vehicle_Stop.wav"
+            )
+        ),
+    ]
+    VolumeIdleStop = 0.8
+)
+export DepictionOperator_MovementSound_SM_Hellcat is TCosmeticDriveMovementSoundOperatorDesc
+(
+    IdleDuration = 10
+    IdleFadeInDuration = 0.5
+    IdleFadeOutDuration = 2
+    IdleSounds = 
+    [
+        TSoundDescriptor
+        (
+            SoundSettings = $/SoundSettings/SoundSettings_Moteur
+            TheSoundStream = TSoundStream
+            (
+                FileName = "GameData:/Assets/Sounds/SFX/Moteurs/Idle/Hellcat_Tracked_MBT_LoopIdle.wav"
+            )
+        ),
+    ]
+    MaxVolume = 1
+    MaxVolumeSpeed = 80
+    MinVolume = 0.5
+    OperatorId = "driveSound"
+    RunFadeInDuration = 1
+    RunFadeOutDuration = 2
+    RunOutPitchToGo = 0
+    RunOutPitchVelocity = 0.4
+    RunSounds = 
+    [
+        TSoundDescriptor
+        (
+            SoundSettings = $/SoundSettings/SoundSettings_Moteur
+            TheSoundStream = TSoundStream
+            (
+                FileName = "GameData:/Assets/Sounds/SFX/Moteurs/Hellcat_Tracked_MBT_Loop.wav"
+            )
+        ),
+    ]
+    SplashSound = SplashSoundDescriptor
+    StartSounds = 
+    [
+        TSoundDescriptor
+        (
+            SoundSettings = $/SoundSettings/SoundSettings_Moteur
+            TheSoundStream = TSoundStream
+            (
+                FileName = "GameData:/Assets/Sounds/SFX/Moteurs/Start/Hellcat_Tracked_MBT_Start_Engine.wav"
+            )
+        ),
+    ]
+    StopSounds = 
+    [
+        TSoundDescriptor
+        (
+            SoundSettings = $/SoundSettings/SoundSettings_Moteur
+            TheSoundStream = TSoundStream
+            (
+                FileName = "GameData:/Assets/Sounds/SFX/Moteurs/Stop/Hellcat_Tracked_MBT_Stop.wav"
             )
         ),
     ]
@@ -2514,6 +2736,7 @@ export DepictionOperator_MovementSound_SM_Humber is TCosmeticDriveMovementSoundO
             )
         ),
     ]
+    SplashSound = SplashSoundDescriptor
     StartSounds = 
     [
         TSoundDescriptor
@@ -2573,6 +2796,7 @@ export DepictionOperator_MovementSound_SM_Humvee is TCosmeticDriveMovementSoundO
             )
         ),
     ]
+    SplashSound = SplashSoundDescriptor
     StartSounds = 
     [
         TSoundDescriptor
@@ -2632,6 +2856,7 @@ export DepictionOperator_MovementSound_SM_IS2 is TCosmeticDriveMovementSoundOper
             )
         ),
     ]
+    SplashSound = SplashSoundDescriptor
     StartSounds = 
     [
         TSoundDescriptor
@@ -2691,6 +2916,7 @@ export DepictionOperator_MovementSound_SM_Iltis is TCosmeticDriveMovementSoundOp
             )
         ),
     ]
+    SplashSound = SplashSoundDescriptor
     StartSounds = 
     [
         TSoundDescriptor
@@ -2710,6 +2936,66 @@ export DepictionOperator_MovementSound_SM_Iltis is TCosmeticDriveMovementSoundOp
             TheSoundStream = TSoundStream
             (
                 FileName = "GameData:/Assets/Sounds/SFX/Moteurs/Stop/Iltis_Wheeled_vehicle_Stop.wav"
+            )
+        ),
+    ]
+    VolumeIdleStop = 0.8
+)
+export DepictionOperator_MovementSound_SM_Kalmar is TCosmeticDriveMovementSoundOperatorDesc
+(
+    IdleDuration = 5
+    IdleFadeInDuration = 0.5
+    IdleFadeOutDuration = 2
+    IdleSounds = 
+    [
+        TSoundDescriptor
+        (
+            SoundSettings = $/SoundSettings/SoundSettings_Moteur
+            TheSoundStream = TSoundStream
+            (
+                FileName = "GameData:/Assets/Sounds/SFX/Moteurs/Idle/Kalmar_vehicle_LoopIdle.wav"
+            )
+        ),
+    ]
+    MaxVolume = 1
+    MaxVolumeSpeed = 80
+    MinVolume = 0.5
+    OperatorId = "driveSound"
+    RunFadeInDuration = 0.5
+    RunFadeOutDuration = 0.5
+    RunOutPitchToGo = 0
+    RunOutPitchVelocity = 0.4
+    RunSounds = 
+    [
+        TSoundDescriptor
+        (
+            SoundSettings = $/SoundSettings/SoundSettings_Moteur
+            TheSoundStream = TSoundStream
+            (
+                FileName = "GameData:/Assets/Sounds/SFX/Moteurs/Kalmar_vehicle_Loop.wav"
+            )
+        ),
+    ]
+    SplashSound = SplashSoundDescriptor
+    StartSounds = 
+    [
+        TSoundDescriptor
+        (
+            SoundSettings = $/SoundSettings/SoundSettings_Moteur
+            TheSoundStream = TSoundStream
+            (
+                FileName = "GameData:/Assets/Sounds/SFX/Moteurs/Start/Kalmar_vehicle_Start_Engine.wav"
+            )
+        ),
+    ]
+    StopSounds = 
+    [
+        TSoundDescriptor
+        (
+            SoundSettings = $/SoundSettings/SoundSettings_Moteur
+            TheSoundStream = TSoundStream
+            (
+                FileName = "GameData:/Assets/Sounds/SFX/Moteurs/Stop/Kalmar_vehicle_Stop.wav"
             )
         ),
     ]
@@ -2750,6 +3036,7 @@ export DepictionOperator_MovementSound_SM_Kraka is TCosmeticDriveMovementSoundOp
             )
         ),
     ]
+    SplashSound = SplashSoundDescriptor
     StartSounds = 
     [
         TSoundDescriptor
@@ -2809,6 +3096,7 @@ export DepictionOperator_MovementSound_SM_LARC is TCosmeticDriveMovementSoundOpe
             )
         ),
     ]
+    SplashSound = SplashSoundDescriptor
     StartSounds = 
     [
         TSoundDescriptor
@@ -2868,6 +3156,7 @@ export DepictionOperator_MovementSound_SM_LARS is TCosmeticDriveMovementSoundOpe
             )
         ),
     ]
+    SplashSound = SplashSoundDescriptor
     StartSounds = 
     [
         TSoundDescriptor
@@ -2927,6 +3216,7 @@ export DepictionOperator_MovementSound_SM_LAV25 is TCosmeticDriveMovementSoundOp
             )
         ),
     ]
+    SplashSound = SplashSoundDescriptor
     StartSounds = 
     [
         TSoundDescriptor
@@ -2986,6 +3276,7 @@ export DepictionOperator_MovementSound_SM_LO1800 is TCosmeticDriveMovementSoundO
             )
         ),
     ]
+    SplashSound = SplashSoundDescriptor
     StartSounds = 
     [
         TSoundDescriptor
@@ -3045,6 +3336,7 @@ export DepictionOperator_MovementSound_SM_LVTP7 is TCosmeticDriveMovementSoundOp
             )
         ),
     ]
+    SplashSound = SplashSoundDescriptor
     StartSounds = 
     [
         TSoundDescriptor
@@ -3104,6 +3396,7 @@ export DepictionOperator_MovementSound_SM_Land_Rover is TCosmeticDriveMovementSo
             )
         ),
     ]
+    SplashSound = SplashSoundDescriptor
     StartSounds = 
     [
         TSoundDescriptor
@@ -3123,6 +3416,66 @@ export DepictionOperator_MovementSound_SM_Land_Rover is TCosmeticDriveMovementSo
             TheSoundStream = TSoundStream
             (
                 FileName = "GameData:/Assets/Sounds/SFX/Moteurs/Stop/LandRover_Wheeled_vehicle_Stop.wav"
+            )
+        ),
+    ]
+    VolumeIdleStop = 0.8
+)
+export DepictionOperator_MovementSound_SM_Leclerc is TCosmeticDriveMovementSoundOperatorDesc
+(
+    IdleDuration = 10
+    IdleFadeInDuration = 0.5
+    IdleFadeOutDuration = 2
+    IdleSounds = 
+    [
+        TSoundDescriptor
+        (
+            SoundSettings = $/SoundSettings/SoundSettings_Moteur
+            TheSoundStream = TSoundStream
+            (
+                FileName = "GameData:/Assets/Sounds/SFX/Moteurs/Idle/Leclerc_Tracked_vehicle_LoopIdle.wav"
+            )
+        ),
+    ]
+    MaxVolume = 1
+    MaxVolumeSpeed = 80
+    MinVolume = 0.5
+    OperatorId = "driveSound"
+    RunFadeInDuration = 1
+    RunFadeOutDuration = 2
+    RunOutPitchToGo = 0
+    RunOutPitchVelocity = 0.4
+    RunSounds = 
+    [
+        TSoundDescriptor
+        (
+            SoundSettings = $/SoundSettings/SoundSettings_Moteur
+            TheSoundStream = TSoundStream
+            (
+                FileName = "GameData:/Assets/Sounds/SFX/Moteurs/Leclerc_Tracked_vehicle_Loop.wav"
+            )
+        ),
+    ]
+    SplashSound = SplashSoundDescriptor
+    StartSounds = 
+    [
+        TSoundDescriptor
+        (
+            SoundSettings = $/SoundSettings/SoundSettings_Moteur
+            TheSoundStream = TSoundStream
+            (
+                FileName = "GameData:/Assets/Sounds/SFX/Moteurs/Start/Leclerc_Tracked_vehicle_Start_Engine.wav"
+            )
+        ),
+    ]
+    StopSounds = 
+    [
+        TSoundDescriptor
+        (
+            SoundSettings = $/SoundSettings/SoundSettings_Moteur
+            TheSoundStream = TSoundStream
+            (
+                FileName = "GameData:/Assets/Sounds/SFX/Moteurs/Stop/Leclerc_Tracked_vehicle_Stop.wav"
             )
         ),
     ]
@@ -3163,6 +3516,7 @@ export DepictionOperator_MovementSound_SM_Leopard_1 is TCosmeticDriveMovementSou
             )
         ),
     ]
+    SplashSound = SplashSoundDescriptor
     StartSounds = 
     [
         TSoundDescriptor
@@ -3222,6 +3576,7 @@ export DepictionOperator_MovementSound_SM_Leopard_2 is TCosmeticDriveMovementSou
             )
         ),
     ]
+    SplashSound = SplashSoundDescriptor
     StartSounds = 
     [
         TSoundDescriptor
@@ -3281,6 +3636,7 @@ export DepictionOperator_MovementSound_SM_Luaz is TCosmeticDriveMovementSoundOpe
             )
         ),
     ]
+    SplashSound = SplashSoundDescriptor
     StartSounds = 
     [
         TSoundDescriptor
@@ -3340,6 +3696,7 @@ export DepictionOperator_MovementSound_SM_Lynx is TCosmeticDriveMovementSoundOpe
             )
         ),
     ]
+    SplashSound = SplashSoundDescriptor
     StartSounds = 
     [
         TSoundDescriptor
@@ -3399,6 +3756,7 @@ export DepictionOperator_MovementSound_SM_M109 is TCosmeticDriveMovementSoundOpe
             )
         ),
     ]
+    SplashSound = SplashSoundDescriptor
     StartSounds = 
     [
         TSoundDescriptor
@@ -3458,6 +3816,7 @@ export DepictionOperator_MovementSound_SM_M110 is TCosmeticDriveMovementSoundOpe
             )
         ),
     ]
+    SplashSound = SplashSoundDescriptor
     StartSounds = 
     [
         TSoundDescriptor
@@ -3517,6 +3876,7 @@ export DepictionOperator_MovementSound_SM_M113 is TCosmeticDriveMovementSoundOpe
             )
         ),
     ]
+    SplashSound = SplashSoundDescriptor
     StartSounds = 
     [
         TSoundDescriptor
@@ -3576,6 +3936,7 @@ export DepictionOperator_MovementSound_SM_M1_Abrams is TCosmeticDriveMovementSou
             )
         ),
     ]
+    SplashSound = SplashSoundDescriptor
     StartSounds = 
     [
         TSoundDescriptor
@@ -3595,6 +3956,66 @@ export DepictionOperator_MovementSound_SM_M1_Abrams is TCosmeticDriveMovementSou
             TheSoundStream = TSoundStream
             (
                 FileName = "GameData:/Assets/Sounds/SFX/Moteurs/Stop/M1_Abrams_Tracked_MBT_Stop.wav"
+            )
+        ),
+    ]
+    VolumeIdleStop = 0.8
+)
+export DepictionOperator_MovementSound_SM_M24 is TCosmeticDriveMovementSoundOperatorDesc
+(
+    IdleDuration = 10
+    IdleFadeInDuration = 0.5
+    IdleFadeOutDuration = 2
+    IdleSounds = 
+    [
+        TSoundDescriptor
+        (
+            SoundSettings = $/SoundSettings/SoundSettings_Moteur
+            TheSoundStream = TSoundStream
+            (
+                FileName = "GameData:/Assets/Sounds/SFX/Moteurs/Idle/Chaffee_Tracked_MBT_LoopIdle.wav"
+            )
+        ),
+    ]
+    MaxVolume = 1
+    MaxVolumeSpeed = 80
+    MinVolume = 0.5
+    OperatorId = "driveSound"
+    RunFadeInDuration = 1
+    RunFadeOutDuration = 2
+    RunOutPitchToGo = 0
+    RunOutPitchVelocity = 0.4
+    RunSounds = 
+    [
+        TSoundDescriptor
+        (
+            SoundSettings = $/SoundSettings/SoundSettings_Moteur
+            TheSoundStream = TSoundStream
+            (
+                FileName = "GameData:/Assets/Sounds/SFX/Moteurs/Chaffee_Tracked_MBT_Loop.wav"
+            )
+        ),
+    ]
+    SplashSound = SplashSoundDescriptor
+    StartSounds = 
+    [
+        TSoundDescriptor
+        (
+            SoundSettings = $/SoundSettings/SoundSettings_Moteur
+            TheSoundStream = TSoundStream
+            (
+                FileName = "GameData:/Assets/Sounds/SFX/Moteurs/Start/Chaffee_Tracked_MBT_Start_Engine.wav"
+            )
+        ),
+    ]
+    StopSounds = 
+    [
+        TSoundDescriptor
+        (
+            SoundSettings = $/SoundSettings/SoundSettings_Moteur
+            TheSoundStream = TSoundStream
+            (
+                FileName = "GameData:/Assets/Sounds/SFX/Moteurs/Stop/Chaffee_Tracked_MBT_Stop.wav"
             )
         ),
     ]
@@ -3635,6 +4056,7 @@ export DepictionOperator_MovementSound_SM_M270_MLRS is TCosmeticDriveMovementSou
             )
         ),
     ]
+    SplashSound = SplashSoundDescriptor
     StartSounds = 
     [
         TSoundDescriptor
@@ -3694,6 +4116,7 @@ export DepictionOperator_MovementSound_SM_M274_Mule is TCosmeticDriveMovementSou
             )
         ),
     ]
+    SplashSound = SplashSoundDescriptor
     StartSounds = 
     [
         TSoundDescriptor
@@ -3753,6 +4176,7 @@ export DepictionOperator_MovementSound_SM_M35 is TCosmeticDriveMovementSoundOper
             )
         ),
     ]
+    SplashSound = SplashSoundDescriptor
     StartSounds = 
     [
         TSoundDescriptor
@@ -3772,6 +4196,66 @@ export DepictionOperator_MovementSound_SM_M35 is TCosmeticDriveMovementSoundOper
             TheSoundStream = TSoundStream
             (
                 FileName = "GameData:/Assets/Sounds/SFX/Moteurs/Stop/M35_Wheeled_vehicle_Stop.wav"
+            )
+        ),
+    ]
+    VolumeIdleStop = 0.8
+)
+export DepictionOperator_MovementSound_SM_M3_Stuart is TCosmeticDriveMovementSoundOperatorDesc
+(
+    IdleDuration = 30
+    IdleFadeInDuration = 0.5
+    IdleFadeOutDuration = 2
+    IdleSounds = 
+    [
+        TSoundDescriptor
+        (
+            SoundSettings = $/SoundSettings/SoundSettings_Moteur
+            TheSoundStream = TSoundStream
+            (
+                FileName = "GameData:/Assets/Sounds/SFX/Moteurs/Idle/M3_Stuart_Tracked_vehicle_LoopIdle.wav"
+            )
+        ),
+    ]
+    MaxVolume = 1
+    MaxVolumeSpeed = 80
+    MinVolume = 0.5
+    OperatorId = "driveSound"
+    RunFadeInDuration = 1
+    RunFadeOutDuration = 2
+    RunOutPitchToGo = 0
+    RunOutPitchVelocity = 0.4
+    RunSounds = 
+    [
+        TSoundDescriptor
+        (
+            SoundSettings = $/SoundSettings/SoundSettings_Moteur
+            TheSoundStream = TSoundStream
+            (
+                FileName = "GameData:/Assets/Sounds/SFX/Moteurs/M3_Stuart_Tracked_vehicle_Loop.wav"
+            )
+        ),
+    ]
+    SplashSound = SplashSoundDescriptor
+    StartSounds = 
+    [
+        TSoundDescriptor
+        (
+            SoundSettings = $/SoundSettings/SoundSettings_Moteur
+            TheSoundStream = TSoundStream
+            (
+                FileName = "GameData:/Assets/Sounds/SFX/Moteurs/Start/M3_Suart_Tracked_vehicle_Start_Engine.wav"
+            )
+        ),
+    ]
+    StopSounds = 
+    [
+        TSoundDescriptor
+        (
+            SoundSettings = $/SoundSettings/SoundSettings_Moteur
+            TheSoundStream = TSoundStream
+            (
+                FileName = "GameData:/Assets/Sounds/SFX/Moteurs/Stop/M3_Suart_Tracked_vehicle_Stop.wav"
             )
         ),
     ]
@@ -3812,6 +4296,7 @@ export DepictionOperator_MovementSound_SM_M41 is TCosmeticDriveMovementSoundOper
             )
         ),
     ]
+    SplashSound = SplashSoundDescriptor
     StartSounds = 
     [
         TSoundDescriptor
@@ -3871,6 +4356,7 @@ export DepictionOperator_MovementSound_SM_M551_Sheridan is TCosmeticDriveMovemen
             )
         ),
     ]
+    SplashSound = SplashSoundDescriptor
     StartSounds = 
     [
         TSoundDescriptor
@@ -3930,6 +4416,7 @@ export DepictionOperator_MovementSound_SM_M577 is TCosmeticDriveMovementSoundOpe
             )
         ),
     ]
+    SplashSound = SplashSoundDescriptor
     StartSounds = 
     [
         TSoundDescriptor
@@ -3989,6 +4476,7 @@ export DepictionOperator_MovementSound_SM_M60_Patton is TCosmeticDriveMovementSo
             )
         ),
     ]
+    SplashSound = SplashSoundDescriptor
     StartSounds = 
     [
         TSoundDescriptor
@@ -4008,6 +4496,126 @@ export DepictionOperator_MovementSound_SM_M60_Patton is TCosmeticDriveMovementSo
             TheSoundStream = TSoundStream
             (
                 FileName = "GameData:/Assets/Sounds/SFX/Moteurs/Stop/M60_Patton_Tracked_MBT_Stop.wav"
+            )
+        ),
+    ]
+    VolumeIdleStop = 0.8
+)
+export DepictionOperator_MovementSound_SM_M8_Greyhound is TCosmeticDriveMovementSoundOperatorDesc
+(
+    IdleDuration = 10
+    IdleFadeInDuration = 0.5
+    IdleFadeOutDuration = 2
+    IdleSounds = 
+    [
+        TSoundDescriptor
+        (
+            SoundSettings = $/SoundSettings/SoundSettings_Moteur
+            TheSoundStream = TSoundStream
+            (
+                FileName = "GameData:/Assets/Sounds/SFX/Moteurs/Idle/M8_Greyhound_Wheeled_vehicle_LoopIdle.wav"
+            )
+        ),
+    ]
+    MaxVolume = 1
+    MaxVolumeSpeed = 80
+    MinVolume = 0.5
+    OperatorId = "driveSound"
+    RunFadeInDuration = 1
+    RunFadeOutDuration = 2
+    RunOutPitchToGo = 0
+    RunOutPitchVelocity = 0.4
+    RunSounds = 
+    [
+        TSoundDescriptor
+        (
+            SoundSettings = $/SoundSettings/SoundSettings_Moteur
+            TheSoundStream = TSoundStream
+            (
+                FileName = "GameData:/Assets/Sounds/SFX/Moteurs/M8_Greyhound_Wheeled_vehicle_Loop.wav"
+            )
+        ),
+    ]
+    SplashSound = SplashSoundDescriptor
+    StartSounds = 
+    [
+        TSoundDescriptor
+        (
+            SoundSettings = $/SoundSettings/SoundSettings_Moteur
+            TheSoundStream = TSoundStream
+            (
+                FileName = "GameData:/Assets/Sounds/SFX/Moteurs/Start/M8_Greyhound_Wheeled_vehicle_Start_Engine.wav"
+            )
+        ),
+    ]
+    StopSounds = 
+    [
+        TSoundDescriptor
+        (
+            SoundSettings = $/SoundSettings/SoundSettings_Moteur
+            TheSoundStream = TSoundStream
+            (
+                FileName = "GameData:/Assets/Sounds/SFX/Moteurs/Stop/M8_Greyhound_Wheeled_vehicle_Stop.wav"
+            )
+        ),
+    ]
+    VolumeIdleStop = 0.8
+)
+export DepictionOperator_MovementSound_SM_MAN_630 is TCosmeticDriveMovementSoundOperatorDesc
+(
+    IdleDuration = 10
+    IdleFadeInDuration = 0.5
+    IdleFadeOutDuration = 2
+    IdleSounds = 
+    [
+        TSoundDescriptor
+        (
+            SoundSettings = $/SoundSettings/SoundSettings_Moteur
+            TheSoundStream = TSoundStream
+            (
+                FileName = "GameData:/Assets/Sounds/SFX/Moteurs/Idle/MAN_630_Wheeled_vehicle_LoopIdle.wav"
+            )
+        ),
+    ]
+    MaxVolume = 1
+    MaxVolumeSpeed = 80
+    MinVolume = 0.5
+    OperatorId = "driveSound"
+    RunFadeInDuration = 0.5
+    RunFadeOutDuration = 0.5
+    RunOutPitchToGo = 0
+    RunOutPitchVelocity = 0.4
+    RunSounds = 
+    [
+        TSoundDescriptor
+        (
+            SoundSettings = $/SoundSettings/SoundSettings_Moteur
+            TheSoundStream = TSoundStream
+            (
+                FileName = "GameData:/Assets/Sounds/SFX/Moteurs/LARS_Wheeled_vehicle_Loop.wav"
+            )
+        ),
+    ]
+    SplashSound = SplashSoundDescriptor
+    StartSounds = 
+    [
+        TSoundDescriptor
+        (
+            SoundSettings = $/SoundSettings/SoundSettings_Moteur
+            TheSoundStream = TSoundStream
+            (
+                FileName = "GameData:/Assets/Sounds/SFX/Moteurs/Start/MAN_630_Wheeled_vehicle_Start_Engine.wav"
+            )
+        ),
+    ]
+    StopSounds = 
+    [
+        TSoundDescriptor
+        (
+            SoundSettings = $/SoundSettings/SoundSettings_Moteur
+            TheSoundStream = TSoundStream
+            (
+                FileName = "GameData:/Assets/Sounds/SFX/Moteurs/Stop/LARS_Wheeled_vehicle_Stop.wav"
             )
         ),
     ]
@@ -4048,6 +4656,7 @@ export DepictionOperator_MovementSound_SM_MAZ_547 is TCosmeticDriveMovementSound
             )
         ),
     ]
+    SplashSound = SplashSoundDescriptor
     StartSounds = 
     [
         TSoundDescriptor
@@ -4107,6 +4716,7 @@ export DepictionOperator_MovementSound_SM_MTLB is TCosmeticDriveMovementSoundOpe
             )
         ),
     ]
+    SplashSound = SplashSoundDescriptor
     StartSounds = 
     [
         TSoundDescriptor
@@ -4126,6 +4736,66 @@ export DepictionOperator_MovementSound_SM_MTLB is TCosmeticDriveMovementSoundOpe
             TheSoundStream = TSoundStream
             (
                 FileName = "GameData:/Assets/Sounds/SFX/Moteurs/Stop/MTLB_Tracked_vehicle_Stop.wav"
+            )
+        ),
+    ]
+    VolumeIdleStop = 0.8
+)
+export DepictionOperator_MovementSound_SM_Magirus_Deutz_Jupiter is TCosmeticDriveMovementSoundOperatorDesc
+(
+    IdleDuration = 10
+    IdleFadeInDuration = 0.5
+    IdleFadeOutDuration = 2
+    IdleSounds = 
+    [
+        TSoundDescriptor
+        (
+            SoundSettings = $/SoundSettings/SoundSettings_Moteur
+            TheSoundStream = TSoundStream
+            (
+                FileName = "GameData:/Assets/Sounds/SFX/Moteurs/Idle/Magirus_Deutz_Jupiter_Wheeled_vehicle_LoopIdle.wav"
+            )
+        ),
+    ]
+    MaxVolume = 1
+    MaxVolumeSpeed = 80
+    MinVolume = 0.5
+    OperatorId = "driveSound"
+    RunFadeInDuration = 2
+    RunFadeOutDuration = 2
+    RunOutPitchToGo = 0
+    RunOutPitchVelocity = 0.4
+    RunSounds = 
+    [
+        TSoundDescriptor
+        (
+            SoundSettings = $/SoundSettings/SoundSettings_Moteur
+            TheSoundStream = TSoundStream
+            (
+                FileName = "GameData:/Assets/Sounds/SFX/Moteurs/Magirus_Deutz_Jupiter_Wheeled_vehicle_Loop.wav"
+            )
+        ),
+    ]
+    SplashSound = SplashSoundDescriptor
+    StartSounds = 
+    [
+        TSoundDescriptor
+        (
+            SoundSettings = $/SoundSettings/SoundSettings_Moteur
+            TheSoundStream = TSoundStream
+            (
+                FileName = "GameData:/Assets/Sounds/SFX/Moteurs/Start/Magirus_Deutz_Jupiter_Wheeled_vehicle_Start_Engine.wav"
+            )
+        ),
+    ]
+    StopSounds = 
+    [
+        TSoundDescriptor
+        (
+            SoundSettings = $/SoundSettings/SoundSettings_Moteur
+            TheSoundStream = TSoundStream
+            (
+                FileName = "GameData:/Assets/Sounds/SFX/Moteurs/Stop/TRM2000_Wheeled_vehicle_Stop.wav"
             )
         ),
     ]
@@ -4166,6 +4836,7 @@ export DepictionOperator_MovementSound_SM_Marder is TCosmeticDriveMovementSoundO
             )
         ),
     ]
+    SplashSound = SplashSoundDescriptor
     StartSounds = 
     [
         TSoundDescriptor
@@ -4185,6 +4856,126 @@ export DepictionOperator_MovementSound_SM_Marder is TCosmeticDriveMovementSoundO
             TheSoundStream = TSoundStream
             (
                 FileName = "GameData:/Assets/Sounds/SFX/Moteurs/Stop/Marder_Tracked_vehicle_Stop.wav"
+            )
+        ),
+    ]
+    VolumeIdleStop = 0.8
+)
+export DepictionOperator_MovementSound_SM_Moto4_Yamaha is TCosmeticDriveMovementSoundOperatorDesc
+(
+    IdleDuration = 10
+    IdleFadeInDuration = 0.5
+    IdleFadeOutDuration = 2
+    IdleSounds = 
+    [
+        TSoundDescriptor
+        (
+            SoundSettings = $/SoundSettings/SoundSettings_Moteur
+            TheSoundStream = TSoundStream
+            (
+                FileName = "GameData:/Assets/Sounds/SFX/Moteurs/Idle/Moto4_Wheeled_vehicle_LoopIdle.wav"
+            )
+        ),
+    ]
+    MaxVolume = 1
+    MaxVolumeSpeed = 80
+    MinVolume = 0.5
+    OperatorId = "driveSound"
+    RunFadeInDuration = 0.5
+    RunFadeOutDuration = 2
+    RunOutPitchToGo = 0
+    RunOutPitchVelocity = 0.4
+    RunSounds = 
+    [
+        TSoundDescriptor
+        (
+            SoundSettings = $/SoundSettings/SoundSettings_Moteur
+            TheSoundStream = TSoundStream
+            (
+                FileName = "GameData:/Assets/Sounds/SFX/Moteurs/Moto4_Wheeled_vehicle_Loop.wav"
+            )
+        ),
+    ]
+    SplashSound = SplashSoundDescriptor
+    StartSounds = 
+    [
+        TSoundDescriptor
+        (
+            SoundSettings = $/SoundSettings/SoundSettings_Moteur
+            TheSoundStream = TSoundStream
+            (
+                FileName = "GameData:/Assets/Sounds/SFX/Moteurs/Start/Moto4_Wheeled_vehicle_Start_Engine.wav"
+            )
+        ),
+    ]
+    StopSounds = 
+    [
+        TSoundDescriptor
+        (
+            SoundSettings = $/SoundSettings/SoundSettings_Moteur
+            TheSoundStream = TSoundStream
+            (
+                FileName = "GameData:/Assets/Sounds/SFX/Moteurs/Stop/Moto4_Wheeled_vehicle_Stop.wav"
+            )
+        ),
+    ]
+    VolumeIdleStop = 0.8
+)
+export DepictionOperator_MovementSound_SM_Munga is TCosmeticDriveMovementSoundOperatorDesc
+(
+    IdleDuration = 10
+    IdleFadeInDuration = 0.5
+    IdleFadeOutDuration = 2
+    IdleSounds = 
+    [
+        TSoundDescriptor
+        (
+            SoundSettings = $/SoundSettings/SoundSettings_Moteur
+            TheSoundStream = TSoundStream
+            (
+                FileName = "GameData:/Assets/Sounds/SFX/Moteurs/Idle/Munga_Wheeled_vehicle_LoopIdle.wav"
+            )
+        ),
+    ]
+    MaxVolume = 1
+    MaxVolumeSpeed = 80
+    MinVolume = 0.5
+    OperatorId = "driveSound"
+    RunFadeInDuration = 0.5
+    RunFadeOutDuration = 2
+    RunOutPitchToGo = 0
+    RunOutPitchVelocity = 0.4
+    RunSounds = 
+    [
+        TSoundDescriptor
+        (
+            SoundSettings = $/SoundSettings/SoundSettings_Moteur
+            TheSoundStream = TSoundStream
+            (
+                FileName = "GameData:/Assets/Sounds/SFX/Moteurs/Munga_Wheeled_vehicle_Loop.wav"
+            )
+        ),
+    ]
+    SplashSound = SplashSoundDescriptor
+    StartSounds = 
+    [
+        TSoundDescriptor
+        (
+            SoundSettings = $/SoundSettings/SoundSettings_Moteur
+            TheSoundStream = TSoundStream
+            (
+                FileName = "GameData:/Assets/Sounds/SFX/Moteurs/Start/Munga_Wheeled_vehicle_Start_Engine.wav"
+            )
+        ),
+    ]
+    StopSounds = 
+    [
+        TSoundDescriptor
+        (
+            SoundSettings = $/SoundSettings/SoundSettings_Moteur
+            TheSoundStream = TSoundStream
+            (
+                FileName = "GameData:/Assets/Sounds/SFX/Moteurs/Stop/Iltis_Wheeled_vehicle_Stop.wav"
             )
         ),
     ]
@@ -4225,6 +5016,7 @@ export DepictionOperator_MovementSound_SM_Mutt_M151 is TCosmeticDriveMovementSou
             )
         ),
     ]
+    SplashSound = SplashSoundDescriptor
     StartSounds = 
     [
         TSoundDescriptor
@@ -4284,6 +5076,7 @@ export DepictionOperator_MovementSound_SM_OT_810_Sdkfz is TCosmeticDriveMovement
             )
         ),
     ]
+    SplashSound = SplashSoundDescriptor
     StartSounds = 
     [
         TSoundDescriptor
@@ -4343,6 +5136,7 @@ export DepictionOperator_MovementSound_SM_P4 is TCosmeticDriveMovementSoundOpera
             )
         ),
     ]
+    SplashSound = SplashSoundDescriptor
     StartSounds = 
     [
         TSoundDescriptor
@@ -4402,6 +5196,7 @@ export DepictionOperator_MovementSound_SM_PT76 is TCosmeticDriveMovementSoundOpe
             )
         ),
     ]
+    SplashSound = SplashSoundDescriptor
     StartSounds = 
     [
         TSoundDescriptor
@@ -4461,6 +5256,7 @@ export DepictionOperator_MovementSound_SM_Pegaso is TCosmeticDriveMovementSoundO
             )
         ),
     ]
+    SplashSound = SplashSoundDescriptor
     StartSounds = 
     [
         TSoundDescriptor
@@ -4520,6 +5316,7 @@ export DepictionOperator_MovementSound_SM_Praga is TCosmeticDriveMovementSoundOp
             )
         ),
     ]
+    SplashSound = SplashSoundDescriptor
     StartSounds = 
     [
         TSoundDescriptor
@@ -4579,6 +5376,7 @@ export DepictionOperator_MovementSound_SM_Saladin is TCosmeticDriveMovementSound
             )
         ),
     ]
+    SplashSound = SplashSoundDescriptor
     StartSounds = 
     [
         TSoundDescriptor
@@ -4638,6 +5436,7 @@ export DepictionOperator_MovementSound_SM_Saxon is TCosmeticDriveMovementSoundOp
             )
         ),
     ]
+    SplashSound = SplashSoundDescriptor
     StartSounds = 
     [
         TSoundDescriptor
@@ -4697,6 +5496,7 @@ export DepictionOperator_MovementSound_SM_Sherman_M10_Achilles is TCosmeticDrive
             )
         ),
     ]
+    SplashSound = SplashSoundDescriptor
     StartSounds = 
     [
         TSoundDescriptor
@@ -4756,6 +5556,7 @@ export DepictionOperator_MovementSound_SM_Shilka is TCosmeticDriveMovementSoundO
             )
         ),
     ]
+    SplashSound = SplashSoundDescriptor
     StartSounds = 
     [
         TSoundDescriptor
@@ -4815,6 +5616,7 @@ export DepictionOperator_MovementSound_SM_SpPz_2_Luchs is TCosmeticDriveMovement
             )
         ),
     ]
+    SplashSound = SplashSoundDescriptor
     StartSounds = 
     [
         TSoundDescriptor
@@ -4874,6 +5676,7 @@ export DepictionOperator_MovementSound_SM_Star_266 is TCosmeticDriveMovementSoun
             )
         ),
     ]
+    SplashSound = SplashSoundDescriptor
     StartSounds = 
     [
         TSoundDescriptor
@@ -4933,6 +5736,7 @@ export DepictionOperator_MovementSound_SM_Supacat is TCosmeticDriveMovementSound
             )
         ),
     ]
+    SplashSound = SplashSoundDescriptor
     StartSounds = 
     [
         TSoundDescriptor
@@ -4992,6 +5796,7 @@ export DepictionOperator_MovementSound_SM_T34 is TCosmeticDriveMovementSoundOper
             )
         ),
     ]
+    SplashSound = SplashSoundDescriptor
     StartSounds = 
     [
         TSoundDescriptor
@@ -5051,6 +5856,7 @@ export DepictionOperator_MovementSound_SM_T55 is TCosmeticDriveMovementSoundOper
             )
         ),
     ]
+    SplashSound = SplashSoundDescriptor
     StartSounds = 
     [
         TSoundDescriptor
@@ -5110,6 +5916,7 @@ export DepictionOperator_MovementSound_SM_T64 is TCosmeticDriveMovementSoundOper
             )
         ),
     ]
+    SplashSound = SplashSoundDescriptor
     StartSounds = 
     [
         TSoundDescriptor
@@ -5169,6 +5976,7 @@ export DepictionOperator_MovementSound_SM_T72 is TCosmeticDriveMovementSoundOper
             )
         ),
     ]
+    SplashSound = SplashSoundDescriptor
     StartSounds = 
     [
         TSoundDescriptor
@@ -5228,6 +6036,7 @@ export DepictionOperator_MovementSound_SM_T80 is TCosmeticDriveMovementSoundOper
             )
         ),
     ]
+    SplashSound = SplashSoundDescriptor
     StartSounds = 
     [
         TSoundDescriptor
@@ -5287,6 +6096,7 @@ export DepictionOperator_MovementSound_SM_T80_Turbine is TCosmeticDriveMovementS
             )
         ),
     ]
+    SplashSound = SplashSoundDescriptor
     StartSounds = 
     [
         TSoundDescriptor
@@ -5346,6 +6156,7 @@ export DepictionOperator_MovementSound_SM_TPz_Fuchs is TCosmeticDriveMovementSou
             )
         ),
     ]
+    SplashSound = SplashSoundDescriptor
     StartSounds = 
     [
         TSoundDescriptor
@@ -5405,6 +6216,7 @@ export DepictionOperator_MovementSound_SM_TRM2000 is TCosmeticDriveMovementSound
             )
         ),
     ]
+    SplashSound = SplashSoundDescriptor
     StartSounds = 
     [
         TSoundDescriptor
@@ -5464,6 +6276,7 @@ export DepictionOperator_MovementSound_SM_Tatra is TCosmeticDriveMovementSoundOp
             )
         ),
     ]
+    SplashSound = SplashSoundDescriptor
     StartSounds = 
     [
         TSoundDescriptor
@@ -5483,6 +6296,66 @@ export DepictionOperator_MovementSound_SM_Tatra is TCosmeticDriveMovementSoundOp
             TheSoundStream = TSoundStream
             (
                 FileName = "GameData:/Assets/Sounds/SFX/Moteurs/Stop/Tatra_Wheeled_vehicle_Stop.wav"
+            )
+        ),
+    ]
+    VolumeIdleStop = 0.8
+)
+export DepictionOperator_MovementSound_SM_Trabant is TCosmeticDriveMovementSoundOperatorDesc
+(
+    IdleDuration = 10
+    IdleFadeInDuration = 0.5
+    IdleFadeOutDuration = 2
+    IdleSounds = 
+    [
+        TSoundDescriptor
+        (
+            SoundSettings = $/SoundSettings/SoundSettings_Moteur
+            TheSoundStream = TSoundStream
+            (
+                FileName = "GameData:/Assets/Sounds/SFX/Moteurs/Idle/Trabant_Wheeled_vehicle_LoopIdle.wav"
+            )
+        ),
+    ]
+    MaxVolume = 1
+    MaxVolumeSpeed = 80
+    MinVolume = 0.5
+    OperatorId = "driveSound"
+    RunFadeInDuration = 0.5
+    RunFadeOutDuration = 2
+    RunOutPitchToGo = 0
+    RunOutPitchVelocity = 0.4
+    RunSounds = 
+    [
+        TSoundDescriptor
+        (
+            SoundSettings = $/SoundSettings/SoundSettings_Moteur
+            TheSoundStream = TSoundStream
+            (
+                FileName = "GameData:/Assets/Sounds/SFX/Moteurs/Trabant_Wheeled_vehicle_Loop.wav"
+            )
+        ),
+    ]
+    SplashSound = SplashSoundDescriptor
+    StartSounds = 
+    [
+        TSoundDescriptor
+        (
+            SoundSettings = $/SoundSettings/SoundSettings_Moteur
+            TheSoundStream = TSoundStream
+            (
+                FileName = "GameData:/Assets/Sounds/SFX/Moteurs/Start/Trabant_Wheeled_vehicle_Start_Engine.wav"
+            )
+        ),
+    ]
+    StopSounds = 
+    [
+        TSoundDescriptor
+        (
+            SoundSettings = $/SoundSettings/SoundSettings_Moteur
+            TheSoundStream = TSoundStream
+            (
+                FileName = "GameData:/Assets/Sounds/SFX/Moteurs/Stop/Trabant_Wheeled_vehicle_Stop.wav"
             )
         ),
     ]
@@ -5523,6 +6396,7 @@ export DepictionOperator_MovementSound_SM_Tracked_Rapier is TCosmeticDriveMoveme
             )
         ),
     ]
+    SplashSound = SplashSoundDescriptor
     StartSounds = 
     [
         TSoundDescriptor
@@ -5582,6 +6456,7 @@ export DepictionOperator_MovementSound_SM_Tunguska is TCosmeticDriveMovementSoun
             )
         ),
     ]
+    SplashSound = SplashSoundDescriptor
     StartSounds = 
     [
         TSoundDescriptor
@@ -5641,6 +6516,7 @@ export DepictionOperator_MovementSound_SM_UAZ is TCosmeticDriveMovementSoundOper
             )
         ),
     ]
+    SplashSound = SplashSoundDescriptor
     StartSounds = 
     [
         TSoundDescriptor
@@ -5700,6 +6576,7 @@ export DepictionOperator_MovementSound_SM_Unimog is TCosmeticDriveMovementSoundO
             )
         ),
     ]
+    SplashSound = SplashSoundDescriptor
     StartSounds = 
     [
         TSoundDescriptor
@@ -5759,6 +6636,7 @@ export DepictionOperator_MovementSound_SM_Ural is TCosmeticDriveMovementSoundOpe
             )
         ),
     ]
+    SplashSound = SplashSoundDescriptor
     StartSounds = 
     [
         TSoundDescriptor
@@ -5818,6 +6696,7 @@ export DepictionOperator_MovementSound_SM_VAB is TCosmeticDriveMovementSoundOper
             )
         ),
     ]
+    SplashSound = SplashSoundDescriptor
     StartSounds = 
     [
         TSoundDescriptor
@@ -5877,6 +6756,7 @@ export DepictionOperator_MovementSound_SM_VLRA is TCosmeticDriveMovementSoundOpe
             )
         ),
     ]
+    SplashSound = SplashSoundDescriptor
     StartSounds = 
     [
         TSoundDescriptor
@@ -5936,6 +6816,7 @@ export DepictionOperator_MovementSound_SM_VW_T2b is TCosmeticDriveMovementSoundO
             )
         ),
     ]
+    SplashSound = SplashSoundDescriptor
     StartSounds = 
     [
         TSoundDescriptor
@@ -5995,6 +6876,7 @@ export DepictionOperator_MovementSound_SM_Volvo is TCosmeticDriveMovementSoundOp
             )
         ),
     ]
+    SplashSound = SplashSoundDescriptor
     StartSounds = 
     [
         TSoundDescriptor
@@ -6054,6 +6936,7 @@ export DepictionOperator_MovementSound_SM_W50 is TCosmeticDriveMovementSoundOper
             )
         ),
     ]
+    SplashSound = SplashSoundDescriptor
     StartSounds = 
     [
         TSoundDescriptor
@@ -6113,6 +6996,7 @@ export DepictionOperator_MovementSound_SM_Warrior is TCosmeticDriveMovementSound
             )
         ),
     ]
+    SplashSound = SplashSoundDescriptor
     StartSounds = 
     [
         TSoundDescriptor
@@ -6172,6 +7056,7 @@ export DepictionOperator_MovementSound_SM_Wiesel is TCosmeticDriveMovementSoundO
             )
         ),
     ]
+    SplashSound = SplashSoundDescriptor
     StartSounds = 
     [
         TSoundDescriptor
@@ -6231,6 +7116,7 @@ export DepictionOperator_MovementSound_SM_ZIL_157 is TCosmeticDriveMovementSound
             )
         ),
     ]
+    SplashSound = SplashSoundDescriptor
     StartSounds = 
     [
         TSoundDescriptor
@@ -6250,6 +7136,66 @@ export DepictionOperator_MovementSound_SM_ZIL_157 is TCosmeticDriveMovementSound
             TheSoundStream = TSoundStream
             (
                 FileName = "GameData:/Assets/Sounds/SFX/Moteurs/Stop/ZIL157_Wheeled_vehicle_Stop.wav"
+            )
+        ),
+    ]
+    VolumeIdleStop = 0.8
+)
+export DepictionOperator_MovementSound_SM_Zil_131 is TCosmeticDriveMovementSoundOperatorDesc
+(
+    IdleDuration = 10
+    IdleFadeInDuration = 0.5
+    IdleFadeOutDuration = 2
+    IdleSounds = 
+    [
+        TSoundDescriptor
+        (
+            SoundSettings = $/SoundSettings/SoundSettings_Moteur
+            TheSoundStream = TSoundStream
+            (
+                FileName = "GameData:/Assets/Sounds/SFX/Moteurs/Idle/Zil131_Wheeled_vehicle_LoopIdle.wav"
+            )
+        ),
+    ]
+    MaxVolume = 1
+    MaxVolumeSpeed = 80
+    MinVolume = 0.5
+    OperatorId = "driveSound"
+    RunFadeInDuration = 0.5
+    RunFadeOutDuration = 2
+    RunOutPitchToGo = 0
+    RunOutPitchVelocity = 0.4
+    RunSounds = 
+    [
+        TSoundDescriptor
+        (
+            SoundSettings = $/SoundSettings/SoundSettings_Moteur
+            TheSoundStream = TSoundStream
+            (
+                FileName = "GameData:/Assets/Sounds/SFX/Moteurs/Zil131_Wheeled_vehicle_Loop.wav"
+            )
+        ),
+    ]
+    SplashSound = SplashSoundDescriptor
+    StartSounds = 
+    [
+        TSoundDescriptor
+        (
+            SoundSettings = $/SoundSettings/SoundSettings_Moteur
+            TheSoundStream = TSoundStream
+            (
+                FileName = "GameData:/Assets/Sounds/SFX/Moteurs/Start/Zil131_Wheeled_vehicle_Start_Engine.wav"
+            )
+        ),
+    ]
+    StopSounds = 
+    [
+        TSoundDescriptor
+        (
+            SoundSettings = $/SoundSettings/SoundSettings_Moteur
+            TheSoundStream = TSoundStream
+            (
+                FileName = "GameData:/Assets/Sounds/SFX/Moteurs/Stop/Zil131_Wheeled_vehicle_Stop.wav"
             )
         ),
     ]

@@ -1,0 +1,14 @@
+export Modele_OH58C_ITA is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/ITA/Helico/OH58C/OH58C.fbx"
+)
+
+export Modele_OH58C_ITA_MID is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/ITA/Helico/OH58C_MID/OH58C_MID.fbx"
+)
+
+export Modele_OH58C_ITA_LOW is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/ITA/Helico/OH58C_LOW/OH58C_LOW.fbx"
+)

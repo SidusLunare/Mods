@@ -117,8 +117,8 @@ export Small_ground_Impact is SimultaneousActionDeclaration
                     RenderInfo = ParticleRenderInfo
                     (
                         OpaqueParticle = true
-                        ZTest = True
-                        SortTriangles = True
+                        ZTest = true
+                        SortTriangles = true
                         ZWrite = false
                     )
                     ParticleRenderer = $/VFX_Bank/LitParticleRenderer

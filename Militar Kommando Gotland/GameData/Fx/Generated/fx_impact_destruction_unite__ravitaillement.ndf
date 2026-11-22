@@ -504,6 +504,41 @@ export fx_impact_destruction_unite__ravitaillement is SimultaneousActionDeclarat
         (
             Mobile = TMobileWithLocalRepereMatrixFactory
             (
+                Position = float3[0,0,100] + parPosition
+            )
+            Actions =
+            [
+                TActionCall
+                (
+                    Action = $/VFX_Bank/BANK_Rubble2_Simple
+                    NamedParams = MAP[
+                        ( 'parCountDebrits', 20 ),
+                        ( 'parCountDebritsWithFire', 17 ),
+                        ( 'parCountDebritsWithSmoke', 33 ),
+                        ( 'parDebritSizeMul', 1.049999 ),
+                        ( 'parDispersion', 200 ),
+                        ( 'parFireParticleEndSize', 250 ),
+                        ( 'parFireParticleStartSize', 50 ),
+                        ( 'parLifetime', 0.3 ),
+                        ( 'parMeshType', 0 ),
+                        ( 'parMinSpeedRatio', 0.1500003 ),
+                        ( 'parParticleOpacity', 0.7 ),
+                        ( 'parSmokeColor', float3[0.1921569,0.1921569,0.1921569] ),
+                        ( 'parSmokeColorMultiplier', 1 ),
+                        ( 'parSmokeDensity', 100 ),
+                        ( 'parSmokeParticleEndSize', 1000 ),
+                        ( 'parSmokeParticleStartSize', 150 ),
+                        ( 'parSpeed', float3[11570,11800,11750] ),
+                        ( 'parSpeedDispersion', 0.4000029 ),
+                    ]
+                ),
+                TWaitInSec( Duration = 0.3),
+            ]
+        ),
+        TSimultaneousAction
+        (
+            Mobile = TMobileWithLocalRepereMatrixFactory
+            (
                 Position = float3[0,-8,0] + parPosition
             )
             Actions =
@@ -576,35 +611,34 @@ export fx_impact_destruction_unite__ravitaillement is SimultaneousActionDeclarat
         (
             Mobile = TMobileWithLocalRepereMatrixFactory
             (
-                Position = float3[0,0,100] + parPosition
+                Position = parPosition
+                EulerAngles = float3[1.570796,0,0]
             )
             Actions =
             [
                 TActionCall
                 (
-                    Action = $/VFX_Bank/BANK_Rubble2_Simple
+                    Action = $/VFX_Bank/BANK_WasteGroundDust_Simple
                     NamedParams = MAP[
-                        ( 'parCountDebrits', 20 ),
-                        ( 'parCountDebritsWithFire', 17 ),
-                        ( 'parCountDebritsWithSmoke', 33 ),
-                        ( 'parDebritSizeMul', 1.049999 ),
-                        ( 'parDispersion', 200 ),
-                        ( 'parFireParticleEndSize', 250 ),
-                        ( 'parFireParticleStartSize', 50 ),
-                        ( 'parLifetime', 0.3 ),
-                        ( 'parMeshType', 0 ),
-                        ( 'parMinSpeedRatio', 0.1500003 ),
-                        ( 'parParticleOpacity', 0.7 ),
-                        ( 'parSmokeColor', float3[0.1921569,0.1921569,0.1921569] ),
-                        ( 'parSmokeColorMultiplier', 1 ),
-                        ( 'parSmokeDensity', 100 ),
-                        ( 'parSmokeParticleEndSize', 1000 ),
-                        ( 'parSmokeParticleStartSize', 150 ),
-                        ( 'parSpeed', float3[11570,11800,11750] ),
-                        ( 'parSpeedDispersion', 0.4000029 ),
+                        ( 'parAlphaStartDecayValue', 0.2 ),
+                        ( 'parCount', 85 ),
+                        ( 'parEndColor', float3[0.3647059,0.3647059,0.3647059] ),
+                        ( 'parEndSize', 541 ),
+                        ( 'parFluidFriction', 1.45 ),
+                        ( 'parInitialDelay', parInitialShotDelay ),
+                        ( 'parLifetime', 4.1 ),
+                        ( 'parOpacity', 0.4000001 ),
+                        ( 'parRandomInitPosRadius', 341 ),
+                        ( 'parRotationFactor', 3 ),
+                        ( 'parScaleSizeFactor', 9.9 ),
+                        ( 'parStartColor', float3[0.08627451,0.07843138,0.07843138] ),
+                        ( 'parStartHeight', 0 ),
+                        ( 'parStartRotation', 1.93 ),
+                        ( 'parStartSize', 0 ),
+                        ( 'parStartSpeed3D', float3[4000,4000,2000] ),
+                        ( 'parWindWeight', 1 ),
                     ]
                 ),
-                TWaitInSec( Duration = 0.3),
             ]
         ),
         TSimultaneousAction
@@ -641,40 +675,6 @@ export fx_impact_destruction_unite__ravitaillement is SimultaneousActionDeclarat
                                 ( 'parWindWeight', 3 ),
                             ]
                         ),
-                    ]
-                ),
-            ]
-        ),
-        TSimultaneousAction
-        (
-            Mobile = TMobileWithLocalRepereMatrixFactory
-            (
-                Position = parPosition
-                EulerAngles = float3[1.570796,0,0]
-            )
-            Actions =
-            [
-                TActionCall
-                (
-                    Action = $/VFX_Bank/BANK_WasteGroundDust_Simple
-                    NamedParams = MAP[
-                        ( 'parAlphaStartDecayValue', 0.2 ),
-                        ( 'parCount', 85 ),
-                        ( 'parEndColor', float3[0.3647059,0.3647059,0.3647059] ),
-                        ( 'parEndSize', 541 ),
-                        ( 'parFluidFriction', 1.45 ),
-                        ( 'parInitialDelay', parInitialShotDelay ),
-                        ( 'parLifetime', 4.1 ),
-                        ( 'parOpacity', 0.4000001 ),
-                        ( 'parRandomInitPosRadius', 341 ),
-                        ( 'parRotationFactor', 3 ),
-                        ( 'parScaleSizeFactor', 9.9 ),
-                        ( 'parStartColor', float3[0.08627451,0.07843138,0.07843138] ),
-                        ( 'parStartHeight', 0 ),
-                        ( 'parStartRotation', 1.93 ),
-                        ( 'parStartSize', 0 ),
-                        ( 'parStartSpeed3D', float3[4000,4000,2000] ),
-                        ( 'parWindWeight', 1 ),
                     ]
                 ),
             ]

@@ -1,3 +1,3 @@
 @echo off
-..\Utils\Python\python.exe ..\Utils\Scripts\UpdateMod.py
+python3 ..\Utils\Scripts\UpdateMod.py
 pause

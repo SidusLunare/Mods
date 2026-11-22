@@ -1,0 +1,14 @@
+export Modele_SNAR_10_HON is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/DDR/Char/SNAR_10/SNAR_10.fbx"
+)
+
+export Modele_SNAR_10_HON_MID is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/DDR/Char/SNAR_10_MID/SNAR_10_MID.fbx"
+)
+
+export Modele_SNAR_10_HON_LOW is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/DDR/Char/SNAR_10_LOW/SNAR_10_LOW.fbx"
+)

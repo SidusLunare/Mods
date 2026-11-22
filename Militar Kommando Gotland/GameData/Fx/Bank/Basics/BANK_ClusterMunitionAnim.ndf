@@ -109,10 +109,10 @@ export ClusterMunitionAnim is SimultaneousActionDeclaration
                 (
                     RenderInfo = ParticleRenderInfo
                     (
-                        ZTest = True
-                        ZWrite = False
-                        SortTriangles = True
-                        Use3DRotation = True
+                        ZTest = true
+                        ZWrite = false
+                        SortTriangles = true
+                        Use3DRotation = true
                         TextureName = 'GameData:/Assets/2D/Fx/anim_cluster_01.png'
                         Calque = 'Particles'
                         EmissiveParticle = true
@@ -124,7 +124,7 @@ export ClusterMunitionAnim is SimultaneousActionDeclaration
                     )
                     ParticleRenderer = $/VFX_Bank/LitParticleRenderer
                 )
-                PositionIndependentFromEmitter = False
+                PositionIndependentFromEmitter = false
             )
         ),
     ]
@@ -192,10 +192,10 @@ export DirectedFireAnim is SimultaneousActionDeclaration
                 (
                     RenderInfo = ParticleRenderInfo
                     (
-                        ZTest = True
-                        ZWrite = False
-                        SortTriangles = True
-                        Use3DRotation = True
+                        ZTest = true
+                        ZWrite = false
+                        SortTriangles = true
+                        Use3DRotation = true
                         TextureName = 'GameData:/Assets/2D/Fx/anim_cluster_01.png'
                         Calque = 'Particles'
                         EmissiveParticle = true
@@ -206,7 +206,7 @@ export DirectedFireAnim is SimultaneousActionDeclaration
                     )
                     ParticleRenderer = $/VFX_Bank/LitParticleRenderer
                 )
-                PositionIndependentFromEmitter = False
+                PositionIndependentFromEmitter = false
             )
         ),
     ]

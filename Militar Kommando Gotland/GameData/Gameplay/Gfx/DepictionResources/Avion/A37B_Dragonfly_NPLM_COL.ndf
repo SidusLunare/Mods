@@ -1,0 +1,22 @@
+export Modele_A37B_Dragonfly_NPLM_COL is TResourceMesh
+(
+    Mesh=ModelFile_A37B_Dragonfly_US
+    Textures="GameData:/Assets/3D/Units/COL/Avion/A37B_Dragonfly"
+)
+
+export Modele_A37B_Dragonfly_NPLM_COL_MID is TResourceMesh
+(
+    Mesh=ModelFile_A37B_Dragonfly_US_MID
+    Textures="GameData:/Assets/3D/Units/COL/Avion/A37B_Dragonfly_MID"
+)
+
+export Modele_A37B_Dragonfly_NPLM_COL_LOW is TResourceMesh
+(
+    Mesh=ModelFile_A37B_Dragonfly_US_LOW
+    Textures="GameData:/Assets/3D/Units/COL/Avion/A37B_Dragonfly_LOW"
+)
+
+export Modele_A37B_Dragonfly_NPLM_COL_train is TResourceMesh
+(
+    Mesh=ModelFile_A37B_Dragonfly_US_train
+)

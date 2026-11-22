@@ -2,7 +2,7 @@ template Template_WaitToKillBombParticle
 [
     MaxWaitDuration         : TEvaluable[GroupBy = "Spawn parameters"] = TConstantInteger(Value = 10),
     BombSpawner             : TParticleSpawnerActionBomb[required] = nil,
-    Forever                 : boolean = false,
+    Forever                 : bool = false,
     Disabled                : TEvaluable = nil,
 ] is TWaitToKillBombParticles
 (

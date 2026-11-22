@@ -34,7 +34,7 @@ export FX_Binder_Light_Static is SimultaneousActionDeclaration
                         Size = ParticleCustomFloat_1 * 2 * getX[ParticleMobileWrapperScale]
                     )
                     ParticleRenderer =  $/VFX_Bank/PointLightRendererLBU
-                    InfiniteParticles = True
+                    InfiniteParticles = true
                 )
             )
         )

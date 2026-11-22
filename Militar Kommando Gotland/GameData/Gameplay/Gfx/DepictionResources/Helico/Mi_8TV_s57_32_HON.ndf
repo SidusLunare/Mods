@@ -1,0 +1,14 @@
+export Modele_Mi_8TV_s57_32_HON is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/HON/Helico/Mi_8TV_s57_32/Mi_8TV_s57_32.fbx"
+)
+
+export Modele_Mi_8TV_s57_32_HON_MID is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/HON/Helico/Mi_8TV_s57_32_MID/Mi_8TV_s57_32_MID.fbx"
+)
+
+export Modele_Mi_8TV_s57_32_HON_LOW is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/HON/Helico/Mi_8TV_s57_32_LOW/Mi_8TV_s57_32_LOW.fbx"
+)

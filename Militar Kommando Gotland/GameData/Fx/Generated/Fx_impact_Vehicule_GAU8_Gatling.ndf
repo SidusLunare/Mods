@@ -14,6 +14,33 @@ export Fx_impact_Vehicule_GAU8_Gatling is SimultaneousActionDeclaration
     [
         TSimultaneousAction
         (
+            Mobile = TMobileWithLocalRepereMatrixFactory
+            (
+                Position = float3[16,-66,0] + parPosition
+            )
+            Actions =
+            [
+                TSequentialAction
+                (Actions =
+                    [
+                        TWaitInSec( Duration = 0.2 ),
+                        TActionCall
+                        (
+                            Action = $/VFX_Bank/BANK_Bomb_Distort_Simple
+                            NamedParams = MAP[
+                                ( 'parDuration', 0.4 ),
+                                ( 'parFinalSize', 1700 ),
+                                ( 'parInitialSize', 80 ),
+                                ( 'parIntensity', 250 ),
+                                ( 'parPositionRelative', float3[16,-66,0] ),
+                            ]
+                        ),
+                    ]
+                ),
+            ]
+        ),
+        TSimultaneousAction
+        (
             Mobile = nil
             Actions =
             [
@@ -149,27 +176,6 @@ export Fx_impact_Vehicule_GAU8_Gatling is SimultaneousActionDeclaration
                         ),
                     ]
                 ),
-                TActionCall
-                (
-                    Action = $/VFX_Bank/BANK_Bomb_NewSparks_Simple_Reverse
-                    NamedParams = MAP[
-                        ( 'parColor', float3[0.9960785,0.4078432,0.06666667] ),
-                        ( 'parColorMultiplier', 12 ),
-                        ( 'parCount', 150 ),
-                        ( 'parFluidFriction', 1 ),
-                        ( 'parGravity', 2000 ),
-                        ( 'parLifetime', 2.5 ),
-                        ( 'parNarrowness', 3 ),
-                        ( 'parPositionRadius', 10 ),
-                        ( 'parPositionRelative', parPosition ),
-                        ( 'parSize', 10 ),
-                        ( 'parSpeedMax', 8000 ),
-                        ( 'parSpeedMin', 5000 ),
-                        ( 'parStretch', 1 ),
-                        ( 'parWindFactor', 1 ),
-                        ( 'parDir', float3[-0.9999901,0,0.004451733] ),
-                    ]
-                ),
                 TSequentialAction
                 (Actions =
                     [
@@ -197,31 +203,25 @@ export Fx_impact_Vehicule_GAU8_Gatling is SimultaneousActionDeclaration
                         ),
                     ]
                 ),
-            ]
-        ),
-        TSimultaneousAction
-        (
-            Mobile = TMobileWithLocalRepereMatrixFactory
-            (
-                Position = float3[16,-66,0] + parPosition
-            )
-            Actions =
-            [
-                TSequentialAction
-                (Actions =
-                    [
-                        TWaitInSec( Duration = 0.2 ),
-                        TActionCall
-                        (
-                            Action = $/VFX_Bank/BANK_Bomb_Distort_Simple
-                            NamedParams = MAP[
-                                ( 'parDuration', 0.4 ),
-                                ( 'parFinalSize', 1700 ),
-                                ( 'parInitialSize', 80 ),
-                                ( 'parIntensity', 250 ),
-                                ( 'parPositionRelative', float3[16,-66,0] ),
-                            ]
-                        ),
+                TActionCall
+                (
+                    Action = $/VFX_Bank/BANK_Bomb_NewSparks_Simple_Reverse
+                    NamedParams = MAP[
+                        ( 'parColor', float3[0.9960785,0.4078432,0.06666667] ),
+                        ( 'parColorMultiplier', 12 ),
+                        ( 'parCount', 150 ),
+                        ( 'parFluidFriction', 1 ),
+                        ( 'parGravity', 2000 ),
+                        ( 'parLifetime', 2.5 ),
+                        ( 'parNarrowness', 3 ),
+                        ( 'parPositionRadius', 10 ),
+                        ( 'parPositionRelative', parPosition ),
+                        ( 'parSize', 10 ),
+                        ( 'parSpeedMax', 8000 ),
+                        ( 'parSpeedMin', 5000 ),
+                        ( 'parStretch', 1 ),
+                        ( 'parWindFactor', 1 ),
+                        ( 'parDir', float3[-0.9999901,0,0.004451733] ),
                     ]
                 ),
             ]
@@ -342,37 +342,40 @@ export Fx_impact_Vehicule_GAU8_Gatling is SimultaneousActionDeclaration
         (
             Mobile = TMobileWithLocalRepereMatrixFactory
             (
-                Position = parPosition
-                EulerAngles = float3[3.133352,0,0]
+                Position = float3[-10,-71,0] + parPosition
             )
             Actions =
             [
-                TActionCall
-                (
-                    Action = $/VFX_Bank/BANK_Rubble2_Oriented_Simple_Reverse
-                    NamedParams = MAP[
-                        ( 'parCountDebrits', 10 ),
-                        ( 'parCountDebritsWithFire', 4 ),
-                        ( 'parCountDebritsWithSmoke', 3 ),
-                        ( 'parDebritSizeMul', 1 ),
-                        ( 'parDir', float3[1,0,0] ),
-                        ( 'parDispersion', 1000 ),
-                        ( 'parFireParticleEndSize', 600 ),
-                        ( 'parFireParticleStartSize', 200 ),
-                        ( 'parGravity', 2000 ),
-                        ( 'parLifetime', 8 ),
-                        ( 'parMeshType', 0 ),
-                        ( 'parNarrowness', 5 ),
-                        ( 'parParticleOpacity', 0.1 ),
-                        ( 'parSmokeColor', float3[1,1,1] ),
-                        ( 'parSmokeColorMultiplier', 1 ),
-                        ( 'parSmokeDensity', 100 ),
-                        ( 'parSmokeParticleEndSize', 500 ),
-                        ( 'parSmokeParticleStartSize', 100 ),
-                        ( 'parSpeed', float3[6000,2000,2000] ),
+                TSequentialAction
+                (Actions =
+                    [
+                        TWaitInSec( Duration = 0.2 ),
+                        TActionCall
+                        (
+                            Action = $/VFX_Bank/BANK_Rubble2_Simple
+                            NamedParams = MAP[
+                                ( 'parCountDebrits', 0 ),
+                                ( 'parCountDebritsWithFire', 1 ),
+                                ( 'parCountDebritsWithSmoke', 1 ),
+                                ( 'parDebritSizeMul', 0.2 ),
+                                ( 'parDispersion', 10 ),
+                                ( 'parFireParticleEndSize', 800 ),
+                                ( 'parFireParticleStartSize', 0 ),
+                                ( 'parLifetime', 3 ),
+                                ( 'parMeshType', 0 ),
+                                ( 'parMinSpeedRatio', 0.4 ),
+                                ( 'parParticleOpacity', 0.6 ),
+                                ( 'parSmokeColor', float3[0.8000001,0.6980392,0.5019608] ),
+                                ( 'parSmokeColorMultiplier', 0.1 ),
+                                ( 'parSmokeDensity', 100 ),
+                                ( 'parSmokeParticleEndSize', 1000 ),
+                                ( 'parSmokeParticleStartSize', 250 ),
+                                ( 'parSpeed', float3[3500,3500,3500] ),
+                                ( 'parSpeedDispersion', 1 ),
+                            ]
+                        ),
                     ]
                 ),
-                TWaitInSec( Duration = 8),
             ]
         ),
         TSimultaneousAction
@@ -431,40 +434,37 @@ export Fx_impact_Vehicule_GAU8_Gatling is SimultaneousActionDeclaration
         (
             Mobile = TMobileWithLocalRepereMatrixFactory
             (
-                Position = float3[-10,-71,0] + parPosition
+                Position = parPosition
+                EulerAngles = float3[3.133352,0,0]
             )
             Actions =
             [
-                TSequentialAction
-                (Actions =
-                    [
-                        TWaitInSec( Duration = 0.2 ),
-                        TActionCall
-                        (
-                            Action = $/VFX_Bank/BANK_Rubble2_Simple
-                            NamedParams = MAP[
-                                ( 'parCountDebrits', 0 ),
-                                ( 'parCountDebritsWithFire', 1 ),
-                                ( 'parCountDebritsWithSmoke', 1 ),
-                                ( 'parDebritSizeMul', 0.2 ),
-                                ( 'parDispersion', 10 ),
-                                ( 'parFireParticleEndSize', 800 ),
-                                ( 'parFireParticleStartSize', 0 ),
-                                ( 'parLifetime', 3 ),
-                                ( 'parMeshType', 0 ),
-                                ( 'parMinSpeedRatio', 0.4 ),
-                                ( 'parParticleOpacity', 0.6 ),
-                                ( 'parSmokeColor', float3[0.8000001,0.6980392,0.5019608] ),
-                                ( 'parSmokeColorMultiplier', 0.1 ),
-                                ( 'parSmokeDensity', 100 ),
-                                ( 'parSmokeParticleEndSize', 1000 ),
-                                ( 'parSmokeParticleStartSize', 250 ),
-                                ( 'parSpeed', float3[3500,3500,3500] ),
-                                ( 'parSpeedDispersion', 1 ),
-                            ]
-                        ),
+                TActionCall
+                (
+                    Action = $/VFX_Bank/BANK_Rubble2_Oriented_Simple_Reverse
+                    NamedParams = MAP[
+                        ( 'parCountDebrits', 10 ),
+                        ( 'parCountDebritsWithFire', 4 ),
+                        ( 'parCountDebritsWithSmoke', 3 ),
+                        ( 'parDebritSizeMul', 1 ),
+                        ( 'parDir', float3[1,0,0] ),
+                        ( 'parDispersion', 1000 ),
+                        ( 'parFireParticleEndSize', 600 ),
+                        ( 'parFireParticleStartSize', 200 ),
+                        ( 'parGravity', 2000 ),
+                        ( 'parLifetime', 8 ),
+                        ( 'parMeshType', 0 ),
+                        ( 'parNarrowness', 5 ),
+                        ( 'parParticleOpacity', 0.1 ),
+                        ( 'parSmokeColor', float3[1,1,1] ),
+                        ( 'parSmokeColorMultiplier', 1 ),
+                        ( 'parSmokeDensity', 100 ),
+                        ( 'parSmokeParticleEndSize', 500 ),
+                        ( 'parSmokeParticleStartSize', 100 ),
+                        ( 'parSpeed', float3[6000,2000,2000] ),
                     ]
                 ),
+                TWaitInSec( Duration = 8),
             ]
         ),
         TSimultaneousAction

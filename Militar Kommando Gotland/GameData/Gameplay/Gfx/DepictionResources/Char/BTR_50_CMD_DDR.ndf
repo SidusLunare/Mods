@@ -5,10 +5,10 @@ export Modele_BTR_50_CMD_DDR is TResourceMesh
 
 export Modele_BTR_50_CMD_DDR_MID is TResourceMesh
 (
-    Mesh="GameData:/Assets/3D/Units/DDR/APC/BTR_50_CMD/BTR_50_CMD.fbx"
+    Mesh="GameData:/Assets/3D/Units/DDR/APC/BTR_50_CMD_MID/BTR_50_CMD_MID.fbx"
 )
 
 export Modele_BTR_50_CMD_DDR_LOW is TResourceMesh
 (
-    Mesh="GameData:/Assets/3D/Units/DDR/APC/BTR_50_CMD/BTR_50_CMD.fbx"
+    Mesh="GameData:/Assets/3D/Units/DDR/APC/BTR_50_CMD_LOW/BTR_50_CMD_LOW.fbx"
 )

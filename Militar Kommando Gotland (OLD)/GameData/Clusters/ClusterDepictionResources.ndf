@@ -1,0 +1,20 @@
+export Main is TClusterNdfTransactions
+(
+    Transactions =
+    [
+        TNDFTransaction
+        (
+            BaseName  = 'GFX/DepictionResources'
+            NameSpace = 'GFX/DepictionResources'
+            ResourcePackName = 'Base'
+            Moddable = true
+
+            Files =
+            [
+                'GameData:/Gameplay/Gfx/DepictionResources/DepictionAnimationOperators.ndf',
+            ]
+            +
+            GeneratedDepictionNdfFiles
+        )
+    ]
+)

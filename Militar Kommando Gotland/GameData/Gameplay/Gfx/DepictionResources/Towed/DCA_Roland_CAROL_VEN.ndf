@@ -1,0 +1,3 @@
+export Modele_DCA_Roland_CAROL_VEN is TResourceMesh( Mesh="GameData:/Assets/3D/Units/VEN/DCA/Roland_2_CAROL/Roland_2_CAROL.fbx")
+export Modele_DCA_Roland_CAROL_VEN_MID is TResourceMesh( Mesh="GameData:/Assets/3D/Units/VEN/DCA/Roland_2_CAROL_MID/Roland_2_CAROL_MID.fbx")
+export Modele_DCA_Roland_CAROL_VEN_LOW is TResourceMesh( Mesh="GameData:/Assets/3D/Units/VEN/DCA/Roland_2_CAROL_LOW/Roland_2_CAROL_LOW.fbx")

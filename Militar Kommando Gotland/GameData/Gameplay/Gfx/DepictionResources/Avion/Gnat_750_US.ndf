@@ -1,0 +1,19 @@
+export Modele_Gnat_750_US is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/US/Avion/Gnat_750/Gnat_750.fbx"
+)
+
+export Modele_Gnat_750_US_MID is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/US/Avion/Gnat_750_MID/Gnat_750_MID.fbx"
+)
+
+export Modele_Gnat_750_US_LOW is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/US/Avion/Gnat_750_LOW/Gnat_750_LOW.fbx"
+)
+
+export Modele_Gnat_750_US_train is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/US/Avion/Gnat_750/Gnat_750_train.fbx"
+)

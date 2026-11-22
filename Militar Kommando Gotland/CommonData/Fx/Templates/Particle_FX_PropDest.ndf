@@ -29,7 +29,7 @@ template Template_FX_Prop_Dest
                 ParticleLifetime = 15 * $/GraphicOption/ParticleLifeTimeMultiplier
                 ParticleDescriptor = ParticleDescriptor
                 (
-                    RenderInfo = ShadowedParticleMeshRenderInfo
+                    RenderInfo = ParticleMeshRenderInfo
                     Evolvers = ParticleStandardEvolverList
                     (
                         Position = ParticleMobileWrapperPosition + float3[0, 0, -1000] * MapToLinearSmoothStep[ParticleElapsedTime, 10, 15]

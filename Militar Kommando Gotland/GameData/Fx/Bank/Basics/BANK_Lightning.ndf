@@ -70,10 +70,10 @@ export BANK_Lightning_Plane is SimultaneousActionDeclaration
                     ParticleRenderer = $/VFX_Bank/LitParticleRenderer
                     RenderInfo = ParticleRenderInfo
                     (
-                        SortTriangles = True
+                        SortTriangles = true
                         TextureName = 'GameData:/Assets/2D/Fx/fx_eclair_bleu_00.png'
                         Calque = 'Particles'
-                        EmissiveParticle = True
+                        EmissiveParticle = true
                         ZTest = true
                     )
 
@@ -170,10 +170,10 @@ export BANK_Lightning is SimultaneousActionDeclaration
                     ParticleRenderer = $/VFX_Bank/LitParticleRenderer
                     RenderInfo = ParticleRenderInfo
                     (
-                        SortTriangles = True
+                        SortTriangles = true
                         TextureName = 'GameData:/Assets/2D/Fx/fx_eclair_bleu_00.png'
                         Calque = 'Particles'
-                        EmissiveParticle = True
+                        EmissiveParticle = true
                         ZTest = true
                     )
 

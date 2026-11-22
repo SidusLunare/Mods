@@ -32,7 +32,7 @@ export HelicoDopplerSettings is TDopplerSettings
 
 export AcknowUnit_SoundSettings is TSoundSettings
 (
-    IgnoreDynamicCompression = True
+    IgnoreDynamicCompression = true
     Pitch = 1
 
     Fader = ~/AcknowUnitFader
@@ -42,7 +42,7 @@ export AcknowUnit_SoundSettings is TSoundSettings
 export Dialog_SoundSettings is TSoundSettings
 (
     ChannelRange = [1, 2]
-    IgnoreDynamicCompression = True
+    IgnoreDynamicCompression = true
     Pitch = 1
 
     Fader = ~/DialogGfxFader
@@ -50,7 +50,7 @@ export Dialog_SoundSettings is TSoundSettings
 
 export HUD_SoundSettings is TSoundSettings
 (
-    IgnoreDynamicCompression = True
+    IgnoreDynamicCompression = true
     Pitch = 1
     ChannelRange = [3, 7]
 
@@ -79,11 +79,11 @@ export SoundSettings_Steelman_Combat is TSoundSettings
     Pitch = 1
     RandomPitch = 0.1
 
-    Spatialized = True
+    Spatialized = true
     FadeDistanceNear = 4.5
     FadeDistanceFar  = 20000
 
-    UseLowPass = True
+    UseLowPass = true
     LowPassDistanceNear = 5000
     LowPassDistanceFar  = 10000
 
@@ -95,11 +95,11 @@ export SoundSettings_Ambiance_City_Evenements is TSoundSettings
     Pitch = 1
     RandomPitch = 0.05
 
-    Spatialized = True
+    Spatialized = true
     FadeDistanceNear =    5
     FadeDistanceFar  = 9300
 
-    UseLowPass = True
+    UseLowPass = true
     LowPassDistanceNear =  230
     LowPassDistanceFar  = 2800
 
@@ -111,11 +111,11 @@ export SoundSettings_Ambiance_HLM_Evenements is TSoundSettings
     Pitch = 1
     RandomPitch = 0.05
 
-    Spatialized = True
+    Spatialized = true
     FadeDistanceNear =    5
     FadeDistanceFar  = 14000 //9300
 
-    UseLowPass = True
+    UseLowPass = true
     LowPassDistanceNear =  230
     LowPassDistanceFar  = 4200 //2800
 
@@ -127,11 +127,11 @@ export SoundSettings_Ambiance_Ferme_Evenements is TSoundSettings
     Pitch = 1
     RandomPitch = 0.05
 
-    Spatialized = True
+    Spatialized = true
     FadeDistanceNear =  4.5
     FadeDistanceFar  = 1850
 
-    UseLowPass = True
+    UseLowPass = true
     LowPassDistanceNear =  95
     LowPassDistanceFar  = 930
 
@@ -143,11 +143,11 @@ export SoundSettings_Ambiance_Indus_Evenements is TSoundSettings
     Pitch = 1
     RandomPitch = 0.05
 
-    Spatialized = True
+    Spatialized = true
     FadeDistanceNear = 4.5
     FadeDistanceFar  = 1850
 
-    UseLowPass = True
+    UseLowPass = true
     LowPassDistanceNear = 95
     LowPassDistanceFar  = 930
 
@@ -158,13 +158,28 @@ export SoundSettings_Ambiance_City is TSoundSettings
 (
     Pitch = 1
 
-    Spatialized = True
+    Spatialized = true
     FadeDistanceNear = 4.5
     FadeDistanceFar  = 4600
 
-    UseLowPass = True
+    UseLowPass = true
     LowPassDistanceNear = 95
     LowPassDistanceFar  = 465
+
+    Fader = ~/GlobalAmbienceFader
+)
+
+export SoundSettings_Ambiance_Dam is TSoundSettings
+(
+    Pitch = 1
+
+    Spatialized = true
+    FadeDistanceNear = 18
+    FadeDistanceFar  = 18400
+
+    UseLowPass = true
+    LowPassDistanceNear = 380
+    LowPassDistanceFar  = 1860
 
     Fader = ~/GlobalAmbienceFader
 )
@@ -173,11 +188,11 @@ export SoundSettings_Ambiance_Eau is TSoundSettings
 (
     Pitch = 1
 
-    Spatialized = True
+    Spatialized = true
     FadeDistanceFar  = 9300
     FadeDistanceNear = 4.5
 
-    UseLowPass = True
+    UseLowPass = true
     LowPassDistanceFar  = 1850
     LowPassDistanceNear = 185
 
@@ -188,11 +203,11 @@ export SoundSettings_Ambiance_Ferme is TSoundSettings
 (
     Pitch = 1
 
-    Spatialized = True
+    Spatialized = true
     FadeDistanceFar  = 1400
     FadeDistanceNear = 4.5
 
-    UseLowPass = True
+    UseLowPass = true
     LowPassDistanceFar  = 230
     LowPassDistanceNear = 95
 
@@ -202,12 +217,12 @@ export SoundSettings_Ambiance_Ferme is TSoundSettings
 export SoundSettings_Ambiance_Indus is TSoundSettings
 (
     Pitch = 1
-    Spatialized = True
+    Spatialized = true
 
     FadeDistanceFar  = 1850
     FadeDistanceNear = 4.5
 
-    UseLowPass = True
+    UseLowPass = true
     LowPassDistanceFar  = 370
     LowPassDistanceNear = 95
 
@@ -219,12 +234,12 @@ export SoundSettings_Moteur is TSoundSettings
     Pitch = 1
     RandomPitch = 0.25
 
-    Spatialized = True
-    UseFogOfWar = True
+    Spatialized = true
+    UseFogOfWar = true
     FadeDistanceNear = 0
     FadeDistanceFar  = 2300
 
-    UseLowPass = True
+    UseLowPass = true
     LowPassDistanceNear =   2
     LowPassDistanceFar  = 300
 
@@ -236,12 +251,12 @@ export SoundSettings_Moteur_Helico is TSoundSettings
     Pitch = 1 //2
     RandomPitch = 0.25  //0.5
 
-    Spatialized = True
-    UseFogOfWar = True
+    Spatialized = true
+    UseFogOfWar = true
     LowPassDistanceNear = 115
     LowPassDistanceFar  = 700
 
-    UseLowPass = True
+    UseLowPass = true
     FadeDistanceNear = 1
     FadeDistanceFar  = 3000 //9300
 
@@ -253,12 +268,12 @@ export SoundSettings_Moteur_Helico_Low_Pitch is TSoundSettings
     Pitch = 1 //2
     RandomPitch = 0.15 //0.5
 
-    Spatialized = True
-    UseFogOfWar = True
+    Spatialized = true
+    UseFogOfWar = true
     FadeDistanceFar  = 3000 //9300
     FadeDistanceNear = 1
 
-    UseLowPass = True
+    UseLowPass = true
     LowPassDistanceFar  = 700
     LowPassDistanceNear = 115
 
@@ -270,12 +285,12 @@ export SoundSettings_Moteur_Avion is TSoundSettings
     Pitch = 1 //2
     RandomPitch = 0.25 //0.5
 
-    Spatialized = True
-    UseFogOfWar = True
+    Spatialized = true
+    UseFogOfWar = true
     FadeDistanceFar  = 7000
     FadeDistanceNear = 4.5
 
-    UseLowPass = True
+    UseLowPass = true
     LowPassDistanceFar  = 2300
     LowPassDistanceNear = 230
 
@@ -287,11 +302,11 @@ export SoundSettings_Default is TSoundSettings
     Pitch = 1
     RandomPitch = 0.15
 
-    Spatialized = True
+    Spatialized = true
     FadeDistanceFar  = 7000
     FadeDistanceNear = 0
 
-    UseLowPass = True
+    UseLowPass = true
     LowPassDistanceFar  = 1600
     LowPassDistanceNear = 160
 
@@ -303,12 +318,12 @@ export SoundSettings_Deplacement_Infanterie is TSoundSettings
     Pitch = 1
     RandomPitch = 0.2
 
-    Spatialized = True
-    UseFogOfWar = True
+    Spatialized = true
+    UseFogOfWar = true
     FadeDistanceFar  = 1300 //375
     FadeDistanceNear = 10
 
-    UseLowPass = True
+    UseLowPass = true
     LowPassDistanceFar  = 100 //280
     LowPassDistanceNear = 10
 
@@ -320,11 +335,11 @@ export SoundSettings_Impact_Balles_legeres is TSoundSettings
     Pitch = 1
     RandomPitch = 0.5 //0.2
 
-    Spatialized = True
+    Spatialized = true
     FadeDistanceFar  = 800 //465
     FadeDistanceNear = 100 //0
 
-    UseLowPass = True
+    UseLowPass = true
     LowPassDistanceFar  = 200 //375
     LowPassDistanceNear = 50 //18
 
@@ -336,11 +351,11 @@ export SoundSettings_Impact_Balles is TSoundSettings
     Pitch = 1
     RandomPitch = 0.5 /// 0.2
 
-    Spatialized = True
+    Spatialized = true
     FadeDistanceFar  = 800
     FadeDistanceNear = 100
 
-    UseLowPass = True
+    UseLowPass = true
     LowPassDistanceFar  = 200
     LowPassDistanceNear = 50
 
@@ -352,11 +367,11 @@ export SoundSettings_Tir_Fusil_Mitrailleur is TSoundSettings
     Pitch = 1
     RandomPitch = 0.15
 
-    Spatialized = True
+    Spatialized = true
     FadeDistanceFar  = 30000  //25000
     FadeDistanceNear = 200 //0
 
-    UseLowPass = True
+    UseLowPass = true
     LowPassDistanceFar  = 750 //700
     LowPassDistanceNear = 100 //0
 
@@ -368,11 +383,11 @@ export SoundSettings_Tir_Mitrailleuse_legere is TSoundSettings
     Pitch = 1
     RandomPitch = 0.15
 
-    Spatialized = True
+    Spatialized = true
     FadeDistanceFar  = 30000 //4600
     FadeDistanceNear = 200
 
-    UseLowPass = True
+    UseLowPass = true
     LowPassDistanceFar  = 750 //930
     LowPassDistanceNear = 100 //100
 
@@ -384,12 +399,12 @@ export SoundSettings_Tourelles is TSoundSettings
     Pitch = 1
     RandomPitch = 0.1
 
-    Spatialized = True
+    Spatialized = true
     FadeDistanceFar  = 250
     FadeDistanceNear = 0
 
-    UseLowPass = True
-    UseFogOfWar = True
+    UseLowPass = true
+    UseFogOfWar = true
     LowPassDistanceFar  = 110
     LowPassDistanceNear = 5
 
@@ -401,11 +416,11 @@ export SoundSettings_Tir_Mitrailleuse_lourde is TSoundSettings
     Pitch = 1
     RandomPitch = 0.15
 
-    Spatialized = True
+    Spatialized = true
     FadeDistanceFar  = 30000
     FadeDistanceNear = 200
 
-    UseLowPass = True
+    UseLowPass = true
     LowPassDistanceFar  = 1000
     LowPassDistanceNear = 100 //100
 
@@ -417,11 +432,11 @@ export SoundSettings_Tir_Autocanon is TSoundSettings
     Pitch = 1
     RandomPitch = 0.15
 
-    Spatialized = True
+    Spatialized = true
     FadeDistanceFar  = 7000
     FadeDistanceNear = 200 //0
 
-    UseLowPass = True
+    UseLowPass = true
     LowPassDistanceFar  = 1500
     LowPassDistanceNear = 150
 
@@ -433,11 +448,11 @@ export SoundSettings_Tir_Canon_Moyen is TSoundSettings
     Pitch = 1
     RandomPitch = 0.15
 
-    Spatialized = True
+    Spatialized = true
     FadeDistanceFar  = 7000
     FadeDistanceNear = 2.5
 
-    UseLowPass = True
+    UseLowPass = true
     LowPassDistanceFar  = 2300
     LowPassDistanceNear = 140
 
@@ -449,11 +464,11 @@ export SoundSettings_Tir_Canon_Gros is TSoundSettings
     Pitch = 1
     RandomPitch = 0.15
 
-    Spatialized = True
+    Spatialized = true
     FadeDistanceFar  = 9500
     FadeDistanceNear = 4.5
 
-    UseLowPass = True
+    UseLowPass = true
     LowPassDistanceFar  = 2800
     LowPassDistanceNear = 230
 
@@ -465,11 +480,11 @@ export SoundSettings_Propulsion_Missile_Petit is TSoundSettings
     Pitch = 1
     RandomPitch = 0.15
 
-    Spatialized = True
+    Spatialized = true
     FadeDistanceFar  = 2500
     FadeDistanceNear = 0
 
-    UseLowPass = True
+    UseLowPass = true
     LowPassDistanceFar  = 800
     LowPassDistanceNear = 115
 
@@ -483,11 +498,11 @@ export SoundSettings_Propulsion_Missile_Moyen is TSoundSettings
     Pitch = 1
     RandomPitch = 0.15
 
-    Spatialized = True
+    Spatialized = true
     FadeDistanceFar  = 4000
     FadeDistanceNear = 0
 
-    UseLowPass = True
+    UseLowPass = true
     LowPassDistanceFar  = 1000
     LowPassDistanceNear = 250
 
@@ -501,11 +516,11 @@ export SoundSettings_Propulsion_Missile_Gros is TSoundSettings
     Pitch = 1
     RandomPitch = 0.5 //0.15
 
-    Spatialized = True
+    Spatialized = true
     FadeDistanceFar  = 9500
     FadeDistanceNear = 0
 
-    UseLowPass = True
+    UseLowPass = true
     LowPassDistanceFar  = 3500
     LowPassDistanceNear = 45
 
@@ -519,11 +534,11 @@ export SoundSettings_Tir_Missile_Moyen is TSoundSettings
     Pitch = 1
     RandomPitch = 0.15
 
-    Spatialized = True
+    Spatialized = true
     FadeDistanceFar  = 7000
     FadeDistanceNear = 0
 
-    UseLowPass = True
+    UseLowPass = true
     LowPassDistanceFar  = 2300
     LowPassDistanceNear = 140
 
@@ -535,11 +550,11 @@ export SoundSettings_Tir_Missile_Gros is TSoundSettings
     Pitch = 1
     RandomPitch = 0.15
 
-    Spatialized = True
+    Spatialized = true
     FadeDistanceFar  = 9500
     FadeDistanceNear = 0
 
-    UseLowPass = True
+    UseLowPass = true
     LowPassDistanceFar  = 1500
     LowPassDistanceNear = 100
 
@@ -551,11 +566,11 @@ export SoundSettings_MLRS is TSoundSettings
     Pitch = 1
     RandomPitch = 0.15
 
-    Spatialized = True
+    Spatialized = true
     FadeDistanceFar  = 18000
     FadeDistanceNear = 0
 
-    UseLowPass = True
+    UseLowPass = true
     LowPassDistanceFar  = 8000
     LowPassDistanceNear = 115
 
@@ -567,11 +582,11 @@ export SoundSettings_Mort_Unite_Petite is TSoundSettings
     Pitch = 1
     RandomPitch = 0.15
 
-    Spatialized = True
+    Spatialized = true
     FadeDistanceNear = 0
     FadeDistanceFar  = 9300
 
-    UseLowPass = True
+    UseLowPass = true
     LowPassDistanceNear =   95
     LowPassDistanceFar  = 2100
 
@@ -583,11 +598,11 @@ export SoundSettings_Mort_Unite_Grosse is TSoundSettings
     Pitch = 1
     RandomPitch = 0.15
 
-    Spatialized = True
+    Spatialized = true
     FadeDistanceNear =     0
     FadeDistanceFar  = 11600
 
-    UseLowPass = True
+    UseLowPass = true
     LowPassDistanceNear =  100
     LowPassDistanceFar  = 2300
 
@@ -599,11 +614,11 @@ export SoundSettings_Impact_SAM is TSoundSettings
     Pitch = 1
     RandomPitch = 0.15
 
-    Spatialized = True
+    Spatialized = true
     FadeDistanceNear =     0
     FadeDistanceFar  = 28000
 
-    UseLowPass = True
+    UseLowPass = true
     LowPassDistanceNear =   23
     LowPassDistanceFar  = 4600
 
@@ -615,11 +630,11 @@ export SoundSettings_Tres_Petits_Impact_HE is TSoundSettings
     Pitch = 1
     RandomPitch = 0.15
 
-    Spatialized = True
+    Spatialized = true
     FadeDistanceNear = 0
     FadeDistanceFar  = 7000
 
-    UseLowPass = True
+    UseLowPass = true
     LowPassDistanceNear = 15
     LowPassDistanceFar  = 1000
 
@@ -631,11 +646,11 @@ export SoundSettings_Petits_Impact_HE is TSoundSettings
     Pitch = 1
     RandomPitch = 0.15
 
-    Spatialized = True
+    Spatialized = true
     FadeDistanceNear =    0
     FadeDistanceFar  = 8000
 
-    UseLowPass = True
+    UseLowPass = true
     LowPassDistanceNear =   10
     LowPassDistanceFar  = 1000
 
@@ -647,11 +662,11 @@ export SoundSettings_Moyen_Impact_HE is TSoundSettings
     Pitch = 1
     RandomPitch = 0.15
 
-    Spatialized = True
+    Spatialized = true
     FadeDistanceNear =    0
     FadeDistanceFar  = 9000
 
-    UseLowPass = True
+    UseLowPass = true
     LowPassDistanceNear =   15
     LowPassDistanceFar  = 1500
 
@@ -663,11 +678,11 @@ export SoundSettings_Gros_Impact_HE is TSoundSettings
     Pitch = 1
     RandomPitch = 0.15
 
-    Spatialized = True
+    Spatialized = true
     FadeDistanceNear =     0
     FadeDistanceFar  = 18600
 
-    UseLowPass = True
+    UseLowPass = true
     LowPassDistanceNear =   23
     LowPassDistanceFar  = 4500
 
@@ -679,11 +694,11 @@ export SoundSettings_Tres_Gros_Impact_HE is TSoundSettings
     Pitch = 1
     RandomPitch = 0.15
 
-    Spatialized = True
+    Spatialized = true
     FadeDistanceNear =     0
     FadeDistanceFar  = 23000
 
-    UseLowPass = True
+    UseLowPass = true
     LowPassDistanceNear =   50
     LowPassDistanceFar  = 5000
 
@@ -695,15 +710,14 @@ export SoundSettings_Nuke is TSoundSettings
     Pitch = 1
     RandomPitch = 0.15
 
-    Spatialized = True
+    Spatialized = true
     FadeDistanceNear =    465
     FadeDistanceFar  = 230000
 
-    UseLowPass = True
+    UseLowPass = true
     LowPassDistanceNear =  2300
     LowPassDistanceFar  = 14000
 
     Fader = ~/FXVolumeControlFader
 )
-
 

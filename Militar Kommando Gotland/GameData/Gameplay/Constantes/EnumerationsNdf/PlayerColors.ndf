@@ -1,5 +1,4 @@
-// A maintenir synchro avec Enumerations/PlayerColors.ndf
-// A maintenir synchro avec Data/Python/Eugen/leveldesign_specific/enum_player_colors.py
+// Sync with Enumerations/PlayerColors.ndf
 
 PlayerColorNdfEnum is EPlayerColor
 (

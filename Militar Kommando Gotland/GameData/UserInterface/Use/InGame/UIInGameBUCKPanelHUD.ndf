@@ -9,14 +9,14 @@ template GenericPanelHUD [
 
     LastExtendedWeight : bool = false,
 
-    TitleVisible : boolean = true,
+    TitleVisible : bool = true,
     TitleHeight : float = 0.0,
     TitleTextToken : string = '',
     TitleTextColorIndex : int = 0,
     TitleTextSizeIndex : int = 0,
     TitleTypeface : string = "Title",
     TitleMagnifiableOffset : int = 0,
-    TitleAfterContent : boolean = false, //Le titre est placé avant le contenu si ce paramètre est faux
+    TitleAfterContent : bool = false, //Le titre est placé avant le contenu si ce paramètre est faux
 
     AlignementToFather : float2 = [0.0,0.0],
     AlignementToAnchor : float2 = [0.0,0.0],
@@ -24,7 +24,7 @@ template GenericPanelHUD [
     MagnifiableOffset : float2 = [0.0, 0.0],
 
     ContentUniqueName : string = '',
-    ContentVisible : boolean = true,
+    ContentVisible : bool = true,
     ContentHeight : float = 0.0,
     ContentMagnifiableLeftRightMargins : float = 0.0,
     ContentMagnifiableTopBottomMargins : float = 0.0,
@@ -202,8 +202,8 @@ template GenericPanelHUD_BlockContent [
     TopBottomMargin : float = 0,
     LeftRightMargin : float = 0,
     BackgroundBlockColorToken : string = '0',
-    LastExtendedWeight : boolean = false,
-    HasBackground : boolean = true,
+    LastExtendedWeight : bool = false,
+    HasBackground : bool = true,
 ]
 is BUCKContainerDescriptor
 (

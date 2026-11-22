@@ -2,7 +2,8 @@ export CaptureCommandZone_NearestZone_TestAuto_Strategy is TIAGeneralStrategy
 (
     StrategyName = "CczNearIA"
     FirstGenerator = TestAuto_CommandCaptureZone_NearestZone
-    TransitionList =[]
+    TransitionList = []
+    AuthorizedCorridorList = [1, 5, 6, 10]
 )
 
 

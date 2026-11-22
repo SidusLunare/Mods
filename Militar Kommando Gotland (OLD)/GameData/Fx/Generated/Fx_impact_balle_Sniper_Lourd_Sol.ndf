@@ -1,0 +1,133 @@
+// Ne pas éditer, ce fichier est généré
+
+export Fx_impact_balle_Sniper_Lourd_Sol is SimultaneousActionDeclaration
+(
+    Params =
+    [
+        private parDirection is TActionAlias( ExpectedType = 'float3' DefaultValue = float3[0,0,0] ),
+        private parInitialShotDelay is TActionAlias( ExpectedType = 'float' DefaultValue = 0 ),
+        private parRadiusPhysical is TActionAlias( ExpectedType = 'float' DefaultValue = 0 ),
+        private parRadiusSuppress is TActionAlias( ExpectedType = 'float' DefaultValue = 0 ),
+        private parPosition is TActionAlias( ExpectedType = 'float3' DefaultValue = float3[0,0,0] ),
+    ]
+    Actions = ActionList is
+    [
+        TSimultaneousAction
+        (
+            Mobile = nil
+            Actions =
+            [
+                TActionCall
+                (
+                    Action = $/VFX_Bank/BANK_Bomb_Flash
+                    NamedParams = MAP[
+                        ( 'parCount', 1 ),
+                        ( 'parDuration', 0.05 ),
+                        ( 'parFinalSize', 300 ),
+                        ( 'parInitialSize', 100 ),
+                        ( 'parZBias', 255 ),
+                        ( 'parPositionRelative', float3[-67,91,38] + parPosition ),
+                    ]
+                ),
+                TActionCall
+                (
+                    Action = $/GFX/GameFx/dummy_impact_for_exporter_hack
+                    NamedParams = MAP[
+                        ( 'Dir', parDirection ),
+                        ( 'Pos', parPosition ),
+                        ( 'RadPhy', parRadiusPhysical ),
+                        ( 'RadSupr', parRadiusSuppress ),
+                    ]
+                ),
+            ]
+        ),
+        TSimultaneousAction
+        (
+            Mobile = TMobileWithLocalRepereMatrixFactory
+            (
+                Position = parPosition
+            )
+            Actions =
+            [
+                TActionCall
+                (
+                    Action = $/VFX_Bank/Small_ground_Impact_Simple
+                    NamedParams = MAP[
+                        ( 'parDuration', 0.5 ),
+                        ( 'parDustColor', float3[0.9882354,1,0.9882354] ),
+                        ( 'parDustSize', 600 ),
+                        ( 'parMudSize', 200 ),
+                        ( 'parOpacity', 0.8 ),
+                        ( 'parRandomPosition', 200 ),
+                    ]
+                ),
+            ]
+        ),
+        TSimultaneousAction
+        (
+            Mobile = TMobileWithLocalRepereMatrixFactory
+            (
+                Position = float3[9,159,0] + parPosition
+            )
+            Actions =
+            [
+                TSequentialAction
+                (Actions =
+                    [
+                        TWaitInSec( Duration = 0.08 ),
+                        TActionCall
+                        (
+                            Action = $/VFX_Bank/Small_ground_Impact_Simple
+                            NamedParams = MAP[
+                                ( 'parDuration', 0.4 ),
+                                ( 'parDustColor', float3[0.9882354,1,0.9882354] ),
+                                ( 'parDustSize', 600 ),
+                                ( 'parMudSize', 200 ),
+                                ( 'parOpacity', 0.8 ),
+                                ( 'parRandomPosition', 200 ),
+                            ]
+                        ),
+                    ]
+                ),
+            ]
+        ),
+        TSimultaneousAction
+        (
+            Mobile = TMobileWithLocalRepereMatrixFactory
+            (
+                Position = float3[-57,142,0]
+            )
+            Actions =
+            [
+                TSequentialAction
+                (Actions =
+                    [
+                        TWaitInSec( Duration = 0.4 ),
+                        TActionCall
+                        (
+                            Action = $/VFX_Bank/BANK_WasteGroundDustStickOnGround_Simple
+                            NamedParams = MAP[
+                                ( 'parAlphaStartDecayValue', 0.01 ),
+                                ( 'parCount', 25 ),
+                                ( 'parEndColor', float3[0.9921569,0.7764707,0.6] ),
+                                ( 'parEndSize', 400 ),
+                                ( 'parFluidFriction', 3.05 ),
+                                ( 'parInitialDelay', parInitialShotDelay ),
+                                ( 'parLifetime', 6 ),
+                                ( 'parOpacity', 0.9 ),
+                                ( 'parRotationFactor', 1 ),
+                                ( 'parScaleSizeFactor', 2 ),
+                                ( 'parStartColor', float3[0.9921569,0.7764707,0.6] ),
+                                ( 'parStartRandomRadius', 800 ),
+                                ( 'parStartRotation', 0.25 ),
+                                ( 'parStartSize', 50 ),
+                                ( 'parStartSpeed', 10 ),
+                                ( 'parWindWeight', 4 ),
+                            ]
+                        ),
+                    ]
+                ),
+            ]
+        ),
+    ]
+)

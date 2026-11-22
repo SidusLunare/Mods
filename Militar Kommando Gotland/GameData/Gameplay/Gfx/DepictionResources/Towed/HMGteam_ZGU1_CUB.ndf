@@ -1,0 +1,3 @@
+export Modele_HMGteam_ZGU1_CUB is TResourceMesh( Mesh="GameData:/Assets/3D/Units/CUBA/Canon/DCA_ZGU1/DCA_ZGU1.fbx" )
+export Modele_HMGteam_ZGU1_CUB_MID is TResourceMesh( Mesh="GameData:/Assets/3D/Units/CUBA/Canon/DCA_ZGU1_MID/DCA_ZGU1_MID.fbx" )
+export Modele_HMGteam_ZGU1_CUB_LOW is TResourceMesh( Mesh="GameData:/Assets/3D/Units/CUBA/Canon/DCA_ZGU1_LOW/DCA_ZGU1_LOW.fbx" )

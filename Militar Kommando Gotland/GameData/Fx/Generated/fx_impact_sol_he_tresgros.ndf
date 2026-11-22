@@ -41,67 +41,6 @@ export fx_impact_sol_he_tresgros is SimultaneousActionDeclaration
         ),
         TSimultaneousAction
         (
-            Mobile = nil
-            Actions =
-            [
-                TActionCall
-                (
-                    Action = $/VFX_Bank/BANK_Bomb_Flash
-                    NamedParams = MAP[
-                        ( 'parCount', 1 ),
-                        ( 'parDuration', 0.4 ),
-                        ( 'parFinalSize', 5300 ),
-                        ( 'parInitialSize', 0 ),
-                        ( 'parZBias', 0 ),
-                        ( 'parPositionRelative', float3[0,0,200] + parPosition ),
-                    ]
-                ),
-                TActionCall
-                (
-                    Action = $/VFX_Bank/BANK_Bomb_NewSparks_Omni_Simple
-                    NamedParams = MAP[
-                        ( 'parColor', float3[1,0.2509804,0] ),
-                        ( 'parColorMultiplier', 6.400001 ),
-                        ( 'parCount', 83 ),
-                        ( 'parFluidFriction', 0 ),
-                        ( 'parGravity', 2000 ),
-                        ( 'parLifetime', 3 ),
-                        ( 'parNarrowness', 0 ),
-                        ( 'parPositionRadius', 680 ),
-                        ( 'parSize', 10 ),
-                        ( 'parSpeedMax', 2800 ),
-                        ( 'parSpeedMin', 300 ),
-                        ( 'parStretch', 1 ),
-                        ( 'parWindFactor', 0 ),
-                        ( 'parDir', float3[0,0,1] ),
-                        ( 'parPositionRelative', parPosition ),
-                    ]
-                ),
-                TActionCall
-                (
-                    Action = $/VFX_Bank/BANK_Bomb_NewSparks_Simple
-                    NamedParams = MAP[
-                        ( 'parColor', float3[0.8745099,0.4470589,0.2509804] ),
-                        ( 'parColorMultiplier', 3 ),
-                        ( 'parCount', 25 ),
-                        ( 'parFluidFriction', 1 ),
-                        ( 'parGravity', 2000 ),
-                        ( 'parLifetime', 2.5 ),
-                        ( 'parNarrowness', 0.1 ),
-                        ( 'parPositionRadius', 200 ),
-                        ( 'parSize', 10 ),
-                        ( 'parSpeedMax', 8000 ),
-                        ( 'parSpeedMin', 5000 ),
-                        ( 'parStretch', 1 ),
-                        ( 'parWindFactor', 1 ),
-                        ( 'parDir', float3[0,0,1] ),
-                        ( 'parPositionRelative', parPosition ),
-                    ]
-                ),
-            ]
-        ),
-        TSimultaneousAction
-        (
             Mobile = TMobileWithLocalRepereMatrixFactory
             (
                 Position = parPosition
@@ -171,6 +110,67 @@ export fx_impact_sol_he_tresgros is SimultaneousActionDeclaration
         ),
         TSimultaneousAction
         (
+            Mobile = nil
+            Actions =
+            [
+                TActionCall
+                (
+                    Action = $/VFX_Bank/BANK_Bomb_Flash
+                    NamedParams = MAP[
+                        ( 'parCount', 1 ),
+                        ( 'parDuration', 0.4 ),
+                        ( 'parFinalSize', 5300 ),
+                        ( 'parInitialSize', 0 ),
+                        ( 'parZBias', 0 ),
+                        ( 'parPositionRelative', float3[0,0,200] + parPosition ),
+                    ]
+                ),
+                TActionCall
+                (
+                    Action = $/VFX_Bank/BANK_Bomb_NewSparks_Simple
+                    NamedParams = MAP[
+                        ( 'parColor', float3[0.8745099,0.4470589,0.2509804] ),
+                        ( 'parColorMultiplier', 3 ),
+                        ( 'parCount', 25 ),
+                        ( 'parFluidFriction', 1 ),
+                        ( 'parGravity', 2000 ),
+                        ( 'parLifetime', 2.5 ),
+                        ( 'parNarrowness', 0.1 ),
+                        ( 'parPositionRadius', 200 ),
+                        ( 'parSize', 10 ),
+                        ( 'parSpeedMax', 8000 ),
+                        ( 'parSpeedMin', 5000 ),
+                        ( 'parStretch', 1 ),
+                        ( 'parWindFactor', 1 ),
+                        ( 'parDir', float3[0,0,1] ),
+                        ( 'parPositionRelative', parPosition ),
+                    ]
+                ),
+                TActionCall
+                (
+                    Action = $/VFX_Bank/BANK_Bomb_NewSparks_Omni_Simple
+                    NamedParams = MAP[
+                        ( 'parColor', float3[1,0.2509804,0] ),
+                        ( 'parColorMultiplier', 6.400001 ),
+                        ( 'parCount', 83 ),
+                        ( 'parFluidFriction', 0 ),
+                        ( 'parGravity', 2000 ),
+                        ( 'parLifetime', 3 ),
+                        ( 'parNarrowness', 0 ),
+                        ( 'parPositionRadius', 680 ),
+                        ( 'parSize', 10 ),
+                        ( 'parSpeedMax', 2800 ),
+                        ( 'parSpeedMin', 300 ),
+                        ( 'parStretch', 1 ),
+                        ( 'parWindFactor', 0 ),
+                        ( 'parDir', float3[0,0,1] ),
+                        ( 'parPositionRelative', parPosition ),
+                    ]
+                ),
+            ]
+        ),
+        TSimultaneousAction
+        (
             Mobile = TMobileWithLocalRepereMatrixFactory
             (
                 Position = float3[-19,-20,0] + parPosition
@@ -218,6 +218,30 @@ export fx_impact_sol_he_tresgros is SimultaneousActionDeclaration
                 ),
                 TActionCall
                 (
+                    Action = $/VFX_Bank/BANK_Rubble2_Simple
+                    NamedParams = MAP[
+                        ( 'parCountDebrits', 0 ),
+                        ( 'parCountDebritsWithFire', 10 ),
+                        ( 'parCountDebritsWithSmoke', 10 ),
+                        ( 'parDebritSizeMul', 0.5 ),
+                        ( 'parDispersion', 1200 ),
+                        ( 'parFireParticleEndSize', 0 ),
+                        ( 'parFireParticleStartSize', 200 ),
+                        ( 'parLifetime', 5 ),
+                        ( 'parMeshType', 1 ),
+                        ( 'parMinSpeedRatio', 1 ),
+                        ( 'parParticleOpacity', 0.3400001 ),
+                        ( 'parSmokeColor', float3[0.1647059,0.1647059,0.1647059] ),
+                        ( 'parSmokeColorMultiplier', 0.3 ),
+                        ( 'parSmokeDensity', 100 ),
+                        ( 'parSmokeParticleEndSize', 600 ),
+                        ( 'parSmokeParticleStartSize', 100 ),
+                        ( 'parSpeed', float3[4250,4360,9983] ),
+                        ( 'parSpeedDispersion', 0 ),
+                    ]
+                ),
+                TActionCall
+                (
                     Action = $/VFX_Bank/BANK_Rubble2_Oriented_Simple
                     NamedParams = MAP[
                         ( 'parCountDebrits', 5 ),
@@ -239,30 +263,6 @@ export fx_impact_sol_he_tresgros is SimultaneousActionDeclaration
                         ( 'parSmokeParticleEndSize', 3000 ),
                         ( 'parSmokeParticleStartSize', 600 ),
                         ( 'parSpeed', float3[4280,4350,8000] ),
-                    ]
-                ),
-                TActionCall
-                (
-                    Action = $/VFX_Bank/BANK_Rubble2_Simple
-                    NamedParams = MAP[
-                        ( 'parCountDebrits', 0 ),
-                        ( 'parCountDebritsWithFire', 10 ),
-                        ( 'parCountDebritsWithSmoke', 10 ),
-                        ( 'parDebritSizeMul', 0.5 ),
-                        ( 'parDispersion', 1200 ),
-                        ( 'parFireParticleEndSize', 0 ),
-                        ( 'parFireParticleStartSize', 200 ),
-                        ( 'parLifetime', 5 ),
-                        ( 'parMeshType', 1 ),
-                        ( 'parMinSpeedRatio', 1 ),
-                        ( 'parParticleOpacity', 0.3400001 ),
-                        ( 'parSmokeColor', float3[0.1647059,0.1647059,0.1647059] ),
-                        ( 'parSmokeColorMultiplier', 0.3 ),
-                        ( 'parSmokeDensity', 100 ),
-                        ( 'parSmokeParticleEndSize', 600 ),
-                        ( 'parSmokeParticleStartSize', 100 ),
-                        ( 'parSpeed', float3[4250,4360,9983] ),
-                        ( 'parSpeedDispersion', 0 ),
                     ]
                 ),
                 TSequentialAction

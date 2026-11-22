@@ -1,10 +1,18 @@
-ZZ:/AllPlatforms/Localisation/FR/Localisation/Militar Kommando Gotland/UNITS.dic
-ZZ:/AllPlatforms/Localisation/GER/Localisation/Militar Kommando Gotland/UNITS.dic
-ZZ:/AllPlatforms/Localisation/POL/Localisation/Militar Kommando Gotland/UNITS.dic
-ZZ:/AllPlatforms/Localisation/RU/Localisation/Militar Kommando Gotland/UNITS.dic
-ZZ:/AllPlatforms/Localisation/SC/Localisation/Militar Kommando Gotland/UNITS.dic
-ZZ:/AllPlatforms/Localisation/SPA/Localisation/Militar Kommando Gotland/UNITS.dic
-ZZ:/AllPlatforms/Localisation/US/Localisation/Militar Kommando Gotland/UNITS.dic
+ZZ:/Localisation/Localisation/Militar Kommando Gotland/INTERFACE_OUTGAME-FR.dic
+ZZ:/Localisation/Localisation/Militar Kommando Gotland/INTERFACE_OUTGAME-GER.dic
+ZZ:/Localisation/Localisation/Militar Kommando Gotland/INTERFACE_OUTGAME-POL.dic
+ZZ:/Localisation/Localisation/Militar Kommando Gotland/INTERFACE_OUTGAME-RU.dic
+ZZ:/Localisation/Localisation/Militar Kommando Gotland/INTERFACE_OUTGAME-SC.dic
+ZZ:/Localisation/Localisation/Militar Kommando Gotland/INTERFACE_OUTGAME-SPA.dic
+ZZ:/Localisation/Localisation/Militar Kommando Gotland/INTERFACE_OUTGAME-US.dic
+ZZ:/Localisation/Localisation/Militar Kommando Gotland/UNITS-FR.dic
+ZZ:/Localisation/Localisation/Militar Kommando Gotland/UNITS-GER.dic
+ZZ:/Localisation/Localisation/Militar Kommando Gotland/UNITS-POL.dic
+ZZ:/Localisation/Localisation/Militar Kommando Gotland/UNITS-RU.dic
+ZZ:/Localisation/Localisation/Militar Kommando Gotland/UNITS-SC.dic
+ZZ:/Localisation/Localisation/Militar Kommando Gotland/UNITS-SPA.dic
+ZZ:/Localisation/Localisation/Militar Kommando Gotland/UNITS-US.dic
 ZZ:/MeshPack/Militar Kommando Gotland/Mesh_All.spk
+ZZ:/PC/Texture/Assets/2D/Interface/Common/Flags/SWE_FLAG.tgv
 ZZ:/PC/Texture/Assets/2D/Interface/UseOutGame/Division/Emblem/SWE_MilitarKommando_Gotland.tgv
 ZZ:/TextureProxy/Militar Kommando Gotland/Mesh_All.ndfbin

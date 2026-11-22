@@ -209,10 +209,10 @@ export FireCircle is SimultaneousActionDeclaration
                     ParticleRenderer = $/VFX_Bank/LitParticleRendererNoCentroidPositioning
                     RenderInfo = ParticleRenderInfo
                     (
-                        ZTest = True
-                        ZWrite = False
-                        EmissiveParticle = True
-                        SortTriangles = True
+                        ZTest = true
+                        ZWrite = false
+                        EmissiveParticle = true
+                        SortTriangles = true
                         TextureName = 'GameData:/Assets/2D/Fx/anim_fireball_000.png'
                         Calque = 'Particles'
                     )

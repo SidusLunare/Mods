@@ -1,0 +1,15 @@
+export ModelFile_2K12_KUB_HON is "GameData:/Assets/3D/Units/DDR/DCA/2K12_KUB/2K12_KUB.fbx"
+export Modele_2K12_KUB_HON is TResourceMesh
+(
+    Mesh=ModelFile_2K12_KUB_HON
+)
+export ModelFile_2K12_KUB_HON_MID is "GameData:/Assets/3D/Units/DDR/DCA/2K12_KUB_MID/2K12_KUB_MID.fbx"
+export Modele_2K12_KUB_HON_MID is TResourceMesh
+(
+    Mesh=ModelFile_2K12_KUB_HON_MID
+)
+export ModelFile_2K12_KUB_HON_LOW is "GameData:/Assets/3D/Units/DDR/DCA/2K12_KUB_LOW/2K12_KUB_LOW.fbx"
+export Modele_2K12_KUB_HON_LOW is TResourceMesh
+(
+    Mesh=ModelFile_2K12_KUB_HON_LOW
+)

@@ -67,7 +67,7 @@ template BUCKTextDescriptor
     Hint : TBUCKHintableAreaDescriptor = nil,                                   // Hint du texte
 
     Rotation : int = 0,                                                         // La rotation du text en degrés
-    TextFormatScript : TTextFormatScriptRTTI = ~/DefaultTextFormatScript,       // Script de formatage de texte
+    TextFormatScript : TTextFormatScriptBank = $/UI/TextFormatScript/DefaultTextFormatScriptBank,       // Script de formatage de texte
     AutoHintElementName : string = "",
 
     Components : LIST<TBUCKContainerDescriptor> = [],

@@ -1,0 +1,9 @@
+template Template_Pinnable
+[
+    InitialValue : TEvaluable = nil,
+    ExpectedType : string[Values = ['float', 'float3', 'float4', 'int', 'bool', 'any']] = 'any',
+] is TPinnableValue
+(
+    InitialValue = <InitialValue>
+    ExpectedType = <ExpectedType>
+)

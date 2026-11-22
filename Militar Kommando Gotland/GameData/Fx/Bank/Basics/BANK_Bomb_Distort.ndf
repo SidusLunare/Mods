@@ -7,7 +7,7 @@ export Test_Distort is Competition
     (
         InitialScale = TConstantFloat(Value = 1)
         MaxScale = TConstantFloat(Value = 1)
-        DoNotInheritCentroid = True
+        DoNotInheritCentroid = true
     )
     Actions =
     [
@@ -102,7 +102,7 @@ export BANK_Bomb_Distort is SimultaneousActionDeclaration
                 (
                     RenderInfo = Template_DistortionParticleRenderInfo
                     (
-                        SortTriangles = True
+                        SortTriangles = true
                         TextureName = 'GameData:/Assets/2D/Fx/Distortion/distort_ring.png'
                     )
                     Evolvers = ParticleStandardEvolverList
@@ -156,7 +156,7 @@ export BANK_Bomb_Distort_Plane is SimultaneousActionDeclaration
                 (
                     RenderInfo = Template_DistortionParticleRenderInfo
                     (
-                        SortTriangles = True
+                        SortTriangles = true
                         TextureName = 'GameData:/Assets/2D/Fx/Distortion/distort_ring2.png'
                     )
                     Evolvers = ParticleStandardEvolverList

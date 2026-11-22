@@ -1,0 +1,95 @@
+// Ne pas éditer, ce fichier est généré
+
+export Fx_impact_balle_Sniper_Eau is SimultaneousActionDeclaration
+(
+    Params =
+    [
+        private parDirection is TActionAlias( ExpectedType = 'float3' DefaultValue = float3[0,0,0] ),
+        private parRadiusPhysical is TActionAlias( ExpectedType = 'float' DefaultValue = 0 ),
+        private parRadiusSuppress is TActionAlias( ExpectedType = 'float' DefaultValue = 0 ),
+        private parPosition is TActionAlias( ExpectedType = 'float3' DefaultValue = float3[0,0,0] ),
+    ]
+    Actions = ActionList is
+    [
+        TSimultaneousAction
+        (
+            Mobile = nil
+            Actions =
+            [
+                TActionCall
+                (
+                    Action = $/GFX/GameFx/dummy_impact_for_exporter_hack
+                    NamedParams = MAP[
+                        ( 'Dir', parDirection ),
+                        ( 'Pos', parPosition ),
+                        ( 'RadPhy', parRadiusPhysical ),
+                        ( 'RadSupr', parRadiusSuppress ),
+                    ]
+                ),
+                TActionCall
+                (
+                    Action = $/VFX_Bank/BANK_Water_Frags
+                    NamedParams = MAP[
+                        ( 'parCount', 20 ),
+                        ( 'parFragDuration', 0.5 ),
+                        ( 'parRadius', 1000 ),
+                        ( 'parSize', 100 ),
+                        ( 'parStartTime', 0.5 ),
+                        ( 'parStopTime', 2 ),
+                    ]
+                ),
+            ]
+        ),
+        TSimultaneousAction
+        (
+            Mobile = TMobileWithLocalRepereMatrixFactory
+            (
+                Position = parPosition
+            )
+            Actions =
+            [
+                TActionCall
+                (
+                    Action = $/VFX_Bank/BANK_Bomb_ShockWave
+                    NamedParams = MAP[
+                        ( 'parCount', 1 ),
+                        ( 'parDuration', 1.5 ),
+                        ( 'parFinalSize', 15000 ),
+                        ( 'parInitialSize', 0 ),
+                        ( 'parZBias', 0 ),
+                    ]
+                ),
+            ]
+        ),
+        TSimultaneousAction
+        (
+            Mobile = TMobileWithLocalRepereMatrixFactory
+            (
+                Position = float3[3,173,0]
+            )
+            Actions =
+            [
+                TSequentialAction
+                (Actions =
+                    [
+                        TWaitInSec( Duration = 0.08 ),
+                        TActionCall
+                        (
+                            Action = $/VFX_Bank/BANK_SmallWater_Projection_Simple
+                            NamedParams = MAP[
+                                ( 'parColor', float3[0.7333333,0.7333333,0.7333333] ),
+                                ( 'parCount', 15 ),
+                                ( 'parFluidFriction', 0 ),
+                                ( 'parGravity', 1500 ),
+                                ( 'parGrowFactor', 10 ),
+                                ( 'parLifetime', 1.5 ),
+                                ( 'parSize', 40 ),
+                                ( 'parSpeed', 400 ),
+                            ]
+                        ),
+                    ]
+                ),
+            ]
+        ),
+    ]
+)

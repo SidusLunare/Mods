@@ -10,7 +10,7 @@ export GetShakeCameraPower is Template_FunctionDeclaration
 (
     Params = [parAmplitude is Template_Alias(), parFrequency is Template_Alias(), parRadius is Template_Alias()]
     Code = parAmplitude
-         * Max[1 - Distance[$/VFX_Bank/CameraPosition, $/VFX_Bank/MobilePosition] div parRadius, 0]
-         * sqr[$/VFX_Bank/ActionRemainingLifeRatio]
-         * sin[$/VFX_Bank/ActionElapsedTime * parFrequency * 2 * PI]
+         * Max[1 - Distance[CameraPosition, MobilePosition] div parRadius, 0]
+         * sqr[ActionRemainingLifeRatio]
+         * sin[ActionElapsedTime * parFrequency * 2 * PI]
 )

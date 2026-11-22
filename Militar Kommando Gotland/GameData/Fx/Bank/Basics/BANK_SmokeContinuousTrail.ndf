@@ -172,7 +172,7 @@ export SmokeContinuousTrailDeclaration is SimultaneousActionDeclaration
             ParticleMaxDurationForSpawnSkip = parFlyDuration == 0.0 ? 666 : parFlyDuration
             Spawner = ParticleSpawner
             (
-                PositionIndependentFromEmitter = True
+                PositionIndependentFromEmitter = true
                 ParticleLifetime = parFlyDuration == 0.0 ? 666 : parFlyDuration
                 Initialisers =
                 [
@@ -261,10 +261,10 @@ export SmokeContinuousTrailDeclaration is SimultaneousActionDeclaration
                                         RenderInfo = ParticleRenderInfo
                                         (
                                             OpaqueParticle = true
-                                            ZTest = True
-                                            ZWrite = False
-                                            SortTriangles = True
-                                            Use3DRotation = False
+                                            ZTest = true
+                                            ZWrite = false
+                                            SortTriangles = true
+                                            Use3DRotation = false
                                             TextureName = 'GameData:/Assets/2D/Fx/trail_cloud.png'
                                             Calque = 'First'
                                         )

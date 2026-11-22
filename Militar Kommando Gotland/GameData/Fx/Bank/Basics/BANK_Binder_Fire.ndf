@@ -6,8 +6,8 @@ export Test_BANK_Fire is Simultaneous
     [
         private Stickonground is Template_StickMobileOnGround
         (
-            MobileUpMatchWithGroundNormal = True
-            ResetOrientation = True
+            MobileUpMatchWithGroundNormal = true
+            ResetOrientation = true
         ),
         Competition
         (
@@ -97,6 +97,7 @@ export FX_BANK_Binder_Fire is SimultaneousActionDeclaration
                     Evolvers = ParticleStandardEvolverList
                     (
                         CustomFloat3_2 = 5 * MinusOneToOneFakeNoise_Float3_Interpolate[Triangle[ParticleCustomFloat_9 + ParticleLifeRatio * 0.75]]
+                        Position = ParticleMobileWrapperPosition
                         AdditionnalEvolvers =
                         [
                             FlamesVerticales is EvolverSpraySpawner
@@ -140,7 +141,7 @@ export FX_BANK_Binder_Fire is SimultaneousActionDeclaration
                                             TextureName = 'GameData:/Assets/2D/Fx/anim_flame_01_000.png'
                                             SortTriangles = true
                                             Calque = 'Particles'
-                                            EmissiveParticle = True
+                                            EmissiveParticle = true
                                             ZTest = true
                                         )
                                         Evolvers = ParticleStandardEvolverList

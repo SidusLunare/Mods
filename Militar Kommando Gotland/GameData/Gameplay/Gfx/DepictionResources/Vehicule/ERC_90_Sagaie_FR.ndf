@@ -5,10 +5,10 @@ export Modele_ERC_90_Sagaie_FR is TResourceMesh
 
 export Modele_ERC_90_Sagaie_FR_MID is TResourceMesh
 (
-    Mesh="GameData:/Assets/3D/Units/FR/Vehicule/ERC_90_Sagaie/ERC_90_Sagaie.fbx"
+    Mesh="GameData:/Assets/3D/Units/FR/Vehicule/ERC_90_Sagaie_MID/ERC_90_Sagaie_MID.fbx"
 )
 
 export Modele_ERC_90_Sagaie_FR_LOW is TResourceMesh
 (
-    Mesh="GameData:/Assets/3D/Units/FR/Vehicule/ERC_90_Sagaie/ERC_90_Sagaie.fbx"
+    Mesh="GameData:/Assets/3D/Units/FR/Vehicule/ERC_90_Sagaie_LOW/ERC_90_Sagaie_LOW.fbx"
 )

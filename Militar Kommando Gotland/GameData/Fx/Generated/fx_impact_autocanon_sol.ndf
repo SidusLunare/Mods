@@ -171,6 +171,18 @@ export fx_impact_autocanon_sol is SimultaneousActionDeclaration
                 ),
                 TActionCall
                 (
+                    Action = $/VFX_Bank/BANK_Dynamic_Flash_Simple
+                    NamedParams = MAP[
+                        ( 'parColorEnd', float3[0.6,0.2980392,0.09803922] ),
+                        ( 'parColorStart', float3[0.6,0.2980392,0.09803922] ),
+                        ( 'parDuration', 0.2800001 ),
+                        ( 'parOpacity', 0.98 ),
+                        ( 'parSizeLBU', 44.65116 ),
+                        ( 'Position', float3[-8,34,500] + parPosition ),
+                    ]
+                ),
+                TActionCall
+                (
                     Action = $/VFX_Bank/BANK_Dynamic_Flash_Only_Two_Simple
                     NamedParams = MAP[
                         ( 'parColorEnd', float3[0.9294118,0.2156863,0.007843138] ),
@@ -181,18 +193,6 @@ export fx_impact_autocanon_sol is SimultaneousActionDeclaration
                         ( 'parSize', 1300 ),
                         ( 'parSpeed', float3[0,0,0] ),
                         ( 'Position', float3[0,1,250] + parPosition ),
-                    ]
-                ),
-                TActionCall
-                (
-                    Action = $/VFX_Bank/BANK_Dynamic_Flash_Simple
-                    NamedParams = MAP[
-                        ( 'parColorEnd', float3[0.6,0.2980392,0.09803922] ),
-                        ( 'parColorStart', float3[0.6,0.2980392,0.09803922] ),
-                        ( 'parDuration', 0.2800001 ),
-                        ( 'parOpacity', 0.98 ),
-                        ( 'parSizeLBU', 44.65116 ),
-                        ( 'Position', float3[-8,34,500] + parPosition ),
                     ]
                 ),
                 TWaitInSec( Duration = 1.4),

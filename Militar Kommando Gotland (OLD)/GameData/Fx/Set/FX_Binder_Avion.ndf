@@ -1,0 +1,423 @@
+export FX_Binder_Avion_Vortex is SimultaneousActionDeclaration
+(
+    Params = []
+    LocalVariables = []
+    Actions =
+    [
+        Vortex  is ParticleBombSpawner
+        (
+            ParticleMaxDurationForSpawnSkip = 0
+            Count = 1
+            Spawner = ParticleSpawner
+            (
+                ParticleDescriptor = ParticleDescriptor
+                (
+                    InfiniteParticles = true
+                    ParticleRenderer = $/VFX_Bank/NullRenderer
+                    RenderInfo = $/VFX_Bank/NullRenderInfo
+                    Evolvers = Template_List
+                    (
+                        Evolvers =
+                        [
+                            Template_EvolverPosition( EvolveFunction = ParticleMobileWrapperPosition ),
+                            TrailSpawner
+                            (
+                                DistanceBetweenSpawn = 5
+                                Spawner = ParticleSpawner
+                                (
+                                    ParticleDescriptor = ParticleDescriptor
+                                    (
+                                        RenderInfo = ParticleRenderInfo
+                                        (
+                                            ZTest = True
+                                            ZWrite = False
+                                            SortTriangles = True
+                                            Use3DRotation = False
+                                            TextureName = 'GameData:/Assets/2D/Fx/trail_nuage_strip_32_01.png'
+                                            Calque = 'Particles'
+                                            OpaqueParticle = True
+                                        )
+                                        Evolvers = Template_List
+                                        (
+                                            Evolvers =
+                                            [
+                                                // on grossit légèrement les trails pour qu'elles soient visible d'un peu plus loin.
+                                                ParticleEvolverAntialiasingHelper_Alpha
+                                                (
+                                                    Size =  60* ( Clamp[ length[CameraPosition - ParticlePosition] div 80000,1,3] )  * (1 - ParticleLifeRatio)
+                                                    Alpha = MapToLinearSmoothRect[ ParticleLifeRatio, 0, 0.05, 0.1, 1 ]
+                                                ),
+                                                Template_EvolverTexCoordU ( EvolveFunction = ParticleCurvilinearAbscissa div 10000),
+                                            ]
+                                        )
+                                        ParticleRenderer = ParticleRendererMeshTrail ( ScalingMode = 1 )
+                                    )
+                                    Initialisers =
+                                    [
+                                        ParticleInitialiserList
+                                        (
+                                            Size = 300
+                                            ColorRGB = float3[1, 1, 1]
+                                            ColorModifier = float3[1, 1, 1]
+                                            Alpha = 1.0
+
+                                            ColorMultiplier = 0
+                                            Opacity = 1
+                                        )
+                                    ]
+                                    ParticleLifetime = 0.5
+                                )
+                            )
+                        ]
+                    )
+                )
+                Initialisers =
+                [
+                    Initialiser_CreateTrailId
+                    (
+                        OverrideValueFromSpawner = False
+                    ),
+                    Initialiser_SetMobileWrapper(),
+                    Initialiser_Size( InitFunction = 100 ),
+                ]
+                ParticleLifetime = 1
+            )
+        ),
+        Template_WaitForEver()
+    ]
+)
+
+export FX_Binder_Avion_Reacteur is template_FX_Binder_Avion_Reacteur
+(
+    FlammeColorMultiplier = 0.001 //0.08
+    FlammeWidthMultiplier = 8 //4.4
+    FlammeLengthMultiplier = 8 //3
+
+    Flamme2ColorMultiplier = 0.06 //2
+    Flamme2WidthMultiplier = 4 //4.4
+    Flamme2LengthMultiplier = 2 //3
+
+    TrailParticleLifeTime = 2 //0.2
+    TrailAlpha = 0.10 // 0.3
+)
+
+export FX_Binder_Avion_Reacteur_BigNoSmoke is template_FX_Binder_Avion_Reacteur
+(
+    FlammeColorMultiplier = 0.02
+    FlammeWidthMultiplier = 6.4
+    FlammeLengthMultiplier = 1.5
+    TrailAlpha = 0
+)
+
+export FX_Binder_Avion_Reacteur_NoFlameNoSmoke is template_FX_Binder_Avion_Reacteur
+(
+    FlammeColorMultiplier = 0
+    FlammeWidthMultiplier = 4.4
+    FlammeLengthMultiplier = 3
+    TrailAlpha = 0
+)
+
+export FX_Binder_Avion_Reacteur_NoSmoke is template_FX_Binder_Avion_Reacteur
+(
+    FlammeColorMultiplier = 0.02
+    FlammeWidthMultiplier = 4.4
+    FlammeLengthMultiplier = 3
+    TrailAlpha = 0
+)
+
+export FX_Binder_Avion_Reacteur_Smoky is template_FX_Binder_Avion_Reacteur
+(
+    FlammeColorMultiplier = 0//0.2
+    FlammeWidthMultiplier = 20 //4.4
+    FlammeLengthMultiplier = 10
+    TrailParticleLifeTime = 1 //0.3
+    TrailAlpha = 0.15 // 0.3
+)
+
+export FX_Binder_Avion_Reacteur_Very_Smoky is template_FX_Binder_Avion_Reacteur
+(
+    FlammeColorMultiplier = 0.01//0.2
+    FlammeWidthMultiplier = 4.4 //4.4
+    FlammeLengthMultiplier = 1.5
+    TrailParticleLifeTime = 1.5 //0.3
+    TrailAlpha = 0.4 // 0.3
+)
+
+
+template template_FX_Reactor_Fire
+[
+    FlammeColorMultiplier,
+    FlammeWidthMultiplier,
+    FlammeLengthMultiplier
+
+] is ParticleBombSpawner
+(
+    ParticleMaxDurationForSpawnSkip = 0
+    Count = 1
+    Spawner = ParticleSpawner
+    (
+        Initialisers =
+        [
+            Initialiser_SetMobileWrapper(),
+        ]
+
+        ParticleLifetime = 1
+        ParticleDescriptor = ParticleDescriptor
+        (
+            InfiniteParticles = true
+            ParticleRenderer = $/VFX_Bank/NullRenderer
+            RenderInfo = $/VFX_Bank/NullRenderInfo
+            Evolvers = Template_List
+            (
+                Evolvers =
+                [
+                Template_EvolverPosition( EvolveFunction = ParticleMobileWrapperPositionUnScaled ),
+                EvolverSpraySpawner
+                (
+                    Frequency = 10
+                    MaxSpawnedParticleLifetime = 0.5
+                    Spawner = ParticleSpawner
+                    (
+                        ParticleLifetime = 3.0  div 10
+                        Initialisers =
+                        [
+                            Initialiser_SetSpawningParticleMobileWrapper(),
+                            ParticleInitialiserList
+                            (
+                                Size = 300
+                                Alpha = 1.0
+
+                                CustomFloat_3 = RandomRange[0.8, 1]
+                                CustomFloat_1 = 250 * <FlammeWidthMultiplier>
+                                ColorModifier = LinearColor[1,1,1]
+                            )
+                        ]
+
+                        ParticleDescriptor = ParticleDescriptor
+                        (
+                            ParticleRenderer = $/VFX_Bank/LitParticleRenderer
+                            RenderInfo = ParticleRenderInfo
+                            (
+                                SortTriangles = true
+                                TextureName = 'GameData:/Assets/2D/Fx/reactor.png'
+                                Calque = 'Particles'
+                                EmissiveParticle = True
+                            )
+                            Evolvers = ParticleStandardEvolverList
+                            (
+                                UseHardCodedRotation = false
+                                Position = ParticleMobileWrapperPositionUnScaled
+
+                                EmissivePower = <FlammeColorMultiplier> * AttackSustainDecay[ParticleLifeRatio, 0.01, 0.5 ] * AttackSustainDecay[ParticleLifeRatio, 0.05, 0.5 ] * lerp[RandomRange[0,1],0.45,0.55]
+
+                                Size = lerp[ParticleLifeRatio, 0.25, 1 ]  * ParticleCustomFloat_1 * ParticleCustomFloat_3
+
+                                OffsetAlongDirection = - ($/VFX_Bank/ParticleSize * $/VFX_Bank/ParticleStretching) * 0.44
+                                Direction = normalized[ParticleMobileWrapperAxeX]
+                                Stretching = lerp[ParticleLifeRatio,0.25,<FlammeLengthMultiplier>]
+                            )
+
+                        )
+                    )
+                )
+                ]
+            )
+        )
+    )
+)
+
+
+
+template template_FX_Binder_Avion_Reacteur
+    [
+    FlammeColorMultiplier = 0.2,
+    FlammeWidthMultiplier = 4.4,
+    FlammeLengthMultiplier = 5,
+
+    Flamme2ColorMultiplier = 0,
+    Flamme2WidthMultiplier = 0,
+    Flamme2LengthMultiplier = 0,
+
+    TrailParticleLifeTime = 0.3,
+    TrailAlpha = 0.3 // 0 -> no trail
+    ]is SimultaneousActionDeclaration
+(
+    Actions =
+    [
+    ] +
+    ( <FlammeColorMultiplier> > 0 ?
+    [
+        template_FX_Reactor_Fire
+        (
+            FlammeColorMultiplier = <FlammeColorMultiplier>
+            FlammeWidthMultiplier = <FlammeWidthMultiplier>
+            FlammeLengthMultiplier = <FlammeLengthMultiplier>
+        ),
+        template_FX_Reactor_Fire
+        (
+            FlammeColorMultiplier = <Flamme2ColorMultiplier>
+            FlammeWidthMultiplier = <Flamme2WidthMultiplier>
+            FlammeLengthMultiplier = <Flamme2LengthMultiplier>
+        ),
+        Template_ActionCall
+        (
+            Action = BANK_Light_Follow_Mobile_Blink_Fast
+            NamedParameters = MAP
+            [
+                ( 'parSizeLBU'  , 11.6279069767),
+                ( 'parColor'    , float3[0.6, 0.3, 0.1]),
+                ( 'parPosition' , float3[0.0, 0.0, 0.0]),
+                ( 'parAlpha'    , 1),
+            ]
+        ),
+
+    ] : [] ) +
+    [
+        DistorsionTrail is ParticleBombSpawner
+        (
+            ParticleMaxDurationForSpawnSkip = 0
+            Count = 1
+            Spawner = ParticleSpawner
+            (
+                ParticleLifetime = 1
+
+                Initialisers =
+                [
+                    Initialiser_SetMobileWrapper(),
+                    Initialiser_CreateTrailId(),
+                ]
+                ParticleDescriptor = ParticleDescriptor
+                (
+                    InfiniteParticles = true
+                    ParticleRenderer = $/VFX_Bank/NullRenderer
+                    RenderInfo = $/VFX_Bank/NullRenderInfo
+
+                    Evolvers = Template_List
+                    (
+                        Evolvers =
+                        [
+                            Template_EvolverPosition( EvolveFunction = ParticleMobileWrapperPositionUnScaled ),
+                            TrailSpawner
+                            (
+                                DistanceBetweenSpawn = 10
+                                Spawner = ParticleSpawner
+                                (
+                                    ParticleLifetime = 0.5  // 0.3
+                                    Initialisers =
+                                    [
+                                        Initialiser_ColorRGB ( InitFunction = LinearColor[1, 1, 1] ),
+                                        Initialiser_ColorMultiplier ( InitFunction = 1 ),
+                                        Initialiser_Size ( InitFunction = 800 ),   //400
+                                    ]
+                                    ParticleDescriptor = ParticleDescriptor
+                                    (
+                                        RenderInfo = Template_DistortionParticleRenderInfo
+                                        (
+                                            SortTriangles = True
+                                            TextureName = 'GameData:/Assets/2D/Fx/Distortion/trail_distort.png'
+                                        )
+                                        Evolvers = Template_List
+                                        (
+                                            Evolvers =
+                                            [
+                                                Template_EvolverTexCoordU ( EvolveFunction = ParticleCurvilinearAbscissa div 10000),
+                                                Template_EvolverAlpha
+                                                (
+                                                    EvolveFunction = MapToLinearSmoothRect[ ParticleLifeRatio, 0, 0.02, 0.5, 1 ]
+                                                                   * 300 div length[CameraPosition - ParticlePosition]
+                                                ),
+                                            ]
+                                        )
+                                        ParticleRenderer = ParticleRendererMeshTrail ( ScalingMode = 1 )
+                                    )
+
+                                )
+                            )
+                        ]
+                    )
+
+                )
+
+
+            )
+        ),
+        Template_WaitForEver()
+    ] +
+    ( <TrailAlpha> > 0 ?
+    [
+        Trail is ParticleBombSpawner
+        (
+            ParticleMaxDurationForSpawnSkip = (250 + <TrailParticleLifeTime>) *1.1
+            Count = 1
+            Spawner = ParticleSpawner
+            (
+                ParticleLifetime = 250
+
+                Initialisers =
+                [
+                    Initialiser_CreateTrailId(), // nécessaire pour trainer une trail.
+                    Initialiser_SetMobileWrapper(), // nécessaire pour suivre le mobile.
+                ]
+
+                ParticleDescriptor = ParticleDescriptor
+                (
+                    ParticleRenderer = $/VFX_Bank/NullRenderer // ce n'est qu'une particule qui sert a créer sa traine.
+                    RenderInfo = $/VFX_Bank/NullRenderInfo
+
+                    Evolvers = Template_List
+                    (
+                        Evolvers =
+                        [
+                            Template_EvolverField
+                            (
+                                EvolveFunction = ParticleMobileWrapperPositionUnScaled - normalized[ParticleMobileWrapperAxeX]*4*215 // la trail nait a la fin de la flamme qui est droite.
+                                Field = 'Position'
+                            ),
+                            TrailSpawner
+                            (
+                                DistanceBetweenSpawn = 20
+                                Spawner = ParticleSpawner
+                                (
+                                    ParticleLifetime = <TrailParticleLifeTime>
+                                    ParticleDescriptor = ParticleDescriptor
+                                    (
+                                        RenderInfo = ParticleRenderInfo
+                                        (
+                                            SortTriangles = True
+                                            TextureName = 'GameData:/Assets/2D/Fx/trail_nuage_strip_32_02.png'
+                                            Calque = 'Particles'
+                                            OpaqueParticle = True
+                                        )
+                                        ParticleRenderer = ParticleRendererMeshTrail( ScalingMode = 1 )
+
+                                        Evolvers = ParticleStandardEvolverList
+                                        (
+                                            ColorRGB = LinearColor[0,0,0] //lerp[sat[ParticleElapsedTime * 2], <SmokeStartColor>, <SmokeEndColor>]
+                                            Opacity = 1 // obligatoire pour contourner un bug, le renderer ne tient pas compte de l'opacité si il n'y a pas d'evolver, même si il y a un initialiser.
+                                            TexCoordU = ParticleCurvilinearAbscissa div ( 50 * 250 * 3.2 )
+                                            Alpha = AttackDecay[ ParticleLifeRatio, 0.1 ] * <TrailAlpha>
+                                            Size =  250 * 3.2 * lerp[ParticleLifeRatio, 0.5, 1.5] * Clamp[ length[ParticlePosition-CameraPosition] div 25000, 1, 3]  // on grossie la trail pour qu'elle se voit d'un peu plus loin.
+                                        )
+                                    )
+                                    Initialisers =
+                                    [
+                                        ParticleInitialiserList
+                                        (
+                                            Size = 300
+                                            ColorRGB = float3[1, 1, 1]
+                                            ColorModifier = float3[1, 1, 1]
+                                            Alpha = 1.0
+
+                                            Opacity = 1
+                                            ColorMultiplier =  0
+                                        )
+                                    ]
+                                )
+                            )
+                        ]
+                    )
+                )
+            )
+        )
+    ] : [] )
+)

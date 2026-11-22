@@ -1,0 +1,89 @@
+//-----------------------------------------------------------------------------
+//*****************************************************************************
+//-----------------------------------------------------------------------------
+template TemplateClusterLoadNDF
+[
+    Files     = [] ,
+    Directories = [],
+    UsingNamespaces = [],
+    BaseName  : string       = '',
+    NameSpace : string       = '',
+    ResourcePackName : string = '',
+    Public : bool = false,
+    GenerateCRC  : bool = false,
+] is TClusterNdfTransactions
+(
+    Transactions = [TNDFTransaction
+    (
+        Files = <Files>
+        Directories = <Directories>
+        BaseName = <BaseName> != '' ? <BaseName> : <NameSpace> + ".txn"
+        NameSpace =<NameSpace>
+        ResourcePackName = <ResourcePackName>
+        Public = <Public>
+        UsingNamespaces = <UsingNamespaces>
+        GenerateCRC = <GenerateCRC>
+    )]
+)
+//-----------------------------------------------------------------------------
+//*****************************************************************************
+//-----------------------------------------------------------------------------
+
+template TemplateClusterLoadNDFForNoFinal
+[
+    Files       = [],
+    Directories = [],
+    BaseName  : string       = '',
+    NameSpace : string       = '',
+] is TClusterInitialisation_FinalDependent
+(
+    SubClusterNoFinal = TClusterNdfTransactions
+    (
+        Transactions = [TNDFTransaction
+        (
+            Files = <Files>
+            Directories = <Directories>
+            BaseName = "NotFinal/" + <BaseName>
+            NameSpace =<NameSpace>
+        )]
+    )
+)
+//-----------------------------------------------------------------------------
+//*****************************************************************************
+//-----------------------------------------------------------------------------
+template TemplateClusterLoadNDFForEditor
+[
+    Files     = [] ,
+    BaseName  : string,
+    NameSpace : string,
+] is TClusterInitialisation_EditorDependent
+(
+    SubClusterModeEditor = TClusterNdfTransactions
+    (
+        Transactions = [TNDFTransaction
+        (
+            Files = <Files>
+            BaseName = "Editor/" + <BaseName>
+            NameSpace =<NameSpace>
+        )]
+    )
+)
+//-----------------------------------------------------------------------------
+template TemplateClusterLoadForNoEditor
+[
+    Files     = [] ,
+    BaseName  : string       = '',
+    NameSpace : string       = '',
+] is TClusterInitialisation_EditorDependent
+(
+    SubClusterModeNoEditor = TClusterNdfTransactions
+    (
+        Transactions = [TNDFTransaction
+        (
+            Files = <Files>
+            BaseName = <BaseName>
+            NameSpace =<NameSpace>
+        )]
+    )
+)
+//-----------------------------------------------------------------------------

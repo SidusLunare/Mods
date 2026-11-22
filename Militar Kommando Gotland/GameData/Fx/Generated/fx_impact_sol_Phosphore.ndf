@@ -100,6 +100,22 @@ export fx_impact_sol_Phosphore is SimultaneousActionDeclaration
                         ( 'RadSupr', parRadiusSuppress ),
                     ]
                 ),
+                TActionCall
+                (
+                    Action = $/VFX_Bank/BANK_FireBalls_Simple
+                    NamedParams = MAP[
+                        ( 'parColor', float3[0.9960785,0.9921569,0.9843138] ),
+                        ( 'parCount', 5 ),
+                        ( 'parDeltaPositionMobileDirection', 1000 ),
+                        ( 'parDispersion', 1000 ),
+                        ( 'parDuration', 2 ),
+                        ( 'parInitialDelay', parInitialShotDelay ),
+                        ( 'parLuminosite', 0.8 ),
+                        ( 'parOpacity', 1 ),
+                        ( 'parSize', 4000 ),
+                        ( 'parDeltaPositionAdditif', float3[-105,-64,-1615] + parPosition ),
+                    ]
+                ),
                 TSequentialAction
                 (Actions =
                     [
@@ -119,22 +135,6 @@ export fx_impact_sol_Phosphore is SimultaneousActionDeclaration
                                 ( 'parStartPosition', parPosition ),
                             ]
                         ),
-                    ]
-                ),
-                TActionCall
-                (
-                    Action = $/VFX_Bank/BANK_FireBalls_Simple
-                    NamedParams = MAP[
-                        ( 'parColor', float3[0.9960785,0.9921569,0.9843138] ),
-                        ( 'parCount', 5 ),
-                        ( 'parDeltaPositionMobileDirection', 1000 ),
-                        ( 'parDispersion', 1000 ),
-                        ( 'parDuration', 2 ),
-                        ( 'parInitialDelay', parInitialShotDelay ),
-                        ( 'parLuminosite', 0.8 ),
-                        ( 'parOpacity', 1 ),
-                        ( 'parSize', 4000 ),
-                        ( 'parDeltaPositionAdditif', float3[-105,-64,-1615] + parPosition ),
                     ]
                 ),
                 TActionCall

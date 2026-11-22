@@ -1,0 +1,17 @@
+export ModelFile_BTR_60P_CUB is 'GameData:/Assets/3D/Units/CUBA/APC/BTR_60P/BTR_60P.fbx'
+export Modele_BTR_60P_CUB is TResourceMesh
+(
+    Mesh=ModelFile_BTR_60P_CUB
+)
+
+export ModelFile_BTR_60P_CUB_MID is 'GameData:/Assets/3D/Units/CUBA/APC/BTR_60P/BTR_60P.fbx'
+export Modele_BTR_60P_CUB_MID is TResourceMesh
+(
+    Mesh=ModelFile_BTR_60P_CUB_MID
+)
+
+export ModelFile_BTR_60P_CUB_LOW is 'GameData:/Assets/3D/Units/CUBA/APC/BTR_60P/BTR_60P.fbx'
+export Modele_BTR_60P_CUB_LOW is TResourceMesh
+(
+    Mesh=ModelFile_BTR_60P_CUB_LOW
+)

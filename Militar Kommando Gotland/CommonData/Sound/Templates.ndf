@@ -27,3 +27,9 @@ template TemplateSoundDescriptor
         FileName = <FileName>
     )
 )
+
+export SplashSoundDescriptor is TSoundDescriptor
+(
+    SoundSettings = $/SoundSettings/SoundSettings_Default
+    TheSoundStream = TSoundStream(FileName = "GameData:/Assets/Sounds/SFX/Splash.wav")
+)

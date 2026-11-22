@@ -13,91 +13,6 @@ export fx_critique_hull_break is SimultaneousActionDeclaration
     [
         TSimultaneousAction
         (
-            Mobile = nil
-            Actions =
-            [
-                TActionCall
-                (
-                    Action = $/VFX_Bank/BANK_Bomb_Flash
-                    NamedParams = MAP[
-                        ( 'parCount', 1 ),
-                        ( 'parDuration', 0.06 ),
-                        ( 'parFinalSize', 6000 ),
-                        ( 'parInitialSize', 1000 ),
-                        ( 'parZBias', 0 ),
-                        ( 'parPositionRelative', float3[34,-6,200] + parPosition ),
-                    ]
-                ),
-                TActionCall
-                (
-                    Action = $/VFX_Bank/BANK_FireBalls_Simple
-                    NamedParams = MAP[
-                        ( 'parColor', float3[1,0.8000001,0.6980392] ),
-                        ( 'parCount', 3 ),
-                        ( 'parDeltaPositionAdditif', parPosition ),
-                        ( 'parDeltaPositionMobileDirection', 0 ),
-                        ( 'parDispersion', 500 ),
-                        ( 'parDuration', 0.08 ),
-                        ( 'parInitialDelay', parInitialShotDelay ),
-                        ( 'parLuminosite', 3 ),
-                        ( 'parOpacity', 0.5 ),
-                        ( 'parSize', 2000 ),
-                    ]
-                ),
-                TActionCall
-                (
-                    Action = $/VFX_Bank/BANK_Dynamic_Flash_Only_Two_Simple
-                    NamedParams = MAP[
-                        ( 'parColorEnd', float3[0.1333333,0.1294118,0.1294118] ),
-                        ( 'parColorStart', float3[0.9294118,0.5882353,0.07843138] ),
-                        ( 'parDuration', 0.2 ),
-                        ( 'parInitialDelay', parInitialShotDelay ),
-                        ( 'parOpacity', 0.3 ),
-                        ( 'parSize', 18000 ),
-                        ( 'parSpeed', float3[0,0,0] ),
-                        ( 'Position', float3[0,0,200] + parPosition ),
-                    ]
-                ),
-                TActionCall
-                (
-                    Action = $/VFX_Bank/BANK_Dynamic_Flash_Only_Two_Simple
-                    NamedParams = MAP[
-                        ( 'parColorEnd', float3[0,0,0] ),
-                        ( 'parColorStart', float3[0.6,0.2980392,0.09803922] ),
-                        ( 'parDuration', 0.05 ),
-                        ( 'parInitialDelay', parInitialShotDelay ),
-                        ( 'parOpacity', 0.3 ),
-                        ( 'parSize', 20000 ),
-                        ( 'parSpeed', float3[0,0,0] ),
-                        ( 'Position', float3[34,-6,0] + parPosition ),
-                    ]
-                ),
-                TActionCall
-                (
-                    Action = $/VFX_Bank/BANK_Bomb_NewSparks_Simple_Reverse
-                    NamedParams = MAP[
-                        ( 'parColor', float3[0.9960785,0.4078432,0.06666667] ),
-                        ( 'parColorMultiplier', 12 ),
-                        ( 'parCount', 100 ),
-                        ( 'parDir', parDirection ),
-                        ( 'parFluidFriction', 1 ),
-                        ( 'parGravity', 1000 ),
-                        ( 'parLifetime', 5 ),
-                        ( 'parNarrowness', 4 ),
-                        ( 'parPositionRadius', 10 ),
-                        ( 'parPositionRelative', parPosition ),
-                        ( 'parSize', 15 ),
-                        ( 'parSpeedMax', 10000 ),
-                        ( 'parSpeedMin', 6000 ),
-                        ( 'parStretch', 1 ),
-                        ( 'parWindFactor', 1 ),
-                    ]
-                ),
-                TWaitInSec( Duration = 0.2),
-            ]
-        ),
-        TSimultaneousAction
-        (
             Mobile = TMobileWithLocalRepereMatrixFactory
             (
                 Position = parPosition
@@ -253,6 +168,91 @@ export fx_critique_hull_break is SimultaneousActionDeclaration
                     ]
                 ),
                 TWaitInSec( Duration = 10),
+            ]
+        ),
+        TSimultaneousAction
+        (
+            Mobile = nil
+            Actions =
+            [
+                TActionCall
+                (
+                    Action = $/VFX_Bank/BANK_Bomb_Flash
+                    NamedParams = MAP[
+                        ( 'parCount', 1 ),
+                        ( 'parDuration', 0.06 ),
+                        ( 'parFinalSize', 6000 ),
+                        ( 'parInitialSize', 1000 ),
+                        ( 'parZBias', 0 ),
+                        ( 'parPositionRelative', float3[34,-6,200] + parPosition ),
+                    ]
+                ),
+                TActionCall
+                (
+                    Action = $/VFX_Bank/BANK_FireBalls_Simple
+                    NamedParams = MAP[
+                        ( 'parColor', float3[1,0.8000001,0.6980392] ),
+                        ( 'parCount', 3 ),
+                        ( 'parDeltaPositionAdditif', parPosition ),
+                        ( 'parDeltaPositionMobileDirection', 0 ),
+                        ( 'parDispersion', 500 ),
+                        ( 'parDuration', 0.08 ),
+                        ( 'parInitialDelay', parInitialShotDelay ),
+                        ( 'parLuminosite', 3 ),
+                        ( 'parOpacity', 0.5 ),
+                        ( 'parSize', 2000 ),
+                    ]
+                ),
+                TActionCall
+                (
+                    Action = $/VFX_Bank/BANK_Dynamic_Flash_Only_Two_Simple
+                    NamedParams = MAP[
+                        ( 'parColorEnd', float3[0.1333333,0.1294118,0.1294118] ),
+                        ( 'parColorStart', float3[0.9294118,0.5882353,0.07843138] ),
+                        ( 'parDuration', 0.2 ),
+                        ( 'parInitialDelay', parInitialShotDelay ),
+                        ( 'parOpacity', 0.3 ),
+                        ( 'parSize', 18000 ),
+                        ( 'parSpeed', float3[0,0,0] ),
+                        ( 'Position', float3[0,0,200] + parPosition ),
+                    ]
+                ),
+                TActionCall
+                (
+                    Action = $/VFX_Bank/BANK_Dynamic_Flash_Only_Two_Simple
+                    NamedParams = MAP[
+                        ( 'parColorEnd', float3[0,0,0] ),
+                        ( 'parColorStart', float3[0.6,0.2980392,0.09803922] ),
+                        ( 'parDuration', 0.05 ),
+                        ( 'parInitialDelay', parInitialShotDelay ),
+                        ( 'parOpacity', 0.3 ),
+                        ( 'parSize', 20000 ),
+                        ( 'parSpeed', float3[0,0,0] ),
+                        ( 'Position', float3[34,-6,0] + parPosition ),
+                    ]
+                ),
+                TActionCall
+                (
+                    Action = $/VFX_Bank/BANK_Bomb_NewSparks_Simple_Reverse
+                    NamedParams = MAP[
+                        ( 'parColor', float3[0.9960785,0.4078432,0.06666667] ),
+                        ( 'parColorMultiplier', 12 ),
+                        ( 'parCount', 100 ),
+                        ( 'parDir', parDirection ),
+                        ( 'parFluidFriction', 1 ),
+                        ( 'parGravity', 1000 ),
+                        ( 'parLifetime', 5 ),
+                        ( 'parNarrowness', 4 ),
+                        ( 'parPositionRadius', 10 ),
+                        ( 'parPositionRelative', parPosition ),
+                        ( 'parSize', 15 ),
+                        ( 'parSpeedMax', 10000 ),
+                        ( 'parSpeedMin', 6000 ),
+                        ( 'parStretch', 1 ),
+                        ( 'parWindFactor', 1 ),
+                    ]
+                ),
+                TWaitInSec( Duration = 0.2),
             ]
         ),
         TSimultaneousAction

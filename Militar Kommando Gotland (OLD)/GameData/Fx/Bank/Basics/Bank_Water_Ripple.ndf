@@ -1,0 +1,75 @@
+
+export TEST_Water_Ripple is Template_ActionCall
+(
+    Action = BANK_Water_Ripple
+)
+
+export BANK_Water_Ripple is SimultaneousActionDeclaration
+(
+    Params =
+    [
+        private parSize is Template_ActionAlias
+        (
+            ExpectedType = 'float'
+            DefaultValue = 2000
+        ),
+        private parDuration is Template_ActionAlias
+        (
+            ExpectedType = 'float'
+            DefaultValue = 5
+        ),
+        private parCount is Template_ActionAlias
+        (
+            ExpectedType = 'float'
+            DefaultValue = 3
+        ),
+    ]
+    Actions =
+    [
+        ParticleSpraySpawnerWithEvaluable
+        (
+            Frequency = 0.5 * parCount
+            DurationInSec = parCount div 3
+            Spawner = ParticleSpawner
+            (
+                ParticleLifetime = parDuration
+                Initialisers =
+                [
+                    ParticleInitialiserList
+                    (
+                        ColorRGB = float3[1, 1, 1]
+                        ColorModifier = float3[1, 1, 1]
+                        ColorMultiplier = 1.0
+
+                        Size = parSize
+                        Alpha = 1
+                        ZBias = 300
+                        Opacity = 0
+                        Speed = float3[0,0,0]
+                        CustomFloat_1 = SpawnerLifeRatio
+                        CustomFloat_2 = parSize
+                    ),
+                    Initialiser_UpVector ( InitFunction = float3[0.00, 0.00, 1.00] ),
+                ]
+                ParticleDescriptor = ParticleDescriptor
+                (
+                    RenderInfo = ParticleRenderInfo
+                    (
+                        OpaqueParticle = True
+                        ZTest = True
+                        SortTriangles = True
+                        Use3DRotation = false
+                        TextureName = 'GameData:/Assets/2D/Fx/ring.png'
+                        Calque = 'Particles'
+                    )
+                    ParticleRenderer = Template_ParticleRendererPlane()
+                    Evolvers = ParticleStandardEvolverList
+                    (
+                        Size = ParticleCustomFloat_2 * (1 + 0.7*(1 - ParticleCustomFloat_1)) *ParticleLifeRatio
+                        Alpha = 1 * Decay[ParticleLifeRatio, 0.7]
+                    )
+                )
+            )
+        )
+    ]
+)

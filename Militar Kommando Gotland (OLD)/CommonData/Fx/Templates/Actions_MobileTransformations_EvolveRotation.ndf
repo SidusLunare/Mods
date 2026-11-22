@@ -1,0 +1,26 @@
+template Template_RotateMobile
+[
+    Orientation                 : TEvaluable = nil,
+    UpVector                    : TEvaluable = nil,
+    EulerAngles                 : TEvaluable = nil,
+    Absolute                    : boolean = false,
+    StartDelay                  : TEvaluable = nil,
+    Duration                    : TEvaluable = TConstantFloat(Value = 1.0),
+    Period                      : TEvaluable = nil,
+    Forever                     : boolean = false,
+    Slice                       : boolean = false,
+    WaitAtLeastBetweenFrame     : TEvaluable = nil,
+] is TActionDescriptorRotateMobile
+(
+    Function = <Orientation>
+    UpVector = <UpVector>
+    EulerAngles = <EulerAngles> != nil ? 6.282 * <EulerAngles> : nil
+    Relative = ! <Absolute>
+    InitialDelayInSec = <StartDelay>
+    DurationInSec = <Duration>
+    PeriodInSec = <Period>
+    PeriodInFrames = 0
+    Forever = <Forever>
+    Slice = <Slice>
+    WaitAtLeastBetweenFrame = <WaitAtLeastBetweenFrame>
+)

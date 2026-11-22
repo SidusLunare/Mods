@@ -1,0 +1,45 @@
+template Scenario
+[
+    GUID,
+    Name                     : string = '',
+    ScenarioDirectory        : string,
+    LevelBuildDirectory      : string,
+    Category                 : string,
+    LoadGameplayConstantsCluster     : TCompositeCluster = ~/LoadScenarioGameplayConstantTransactions,
+] is TScenarioDefinition
+(
+    GUID = <GUID>
+    Name = <Name> != '' ? <Name> : <ScenarioDirectory>
+    Path = <ScenarioDirectory>
+
+    RootDatapackName = <LevelBuildDirectory>
+
+    Category = <Category>
+
+    ClusterLoad = TCompositeCluster
+    (
+        SubClusterList =
+        [
+            TemplateClusterLoadNDF
+            (
+                BaseName = "Scenarios/" + <ScenarioDirectory> + "/ScenarioLoader.txn"
+                NameSpace = 'ClusterMap'
+                Public = true
+
+                Files =
+                [
+                    'ScenariosData:/' + <ScenarioDirectory> + '/Scenario.ndf',
+                    'CommonData:/Map/Template/ScenarioLoader.ndf',
+                    'CommonData:/Map/Template/ScenarioGameplayConstants.ndf',
+                    'CommonData:/Map/Template/MapJuncture.ndf',
+                    'CommonData:/System/LocalisationConstantes.ndf',
+                    'CommonData:/Clusters/_TemplateClusters.ndf',
+                    'CommonData:/Clusters/ReloadableType.ndf',
+                ]
+            ),
+            TClusterStartNamedCluster(
+                SubClusterName = '$/ClusterMap/' + <ScenarioDirectory> + '/Load'
+            )
+        ]
+    )
+)

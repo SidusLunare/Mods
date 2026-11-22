@@ -1,0 +1,19 @@
+export Modele_MiG_29S_SOV is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/URSS/Avion/MIG_29S/MIG_29S.fbx"
+)
+
+export Modele_MiG_29S_SOV_MID is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/URSS/Avion/MIG_29S_MID/MIG_29S_MID.fbx"
+)
+
+export Modele_MiG_29S_SOV_LOW is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/URSS/Avion/MIG_29S_LOW/MIG_29S_LOW.fbx"
+)
+
+export Modele_MiG_29S_SOV_train is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/URSS/Avion/MIG_29S/MIG_29S_train.fbx"
+)

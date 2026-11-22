@@ -1,0 +1,14 @@
+export Modele_OH6A_reco_US is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/US/Helico/OH6A_reco/OH6A_reco.fbx"
+)
+
+export Modele_OH6A_reco_US_MID is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/US/Helico/OH6A_reco_MID/OH6A_reco_MID.fbx"
+)
+
+export Modele_OH6A_reco_US_LOW is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/US/Helico/OH6A_reco_LOW/OH6A_reco_LOW.fbx"
+)

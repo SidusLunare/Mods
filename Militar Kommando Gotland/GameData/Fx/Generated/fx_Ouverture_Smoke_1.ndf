@@ -101,43 +101,6 @@ export fx_Ouverture_Smoke_1 is SimultaneousActionDeclaration
         (
             Mobile = TMobileWithLocalRepereMatrixFactory
             (
-                Position = parPosition
-                EulerAngles = float3[3.14819,0,0]
-            )
-            Actions =
-            [
-                TActionCall
-                (
-                    Action = $/VFX_Bank/BANK_Rubble2_Oriented_Simple_Reverse
-                    NamedParams = MAP[
-                        ( 'parCountDebrits', 0 ),
-                        ( 'parCountDebritsWithFire', 4 ),
-                        ( 'parCountDebritsWithSmoke', 5 ),
-                        ( 'parDebritSizeMul', 0.25 ),
-                        ( 'parDir', parDirection ),
-                        ( 'parDispersion', 1000 ),
-                        ( 'parFireParticleEndSize', 150 ),
-                        ( 'parFireParticleStartSize', 50 ),
-                        ( 'parGravity', 1500 ),
-                        ( 'parLifetime', 4 ),
-                        ( 'parMeshType', 4 ),
-                        ( 'parNarrowness', 5 ),
-                        ( 'parParticleOpacity', 0.1 ),
-                        ( 'parSmokeColor', float3[1,1,1] ),
-                        ( 'parSmokeColorMultiplier', 1 ),
-                        ( 'parSmokeDensity', 100 ),
-                        ( 'parSmokeParticleEndSize', 800 ),
-                        ( 'parSmokeParticleStartSize', 400 ),
-                        ( 'parSpeed', float3[15000,0,0] ),
-                    ]
-                ),
-                TWaitInSec( Duration = 4),
-            ]
-        ),
-        TSimultaneousAction
-        (
-            Mobile = TMobileWithLocalRepereMatrixFactory
-            (
                 Position = float3[13,14,5030] + parPosition
             )
             Actions =
@@ -175,6 +138,43 @@ export fx_Ouverture_Smoke_1 is SimultaneousActionDeclaration
             Mobile = TMobileWithLocalRepereMatrixFactory
             (
                 Position = parPosition
+                EulerAngles = float3[3.14819,0,0]
+            )
+            Actions =
+            [
+                TActionCall
+                (
+                    Action = $/VFX_Bank/BANK_Rubble2_Oriented_Simple_Reverse
+                    NamedParams = MAP[
+                        ( 'parCountDebrits', 0 ),
+                        ( 'parCountDebritsWithFire', 4 ),
+                        ( 'parCountDebritsWithSmoke', 5 ),
+                        ( 'parDebritSizeMul', 0.25 ),
+                        ( 'parDir', parDirection ),
+                        ( 'parDispersion', 1000 ),
+                        ( 'parFireParticleEndSize', 150 ),
+                        ( 'parFireParticleStartSize', 50 ),
+                        ( 'parGravity', 1500 ),
+                        ( 'parLifetime', 4 ),
+                        ( 'parMeshType', 4 ),
+                        ( 'parNarrowness', 5 ),
+                        ( 'parParticleOpacity', 0.1 ),
+                        ( 'parSmokeColor', float3[1,1,1] ),
+                        ( 'parSmokeColorMultiplier', 1 ),
+                        ( 'parSmokeDensity', 100 ),
+                        ( 'parSmokeParticleEndSize', 800 ),
+                        ( 'parSmokeParticleStartSize', 400 ),
+                        ( 'parSpeed', float3[15000,0,0] ),
+                    ]
+                ),
+                TWaitInSec( Duration = 4),
+            ]
+        ),
+        TSimultaneousAction
+        (
+            Mobile = TMobileWithLocalRepereMatrixFactory
+            (
+                Position = parPosition
             )
             Actions =
             [
@@ -193,35 +193,6 @@ export fx_Ouverture_Smoke_1 is SimultaneousActionDeclaration
                                 ( 'parRadius', 40000 ),
                             ]
                         ),
-                    ]
-                ),
-            ]
-        ),
-        TSimultaneousAction
-        (
-            Mobile = nil
-            Actions =
-            [
-                TActionCall
-                (
-                    Action = $/VFX_Bank/BANK_Bomb_NewSparks_Omni_Simple
-                    NamedParams = MAP[
-                        ( 'parColor', float3[0.8039216,0.8039216,0.8039216] ),
-                        ( 'parColorMultiplier', 12 ),
-                        ( 'parCount', 100 ),
-                        ( 'parFluidFriction', 1 ),
-                        ( 'parGravity', 500 ),
-                        ( 'parInitialDelay', parInitialShotDelay ),
-                        ( 'parLifetime', 4 ),
-                        ( 'parNarrowness', 5 ),
-                        ( 'parPositionRadius', 10 ),
-                        ( 'parPositionRelative', parPosition ),
-                        ( 'parSize', 10 ),
-                        ( 'parSpeedMax', 10000 ),
-                        ( 'parSpeedMin', 6000 ),
-                        ( 'parStretch', 1 ),
-                        ( 'parWindFactor', 1 ),
-                        ( 'parDir', float3[0.9962764,-0.01497342,0.08490732] ),
                     ]
                 ),
             ]
@@ -271,6 +242,35 @@ export fx_Ouverture_Smoke_1 is SimultaneousActionDeclaration
                         ( 'parSpeedMin', 4000 ),
                         ( 'parStretch', 1.5 ),
                         ( 'parWindFactor', 1 ),
+                    ]
+                ),
+            ]
+        ),
+        TSimultaneousAction
+        (
+            Mobile = nil
+            Actions =
+            [
+                TActionCall
+                (
+                    Action = $/VFX_Bank/BANK_Bomb_NewSparks_Omni_Simple
+                    NamedParams = MAP[
+                        ( 'parColor', float3[0.8039216,0.8039216,0.8039216] ),
+                        ( 'parColorMultiplier', 12 ),
+                        ( 'parCount', 100 ),
+                        ( 'parFluidFriction', 1 ),
+                        ( 'parGravity', 500 ),
+                        ( 'parInitialDelay', parInitialShotDelay ),
+                        ( 'parLifetime', 4 ),
+                        ( 'parNarrowness', 5 ),
+                        ( 'parPositionRadius', 10 ),
+                        ( 'parPositionRelative', parPosition ),
+                        ( 'parSize', 10 ),
+                        ( 'parSpeedMax', 10000 ),
+                        ( 'parSpeedMin', 6000 ),
+                        ( 'parStretch', 1 ),
+                        ( 'parWindFactor', 1 ),
+                        ( 'parDir', float3[0.9962764,-0.01497342,0.08490732] ),
                     ]
                 ),
             ]

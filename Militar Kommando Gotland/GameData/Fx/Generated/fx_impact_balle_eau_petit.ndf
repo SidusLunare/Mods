@@ -48,6 +48,28 @@ export fx_impact_balle_eau_petit is SimultaneousActionDeclaration
         (
             Mobile = TMobileWithLocalRepereMatrixFactory
             (
+                Position = parPosition
+            )
+            Actions =
+            [
+                TActionCall
+                (
+                    Action = $/VFX_Bank/Small_ground_Impact_Simple
+                    NamedParams = MAP[
+                        ( 'parDuration', 0.6 ),
+                        ( 'parDustColor', float3[0.6745098,0.7490196,0.9843138] ),
+                        ( 'parDustSize', 0 ),
+                        ( 'parMudSize', 0 ),
+                        ( 'parOpacity', 0.5 ),
+                        ( 'parRandomPosition', 0 ),
+                    ]
+                ),
+            ]
+        ),
+        TSimultaneousAction
+        (
+            Mobile = TMobileWithLocalRepereMatrixFactory
+            (
                 Position = float3[-161,100,0]
             )
             Actions =
@@ -64,28 +86,6 @@ export fx_impact_balle_eau_petit is SimultaneousActionDeclaration
                         ( 'parLifetime', 2 ),
                         ( 'parSize', 30 ),
                         ( 'parSpeed', 800 ),
-                    ]
-                ),
-            ]
-        ),
-        TSimultaneousAction
-        (
-            Mobile = TMobileWithLocalRepereMatrixFactory
-            (
-                Position = parPosition
-            )
-            Actions =
-            [
-                TActionCall
-                (
-                    Action = $/VFX_Bank/Small_ground_Impact_Simple
-                    NamedParams = MAP[
-                        ( 'parDuration', 0.6 ),
-                        ( 'parDustColor', float3[0.6745098,0.7490196,0.9843138] ),
-                        ( 'parDustSize', 0 ),
-                        ( 'parMudSize', 0 ),
-                        ( 'parOpacity', 0.5 ),
-                        ( 'parRandomPosition', 0 ),
                     ]
                 ),
             ]

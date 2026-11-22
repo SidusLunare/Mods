@@ -208,7 +208,7 @@ export BANK_Bomb_Smoke_MGS_original is SimultaneousActionDeclaration
                             ColorMultiplier = Max[$/VFX_Bank/ParticleRemainingLifeRatio, 0.75] * $/VFX_Bank/ParticleCustomFloat_4
                             ZBias = 0.25 * $/VFX_Bank/ParticleCustomFloat_1
                             RotationSpeed = getZ[$/VFX_Bank/ParticleCustomFloat3_3] * $/VFX_Bank/ParticleCustomFloat3_1 * lerp[( getZ[$/VFX_Bank/ParticleCustomFloat3_2] ), 0.5, 1]
-                            UseHardCodedRotation = True
+                            UseHardCodedRotation = true
                         )
                         ]
                     )
@@ -270,7 +270,7 @@ export BANK_Bomb_Smoke_MGS_original is SimultaneousActionDeclaration
                             ColorMultiplier = Max[$/VFX_Bank/ParticleRemainingLifeRatio, 0.75] * $/VFX_Bank/ParticleCustomFloat_4
                             ZBias = 0.25 * $/VFX_Bank/ParticleCustomFloat_1
                             RotationSpeed = getZ[$/VFX_Bank/ParticleCustomFloat3_3] * $/VFX_Bank/ParticleCustomFloat3_1 * lerp[( getZ[$/VFX_Bank/ParticleCustomFloat3_2] ), 0.5, 1]
-                            UseHardCodedRotation = True
+                            UseHardCodedRotation = true
                         )
                         ]
                     )

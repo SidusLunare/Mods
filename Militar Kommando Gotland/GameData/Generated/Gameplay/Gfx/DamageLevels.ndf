@@ -657,7 +657,6 @@ export DamageLevelsPackDescriptor_helo_packSupp is TDamageLevelsPackDescriptor
         ),
     ]
 )
-
 export DamageLevelsPackDescriptor_Default_pack_paliers_degats_phy is TDamageLevelsPackDescriptor
 (
     DescriptorId = GUID:{1eceabc4-2c92-41e8-9df2-eb11cc9a75b8}
@@ -712,7 +711,6 @@ export DamageLevelsPackDescriptor_Default_pack_paliers_degats_phy is TDamageLeve
         ),
     ]
 )
-
 export DamageLevelsPackDescriptor_Default_pack_paliers_stun is TDamageLevelsPackDescriptor
 (
     DescriptorId = GUID:{a15b3e65-ceba-4c2b-ad0b-b23a1439428e}

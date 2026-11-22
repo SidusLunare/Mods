@@ -139,6 +139,185 @@ export CAN_CFE_Subordination is TBattleOrderSubordination
     NameToken = "OJVAKVAHDE"
     Superior = ~/FR_SOUTHAG_Subordination
 )
+export CUB_11InfDiv_Subordination is TBattleOrderSubordination
+(
+    BackgroundTexture = ~/UIBackgroundTexture_division
+    NameToken = "LXIUMZVNXY"
+    Superior = ~/CUB_2Corps_Subordination
+)
+export CUB_11InfDiv_1Art_Subordination is TBattleOrderSubordination
+(
+    BackgroundTexture = ~/UIBackgroundTexture_regiment
+    NameToken = "WVNKYJHLFZ"
+    Superior = ~/CUB_11InfDiv_Subordination
+)
+export CUB_11InfDiv_1Inf_Subordination is TBattleOrderSubordination
+(
+    BackgroundTexture = ~/UIBackgroundTexture_regiment
+    NameToken = "JVWXUOMWUY"
+    Superior = ~/CUB_11InfDiv_Subordination
+)
+export CUB_11InfDiv_2Inf_Subordination is TBattleOrderSubordination
+(
+    BackgroundTexture = ~/UIBackgroundTexture_regiment
+    NameToken = "XYZLGDAFIT"
+    Superior = ~/CUB_11InfDiv_Subordination
+)
+export CUB_11InfDiv_3Inf_Subordination is TBattleOrderSubordination
+(
+    BackgroundTexture = ~/UIBackgroundTexture_regiment
+    NameToken = "TCXPVCHINK"
+    Superior = ~/CUB_11InfDiv_Subordination
+)
+export CUB_12InfDiv_Subordination is TBattleOrderSubordination
+(
+    BackgroundTexture = ~/UIBackgroundTexture_division
+    NameToken = "ECLZSMXXNJ"
+    Superior = ~/CUB_2Corps_Subordination
+)
+export CUB_12InfDiv_1Art_Subordination is TBattleOrderSubordination
+(
+    BackgroundTexture = ~/UIBackgroundTexture_regiment
+    NameToken = "EKVELGQJER"
+    Superior = ~/CUB_12InfDiv_Subordination
+)
+export CUB_12InfDiv_1Inf_Subordination is TBattleOrderSubordination
+(
+    BackgroundTexture = ~/UIBackgroundTexture_regiment
+    NameToken = "YPEEFHXGCS"
+    Superior = ~/CUB_12InfDiv_Subordination
+)
+export CUB_12InfDiv_2Inf_Subordination is TBattleOrderSubordination
+(
+    BackgroundTexture = ~/UIBackgroundTexture_regiment
+    NameToken = "GDIJCBLPNX"
+    Superior = ~/CUB_12InfDiv_Subordination
+)
+export CUB_12InfDiv_3Inf_Subordination is TBattleOrderSubordination
+(
+    BackgroundTexture = ~/UIBackgroundTexture_regiment
+    NameToken = "WOAIOQQXXI"
+    Superior = ~/CUB_12InfDiv_Subordination
+)
+export CUB_1Tanques_Subordination is TBattleOrderSubordination
+(
+    BackgroundTexture = ~/UIBackgroundTexture_division
+    NameToken = "YAKUGMVAOS"
+    Superior = ~/CUB_WestArmy_Subordination
+)
+export CUB_1Tanques_1Art_Subordination is TBattleOrderSubordination
+(
+    BackgroundTexture = ~/UIBackgroundTexture_regiment
+    NameToken = "STSAAVFMUS"
+    Superior = ~/CUB_1Tanques_Subordination
+)
+export CUB_1Tanques_1Mech_Subordination is TBattleOrderSubordination
+(
+    BackgroundTexture = ~/UIBackgroundTexture_regiment
+    NameToken = "OSJBAGSIUS"
+    Superior = ~/CUB_1Tanques_Subordination
+)
+export CUB_20MechDiv_Subordination is TBattleOrderSubordination
+(
+    BackgroundTexture = ~/UIBackgroundTexture_division
+    NameToken = "HWKNVTHCFT"
+    Superior = ~/CUB_WestArmy_Subordination
+)
+export CUB_20MechDiv_1Art_Subordination is TBattleOrderSubordination
+(
+    BackgroundTexture = ~/UIBackgroundTexture_regiment
+    NameToken = "ZQDAKRIKJI"
+    Superior = ~/CUB_20MechDiv_Subordination
+)
+export CUB_20MechDiv_1Mech_Subordination is TBattleOrderSubordination
+(
+    BackgroundTexture = ~/UIBackgroundTexture_regiment
+    NameToken = "IBKHQSRBDU"
+    Superior = ~/CUB_20MechDiv_Subordination
+)
+export CUB_20MechDiv_2Mech_Subordination is TBattleOrderSubordination
+(
+    BackgroundTexture = ~/UIBackgroundTexture_regiment
+    NameToken = "EQXEPFIJTL"
+    Superior = ~/CUB_20MechDiv_Subordination
+)
+export CUB_20MechDiv_3Mech_Subordination is TBattleOrderSubordination
+(
+    BackgroundTexture = ~/UIBackgroundTexture_regiment
+    NameToken = "HJGWKSIVFG"
+    Superior = ~/CUB_20MechDiv_Subordination
+)
+export CUB_24InfDiv_Subordination is TBattleOrderSubordination
+(
+    BackgroundTexture = ~/UIBackgroundTexture_division
+    NameToken = "LAJNTBTCXQ"
+    Superior = ~/CUB_2Corps_Subordination
+)
+export CUB_24InfDiv_1Art_Subordination is TBattleOrderSubordination
+(
+    BackgroundTexture = ~/UIBackgroundTexture_regiment
+    NameToken = "XOAGHVAFSC"
+    Superior = ~/CUB_24InfDiv_Subordination
+)
+export CUB_24InfDiv_1Inf_Subordination is TBattleOrderSubordination
+(
+    BackgroundTexture = ~/UIBackgroundTexture_regiment
+    NameToken = "BIJPMJOVPO"
+    Superior = ~/CUB_24InfDiv_Subordination
+)
+export CUB_24InfDiv_2Inf_Subordination is TBattleOrderSubordination
+(
+    BackgroundTexture = ~/UIBackgroundTexture_regiment
+    NameToken = "QZITOWIEXV"
+    Superior = ~/CUB_24InfDiv_Subordination
+)
+export CUB_24InfDiv_3Inf_Subordination is TBattleOrderSubordination
+(
+    BackgroundTexture = ~/UIBackgroundTexture_regiment
+    NameToken = "LCKWMVFNPN"
+    Superior = ~/CUB_24InfDiv_Subordination
+)
+export CUB_2Corps_Subordination is TBattleOrderSubordination
+(
+    BackgroundTexture = ~/UIBackgroundTexture_corps
+    NameToken = "EDIANRZFYP"
+    Superior = ~/CUB_WestArmy_Subordination
+)
+export CUB_ArtDiv_Subordination is TBattleOrderSubordination
+(
+    BackgroundTexture = ~/UIBackgroundTexture_division
+    NameToken = "VDLVDRJUVA"
+    Superior = ~/CUB_WestArmy_Subordination
+)
+export CUB_DAAFAR_Subordination is TBattleOrderSubordination
+(
+    BackgroundTexture = ~/UIBackgroundTexture_corps
+    NameToken = "RMMOWEEETT"
+    Superior = ~/CUB_WestArmy_Subordination
+)
+export CUB_WestArmy_Subordination is TBattleOrderSubordination
+(
+    BackgroundTexture = ~/UIBackgroundTexture_front
+    NameToken = "URWMGDCYAF"
+)
+export CUB_WestMTT_Subordination is TBattleOrderSubordination
+(
+    BackgroundTexture = ~/UIBackgroundTexture_corps
+    NameToken = "SUTPAMSQYW"
+    Superior = ~/CUB_WestArmy_Subordination
+)
+export CUB_WestMTT_HavanaMTT_Subordination is TBattleOrderSubordination
+(
+    BackgroundTexture = ~/UIBackgroundTexture_regiment
+    NameToken = "EBGCRCZCLS"
+    Superior = ~/CUB_WestMTT_Subordination
+)
+export CUB_WestMTT_PinarMTT_Subordination is TBattleOrderSubordination
+(
+    BackgroundTexture = ~/UIBackgroundTexture_regiment
+    NameToken = "SOFCFZYNDQ"
+    Superior = ~/CUB_WestMTT_Subordination
+)
 export ESP_Brun_Subordination is TBattleOrderSubordination
 (
     BackgroundTexture = ~/UIBackgroundTexture_division
@@ -2454,6 +2633,12 @@ export SOV_7GTkD_Subordination is TBattleOrderSubordination
     NameToken = "XLOSPPNCHB"
     Superior = ~/SOV_3A_Subordination
 )
+export SOV_7MSBr_Subordination is TBattleOrderSubordination
+(
+    BackgroundTexture = ~/UIBackgroundTexture_brigade
+    NameToken = "KACDAWZSWH"
+    Superior = ~/CUB_WestArmy_Subordination
+)
 export SOV_8GA_Subordination is TBattleOrderSubordination
 (
     BackgroundTexture = ~/UIBackgroundTexture_corps
@@ -3067,6 +3252,12 @@ export UK_RAF_Wildenrath_Subordination is TBattleOrderSubordination
     NameToken = "KGODIAMQAG"
     Superior = ~/UK_RAFG_Subordination
 )
+export US_101AB_Subordination is TBattleOrderSubordination
+(
+    BackgroundTexture = ~/UIBackgroundTexture_division
+    NameToken = "SWNAUPGINI"
+    Superior = ~/US_JTF_Cuba_Subordination
+)
 export US_10TFW_Subordination is TBattleOrderSubordination
 (
     BackgroundTexture = ~/UIBackgroundTexture_corps
@@ -3115,6 +3306,12 @@ export US_1AD_Subordination is TBattleOrderSubordination
     NameToken = "LOBUPHFUFR"
     Superior = ~/US_7C_Subordination
 )
+export US_1Brig101AB_Subordination is TBattleOrderSubordination
+(
+    BackgroundTexture = ~/UIBackgroundTexture_brigade
+    NameToken = "UHXYVDJFAU"
+    Superior = ~/US_101AB_Subordination
+)
 export US_1Brig1AD_Subordination is TBattleOrderSubordination
 (
     BackgroundTexture = ~/UIBackgroundTexture_brigade
@@ -3138,6 +3335,12 @@ export US_1Brig3ID_Subordination is TBattleOrderSubordination
     BackgroundTexture = ~/UIBackgroundTexture_brigade
     NameToken = "CFQLEPQNWQ"
     Superior = ~/US_3ID_Subordination
+)
+export US_1Brig4MARDIV_Subordination is TBattleOrderSubordination
+(
+    BackgroundTexture = ~/UIBackgroundTexture_regiment
+    NameToken = "PYOWLQZOTB"
+    Superior = ~/US_4MARDIV_Subordination
 )
 export US_1Brig82AB_Subordination is TBattleOrderSubordination
 (
@@ -3187,6 +3390,42 @@ export US_20TFW_Subordination is TBattleOrderSubordination
     NameToken = "IKAUTRYXQQ"
     Superior = ~/US_3AF_Subordination
 )
+export US_26ID_Subordination is TBattleOrderSubordination
+(
+    BackgroundTexture = ~/UIBackgroundTexture_division
+    NameToken = "QLVAJAUABW"
+    Superior = ~/US_JTF_Cuba_Subordination
+)
+export US_26ID_26DivArty_Subordination is TBattleOrderSubordination
+(
+    BackgroundTexture = ~/UIBackgroundTexture_brigade
+    NameToken = "VGBQFWHMSJ"
+    Superior = ~/US_26ID_Subordination
+)
+export US_26ID_3NGBrig_Subordination is TBattleOrderSubordination
+(
+    BackgroundTexture = ~/UIBackgroundTexture_brigade
+    NameToken = "HZMONSLUHJ"
+    Superior = ~/US_26ID_Subordination
+)
+export US_26ID_43NGBrig_Subordination is TBattleOrderSubordination
+(
+    BackgroundTexture = ~/UIBackgroundTexture_brigade
+    NameToken = "KVNWFETFVR"
+    Superior = ~/US_26ID_Subordination
+)
+export US_26ID_86NGBrig_Subordination is TBattleOrderSubordination
+(
+    BackgroundTexture = ~/UIBackgroundTexture_brigade
+    NameToken = "ZHFFLOSIEB"
+    Superior = ~/US_26ID_Subordination
+)
+export US_26ID_AviaBrig_Subordination is TBattleOrderSubordination
+(
+    BackgroundTexture = ~/UIBackgroundTexture_brigade
+    NameToken = "PLVJKHJHBD"
+    Superior = ~/US_26ID_Subordination
+)
 export US_2ACR_Subordination is TBattleOrderSubordination
 (
     BackgroundTexture = ~/UIBackgroundTexture_regiment
@@ -3198,6 +3437,12 @@ export US_2AD_Subordination is TBattleOrderSubordination
     BackgroundTexture = ~/UIBackgroundTexture_division
     NameToken = "XEYLYWUMKC"
     Superior = ~/US_3C_Subordination
+)
+export US_2Brig101AB_Subordination is TBattleOrderSubordination
+(
+    BackgroundTexture = ~/UIBackgroundTexture_brigade
+    NameToken = "NMEAVCZIUQ"
+    Superior = ~/US_101AB_Subordination
 )
 export US_2Brig1AD_Subordination is TBattleOrderSubordination
 (
@@ -3222,6 +3467,12 @@ export US_2Brig3ID_Subordination is TBattleOrderSubordination
     BackgroundTexture = ~/UIBackgroundTexture_brigade
     NameToken = "BITCOFMASC"
     Superior = ~/US_3ID_Subordination
+)
+export US_2Brig4MARDIV_Subordination is TBattleOrderSubordination
+(
+    BackgroundTexture = ~/UIBackgroundTexture_regiment
+    NameToken = "FNYGABYLXD"
+    Superior = ~/US_4MARDIV_Subordination
 )
 export US_2Brig82AB_Subordination is TBattleOrderSubordination
 (
@@ -3259,6 +3510,12 @@ export US_3AF_Subordination is TBattleOrderSubordination
     NameToken = "FTASMGHFYV"
     Superior = ~/US_4ATAF_Subordination
 )
+export US_3Brig101AB_Subordination is TBattleOrderSubordination
+(
+    BackgroundTexture = ~/UIBackgroundTexture_brigade
+    NameToken = "XDIJFUYVGU"
+    Superior = ~/US_101AB_Subordination
+)
 export US_3Brig1AD_Subordination is TBattleOrderSubordination
 (
     BackgroundTexture = ~/UIBackgroundTexture_brigade
@@ -3282,6 +3539,12 @@ export US_3Brig3ID_Subordination is TBattleOrderSubordination
     BackgroundTexture = ~/UIBackgroundTexture_brigade
     NameToken = "OVCDZGOZFO"
     Superior = ~/US_3ID_Subordination
+)
+export US_3Brig4MARDIV_Subordination is TBattleOrderSubordination
+(
+    BackgroundTexture = ~/UIBackgroundTexture_regiment
+    NameToken = "TTYMLJVYVZ"
+    Superior = ~/US_4MARDIV_Subordination
 )
 export US_3Brig82AB_Subordination is TBattleOrderSubordination
 (
@@ -3343,6 +3606,12 @@ export US_4Brig3ID_Subordination is TBattleOrderSubordination
     NameToken = "NSGAFTSBIY"
     Superior = ~/US_3ID_Subordination
 )
+export US_4Brig4MARDIV_Subordination is TBattleOrderSubordination
+(
+    BackgroundTexture = ~/UIBackgroundTexture_regiment
+    NameToken = "CKRPEVXRHL"
+    Superior = ~/US_4MARDIV_Subordination
+)
 export US_4Brig82AB_Subordination is TBattleOrderSubordination
 (
     BackgroundTexture = ~/UIBackgroundTexture_brigade
@@ -3355,6 +3624,12 @@ export US_4Brig8ID_Subordination is TBattleOrderSubordination
     NameToken = "NSGAFTSBIY"
     Superior = ~/US_8ID_Subordination
 )
+export US_4MARDIV_Subordination is TBattleOrderSubordination
+(
+    BackgroundTexture = ~/UIBackgroundTexture_division
+    NameToken = "ENHKOGRNER"
+    Superior = ~/US_JTF_Cuba_Subordination
+)
 export US_50TFW_Subordination is TBattleOrderSubordination
 (
     BackgroundTexture = ~/UIBackgroundTexture_corps
@@ -3366,6 +3641,12 @@ export US_52TFW_Subordination is TBattleOrderSubordination
     BackgroundTexture = ~/UIBackgroundTexture_corps
     NameToken = "KWEWJULSTS"
     Superior = ~/US_17AF_Subordination
+)
+export US_5Brig101AB_Subordination is TBattleOrderSubordination
+(
+    BackgroundTexture = ~/UIBackgroundTexture_brigade
+    NameToken = "TMNTCRJGKH"
+    Superior = ~/US_101AB_Subordination
 )
 export US_5C_Subordination is TBattleOrderSubordination
 (
@@ -3473,4 +3754,15 @@ export US_CENTAG_Subordination is TBattleOrderSubordination
 (
     BackgroundTexture = ~/UIBackgroundTexture_front
     NameToken = "ILZBTSJMDR"
+)
+export US_JTF_Cuba_Subordination is TBattleOrderSubordination
+(
+    BackgroundTexture = ~/UIBackgroundTexture_corps
+    NameToken = "KFOFEQLNKX"
+    Superior = ~/US_USARSO_Subordination
+)
+export US_USARSO_Subordination is TBattleOrderSubordination
+(
+    BackgroundTexture = ~/UIBackgroundTexture_front
+    NameToken = "PFGJUHMGWV"
 )

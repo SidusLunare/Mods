@@ -502,6 +502,53 @@ export Fx_impact_bat_2A38_Autocanon_2 is SimultaneousActionDeclaration
             Mobile = TMobileWithLocalRepereMatrixFactory
             (
                 Position = parPosition
+            )
+            Actions =
+            [
+                TActionCall
+                (
+                    Action = $/VFX_Bank/BANK_Rubble2_Oriented_Simple
+                    NamedParams = MAP[
+                        ( 'parCountDebrits', 0 ),
+                        ( 'parCountDebritsWithFire', 0 ),
+                        ( 'parCountDebritsWithSmoke', 2 ),
+                        ( 'parDebritSizeMul', 0.75 ),
+                        ( 'parDir', parDirection ),
+                        ( 'parDispersion', 500 ),
+                        ( 'parFireParticleEndSize', 750 ),
+                        ( 'parFireParticleStartSize', 150 ),
+                        ( 'parGravity', 3000 ),
+                        ( 'parLifetime', 10 ),
+                        ( 'parMeshType', 1 ),
+                        ( 'parNarrowness', 0.1 ),
+                        ( 'parParticleOpacity', 0.36 ),
+                        ( 'parSmokeColor', float3[0.5058824,0.4705883,0.4470589] ),
+                        ( 'parSmokeColorMultiplier', 1 ),
+                        ( 'parSmokeDensity', 100 ),
+                        ( 'parSmokeParticleEndSize', 1000 ),
+                        ( 'parSmokeParticleStartSize', 150 ),
+                        ( 'parSpeed', float3[6000,6000,6000] ),
+                    ]
+                ),
+                TActionCall
+                (
+                    Action = $/VFX_Bank/ShakeCamera
+                    NamedParams = MAP[
+                        ( 'parDuration', 0.25 ),
+                        ( 'parFrequency', 8 ),
+                        ( 'parPeriod', 0.05 ),
+                        ( 'parPower', 1 ),
+                        ( 'parRadius', 20000 ),
+                    ]
+                ),
+                TWaitInSec( Duration = 10),
+            ]
+        ),
+        TSimultaneousAction
+        (
+            Mobile = TMobileWithLocalRepereMatrixFactory
+            (
+                Position = parPosition
                 EulerAngles = float3[3.145804,0,0]
             )
             Actions =
@@ -554,53 +601,6 @@ export Fx_impact_bat_2A38_Autocanon_2 is SimultaneousActionDeclaration
                         ( 'parSmokeParticleEndSize', 750 ),
                         ( 'parSmokeParticleStartSize', 250 ),
                         ( 'parSpeed', float3[8000,4000,4000] ),
-                    ]
-                ),
-                TWaitInSec( Duration = 10),
-            ]
-        ),
-        TSimultaneousAction
-        (
-            Mobile = TMobileWithLocalRepereMatrixFactory
-            (
-                Position = parPosition
-            )
-            Actions =
-            [
-                TActionCall
-                (
-                    Action = $/VFX_Bank/BANK_Rubble2_Oriented_Simple
-                    NamedParams = MAP[
-                        ( 'parCountDebrits', 0 ),
-                        ( 'parCountDebritsWithFire', 0 ),
-                        ( 'parCountDebritsWithSmoke', 2 ),
-                        ( 'parDebritSizeMul', 0.75 ),
-                        ( 'parDir', parDirection ),
-                        ( 'parDispersion', 500 ),
-                        ( 'parFireParticleEndSize', 750 ),
-                        ( 'parFireParticleStartSize', 150 ),
-                        ( 'parGravity', 3000 ),
-                        ( 'parLifetime', 10 ),
-                        ( 'parMeshType', 1 ),
-                        ( 'parNarrowness', 0.1 ),
-                        ( 'parParticleOpacity', 0.36 ),
-                        ( 'parSmokeColor', float3[0.5058824,0.4705883,0.4470589] ),
-                        ( 'parSmokeColorMultiplier', 1 ),
-                        ( 'parSmokeDensity', 100 ),
-                        ( 'parSmokeParticleEndSize', 1000 ),
-                        ( 'parSmokeParticleStartSize', 150 ),
-                        ( 'parSpeed', float3[6000,6000,6000] ),
-                    ]
-                ),
-                TActionCall
-                (
-                    Action = $/VFX_Bank/ShakeCamera
-                    NamedParams = MAP[
-                        ( 'parDuration', 0.25 ),
-                        ( 'parFrequency', 8 ),
-                        ( 'parPeriod', 0.05 ),
-                        ( 'parPower', 1 ),
-                        ( 'parRadius', 20000 ),
                     ]
                 ),
                 TWaitInSec( Duration = 10),

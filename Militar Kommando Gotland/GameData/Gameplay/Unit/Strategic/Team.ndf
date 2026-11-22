@@ -6,15 +6,6 @@ export Strategic_TeamUnitDescriptor is TEntityDescriptor
 
     ModulesDescriptors =
     [
-        TTeamCurrencyManagerModuleDescriptor
-        (
-            PiggyBanks = [
-                TPiggyBankDescriptor
-                (
-                    CurrencyType = $/GFX/Resources/Resource_StrategicPoints
-                ),
-            ]
-        ),
         TStrategicTeamProductionModuleDescriptor
         (
         ),
@@ -23,8 +14,8 @@ export Strategic_TeamUnitDescriptor is TEntityDescriptor
             ProductionQueues = [
                 TProductionQueueDescriptor
                 (
-                    FactoryType = EFactory/UniversalFactory
-                    IsSimultaneous = False
+                    FactoryType = Factory/UniversalFactory
+                    IsSimultaneous = false
                 ),
             ]
         ),

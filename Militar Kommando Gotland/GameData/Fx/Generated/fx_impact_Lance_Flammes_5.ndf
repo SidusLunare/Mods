@@ -349,6 +349,29 @@ export fx_impact_Lance_Flammes_5 is SimultaneousActionDeclaration
                 (
                     Mobile = TMobileWithLocalRepereMatrixFactory
                     (
+                        EulerAngles = float3[2.913648,0,0]
+                    )
+                    Actions =
+                    [
+                        TActionCall
+                        (
+                            Action = $/VFX_Bank/BANK_Dynamic_Flash_Simple
+                            NamedParams = MAP[
+                                ( 'parColorEnd', float3[0.003921569,0.003921569,0] ),
+                                ( 'parColorStart', float3[0.6,0.2980392,0.09803922] ),
+                                ( 'parDuration', 2 ),
+                                ( 'parOpacity', 0.2 ),
+                                ( 'parSizeLBU', 46.51163 ),
+                                ( 'Position', float3[139,97,0] + parPosition ),
+                            ]
+                        ),
+                        TWaitInSec( Duration = 2),
+                    ]
+                ),
+                TSimultaneousAction
+                (
+                    Mobile = TMobileWithLocalRepereMatrixFactory
+                    (
                         Position = float3[1946,-250,0] + parPosition
                         EulerAngles = float3[1.570796,0,0]
                     )
@@ -529,29 +552,6 @@ export fx_impact_Lance_Flammes_5 is SimultaneousActionDeclaration
                                 ),
                             ]
                         ),
-                    ]
-                ),
-                TSimultaneousAction
-                (
-                    Mobile = TMobileWithLocalRepereMatrixFactory
-                    (
-                        EulerAngles = float3[2.913648,0,0]
-                    )
-                    Actions =
-                    [
-                        TActionCall
-                        (
-                            Action = $/VFX_Bank/BANK_Dynamic_Flash_Simple
-                            NamedParams = MAP[
-                                ( 'parColorEnd', float3[0.003921569,0.003921569,0] ),
-                                ( 'parColorStart', float3[0.6,0.2980392,0.09803922] ),
-                                ( 'parDuration', 2 ),
-                                ( 'parOpacity', 0.2 ),
-                                ( 'parSizeLBU', 46.51163 ),
-                                ( 'Position', float3[139,97,0] + parPosition ),
-                            ]
-                        ),
-                        TWaitInSec( Duration = 2),
                     ]
                 ),
                 TSimultaneousAction

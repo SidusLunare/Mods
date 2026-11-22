@@ -14,6 +14,44 @@ export fx_Ouverture_Roquette_Cluster_HE_Mortier_1 is SimultaneousActionDeclarati
     [
         TSimultaneousAction
         (
+            Mobile = TMobileWithLocalRepereMatrixFactory
+            (
+                Position = parPosition
+            )
+            Actions =
+            [
+                TActionCall
+                (
+                    Action = $/VFX_Bank/BANK_Bomb_Distort_Simple
+                    NamedParams = MAP[
+                        ( 'parDuration', 0.6 ),
+                        ( 'parFinalSize', 5000 ),
+                        ( 'parInitialSize', 50 ),
+                        ( 'parIntensity', 300 ),
+                        ( 'parPositionRelative', float3[15,-39,421] ),
+                    ]
+                ),
+                TSequentialAction
+                (Actions =
+                    [
+                        TWaitInSec( Duration = 0.1 ),
+                        TActionCall
+                        (
+                            Action = $/VFX_Bank/ShakeCamera
+                            NamedParams = MAP[
+                                ( 'parDuration', 1.5 ),
+                                ( 'parFrequency', 4 ),
+                                ( 'parPeriod', 0.05 ),
+                                ( 'parPower', 1 ),
+                                ( 'parRadius', 40000 ),
+                            ]
+                        ),
+                    ]
+                ),
+            ]
+        ),
+        TSimultaneousAction
+        (
             Mobile = nil
             Actions =
             [
@@ -134,44 +172,6 @@ export fx_Ouverture_Roquette_Cluster_HE_Mortier_1 is SimultaneousActionDeclarati
                     ]
                 ),
                 TWaitInSec( Duration = 0.1),
-            ]
-        ),
-        TSimultaneousAction
-        (
-            Mobile = TMobileWithLocalRepereMatrixFactory
-            (
-                Position = parPosition
-            )
-            Actions =
-            [
-                TActionCall
-                (
-                    Action = $/VFX_Bank/BANK_Bomb_Distort_Simple
-                    NamedParams = MAP[
-                        ( 'parDuration', 0.6 ),
-                        ( 'parFinalSize', 5000 ),
-                        ( 'parInitialSize', 50 ),
-                        ( 'parIntensity', 300 ),
-                        ( 'parPositionRelative', float3[15,-39,421] ),
-                    ]
-                ),
-                TSequentialAction
-                (Actions =
-                    [
-                        TWaitInSec( Duration = 0.1 ),
-                        TActionCall
-                        (
-                            Action = $/VFX_Bank/ShakeCamera
-                            NamedParams = MAP[
-                                ( 'parDuration', 1.5 ),
-                                ( 'parFrequency', 4 ),
-                                ( 'parPeriod', 0.05 ),
-                                ( 'parPower', 1 ),
-                                ( 'parRadius', 40000 ),
-                            ]
-                        ),
-                    ]
-                ),
             ]
         ),
         TSimultaneousAction

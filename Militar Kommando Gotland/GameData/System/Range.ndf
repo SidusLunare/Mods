@@ -1,0 +1,13 @@
+NearFront_Clipping is 1000.0
+
+High_Range       is 8345.0
+Mid_Range        is 33380.0
+Low_Range        is 267000.0
+VeryLow_Range    is 1500000.0
+HQ_Range         is 5000000.0
+
+DHC_Split_VeryHigh_Range is 12000.0
+DHC_Split_High_Range     is 30000.0
+DHC_Split_Mid_Range      is 75000.0
+
+Camera_EnlargedFocal is 0.78539824

@@ -80,14 +80,14 @@ BANK_Propulsion_Missile is SimultaneousActionDeclaration
                     ParticleRenderer = $/VFX_Bank/LitParticleRenderer
                     RenderInfo = ParticleRenderInfo
                     (
-                        SortTriangles = True
+                        SortTriangles = true
                         TextureName = 'GameData:/Assets/2D/Fx/impactflash.png'
                         Calque = 'Particles'
-                        EmissiveParticle = True
+                        EmissiveParticle = true
                     )
                     Evolvers = ParticleStandardEvolverList
                     (
-                        UseHardCodedRotation = False // ne pas effacer ce n'est pas la valeur par defaut.
+                        UseHardCodedRotation = false // ne pas effacer ce n'est pas la valeur par defaut.
                         Size = RandomRange[1.0 - ParticleCustomFloat_2, 1.0 + ParticleCustomFloat_2] * ParticleCustomFloat_1 * Clamp[ length[ParticlePosition-CameraPosition] div 25000, 1, 1.5] // on grossit la particule lorsqu'on s'eloigne pour qu'elle reste visible.
                         EmissivePower = RandomRange[1.0 - ParticleCustomFloat_4, 1.0 + ParticleCustomFloat_4] * ParticleCustomFloat_3 * (1 + 0.75* Dot[normalized[ParticleMobileWrapperAxeX],CameraDirection]) // ca brille plus fort quand on voit la flamme de derriere
                         Position = ParticleMobileWrapperPositionUnScaled - normalized[ParticleMobileWrapperAxeX] * ParticleCustomFloat_1 * 0.15
@@ -174,7 +174,7 @@ BANK_Propulsion_Missile is SimultaneousActionDeclaration
                                             SortTriangles = true
                                             TextureName = 'GameData:/Assets/2D/Fx/reactor2.png'
                                             Calque = 'Particles'
-                                            EmissiveParticle = True
+                                            EmissiveParticle = true
                                         )
                                         Evolvers = ParticleStandardEvolverList
                                         (

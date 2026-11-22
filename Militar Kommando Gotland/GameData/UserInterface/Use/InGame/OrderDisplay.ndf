@@ -36,6 +36,7 @@ export OrderDisplayDrawer is TOrderDisplayDrawer
                                 OrderDisplayUseCapacite,
                                 //HELICOPTERS
                                 OrderDisplayLand,
+                                OrderDisplayChangeAltitude,
                                 OrderDisplayGoDown,
                                 OrderDisplayGoUp,
 
@@ -500,9 +501,13 @@ export OrderDisplayLand is TOrderDisplayDrawInfo
     MustDrawArrow               = false
 )
 
-export OrderDisplayGoDown is TOrderDisplayDrawInfo
+template Template_OrderDisplayChangeAltitude
+[
+    OrderType,
+]
+is TOrderDisplayDrawInfo
 (
-    OrderType                   = EOrderType/GoDown
+    OrderType                   = <OrderType>
     ColorLineStart              = [128, 187, 255, 50]
     ColorLineEnd                = [128, 187, 255, alpha] //Light blue
     MaxDistanceBetweenColorsGRU = MaxMeter
@@ -516,21 +521,9 @@ export OrderDisplayGoDown is TOrderDisplayDrawInfo
     MustDrawArrow               = false
 )
 
-export OrderDisplayGoUp is TOrderDisplayDrawInfo
-(
-    OrderType                   = EOrderType/GoUp
-    ColorLineStart              = [128, 187, 255, 50]
-    ColorLineEnd                = [128, 187, 255, alpha] //Light blue
-    MaxDistanceBetweenColorsGRU = MaxMeter
-    LineThickness               = 2000.0
-    ColorCircleDestination      = [128, 187, 255, 220] //Light blue
-    CircleDestinationThickness  = 1000.0
-    CircleDestinationRadius     = 3000.0
-    DisplayWaypoints            = true
-    HideNextOrders              = false
-    MustDrawCircle              = true
-    MustDrawArrow               = false
-)
+export OrderDisplayChangeAltitude is Template_OrderDisplayChangeAltitude( OrderType = EOrderType/ChangeAltitude )
+export OrderDisplayGoDown is Template_OrderDisplayChangeAltitude( OrderType = EOrderType/GoDown )
+export OrderDisplayGoUp is Template_OrderDisplayChangeAltitude( OrderType = EOrderType/GoUp )
 
 export OrderDisplayAIAttack is TOrderDisplayDrawInfo
 (

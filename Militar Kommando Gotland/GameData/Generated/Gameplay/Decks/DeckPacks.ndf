@@ -41,6 +41,12 @@ Descriptor_Deck_Pack_2K12_KUB_DDR_1_1 is DeckPackDescriptor
     Number = 1
 )
 
+Descriptor_Deck_Pack_2K12_KUB_M1_DDR_0_1 is DeckPackDescriptor
+(
+    Unit = $/GFX/Unit/Descriptor_Unit_2K12_KUB_M1_DDR
+    Number = 1
+)
+
 Descriptor_Deck_Pack_2K12_KUB_POL_1_1 is DeckPackDescriptor
 (
     Xp = 1
@@ -97,6 +103,13 @@ Descriptor_Deck_Pack_2S19_MstaS_SOV_0_1 is DeckPackDescriptor
 Descriptor_Deck_Pack_2S1_DDR_0_1 is DeckPackDescriptor
 (
     Unit = $/GFX/Unit/Descriptor_Unit_2S1_DDR
+    Number = 1
+)
+
+Descriptor_Deck_Pack_2S1_Gvozdika_Naval_SOV_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Unit = $/GFX/Unit/Descriptor_Unit_2S1_Gvozdika_Naval_SOV
     Number = 1
 )
 
@@ -212,24 +225,15 @@ Descriptor_Deck_Pack_2S5_GiatsintS_SOV_0_1 is DeckPackDescriptor
     Number = 1
 )
 
-Descriptor_Deck_Pack_2S7M_Malka_SOV_1_1 is DeckPackDescriptor
+Descriptor_Deck_Pack_2S7M_Malka_SOV_0_1 is DeckPackDescriptor
 (
-    Xp = 1
     Unit = $/GFX/Unit/Descriptor_Unit_2S7M_Malka_SOV
     Number = 1
 )
 
-Descriptor_Deck_Pack_2S7_Pion_POL_1_1 is DeckPackDescriptor
+Descriptor_Deck_Pack_2S7_Pion_POL_0_1 is DeckPackDescriptor
 (
-    Xp = 1
     Unit = $/GFX/Unit/Descriptor_Unit_2S7_Pion_POL
-    Number = 1
-)
-
-Descriptor_Deck_Pack_2S7_Pion_TCH_1_1 is DeckPackDescriptor
-(
-    Xp = 1
-    Unit = $/GFX/Unit/Descriptor_Unit_2S7_Pion_TCH
     Number = 1
 )
 
@@ -318,6 +322,13 @@ Descriptor_Deck_Pack_81mm_mortar_UK_Lynx_AH_Mk1_UK_1_1 is DeckPackDescriptor
     Number = 1
 )
 
+Descriptor_Deck_Pack_A109A_reco_VEN_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Unit = $/GFX/Unit/Descriptor_Unit_A109A_reco_VEN
+    Number = 1
+)
+
 Descriptor_Deck_Pack_A109BA_TOW_BEL_1_1 is DeckPackDescriptor
 (
     Xp = 1
@@ -394,10 +405,24 @@ Descriptor_Deck_Pack_A37B_Dragonfly_US_2_1 is DeckPackDescriptor
     Number = 1
 )
 
+Descriptor_Deck_Pack_A4M_Skyhawk_SEAD_US_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Unit = $/GFX/Unit/Descriptor_Unit_A4M_Skyhawk_SEAD_US
+    Number = 1
+)
+
 Descriptor_Deck_Pack_A6E_Intruder_SEAD_US_1_1 is DeckPackDescriptor
 (
     Xp = 1
     Unit = $/GFX/Unit/Descriptor_Unit_A6E_Intruder_SEAD_US
+    Number = 1
+)
+
+Descriptor_Deck_Pack_A6E_Intruder_SWIP_AT_US_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Unit = $/GFX/Unit/Descriptor_Unit_A6E_Intruder_SWIP_AT_US
     Number = 1
 )
 
@@ -422,6 +447,40 @@ Descriptor_Deck_Pack_A7D_Corsair_II_US_1_1 is DeckPackDescriptor
     Number = 1
 )
 
+Descriptor_Deck_Pack_AAVC_7A1_CMD_USMC_US_2_1 is DeckPackDescriptor
+(
+    Xp = 2
+    Unit = $/GFX/Unit/Descriptor_Unit_AAVC_7A1_CMD_USMC_US
+    Number = 1
+)
+
+Descriptor_Deck_Pack_AAVC_7_CMD_VEN_2_1 is DeckPackDescriptor
+(
+    Xp = 2
+    Unit = $/GFX/Unit/Descriptor_Unit_AAVC_7_CMD_VEN
+    Number = 1
+)
+
+Descriptor_Deck_Pack_AAVP_7_MICLIC_USMCR_US_0_1 is DeckPackDescriptor
+(
+    Unit = $/GFX/Unit/Descriptor_Unit_AAVP_7_MICLIC_USMCR_US
+    Number = 1
+)
+
+Descriptor_Deck_Pack_AC_130H_Gunship_US_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Unit = $/GFX/Unit/Descriptor_Unit_AC_130H_Gunship_US
+    Number = 1
+)
+
+Descriptor_Deck_Pack_AC_130_EW_US_2_1 is DeckPackDescriptor
+(
+    Xp = 2
+    Unit = $/GFX/Unit/Descriptor_Unit_AC_130_EW_US
+    Number = 1
+)
+
 Descriptor_Deck_Pack_AEC_Militant_UK_0_1 is DeckPackDescriptor
 (
     Unit = $/GFX/Unit/Descriptor_Unit_AEC_Militant_UK
@@ -434,9 +493,23 @@ Descriptor_Deck_Pack_AEC_Militant_UK_0_10 is DeckPackDescriptor
     Number = 10
 )
 
-Descriptor_Deck_Pack_AH1F_ATAS_US_1_1 is DeckPackDescriptor
+Descriptor_Deck_Pack_AH1E_Cobra_noNG_AT1_US_1_1 is DeckPackDescriptor
 (
     Xp = 1
+    Unit = $/GFX/Unit/Descriptor_Unit_AH1E_Cobra_noNG_AT1_US
+    Number = 1
+)
+
+Descriptor_Deck_Pack_AH1E_Cobra_noNG_AT2_US_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Unit = $/GFX/Unit/Descriptor_Unit_AH1E_Cobra_noNG_AT2_US
+    Number = 1
+)
+
+Descriptor_Deck_Pack_AH1F_ATAS_US_2_1 is DeckPackDescriptor
+(
+    Xp = 2
     Unit = $/GFX/Unit/Descriptor_Unit_AH1F_ATAS_US
     Number = 1
 )
@@ -515,6 +588,48 @@ Descriptor_Deck_Pack_AH1F_Hog_US_2_999 is DeckPackDescriptor
     Xp = 2
     Unit = $/GFX/Unit/Descriptor_Unit_AH1F_Hog_US
     Number = 999
+)
+
+Descriptor_Deck_Pack_AH1T_SeaCobra_AA_US_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Unit = $/GFX/Unit/Descriptor_Unit_AH1T_SeaCobra_AA_US
+    Number = 1
+)
+
+Descriptor_Deck_Pack_AH1T_SeaCobra_ITOW_US_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Unit = $/GFX/Unit/Descriptor_Unit_AH1T_SeaCobra_ITOW_US
+    Number = 1
+)
+
+Descriptor_Deck_Pack_AH1W_SuperCobra_AA_US_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Unit = $/GFX/Unit/Descriptor_Unit_AH1W_SuperCobra_AA_US
+    Number = 1
+)
+
+Descriptor_Deck_Pack_AH1W_SuperCobra_AT_US_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Unit = $/GFX/Unit/Descriptor_Unit_AH1W_SuperCobra_AT_US
+    Number = 1
+)
+
+Descriptor_Deck_Pack_AH1W_SuperCobra_Hydra_US_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Unit = $/GFX/Unit/Descriptor_Unit_AH1W_SuperCobra_Hydra_US
+    Number = 1
+)
+
+Descriptor_Deck_Pack_AH1W_SuperCobra_SEAD_US_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Unit = $/GFX/Unit/Descriptor_Unit_AH1W_SuperCobra_SEAD_US
+    Number = 1
 )
 
 Descriptor_Deck_Pack_AH64_Apache_ATAS_US_1_1 is DeckPackDescriptor
@@ -644,6 +759,13 @@ Descriptor_Deck_Pack_AIFV_B_TOW_NL_2_9 is DeckPackDescriptor
     Xp = 2
     Unit = $/GFX/Unit/Descriptor_Unit_AIFV_B_TOW_NL
     Number = 9
+)
+
+Descriptor_Deck_Pack_AML_530S_VEN_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Unit = $/GFX/Unit/Descriptor_Unit_AML_530S_VEN
+    Number = 1
 )
 
 Descriptor_Deck_Pack_AML_60_FR_1_1 is DeckPackDescriptor
@@ -812,6 +934,12 @@ Descriptor_Deck_Pack_AMX_13_75mm_TCM_FR_1_1 is DeckPackDescriptor
     Number = 1
 )
 
+Descriptor_Deck_Pack_AMX_13_75mm_reco_VEN_0_1 is DeckPackDescriptor
+(
+    Unit = $/GFX/Unit/Descriptor_Unit_AMX_13_75mm_reco_VEN
+    Number = 1
+)
+
 Descriptor_Deck_Pack_AMX_13_90mm_FR_1_1 is DeckPackDescriptor
 (
     Xp = 1
@@ -824,6 +952,12 @@ Descriptor_Deck_Pack_AMX_13_90mm_FR_2_6 is DeckPackDescriptor
     Xp = 2
     Unit = $/GFX/Unit/Descriptor_Unit_AMX_13_90mm_FR
     Number = 6
+)
+
+Descriptor_Deck_Pack_AMX_13_90mm_upgraded_VEN_0_1 is DeckPackDescriptor
+(
+    Unit = $/GFX/Unit/Descriptor_Unit_AMX_13_90mm_upgraded_VEN
+    Number = 1
 )
 
 Descriptor_Deck_Pack_AMX_13_DCA_FR_1_1 is DeckPackDescriptor
@@ -840,6 +974,18 @@ Descriptor_Deck_Pack_AMX_13_DCA_FR_1_6 is DeckPackDescriptor
     Number = 6
 )
 
+Descriptor_Deck_Pack_AMX_13_LARS_160_CLU_VEN_0_1 is DeckPackDescriptor
+(
+    Unit = $/GFX/Unit/Descriptor_Unit_AMX_13_LARS_160_CLU_VEN
+    Number = 1
+)
+
+Descriptor_Deck_Pack_AMX_13_LARS_160_VEN_0_1 is DeckPackDescriptor
+(
+    Unit = $/GFX/Unit/Descriptor_Unit_AMX_13_LARS_160_VEN
+    Number = 1
+)
+
 Descriptor_Deck_Pack_AMX_13_mod56_CMD_BEL_1_1 is DeckPackDescriptor
 (
     Xp = 1
@@ -854,9 +1000,22 @@ Descriptor_Deck_Pack_AMX_13_mod56_CMD_FR_1_1 is DeckPackDescriptor
     Number = 1
 )
 
+Descriptor_Deck_Pack_AMX_13_mod56_CMD_VEN_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Unit = $/GFX/Unit/Descriptor_Unit_AMX_13_mod56_CMD_VEN
+    Number = 1
+)
+
 Descriptor_Deck_Pack_AMX_13_mod56_Mortier_BEL_0_1 is DeckPackDescriptor
 (
     Unit = $/GFX/Unit/Descriptor_Unit_AMX_13_mod56_Mortier_BEL
+    Number = 1
+)
+
+Descriptor_Deck_Pack_AMX_13_mod56_supply_VEN_0_1 is DeckPackDescriptor
+(
+    Unit = $/GFX/Unit/Descriptor_Unit_AMX_13_mod56_supply_VEN
     Number = 1
 )
 
@@ -908,6 +1067,12 @@ Descriptor_Deck_Pack_AMX_30_B2_FR_1_9 is DeckPackDescriptor
     Number = 9
 )
 
+Descriptor_Deck_Pack_AMX_30_B2_Reserve_FR_0_1 is DeckPackDescriptor
+(
+    Unit = $/GFX/Unit/Descriptor_Unit_AMX_30_B2_Reserve_FR
+    Number = 1
+)
+
 Descriptor_Deck_Pack_AMX_30_B_CMD_FR_1_1 is DeckPackDescriptor
 (
     Xp = 1
@@ -915,10 +1080,31 @@ Descriptor_Deck_Pack_AMX_30_B_CMD_FR_1_1 is DeckPackDescriptor
     Number = 1
 )
 
+Descriptor_Deck_Pack_AMX_30_B_CMD_VEN_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Unit = $/GFX/Unit/Descriptor_Unit_AMX_30_B_CMD_VEN
+    Number = 1
+)
+
 Descriptor_Deck_Pack_AMX_30_B_FR_1_1 is DeckPackDescriptor
 (
     Xp = 1
     Unit = $/GFX/Unit/Descriptor_Unit_AMX_30_B_FR
+    Number = 1
+)
+
+Descriptor_Deck_Pack_AMX_30_B_Instructor_FR_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Unit = $/GFX/Unit/Descriptor_Unit_AMX_30_B_Instructor_FR
+    Number = 1
+)
+
+Descriptor_Deck_Pack_AMX_30_B_VEN_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Unit = $/GFX/Unit/Descriptor_Unit_AMX_30_B_VEN
     Number = 1
 )
 
@@ -964,6 +1150,13 @@ Descriptor_Deck_Pack_AMX_30_E_ESP_1_1 is DeckPackDescriptor
     Number = 1
 )
 
+Descriptor_Deck_Pack_AMX_30_V_VEN_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Unit = $/GFX/Unit/Descriptor_Unit_AMX_30_V_VEN
+    Number = 1
+)
+
 Descriptor_Deck_Pack_AS90_155mm_UK_0_1 is DeckPackDescriptor
 (
     Unit = $/GFX/Unit/Descriptor_Unit_AS90_155mm_UK
@@ -977,12 +1170,26 @@ Descriptor_Deck_Pack_ASU_85_POL_1_1 is DeckPackDescriptor
     Number = 1
 )
 
+Descriptor_Deck_Pack_AT27_Tucano_HE_BRZ_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Unit = $/GFX/Unit/Descriptor_Unit_AT27_Tucano_HE_BRZ
+    Number = 1
+)
+
 Descriptor_Deck_Pack_AT_D44_85mm_POL_Star_266_POL_1_12 is DeckPackDescriptor
 (
     Xp = 1
     Transport = $/GFX/Unit/Descriptor_Unit_Star_266_POL
     Unit = $/GFX/Unit/Descriptor_Unit_AT_D44_85mm_POL
     Number = 12
+)
+
+Descriptor_Deck_Pack_AT_D44_85mm_SOV_GAZ_53_trans_SOV_0_1 is DeckPackDescriptor
+(
+    Transport = $/GFX/Unit/Descriptor_Unit_GAZ_53_trans_SOV
+    Unit = $/GFX/Unit/Descriptor_Unit_AT_D44_85mm_SOV
+    Number = 1
 )
 
 Descriptor_Deck_Pack_AT_D44_85mm_VDV_SOV_GAZ_66B_SOV_2_999 is DeckPackDescriptor
@@ -1001,12 +1208,35 @@ Descriptor_Deck_Pack_AT_KSM65_100mm_SOV_KrAZ_255B_SOV_1_1 is DeckPackDescriptor
     Number = 1
 )
 
+Descriptor_Deck_Pack_AT_T12_100mm_CUB_GAZ_53_trans_CUB_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Transport = $/GFX/Unit/Descriptor_Unit_GAZ_53_trans_CUB
+    Unit = $/GFX/Unit/Descriptor_Unit_AT_T12_100mm_CUB
+    Number = 1
+)
+
+Descriptor_Deck_Pack_AT_T12_100mm_DDR_MTLB_trans_DDR_0_1 is DeckPackDescriptor
+(
+    Transport = $/GFX/Unit/Descriptor_Unit_MTLB_trans_DDR
+    Unit = $/GFX/Unit/Descriptor_Unit_AT_T12_100mm_DDR
+    Number = 1
+)
+
 Descriptor_Deck_Pack_AT_T12_Rapira_DDR_MTLB_trans_DDR_3_6 is DeckPackDescriptor
 (
     Xp = 3
     Transport = $/GFX/Unit/Descriptor_Unit_MTLB_trans_DDR
     Unit = $/GFX/Unit/Descriptor_Unit_AT_T12_Rapira_DDR
     Number = 6
+)
+
+Descriptor_Deck_Pack_AT_T12_Rapira_Naval_SOV_MTLB_transp_SOV_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Transport = $/GFX/Unit/Descriptor_Unit_MTLB_transp_SOV
+    Unit = $/GFX/Unit/Descriptor_Unit_AT_T12_Rapira_Naval_SOV
+    Number = 1
 )
 
 Descriptor_Deck_Pack_AT_T12_Rapira_SOV_MTLB_transp_SOV_0_1 is DeckPackDescriptor
@@ -1021,6 +1251,13 @@ Descriptor_Deck_Pack_AT_T12_Rapira_SOV_MTLB_transp_SOV_1_1 is DeckPackDescriptor
     Xp = 1
     Transport = $/GFX/Unit/Descriptor_Unit_MTLB_transp_SOV
     Unit = $/GFX/Unit/Descriptor_Unit_AT_T12_Rapira_SOV
+    Number = 1
+)
+
+Descriptor_Deck_Pack_ATteam_Fagot_Cuba_SOV_BTR_60_SOV_0_1 is DeckPackDescriptor
+(
+    Transport = $/GFX/Unit/Descriptor_Unit_BTR_60_SOV
+    Unit = $/GFX/Unit/Descriptor_Unit_ATteam_Fagot_Cuba_SOV
     Number = 1
 )
 
@@ -1055,6 +1292,20 @@ Descriptor_Deck_Pack_ATteam_Fagot_Gvardeitsy_SOV_BTR_80_SOV_1_1 is DeckPackDescr
     Number = 1
 )
 
+Descriptor_Deck_Pack_ATteam_Fagot_SOV_UAZ_452_SOV_0_1 is DeckPackDescriptor
+(
+    Transport = $/GFX/Unit/Descriptor_Unit_UAZ_452_SOV
+    Unit = $/GFX/Unit/Descriptor_Unit_ATteam_Fagot_SOV
+    Number = 1
+)
+
+Descriptor_Deck_Pack_ATteam_Fagot_SOV_UAZ_469_SOV_0_1 is DeckPackDescriptor
+(
+    Transport = $/GFX/Unit/Descriptor_Unit_UAZ_469_SOV
+    Unit = $/GFX/Unit/Descriptor_Unit_ATteam_Fagot_SOV
+    Number = 1
+)
+
 Descriptor_Deck_Pack_ATteam_Fagot_SOV_UAZ_469_SOV_1_1 is DeckPackDescriptor
 (
     Xp = 1
@@ -1074,6 +1325,13 @@ Descriptor_Deck_Pack_ATteam_Fagot_TCH_UAZ_469_trans_TCH_0_1 is DeckPackDescripto
 (
     Transport = $/GFX/Unit/Descriptor_Unit_UAZ_469_trans_TCH
     Unit = $/GFX/Unit/Descriptor_Unit_ATteam_Fagot_TCH
+    Number = 1
+)
+
+Descriptor_Deck_Pack_ATteam_ITOW_DK_LandRover_DK_0_1 is DeckPackDescriptor
+(
+    Transport = $/GFX/Unit/Descriptor_Unit_LandRover_DK
+    Unit = $/GFX/Unit/Descriptor_Unit_ATteam_ITOW_DK
     Number = 1
 )
 
@@ -1124,6 +1382,14 @@ Descriptor_Deck_Pack_ATteam_Konkurs_Gvardeitsy_SOV_BTR_80_SOV_1_1 is DeckPackDes
 
 Descriptor_Deck_Pack_ATteam_Konkurs_SOV_BTR_60_SOV_0_1 is DeckPackDescriptor
 (
+    Transport = $/GFX/Unit/Descriptor_Unit_BTR_60_SOV
+    Unit = $/GFX/Unit/Descriptor_Unit_ATteam_Konkurs_SOV
+    Number = 1
+)
+
+Descriptor_Deck_Pack_ATteam_Konkurs_SOV_BTR_60_SOV_1_1 is DeckPackDescriptor
+(
+    Xp = 1
     Transport = $/GFX/Unit/Descriptor_Unit_BTR_60_SOV
     Unit = $/GFX/Unit/Descriptor_Unit_ATteam_Konkurs_SOV
     Number = 1
@@ -1275,6 +1541,13 @@ Descriptor_Deck_Pack_ATteam_Milan_2_FR_Super_Puma_FR_1_999 is DeckPackDescriptor
     Transport = $/GFX/Unit/Descriptor_Unit_Super_Puma_FR
     Unit = $/GFX/Unit/Descriptor_Unit_ATteam_Milan_2_FR
     Number = 999
+)
+
+Descriptor_Deck_Pack_ATteam_Milan_2_FR_VAB_MILAN_FR_0_1 is DeckPackDescriptor
+(
+    Transport = $/GFX/Unit/Descriptor_Unit_VAB_MILAN_FR
+    Unit = $/GFX/Unit/Descriptor_Unit_ATteam_Milan_2_FR
+    Number = 1
 )
 
 Descriptor_Deck_Pack_ATteam_Milan_2_FR_VLTT_P4_FR_0_1 is DeckPackDescriptor
@@ -1475,6 +1748,13 @@ Descriptor_Deck_Pack_ATteam_RCL_M40A1_RFA_Unimog_trans_RFA_1_100 is DeckPackDesc
     Number = 100
 )
 
+Descriptor_Deck_Pack_ATteam_RCL_M40A1_VEN_Pinzgauer_712_trans_VEN_0_1 is DeckPackDescriptor
+(
+    Transport = $/GFX/Unit/Descriptor_Unit_Pinzgauer_712_trans_VEN
+    Unit = $/GFX/Unit/Descriptor_Unit_ATteam_RCL_M40A1_VEN
+    Number = 1
+)
+
 Descriptor_Deck_Pack_ATteam_RCL_SPG9_DDR_UAZ_469_trans_DDR_0_1 is DeckPackDescriptor
 (
     Transport = $/GFX/Unit/Descriptor_Unit_UAZ_469_trans_DDR
@@ -1503,6 +1783,14 @@ Descriptor_Deck_Pack_ATteam_RCL_SPG9_Gvardeitsy_SOV_BTR_80_SOV_1_1 is DeckPackDe
     Xp = 1
     Transport = $/GFX/Unit/Descriptor_Unit_BTR_80_SOV
     Unit = $/GFX/Unit/Descriptor_Unit_ATteam_RCL_SPG9_Gvardeitsy_SOV
+    Number = 1
+)
+
+Descriptor_Deck_Pack_ATteam_RCL_SPG9_Naval_VDV_SOV_UAZ_469_SOV_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Transport = $/GFX/Unit/Descriptor_Unit_UAZ_469_SOV
+    Unit = $/GFX/Unit/Descriptor_Unit_ATteam_RCL_SPG9_Naval_VDV_SOV
     Number = 1
 )
 
@@ -1546,6 +1834,13 @@ Descriptor_Deck_Pack_ATteam_TOW2A_US_CUCV_trans_US_1_1 is DeckPackDescriptor
     Number = 1
 )
 
+Descriptor_Deck_Pack_ATteam_TOW2A_US_M998_Humvee_US_0_1 is DeckPackDescriptor
+(
+    Transport = $/GFX/Unit/Descriptor_Unit_M998_Humvee_US
+    Unit = $/GFX/Unit/Descriptor_Unit_ATteam_TOW2A_US
+    Number = 1
+)
+
 Descriptor_Deck_Pack_ATteam_TOW2_Aero_US_Gama_Goat_trans_US_1_1 is DeckPackDescriptor
 (
     Xp = 1
@@ -1559,6 +1854,21 @@ Descriptor_Deck_Pack_ATteam_TOW2_NL_LandRover_NL_1_1 is DeckPackDescriptor
     Xp = 1
     Transport = $/GFX/Unit/Descriptor_Unit_LandRover_NL
     Unit = $/GFX/Unit/Descriptor_Unit_ATteam_TOW2_NL
+    Number = 1
+)
+
+Descriptor_Deck_Pack_ATteam_TOW2_USMCR_US_M998_Humvee_US_0_1 is DeckPackDescriptor
+(
+    Transport = $/GFX/Unit/Descriptor_Unit_M998_Humvee_US
+    Unit = $/GFX/Unit/Descriptor_Unit_ATteam_TOW2_USMCR_US
+    Number = 1
+)
+
+Descriptor_Deck_Pack_ATteam_TOW2_USMC_US_M998_Humvee_US_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Transport = $/GFX/Unit/Descriptor_Unit_M998_Humvee_US
+    Unit = $/GFX/Unit/Descriptor_Unit_ATteam_TOW2_USMC_US
     Number = 1
 )
 
@@ -1667,10 +1977,34 @@ Descriptor_Deck_Pack_AeroRifles_Dragon_US_UH60A_Black_Hawk_US_1_1 is DeckPackDes
     Number = 1
 )
 
+Descriptor_Deck_Pack_AeroRifles_USMC_US_CH46E_SeaKnight_trans_US_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Transport = $/GFX/Unit/Descriptor_Unit_CH46E_SeaKnight_trans_US
+    Unit = $/GFX/Unit/Descriptor_Unit_AeroRifles_USMC_US
+    Number = 1
+)
+
+Descriptor_Deck_Pack_AeroRifles_USMC_US_UH1N_TwinHuey_US_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Transport = $/GFX/Unit/Descriptor_Unit_UH1N_TwinHuey_US
+    Unit = $/GFX/Unit/Descriptor_Unit_AeroRifles_USMC_US
+    Number = 1
+)
+
 Descriptor_Deck_Pack_AeroRifles_US_UH1H_Huey_US_1_1 is DeckPackDescriptor
 (
     Xp = 1
     Transport = $/GFX/Unit/Descriptor_Unit_UH1H_Huey_US
+    Unit = $/GFX/Unit/Descriptor_Unit_AeroRifles_US
+    Number = 1
+)
+
+Descriptor_Deck_Pack_AeroRifles_US_UH60A_Black_Hawk_US_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Transport = $/GFX/Unit/Descriptor_Unit_UH60A_Black_Hawk_US
     Unit = $/GFX/Unit/Descriptor_Unit_AeroRifles_US
     Number = 1
 )
@@ -1812,6 +2146,13 @@ Descriptor_Deck_Pack_Alouette_II_CMD_FR_1_1 is DeckPackDescriptor
     Number = 1
 )
 
+Descriptor_Deck_Pack_Alouette_II_SS11_FR_2_1 is DeckPackDescriptor
+(
+    Xp = 2
+    Unit = $/GFX/Unit/Descriptor_Unit_Alouette_II_SS11_FR
+    Number = 1
+)
+
 Descriptor_Deck_Pack_Alouette_II_reco_RFA_1_1 is DeckPackDescriptor
 (
     Xp = 1
@@ -1826,10 +2167,24 @@ Descriptor_Deck_Pack_Alpha_Jet_A_KWS_RFA_1_1 is DeckPackDescriptor
     Number = 1
 )
 
+Descriptor_Deck_Pack_Alpha_Jet_A_clu2_RFA_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Unit = $/GFX/Unit/Descriptor_Unit_Alpha_Jet_A_clu2_RFA
+    Number = 1
+)
+
 Descriptor_Deck_Pack_Alpha_Jet_A_clu_RFA_1_1 is DeckPackDescriptor
 (
     Xp = 1
     Unit = $/GFX/Unit/Descriptor_Unit_Alpha_Jet_A_clu_RFA
+    Number = 1
+)
+
+Descriptor_Deck_Pack_Alpha_Jet_A_he2_RFA_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Unit = $/GFX/Unit/Descriptor_Unit_Alpha_Jet_A_he2_RFA
     Number = 1
 )
 
@@ -1852,13 +2207,6 @@ Descriptor_Deck_Pack_Alpha_Jet_A_nplm_RFA_2_999 is DeckPackDescriptor
     Xp = 2
     Unit = $/GFX/Unit/Descriptor_Unit_Alpha_Jet_A_nplm_RFA
     Number = 999
-)
-
-Descriptor_Deck_Pack_Alpha_Jet_A_rkt_RFA_1_1 is DeckPackDescriptor
-(
-    Xp = 1
-    Unit = $/GFX/Unit/Descriptor_Unit_Alpha_Jet_A_rkt_RFA
-    Number = 1
 )
 
 Descriptor_Deck_Pack_Alpha_Jet_E_CLU_FR_1_1 is DeckPackDescriptor
@@ -1893,6 +2241,12 @@ Descriptor_Deck_Pack_Alvis_Stalwart_UK_2_999 is DeckPackDescriptor
     Xp = 2
     Unit = $/GFX/Unit/Descriptor_Unit_Alvis_Stalwart_UK
     Number = 999
+)
+
+Descriptor_Deck_Pack_Astros_II_300mm_CLU_BRZ_0_1 is DeckPackDescriptor
+(
+    Unit = $/GFX/Unit/Descriptor_Unit_Astros_II_300mm_CLU_BRZ
+    Number = 1
 )
 
 Descriptor_Deck_Pack_Atteam_Fagot_DShV_SOV_BTR_70D_SOV_1_1 is DeckPackDescriptor
@@ -1957,6 +2311,14 @@ Descriptor_Deck_Pack_Atteam_ITOW_CAN_M151_MUTT_trans_CAN_1_999 is DeckPackDescri
     Number = 999
 )
 
+Descriptor_Deck_Pack_Atteam_Konkurs_Naval_SOV_UAZ_469_SOV_2_1 is DeckPackDescriptor
+(
+    Xp = 2
+    Transport = $/GFX/Unit/Descriptor_Unit_UAZ_469_SOV
+    Unit = $/GFX/Unit/Descriptor_Unit_Atteam_Konkurs_Naval_SOV
+    Number = 1
+)
+
 Descriptor_Deck_Pack_Atteam_Konkurs_VDV_SOV_BTR_D_Robot_SOV_2_1 is DeckPackDescriptor
 (
     Xp = 2
@@ -1978,6 +2340,20 @@ Descriptor_Deck_Pack_Atteam_Konkurs_Vysadkari_TCH_Mi_2_trans_TCH_2_1 is DeckPack
     Xp = 2
     Transport = $/GFX/Unit/Descriptor_Unit_Mi_2_trans_TCH
     Unit = $/GFX/Unit/Descriptor_Unit_Atteam_Konkurs_Vysadkari_TCH
+    Number = 1
+)
+
+Descriptor_Deck_Pack_Atteam_MAPATS_VEN_Pinzgauer_712_trans_VEN_0_1 is DeckPackDescriptor
+(
+    Transport = $/GFX/Unit/Descriptor_Unit_Pinzgauer_712_trans_VEN
+    Unit = $/GFX/Unit/Descriptor_Unit_Atteam_MAPATS_VEN
+    Number = 1
+)
+
+Descriptor_Deck_Pack_Atteam_MSS_12AC_BRZ_F85_Rural_trans_BRZ_0_1 is DeckPackDescriptor
+(
+    Transport = $/GFX/Unit/Descriptor_Unit_F85_Rural_trans_BRZ
+    Unit = $/GFX/Unit/Descriptor_Unit_Atteam_MSS_12AC_BRZ
     Number = 1
 )
 
@@ -2023,10 +2399,31 @@ Descriptor_Deck_Pack_Automoteur_F3_155mm_FR_0_1 is DeckPackDescriptor
     Number = 1
 )
 
+Descriptor_Deck_Pack_Automoteur_F3_155mm_VEN_0_1 is DeckPackDescriptor
+(
+    Unit = $/GFX/Unit/Descriptor_Unit_Automoteur_F3_155mm_VEN
+    Number = 1
+)
+
 Descriptor_Deck_Pack_Auverland_MILAN_FR_Super_Puma_FR_0_1 is DeckPackDescriptor
 (
     Transport = $/GFX/Unit/Descriptor_Unit_Super_Puma_FR
     Unit = $/GFX/Unit/Descriptor_Unit_Auverland_MILAN_FR
+    Number = 1
+)
+
+Descriptor_Deck_Pack_Avispas_Negras_reco_CUB_GAZ_69_CUB_2_1 is DeckPackDescriptor
+(
+    Xp = 2
+    Transport = $/GFX/Unit/Descriptor_Unit_GAZ_69_CUB
+    Unit = $/GFX/Unit/Descriptor_Unit_Avispas_Negras_reco_CUB
+    Number = 1
+)
+
+Descriptor_Deck_Pack_BAV_485_Naval_supply_SOV_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Unit = $/GFX/Unit/Descriptor_Unit_BAV_485_Naval_supply_SOV
     Number = 1
 )
 
@@ -2063,12 +2460,6 @@ Descriptor_Deck_Pack_BM14M_SOV_0_1 is DeckPackDescriptor
     Number = 1
 )
 
-Descriptor_Deck_Pack_BM21V_GradV_SOV_0_1 is DeckPackDescriptor
-(
-    Unit = $/GFX/Unit/Descriptor_Unit_BM21V_GradV_SOV
-    Number = 1
-)
-
 Descriptor_Deck_Pack_BM21V_GradV_SOV_1_1 is DeckPackDescriptor
 (
     Xp = 1
@@ -2081,6 +2472,19 @@ Descriptor_Deck_Pack_BM21V_GradV_SOV_2_6 is DeckPackDescriptor
     Xp = 2
     Unit = $/GFX/Unit/Descriptor_Unit_BM21V_GradV_SOV
     Number = 6
+)
+
+Descriptor_Deck_Pack_BM21_1_Grad_Naval_SOV_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Unit = $/GFX/Unit/Descriptor_Unit_BM21_1_Grad_Naval_SOV
+    Number = 1
+)
+
+Descriptor_Deck_Pack_BM21_Grad_DDR_0_1 is DeckPackDescriptor
+(
+    Unit = $/GFX/Unit/Descriptor_Unit_BM21_Grad_DDR
+    Number = 1
 )
 
 Descriptor_Deck_Pack_BM21_Grad_POL_0_1 is DeckPackDescriptor
@@ -2105,6 +2509,12 @@ Descriptor_Deck_Pack_BM21_Grad_SOV_1_999 is DeckPackDescriptor
 Descriptor_Deck_Pack_BM24M_DDR_0_1 is DeckPackDescriptor
 (
     Unit = $/GFX/Unit/Descriptor_Unit_BM24M_DDR
+    Number = 1
+)
+
+Descriptor_Deck_Pack_BM24M_POL_0_1 is DeckPackDescriptor
+(
+    Unit = $/GFX/Unit/Descriptor_Unit_BM24M_POL
     Number = 1
 )
 
@@ -2140,10 +2550,23 @@ Descriptor_Deck_Pack_BMD_1_CMD_SOV_3_999 is DeckPackDescriptor
     Number = 999
 )
 
+Descriptor_Deck_Pack_BMD_1_Reostat_Naval_SOV_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Unit = $/GFX/Unit/Descriptor_Unit_BMD_1_Reostat_Naval_SOV
+    Number = 1
+)
+
 Descriptor_Deck_Pack_BMD_1_Reostat_SOV_1_1 is DeckPackDescriptor
 (
     Xp = 1
     Unit = $/GFX/Unit/Descriptor_Unit_BMD_1_Reostat_SOV
+    Number = 1
+)
+
+Descriptor_Deck_Pack_BMD_20_MLRS_CUB_0_1 is DeckPackDescriptor
+(
+    Unit = $/GFX/Unit/Descriptor_Unit_BMD_20_MLRS_CUB
     Number = 1
 )
 
@@ -2331,6 +2754,12 @@ Descriptor_Deck_Pack_BRDM_2_CMD_SOV_1_999 is DeckPackDescriptor
     Number = 999
 )
 
+Descriptor_Deck_Pack_BRDM_2_Canimar57_CUB_0_1 is DeckPackDescriptor
+(
+    Unit = $/GFX/Unit/Descriptor_Unit_BRDM_2_Canimar57_CUB
+    Number = 1
+)
+
 Descriptor_Deck_Pack_BRDM_2_DDR_3_9 is DeckPackDescriptor
 (
     Xp = 3
@@ -2342,6 +2771,13 @@ Descriptor_Deck_Pack_BRDM_2_Falanga_P_SOV_1_1 is DeckPackDescriptor
 (
     Xp = 1
     Unit = $/GFX/Unit/Descriptor_Unit_BRDM_2_Falanga_P_SOV
+    Number = 1
+)
+
+Descriptor_Deck_Pack_BRDM_2_Konkurs_Naval_SOV_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Unit = $/GFX/Unit/Descriptor_Unit_BRDM_2_Konkurs_Naval_SOV
     Number = 1
 )
 
@@ -2419,6 +2855,12 @@ Descriptor_Deck_Pack_BRDM_2_Malyu_P_POL_1_7 is DeckPackDescriptor
     Number = 7
 )
 
+Descriptor_Deck_Pack_BRDM_2_Malyu_P_SOV_0_1 is DeckPackDescriptor
+(
+    Unit = $/GFX/Unit/Descriptor_Unit_BRDM_2_Malyu_P_SOV
+    Number = 1
+)
+
 Descriptor_Deck_Pack_BRDM_2_Malyu_P_TCH_0_1 is DeckPackDescriptor
 (
     Unit = $/GFX/Unit/Descriptor_Unit_BRDM_2_Malyu_P_TCH
@@ -2478,6 +2920,12 @@ Descriptor_Deck_Pack_BRDM_2_SOV_2_999 is DeckPackDescriptor
     Xp = 2
     Unit = $/GFX/Unit/Descriptor_Unit_BRDM_2_SOV
     Number = 999
+)
+
+Descriptor_Deck_Pack_BRDM_Konkurs_DDR_0_1 is DeckPackDescriptor
+(
+    Unit = $/GFX/Unit/Descriptor_Unit_BRDM_Konkurs_DDR
+    Number = 1
 )
 
 Descriptor_Deck_Pack_BRDM_Konkurs_DDR_1_1 is DeckPackDescriptor
@@ -2601,10 +3049,31 @@ Descriptor_Deck_Pack_BTR_50_MRF_DDR_0_1 is DeckPackDescriptor
     Number = 1
 )
 
+Descriptor_Deck_Pack_BTR_60_30_2_CUB_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Unit = $/GFX/Unit/Descriptor_Unit_BTR_60_30_2_CUB
+    Number = 1
+)
+
 Descriptor_Deck_Pack_BTR_60_CHAIKA_CMD_DDR_1_1 is DeckPackDescriptor
 (
     Xp = 1
     Unit = $/GFX/Unit/Descriptor_Unit_BTR_60_CHAIKA_CMD_DDR
+    Number = 1
+)
+
+Descriptor_Deck_Pack_BTR_60_CHAIKA_CMD_Naval_SOV_2_1 is DeckPackDescriptor
+(
+    Xp = 2
+    Unit = $/GFX/Unit/Descriptor_Unit_BTR_60_CHAIKA_CMD_Naval_SOV
+    Number = 1
+)
+
+Descriptor_Deck_Pack_BTR_60_CHAIKA_CMD_SOV_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Unit = $/GFX/Unit/Descriptor_Unit_BTR_60_CHAIKA_CMD_SOV
     Number = 1
 )
 
@@ -2622,6 +3091,13 @@ Descriptor_Deck_Pack_BTR_60_CMD_DDR_3_3 is DeckPackDescriptor
     Number = 3
 )
 
+Descriptor_Deck_Pack_BTR_60_CMD_SOV_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Unit = $/GFX/Unit/Descriptor_Unit_BTR_60_CMD_SOV
+    Number = 1
+)
+
 Descriptor_Deck_Pack_BTR_60_CMD_SOV_1_999 is DeckPackDescriptor
 (
     Xp = 1
@@ -2633,6 +3109,28 @@ Descriptor_Deck_Pack_BTR_80_CMD_SOV_1_1 is DeckPackDescriptor
 (
     Xp = 1
     Unit = $/GFX/Unit/Descriptor_Unit_BTR_80_CMD_SOV
+    Number = 1
+)
+
+Descriptor_Deck_Pack_BTS_4A_ZU_SOV_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Unit = $/GFX/Unit/Descriptor_Unit_BTS_4A_ZU_SOV
+    Number = 1
+)
+
+Descriptor_Deck_Pack_Barbudos_CUB_Mi_8TV_CUB_2_1 is DeckPackDescriptor
+(
+    Xp = 2
+    Transport = $/GFX/Unit/Descriptor_Unit_Mi_8TV_CUB
+    Unit = $/GFX/Unit/Descriptor_Unit_Barbudos_CUB
+    Number = 1
+)
+
+Descriptor_Deck_Pack_Bedford_MJ_4t_AA_DK_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Unit = $/GFX/Unit/Descriptor_Unit_Bedford_MJ_4t_AA_DK
     Number = 1
 )
 
@@ -2648,6 +3146,12 @@ Descriptor_Deck_Pack_Bedford_MJ_4t_UK_0_5 is DeckPackDescriptor
     Number = 5
 )
 
+Descriptor_Deck_Pack_Bedford_MJ_4t_supply_DK_0_1 is DeckPackDescriptor
+(
+    Unit = $/GFX/Unit/Descriptor_Unit_Bedford_MJ_4t_supply_DK
+    Number = 1
+)
+
 Descriptor_Deck_Pack_Bedford_MJ_4t_trans_UK_0_5 is DeckPackDescriptor
 (
     Unit = $/GFX/Unit/Descriptor_Unit_Bedford_MJ_4t_trans_UK
@@ -2660,9 +3164,29 @@ Descriptor_Deck_Pack_Bedford_TM_6x6_supply_UK_0_1 is DeckPackDescriptor
     Number = 1
 )
 
+Descriptor_Deck_Pack_Berliet_GBC_8KT_20mm_twin_FR_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Unit = $/GFX/Unit/Descriptor_Unit_Berliet_GBC_8KT_20mm_twin_FR
+    Number = 1
+)
+
+Descriptor_Deck_Pack_Berliet_GBC_8KT_supply_FR_0_1 is DeckPackDescriptor
+(
+    Unit = $/GFX/Unit/Descriptor_Unit_Berliet_GBC_8KT_supply_FR
+    Number = 1
+)
+
 Descriptor_Deck_Pack_Berliet_GBU_15_supply_FR_0_1 is DeckPackDescriptor
 (
     Unit = $/GFX/Unit/Descriptor_Unit_Berliet_GBU_15_supply_FR
+    Number = 1
+)
+
+Descriptor_Deck_Pack_Bo_105_BSH1_RFA_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Unit = $/GFX/Unit/Descriptor_Unit_Bo_105_BSH1_RFA
     Number = 1
 )
 
@@ -2763,6 +3287,26 @@ Descriptor_Deck_Pack_Buk_9K37M_SOV_0_1 is DeckPackDescriptor
 Descriptor_Deck_Pack_C3464_supply_ESP_0_1 is DeckPackDescriptor
 (
     Unit = $/GFX/Unit/Descriptor_Unit_C3464_supply_ESP
+    Number = 1
+)
+
+Descriptor_Deck_Pack_CATFAE_US_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Unit = $/GFX/Unit/Descriptor_Unit_CATFAE_US
+    Number = 1
+)
+
+Descriptor_Deck_Pack_CGage_V150_Commando_PM81_VEN_0_1 is DeckPackDescriptor
+(
+    Unit = $/GFX/Unit/Descriptor_Unit_CGage_V150_Commando_PM81_VEN
+    Number = 1
+)
+
+Descriptor_Deck_Pack_CH46E_SeaKnight_supply_US_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Unit = $/GFX/Unit/Descriptor_Unit_CH46E_SeaKnight_supply_US
     Number = 1
 )
 
@@ -2879,6 +3423,20 @@ Descriptor_Deck_Pack_Canberra_B2_UK_1_1 is DeckPackDescriptor
     Number = 1
 )
 
+Descriptor_Deck_Pack_Canberra_B82_VEN_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Unit = $/GFX/Unit/Descriptor_Unit_Canberra_B82_VEN
+    Number = 1
+)
+
+Descriptor_Deck_Pack_Canberra_BI82_VEN_2_1 is DeckPackDescriptor
+(
+    Xp = 2
+    Unit = $/GFX/Unit/Descriptor_Unit_Canberra_BI82_VEN
+    Number = 1
+)
+
 Descriptor_Deck_Pack_Canberra_T17A_UK_2_1 is DeckPackDescriptor
 (
     Xp = 2
@@ -2900,10 +3458,38 @@ Descriptor_Deck_Pack_Centurion_Mk13_UK_1_1 is DeckPackDescriptor
     Number = 1
 )
 
+Descriptor_Deck_Pack_Centurion_Mk3_DK_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Unit = $/GFX/Unit/Descriptor_Unit_Centurion_Mk3_DK
+    Number = 1
+)
+
+Descriptor_Deck_Pack_Centurion_Mk5_2_DK_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Unit = $/GFX/Unit/Descriptor_Unit_Centurion_Mk5_2_DK
+    Number = 1
+)
+
 Descriptor_Deck_Pack_Centurion_Mk5_2_NL_1_1 is DeckPackDescriptor
 (
     Xp = 1
     Unit = $/GFX/Unit/Descriptor_Unit_Centurion_Mk5_2_NL
+    Number = 1
+)
+
+Descriptor_Deck_Pack_Centurion_Mk5_2_upgraded_CMD_DK_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Unit = $/GFX/Unit/Descriptor_Unit_Centurion_Mk5_2_upgraded_CMD_DK
+    Number = 1
+)
+
+Descriptor_Deck_Pack_Centurion_Mk5_2_upgraded_DK_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Unit = $/GFX/Unit/Descriptor_Unit_Centurion_Mk5_2_upgraded_DK
     Number = 1
 )
 
@@ -3004,11 +3590,35 @@ Descriptor_Deck_Pack_Commando_NL_DAF_YA_4400_NL_2_1 is DeckPackDescriptor
     Number = 1
 )
 
+Descriptor_Deck_Pack_Commando_Scout_BRZ_Panther_trans_BRZ_2_1 is DeckPackDescriptor
+(
+    Xp = 2
+    Transport = $/GFX/Unit/Descriptor_Unit_Panther_trans_BRZ
+    Unit = $/GFX/Unit/Descriptor_Unit_Commando_Scout_BRZ
+    Number = 1
+)
+
 Descriptor_Deck_Pack_Commandos_Air_FR_VIB_FR_2_1 is DeckPackDescriptor
 (
     Xp = 2
     Transport = $/GFX/Unit/Descriptor_Unit_VIB_FR
     Unit = $/GFX/Unit/Descriptor_Unit_Commandos_Air_FR
+    Number = 1
+)
+
+Descriptor_Deck_Pack_Commandos_BRZ_Panther_trans_BRZ_2_1 is DeckPackDescriptor
+(
+    Xp = 2
+    Transport = $/GFX/Unit/Descriptor_Unit_Panther_trans_BRZ
+    Unit = $/GFX/Unit/Descriptor_Unit_Commandos_BRZ
+    Number = 1
+)
+
+Descriptor_Deck_Pack_Commandos_COL_M462_trans_COL_2_1 is DeckPackDescriptor
+(
+    Xp = 2
+    Transport = $/GFX/Unit/Descriptor_Unit_M462_trans_COL
+    Unit = $/GFX/Unit/Descriptor_Unit_Commandos_COL
     Number = 1
 )
 
@@ -3036,11 +3646,50 @@ Descriptor_Deck_Pack_Commandos_FR_TRM_2000_FR_3_6 is DeckPackDescriptor
     Number = 6
 )
 
+Descriptor_Deck_Pack_Commandos_Marine_POL_BAV_485_POL_3_1 is DeckPackDescriptor
+(
+    Xp = 3
+    Transport = $/GFX/Unit/Descriptor_Unit_BAV_485_POL
+    Unit = $/GFX/Unit/Descriptor_Unit_Commandos_Marine_POL
+    Number = 1
+)
+
+Descriptor_Deck_Pack_Commandos_Marine_VEN_Pinzgauer_712_trans_VEN_2_1 is DeckPackDescriptor
+(
+    Xp = 2
+    Transport = $/GFX/Unit/Descriptor_Unit_Pinzgauer_712_trans_VEN
+    Unit = $/GFX/Unit/Descriptor_Unit_Commandos_Marine_VEN
+    Number = 1
+)
+
+Descriptor_Deck_Pack_Commandos_POL_Mi_8T_POL_2_1 is DeckPackDescriptor
+(
+    Xp = 2
+    Transport = $/GFX/Unit/Descriptor_Unit_Mi_8T_POL
+    Unit = $/GFX/Unit/Descriptor_Unit_Commandos_POL
+    Number = 1
+)
+
 Descriptor_Deck_Pack_Commandos_POL_W3_Sokol_POL_3_1 is DeckPackDescriptor
 (
     Xp = 3
     Transport = $/GFX/Unit/Descriptor_Unit_W3_Sokol_POL
     Unit = $/GFX/Unit/Descriptor_Unit_Commandos_POL
+    Number = 1
+)
+
+Descriptor_Deck_Pack_Commandos_VEN_UH1H_VEN_2_1 is DeckPackDescriptor
+(
+    Xp = 2
+    Transport = $/GFX/Unit/Descriptor_Unit_UH1H_VEN
+    Unit = $/GFX/Unit/Descriptor_Unit_Commandos_VEN
+    Number = 1
+)
+
+Descriptor_Deck_Pack_Conscrits_FR_Berliet_GBC_8KT_FR_0_1 is DeckPackDescriptor
+(
+    Transport = $/GFX/Unit/Descriptor_Unit_Berliet_GBC_8KT_FR
+    Unit = $/GFX/Unit/Descriptor_Unit_Conscrits_FR
     Number = 1
 )
 
@@ -3148,6 +3797,43 @@ Descriptor_Deck_Pack_DCA_Bloodhound_UK_Bedford_TM_6x6_trans_UK_1_1 is DeckPackDe
     Number = 1
 )
 
+Descriptor_Deck_Pack_DCA_Bofors_Bofi_BRZ_LA_1111_trans_BRZ_0_1 is DeckPackDescriptor
+(
+    Transport = $/GFX/Unit/Descriptor_Unit_LA_1111_trans_BRZ
+    Unit = $/GFX/Unit/Descriptor_Unit_DCA_Bofors_Bofi_BRZ
+    Number = 1
+)
+
+Descriptor_Deck_Pack_DCA_Bofors_Breda_VEN_Steyr_MAN_20_280_trans_VEN_0_1 is DeckPackDescriptor
+(
+    Transport = $/GFX/Unit/Descriptor_Unit_Steyr_MAN_20_280_trans_VEN
+    Unit = $/GFX/Unit/Descriptor_Unit_DCA_Bofors_Breda_VEN
+    Number = 1
+)
+
+Descriptor_Deck_Pack_DCA_Bofors_L60_FR_TRM_2000_FR_2_1 is DeckPackDescriptor
+(
+    Xp = 2
+    Transport = $/GFX/Unit/Descriptor_Unit_TRM_2000_FR
+    Unit = $/GFX/Unit/Descriptor_Unit_DCA_Bofors_L60_FR
+    Number = 1
+)
+
+Descriptor_Deck_Pack_DCA_Bofors_autoloader_RFA_MAN_Kat_6x6_trans_RFA_0_1 is DeckPackDescriptor
+(
+    Transport = $/GFX/Unit/Descriptor_Unit_MAN_Kat_6x6_trans_RFA
+    Unit = $/GFX/Unit/Descriptor_Unit_DCA_Bofors_autoloader_RFA
+    Number = 1
+)
+
+Descriptor_Deck_Pack_DCA_Bofors_upgrade_DK_MD_Jupiter_trans_DK_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Transport = $/GFX/Unit/Descriptor_Unit_MD_Jupiter_trans_DK
+    Unit = $/GFX/Unit/Descriptor_Unit_DCA_Bofors_upgrade_DK
+    Number = 1
+)
+
 Descriptor_Deck_Pack_DCA_Bofors_upgrade_NL_DAF_YA_4400_NL_0_1 is DeckPackDescriptor
 (
     Transport = $/GFX/Unit/Descriptor_Unit_DAF_YA_4400_NL
@@ -3179,6 +3865,13 @@ Descriptor_Deck_Pack_DCA_FK20_2_20mm_FJ_RFA_Faun_kraka_RFA_2_1 is DeckPackDescri
     Number = 1
 )
 
+Descriptor_Deck_Pack_DCA_FK20_2_20mm_Zwillinge_RFA_Iltis_trans_RFA_0_1 is DeckPackDescriptor
+(
+    Transport = $/GFX/Unit/Descriptor_Unit_Iltis_trans_RFA
+    Unit = $/GFX/Unit/Descriptor_Unit_DCA_FK20_2_20mm_Zwillinge_RFA
+    Number = 1
+)
+
 Descriptor_Deck_Pack_DCA_FK20_2_20mm_Zwillinge_RFA_Unimog_trans_RFA_1_100 is DeckPackDescriptor
 (
     Xp = 1
@@ -3199,6 +3892,21 @@ Descriptor_Deck_Pack_DCA_I_Hawk_BEL_Volvo_N10_trans_BEL_1_1 is DeckPackDescripto
     Xp = 1
     Transport = $/GFX/Unit/Descriptor_Unit_Volvo_N10_trans_BEL
     Unit = $/GFX/Unit/Descriptor_Unit_DCA_I_Hawk_BEL
+    Number = 1
+)
+
+Descriptor_Deck_Pack_DCA_I_Hawk_DK_MD_Jupiter_trans_DK_0_1 is DeckPackDescriptor
+(
+    Transport = $/GFX/Unit/Descriptor_Unit_MD_Jupiter_trans_DK
+    Unit = $/GFX/Unit/Descriptor_Unit_DCA_I_Hawk_DK
+    Number = 1
+)
+
+Descriptor_Deck_Pack_DCA_I_Hawk_DK_MD_Jupiter_trans_DK_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Transport = $/GFX/Unit/Descriptor_Unit_MD_Jupiter_trans_DK
+    Unit = $/GFX/Unit/Descriptor_Unit_DCA_I_Hawk_DK
     Number = 1
 )
 
@@ -3244,6 +3952,21 @@ Descriptor_Deck_Pack_DCA_I_Hawk_RFA_MAN_Kat_6x6_trans_RFA_2_999 is DeckPackDescr
     Transport = $/GFX/Unit/Descriptor_Unit_MAN_Kat_6x6_trans_RFA
     Unit = $/GFX/Unit/Descriptor_Unit_DCA_I_Hawk_RFA
     Number = 999
+)
+
+Descriptor_Deck_Pack_DCA_I_Hawk_USMCR_US_M35_trans_US_0_1 is DeckPackDescriptor
+(
+    Transport = $/GFX/Unit/Descriptor_Unit_M35_trans_US
+    Unit = $/GFX/Unit/Descriptor_Unit_DCA_I_Hawk_USMCR_US
+    Number = 1
+)
+
+Descriptor_Deck_Pack_DCA_I_Hawk_USMC_US_M35_trans_US_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Transport = $/GFX/Unit/Descriptor_Unit_M35_trans_US
+    Unit = $/GFX/Unit/Descriptor_Unit_DCA_I_Hawk_USMC_US
+    Number = 1
 )
 
 Descriptor_Deck_Pack_DCA_I_Hawk_US_M35_trans_US_0_1 is DeckPackDescriptor
@@ -3313,6 +4036,13 @@ Descriptor_Deck_Pack_DCA_M167A2_Vulcan_20mm_Aero_US_Gama_Goat_trans_US_1_1 is De
     Xp = 1
     Transport = $/GFX/Unit/Descriptor_Unit_Gama_Goat_trans_US
     Unit = $/GFX/Unit/Descriptor_Unit_DCA_M167A2_Vulcan_20mm_Aero_US
+    Number = 1
+)
+
+Descriptor_Deck_Pack_DCA_M167_Vulcan_20mm_nonPara_US_M35_trans_US_0_1 is DeckPackDescriptor
+(
+    Transport = $/GFX/Unit/Descriptor_Unit_M35_trans_US
+    Unit = $/GFX/Unit/Descriptor_Unit_DCA_M167_Vulcan_20mm_nonPara_US
     Number = 1
 )
 
@@ -3394,6 +4124,27 @@ Descriptor_Deck_Pack_DCA_Rapier_FSA_UK_Bedford_MJ_4t_trans_UK_3_10 is DeckPackDe
     Number = 10
 )
 
+Descriptor_Deck_Pack_DCA_Roland_CAROL_VEN_Steyr_MAN_20_280_trans_VEN_0_1 is DeckPackDescriptor
+(
+    Transport = $/GFX/Unit/Descriptor_Unit_Steyr_MAN_20_280_trans_VEN
+    Unit = $/GFX/Unit/Descriptor_Unit_DCA_Roland_CAROL_VEN
+    Number = 1
+)
+
+Descriptor_Deck_Pack_DCA_S125_quad_Neva_SOV_KrAZ_255B_SOV_0_1 is DeckPackDescriptor
+(
+    Transport = $/GFX/Unit/Descriptor_Unit_KrAZ_255B_SOV
+    Unit = $/GFX/Unit/Descriptor_Unit_DCA_S125_quad_Neva_SOV
+    Number = 1
+)
+
+Descriptor_Deck_Pack_DCA_S125_twin_Neva_SOV_ZIL_157_trans_SOV_0_1 is DeckPackDescriptor
+(
+    Transport = $/GFX/Unit/Descriptor_Unit_ZIL_157_trans_SOV
+    Unit = $/GFX/Unit/Descriptor_Unit_DCA_S125_twin_Neva_SOV
+    Number = 1
+)
+
 Descriptor_Deck_Pack_DCA_Starstreak_LML_UK_Bedford_MJ_4t_trans_UK_1_1 is DeckPackDescriptor
 (
     Xp = 1
@@ -3424,6 +4175,21 @@ Descriptor_Deck_Pack_DCA_ZU_23_2_DDR_UAZ_469_trans_DDR_0_1 is DeckPackDescriptor
     Number = 1
 )
 
+Descriptor_Deck_Pack_DCA_ZU_23_2_Naval_SOV_ZIL_131_Naval_SOV_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Transport = $/GFX/Unit/Descriptor_Unit_ZIL_131_Naval_SOV
+    Unit = $/GFX/Unit/Descriptor_Unit_DCA_ZU_23_2_Naval_SOV
+    Number = 1
+)
+
+Descriptor_Deck_Pack_DCA_ZU_23_2_nonPara_SOV_GAZ_66_SOV_0_1 is DeckPackDescriptor
+(
+    Transport = $/GFX/Unit/Descriptor_Unit_GAZ_66_SOV
+    Unit = $/GFX/Unit/Descriptor_Unit_DCA_ZU_23_2_nonPara_SOV
+    Number = 1
+)
+
 Descriptor_Deck_Pack_DShV_Afgantsy_SOV_Mi_24D_Desant_SOV_2_1 is DeckPackDescriptor
 (
     Xp = 2
@@ -3436,6 +4202,14 @@ Descriptor_Deck_Pack_DShV_CMD_SOV_BMP_2D_SOV_2_1 is DeckPackDescriptor
 (
     Xp = 2
     Transport = $/GFX/Unit/Descriptor_Unit_BMP_2D_SOV
+    Unit = $/GFX/Unit/Descriptor_Unit_DShV_CMD_SOV
+    Number = 1
+)
+
+Descriptor_Deck_Pack_DShV_CMD_SOV_Mi_8MTV_SOV_2_1 is DeckPackDescriptor
+(
+    Xp = 2
+    Transport = $/GFX/Unit/Descriptor_Unit_Mi_8MTV_SOV
     Unit = $/GFX/Unit/Descriptor_Unit_DShV_CMD_SOV
     Number = 1
 )
@@ -3461,6 +4235,14 @@ Descriptor_Deck_Pack_DShV_CMD_SOV_Mi_8TV_non_arme_SOV_2_1 is DeckPackDescriptor
     Xp = 2
     Transport = $/GFX/Unit/Descriptor_Unit_Mi_8TV_non_arme_SOV
     Unit = $/GFX/Unit/Descriptor_Unit_DShV_CMD_SOV
+    Number = 1
+)
+
+Descriptor_Deck_Pack_DShV_Hvy_SOV_Mi_8MTV_SOV_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Transport = $/GFX/Unit/Descriptor_Unit_Mi_8MTV_SOV
+    Unit = $/GFX/Unit/Descriptor_Unit_DShV_Hvy_SOV
     Number = 1
 )
 
@@ -3526,11 +4308,52 @@ Descriptor_Deck_Pack_DaimlerBenz_Typ1017_supply_RFA_0_1 is DeckPackDescriptor
     Number = 1
 )
 
+Descriptor_Deck_Pack_Deckungsgruppe_RFA_Marder_1A2_MILAN_RFA_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Transport = $/GFX/Unit/Descriptor_Unit_Marder_1A2_MILAN_RFA
+    Unit = $/GFX/Unit/Descriptor_Unit_Deckungsgruppe_RFA
+    Number = 1
+)
+
 Descriptor_Deck_Pack_DeltaForce_US_M998_Humvee_Delta_US_2_1 is DeckPackDescriptor
 (
     Xp = 2
     Transport = $/GFX/Unit/Descriptor_Unit_M998_Humvee_Delta_US
     Unit = $/GFX/Unit/Descriptor_Unit_DeltaForce_US
+    Number = 1
+)
+
+Descriptor_Deck_Pack_Do_28D2_RFA_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Unit = $/GFX/Unit/Descriptor_Unit_Do_28D2_RFA
+    Number = 1
+)
+
+Descriptor_Deck_Pack_Dragoon_300_90mm_VEN_0_1 is DeckPackDescriptor
+(
+    Unit = $/GFX/Unit/Descriptor_Unit_Dragoon_300_90mm_VEN
+    Number = 1
+)
+
+Descriptor_Deck_Pack_Dragoon_300_90mm_reco_VEN_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Unit = $/GFX/Unit/Descriptor_Unit_Dragoon_300_90mm_reco_VEN
+    Number = 1
+)
+
+Descriptor_Deck_Pack_Dragoon_300_CMD_VEN_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Unit = $/GFX/Unit/Descriptor_Unit_Dragoon_300_CMD_VEN
+    Number = 1
+)
+
+Descriptor_Deck_Pack_Dragoon_300_PM81_VEN_0_1 is DeckPackDescriptor
+(
+    Unit = $/GFX/Unit/Descriptor_Unit_Dragoon_300_PM81_VEN
     Number = 1
 )
 
@@ -3540,9 +4363,34 @@ Descriptor_Deck_Pack_EBR_90mm_FR_0_1 is DeckPackDescriptor
     Number = 1
 )
 
-Descriptor_Deck_Pack_EF_101B_Electric_Voodoo_CAN_1_1 is DeckPackDescriptor
+Descriptor_Deck_Pack_EE15_supply_BRZ_0_1 is DeckPackDescriptor
+(
+    Unit = $/GFX/Unit/Descriptor_Unit_EE15_supply_BRZ
+    Number = 1
+)
+
+Descriptor_Deck_Pack_EE25_supply_VEN_0_1 is DeckPackDescriptor
+(
+    Unit = $/GFX/Unit/Descriptor_Unit_EE25_supply_VEN
+    Number = 1
+)
+
+Descriptor_Deck_Pack_EE9_Cascavel_BRZ_1_1 is DeckPackDescriptor
 (
     Xp = 1
+    Unit = $/GFX/Unit/Descriptor_Unit_EE9_Cascavel_BRZ
+    Number = 1
+)
+
+Descriptor_Deck_Pack_EE9_Cascavel_COL_0_1 is DeckPackDescriptor
+(
+    Unit = $/GFX/Unit/Descriptor_Unit_EE9_Cascavel_COL
+    Number = 1
+)
+
+Descriptor_Deck_Pack_EF_101B_Electric_Voodoo_CAN_2_1 is DeckPackDescriptor
+(
+    Xp = 2
     Unit = $/GFX/Unit/Descriptor_Unit_EF_101B_Electric_Voodoo_CAN
     Number = 1
 )
@@ -3559,6 +4407,14 @@ Descriptor_Deck_Pack_EH60A_EW_US_3_9 is DeckPackDescriptor
     Xp = 3
     Unit = $/GFX/Unit/Descriptor_Unit_EH60A_EW_US
     Number = 9
+)
+
+Descriptor_Deck_Pack_EPIGN_FR_VLTT_P4_Gendarmerie_FR_3_1 is DeckPackDescriptor
+(
+    Xp = 3
+    Transport = $/GFX/Unit/Descriptor_Unit_VLTT_P4_Gendarmerie_FR
+    Unit = $/GFX/Unit/Descriptor_Unit_EPIGN_FR
+    Number = 1
 )
 
 Descriptor_Deck_Pack_ERC_90_Sagaie_CMD_FR_2_1 is DeckPackDescriptor
@@ -3582,6 +4438,27 @@ Descriptor_Deck_Pack_Ecureuil_20mm_FR_1_1 is DeckPackDescriptor
     Number = 1
 )
 
+Descriptor_Deck_Pack_Ecureuil_TOW_DK_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Unit = $/GFX/Unit/Descriptor_Unit_Ecureuil_TOW_DK
+    Number = 1
+)
+
+Descriptor_Deck_Pack_Ecureuil_reco_FR_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Unit = $/GFX/Unit/Descriptor_Unit_Ecureuil_reco_FR
+    Number = 1
+)
+
+Descriptor_Deck_Pack_Ecureuil_reco_RKT_BRZ_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Unit = $/GFX/Unit/Descriptor_Unit_Ecureuil_reco_RKT_BRZ
+    Number = 1
+)
+
 Descriptor_Deck_Pack_Engineer_CMD_US_M113A3_US_2_999 is DeckPackDescriptor
 (
     Xp = 2
@@ -3596,6 +4473,22 @@ Descriptor_Deck_Pack_Engineer_CMD_US_M998_Humvee_US_3_100 is DeckPackDescriptor
     Transport = $/GFX/Unit/Descriptor_Unit_M998_Humvee_US
     Unit = $/GFX/Unit/Descriptor_Unit_Engineer_CMD_US
     Number = 100
+)
+
+Descriptor_Deck_Pack_Engineer_USMC_CMD_US_M35_trans_US_2_1 is DeckPackDescriptor
+(
+    Xp = 2
+    Transport = $/GFX/Unit/Descriptor_Unit_M35_trans_US
+    Unit = $/GFX/Unit/Descriptor_Unit_Engineer_USMC_CMD_US
+    Number = 1
+)
+
+Descriptor_Deck_Pack_Engineers_AT_RFA_TPZ_Fuchs_1_RFA_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Transport = $/GFX/Unit/Descriptor_Unit_TPZ_Fuchs_1_RFA
+    Unit = $/GFX/Unit/Descriptor_Unit_Engineers_AT_RFA
+    Number = 1
 )
 
 Descriptor_Deck_Pack_Engineers_AT_RFA_Unimog_trans_RFA_1_999 is DeckPackDescriptor
@@ -3634,6 +4527,14 @@ Descriptor_Deck_Pack_Engineers_CAN_M35_trans_CAN_1_1 is DeckPackDescriptor
     Xp = 1
     Transport = $/GFX/Unit/Descriptor_Unit_M35_trans_CAN
     Unit = $/GFX/Unit/Descriptor_Unit_Engineers_CAN
+    Number = 1
+)
+
+Descriptor_Deck_Pack_Engineers_CMD_BRZ_F85_Rural_trans_BRZ_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Transport = $/GFX/Unit/Descriptor_Unit_F85_Rural_trans_BRZ
+    Unit = $/GFX/Unit/Descriptor_Unit_Engineers_CMD_BRZ
     Number = 1
 )
 
@@ -3733,6 +4634,22 @@ Descriptor_Deck_Pack_Engineers_CMD_VDV_SOV_UAZ_469_SOV_3_999 is DeckPackDescript
     Number = 999
 )
 
+Descriptor_Deck_Pack_Engineers_CMD_VEN_Pinzgauer_712_trans_VEN_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Transport = $/GFX/Unit/Descriptor_Unit_Pinzgauer_712_trans_VEN
+    Unit = $/GFX/Unit/Descriptor_Unit_Engineers_CMD_VEN
+    Number = 1
+)
+
+Descriptor_Deck_Pack_Engineers_CarlG_DK_Bedford_MJ_4t_trans_DK_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Transport = $/GFX/Unit/Descriptor_Unit_Bedford_MJ_4t_trans_DK
+    Unit = $/GFX/Unit/Descriptor_Unit_Engineers_CarlG_DK
+    Number = 1
+)
+
 Descriptor_Deck_Pack_Engineers_DDR_BTR_70_DDR_0_1 is DeckPackDescriptor
 (
     Transport = $/GFX/Unit/Descriptor_Unit_BTR_70_DDR
@@ -3744,6 +4661,14 @@ Descriptor_Deck_Pack_Engineers_DDR_W50_LA_A_DDR_0_1 is DeckPackDescriptor
 (
     Transport = $/GFX/Unit/Descriptor_Unit_W50_LA_A_DDR
     Unit = $/GFX/Unit/Descriptor_Unit_Engineers_DDR
+    Number = 1
+)
+
+Descriptor_Deck_Pack_Engineers_DK_Bedford_MJ_4t_trans_DK_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Transport = $/GFX/Unit/Descriptor_Unit_Bedford_MJ_4t_trans_DK
+    Unit = $/GFX/Unit/Descriptor_Unit_Engineers_DK
     Number = 1
 )
 
@@ -3770,6 +4695,13 @@ Descriptor_Deck_Pack_Engineers_Dragon_US_M998_Humvee_US_2_100 is DeckPackDescrip
     Number = 100
 )
 
+Descriptor_Deck_Pack_Engineers_Flam_BRZ_EE15_trans_BRZ_0_1 is DeckPackDescriptor
+(
+    Transport = $/GFX/Unit/Descriptor_Unit_EE15_trans_BRZ
+    Unit = $/GFX/Unit/Descriptor_Unit_Engineers_Flam_BRZ
+    Number = 1
+)
+
 Descriptor_Deck_Pack_Engineers_Flam_DDR_BTR_70_DDR_0_1 is DeckPackDescriptor
 (
     Transport = $/GFX/Unit/Descriptor_Unit_BTR_70_DDR
@@ -3782,6 +4714,14 @@ Descriptor_Deck_Pack_Engineers_Flam_DShV_SOV_BTR_70_Rys_SOV_1_1 is DeckPackDescr
     Xp = 1
     Transport = $/GFX/Unit/Descriptor_Unit_BTR_70_Rys_SOV
     Unit = $/GFX/Unit/Descriptor_Unit_Engineers_Flam_DShV_SOV
+    Number = 1
+)
+
+Descriptor_Deck_Pack_Engineers_Flam_Naval_SOV_BTR_60_Naval_SOV_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Transport = $/GFX/Unit/Descriptor_Unit_BTR_60_Naval_SOV
+    Unit = $/GFX/Unit/Descriptor_Unit_Engineers_Flam_Naval_SOV
     Number = 1
 )
 
@@ -3931,11 +4871,11 @@ Descriptor_Deck_Pack_Engineers_Flash_US_M998_Humvee_US_2_999 is DeckPackDescript
     Number = 999
 )
 
-Descriptor_Deck_Pack_Engineers_Geb_RFA_RFA_DaimlerBenz_Typ1017_trans_RFA_1_1 is DeckPackDescriptor
+Descriptor_Deck_Pack_Engineers_Geb_RFA_DaimlerBenz_Typ1017_trans_RFA_1_1 is DeckPackDescriptor
 (
     Xp = 1
     Transport = $/GFX/Unit/Descriptor_Unit_DaimlerBenz_Typ1017_trans_RFA
-    Unit = $/GFX/Unit/Descriptor_Unit_Engineers_Geb_RFA_RFA
+    Unit = $/GFX/Unit/Descriptor_Unit_Engineers_Geb_RFA
     Number = 1
 )
 
@@ -3978,6 +4918,13 @@ Descriptor_Deck_Pack_Engineers_POL_Star_266_POL_2_6 is DeckPackDescriptor
     Number = 6
 )
 
+Descriptor_Deck_Pack_Engineers_Partisan_SOV_BTR_55_SOV_0_1 is DeckPackDescriptor
+(
+    Transport = $/GFX/Unit/Descriptor_Unit_BTR_55_SOV
+    Unit = $/GFX/Unit/Descriptor_Unit_Engineers_Partisan_SOV
+    Number = 1
+)
+
 Descriptor_Deck_Pack_Engineers_RFA_Unimog_trans_RFA_0_1 is DeckPackDescriptor
 (
     Transport = $/GFX/Unit/Descriptor_Unit_Unimog_trans_RFA
@@ -3991,6 +4938,20 @@ Descriptor_Deck_Pack_Engineers_RFA_Unimog_trans_RFA_1_999 is DeckPackDescriptor
     Transport = $/GFX/Unit/Descriptor_Unit_Unimog_trans_RFA
     Unit = $/GFX/Unit/Descriptor_Unit_Engineers_RFA
     Number = 999
+)
+
+Descriptor_Deck_Pack_Engineers_Reserve_POL_LO_1800_trans_POL_0_1 is DeckPackDescriptor
+(
+    Transport = $/GFX/Unit/Descriptor_Unit_LO_1800_trans_POL
+    Unit = $/GFX/Unit/Descriptor_Unit_Engineers_Reserve_POL
+    Number = 1
+)
+
+Descriptor_Deck_Pack_Engineers_Reserve_RFA_Unimog_trans_RFA_0_1 is DeckPackDescriptor
+(
+    Transport = $/GFX/Unit/Descriptor_Unit_Unimog_trans_RFA
+    Unit = $/GFX/Unit/Descriptor_Unit_Engineers_Reserve_RFA
+    Number = 1
 )
 
 Descriptor_Deck_Pack_Engineers_SOV_BTR_60_SOV_0_1 is DeckPackDescriptor
@@ -4020,6 +4981,20 @@ Descriptor_Deck_Pack_Engineers_SOV_MTLB_transp_SOV_0_1 is DeckPackDescriptor
 (
     Transport = $/GFX/Unit/Descriptor_Unit_MTLB_transp_SOV
     Unit = $/GFX/Unit/Descriptor_Unit_Engineers_SOV
+    Number = 1
+)
+
+Descriptor_Deck_Pack_Engineers_SOV_ZIL_157_trans_SOV_0_1 is DeckPackDescriptor
+(
+    Transport = $/GFX/Unit/Descriptor_Unit_ZIL_157_trans_SOV
+    Unit = $/GFX/Unit/Descriptor_Unit_Engineers_SOV
+    Number = 1
+)
+
+Descriptor_Deck_Pack_Engineers_Scout_Jouk_SOV_IRM_Jouk_SOV_0_1 is DeckPackDescriptor
+(
+    Transport = $/GFX/Unit/Descriptor_Unit_IRM_Jouk_SOV
+    Unit = $/GFX/Unit/Descriptor_Unit_Engineers_Scout_Jouk_SOV
     Number = 1
 )
 
@@ -4109,12 +5084,43 @@ Descriptor_Deck_Pack_Engineers_UK_FV432_UK_1_1 is DeckPackDescriptor
     Number = 1
 )
 
+Descriptor_Deck_Pack_Engineers_USMCR_US_LARC_V_US_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Transport = $/GFX/Unit/Descriptor_Unit_LARC_V_US
+    Unit = $/GFX/Unit/Descriptor_Unit_Engineers_USMCR_US
+    Number = 1
+)
+
+Descriptor_Deck_Pack_Engineers_USMC_US_M35_trans_US_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Transport = $/GFX/Unit/Descriptor_Unit_M35_trans_US
+    Unit = $/GFX/Unit/Descriptor_Unit_Engineers_USMC_US
+    Number = 1
+)
+
 Descriptor_Deck_Pack_Engineers_US_M113A3_US_2_999 is DeckPackDescriptor
 (
     Xp = 2
     Transport = $/GFX/Unit/Descriptor_Unit_M113A3_US
     Unit = $/GFX/Unit/Descriptor_Unit_Engineers_US
     Number = 999
+)
+
+Descriptor_Deck_Pack_Engineers_VEN_Pinzgauer_712_trans_VEN_0_1 is DeckPackDescriptor
+(
+    Transport = $/GFX/Unit/Descriptor_Unit_Pinzgauer_712_trans_VEN
+    Unit = $/GFX/Unit/Descriptor_Unit_Engineers_VEN
+    Number = 1
+)
+
+Descriptor_Deck_Pack_Engineers_VEN_Pinzgauer_712_trans_VEN_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Transport = $/GFX/Unit/Descriptor_Unit_Pinzgauer_712_trans_VEN
+    Unit = $/GFX/Unit/Descriptor_Unit_Engineers_VEN
+    Number = 1
 )
 
 Descriptor_Deck_Pack_Epervier_BEL_1_1 is DeckPackDescriptor
@@ -4128,6 +5134,13 @@ Descriptor_Deck_Pack_F104G_Starfighter_AT_RFA_1_1 is DeckPackDescriptor
 (
     Xp = 1
     Unit = $/GFX/Unit/Descriptor_Unit_F104G_Starfighter_AT_RFA
+    Number = 1
+)
+
+Descriptor_Deck_Pack_F104G_Starfighter_Marine_RFA_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Unit = $/GFX/Unit/Descriptor_Unit_F104G_Starfighter_Marine_RFA
     Number = 1
 )
 
@@ -4180,10 +5193,31 @@ Descriptor_Deck_Pack_F117_Nighthawk_US_2_1 is DeckPackDescriptor
     Number = 1
 )
 
+Descriptor_Deck_Pack_F14A_Tomcat_AA2_US_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Unit = $/GFX/Unit/Descriptor_Unit_F14A_Tomcat_AA2_US
+    Number = 1
+)
+
+Descriptor_Deck_Pack_F14A_Tomcat_AA_US_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Unit = $/GFX/Unit/Descriptor_Unit_F14A_Tomcat_AA_US
+    Number = 1
+)
+
 Descriptor_Deck_Pack_F15C_Eagle_AA2_US_1_1 is DeckPackDescriptor
 (
     Xp = 1
     Unit = $/GFX/Unit/Descriptor_Unit_F15C_Eagle_AA2_US
+    Number = 1
+)
+
+Descriptor_Deck_Pack_F15C_Eagle_AA3_US_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Unit = $/GFX/Unit/Descriptor_Unit_F15C_Eagle_AA3_US
     Number = 1
 )
 
@@ -4201,10 +5235,31 @@ Descriptor_Deck_Pack_F15E_StrikeEagle_US_1_1 is DeckPackDescriptor
     Number = 1
 )
 
+Descriptor_Deck_Pack_F16A_AA1_DK_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Unit = $/GFX/Unit/Descriptor_Unit_F16A_AA1_DK
+    Number = 1
+)
+
+Descriptor_Deck_Pack_F16A_AA2_DK_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Unit = $/GFX/Unit/Descriptor_Unit_F16A_AA2_DK
+    Number = 1
+)
+
 Descriptor_Deck_Pack_F16A_AA2_NL_1_1 is DeckPackDescriptor
 (
     Xp = 1
     Unit = $/GFX/Unit/Descriptor_Unit_F16A_AA2_NL
+    Number = 1
+)
+
+Descriptor_Deck_Pack_F16A_AA3_DK_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Unit = $/GFX/Unit/Descriptor_Unit_F16A_AA3_DK
     Number = 1
 )
 
@@ -4222,6 +5277,20 @@ Descriptor_Deck_Pack_F16A_AA_NL_1_1 is DeckPackDescriptor
     Number = 1
 )
 
+Descriptor_Deck_Pack_F16A_AA_VEN_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Unit = $/GFX/Unit/Descriptor_Unit_F16A_AA_VEN
+    Number = 1
+)
+
+Descriptor_Deck_Pack_F16A_AGM_DK_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Unit = $/GFX/Unit/Descriptor_Unit_F16A_AGM_DK
+    Number = 1
+)
+
 Descriptor_Deck_Pack_F16A_CBU_BEL_1_1 is DeckPackDescriptor
 (
     Xp = 1
@@ -4233,6 +5302,20 @@ Descriptor_Deck_Pack_F16A_CLU_NL_1_1 is DeckPackDescriptor
 (
     Xp = 1
     Unit = $/GFX/Unit/Descriptor_Unit_F16A_CLU_NL
+    Number = 1
+)
+
+Descriptor_Deck_Pack_F16A_HE_CLU_DK_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Unit = $/GFX/Unit/Descriptor_Unit_F16A_HE_CLU_DK
+    Number = 1
+)
+
+Descriptor_Deck_Pack_F16A_HE_VEN_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Unit = $/GFX/Unit/Descriptor_Unit_F16A_HE_VEN
     Number = 1
 )
 
@@ -4292,6 +5375,13 @@ Descriptor_Deck_Pack_F18_Hornet_AA_ESP_1_1 is DeckPackDescriptor
     Number = 1
 )
 
+Descriptor_Deck_Pack_F18_Hornet_AA_US_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Unit = $/GFX/Unit/Descriptor_Unit_F18_Hornet_AA_US
+    Number = 1
+)
+
 Descriptor_Deck_Pack_F18_Hornet_AT_ESP_1_1 is DeckPackDescriptor
 (
     Xp = 1
@@ -4327,6 +5417,13 @@ Descriptor_Deck_Pack_F18_Hornet_HE_CAN_1_999 is DeckPackDescriptor
     Number = 999
 )
 
+Descriptor_Deck_Pack_F18_Hornet_SEAD_US_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Unit = $/GFX/Unit/Descriptor_Unit_F18_Hornet_SEAD_US
+    Number = 1
+)
+
 Descriptor_Deck_Pack_F4C_Phantom_II_HE_ESP_1_1 is DeckPackDescriptor
 (
     Xp = 1
@@ -4338,6 +5435,13 @@ Descriptor_Deck_Pack_F4C_Phantom_II_RKT_ESP_1_1 is DeckPackDescriptor
 (
     Xp = 1
     Unit = $/GFX/Unit/Descriptor_Unit_F4C_Phantom_II_RKT_ESP
+    Number = 1
+)
+
+Descriptor_Deck_Pack_F4E_Phantom_II_AA_RFA_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Unit = $/GFX/Unit/Descriptor_Unit_F4E_Phantom_II_AA_RFA
     Number = 1
 )
 
@@ -4359,6 +5463,13 @@ Descriptor_Deck_Pack_F4E_Phantom_II_HE_US_1_1 is DeckPackDescriptor
 (
     Xp = 1
     Unit = $/GFX/Unit/Descriptor_Unit_F4E_Phantom_II_HE_US
+    Number = 1
+)
+
+Descriptor_Deck_Pack_F4F_Phantom_II_AA2_RFA_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Unit = $/GFX/Unit/Descriptor_Unit_F4F_Phantom_II_AA2_RFA
     Number = 1
 )
 
@@ -4397,10 +5508,24 @@ Descriptor_Deck_Pack_F4F_Phantom_II_LGB_RFA_1_1 is DeckPackDescriptor
     Number = 1
 )
 
+Descriptor_Deck_Pack_F4S_Phantom_II_RKT_US_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Unit = $/GFX/Unit/Descriptor_Unit_F4S_Phantom_II_RKT_US
+    Number = 1
+)
+
 Descriptor_Deck_Pack_F4_Phantom_AA_F3_UK_1_1 is DeckPackDescriptor
 (
     Xp = 1
     Unit = $/GFX/Unit/Descriptor_Unit_F4_Phantom_AA_F3_UK
+    Number = 1
+)
+
+Descriptor_Deck_Pack_F4_Phantom_AA_GR2_UK_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Unit = $/GFX/Unit/Descriptor_Unit_F4_Phantom_AA_GR2_UK
     Number = 1
 )
 
@@ -4453,6 +5578,26 @@ Descriptor_Deck_Pack_F5A_FreedomFighter_RKT_NL_2_1 is DeckPackDescriptor
     Number = 1
 )
 
+Descriptor_Deck_Pack_F5A_FreedomFighter_VEN_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Unit = $/GFX/Unit/Descriptor_Unit_F5A_FreedomFighter_VEN
+    Number = 1
+)
+
+Descriptor_Deck_Pack_F5E_TigerII_CLU_BRZ_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Unit = $/GFX/Unit/Descriptor_Unit_F5E_TigerII_CLU_BRZ
+    Number = 1
+)
+
+Descriptor_Deck_Pack_F85_Rural_supply_BRZ_0_1 is DeckPackDescriptor
+(
+    Unit = $/GFX/Unit/Descriptor_Unit_F85_Rural_supply_BRZ
+    Number = 1
+)
+
 Descriptor_Deck_Pack_F8P_Crusader_AA2_FR_2_1 is DeckPackDescriptor
 (
     Xp = 2
@@ -4464,6 +5609,14 @@ Descriptor_Deck_Pack_FA16_CAS_US_1_1 is DeckPackDescriptor
 (
     Xp = 1
     Unit = $/GFX/Unit/Descriptor_Unit_FA16_CAS_US
+    Number = 1
+)
+
+Descriptor_Deck_Pack_FAST_USMC_US_LAV_25_FAST_US_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Transport = $/GFX/Unit/Descriptor_Unit_LAV_25_FAST_US
+    Unit = $/GFX/Unit/Descriptor_Unit_FAST_USMC_US
     Number = 1
 )
 
@@ -4995,6 +6148,26 @@ Descriptor_Deck_Pack_FireSupport_TTsko_SOV_GAZ_66_SOV_1_1 is DeckPackDescriptor
     Number = 1
 )
 
+Descriptor_Deck_Pack_Frogmen_DK_Lynx_Mk80_trans_DK_3_1 is DeckPackDescriptor
+(
+    Xp = 3
+    Transport = $/GFX/Unit/Descriptor_Unit_Lynx_Mk80_trans_DK
+    Unit = $/GFX/Unit/Descriptor_Unit_Frogmen_DK
+    Number = 1
+)
+
+Descriptor_Deck_Pack_GAZ_53_supply_CUB_0_1 is DeckPackDescriptor
+(
+    Unit = $/GFX/Unit/Descriptor_Unit_GAZ_53_supply_CUB
+    Number = 1
+)
+
+Descriptor_Deck_Pack_GAZ_53_supply_SOV_0_1 is DeckPackDescriptor
+(
+    Unit = $/GFX/Unit/Descriptor_Unit_GAZ_53_supply_SOV
+    Number = 1
+)
+
 Descriptor_Deck_Pack_GAZ_66B_ZU_SOV_1_1 is DeckPackDescriptor
 (
     Xp = 1
@@ -5009,6 +6182,13 @@ Descriptor_Deck_Pack_GAZ_66B_ZU_SOV_2_2 is DeckPackDescriptor
     Number = 2
 )
 
+Descriptor_Deck_Pack_GAZ_66_CMD_SOV_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Unit = $/GFX/Unit/Descriptor_Unit_GAZ_66_CMD_SOV
+    Number = 1
+)
+
 Descriptor_Deck_Pack_GAZ_66_POL_0_1 is DeckPackDescriptor
 (
     Unit = $/GFX/Unit/Descriptor_Unit_GAZ_66_POL
@@ -5021,10 +6201,33 @@ Descriptor_Deck_Pack_GAZ_66_supply_SOV_0_1 is DeckPackDescriptor
     Number = 1
 )
 
+Descriptor_Deck_Pack_GAZ_69_CMD_CUB_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Unit = $/GFX/Unit/Descriptor_Unit_GAZ_69_CMD_CUB
+    Number = 1
+)
+
+Descriptor_Deck_Pack_GIGN_FR_Super_Puma_FR_2_1 is DeckPackDescriptor
+(
+    Xp = 2
+    Transport = $/GFX/Unit/Descriptor_Unit_Super_Puma_FR
+    Unit = $/GFX/Unit/Descriptor_Unit_GIGN_FR
+    Number = 1
+)
+
 Descriptor_Deck_Pack_Gama_Goat_supply_US_1_1 is DeckPackDescriptor
 (
     Xp = 1
     Unit = $/GFX/Unit/Descriptor_Unit_Gama_Goat_supply_US
+    Number = 1
+)
+
+Descriptor_Deck_Pack_GardeRep_CMD_FR_VLTT_P4_FR_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Transport = $/GFX/Unit/Descriptor_Unit_VLTT_P4_FR
+    Unit = $/GFX/Unit/Descriptor_Unit_GardeRep_CMD_FR
     Number = 1
 )
 
@@ -5193,6 +6396,14 @@ Descriptor_Deck_Pack_Gebirgsjager_RFA_DaimlerBenz_Typ1017_trans_RFA_1_1 is DeckP
     Number = 1
 )
 
+Descriptor_Deck_Pack_Gendarmerie_Mobile_FR_VBRG_FR_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Transport = $/GFX/Unit/Descriptor_Unit_VBRG_FR
+    Unit = $/GFX/Unit/Descriptor_Unit_Gendarmerie_Mobile_FR
+    Number = 1
+)
+
 Descriptor_Deck_Pack_Gepard_1A2_BEL_1_1 is DeckPackDescriptor
 (
     Xp = 1
@@ -5253,6 +6464,13 @@ Descriptor_Deck_Pack_Gepard_1A2_RFA_2_4 is DeckPackDescriptor
     Xp = 2
     Unit = $/GFX/Unit/Descriptor_Unit_Gepard_1A2_RFA
     Number = 4
+)
+
+Descriptor_Deck_Pack_Ghibli_BRZ_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Unit = $/GFX/Unit/Descriptor_Unit_Ghibli_BRZ
+    Number = 1
 )
 
 Descriptor_Deck_Pack_GreenBerets_CMD_US_MH47D_Super_Chinook_US_3_1 is DeckPackDescriptor
@@ -5326,6 +6544,13 @@ Descriptor_Deck_Pack_Groupe_AT_Legion_FR_VAB_Legion_FR_1_6 is DeckPackDescriptor
     Number = 6
 )
 
+Descriptor_Deck_Pack_Groupe_AT_Light_US_M1025_Humvee_AGL_transport_US_0_1 is DeckPackDescriptor
+(
+    Transport = $/GFX/Unit/Descriptor_Unit_M1025_Humvee_AGL_transport_US
+    Unit = $/GFX/Unit/Descriptor_Unit_Groupe_AT_Light_US
+    Number = 1
+)
+
 Descriptor_Deck_Pack_Groupe_AT_NL_DAF_YA_4400_NL_1_1 is DeckPackDescriptor
 (
     Xp = 1
@@ -5342,12 +6567,43 @@ Descriptor_Deck_Pack_Groupe_AT_POL_Star_266_POL_2_8 is DeckPackDescriptor
     Number = 8
 )
 
+Descriptor_Deck_Pack_Groupe_AT_RFA_Marder_1A2_MILAN_RFA_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Transport = $/GFX/Unit/Descriptor_Unit_Marder_1A2_MILAN_RFA
+    Unit = $/GFX/Unit/Descriptor_Unit_Groupe_AT_RFA
+    Number = 1
+)
+
 Descriptor_Deck_Pack_Groupe_AT_TCH_BMP_1P_TCH_1_100 is DeckPackDescriptor
 (
     Xp = 1
     Transport = $/GFX/Unit/Descriptor_Unit_BMP_1P_TCH
     Unit = $/GFX/Unit/Descriptor_Unit_Groupe_AT_TCH
     Number = 100
+)
+
+Descriptor_Deck_Pack_Groupe_AT_USMCR_US_M998_Humvee_US_0_1 is DeckPackDescriptor
+(
+    Transport = $/GFX/Unit/Descriptor_Unit_M998_Humvee_US
+    Unit = $/GFX/Unit/Descriptor_Unit_Groupe_AT_USMCR_US
+    Number = 1
+)
+
+Descriptor_Deck_Pack_Groupe_AT_USMC_US_AAVP_7A1_USMC_US_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Transport = $/GFX/Unit/Descriptor_Unit_AAVP_7A1_USMC_US
+    Unit = $/GFX/Unit/Descriptor_Unit_Groupe_AT_USMC_US
+    Number = 1
+)
+
+Descriptor_Deck_Pack_Groupe_AT_para_VEN_Pinzgauer_712_trans_VEN_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Transport = $/GFX/Unit/Descriptor_Unit_Pinzgauer_712_trans_VEN
+    Unit = $/GFX/Unit/Descriptor_Unit_Groupe_AT_para_VEN
+    Number = 1
 )
 
 Descriptor_Deck_Pack_Guards_CMD_UK_Bedford_MJ_4t_trans_UK_1_1 is DeckPackDescriptor
@@ -5451,12 +6707,26 @@ Descriptor_Deck_Pack_HMGteam_AGS17_DShV_SOV_LUAZ_967M_SOV_1_1 is DeckPackDescrip
     Number = 1
 )
 
+Descriptor_Deck_Pack_HMGteam_AGS17_Reserve_SOV_UAZ_452_SOV_0_1 is DeckPackDescriptor
+(
+    Transport = $/GFX/Unit/Descriptor_Unit_UAZ_452_SOV
+    Unit = $/GFX/Unit/Descriptor_Unit_HMGteam_AGS17_Reserve_SOV
+    Number = 1
+)
+
 Descriptor_Deck_Pack_HMGteam_AGS17_VDV_SOV_UAZ_469_SOV_2_2 is DeckPackDescriptor
 (
     Xp = 2
     Transport = $/GFX/Unit/Descriptor_Unit_UAZ_469_SOV
     Unit = $/GFX/Unit/Descriptor_Unit_HMGteam_AGS17_VDV_SOV
     Number = 2
+)
+
+Descriptor_Deck_Pack_HMGteam_AGS17_VPB_DDR_UAZ_469_trans_DDR_0_1 is DeckPackDescriptor
+(
+    Transport = $/GFX/Unit/Descriptor_Unit_UAZ_469_trans_DDR
+    Unit = $/GFX/Unit/Descriptor_Unit_HMGteam_AGS17_VPB_DDR
+    Number = 1
 )
 
 Descriptor_Deck_Pack_HMGteam_LAG40_ESP_M113_AGL_ESP_0_1 is DeckPackDescriptor
@@ -5479,6 +6749,20 @@ Descriptor_Deck_Pack_HMGteam_M2HB_BEL_AIFV_B_50_BEL_1_1 is DeckPackDescriptor
     Xp = 1
     Transport = $/GFX/Unit/Descriptor_Unit_AIFV_B_50_BEL
     Unit = $/GFX/Unit/Descriptor_Unit_HMGteam_M2HB_BEL
+    Number = 1
+)
+
+Descriptor_Deck_Pack_HMGteam_M2HB_BRZ_F85_Rural_trans_BRZ_0_1 is DeckPackDescriptor
+(
+    Transport = $/GFX/Unit/Descriptor_Unit_F85_Rural_trans_BRZ
+    Unit = $/GFX/Unit/Descriptor_Unit_HMGteam_M2HB_BRZ
+    Number = 1
+)
+
+Descriptor_Deck_Pack_HMGteam_M2HB_FR_VLTT_P4_FR_0_1 is DeckPackDescriptor
+(
+    Transport = $/GFX/Unit/Descriptor_Unit_VLTT_P4_FR
+    Unit = $/GFX/Unit/Descriptor_Unit_HMGteam_M2HB_FR
     Number = 1
 )
 
@@ -5546,6 +6830,13 @@ Descriptor_Deck_Pack_HMGteam_MAG_UK_LandRover_UK_1_1 is DeckPackDescriptor
     Number = 1
 )
 
+Descriptor_Deck_Pack_HMGteam_MAG_VEN_M151_MUTT_trans_VEN_0_1 is DeckPackDescriptor
+(
+    Transport = $/GFX/Unit/Descriptor_Unit_M151_MUTT_trans_VEN
+    Unit = $/GFX/Unit/Descriptor_Unit_HMGteam_MAG_VEN
+    Number = 1
+)
+
 Descriptor_Deck_Pack_HMGteam_MAG_para_UK_Supacat_ATMP_UK_1_10 is DeckPackDescriptor
 (
     Xp = 1
@@ -5554,11 +6845,27 @@ Descriptor_Deck_Pack_HMGteam_MAG_para_UK_Supacat_ATMP_UK_1_10 is DeckPackDescrip
     Number = 10
 )
 
+Descriptor_Deck_Pack_HMGteam_MG3_DK_LandRover_DK_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Transport = $/GFX/Unit/Descriptor_Unit_LandRover_DK
+    Unit = $/GFX/Unit/Descriptor_Unit_HMGteam_MG3_DK
+    Number = 1
+)
+
 Descriptor_Deck_Pack_HMGteam_MG3_FJ_RFA_Iltis_trans_RFA_2_1 is DeckPackDescriptor
 (
     Xp = 2
     Transport = $/GFX/Unit/Descriptor_Unit_Iltis_trans_RFA
     Unit = $/GFX/Unit/Descriptor_Unit_HMGteam_MG3_FJ_RFA
+    Number = 1
+)
+
+Descriptor_Deck_Pack_HMGteam_MG3_RFA_Iltis_trans_RFA_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Transport = $/GFX/Unit/Descriptor_Unit_Iltis_trans_RFA
+    Unit = $/GFX/Unit/Descriptor_Unit_HMGteam_MG3_RFA
     Number = 1
 )
 
@@ -5570,10 +6877,33 @@ Descriptor_Deck_Pack_HMGteam_MG3_RFA_Iltis_trans_RFA_1_999 is DeckPackDescriptor
     Number = 999
 )
 
+Descriptor_Deck_Pack_HMGteam_Mk19_Naval_VEN_M151_MUTT_trans_VEN_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Transport = $/GFX/Unit/Descriptor_Unit_M151_MUTT_trans_VEN
+    Unit = $/GFX/Unit/Descriptor_Unit_HMGteam_Mk19_Naval_VEN
+    Number = 1
+)
+
+Descriptor_Deck_Pack_HMGteam_Mk19_USMC_US_M998_Humvee_US_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Transport = $/GFX/Unit/Descriptor_Unit_M998_Humvee_US
+    Unit = $/GFX/Unit/Descriptor_Unit_HMGteam_Mk19_USMC_US
+    Number = 1
+)
+
 Descriptor_Deck_Pack_HMGteam_Mk19_US_CUCV_trans_US_1_1 is DeckPackDescriptor
 (
     Xp = 1
     Transport = $/GFX/Unit/Descriptor_Unit_CUCV_trans_US
+    Unit = $/GFX/Unit/Descriptor_Unit_HMGteam_Mk19_US
+    Number = 1
+)
+
+Descriptor_Deck_Pack_HMGteam_Mk19_US_M998_Humvee_US_0_1 is DeckPackDescriptor
+(
+    Transport = $/GFX/Unit/Descriptor_Unit_M998_Humvee_US
     Unit = $/GFX/Unit/Descriptor_Unit_HMGteam_Mk19_US
     Number = 1
 )
@@ -5590,6 +6920,14 @@ Descriptor_Deck_Pack_HMGteam_NSV_SOV_UAZ_469_SOV_0_1 is DeckPackDescriptor
 (
     Transport = $/GFX/Unit/Descriptor_Unit_UAZ_469_SOV
     Unit = $/GFX/Unit/Descriptor_Unit_HMGteam_NSV_SOV
+    Number = 1
+)
+
+Descriptor_Deck_Pack_HMGteam_PKM_Naval_VDV_SOV_UAZ_469_SOV_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Transport = $/GFX/Unit/Descriptor_Unit_UAZ_469_SOV
+    Unit = $/GFX/Unit/Descriptor_Unit_HMGteam_PKM_Naval_VDV_SOV
     Number = 1
 )
 
@@ -5645,6 +6983,13 @@ Descriptor_Deck_Pack_HS30_Panzermorser_120mm_RFA_2_999 is DeckPackDescriptor
     Number = 999
 )
 
+Descriptor_Deck_Pack_Harrier_AV8B_AA_US_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Unit = $/GFX/Unit/Descriptor_Unit_Harrier_AV8B_AA_US
+    Number = 1
+)
+
 Descriptor_Deck_Pack_Harrier_CLU_UK_1_1 is DeckPackDescriptor
 (
     Xp = 1
@@ -5677,6 +7022,22 @@ Descriptor_Deck_Pack_Hawk_T1_UK_1_1 is DeckPackDescriptor
 (
     Xp = 1
     Unit = $/GFX/Unit/Descriptor_Unit_Hawk_T1_UK
+    Number = 1
+)
+
+Descriptor_Deck_Pack_HeimatschutzJager_CMD_RFA_M113A1G_MILAN_RFA_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Transport = $/GFX/Unit/Descriptor_Unit_M113A1G_MILAN_RFA
+    Unit = $/GFX/Unit/Descriptor_Unit_HeimatschutzJager_CMD_RFA
+    Number = 1
+)
+
+Descriptor_Deck_Pack_HeimatschutzJager_CMD_RFA_Unimog_trans_RFA_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Transport = $/GFX/Unit/Descriptor_Unit_Unimog_trans_RFA
+    Unit = $/GFX/Unit/Descriptor_Unit_HeimatschutzJager_CMD_RFA
     Number = 1
 )
 
@@ -5733,6 +7094,13 @@ Descriptor_Deck_Pack_Hochgebirgjager_RFA_DaimlerBenz_Typ1017_trans_RFA_2_1 is De
     Number = 1
 )
 
+Descriptor_Deck_Pack_Howz_2A36_Giatsint_B_SOV_KrAZ_255B_SOV_0_1 is DeckPackDescriptor
+(
+    Transport = $/GFX/Unit/Descriptor_Unit_KrAZ_255B_SOV
+    Unit = $/GFX/Unit/Descriptor_Unit_Howz_2A36_Giatsint_B_SOV
+    Number = 1
+)
+
 Descriptor_Deck_Pack_Howz_A19_122mm_ESP_Pegaso_3046_ESP_1_1 is DeckPackDescriptor
 (
     Xp = 1
@@ -5741,10 +7109,24 @@ Descriptor_Deck_Pack_Howz_A19_122mm_ESP_Pegaso_3046_ESP_1_1 is DeckPackDescripto
     Number = 1
 )
 
+Descriptor_Deck_Pack_Howz_BS3_100mm_SOV_MTLB_transp_SOV_0_1 is DeckPackDescriptor
+(
+    Transport = $/GFX/Unit/Descriptor_Unit_MTLB_transp_SOV
+    Unit = $/GFX/Unit/Descriptor_Unit_Howz_BS3_100mm_SOV
+    Number = 1
+)
+
 Descriptor_Deck_Pack_Howz_Br5M_280mm_SOV_KrAZ_255B_SOV_0_1 is DeckPackDescriptor
 (
     Transport = $/GFX/Unit/Descriptor_Unit_KrAZ_255B_SOV
     Unit = $/GFX/Unit/Descriptor_Unit_Howz_Br5M_280mm_SOV
+    Number = 1
+)
+
+Descriptor_Deck_Pack_Howz_D20_152mm_DDR_MTLB_trans_DDR_0_1 is DeckPackDescriptor
+(
+    Transport = $/GFX/Unit/Descriptor_Unit_MTLB_trans_DDR
+    Unit = $/GFX/Unit/Descriptor_Unit_Howz_D20_152mm_DDR
     Number = 1
 )
 
@@ -5851,6 +7233,13 @@ Descriptor_Deck_Pack_Howz_M102_105mm_US_M1038_Humvee_US_1_1 is DeckPackDescripto
     Number = 1
 )
 
+Descriptor_Deck_Pack_Howz_M114_155mm_BRZ_MB_1519_Mamute_trans_BRZ_0_1 is DeckPackDescriptor
+(
+    Transport = $/GFX/Unit/Descriptor_Unit_MB_1519_Mamute_trans_BRZ
+    Unit = $/GFX/Unit/Descriptor_Unit_Howz_M114_155mm_BRZ
+    Number = 1
+)
+
 Descriptor_Deck_Pack_Howz_M114_155mm_CAN_M35_trans_CAN_0_1 is DeckPackDescriptor
 (
     Transport = $/GFX/Unit/Descriptor_Unit_M35_trans_CAN
@@ -5874,10 +7263,24 @@ Descriptor_Deck_Pack_Howz_M114_155mm_CAN_M35_trans_CAN_1_999 is DeckPackDescript
     Number = 999
 )
 
+Descriptor_Deck_Pack_Howz_M114_39_155mm_DK_MD_Jupiter_trans_DK_0_1 is DeckPackDescriptor
+(
+    Transport = $/GFX/Unit/Descriptor_Unit_MD_Jupiter_trans_DK
+    Unit = $/GFX/Unit/Descriptor_Unit_Howz_M114_39_155mm_DK
+    Number = 1
+)
+
 Descriptor_Deck_Pack_Howz_M114_39_155mm_NL_DAF_YHZ_2300_trans_NL_0_1 is DeckPackDescriptor
 (
     Transport = $/GFX/Unit/Descriptor_Unit_DAF_YHZ_2300_trans_NL
     Unit = $/GFX/Unit/Descriptor_Unit_Howz_M114_39_155mm_NL
+    Number = 1
+)
+
+Descriptor_Deck_Pack_Howz_M115_203mm_DK_MD_Jupiter_trans_DK_0_1 is DeckPackDescriptor
+(
+    Transport = $/GFX/Unit/Descriptor_Unit_MD_Jupiter_trans_DK
+    Unit = $/GFX/Unit/Descriptor_Unit_Howz_M115_203mm_DK
     Number = 1
 )
 
@@ -5889,11 +7292,26 @@ Descriptor_Deck_Pack_Howz_M119_105mm_US_M35_trans_US_1_1 is DeckPackDescriptor
     Number = 1
 )
 
+Descriptor_Deck_Pack_Howz_M198_155mm_US_M35_trans_US_0_1 is DeckPackDescriptor
+(
+    Transport = $/GFX/Unit/Descriptor_Unit_M35_trans_US
+    Unit = $/GFX/Unit/Descriptor_Unit_Howz_M198_155mm_US
+    Number = 1
+)
+
 Descriptor_Deck_Pack_Howz_M198_155mm_US_M35_trans_US_1_1 is DeckPackDescriptor
 (
     Xp = 1
     Transport = $/GFX/Unit/Descriptor_Unit_M35_trans_US
     Unit = $/GFX/Unit/Descriptor_Unit_Howz_M198_155mm_US
+    Number = 1
+)
+
+Descriptor_Deck_Pack_Howz_M30_122mm_POL_Star_266_POL_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Transport = $/GFX/Unit/Descriptor_Unit_Star_266_POL
+    Unit = $/GFX/Unit/Descriptor_Unit_Howz_M30_122mm_POL
     Number = 1
 )
 
@@ -5927,10 +7345,25 @@ Descriptor_Deck_Pack_Howz_M56_Pack_FJ_RFA_2_6 is DeckPackDescriptor
     Number = 6
 )
 
+Descriptor_Deck_Pack_Howz_M56_Pack_FJ_RFA_Unimog_trans_RFA_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Transport = $/GFX/Unit/Descriptor_Unit_Unimog_trans_RFA
+    Unit = $/GFX/Unit/Descriptor_Unit_Howz_M56_Pack_FJ_RFA
+    Number = 1
+)
+
 Descriptor_Deck_Pack_Howz_M59_LongTom_155mm_BEL_Volvo_N10_trans_BEL_0_1 is DeckPackDescriptor
 (
     Transport = $/GFX/Unit/Descriptor_Unit_Volvo_N10_trans_BEL
     Unit = $/GFX/Unit/Descriptor_Unit_Howz_M59_LongTom_155mm_BEL
+    Number = 1
+)
+
+Descriptor_Deck_Pack_Howz_M59_LongTom_155mm_DK_MD_Jupiter_trans_DK_0_1 is DeckPackDescriptor
+(
+    Transport = $/GFX/Unit/Descriptor_Unit_MD_Jupiter_trans_DK
+    Unit = $/GFX/Unit/Descriptor_Unit_Howz_M59_LongTom_155mm_DK
     Number = 1
 )
 
@@ -5993,11 +7426,27 @@ Descriptor_Deck_Pack_Hussards_para_FR_VLRA_HMG_FR_2_1 is DeckPackDescriptor
     Number = 1
 )
 
+Descriptor_Deck_Pack_HvyScout_BRZ_EE11_Urutu_reco_BRZ_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Transport = $/GFX/Unit/Descriptor_Unit_EE11_Urutu_reco_BRZ
+    Unit = $/GFX/Unit/Descriptor_Unit_HvyScout_BRZ
+    Number = 1
+)
+
 Descriptor_Deck_Pack_HvyScout_CAN_UH1N_TwinHuey_CAN_1_1 is DeckPackDescriptor
 (
     Xp = 1
     Transport = $/GFX/Unit/Descriptor_Unit_UH1N_TwinHuey_CAN
     Unit = $/GFX/Unit/Descriptor_Unit_HvyScout_CAN
+    Number = 1
+)
+
+Descriptor_Deck_Pack_HvyScout_CUB_BTR_60_reco_CUB_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Transport = $/GFX/Unit/Descriptor_Unit_BTR_60_reco_CUB
+    Unit = $/GFX/Unit/Descriptor_Unit_HvyScout_CUB
     Number = 1
 )
 
@@ -6021,6 +7470,14 @@ Descriptor_Deck_Pack_HvyScout_DDR_BMP_1P_reco_DDR_1_1 is DeckPackDescriptor
     Xp = 1
     Transport = $/GFX/Unit/Descriptor_Unit_BMP_1P_reco_DDR
     Unit = $/GFX/Unit/Descriptor_Unit_HvyScout_DDR
+    Number = 1
+)
+
+Descriptor_Deck_Pack_HvyScout_DK_M113A1_reco_DK_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Transport = $/GFX/Unit/Descriptor_Unit_M113A1_reco_DK
+    Unit = $/GFX/Unit/Descriptor_Unit_HvyScout_DK
     Number = 1
 )
 
@@ -6103,10 +7560,32 @@ Descriptor_Deck_Pack_HvyScout_SOV_BMP_1P_reco_SOV_2_999 is DeckPackDescriptor
     Number = 999
 )
 
+Descriptor_Deck_Pack_HvyScout_SOV_BMP_2_reco_SOV_0_1 is DeckPackDescriptor
+(
+    Transport = $/GFX/Unit/Descriptor_Unit_BMP_2_reco_SOV
+    Unit = $/GFX/Unit/Descriptor_Unit_HvyScout_SOV
+    Number = 1
+)
+
 Descriptor_Deck_Pack_HvyScout_SOV_BMP_2_reco_SOV_1_1 is DeckPackDescriptor
 (
     Xp = 1
     Transport = $/GFX/Unit/Descriptor_Unit_BMP_2_reco_SOV
+    Unit = $/GFX/Unit/Descriptor_Unit_HvyScout_SOV
+    Number = 1
+)
+
+Descriptor_Deck_Pack_HvyScout_SOV_BTR_60_reco_SOV_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Transport = $/GFX/Unit/Descriptor_Unit_BTR_60_reco_SOV
+    Unit = $/GFX/Unit/Descriptor_Unit_HvyScout_SOV
+    Number = 1
+)
+
+Descriptor_Deck_Pack_HvyScout_SOV_Mi_8TV_non_arme_SOV_0_1 is DeckPackDescriptor
+(
+    Transport = $/GFX/Unit/Descriptor_Unit_Mi_8TV_non_arme_SOV
     Unit = $/GFX/Unit/Descriptor_Unit_HvyScout_SOV
     Number = 1
 )
@@ -6142,6 +7621,21 @@ Descriptor_Deck_Pack_HvyScout_TTsko_SOV_BMP_2_reco_SOV_0_1 is DeckPackDescriptor
     Number = 1
 )
 
+Descriptor_Deck_Pack_HvyScout_VEN_CGage_V150_Commando_VEN_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Transport = $/GFX/Unit/Descriptor_Unit_CGage_V150_Commando_VEN
+    Unit = $/GFX/Unit/Descriptor_Unit_HvyScout_VEN
+    Number = 1
+)
+
+Descriptor_Deck_Pack_HvyScout_VEN_Dragoon_300_VEN_0_1 is DeckPackDescriptor
+(
+    Transport = $/GFX/Unit/Descriptor_Unit_Dragoon_300_VEN
+    Unit = $/GFX/Unit/Descriptor_Unit_HvyScout_VEN
+    Number = 1
+)
+
 Descriptor_Deck_Pack_ISU_152K_SOV_0_1 is DeckPackDescriptor
 (
     Unit = $/GFX/Unit/Descriptor_Unit_ISU_152K_SOV
@@ -6152,6 +7646,19 @@ Descriptor_Deck_Pack_Iltis_CMD_BEL_1_1 is DeckPackDescriptor
 (
     Xp = 1
     Unit = $/GFX/Unit/Descriptor_Unit_Iltis_CMD_BEL
+    Number = 1
+)
+
+Descriptor_Deck_Pack_Iltis_MILAN_KSK_RFA_3_1 is DeckPackDescriptor
+(
+    Xp = 3
+    Unit = $/GFX/Unit/Descriptor_Unit_Iltis_MILAN_KSK_RFA
+    Number = 1
+)
+
+Descriptor_Deck_Pack_Iltis_MILAN_RFA_0_1 is DeckPackDescriptor
+(
+    Unit = $/GFX/Unit/Descriptor_Unit_Iltis_MILAN_RFA
     Number = 1
 )
 
@@ -6179,6 +7686,22 @@ Descriptor_Deck_Pack_Iltis_para_CMD_RFA_2_1 is DeckPackDescriptor
 (
     Xp = 2
     Unit = $/GFX/Unit/Descriptor_Unit_Iltis_para_CMD_RFA
+    Number = 1
+)
+
+Descriptor_Deck_Pack_Instructor_USMC_US_UH1N_TwinHuey_US_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Transport = $/GFX/Unit/Descriptor_Unit_UH1N_TwinHuey_US
+    Unit = $/GFX/Unit/Descriptor_Unit_Instructor_USMC_US
+    Number = 1
+)
+
+Descriptor_Deck_Pack_Jaeger_DK_LandRover_DK_3_1 is DeckPackDescriptor
+(
+    Xp = 3
+    Transport = $/GFX/Unit/Descriptor_Unit_LandRover_DK
+    Unit = $/GFX/Unit/Descriptor_Unit_Jaeger_DK
     Number = 1
 )
 
@@ -6312,6 +7835,12 @@ Descriptor_Deck_Pack_Jager_noAT_RFA_TPZ_Fuchs_MILAN_RFA_1_1 is DeckPackDescripto
     Xp = 1
     Transport = $/GFX/Unit/Descriptor_Unit_TPZ_Fuchs_MILAN_RFA
     Unit = $/GFX/Unit/Descriptor_Unit_Jager_noAT_RFA
+    Number = 1
+)
+
+Descriptor_Deck_Pack_Jaguar_1_RFA_0_1 is DeckPackDescriptor
+(
+    Unit = $/GFX/Unit/Descriptor_Unit_Jaguar_1_RFA
     Number = 1
 )
 
@@ -6452,6 +7981,29 @@ Descriptor_Deck_Pack_KSK18_DDR_W50_LA_A_DDR_2_1 is DeckPackDescriptor
     Number = 1
 )
 
+Descriptor_Deck_Pack_KSM_RFA_MAN_630_L2AE_trans_RFA_3_1 is DeckPackDescriptor
+(
+    Xp = 3
+    Transport = $/GFX/Unit/Descriptor_Unit_MAN_630_L2AE_trans_RFA
+    Unit = $/GFX/Unit/Descriptor_Unit_KSM_RFA
+    Number = 1
+)
+
+Descriptor_Deck_Pack_KSM_RFA_SeaKing_Mk41_RFA_3_1 is DeckPackDescriptor
+(
+    Xp = 3
+    Transport = $/GFX/Unit/Descriptor_Unit_SeaKing_Mk41_RFA
+    Unit = $/GFX/Unit/Descriptor_Unit_KSM_RFA
+    Number = 1
+)
+
+Descriptor_Deck_Pack_Ka_29_SOV_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Unit = $/GFX/Unit/Descriptor_Unit_Ka_29_SOV
+    Number = 1
+)
+
 Descriptor_Deck_Pack_Ka_50_AA_SOV_2_1 is DeckPackDescriptor
 (
     Xp = 2
@@ -6473,11 +8025,25 @@ Descriptor_Deck_Pack_Ka_50_SOV_3_999 is DeckPackDescriptor
     Number = 999
 )
 
+Descriptor_Deck_Pack_Kalmar_supply_SOV_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Unit = $/GFX/Unit/Descriptor_Unit_Kalmar_supply_SOV
+    Number = 1
+)
+
 Descriptor_Deck_Pack_KanJagdPanzer_RFA_1_999 is DeckPackDescriptor
 (
     Xp = 1
     Unit = $/GFX/Unit/Descriptor_Unit_KanJagdPanzer_RFA
     Number = 999
+)
+
+Descriptor_Deck_Pack_KanJagdPanzer_RFA_2_1 is DeckPackDescriptor
+(
+    Xp = 2
+    Unit = $/GFX/Unit/Descriptor_Unit_KanJagdPanzer_RFA
+    Number = 1
 )
 
 Descriptor_Deck_Pack_KdA_CMD_DDR_SPW_152K_DDR_1_1 is DeckPackDescriptor
@@ -6492,6 +8058,12 @@ Descriptor_Deck_Pack_KdA_DDR_SPW_152K_DDR_0_1 is DeckPackDescriptor
 (
     Transport = $/GFX/Unit/Descriptor_Unit_SPW_152K_DDR
     Unit = $/GFX/Unit/Descriptor_Unit_KdA_DDR
+    Number = 1
+)
+
+Descriptor_Deck_Pack_KrAZ_255B_supply_DDR_0_1 is DeckPackDescriptor
+(
+    Unit = $/GFX/Unit/Descriptor_Unit_KrAZ_255B_supply_DDR
     Number = 1
 )
 
@@ -6590,10 +8162,69 @@ Descriptor_Deck_Pack_L39ZO_TCH_2_1 is DeckPackDescriptor
     Number = 1
 )
 
+Descriptor_Deck_Pack_LARC_60_supply_US_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Unit = $/GFX/Unit/Descriptor_Unit_LARC_60_supply_US
+    Number = 1
+)
+
 Descriptor_Deck_Pack_LAV_25_M1047_US_US_1_1 is DeckPackDescriptor
 (
     Xp = 1
     Unit = $/GFX/Unit/Descriptor_Unit_LAV_25_M1047_US_US
+    Number = 1
+)
+
+Descriptor_Deck_Pack_LAV_AT_USMCR_US_0_1 is DeckPackDescriptor
+(
+    Unit = $/GFX/Unit/Descriptor_Unit_LAV_AT_USMCR_US
+    Number = 1
+)
+
+Descriptor_Deck_Pack_LAV_C_US_2_1 is DeckPackDescriptor
+(
+    Xp = 2
+    Unit = $/GFX/Unit/Descriptor_Unit_LAV_C_US
+    Number = 1
+)
+
+Descriptor_Deck_Pack_LAV_L_USMCR_US_0_1 is DeckPackDescriptor
+(
+    Unit = $/GFX/Unit/Descriptor_Unit_LAV_L_USMCR_US
+    Number = 1
+)
+
+Descriptor_Deck_Pack_LAV_L_US_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Unit = $/GFX/Unit/Descriptor_Unit_LAV_L_US
+    Number = 1
+)
+
+Descriptor_Deck_Pack_LAV_M_81mm_USMCR_US_0_1 is DeckPackDescriptor
+(
+    Unit = $/GFX/Unit/Descriptor_Unit_LAV_M_81mm_USMCR_US
+    Number = 1
+)
+
+Descriptor_Deck_Pack_LAV_M_81mm_US_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Unit = $/GFX/Unit/Descriptor_Unit_LAV_M_81mm_US
+    Number = 1
+)
+
+Descriptor_Deck_Pack_LA_1111_Maxson_BRZ_0_1 is DeckPackDescriptor
+(
+    Unit = $/GFX/Unit/Descriptor_Unit_LA_1111_Maxson_BRZ
+    Number = 1
+)
+
+Descriptor_Deck_Pack_LCAC_US_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Unit = $/GFX/Unit/Descriptor_Unit_LCAC_US
     Number = 1
 )
 
@@ -6609,6 +8240,12 @@ Descriptor_Deck_Pack_LO_1800_ZPU_2_POL_1_12 is DeckPackDescriptor
     Xp = 1
     Unit = $/GFX/Unit/Descriptor_Unit_LO_1800_ZPU_2_POL
     Number = 12
+)
+
+Descriptor_Deck_Pack_LO_1800_supply_DDR_0_1 is DeckPackDescriptor
+(
+    Unit = $/GFX/Unit/Descriptor_Unit_LO_1800_supply_DDR
+    Number = 1
 )
 
 Descriptor_Deck_Pack_LRRP_Aero_US_CH47_Chinook_US_1_1 is DeckPackDescriptor
@@ -6632,6 +8269,14 @@ Descriptor_Deck_Pack_LRRP_CEWI_US_M151_MUTT_trans_US_1_1 is DeckPackDescriptor
     Xp = 1
     Transport = $/GFX/Unit/Descriptor_Unit_M151_MUTT_trans_US
     Unit = $/GFX/Unit/Descriptor_Unit_LRRP_CEWI_US
+    Number = 1
+)
+
+Descriptor_Deck_Pack_LRRP_DK_LandRover_DK_2_1 is DeckPackDescriptor
+(
+    Xp = 2
+    Transport = $/GFX/Unit/Descriptor_Unit_LandRover_DK
+    Unit = $/GFX/Unit/Descriptor_Unit_LRRP_DK
     Number = 1
 )
 
@@ -6733,6 +8378,13 @@ Descriptor_Deck_Pack_LUAZ_967M_supply_SOV_1_1 is DeckPackDescriptor
     Number = 1
 )
 
+Descriptor_Deck_Pack_LandRover_CMD_DK_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Unit = $/GFX/Unit/Descriptor_Unit_LandRover_CMD_DK
+    Number = 1
+)
+
 Descriptor_Deck_Pack_LandRover_CMD_Para_UK_3_10 is DeckPackDescriptor
 (
     Xp = 3
@@ -6743,6 +8395,12 @@ Descriptor_Deck_Pack_LandRover_CMD_Para_UK_3_10 is DeckPackDescriptor
 Descriptor_Deck_Pack_LandRover_GSR_ESP_0_1 is DeckPackDescriptor
 (
     Unit = $/GFX/Unit/Descriptor_Unit_LandRover_GSR_ESP
+    Number = 1
+)
+
+Descriptor_Deck_Pack_LandRover_ITOW_DK_0_1 is DeckPackDescriptor
+(
+    Unit = $/GFX/Unit/Descriptor_Unit_LandRover_ITOW_DK
     Number = 1
 )
 
@@ -6765,6 +8423,13 @@ Descriptor_Deck_Pack_Lars_2_RFA_0_1 is DeckPackDescriptor
     Number = 1
 )
 
+Descriptor_Deck_Pack_Leclerc_MSC_FR_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Unit = $/GFX/Unit/Descriptor_Unit_Leclerc_MSC_FR
+    Number = 1
+)
+
 Descriptor_Deck_Pack_Leopard_1A1A1_CMD_NL_1_1 is DeckPackDescriptor
 (
     Xp = 1
@@ -6776,6 +8441,13 @@ Descriptor_Deck_Pack_Leopard_1A1A1_NL_1_1 is DeckPackDescriptor
 (
     Xp = 1
     Unit = $/GFX/Unit/Descriptor_Unit_Leopard_1A1A1_NL
+    Number = 1
+)
+
+Descriptor_Deck_Pack_Leopard_1A1A2_RFA_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Unit = $/GFX/Unit/Descriptor_Unit_Leopard_1A1A2_RFA
     Number = 1
 )
 
@@ -6820,11 +8492,32 @@ Descriptor_Deck_Pack_Leopard_1A1_RFA_0_1 is DeckPackDescriptor
     Number = 1
 )
 
+Descriptor_Deck_Pack_Leopard_1A1_RFA_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Unit = $/GFX/Unit/Descriptor_Unit_Leopard_1A1_RFA
+    Number = 1
+)
+
 Descriptor_Deck_Pack_Leopard_1A1_RFA_1_999 is DeckPackDescriptor
 (
     Xp = 1
     Unit = $/GFX/Unit/Descriptor_Unit_Leopard_1A1_RFA
     Number = 999
+)
+
+Descriptor_Deck_Pack_Leopard_1A2A1_RFA_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Unit = $/GFX/Unit/Descriptor_Unit_Leopard_1A2A1_RFA
+    Number = 1
+)
+
+Descriptor_Deck_Pack_Leopard_1A3A1_Instructor_RFA_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Unit = $/GFX/Unit/Descriptor_Unit_Leopard_1A3A1_Instructor_RFA
+    Number = 1
 )
 
 Descriptor_Deck_Pack_Leopard_1A3_CAN_1_1 is DeckPackDescriptor
@@ -6862,6 +8555,20 @@ Descriptor_Deck_Pack_Leopard_1A3_CMD_CAN_1_999 is DeckPackDescriptor
     Number = 999
 )
 
+Descriptor_Deck_Pack_Leopard_1A3_CMD_DK_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Unit = $/GFX/Unit/Descriptor_Unit_Leopard_1A3_CMD_DK
+    Number = 1
+)
+
+Descriptor_Deck_Pack_Leopard_1A3_DK_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Unit = $/GFX/Unit/Descriptor_Unit_Leopard_1A3_DK
+    Number = 1
+)
+
 Descriptor_Deck_Pack_Leopard_1A5_BEL_1_1 is DeckPackDescriptor
 (
     Xp = 1
@@ -6890,6 +8597,13 @@ Descriptor_Deck_Pack_Leopard_1A5_CMD_RFA_1_2 is DeckPackDescriptor
     Number = 2
 )
 
+Descriptor_Deck_Pack_Leopard_1A5_DK_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Unit = $/GFX/Unit/Descriptor_Unit_Leopard_1A5_DK
+    Number = 1
+)
+
 Descriptor_Deck_Pack_Leopard_1A5_RFA_1_1 is DeckPackDescriptor
 (
     Xp = 1
@@ -6916,6 +8630,13 @@ Descriptor_Deck_Pack_Leopard_1A5_reco_RFA_2_4 is DeckPackDescriptor
     Xp = 2
     Unit = $/GFX/Unit/Descriptor_Unit_Leopard_1A5_reco_RFA
     Number = 4
+)
+
+Descriptor_Deck_Pack_Leopard_1A6_Instructor_RFA_2_1 is DeckPackDescriptor
+(
+    Xp = 2
+    Unit = $/GFX/Unit/Descriptor_Unit_Leopard_1A6_Instructor_RFA
+    Number = 1
 )
 
 Descriptor_Deck_Pack_Leopard_1BE_BEL_1_1 is DeckPackDescriptor
@@ -6960,6 +8681,19 @@ Descriptor_Deck_Pack_Leopard_2A4B_NL_1_1 is DeckPackDescriptor
     Number = 1
 )
 
+Descriptor_Deck_Pack_Leopard_2A4B_RFA_0_1 is DeckPackDescriptor
+(
+    Unit = $/GFX/Unit/Descriptor_Unit_Leopard_2A4B_RFA
+    Number = 1
+)
+
+Descriptor_Deck_Pack_Leopard_2A4D_RFA_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Unit = $/GFX/Unit/Descriptor_Unit_Leopard_2A4D_RFA
+    Number = 1
+)
+
 Descriptor_Deck_Pack_Leopard_2A4_CMD_NL_3_1 is DeckPackDescriptor
 (
     Xp = 3
@@ -6984,6 +8718,14 @@ Descriptor_Deck_Pack_Leopard_2A4_NL_2_3 is DeckPackDescriptor
 Descriptor_Deck_Pack_Leopard_2A4_RFA_0_1 is DeckPackDescriptor
 (
     Unit = $/GFX/Unit/Descriptor_Unit_Leopard_2A4_RFA
+    Number = 1
+)
+
+Descriptor_Deck_Pack_LightRifles_AT4_US_M1038_Humvee_US_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Transport = $/GFX/Unit/Descriptor_Unit_M1038_Humvee_US
+    Unit = $/GFX/Unit/Descriptor_Unit_LightRifles_AT4_US
     Number = 1
 )
 
@@ -7132,6 +8874,13 @@ Descriptor_Deck_Pack_M1025_Humvee_AGL_nonPara_US_2_100 is DeckPackDescriptor
     Number = 100
 )
 
+Descriptor_Deck_Pack_M1025_Humvee_CMD_USMC_US_2_1 is DeckPackDescriptor
+(
+    Xp = 2
+    Unit = $/GFX/Unit/Descriptor_Unit_M1025_Humvee_CMD_USMC_US
+    Number = 1
+)
+
 Descriptor_Deck_Pack_M1025_Humvee_CMD_US_1_1 is DeckPackDescriptor
 (
     Xp = 1
@@ -7150,6 +8899,13 @@ Descriptor_Deck_Pack_M1025_Humvee_CMD_US_2_1 is DeckPackDescriptor
 (
     Xp = 2
     Unit = $/GFX/Unit/Descriptor_Unit_M1025_Humvee_CMD_US
+    Number = 1
+)
+
+Descriptor_Deck_Pack_M1025_Humvee_TOW_USMC_US_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Unit = $/GFX/Unit/Descriptor_Unit_M1025_Humvee_TOW_USMC_US
     Number = 1
 )
 
@@ -7175,6 +8931,13 @@ Descriptor_Deck_Pack_M1025_Humvee_TOW_para_US_1_1 is DeckPackDescriptor
 
 Descriptor_Deck_Pack_M106A2_HOWZ_US_0_1 is DeckPackDescriptor
 (
+    Unit = $/GFX/Unit/Descriptor_Unit_M106A2_HOWZ_US
+    Number = 1
+)
+
+Descriptor_Deck_Pack_M106A2_HOWZ_US_1_1 is DeckPackDescriptor
+(
+    Xp = 1
     Unit = $/GFX/Unit/Descriptor_Unit_M106A2_HOWZ_US
     Number = 1
 )
@@ -7258,6 +9021,12 @@ Descriptor_Deck_Pack_M109A2_CAN_1_999 is DeckPackDescriptor
     Number = 999
 )
 
+Descriptor_Deck_Pack_M109A2_Copperhead_US_0_1 is DeckPackDescriptor
+(
+    Unit = $/GFX/Unit/Descriptor_Unit_M109A2_Copperhead_US
+    Number = 1
+)
+
 Descriptor_Deck_Pack_M109A2_HOWZ_US_0_1 is DeckPackDescriptor
 (
     Unit = $/GFX/Unit/Descriptor_Unit_M109A2_HOWZ_US
@@ -7283,6 +9052,19 @@ Descriptor_Deck_Pack_M109A2_NL_0_1 is DeckPackDescriptor
     Number = 1
 )
 
+Descriptor_Deck_Pack_M109A2_UK_0_1 is DeckPackDescriptor
+(
+    Unit = $/GFX/Unit/Descriptor_Unit_M109A2_UK
+    Number = 1
+)
+
+Descriptor_Deck_Pack_M109A2_USMC_US_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Unit = $/GFX/Unit/Descriptor_Unit_M109A2_USMC_US
+    Number = 1
+)
+
 Descriptor_Deck_Pack_M109A3G_HOWZ_RFA_0_1 is DeckPackDescriptor
 (
     Unit = $/GFX/Unit/Descriptor_Unit_M109A3G_HOWZ_RFA
@@ -7296,22 +9078,26 @@ Descriptor_Deck_Pack_M109A3G_HOWZ_RFA_1_9 is DeckPackDescriptor
     Number = 9
 )
 
+Descriptor_Deck_Pack_M109A3_DK_0_1 is DeckPackDescriptor
+(
+    Unit = $/GFX/Unit/Descriptor_Unit_M109A3_DK
+    Number = 1
+)
+
 Descriptor_Deck_Pack_M109G_RFA_0_1 is DeckPackDescriptor
 (
     Unit = $/GFX/Unit/Descriptor_Unit_M109G_RFA
     Number = 1
 )
 
-Descriptor_Deck_Pack_M110A2_HOWZ_NL_1_1 is DeckPackDescriptor
+Descriptor_Deck_Pack_M110A2_HOWZ_NL_0_1 is DeckPackDescriptor
 (
-    Xp = 1
     Unit = $/GFX/Unit/Descriptor_Unit_M110A2_HOWZ_NL
     Number = 1
 )
 
-Descriptor_Deck_Pack_M110A2_HOWZ_US_1_1 is DeckPackDescriptor
+Descriptor_Deck_Pack_M110A2_HOWZ_US_0_1 is DeckPackDescriptor
 (
-    Xp = 1
     Unit = $/GFX/Unit/Descriptor_Unit_M110A2_HOWZ_US
     Number = 1
 )
@@ -7333,6 +9119,19 @@ Descriptor_Deck_Pack_M113A1G_supply_RFA_1_12 is DeckPackDescriptor
     Xp = 1
     Unit = $/GFX/Unit/Descriptor_Unit_M113A1G_supply_RFA
     Number = 12
+)
+
+Descriptor_Deck_Pack_M113A1_CMD_DK_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Unit = $/GFX/Unit/Descriptor_Unit_M113A1_CMD_DK
+    Number = 1
+)
+
+Descriptor_Deck_Pack_M113A1_TOW_DK_0_1 is DeckPackDescriptor
+(
+    Unit = $/GFX/Unit/Descriptor_Unit_M113A1_TOW_DK
+    Number = 1
 )
 
 Descriptor_Deck_Pack_M113A1_TOW_US_1_999 is DeckPackDescriptor
@@ -7469,6 +9268,19 @@ Descriptor_Deck_Pack_M113_PzMorser_RFA_0_1 is DeckPackDescriptor
     Number = 1
 )
 
+Descriptor_Deck_Pack_M125_HOWZ_DK_0_1 is DeckPackDescriptor
+(
+    Unit = $/GFX/Unit/Descriptor_Unit_M125_HOWZ_DK
+    Number = 1
+)
+
+Descriptor_Deck_Pack_M125_HOWZ_DK_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Unit = $/GFX/Unit/Descriptor_Unit_M125_HOWZ_DK
+    Number = 1
+)
+
 Descriptor_Deck_Pack_M151A2_TOW_CAN_0_1 is DeckPackDescriptor
 (
     Unit = $/GFX/Unit/Descriptor_Unit_M151A2_TOW_CAN
@@ -7555,6 +9367,18 @@ Descriptor_Deck_Pack_M16_MGMC_FR_0_1 is DeckPackDescriptor
     Number = 1
 )
 
+Descriptor_Deck_Pack_M18A1_Hellcat_VEN_0_1 is DeckPackDescriptor
+(
+    Unit = $/GFX/Unit/Descriptor_Unit_M18A1_Hellcat_VEN
+    Number = 1
+)
+
+Descriptor_Deck_Pack_M18A2_superHellcat_VEN_0_1 is DeckPackDescriptor
+(
+    Unit = $/GFX/Unit/Descriptor_Unit_M18A2_superHellcat_VEN
+    Number = 1
+)
+
 Descriptor_Deck_Pack_M1A1HA_Abrams_CMD_US_2_1 is DeckPackDescriptor
 (
     Xp = 2
@@ -7573,6 +9397,20 @@ Descriptor_Deck_Pack_M1A1HA_Abrams_US_3_999 is DeckPackDescriptor
     Xp = 3
     Unit = $/GFX/Unit/Descriptor_Unit_M1A1HA_Abrams_US
     Number = 999
+)
+
+Descriptor_Deck_Pack_M1A1HA_USMC_Abrams_CMD_US_2_1 is DeckPackDescriptor
+(
+    Xp = 2
+    Unit = $/GFX/Unit/Descriptor_Unit_M1A1HA_USMC_Abrams_CMD_US
+    Number = 1
+)
+
+Descriptor_Deck_Pack_M1A1HA_USMC_Abrams_US_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Unit = $/GFX/Unit/Descriptor_Unit_M1A1HA_USMC_Abrams_US
+    Number = 1
 )
 
 Descriptor_Deck_Pack_M1A1_Abrams_CMD_US_1_1 is DeckPackDescriptor
@@ -7692,9 +9530,23 @@ Descriptor_Deck_Pack_M1_Abrams_CMD_US_1_1 is DeckPackDescriptor
     Number = 1
 )
 
+Descriptor_Deck_Pack_M1_Abrams_MOD_US_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Unit = $/GFX/Unit/Descriptor_Unit_M1_Abrams_MOD_US
+    Number = 1
+)
+
 Descriptor_Deck_Pack_M1_Abrams_NG_US_0_1 is DeckPackDescriptor
 (
     Unit = $/GFX/Unit/Descriptor_Unit_M1_Abrams_NG_US
+    Number = 1
+)
+
+Descriptor_Deck_Pack_M1_Abrams_US_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Unit = $/GFX/Unit/Descriptor_Unit_M1_Abrams_US
     Number = 1
 )
 
@@ -7755,6 +9607,26 @@ Descriptor_Deck_Pack_M2A2_Bradley_Leader_US_1_1 is DeckPackDescriptor
     Number = 1
 )
 
+Descriptor_Deck_Pack_M2_Bradley_Leader_US_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Unit = $/GFX/Unit/Descriptor_Unit_M2_Bradley_Leader_US
+    Number = 1
+)
+
+Descriptor_Deck_Pack_M325_CMD_VEN_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Unit = $/GFX/Unit/Descriptor_Unit_M325_CMD_VEN
+    Number = 1
+)
+
+Descriptor_Deck_Pack_M35_Fenix_VEN_0_1 is DeckPackDescriptor
+(
+    Unit = $/GFX/Unit/Descriptor_Unit_M35_Fenix_VEN
+    Number = 1
+)
+
 Descriptor_Deck_Pack_M35_supply_CAN_0_1 is DeckPackDescriptor
 (
     Unit = $/GFX/Unit/Descriptor_Unit_M35_supply_CAN
@@ -7807,10 +9679,23 @@ Descriptor_Deck_Pack_M35_supply_US_1_999 is DeckPackDescriptor
     Number = 999
 )
 
+Descriptor_Deck_Pack_M38A1_CMD_BRZ_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Unit = $/GFX/Unit/Descriptor_Unit_M38A1_CMD_BRZ
+    Number = 1
+)
+
 Descriptor_Deck_Pack_M38A1_CMD_NL_1_1 is DeckPackDescriptor
 (
     Xp = 1
     Unit = $/GFX/Unit/Descriptor_Unit_M38A1_CMD_NL
+    Number = 1
+)
+
+Descriptor_Deck_Pack_M38A1_MSS_BRZ_0_1 is DeckPackDescriptor
+(
+    Unit = $/GFX/Unit/Descriptor_Unit_M38A1_MSS_BRZ
     Number = 1
 )
 
@@ -7874,10 +9759,44 @@ Descriptor_Deck_Pack_M3A1_Bradley_CFV_US_3_999 is DeckPackDescriptor
     Number = 999
 )
 
+Descriptor_Deck_Pack_M3A1_Stuart_COL_0_1 is DeckPackDescriptor
+(
+    Unit = $/GFX/Unit/Descriptor_Unit_M3A1_Stuart_COL
+    Number = 1
+)
+
 Descriptor_Deck_Pack_M3A2_Bradley_CFV_US_1_1 is DeckPackDescriptor
 (
     Xp = 1
     Unit = $/GFX/Unit/Descriptor_Unit_M3A2_Bradley_CFV_US
+    Number = 1
+)
+
+Descriptor_Deck_Pack_M3_ETAS_US_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Unit = $/GFX/Unit/Descriptor_Unit_M3_ETAS_US
+    Number = 1
+)
+
+Descriptor_Deck_Pack_M41C_Caxias_BRZ_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Unit = $/GFX/Unit/Descriptor_Unit_M41C_Caxias_BRZ
+    Number = 1
+)
+
+Descriptor_Deck_Pack_M41C_Caxias_CMD_BRZ_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Unit = $/GFX/Unit/Descriptor_Unit_M41C_Caxias_CMD_BRZ
+    Number = 1
+)
+
+Descriptor_Deck_Pack_M41_DK1_Walker_reco_DK_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Unit = $/GFX/Unit/Descriptor_Unit_M41_DK1_Walker_reco_DK
     Number = 1
 )
 
@@ -7891,6 +9810,19 @@ Descriptor_Deck_Pack_M42_Duster_US_1_1 is DeckPackDescriptor
 (
     Xp = 1
     Unit = $/GFX/Unit/Descriptor_Unit_M42_Duster_US
+    Number = 1
+)
+
+Descriptor_Deck_Pack_M462_CMD_COL_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Unit = $/GFX/Unit/Descriptor_Unit_M462_CMD_COL
+    Number = 1
+)
+
+Descriptor_Deck_Pack_M462_Nimrod_COL_0_1 is DeckPackDescriptor
+(
+    Unit = $/GFX/Unit/Descriptor_Unit_M462_Nimrod_COL
     Number = 1
 )
 
@@ -8068,6 +10000,12 @@ Descriptor_Deck_Pack_M551A1_ACAV_Sheridan_US_1_1 is DeckPackDescriptor
     Number = 1
 )
 
+Descriptor_Deck_Pack_M551A1_TTS_Sheridan_US_0_1 is DeckPackDescriptor
+(
+    Unit = $/GFX/Unit/Descriptor_Unit_M551A1_TTS_Sheridan_US
+    Number = 1
+)
+
 Descriptor_Deck_Pack_M551A1_TTS_Sheridan_US_1_1 is DeckPackDescriptor
 (
     Xp = 1
@@ -8176,6 +10114,34 @@ Descriptor_Deck_Pack_M60A1_RISE_Passive_CMD_US_1_1 is DeckPackDescriptor
     Number = 1
 )
 
+Descriptor_Deck_Pack_M60A1_RISE_Passive_USMCR_US_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Unit = $/GFX/Unit/Descriptor_Unit_M60A1_RISE_Passive_USMCR_US
+    Number = 1
+)
+
+Descriptor_Deck_Pack_M60A1_RISE_Passive_USMC_CMD_US_2_1 is DeckPackDescriptor
+(
+    Xp = 2
+    Unit = $/GFX/Unit/Descriptor_Unit_M60A1_RISE_Passive_USMC_CMD_US
+    Number = 1
+)
+
+Descriptor_Deck_Pack_M60A1_RISE_Passive_USMC_ERA_US_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Unit = $/GFX/Unit/Descriptor_Unit_M60A1_RISE_Passive_USMC_ERA_US
+    Number = 1
+)
+
+Descriptor_Deck_Pack_M60A1_RISE_Passive_USMC_US_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Unit = $/GFX/Unit/Descriptor_Unit_M60A1_RISE_Passive_USMC_US
+    Number = 1
+)
+
 Descriptor_Deck_Pack_M60A1_RISE_Passive_US_1_1 is DeckPackDescriptor
 (
     Xp = 1
@@ -8238,6 +10204,13 @@ Descriptor_Deck_Pack_M60A3_Patton_US_2_999 is DeckPackDescriptor
     Number = 999
 )
 
+Descriptor_Deck_Pack_M728A1_CEV_US_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Unit = $/GFX/Unit/Descriptor_Unit_M728A1_CEV_US
+    Number = 1
+)
+
 Descriptor_Deck_Pack_M728_CEV_US_0_1 is DeckPackDescriptor
 (
     Unit = $/GFX/Unit/Descriptor_Unit_M728_CEV_US
@@ -8254,6 +10227,18 @@ Descriptor_Deck_Pack_M728_CEV_US_2_999 is DeckPackDescriptor
 Descriptor_Deck_Pack_M812_supply_US_0_1 is DeckPackDescriptor
 (
     Unit = $/GFX/Unit/Descriptor_Unit_M812_supply_US
+    Number = 1
+)
+
+Descriptor_Deck_Pack_M8_Greyhound_ITOW_COL_0_1 is DeckPackDescriptor
+(
+    Unit = $/GFX/Unit/Descriptor_Unit_M8_Greyhound_ITOW_COL
+    Number = 1
+)
+
+Descriptor_Deck_Pack_M8_Greyhound_reco_COL_0_1 is DeckPackDescriptor
+(
+    Unit = $/GFX/Unit/Descriptor_Unit_M8_Greyhound_reco_COL
     Number = 1
 )
 
@@ -8306,6 +10291,18 @@ Descriptor_Deck_Pack_M901_TOW_US_1_999 is DeckPackDescriptor
     Number = 999
 )
 
+Descriptor_Deck_Pack_M925_supply_COL_0_1 is DeckPackDescriptor
+(
+    Unit = $/GFX/Unit/Descriptor_Unit_M925_supply_COL
+    Number = 1
+)
+
+Descriptor_Deck_Pack_M992A2_supply_US_0_1 is DeckPackDescriptor
+(
+    Unit = $/GFX/Unit/Descriptor_Unit_M992A2_supply_US
+    Number = 1
+)
+
 Descriptor_Deck_Pack_M998_Avenger_US_1_1 is DeckPackDescriptor
 (
     Xp = 1
@@ -8324,6 +10321,14 @@ Descriptor_Deck_Pack_MANPAD_Blowpipe_UK_LandRover_UK_0_1 is DeckPackDescriptor
 (
     Transport = $/GFX/Unit/Descriptor_Unit_LandRover_UK
     Unit = $/GFX/Unit/Descriptor_Unit_MANPAD_Blowpipe_UK
+    Number = 1
+)
+
+Descriptor_Deck_Pack_MANPAD_Igla_Cuba_SOV_BTR_60_SOV_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Transport = $/GFX/Unit/Descriptor_Unit_BTR_60_SOV
+    Unit = $/GFX/Unit/Descriptor_Unit_MANPAD_Igla_Cuba_SOV
     Number = 1
 )
 
@@ -8350,11 +10355,27 @@ Descriptor_Deck_Pack_MANPAD_Igla_DShV_SOV_GTMU_1D_ZU_SOV_1_1 is DeckPackDescript
     Number = 1
 )
 
+Descriptor_Deck_Pack_MANPAD_Igla_DShV_SOV_Mi_8TV_non_arme_SOV_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Transport = $/GFX/Unit/Descriptor_Unit_Mi_8TV_non_arme_SOV
+    Unit = $/GFX/Unit/Descriptor_Unit_MANPAD_Igla_DShV_SOV
+    Number = 1
+)
+
 Descriptor_Deck_Pack_MANPAD_Igla_Gvardeitsy_SOV_UAZ_469_SOV_1_1 is DeckPackDescriptor
 (
     Xp = 1
     Transport = $/GFX/Unit/Descriptor_Unit_UAZ_469_SOV
     Unit = $/GFX/Unit/Descriptor_Unit_MANPAD_Igla_Gvardeitsy_SOV
+    Number = 1
+)
+
+Descriptor_Deck_Pack_MANPAD_Igla_Naval_VDV_SOV_UAZ_469_SOV_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Transport = $/GFX/Unit/Descriptor_Unit_UAZ_469_SOV
+    Unit = $/GFX/Unit/Descriptor_Unit_MANPAD_Igla_Naval_VDV_SOV
     Number = 1
 )
 
@@ -8566,6 +10587,21 @@ Descriptor_Deck_Pack_MANPAD_Mistral_para_FR_VLTT_P4_FR_1_1 is DeckPackDescriptor
     Number = 1
 )
 
+Descriptor_Deck_Pack_MANPAD_Redeye_DK_LandRover_DK_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Transport = $/GFX/Unit/Descriptor_Unit_LandRover_DK
+    Unit = $/GFX/Unit/Descriptor_Unit_MANPAD_Redeye_DK
+    Number = 1
+)
+
+Descriptor_Deck_Pack_MANPAD_Redeye_RFA_Iltis_trans_RFA_0_1 is DeckPackDescriptor
+(
+    Transport = $/GFX/Unit/Descriptor_Unit_Iltis_trans_RFA
+    Unit = $/GFX/Unit/Descriptor_Unit_MANPAD_Redeye_RFA
+    Number = 1
+)
+
 Descriptor_Deck_Pack_MANPAD_Redeye_RFA_Iltis_trans_RFA_1_1 is DeckPackDescriptor
 (
     Xp = 1
@@ -8606,6 +10642,14 @@ Descriptor_Deck_Pack_MANPAD_Stinger_C_Aero_US_M998_Humvee_US_1_1 is DeckPackDesc
     Number = 1
 )
 
+Descriptor_Deck_Pack_MANPAD_Stinger_C_DK_LandRover_DK_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Transport = $/GFX/Unit/Descriptor_Unit_LandRover_DK
+    Unit = $/GFX/Unit/Descriptor_Unit_MANPAD_Stinger_C_DK
+    Number = 1
+)
+
 Descriptor_Deck_Pack_MANPAD_Stinger_C_NL_LandRover_NL_1_1 is DeckPackDescriptor
 (
     Xp = 1
@@ -8620,6 +10664,22 @@ Descriptor_Deck_Pack_MANPAD_Stinger_C_NL_LandRover_NL_1_8 is DeckPackDescriptor
     Transport = $/GFX/Unit/Descriptor_Unit_LandRover_NL
     Unit = $/GFX/Unit/Descriptor_Unit_MANPAD_Stinger_C_NL
     Number = 8
+)
+
+Descriptor_Deck_Pack_MANPAD_Stinger_C_USMCR_US_M998_Humvee_US_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Transport = $/GFX/Unit/Descriptor_Unit_M998_Humvee_US
+    Unit = $/GFX/Unit/Descriptor_Unit_MANPAD_Stinger_C_USMCR_US
+    Number = 1
+)
+
+Descriptor_Deck_Pack_MANPAD_Stinger_C_USMC_US_M998_Humvee_US_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Transport = $/GFX/Unit/Descriptor_Unit_M998_Humvee_US
+    Unit = $/GFX/Unit/Descriptor_Unit_MANPAD_Stinger_C_USMC_US
+    Number = 1
 )
 
 Descriptor_Deck_Pack_MANPAD_Stinger_C_US_CUCV_trans_US_1_1 is DeckPackDescriptor
@@ -8665,6 +10725,21 @@ Descriptor_Deck_Pack_MANPAD_Stinger_C_US_M151_MUTT_trans_US_2_999 is DeckPackDes
 Descriptor_Deck_Pack_MANPAD_Stinger_C_US_M998_Humvee_US_0_1 is DeckPackDescriptor
 (
     Transport = $/GFX/Unit/Descriptor_Unit_M998_Humvee_US
+    Unit = $/GFX/Unit/Descriptor_Unit_MANPAD_Stinger_C_US
+    Number = 1
+)
+
+Descriptor_Deck_Pack_MANPAD_Stinger_C_US_M998_Humvee_US_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Transport = $/GFX/Unit/Descriptor_Unit_M998_Humvee_US
+    Unit = $/GFX/Unit/Descriptor_Unit_MANPAD_Stinger_C_US
+    Number = 1
+)
+
+Descriptor_Deck_Pack_MANPAD_Stinger_C_US_Quadbike_Yamaha_Moto4_US_0_1 is DeckPackDescriptor
+(
+    Transport = $/GFX/Unit/Descriptor_Unit_Quadbike_Yamaha_Moto4_US
     Unit = $/GFX/Unit/Descriptor_Unit_MANPAD_Stinger_C_US
     Number = 1
 )
@@ -8746,6 +10821,14 @@ Descriptor_Deck_Pack_MANPAD_Strela_2M_POL_OT_64_SKOT_2P_POL_0_1 is DeckPackDescr
     Number = 1
 )
 
+Descriptor_Deck_Pack_MANPAD_Strela_2M_POL_OT_64_SKOT_2P_POL_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Transport = $/GFX/Unit/Descriptor_Unit_OT_64_SKOT_2P_POL
+    Unit = $/GFX/Unit/Descriptor_Unit_MANPAD_Strela_2M_POL
+    Number = 1
+)
+
 Descriptor_Deck_Pack_MANPAD_Strela_2M_POL_UAZ_469_trans_POL_3_12 is DeckPackDescriptor
 (
     Xp = 3
@@ -8759,6 +10842,22 @@ Descriptor_Deck_Pack_MANPAD_Strela_2M_Para_POL_UAZ_469_trans_POL_2_1 is DeckPack
     Xp = 2
     Transport = $/GFX/Unit/Descriptor_Unit_UAZ_469_trans_POL
     Unit = $/GFX/Unit/Descriptor_Unit_MANPAD_Strela_2M_Para_POL
+    Number = 1
+)
+
+Descriptor_Deck_Pack_MANPAD_Strela_2M_Para_VEN_Pinzgauer_712_trans_VEN_3_1 is DeckPackDescriptor
+(
+    Xp = 3
+    Transport = $/GFX/Unit/Descriptor_Unit_Pinzgauer_712_trans_VEN
+    Unit = $/GFX/Unit/Descriptor_Unit_MANPAD_Strela_2M_Para_VEN
+    Number = 1
+)
+
+Descriptor_Deck_Pack_MANPAD_Strela_2M_Reserve_SOV_UAZ_452_SOV_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Transport = $/GFX/Unit/Descriptor_Unit_UAZ_452_SOV
+    Unit = $/GFX/Unit/Descriptor_Unit_MANPAD_Strela_2M_Reserve_SOV
     Number = 1
 )
 
@@ -8801,6 +10900,12 @@ Descriptor_Deck_Pack_MANPAD_Strela_3_SOV_UAZ_469_SOV_1_1 is DeckPackDescriptor
     Number = 1
 )
 
+Descriptor_Deck_Pack_MAN_630_L2AE_supply_RFA_0_1 is DeckPackDescriptor
+(
+    Unit = $/GFX/Unit/Descriptor_Unit_MAN_630_L2AE_supply_RFA
+    Number = 1
+)
+
 Descriptor_Deck_Pack_MAN_Kat_6x6_RFA_0_1 is DeckPackDescriptor
 (
     Unit = $/GFX/Unit/Descriptor_Unit_MAN_Kat_6x6_RFA
@@ -8818,6 +10923,12 @@ Descriptor_Deck_Pack_MAN_Kat_6x6_supply_CAN_0_999 is DeckPackDescriptor
 (
     Unit = $/GFX/Unit/Descriptor_Unit_MAN_Kat_6x6_supply_CAN
     Number = 999
+)
+
+Descriptor_Deck_Pack_MAN_Kat_8x8_Roland_RFA_0_1 is DeckPackDescriptor
+(
+    Unit = $/GFX/Unit/Descriptor_Unit_MAN_Kat_8x8_Roland_RFA
+    Number = 1
 )
 
 Descriptor_Deck_Pack_MAN_Z311_BEL_0_1 is DeckPackDescriptor
@@ -8846,6 +10957,26 @@ Descriptor_Deck_Pack_MAZ_535A_supply_SOV_0_1 is DeckPackDescriptor
     Number = 1
 )
 
+Descriptor_Deck_Pack_MB3_Tamoyo_I_BRZ_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Unit = $/GFX/Unit/Descriptor_Unit_MB3_Tamoyo_I_BRZ
+    Number = 1
+)
+
+Descriptor_Deck_Pack_MD500_RKT_COL_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Unit = $/GFX/Unit/Descriptor_Unit_MD500_RKT_COL
+    Number = 1
+)
+
+Descriptor_Deck_Pack_MD_Jupiter_supply_DK_0_1 is DeckPackDescriptor
+(
+    Unit = $/GFX/Unit/Descriptor_Unit_MD_Jupiter_supply_DK
+    Number = 1
+)
+
 Descriptor_Deck_Pack_MFRW_RM70_DDR_0_1 is DeckPackDescriptor
 (
     Unit = $/GFX/Unit/Descriptor_Unit_MFRW_RM70_DDR
@@ -8856,6 +10987,13 @@ Descriptor_Deck_Pack_MH_60A_DAP_US_3_1 is DeckPackDescriptor
 (
     Xp = 3
     Unit = $/GFX/Unit/Descriptor_Unit_MH_60A_DAP_US
+    Number = 1
+)
+
+Descriptor_Deck_Pack_MLRS_108R_BRZ_F85_Rural_trans_BRZ_0_1 is DeckPackDescriptor
+(
+    Transport = $/GFX/Unit/Descriptor_Unit_F85_Rural_trans_BRZ
+    Unit = $/GFX/Unit/Descriptor_Unit_MLRS_108R_BRZ
     Number = 1
 )
 
@@ -8922,6 +11060,14 @@ Descriptor_Deck_Pack_MP_RCL_US_M998_Humvee_US_1_1 is DeckPackDescriptor
     Number = 1
 )
 
+Descriptor_Deck_Pack_MP_SOV_UAZ_469_MP_SOV_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Transport = $/GFX/Unit/Descriptor_Unit_UAZ_469_MP_SOV
+    Unit = $/GFX/Unit/Descriptor_Unit_MP_SOV
+    Number = 1
+)
+
 Descriptor_Deck_Pack_MQM_105_Aquila_US_1_1 is DeckPackDescriptor
 (
     Xp = 1
@@ -8949,6 +11095,13 @@ Descriptor_Deck_Pack_MTLB_CMD_SOV_1_999 is DeckPackDescriptor
     Number = 999
 )
 
+Descriptor_Deck_Pack_MTLB_Shturm_Ataka_SOV_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Unit = $/GFX/Unit/Descriptor_Unit_MTLB_Shturm_Ataka_SOV
+    Number = 1
+)
+
 Descriptor_Deck_Pack_MTLB_Shturm_DDR_0_1 is DeckPackDescriptor
 (
     Unit = $/GFX/Unit/Descriptor_Unit_MTLB_Shturm_DDR
@@ -8971,6 +11124,13 @@ Descriptor_Deck_Pack_MTLB_Strela10_DDR_1_1 is DeckPackDescriptor
 (
     Xp = 1
     Unit = $/GFX/Unit/Descriptor_Unit_MTLB_Strela10_DDR
+    Number = 1
+)
+
+Descriptor_Deck_Pack_MTLB_Strela10_Naval_SOV_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Unit = $/GFX/Unit/Descriptor_Unit_MTLB_Strela10_Naval_SOV
     Number = 1
 )
 
@@ -9029,6 +11189,19 @@ Descriptor_Deck_Pack_MTLB_Strela10_TCH_1_999 is DeckPackDescriptor
     Number = 999
 )
 
+Descriptor_Deck_Pack_MTLB_Taran_SIGINT_SOV_0_1 is DeckPackDescriptor
+(
+    Unit = $/GFX/Unit/Descriptor_Unit_MTLB_Taran_SIGINT_SOV
+    Number = 1
+)
+
+Descriptor_Deck_Pack_MTLB_Taran_SIGINT_SOV_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Unit = $/GFX/Unit/Descriptor_Unit_MTLB_Taran_SIGINT_SOV
+    Number = 1
+)
+
 Descriptor_Deck_Pack_MTLB_Vasilek_SOV_1_1 is DeckPackDescriptor
 (
     Xp = 1
@@ -9061,13 +11234,6 @@ Descriptor_Deck_Pack_MTLB_supply_SOV_0_999 is DeckPackDescriptor
     Number = 999
 )
 
-Descriptor_Deck_Pack_MTLB_supply_SOV_1_1 is DeckPackDescriptor
-(
-    Xp = 1
-    Unit = $/GFX/Unit/Descriptor_Unit_MTLB_supply_SOV
-    Number = 1
-)
-
 Descriptor_Deck_Pack_MTLB_supply_SOV_2_999 is DeckPackDescriptor
 (
     Xp = 2
@@ -9075,11 +11241,23 @@ Descriptor_Deck_Pack_MTLB_supply_SOV_2_999 is DeckPackDescriptor
     Number = 999
 )
 
+Descriptor_Deck_Pack_Marder_1A3_reco_RFA_0_1 is DeckPackDescriptor
+(
+    Unit = $/GFX/Unit/Descriptor_Unit_Marder_1A3_reco_RFA
+    Number = 1
+)
+
 Descriptor_Deck_Pack_Marder_Roland_2_RFA_1_999 is DeckPackDescriptor
 (
     Xp = 1
     Unit = $/GFX/Unit/Descriptor_Unit_Marder_Roland_2_RFA
     Number = 999
+)
+
+Descriptor_Deck_Pack_Marder_Roland_BRZ_0_1 is DeckPackDescriptor
+(
+    Unit = $/GFX/Unit/Descriptor_Unit_Marder_Roland_BRZ
+    Number = 1
 )
 
 Descriptor_Deck_Pack_Marder_Roland_RFA_0_1 is DeckPackDescriptor
@@ -9096,6 +11274,14 @@ Descriptor_Deck_Pack_Marines_NL_DAF_YA_4400_NL_1_1 is DeckPackDescriptor
     Number = 1
 )
 
+Descriptor_Deck_Pack_Mech_Rifles_AT4_VEN_M35_trans_VEN_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Transport = $/GFX/Unit/Descriptor_Unit_M35_trans_VEN
+    Unit = $/GFX/Unit/Descriptor_Unit_Mech_Rifles_AT4_VEN
+    Number = 1
+)
+
 Descriptor_Deck_Pack_Mech_Rifles_AT_BEL_AIFV_B_50_BEL_1_1 is DeckPackDescriptor
 (
     Xp = 1
@@ -9109,6 +11295,14 @@ Descriptor_Deck_Pack_Mech_Rifles_CMD_BEL_AIFV_B_50_BEL_1_1 is DeckPackDescriptor
     Xp = 1
     Transport = $/GFX/Unit/Descriptor_Unit_AIFV_B_50_BEL
     Unit = $/GFX/Unit/Descriptor_Unit_Mech_Rifles_CMD_BEL
+    Number = 1
+)
+
+Descriptor_Deck_Pack_Mech_Rifles_CMD_COL_EE11_Urutu_COL_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Transport = $/GFX/Unit/Descriptor_Unit_EE11_Urutu_COL
+    Unit = $/GFX/Unit/Descriptor_Unit_Mech_Rifles_CMD_COL
     Number = 1
 )
 
@@ -9176,10 +11370,47 @@ Descriptor_Deck_Pack_Mech_Rifles_MG_BEL_AIFV_B_C25_BEL_1_1 is DeckPackDescriptor
     Number = 1
 )
 
-Descriptor_Deck_Pack_MiG_21bis_AA2_DDR_1_1 is DeckPackDescriptor
+Descriptor_Deck_Pack_Mech_Rifles_RPG18_CUB_BMP_1_SP2_CUB_1_1 is DeckPackDescriptor
 (
     Xp = 1
-    Unit = $/GFX/Unit/Descriptor_Unit_MiG_21bis_AA2_DDR
+    Transport = $/GFX/Unit/Descriptor_Unit_BMP_1_SP2_CUB
+    Unit = $/GFX/Unit/Descriptor_Unit_Mech_Rifles_RPG18_CUB
+    Number = 1
+)
+
+Descriptor_Deck_Pack_Mech_Rifles_RPG7_CUB_BTR_60_CUB_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Transport = $/GFX/Unit/Descriptor_Unit_BTR_60_CUB
+    Unit = $/GFX/Unit/Descriptor_Unit_Mech_Rifles_RPG7_CUB
+    Number = 1
+)
+
+Descriptor_Deck_Pack_Mech_Rifles_VEN_AMX_13_mod56_VCI_VEN_0_1 is DeckPackDescriptor
+(
+    Transport = $/GFX/Unit/Descriptor_Unit_AMX_13_mod56_VCI_VEN
+    Unit = $/GFX/Unit/Descriptor_Unit_Mech_Rifles_VEN
+    Number = 1
+)
+
+Descriptor_Deck_Pack_MiG_21F_CUB_2_1 is DeckPackDescriptor
+(
+    Xp = 2
+    Unit = $/GFX/Unit/Descriptor_Unit_MiG_21F_CUB
+    Number = 1
+)
+
+Descriptor_Deck_Pack_MiG_21F_HE_CUB_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Unit = $/GFX/Unit/Descriptor_Unit_MiG_21F_HE_CUB
+    Number = 1
+)
+
+Descriptor_Deck_Pack_MiG_21PFM_AA_DDR_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Unit = $/GFX/Unit/Descriptor_Unit_MiG_21PFM_AA_DDR
     Number = 1
 )
 
@@ -9222,6 +11453,13 @@ Descriptor_Deck_Pack_MiG_21bis_POL_2_1 is DeckPackDescriptor
 (
     Xp = 2
     Unit = $/GFX/Unit/Descriptor_Unit_MiG_21bis_POL
+    Number = 1
+)
+
+Descriptor_Deck_Pack_MiG_23BN_AT_CUB_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Unit = $/GFX/Unit/Descriptor_Unit_MiG_23BN_AT_CUB
     Number = 1
 )
 
@@ -9316,6 +11554,13 @@ Descriptor_Deck_Pack_MiG_23MLD_AA1_SOV_2_999 is DeckPackDescriptor
     Number = 999
 )
 
+Descriptor_Deck_Pack_MiG_23MLD_CCE_SOV_2_1 is DeckPackDescriptor
+(
+    Xp = 2
+    Unit = $/GFX/Unit/Descriptor_Unit_MiG_23MLD_CCE_SOV
+    Number = 1
+)
+
 Descriptor_Deck_Pack_MiG_23MLD_SOV_1_1 is DeckPackDescriptor
 (
     Xp = 1
@@ -9365,6 +11610,13 @@ Descriptor_Deck_Pack_MiG_25BM_SOV_1_999 is DeckPackDescriptor
     Number = 999
 )
 
+Descriptor_Deck_Pack_MiG_25PD_SOV_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Unit = $/GFX/Unit/Descriptor_Unit_MiG_25PD_SOV
+    Number = 1
+)
+
 Descriptor_Deck_Pack_MiG_25RBF_SOV_1_1 is DeckPackDescriptor
 (
     Xp = 1
@@ -9407,6 +11659,20 @@ Descriptor_Deck_Pack_MiG_27M_bombe_SOV_1_1 is DeckPackDescriptor
     Number = 1
 )
 
+Descriptor_Deck_Pack_MiG_29S_SOV_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Unit = $/GFX/Unit/Descriptor_Unit_MiG_29S_SOV
+    Number = 1
+)
+
+Descriptor_Deck_Pack_MiG_29_9_13_CCE_SOV_2_1 is DeckPackDescriptor
+(
+    Xp = 2
+    Unit = $/GFX/Unit/Descriptor_Unit_MiG_29_9_13_CCE_SOV
+    Number = 1
+)
+
 Descriptor_Deck_Pack_MiG_29_9_13_SOV_1_1 is DeckPackDescriptor
 (
     Xp = 1
@@ -9425,6 +11691,13 @@ Descriptor_Deck_Pack_MiG_29_AA3_SOV_1_1 is DeckPackDescriptor
 (
     Xp = 1
     Unit = $/GFX/Unit/Descriptor_Unit_MiG_29_AA3_SOV
+    Number = 1
+)
+
+Descriptor_Deck_Pack_MiG_29_AA_CUB_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Unit = $/GFX/Unit/Descriptor_Unit_MiG_29_AA_CUB
     Number = 1
 )
 
@@ -9477,10 +11750,45 @@ Descriptor_Deck_Pack_Mi_14PL_AT_DDR_1_1 is DeckPackDescriptor
     Number = 1
 )
 
+Descriptor_Deck_Pack_Mi_14PL_recon_SOV_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Unit = $/GFX/Unit/Descriptor_Unit_Mi_14PL_recon_SOV
+    Number = 1
+)
+
+Descriptor_Deck_Pack_Mi_14PS_recon_SOV_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Unit = $/GFX/Unit/Descriptor_Unit_Mi_14PS_recon_SOV
+    Number = 1
+)
+
+Descriptor_Deck_Pack_Mi_14PS_supply_SOV_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Unit = $/GFX/Unit/Descriptor_Unit_Mi_14PS_supply_SOV
+    Number = 1
+)
+
+Descriptor_Deck_Pack_Mi_24A_SOV_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Unit = $/GFX/Unit/Descriptor_Unit_Mi_24A_SOV
+    Number = 1
+)
+
 Descriptor_Deck_Pack_Mi_24D_AA_DDR_2_1 is DeckPackDescriptor
 (
     Xp = 2
     Unit = $/GFX/Unit/Descriptor_Unit_Mi_24D_AA_DDR
+    Number = 1
+)
+
+Descriptor_Deck_Pack_Mi_24D_CUB_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Unit = $/GFX/Unit/Descriptor_Unit_Mi_24D_CUB
     Number = 1
 )
 
@@ -9551,6 +11859,20 @@ Descriptor_Deck_Pack_Mi_24P_AA_SOV_1_1 is DeckPackDescriptor
 (
     Xp = 1
     Unit = $/GFX/Unit/Descriptor_Unit_Mi_24P_AA_SOV
+    Number = 1
+)
+
+Descriptor_Deck_Pack_Mi_24P_Atakax4_SOV_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Unit = $/GFX/Unit/Descriptor_Unit_Mi_24P_Atakax4_SOV
+    Number = 1
+)
+
+Descriptor_Deck_Pack_Mi_24P_Atakax8_SOV_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Unit = $/GFX/Unit/Descriptor_Unit_Mi_24P_Atakax8_SOV
     Number = 1
 )
 
@@ -9770,6 +12092,12 @@ Descriptor_Deck_Pack_Mi_6_POL_1_1 is DeckPackDescriptor
     Number = 1
 )
 
+Descriptor_Deck_Pack_Mi_6_SOV_0_1 is DeckPackDescriptor
+(
+    Unit = $/GFX/Unit/Descriptor_Unit_Mi_6_SOV
+    Number = 1
+)
+
 Descriptor_Deck_Pack_Mi_6_SOV_1_1 is DeckPackDescriptor
 (
     Xp = 1
@@ -9794,6 +12122,13 @@ Descriptor_Deck_Pack_Mi_8K_CMD_SOV_2_2 is DeckPackDescriptor
 Descriptor_Deck_Pack_Mi_8MTPI_SOV_0_1 is DeckPackDescriptor
 (
     Unit = $/GFX/Unit/Descriptor_Unit_Mi_8MTPI_SOV
+    Number = 1
+)
+
+Descriptor_Deck_Pack_Mi_8MTV_Berkut_SOV_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Unit = $/GFX/Unit/Descriptor_Unit_Mi_8MTV_Berkut_SOV
     Number = 1
 )
 
@@ -9835,6 +12170,13 @@ Descriptor_Deck_Pack_Mi_8R_TCH_1_1 is DeckPackDescriptor
 (
     Xp = 1
     Unit = $/GFX/Unit/Descriptor_Unit_Mi_8R_TCH
+    Number = 1
+)
+
+Descriptor_Deck_Pack_Mi_8TARK_reco_SOV_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Unit = $/GFX/Unit/Descriptor_Unit_Mi_8TARK_reco_SOV
     Number = 1
 )
 
@@ -9884,13 +12226,6 @@ Descriptor_Deck_Pack_Mi_8TV_PodGatling_PodAGL_SOV_1_1 is DeckPackDescriptor
 (
     Xp = 1
     Unit = $/GFX/Unit/Descriptor_Unit_Mi_8TV_PodGatling_PodAGL_SOV
-    Number = 1
-)
-
-Descriptor_Deck_Pack_Mi_8TV_SOV_1_1 is DeckPackDescriptor
-(
-    Xp = 1
-    Unit = $/GFX/Unit/Descriptor_Unit_Mi_8TV_SOV
     Number = 1
 )
 
@@ -9998,13 +12333,6 @@ Descriptor_Deck_Pack_Mi_8TZ_SOV_0_1 is DeckPackDescriptor
     Number = 1
 )
 
-Descriptor_Deck_Pack_Mi_8TZ_SOV_1_1 is DeckPackDescriptor
-(
-    Xp = 1
-    Unit = $/GFX/Unit/Descriptor_Unit_Mi_8TZ_SOV
-    Number = 1
-)
-
 Descriptor_Deck_Pack_Mi_8TZ_SOV_1_999 is DeckPackDescriptor
 (
     Xp = 1
@@ -10031,10 +12359,32 @@ Descriptor_Deck_Pack_Mi_8_supply_DDR_0_1 is DeckPackDescriptor
     Number = 1
 )
 
+Descriptor_Deck_Pack_Militia_DK_Bedford_MJ_4t_trans_DK_0_1 is DeckPackDescriptor
+(
+    Transport = $/GFX/Unit/Descriptor_Unit_Bedford_MJ_4t_trans_DK
+    Unit = $/GFX/Unit/Descriptor_Unit_Militia_DK
+    Number = 1
+)
+
 Descriptor_Deck_Pack_Militia_TCH_Praga_V3S_TCH_0_1 is DeckPackDescriptor
 (
     Transport = $/GFX/Unit/Descriptor_Unit_Praga_V3S_TCH
     Unit = $/GFX/Unit/Descriptor_Unit_Militia_TCH
+    Number = 1
+)
+
+Descriptor_Deck_Pack_Militsiya_CMD_SOV_UAZ_469_MVD_SOV_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Transport = $/GFX/Unit/Descriptor_Unit_UAZ_469_MVD_SOV
+    Unit = $/GFX/Unit/Descriptor_Unit_Militsiya_CMD_SOV
+    Number = 1
+)
+
+Descriptor_Deck_Pack_Mirage_2000_C_CASCAD_FR_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Unit = $/GFX/Unit/Descriptor_Unit_Mirage_2000_C_CASCAD_FR
     Number = 1
 )
 
@@ -10066,6 +12416,13 @@ Descriptor_Deck_Pack_Mirage_2000_C_RDM_AA2_FR_1_1 is DeckPackDescriptor
     Number = 1
 )
 
+Descriptor_Deck_Pack_Mirage_50_EV_VEN_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Unit = $/GFX/Unit/Descriptor_Unit_Mirage_50_EV_VEN
+    Number = 1
+)
+
 Descriptor_Deck_Pack_Mirage_5_BA_BEL_1_1 is DeckPackDescriptor
 (
     Xp = 1
@@ -10094,6 +12451,13 @@ Descriptor_Deck_Pack_Mirage_5_BA_RKT_BEL_1_1 is DeckPackDescriptor
     Number = 1
 )
 
+Descriptor_Deck_Pack_Mirage_5_COA_COL_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Unit = $/GFX/Unit/Descriptor_Unit_Mirage_5_COA_COL
+    Number = 1
+)
+
 Descriptor_Deck_Pack_Mirage_5_F_FR_1_1 is DeckPackDescriptor
 (
     Xp = 1
@@ -10106,6 +12470,20 @@ Descriptor_Deck_Pack_Mirage_5_F_clu_FR_1_999 is DeckPackDescriptor
     Xp = 1
     Unit = $/GFX/Unit/Descriptor_Unit_Mirage_5_F_clu_FR
     Number = 999
+)
+
+Descriptor_Deck_Pack_Mirage_5_V_VEN_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Unit = $/GFX/Unit/Descriptor_Unit_Mirage_5_V_VEN
+    Number = 1
+)
+
+Descriptor_Deck_Pack_Mirage_F1_C_CLU_FR_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Unit = $/GFX/Unit/Descriptor_Unit_Mirage_F1_C_CLU_FR
+    Number = 1
 )
 
 Descriptor_Deck_Pack_Mirage_F1_C_ESP_1_1 is DeckPackDescriptor
@@ -10129,6 +12507,13 @@ Descriptor_Deck_Pack_Mirage_F1_C_HE_CLU_ESP_1_1 is DeckPackDescriptor
     Number = 1
 )
 
+Descriptor_Deck_Pack_Mirage_F1_C_HE_FR_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Unit = $/GFX/Unit/Descriptor_Unit_Mirage_F1_C_HE_FR
+    Number = 1
+)
+
 Descriptor_Deck_Pack_Mirage_F1_E_AA2_ESP_1_1 is DeckPackDescriptor
 (
     Xp = 1
@@ -10140,6 +12525,13 @@ Descriptor_Deck_Pack_Mirage_F1_E_AA_ESP_1_1 is DeckPackDescriptor
 (
     Xp = 1
     Unit = $/GFX/Unit/Descriptor_Unit_Mirage_F1_E_AA_ESP
+    Number = 1
+)
+
+Descriptor_Deck_Pack_Mirage_III_E_BRZ_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Unit = $/GFX/Unit/Descriptor_Unit_Mirage_III_E_BRZ
     Number = 1
 )
 
@@ -10161,6 +12553,13 @@ Descriptor_Deck_Pack_Mirage_III_E_SEAD_FR_2_1 is DeckPackDescriptor
 (
     Xp = 2
     Unit = $/GFX/Unit/Descriptor_Unit_Mirage_III_E_SEAD_FR
+    Number = 1
+)
+
+Descriptor_Deck_Pack_Mirage_III_E_upgrade_BRZ_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Unit = $/GFX/Unit/Descriptor_Unit_Mirage_III_E_upgrade_BRZ
     Number = 1
 )
 
@@ -10217,12 +12616,28 @@ Descriptor_Deck_Pack_Mortier_107mm_para_BEL_Unimog_U1350L_BEL_2_10 is DeckPackDe
     Number = 10
 )
 
+Descriptor_Deck_Pack_Mortier_120mm_vz82_TCH_Praga_V3S_TCH_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Transport = $/GFX/Unit/Descriptor_Unit_Praga_V3S_TCH
+    Unit = $/GFX/Unit/Descriptor_Unit_Mortier_120mm_vz82_TCH
+    Number = 1
+)
+
 Descriptor_Deck_Pack_Mortier_120mm_vz82_TCH_UAZ_469_trans_TCH_1_999 is DeckPackDescriptor
 (
     Xp = 1
     Transport = $/GFX/Unit/Descriptor_Unit_UAZ_469_trans_TCH
     Unit = $/GFX/Unit/Descriptor_Unit_Mortier_120mm_vz82_TCH
     Number = 999
+)
+
+Descriptor_Deck_Pack_Mortier_2B14_82mm_VDV_SOV_LUAZ_967M_SOV_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Transport = $/GFX/Unit/Descriptor_Unit_LUAZ_967M_SOV
+    Unit = $/GFX/Unit/Descriptor_Unit_Mortier_2B14_82mm_VDV_SOV
+    Number = 1
 )
 
 Descriptor_Deck_Pack_Mortier_2B9_Vasilek_Para_POL_UAZ_469_trans_POL_1_1 is DeckPackDescriptor
@@ -10253,6 +12668,14 @@ Descriptor_Deck_Pack_Mortier_2B9_Vasilek_nonPara_SOV_GAZ_66_SOV_0_1 is DeckPackD
 (
     Transport = $/GFX/Unit/Descriptor_Unit_GAZ_66_SOV
     Unit = $/GFX/Unit/Descriptor_Unit_Mortier_2B9_Vasilek_nonPara_SOV
+    Number = 1
+)
+
+Descriptor_Deck_Pack_Mortier_2S12_120mm_Naval_VDV_SOV_UAZ_469_SOV_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Transport = $/GFX/Unit/Descriptor_Unit_UAZ_469_SOV
+    Unit = $/GFX/Unit/Descriptor_Unit_Mortier_2S12_120mm_Naval_VDV_SOV
     Number = 1
 )
 
@@ -10295,6 +12718,13 @@ Descriptor_Deck_Pack_Mortier_81mm_BEL_Iltis_trans_BEL_1_1 is DeckPackDescriptor
     Number = 1
 )
 
+Descriptor_Deck_Pack_Mortier_81mm_M1_COL_M151_MUTT_trans_COL_0_1 is DeckPackDescriptor
+(
+    Transport = $/GFX/Unit/Descriptor_Unit_M151_MUTT_trans_COL
+    Unit = $/GFX/Unit/Descriptor_Unit_Mortier_81mm_M1_COL
+    Number = 1
+)
+
 Descriptor_Deck_Pack_Mortier_81mm_para_BEL_Unimog_U1350L_BEL_2_10 is DeckPackDescriptor
 (
     Xp = 2
@@ -10316,6 +12746,20 @@ Descriptor_Deck_Pack_Mortier_82mm_vz52_TCH_UAZ_469_trans_TCH_1_999 is DeckPackDe
     Transport = $/GFX/Unit/Descriptor_Unit_UAZ_469_trans_TCH
     Unit = $/GFX/Unit/Descriptor_Unit_Mortier_82mm_vz52_TCH
     Number = 999
+)
+
+Descriptor_Deck_Pack_Mortier_BM37_82mm_CUB_GAZ_69_CUB_0_1 is DeckPackDescriptor
+(
+    Transport = $/GFX/Unit/Descriptor_Unit_GAZ_69_CUB
+    Unit = $/GFX/Unit/Descriptor_Unit_Mortier_BM37_82mm_CUB
+    Number = 1
+)
+
+Descriptor_Deck_Pack_Mortier_M43_160mm_POL_Star_266_POL_0_1 is DeckPackDescriptor
+(
+    Transport = $/GFX/Unit/Descriptor_Unit_Star_266_POL
+    Unit = $/GFX/Unit/Descriptor_Unit_Mortier_M43_160mm_POL
+    Number = 1
 )
 
 Descriptor_Deck_Pack_Mortier_M43_82mm_POL_UAZ_469_trans_POL_0_12 is DeckPackDescriptor
@@ -10425,6 +12869,13 @@ Descriptor_Deck_Pack_Mortier_PM43_120mm_SOV_Ural_4320_trans_SOV_0_1 is DeckPackD
     Number = 1
 )
 
+Descriptor_Deck_Pack_Mortier_PM43_120mm_SOV_ZIL_157_trans_SOV_0_1 is DeckPackDescriptor
+(
+    Transport = $/GFX/Unit/Descriptor_Unit_ZIL_157_trans_SOV
+    Unit = $/GFX/Unit/Descriptor_Unit_Mortier_PM43_120mm_SOV
+    Number = 1
+)
+
 Descriptor_Deck_Pack_Mortier_Tampella_120mm_RFA_Unimog_trans_RFA_0_1 is DeckPackDescriptor
 (
     Transport = $/GFX/Unit/Descriptor_Unit_Unimog_trans_RFA
@@ -10446,6 +12897,14 @@ Descriptor_Deck_Pack_Mortier_Tampella_120mm_para_RFA_Faun_kraka_RFA_1_10 is Deck
     Transport = $/GFX/Unit/Descriptor_Unit_Faun_kraka_RFA
     Unit = $/GFX/Unit/Descriptor_Unit_Mortier_Tampella_120mm_para_RFA
     Number = 10
+)
+
+Descriptor_Deck_Pack_MotRifles_BTR_DDR_BTR_60_DDR_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Transport = $/GFX/Unit/Descriptor_Unit_BTR_60_DDR
+    Unit = $/GFX/Unit/Descriptor_Unit_MotRifles_BTR_DDR
+    Number = 1
 )
 
 Descriptor_Deck_Pack_MotRifles_BTR_DDR_BTR_70_DDR_1_1 is DeckPackDescriptor
@@ -10471,6 +12930,21 @@ Descriptor_Deck_Pack_MotRifles_BTR_DDR_SPW_152K_DDR_0_1 is DeckPackDescriptor
     Number = 1
 )
 
+Descriptor_Deck_Pack_MotRifles_BTR_MVD_SOV_GAZ_53_trans_SOV_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Transport = $/GFX/Unit/Descriptor_Unit_GAZ_53_trans_SOV
+    Unit = $/GFX/Unit/Descriptor_Unit_MotRifles_BTR_MVD_SOV
+    Number = 1
+)
+
+Descriptor_Deck_Pack_MotRifles_BTR_SOV_BTR_60_SOV_0_1 is DeckPackDescriptor
+(
+    Transport = $/GFX/Unit/Descriptor_Unit_BTR_60_SOV
+    Unit = $/GFX/Unit/Descriptor_Unit_MotRifles_BTR_SOV
+    Number = 1
+)
+
 Descriptor_Deck_Pack_MotRifles_BTR_SOV_BTR_60_SOV_1_1 is DeckPackDescriptor
 (
     Xp = 1
@@ -10493,6 +12967,14 @@ Descriptor_Deck_Pack_MotRifles_BTR_SOV_GAZ_66_SOV_1_999 is DeckPackDescriptor
     Transport = $/GFX/Unit/Descriptor_Unit_GAZ_66_SOV
     Unit = $/GFX/Unit/Descriptor_Unit_MotRifles_BTR_SOV
     Number = 999
+)
+
+Descriptor_Deck_Pack_MotRifles_CMD_Cuba_SOV_BMP_1P_Konkurs_SOV_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Transport = $/GFX/Unit/Descriptor_Unit_BMP_1P_Konkurs_SOV
+    Unit = $/GFX/Unit/Descriptor_Unit_MotRifles_CMD_Cuba_SOV
+    Number = 1
 )
 
 Descriptor_Deck_Pack_MotRifles_CMD_DDR_BTR_70_DDR_1_1 is DeckPackDescriptor
@@ -10543,6 +13025,14 @@ Descriptor_Deck_Pack_MotRifles_CMD_SOV_BMP_1P_SOV_3_999 is DeckPackDescriptor
     Number = 999
 )
 
+Descriptor_Deck_Pack_MotRifles_CMD_SOV_BMP_2_SOV_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Transport = $/GFX/Unit/Descriptor_Unit_BMP_2_SOV
+    Unit = $/GFX/Unit/Descriptor_Unit_MotRifles_CMD_SOV
+    Number = 1
+)
+
 Descriptor_Deck_Pack_MotRifles_CMD_SOV_UAZ_469_SOV_1_1 is DeckPackDescriptor
 (
     Xp = 1
@@ -10575,6 +13065,14 @@ Descriptor_Deck_Pack_MotRifles_CMD_TTsko_SOV_BMP_2_SOV_1_1 is DeckPackDescriptor
     Number = 1
 )
 
+Descriptor_Deck_Pack_MotRifles_Cuba_RPG22_SOV_BMP_1P_SOV_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Transport = $/GFX/Unit/Descriptor_Unit_BMP_1P_SOV
+    Unit = $/GFX/Unit/Descriptor_Unit_MotRifles_Cuba_RPG22_SOV
+    Number = 1
+)
+
 Descriptor_Deck_Pack_MotRifles_DDR_BMP_1P_Konkurs_DDR_0_1 is DeckPackDescriptor
 (
     Transport = $/GFX/Unit/Descriptor_Unit_BMP_1P_Konkurs_DDR
@@ -10589,10 +13087,25 @@ Descriptor_Deck_Pack_MotRifles_DDR_BMP_1_SP1_DDR_0_1 is DeckPackDescriptor
     Number = 1
 )
 
+Descriptor_Deck_Pack_MotRifles_DDR_BMP_1_SP1_DDR_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Transport = $/GFX/Unit/Descriptor_Unit_BMP_1_SP1_DDR
+    Unit = $/GFX/Unit/Descriptor_Unit_MotRifles_DDR
+    Number = 1
+)
+
 Descriptor_Deck_Pack_MotRifles_DDR_BMP_1_SP2_DDR_0_1 is DeckPackDescriptor
 (
     Transport = $/GFX/Unit/Descriptor_Unit_BMP_1_SP2_DDR
     Unit = $/GFX/Unit/Descriptor_Unit_MotRifles_DDR
+    Number = 1
+)
+
+Descriptor_Deck_Pack_MotRifles_HMG_SOV_BMP_1P_Konkurs_SOV_0_1 is DeckPackDescriptor
+(
+    Transport = $/GFX/Unit/Descriptor_Unit_BMP_1P_Konkurs_SOV
+    Unit = $/GFX/Unit/Descriptor_Unit_MotRifles_HMG_SOV
     Number = 1
 )
 
@@ -10602,6 +13115,22 @@ Descriptor_Deck_Pack_MotRifles_HMG_SOV_GAZ_66_SOV_1_999 is DeckPackDescriptor
     Transport = $/GFX/Unit/Descriptor_Unit_GAZ_66_SOV
     Unit = $/GFX/Unit/Descriptor_Unit_MotRifles_HMG_SOV
     Number = 999
+)
+
+Descriptor_Deck_Pack_MotRifles_Instructor_SOV_BMP_2_SOV_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Transport = $/GFX/Unit/Descriptor_Unit_BMP_2_SOV
+    Unit = $/GFX/Unit/Descriptor_Unit_MotRifles_Instructor_SOV
+    Number = 1
+)
+
+Descriptor_Deck_Pack_MotRifles_MVD_SOV_BMP_2_MVD_SOV_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Transport = $/GFX/Unit/Descriptor_Unit_BMP_2_MVD_SOV
+    Unit = $/GFX/Unit/Descriptor_Unit_MotRifles_MVD_SOV
+    Number = 1
 )
 
 Descriptor_Deck_Pack_MotRifles_Metis_DDR_BMP_1_SP1_DDR_3_9 is DeckPackDescriptor
@@ -10641,6 +13170,30 @@ Descriptor_Deck_Pack_MotRifles_Metis_TTsko_SOV_BTR_80_SOV_1_1 is DeckPackDescrip
     Xp = 1
     Transport = $/GFX/Unit/Descriptor_Unit_BTR_80_SOV
     Unit = $/GFX/Unit/Descriptor_Unit_MotRifles_Metis_TTsko_SOV
+    Number = 1
+)
+
+Descriptor_Deck_Pack_MotRifles_Naval_CMD_DDR_BTR_70_DDR_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Transport = $/GFX/Unit/Descriptor_Unit_BTR_70_DDR
+    Unit = $/GFX/Unit/Descriptor_Unit_MotRifles_Naval_CMD_DDR
+    Number = 1
+)
+
+Descriptor_Deck_Pack_MotRifles_Naval_DDR_BTR_70_DDR_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Transport = $/GFX/Unit/Descriptor_Unit_BTR_70_DDR
+    Unit = $/GFX/Unit/Descriptor_Unit_MotRifles_Naval_DDR
+    Number = 1
+)
+
+Descriptor_Deck_Pack_MotRifles_POL_BMP_1_SP2_POL_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Transport = $/GFX/Unit/Descriptor_Unit_BMP_1_SP2_POL
+    Unit = $/GFX/Unit/Descriptor_Unit_MotRifles_POL
     Number = 1
 )
 
@@ -10755,6 +13308,14 @@ Descriptor_Deck_Pack_MotRifles_SOV_BMP_1P_Konkurs_SOV_1_1 is DeckPackDescriptor
     Number = 1
 )
 
+Descriptor_Deck_Pack_MotRifles_SOV_BMP_1P_Konkurs_SOV_2_1 is DeckPackDescriptor
+(
+    Xp = 2
+    Transport = $/GFX/Unit/Descriptor_Unit_BMP_1P_Konkurs_SOV
+    Unit = $/GFX/Unit/Descriptor_Unit_MotRifles_SOV
+    Number = 1
+)
+
 Descriptor_Deck_Pack_MotRifles_SOV_BMP_1P_SOV_0_1 is DeckPackDescriptor
 (
     Transport = $/GFX/Unit/Descriptor_Unit_BMP_1P_SOV
@@ -10823,6 +13384,14 @@ Descriptor_Deck_Pack_MotRifles_SVD_DDR_BTR_70_DDR_1_1 is DeckPackDescriptor
     Xp = 1
     Transport = $/GFX/Unit/Descriptor_Unit_BTR_70_DDR
     Unit = $/GFX/Unit/Descriptor_Unit_MotRifles_SVD_DDR
+    Number = 1
+)
+
+Descriptor_Deck_Pack_MotRifles_SVD_MVD_SOV_BTR_80_MVD_SOV_2_1 is DeckPackDescriptor
+(
+    Xp = 2
+    Transport = $/GFX/Unit/Descriptor_Unit_BTR_80_MVD_SOV
+    Unit = $/GFX/Unit/Descriptor_Unit_MotRifles_SVD_MVD_SOV
     Number = 1
 )
 
@@ -10900,6 +13469,13 @@ Descriptor_Deck_Pack_MotSchutzen_DDR_BMP_1_SP2_DDR_0_1 is DeckPackDescriptor
 (
     Transport = $/GFX/Unit/Descriptor_Unit_BMP_1_SP2_DDR
     Unit = $/GFX/Unit/Descriptor_Unit_MotSchutzen_DDR
+    Number = 1
+)
+
+Descriptor_Deck_Pack_Munga_CMD_RFA_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Unit = $/GFX/Unit/Descriptor_Unit_Munga_CMD_RFA
     Number = 1
 )
 
@@ -10981,6 +13557,22 @@ Descriptor_Deck_Pack_Naval_Engineers_POL_BAV_485_POL_1_1 is DeckPackDescriptor
     Number = 1
 )
 
+Descriptor_Deck_Pack_Naval_Rifle_Hvy_SOV_PTS_M_SOV_2_1 is DeckPackDescriptor
+(
+    Xp = 2
+    Transport = $/GFX/Unit/Descriptor_Unit_PTS_M_SOV
+    Unit = $/GFX/Unit/Descriptor_Unit_Naval_Rifle_Hvy_SOV
+    Number = 1
+)
+
+Descriptor_Deck_Pack_Naval_Rifle_IFV_VEN_EE11_Urutu_20mm_VEN_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Transport = $/GFX/Unit/Descriptor_Unit_EE11_Urutu_20mm_VEN
+    Unit = $/GFX/Unit/Descriptor_Unit_Naval_Rifle_IFV_VEN
+    Number = 1
+)
+
 Descriptor_Deck_Pack_Naval_Rifle_POL_OT_62_TOPAS_2AP_POL_1_1 is DeckPackDescriptor
 (
     Xp = 1
@@ -10989,11 +13581,51 @@ Descriptor_Deck_Pack_Naval_Rifle_POL_OT_62_TOPAS_2AP_POL_1_1 is DeckPackDescript
     Number = 1
 )
 
+Descriptor_Deck_Pack_Naval_Rifle_Reserve_SOV_BTR_60_Naval_SOV_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Transport = $/GFX/Unit/Descriptor_Unit_BTR_60_Naval_SOV
+    Unit = $/GFX/Unit/Descriptor_Unit_Naval_Rifle_Reserve_SOV
+    Number = 1
+)
+
+Descriptor_Deck_Pack_Naval_Rifle_VEN_EE11_Urutu_VEN_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Transport = $/GFX/Unit/Descriptor_Unit_EE11_Urutu_VEN
+    Unit = $/GFX/Unit/Descriptor_Unit_Naval_Rifle_VEN
+    Number = 1
+)
+
+Descriptor_Deck_Pack_Naval_VDV_CMD_SOV_GAZ_66B_SOV_2_1 is DeckPackDescriptor
+(
+    Xp = 2
+    Transport = $/GFX/Unit/Descriptor_Unit_GAZ_66B_SOV
+    Unit = $/GFX/Unit/Descriptor_Unit_Naval_VDV_CMD_SOV
+    Number = 1
+)
+
+Descriptor_Deck_Pack_Naval_VDV_SOV_GAZ_66B_SOV_2_1 is DeckPackDescriptor
+(
+    Xp = 2
+    Transport = $/GFX/Unit/Descriptor_Unit_GAZ_66B_SOV
+    Unit = $/GFX/Unit/Descriptor_Unit_Naval_VDV_SOV
+    Number = 1
+)
+
 Descriptor_Deck_Pack_Navy_SEAL_US_M35_trans_US_3_1 is DeckPackDescriptor
 (
     Xp = 3
     Transport = $/GFX/Unit/Descriptor_Unit_M35_trans_US
     Unit = $/GFX/Unit/Descriptor_Unit_Navy_SEAL_US
+    Number = 1
+)
+
+Descriptor_Deck_Pack_Navy_SEAL_reco_US_M998_Humvee_US_3_1 is DeckPackDescriptor
+(
+    Xp = 3
+    Transport = $/GFX/Unit/Descriptor_Unit_M998_Humvee_US
+    Unit = $/GFX/Unit/Descriptor_Unit_Navy_SEAL_reco_US
     Number = 1
 )
 
@@ -11102,6 +13734,13 @@ Descriptor_Deck_Pack_OH58_CS_US_2_1 is DeckPackDescriptor
     Number = 1
 )
 
+Descriptor_Deck_Pack_OH6_DK_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Unit = $/GFX/Unit/Descriptor_Unit_OH6_DK
+    Number = 1
+)
+
 Descriptor_Deck_Pack_OT_62_TOPAS_R4M_CMD_TCH_2_1 is DeckPackDescriptor
 (
     Xp = 2
@@ -11169,6 +13808,27 @@ Descriptor_Deck_Pack_OT_810D_RCL_TCH_1_1 is DeckPackDescriptor
     Number = 1
 )
 
+Descriptor_Deck_Pack_OV10E_Bronco_VEN_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Unit = $/GFX/Unit/Descriptor_Unit_OV10E_Bronco_VEN
+    Number = 1
+)
+
+Descriptor_Deck_Pack_OV10E_Bronco_reco_VEN_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Unit = $/GFX/Unit/Descriptor_Unit_OV10E_Bronco_reco_VEN
+    Number = 1
+)
+
+Descriptor_Deck_Pack_OV10_Bronco_US_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Unit = $/GFX/Unit/Descriptor_Unit_OV10_Bronco_US
+    Number = 1
+)
+
 Descriptor_Deck_Pack_Obusier_155mm_mle1950_FR_TRM_10000_FR_0_1 is DeckPackDescriptor
 (
     Transport = $/GFX/Unit/Descriptor_Unit_TRM_10000_FR
@@ -11185,6 +13845,12 @@ Descriptor_Deck_Pack_Osa_9K33M3_DDR_0_1 is DeckPackDescriptor
 Descriptor_Deck_Pack_Osa_9K33M3_POL_0_1 is DeckPackDescriptor
 (
     Unit = $/GFX/Unit/Descriptor_Unit_Osa_9K33M3_POL
+    Number = 1
+)
+
+Descriptor_Deck_Pack_Osa_9K33M3_SOV_0_1 is DeckPackDescriptor
+(
+    Unit = $/GFX/Unit/Descriptor_Unit_Osa_9K33M3_SOV
     Number = 1
 )
 
@@ -11208,9 +13874,9 @@ Descriptor_Deck_Pack_Osa_9K33M3_TCH_2_1 is DeckPackDescriptor
     Number = 1
 )
 
-Descriptor_Deck_Pack_PRAM_S_TCH_0_1 is DeckPackDescriptor
+Descriptor_Deck_Pack_Osa_9K33M_CUB_0_1 is DeckPackDescriptor
 (
-    Unit = $/GFX/Unit/Descriptor_Unit_PRAM_S_TCH
+    Unit = $/GFX/Unit/Descriptor_Unit_Osa_9K33M_CUB
     Number = 1
 )
 
@@ -11227,6 +13893,12 @@ Descriptor_Deck_Pack_PT76B_DDR_1_1 is DeckPackDescriptor
     Number = 1
 )
 
+Descriptor_Deck_Pack_PTS_2_supply_SOV_0_1 is DeckPackDescriptor
+(
+    Unit = $/GFX/Unit/Descriptor_Unit_PTS_2_supply_SOV
+    Number = 1
+)
+
 Descriptor_Deck_Pack_PTS_M_supply_DDR_0_1 is DeckPackDescriptor
 (
     Unit = $/GFX/Unit/Descriptor_Unit_PTS_M_supply_DDR
@@ -11236,6 +13908,14 @@ Descriptor_Deck_Pack_PTS_M_supply_DDR_0_1 is DeckPackDescriptor
 Descriptor_Deck_Pack_PTS_M_supply_POL_0_1 is DeckPackDescriptor
 (
     Unit = $/GFX/Unit/Descriptor_Unit_PTS_M_supply_POL
+    Number = 1
+)
+
+Descriptor_Deck_Pack_Panzergrenadier_APC_RFA_M113A1G_MILAN_RFA_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Transport = $/GFX/Unit/Descriptor_Unit_M113A1G_MILAN_RFA
+    Unit = $/GFX/Unit/Descriptor_Unit_Panzergrenadier_APC_RFA
     Number = 1
 )
 
@@ -11316,6 +13996,13 @@ Descriptor_Deck_Pack_Panzergrenadier_IFV_RFA_Marder_1A2_RFA_1_6 is DeckPackDescr
     Transport = $/GFX/Unit/Descriptor_Unit_Marder_1A2_RFA
     Unit = $/GFX/Unit/Descriptor_Unit_Panzergrenadier_IFV_RFA
     Number = 6
+)
+
+Descriptor_Deck_Pack_Panzergrenadier_IFV_RFA_Marder_1A3_MILAN_RFA_0_1 is DeckPackDescriptor
+(
+    Transport = $/GFX/Unit/Descriptor_Unit_Marder_1A3_MILAN_RFA
+    Unit = $/GFX/Unit/Descriptor_Unit_Panzergrenadier_IFV_RFA
+    Number = 1
 )
 
 Descriptor_Deck_Pack_Panzergrenadier_IFV_RFA_Marder_1A3_MILAN_RFA_1_1 is DeckPackDescriptor
@@ -11485,6 +14172,14 @@ Descriptor_Deck_Pack_Paratroopers_CMD_UK_LandRover_UK_2_10 is DeckPackDescriptor
     Number = 10
 )
 
+Descriptor_Deck_Pack_Paratroopers_COL_M462_trans_COL_2_1 is DeckPackDescriptor
+(
+    Xp = 2
+    Transport = $/GFX/Unit/Descriptor_Unit_M462_trans_COL
+    Unit = $/GFX/Unit/Descriptor_Unit_Paratroopers_COL
+    Number = 1
+)
+
 Descriptor_Deck_Pack_Paratroopers_Engineers_UK_Rover_101FC_UK_3_10 is DeckPackDescriptor
 (
     Xp = 3
@@ -11523,6 +14218,14 @@ Descriptor_Deck_Pack_Paratroopers_UK_Rover_101FC_UK_2_10 is DeckPackDescriptor
     Transport = $/GFX/Unit/Descriptor_Unit_Rover_101FC_UK
     Unit = $/GFX/Unit/Descriptor_Unit_Paratroopers_UK
     Number = 10
+)
+
+Descriptor_Deck_Pack_Paratroopers_VEN_Pinzgauer_712_trans_VEN_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Transport = $/GFX/Unit/Descriptor_Unit_Pinzgauer_712_trans_VEN
+    Unit = $/GFX/Unit/Descriptor_Unit_Paratroopers_VEN
+    Number = 1
 )
 
 Descriptor_Deck_Pack_Pathfinders_UK_CH47_Chinook_UK_3_10 is DeckPackDescriptor
@@ -11578,6 +14281,18 @@ Descriptor_Deck_Pack_Pegaso_3055_GAI_BO1_ESP_1_1 is DeckPackDescriptor
 Descriptor_Deck_Pack_Pegaso_3055_supply_ESP_0_1 is DeckPackDescriptor
 (
     Unit = $/GFX/Unit/Descriptor_Unit_Pegaso_3055_supply_ESP
+    Number = 1
+)
+
+Descriptor_Deck_Pack_Pinzgauer_712_MAPATS_VEN_0_1 is DeckPackDescriptor
+(
+    Unit = $/GFX/Unit/Descriptor_Unit_Pinzgauer_712_MAPATS_VEN
+    Number = 1
+)
+
+Descriptor_Deck_Pack_Pinzgauer_712_RBS70_VEN_0_1 is DeckPackDescriptor
+(
+    Unit = $/GFX/Unit/Descriptor_Unit_Pinzgauer_712_RBS70_VEN
     Number = 1
 )
 
@@ -11638,13 +14353,6 @@ Descriptor_Deck_Pack_Puma_FR_0_999 is DeckPackDescriptor
     Number = 999
 )
 
-Descriptor_Deck_Pack_Puma_FR_1_1 is DeckPackDescriptor
-(
-    Xp = 1
-    Unit = $/GFX/Unit/Descriptor_Unit_Puma_FR
-    Number = 1
-)
-
 Descriptor_Deck_Pack_Puma_PC_FR_2_1 is DeckPackDescriptor
 (
     Xp = 2
@@ -11659,10 +14367,23 @@ Descriptor_Deck_Pack_Puma_Pirate_FR_1_1 is DeckPackDescriptor
     Number = 1
 )
 
-Descriptor_Deck_Pack_Puma_UK_1_1 is DeckPackDescriptor
+Descriptor_Deck_Pack_Puma_UK_0_1 is DeckPackDescriptor
+(
+    Unit = $/GFX/Unit/Descriptor_Unit_Puma_UK
+    Number = 1
+)
+
+Descriptor_Deck_Pack_PzGrenadier_Instructor_RFA_Marder_1A3_RFA_1_1 is DeckPackDescriptor
 (
     Xp = 1
-    Unit = $/GFX/Unit/Descriptor_Unit_Puma_UK
+    Transport = $/GFX/Unit/Descriptor_Unit_Marder_1A3_RFA
+    Unit = $/GFX/Unit/Descriptor_Unit_PzGrenadier_Instructor_RFA
+    Number = 1
+)
+
+Descriptor_Deck_Pack_RBY_Mk1_AA_VEN_0_1 is DeckPackDescriptor
+(
+    Unit = $/GFX/Unit/Descriptor_Unit_RBY_Mk1_AA_VEN
     Number = 1
 )
 
@@ -11688,6 +14409,13 @@ Descriptor_Deck_Pack_RCL_L6_Wombat_UK_LandRover_UK_0_1 is DeckPackDescriptor
     Number = 1
 )
 
+Descriptor_Deck_Pack_RF4E_Phantom_HE_RFA_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Unit = $/GFX/Unit/Descriptor_Unit_RF4E_Phantom_HE_RFA
+    Number = 1
+)
+
 Descriptor_Deck_Pack_RM51_TCH_0_1 is DeckPackDescriptor
 (
     Unit = $/GFX/Unit/Descriptor_Unit_RM51_TCH
@@ -11703,6 +14431,28 @@ Descriptor_Deck_Pack_RM70_85_DDR_0_1 is DeckPackDescriptor
 Descriptor_Deck_Pack_RM70_85_POL_0_1 is DeckPackDescriptor
 (
     Unit = $/GFX/Unit/Descriptor_Unit_RM70_85_POL
+    Number = 1
+)
+
+Descriptor_Deck_Pack_RM70_TCH_0_1 is DeckPackDescriptor
+(
+    Unit = $/GFX/Unit/Descriptor_Unit_RM70_TCH
+    Number = 1
+)
+
+Descriptor_Deck_Pack_Ranger_Dragon_US_UH60A_Black_Hawk_US_2_1 is DeckPackDescriptor
+(
+    Xp = 2
+    Transport = $/GFX/Unit/Descriptor_Unit_UH60A_Black_Hawk_US
+    Unit = $/GFX/Unit/Descriptor_Unit_Ranger_Dragon_US
+    Number = 1
+)
+
+Descriptor_Deck_Pack_Ranger_Stinger_US_M151A2_CAV_US_2_1 is DeckPackDescriptor
+(
+    Xp = 2
+    Transport = $/GFX/Unit/Descriptor_Unit_M151A2_CAV_US
+    Unit = $/GFX/Unit/Descriptor_Unit_Ranger_Stinger_US
     Number = 1
 )
 
@@ -11722,11 +14472,35 @@ Descriptor_Deck_Pack_Reserve_CMD_CAN_M35_trans_CAN_1_1 is DeckPackDescriptor
     Number = 1
 )
 
+Descriptor_Deck_Pack_Reserve_CMD_DDR_BTR_60PA_Reserve_DDR_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Transport = $/GFX/Unit/Descriptor_Unit_BTR_60PA_Reserve_DDR
+    Unit = $/GFX/Unit/Descriptor_Unit_Reserve_CMD_DDR
+    Number = 1
+)
+
 Descriptor_Deck_Pack_Reserve_CMD_DDR_W50_LA_A_DDR_1_1 is DeckPackDescriptor
 (
     Xp = 1
     Transport = $/GFX/Unit/Descriptor_Unit_W50_LA_A_DDR
     Unit = $/GFX/Unit/Descriptor_Unit_Reserve_CMD_DDR
+    Number = 1
+)
+
+Descriptor_Deck_Pack_Reserve_CMD_DK_Bedford_MJ_4t_trans_DK_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Transport = $/GFX/Unit/Descriptor_Unit_Bedford_MJ_4t_trans_DK
+    Unit = $/GFX/Unit/Descriptor_Unit_Reserve_CMD_DK
+    Number = 1
+)
+
+Descriptor_Deck_Pack_Reserve_CMD_SOV_BMP_1_SP2_Reserve_SOV_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Transport = $/GFX/Unit/Descriptor_Unit_BMP_1_SP2_Reserve_SOV
+    Unit = $/GFX/Unit/Descriptor_Unit_Reserve_CMD_SOV
     Number = 1
 )
 
@@ -11738,11 +14512,33 @@ Descriptor_Deck_Pack_Reserve_CMD_SOV_BTR_152K_SOV_1_1 is DeckPackDescriptor
     Number = 1
 )
 
+Descriptor_Deck_Pack_Reserve_CMD_SOV_BTR_60PA_Reserve_SOV_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Transport = $/GFX/Unit/Descriptor_Unit_BTR_60PA_Reserve_SOV
+    Unit = $/GFX/Unit/Descriptor_Unit_Reserve_CMD_SOV
+    Number = 1
+)
+
 Descriptor_Deck_Pack_Reserve_CMD_SOV_Ural_4320_trans_SOV_1_1 is DeckPackDescriptor
 (
     Xp = 1
     Transport = $/GFX/Unit/Descriptor_Unit_Ural_4320_trans_SOV
     Unit = $/GFX/Unit/Descriptor_Unit_Reserve_CMD_SOV
+    Number = 1
+)
+
+Descriptor_Deck_Pack_Reserve_CUB_BTR_60P_CUB_0_1 is DeckPackDescriptor
+(
+    Transport = $/GFX/Unit/Descriptor_Unit_BTR_60P_CUB
+    Unit = $/GFX/Unit/Descriptor_Unit_Reserve_CUB
+    Number = 1
+)
+
+Descriptor_Deck_Pack_Reserve_DDR_BTR_60PA_Reserve_DDR_0_1 is DeckPackDescriptor
+(
+    Transport = $/GFX/Unit/Descriptor_Unit_BTR_60PA_Reserve_DDR
+    Unit = $/GFX/Unit/Descriptor_Unit_Reserve_DDR
     Number = 1
 )
 
@@ -11757,6 +14553,14 @@ Descriptor_Deck_Pack_Reserve_DDR_W50_LA_A_DDR_0_1 is DeckPackDescriptor
 (
     Transport = $/GFX/Unit/Descriptor_Unit_W50_LA_A_DDR
     Unit = $/GFX/Unit/Descriptor_Unit_Reserve_DDR
+    Number = 1
+)
+
+Descriptor_Deck_Pack_Reserve_DK_Bedford_MJ_4t_trans_DK_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Transport = $/GFX/Unit/Descriptor_Unit_Bedford_MJ_4t_trans_DK
+    Unit = $/GFX/Unit/Descriptor_Unit_Reserve_DK
     Number = 1
 )
 
@@ -11775,11 +14579,26 @@ Descriptor_Deck_Pack_Reserve_Hvy_TCH_Praga_V3S_TCH_1_1 is DeckPackDescriptor
     Number = 1
 )
 
+Descriptor_Deck_Pack_Reserve_IFV_SOV_BMP_1_SP2_Reserve_SOV_0_1 is DeckPackDescriptor
+(
+    Transport = $/GFX/Unit/Descriptor_Unit_BMP_1_SP2_Reserve_SOV
+    Unit = $/GFX/Unit/Descriptor_Unit_Reserve_IFV_SOV
+    Number = 1
+)
+
 Descriptor_Deck_Pack_Reserve_NL_YP_408_APC_NL_1_1 is DeckPackDescriptor
 (
     Xp = 1
     Transport = $/GFX/Unit/Descriptor_Unit_YP_408_APC_NL
     Unit = $/GFX/Unit/Descriptor_Unit_Reserve_NL
+    Number = 1
+)
+
+Descriptor_Deck_Pack_Reserve_POL_LO_1800_trans_POL_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Transport = $/GFX/Unit/Descriptor_Unit_LO_1800_trans_POL
+    Unit = $/GFX/Unit/Descriptor_Unit_Reserve_POL
     Number = 1
 )
 
@@ -11797,10 +14616,40 @@ Descriptor_Deck_Pack_Reserve_SOV_BTR_152K_SOV_0_1 is DeckPackDescriptor
     Number = 1
 )
 
+Descriptor_Deck_Pack_Reserve_SOV_BTR_60PA_Reserve_SOV_0_1 is DeckPackDescriptor
+(
+    Transport = $/GFX/Unit/Descriptor_Unit_BTR_60PA_Reserve_SOV
+    Unit = $/GFX/Unit/Descriptor_Unit_Reserve_SOV
+    Number = 1
+)
+
+Descriptor_Deck_Pack_Reserve_SOV_BTR_60PA_Reserve_SOV_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Transport = $/GFX/Unit/Descriptor_Unit_BTR_60PA_Reserve_SOV
+    Unit = $/GFX/Unit/Descriptor_Unit_Reserve_SOV
+    Number = 1
+)
+
 Descriptor_Deck_Pack_Reserve_SOV_Ural_4320_trans_SOV_0_1 is DeckPackDescriptor
 (
     Transport = $/GFX/Unit/Descriptor_Unit_Ural_4320_trans_SOV
     Unit = $/GFX/Unit/Descriptor_Unit_Reserve_SOV
+    Number = 1
+)
+
+Descriptor_Deck_Pack_Reserve_SOV_ZIL_157_trans_SOV_0_1 is DeckPackDescriptor
+(
+    Transport = $/GFX/Unit/Descriptor_Unit_ZIL_157_trans_SOV
+    Unit = $/GFX/Unit/Descriptor_Unit_Reserve_SOV
+    Number = 1
+)
+
+Descriptor_Deck_Pack_Reserve_SVD_POL_LO_1800_trans_POL_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Transport = $/GFX/Unit/Descriptor_Unit_LO_1800_trans_POL
+    Unit = $/GFX/Unit/Descriptor_Unit_Reserve_SVD_POL
     Number = 1
 )
 
@@ -11835,6 +14684,14 @@ Descriptor_Deck_Pack_Reserviste_CMD_FR_VAB_Reserve_FR_1_1 is DeckPackDescriptor
     Number = 1
 )
 
+Descriptor_Deck_Pack_Reserviste_DMR_FR_Berliet_GBC_8KT_HMG_FR_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Transport = $/GFX/Unit/Descriptor_Unit_Berliet_GBC_8KT_HMG_FR
+    Unit = $/GFX/Unit/Descriptor_Unit_Reserviste_DMR_FR
+    Number = 1
+)
+
 Descriptor_Deck_Pack_Reserviste_DMR_FR_TRM_2000_FR_0_1 is DeckPackDescriptor
 (
     Transport = $/GFX/Unit/Descriptor_Unit_TRM_2000_FR
@@ -11853,6 +14710,21 @@ Descriptor_Deck_Pack_Rifles_APILAS_FR_VAB_FR_0_1 is DeckPackDescriptor
 (
     Transport = $/GFX/Unit/Descriptor_Unit_VAB_FR
     Unit = $/GFX/Unit/Descriptor_Unit_Rifles_APILAS_FR
+    Number = 1
+)
+
+Descriptor_Deck_Pack_Rifles_APILAS_FR_VAB_FR_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Transport = $/GFX/Unit/Descriptor_Unit_VAB_FR
+    Unit = $/GFX/Unit/Descriptor_Unit_Rifles_APILAS_FR
+    Number = 1
+)
+
+Descriptor_Deck_Pack_Rifles_AT4_VEN_M35_trans_VEN_0_1 is DeckPackDescriptor
+(
+    Transport = $/GFX/Unit/Descriptor_Unit_M35_trans_VEN
+    Unit = $/GFX/Unit/Descriptor_Unit_Rifles_AT4_VEN
     Number = 1
 )
 
@@ -11933,6 +14805,14 @@ Descriptor_Deck_Pack_Rifles_BMR_ESP_BMR_PP_ESP_1_1 is DeckPackDescriptor
     Xp = 1
     Transport = $/GFX/Unit/Descriptor_Unit_BMR_PP_ESP
     Unit = $/GFX/Unit/Descriptor_Unit_Rifles_BMR_ESP
+    Number = 1
+)
+
+Descriptor_Deck_Pack_Rifles_BRZ_M113_BRZ_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Transport = $/GFX/Unit/Descriptor_Unit_M113_BRZ
+    Unit = $/GFX/Unit/Descriptor_Unit_Rifles_BRZ
     Number = 1
 )
 
@@ -12096,6 +14976,14 @@ Descriptor_Deck_Pack_Rifles_HMG_US_M113A3_US_2_999 is DeckPackDescriptor
     Number = 999
 )
 
+Descriptor_Deck_Pack_Rifles_LAW_DK_Bedford_MJ_4t_trans_DK_2_1 is DeckPackDescriptor
+(
+    Xp = 2
+    Transport = $/GFX/Unit/Descriptor_Unit_Bedford_MJ_4t_trans_DK
+    Unit = $/GFX/Unit/Descriptor_Unit_Rifles_LAW_DK
+    Number = 1
+)
+
 Descriptor_Deck_Pack_Rifles_LAW_US_M113_Dragon_US_1_1 is DeckPackDescriptor
 (
     Xp = 1
@@ -12176,11 +15064,27 @@ Descriptor_Deck_Pack_Rifles_Mech_CAN_M113A1_CAN_1_1 is DeckPackDescriptor
     Number = 1
 )
 
+Descriptor_Deck_Pack_Rifles_Mech_CMD_DK_M113A1_DK_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Transport = $/GFX/Unit/Descriptor_Unit_M113A1_DK
+    Unit = $/GFX/Unit/Descriptor_Unit_Rifles_Mech_CMD_DK
+    Number = 1
+)
+
 Descriptor_Deck_Pack_Rifles_Mech_CMD_ESP_Pegaso_3046_ESP_1_1 is DeckPackDescriptor
 (
     Xp = 1
     Transport = $/GFX/Unit/Descriptor_Unit_Pegaso_3046_ESP
     Unit = $/GFX/Unit/Descriptor_Unit_Rifles_Mech_CMD_ESP
+    Number = 1
+)
+
+Descriptor_Deck_Pack_Rifles_Mech_CarlG_DK_M113A1_DK_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Transport = $/GFX/Unit/Descriptor_Unit_M113A1_DK
+    Unit = $/GFX/Unit/Descriptor_Unit_Rifles_Mech_CarlG_DK
     Number = 1
 )
 
@@ -12304,6 +15208,14 @@ Descriptor_Deck_Pack_Rifles_POL_Star_266_POL_1_1 is DeckPackDescriptor
     Number = 1
 )
 
+Descriptor_Deck_Pack_Rifles_RCL_BRZ_EE15_trans_BRZ_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Transport = $/GFX/Unit/Descriptor_Unit_EE15_trans_BRZ
+    Unit = $/GFX/Unit/Descriptor_Unit_Rifles_RCL_BRZ
+    Number = 1
+)
+
 Descriptor_Deck_Pack_Rifles_RIMa_APILAS_FR_VAB_FR_1_1 is DeckPackDescriptor
 (
     Xp = 1
@@ -12312,19 +15224,19 @@ Descriptor_Deck_Pack_Rifles_RIMa_APILAS_FR_VAB_FR_1_1 is DeckPackDescriptor
     Number = 1
 )
 
-Descriptor_Deck_Pack_Rifles_RIMa_CMD_FR_VAB_FR_1_1 is DeckPackDescriptor
-(
-    Xp = 1
-    Transport = $/GFX/Unit/Descriptor_Unit_VAB_FR
-    Unit = $/GFX/Unit/Descriptor_Unit_Rifles_RIMa_CMD_FR
-    Number = 1
-)
-
 Descriptor_Deck_Pack_Rifles_RIMa_FR_VAB_FR_1_1 is DeckPackDescriptor
 (
     Xp = 1
     Transport = $/GFX/Unit/Descriptor_Unit_VAB_FR
     Unit = $/GFX/Unit/Descriptor_Unit_Rifles_RIMa_FR
+    Number = 1
+)
+
+Descriptor_Deck_Pack_Rifles_RIMa_Instructor_FR_VAB_FR_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Transport = $/GFX/Unit/Descriptor_Unit_VAB_FR
+    Unit = $/GFX/Unit/Descriptor_Unit_Rifles_RIMa_Instructor_FR
     Number = 1
 )
 
@@ -12357,6 +15269,45 @@ Descriptor_Deck_Pack_Rifles_UK_MCV_80_Warrior_MILAN_UK_1_1 is DeckPackDescriptor
     Xp = 1
     Transport = $/GFX/Unit/Descriptor_Unit_MCV_80_Warrior_MILAN_UK
     Unit = $/GFX/Unit/Descriptor_Unit_Rifles_UK
+    Number = 1
+)
+
+Descriptor_Deck_Pack_Rifles_USMCR_AT4_US_M35_trans_US_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Transport = $/GFX/Unit/Descriptor_Unit_M35_trans_US
+    Unit = $/GFX/Unit/Descriptor_Unit_Rifles_USMCR_AT4_US
+    Number = 1
+)
+
+Descriptor_Deck_Pack_Rifles_USMCR_Dragon_US_M998_Humvee_US_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Transport = $/GFX/Unit/Descriptor_Unit_M998_Humvee_US
+    Unit = $/GFX/Unit/Descriptor_Unit_Rifles_USMCR_Dragon_US
+    Number = 1
+)
+
+Descriptor_Deck_Pack_Rifles_USMCR_HMG_US_AAVP_7_USMCR_US_0_1 is DeckPackDescriptor
+(
+    Transport = $/GFX/Unit/Descriptor_Unit_AAVP_7_USMCR_US
+    Unit = $/GFX/Unit/Descriptor_Unit_Rifles_USMCR_HMG_US
+    Number = 1
+)
+
+Descriptor_Deck_Pack_Rifles_USMC_Dragon_US_M35_trans_US_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Transport = $/GFX/Unit/Descriptor_Unit_M35_trans_US
+    Unit = $/GFX/Unit/Descriptor_Unit_Rifles_USMC_Dragon_US
+    Number = 1
+)
+
+Descriptor_Deck_Pack_Rifles_USMC_HMG_US_M35_trans_US_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Transport = $/GFX/Unit/Descriptor_Unit_M35_trans_US
+    Unit = $/GFX/Unit/Descriptor_Unit_Rifles_USMC_HMG_US
     Number = 1
 )
 
@@ -12420,6 +15371,21 @@ Descriptor_Deck_Pack_Rifles_half_CMD_US_M2A2_Bradley_IFV_US_2_1 is DeckPackDescr
     Xp = 2
     Transport = $/GFX/Unit/Descriptor_Unit_M2A2_Bradley_IFV_US
     Unit = $/GFX/Unit/Descriptor_Unit_Rifles_half_CMD_US
+    Number = 1
+)
+
+Descriptor_Deck_Pack_Rifles_half_Cav_AT4_US_M2A2_BRAT_US_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Transport = $/GFX/Unit/Descriptor_Unit_M2A2_BRAT_US
+    Unit = $/GFX/Unit/Descriptor_Unit_Rifles_half_Cav_AT4_US
+    Number = 1
+)
+
+Descriptor_Deck_Pack_Rifles_half_Cav_Dragon_US_M2_Bradley_IFV_US_0_1 is DeckPackDescriptor
+(
+    Transport = $/GFX/Unit/Descriptor_Unit_M2_Bradley_IFV_US
+    Unit = $/GFX/Unit/Descriptor_Unit_Rifles_half_Cav_Dragon_US
     Number = 1
 )
 
@@ -12526,6 +15492,20 @@ Descriptor_Deck_Pack_SAS_UK_CH47_Chinook_UK_3_10 is DeckPackDescriptor
     Number = 10
 )
 
+Descriptor_Deck_Pack_SEP_DK_LandRover_DK_2_1 is DeckPackDescriptor
+(
+    Xp = 2
+    Transport = $/GFX/Unit/Descriptor_Unit_LandRover_DK
+    Unit = $/GFX/Unit/Descriptor_Unit_SEP_DK
+    Number = 1
+)
+
+Descriptor_Deck_Pack_SPz_Kurz_reco_RFA_0_1 is DeckPackDescriptor
+(
+    Unit = $/GFX/Unit/Descriptor_Unit_SPz_Kurz_reco_RFA
+    Number = 1
+)
+
 Descriptor_Deck_Pack_SU_100_TCH_0_1 is DeckPackDescriptor
 (
     Unit = $/GFX/Unit/Descriptor_Unit_SU_100_TCH
@@ -12535,6 +15515,27 @@ Descriptor_Deck_Pack_SU_100_TCH_0_1 is DeckPackDescriptor
 Descriptor_Deck_Pack_SVO_TCH_0_1 is DeckPackDescriptor
 (
     Unit = $/GFX/Unit/Descriptor_Unit_SVO_TCH
+    Number = 1
+)
+
+Descriptor_Deck_Pack_Saab_35F_Draken_HE_CLU_DK_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Unit = $/GFX/Unit/Descriptor_Unit_Saab_35F_Draken_HE_CLU_DK
+    Number = 1
+)
+
+Descriptor_Deck_Pack_Saab_35F_Draken_HE_DK_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Unit = $/GFX/Unit/Descriptor_Unit_Saab_35F_Draken_HE_DK
+    Number = 1
+)
+
+Descriptor_Deck_Pack_Saab_35F_Draken_RKT1_DK_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Unit = $/GFX/Unit/Descriptor_Unit_Saab_35F_Draken_RKT1_DK
     Number = 1
 )
 
@@ -12565,6 +15566,13 @@ Descriptor_Deck_Pack_Saxon_CMD_UK_1_1 is DeckPackDescriptor
 (
     Xp = 1
     Unit = $/GFX/Unit/Descriptor_Unit_Saxon_CMD_UK
+    Number = 1
+)
+
+Descriptor_Deck_Pack_Scout_AT_DK_LandRover_DK_0_1 is DeckPackDescriptor
+(
+    Transport = $/GFX/Unit/Descriptor_Unit_LandRover_DK
+    Unit = $/GFX/Unit/Descriptor_Unit_Scout_AT_DK
     Number = 1
 )
 
@@ -12599,6 +15607,14 @@ Descriptor_Deck_Pack_Scout_AT_UK_Lynx_AH_Mk1_UK_0_1 is DeckPackDescriptor
     Number = 1
 )
 
+Descriptor_Deck_Pack_Scout_Aero_US_UH60A_Black_Hawk_US_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Transport = $/GFX/Unit/Descriptor_Unit_UH60A_Black_Hawk_US
+    Unit = $/GFX/Unit/Descriptor_Unit_Scout_Aero_US
+    Number = 1
+)
+
 Descriptor_Deck_Pack_Scout_CAN_Iltis_trans_CAN_1_4 is DeckPackDescriptor
 (
     Xp = 1
@@ -12613,6 +15629,14 @@ Descriptor_Deck_Pack_Scout_CAN_Iltis_trans_CAN_1_999 is DeckPackDescriptor
     Transport = $/GFX/Unit/Descriptor_Unit_Iltis_trans_CAN
     Unit = $/GFX/Unit/Descriptor_Unit_Scout_CAN
     Number = 999
+)
+
+Descriptor_Deck_Pack_Scout_Cav_US_M1025_Humvee_scout_US_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Transport = $/GFX/Unit/Descriptor_Unit_M1025_Humvee_scout_US
+    Unit = $/GFX/Unit/Descriptor_Unit_Scout_Cav_US
+    Number = 1
 )
 
 Descriptor_Deck_Pack_Scout_DDR_UAZ_469_Reco_DDR_1_1 is DeckPackDescriptor
@@ -12707,10 +15731,47 @@ Descriptor_Deck_Pack_Scout_GSR_CAN_Iltis_trans_CAN_1_999 is DeckPackDescriptor
     Number = 999
 )
 
+Descriptor_Deck_Pack_Scout_GSR_VEN_M151A2_MAG_VEN_0_1 is DeckPackDescriptor
+(
+    Transport = $/GFX/Unit/Descriptor_Unit_M151A2_MAG_VEN
+    Unit = $/GFX/Unit/Descriptor_Unit_Scout_GSR_VEN
+    Number = 1
+)
+
+Descriptor_Deck_Pack_Scout_Heimat_RFA_MAN_630_L2AE_trans_RFA_0_1 is DeckPackDescriptor
+(
+    Transport = $/GFX/Unit/Descriptor_Unit_MAN_630_L2AE_trans_RFA
+    Unit = $/GFX/Unit/Descriptor_Unit_Scout_Heimat_RFA
+    Number = 1
+)
+
 Descriptor_Deck_Pack_Scout_KdA_DDR_W50_LA_A_DDR_0_1 is DeckPackDescriptor
 (
     Transport = $/GFX/Unit/Descriptor_Unit_W50_LA_A_DDR
     Unit = $/GFX/Unit/Descriptor_Unit_Scout_KdA_DDR
+    Number = 1
+)
+
+Descriptor_Deck_Pack_Scout_LAI_USMCR_US_LAV_25_USMCR_US_0_1 is DeckPackDescriptor
+(
+    Transport = $/GFX/Unit/Descriptor_Unit_LAV_25_USMCR_US
+    Unit = $/GFX/Unit/Descriptor_Unit_Scout_LAI_USMCR_US
+    Number = 1
+)
+
+Descriptor_Deck_Pack_Scout_LAI_USMC_US_LAV_25_US_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Transport = $/GFX/Unit/Descriptor_Unit_LAV_25_US
+    Unit = $/GFX/Unit/Descriptor_Unit_Scout_LAI_USMC_US
+    Number = 1
+)
+
+Descriptor_Deck_Pack_Scout_LRRP_DDR_BTR_60_reco_DDR_2_1 is DeckPackDescriptor
+(
+    Xp = 2
+    Transport = $/GFX/Unit/Descriptor_Unit_BTR_60_reco_DDR
+    Unit = $/GFX/Unit/Descriptor_Unit_Scout_LRRP_DDR
     Number = 1
 )
 
@@ -12770,6 +15831,13 @@ Descriptor_Deck_Pack_Scout_Legion_FR_VLTT_P4_MG_FR_1_4 is DeckPackDescriptor
     Number = 4
 )
 
+Descriptor_Deck_Pack_Scout_Light_US_M1025_Humvee_AGL_nonPara_US_0_1 is DeckPackDescriptor
+(
+    Transport = $/GFX/Unit/Descriptor_Unit_M1025_Humvee_AGL_nonPara_US
+    Unit = $/GFX/Unit/Descriptor_Unit_Scout_Light_US
+    Number = 1
+)
+
 Descriptor_Deck_Pack_Scout_Motorized_UK_Saxon_UK_1_1 is DeckPackDescriptor
 (
     Xp = 1
@@ -12813,6 +15881,22 @@ Descriptor_Deck_Pack_Scout_NL_M38A1_MG_NL_0_1 is DeckPackDescriptor
 (
     Transport = $/GFX/Unit/Descriptor_Unit_M38A1_MG_NL
     Unit = $/GFX/Unit/Descriptor_Unit_Scout_NL
+    Number = 1
+)
+
+Descriptor_Deck_Pack_Scout_Naval_SOV_Mi_2_trans_SOV_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Transport = $/GFX/Unit/Descriptor_Unit_Mi_2_trans_SOV
+    Unit = $/GFX/Unit/Descriptor_Unit_Scout_Naval_SOV
+    Number = 1
+)
+
+Descriptor_Deck_Pack_Scout_Naval_VDV_SOV_UAZ_469_SOV_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Transport = $/GFX/Unit/Descriptor_Unit_UAZ_469_SOV
+    Unit = $/GFX/Unit/Descriptor_Unit_Scout_Naval_VDV_SOV
     Number = 1
 )
 
@@ -12886,6 +15970,13 @@ Descriptor_Deck_Pack_Scout_Provincial_BEL_Iltis_trans_BEL_0_1 is DeckPackDescrip
     Number = 1
 )
 
+Descriptor_Deck_Pack_Scout_RFA_Iltis_trans_RFA_0_1 is DeckPackDescriptor
+(
+    Transport = $/GFX/Unit/Descriptor_Unit_Iltis_trans_RFA
+    Unit = $/GFX/Unit/Descriptor_Unit_Scout_RFA
+    Number = 1
+)
+
 Descriptor_Deck_Pack_Scout_RFA_Iltis_trans_RFA_2_999 is DeckPackDescriptor
 (
     Xp = 2
@@ -12899,6 +15990,13 @@ Descriptor_Deck_Pack_Scout_RIMa_FR_VAB_FR_1_1 is DeckPackDescriptor
     Xp = 1
     Transport = $/GFX/Unit/Descriptor_Unit_VAB_FR
     Unit = $/GFX/Unit/Descriptor_Unit_Scout_RIMa_FR
+    Number = 1
+)
+
+Descriptor_Deck_Pack_Scout_Reserve_POL_OT_65_POL_0_1 is DeckPackDescriptor
+(
+    Transport = $/GFX/Unit/Descriptor_Unit_OT_65_POL
+    Unit = $/GFX/Unit/Descriptor_Unit_Scout_Reserve_POL
     Number = 1
 )
 
@@ -12933,10 +16031,25 @@ Descriptor_Deck_Pack_Scout_SF_TCH_UAZ_469_trans_TCH_2_1 is DeckPackDescriptor
     Number = 1
 )
 
+Descriptor_Deck_Pack_Scout_SIGINT_DDR_Mi_24D_s5_AT_reco_DDR_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Transport = $/GFX/Unit/Descriptor_Unit_Mi_24D_s5_AT_reco_DDR
+    Unit = $/GFX/Unit/Descriptor_Unit_Scout_SIGINT_DDR
+    Number = 1
+)
+
 Descriptor_Deck_Pack_Scout_SOV_BTR_40_SOV_1_1 is DeckPackDescriptor
 (
     Xp = 1
     Transport = $/GFX/Unit/Descriptor_Unit_BTR_40_SOV
+    Unit = $/GFX/Unit/Descriptor_Unit_Scout_SOV
+    Number = 1
+)
+
+Descriptor_Deck_Pack_Scout_SOV_UAZ_452_SOV_0_1 is DeckPackDescriptor
+(
+    Transport = $/GFX/Unit/Descriptor_Unit_UAZ_452_SOV
     Unit = $/GFX/Unit/Descriptor_Unit_Scout_SOV
     Number = 1
 )
@@ -12951,6 +16064,14 @@ Descriptor_Deck_Pack_Scout_SOV_UAZ_469_Reco_SOV_1_1 is DeckPackDescriptor
 
 Descriptor_Deck_Pack_Scout_SOV_UAZ_469_SOV_0_1 is DeckPackDescriptor
 (
+    Transport = $/GFX/Unit/Descriptor_Unit_UAZ_469_SOV
+    Unit = $/GFX/Unit/Descriptor_Unit_Scout_SOV
+    Number = 1
+)
+
+Descriptor_Deck_Pack_Scout_SOV_UAZ_469_SOV_1_1 is DeckPackDescriptor
+(
+    Xp = 1
     Transport = $/GFX/Unit/Descriptor_Unit_UAZ_469_SOV
     Unit = $/GFX/Unit/Descriptor_Unit_Scout_SOV
     Number = 1
@@ -13017,6 +16138,29 @@ Descriptor_Deck_Pack_Scout_UK_LandRover_UK_1_1 is DeckPackDescriptor
     Xp = 1
     Transport = $/GFX/Unit/Descriptor_Unit_LandRover_UK
     Unit = $/GFX/Unit/Descriptor_Unit_Scout_UK
+    Number = 1
+)
+
+Descriptor_Deck_Pack_Scout_URSN_SOV_BTR_80_MVD_SOV_2_1 is DeckPackDescriptor
+(
+    Xp = 2
+    Transport = $/GFX/Unit/Descriptor_Unit_BTR_80_MVD_SOV
+    Unit = $/GFX/Unit/Descriptor_Unit_Scout_URSN_SOV
+    Number = 1
+)
+
+Descriptor_Deck_Pack_Scout_USMCR_US_M1025_Humvee_scout_USMCR_US_0_1 is DeckPackDescriptor
+(
+    Transport = $/GFX/Unit/Descriptor_Unit_M1025_Humvee_scout_USMCR_US
+    Unit = $/GFX/Unit/Descriptor_Unit_Scout_USMCR_US
+    Number = 1
+)
+
+Descriptor_Deck_Pack_Scout_USMC_US_M1025_Humvee_AGL_USMC_US_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Transport = $/GFX/Unit/Descriptor_Unit_M1025_Humvee_AGL_USMC_US
+    Unit = $/GFX/Unit/Descriptor_Unit_Scout_USMC_US
     Number = 1
 )
 
@@ -13122,9 +16266,52 @@ Descriptor_Deck_Pack_Scout_para_FR_VLTT_P4_FR_2_1 is DeckPackDescriptor
     Number = 1
 )
 
+Descriptor_Deck_Pack_Scout_para_VEN_M151A2_MAG_VEN_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Transport = $/GFX/Unit/Descriptor_Unit_M151A2_MAG_VEN
+    Unit = $/GFX/Unit/Descriptor_Unit_Scout_para_VEN
+    Number = 1
+)
+
 Descriptor_Deck_Pack_SeaKing_Mk48_BEL_0_1 is DeckPackDescriptor
 (
     Unit = $/GFX/Unit/Descriptor_Unit_SeaKing_Mk48_BEL
+    Number = 1
+)
+
+Descriptor_Deck_Pack_SeaKing_S61_reco_DK_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Unit = $/GFX/Unit/Descriptor_Unit_SeaKing_S61_reco_DK
+    Number = 1
+)
+
+Descriptor_Deck_Pack_SeaKing_S61_supply_DK_0_1 is DeckPackDescriptor
+(
+    Unit = $/GFX/Unit/Descriptor_Unit_SeaKing_S61_supply_DK
+    Number = 1
+)
+
+Descriptor_Deck_Pack_Security_Heimat_RFA_Unimog_trans_RFA_0_1 is DeckPackDescriptor
+(
+    Transport = $/GFX/Unit/Descriptor_Unit_Unimog_trans_RFA
+    Unit = $/GFX/Unit/Descriptor_Unit_Security_Heimat_RFA
+    Number = 1
+)
+
+Descriptor_Deck_Pack_Security_MVD_SOV_GAZ_53_trans_SOV_0_1 is DeckPackDescriptor
+(
+    Transport = $/GFX/Unit/Descriptor_Unit_GAZ_53_trans_SOV
+    Unit = $/GFX/Unit/Descriptor_Unit_Security_MVD_SOV
+    Number = 1
+)
+
+Descriptor_Deck_Pack_Security_Marine_RFA_MAN_630_L2AE_trans_RFA_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Transport = $/GFX/Unit/Descriptor_Unit_MAN_630_L2AE_trans_RFA
+    Unit = $/GFX/Unit/Descriptor_Unit_Security_Marine_RFA
     Number = 1
 )
 
@@ -13165,6 +16352,37 @@ Descriptor_Deck_Pack_Security_USMC_US_M1038_Humvee_US_1_1 is DeckPackDescriptor
     Number = 1
 )
 
+Descriptor_Deck_Pack_Security_VPB_DDR_LO_1800_trans_DDR_0_1 is DeckPackDescriptor
+(
+    Transport = $/GFX/Unit/Descriptor_Unit_LO_1800_trans_DDR
+    Unit = $/GFX/Unit/Descriptor_Unit_Security_VPB_DDR
+    Number = 1
+)
+
+Descriptor_Deck_Pack_Sniper_AMR_VEN_M151_MUTT_trans_VEN_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Transport = $/GFX/Unit/Descriptor_Unit_M151_MUTT_trans_VEN
+    Unit = $/GFX/Unit/Descriptor_Unit_Sniper_AMR_VEN
+    Number = 1
+)
+
+Descriptor_Deck_Pack_Sniper_BRZ_F85_Rural_trans_BRZ_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Transport = $/GFX/Unit/Descriptor_Unit_F85_Rural_trans_BRZ
+    Unit = $/GFX/Unit/Descriptor_Unit_Sniper_BRZ
+    Number = 1
+)
+
+Descriptor_Deck_Pack_Sniper_CIA_US_OH6_QuietOne_US_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Transport = $/GFX/Unit/Descriptor_Unit_OH6_QuietOne_US
+    Unit = $/GFX/Unit/Descriptor_Unit_Sniper_CIA_US
+    Number = 1
+)
+
 Descriptor_Deck_Pack_Sniper_ESR_BEL_Iltis_trans_BEL_2_1 is DeckPackDescriptor
 (
     Xp = 2
@@ -13193,6 +16411,14 @@ Descriptor_Deck_Pack_Sniper_M82_US_FAV_trans_US_1_1 is DeckPackDescriptor
     Xp = 1
     Transport = $/GFX/Unit/Descriptor_Unit_FAV_trans_US
     Unit = $/GFX/Unit/Descriptor_Unit_Sniper_M82_US
+    Number = 1
+)
+
+Descriptor_Deck_Pack_Sniper_MVD_SOV_UAZ_469_MVD_SOV_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Transport = $/GFX/Unit/Descriptor_Unit_UAZ_469_MVD_SOV
+    Unit = $/GFX/Unit/Descriptor_Unit_Sniper_MVD_SOV
     Number = 1
 )
 
@@ -13236,6 +16462,14 @@ Descriptor_Deck_Pack_Sniper_US_M998_Humvee_US_1_1 is DeckPackDescriptor
     Number = 1
 )
 
+Descriptor_Deck_Pack_Sniper_VEN_M151A2_MAG_VEN_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Transport = $/GFX/Unit/Descriptor_Unit_M151A2_MAG_VEN
+    Unit = $/GFX/Unit/Descriptor_Unit_Sniper_VEN
+    Number = 1
+)
+
 Descriptor_Deck_Pack_Spetsnaz_CMD_SOV_GAZ_66B_SOV_3_1 is DeckPackDescriptor
 (
     Xp = 3
@@ -13257,6 +16491,14 @@ Descriptor_Deck_Pack_Spetsnaz_FireSupport_SOV_UAZ_469_SOV_2_1 is DeckPackDescrip
     Xp = 2
     Transport = $/GFX/Unit/Descriptor_Unit_UAZ_469_SOV
     Unit = $/GFX/Unit/Descriptor_Unit_Spetsnaz_FireSupport_SOV
+    Number = 1
+)
+
+Descriptor_Deck_Pack_Spetsnaz_Naval_SOV_ZIL_131_Naval_SOV_2_1 is DeckPackDescriptor
+(
+    Xp = 2
+    Transport = $/GFX/Unit/Descriptor_Unit_ZIL_131_Naval_SOV
+    Unit = $/GFX/Unit/Descriptor_Unit_Spetsnaz_Naval_SOV
     Number = 1
 )
 
@@ -13297,6 +16539,34 @@ Descriptor_Deck_Pack_StayBehind_BEL_Unimog_trans_BEL_2_1 is DeckPackDescriptor
     Number = 1
 )
 
+Descriptor_Deck_Pack_Steyr_MAN_20_280_supply_VEN_0_1 is DeckPackDescriptor
+(
+    Unit = $/GFX/Unit/Descriptor_Unit_Steyr_MAN_20_280_supply_VEN
+    Number = 1
+)
+
+Descriptor_Deck_Pack_Strandmeister_RFA_MAN_630_L2AE_trans_RFA_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Transport = $/GFX/Unit/Descriptor_Unit_MAN_630_L2AE_trans_RFA
+    Unit = $/GFX/Unit/Descriptor_Unit_Strandmeister_RFA
+    Number = 1
+)
+
+Descriptor_Deck_Pack_Su_17M4_AT2_SOV_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Unit = $/GFX/Unit/Descriptor_Unit_Su_17M4_AT2_SOV
+    Number = 1
+)
+
+Descriptor_Deck_Pack_Su_17M4_CLU_SOV_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Unit = $/GFX/Unit/Descriptor_Unit_Su_17M4_CLU_SOV
+    Number = 1
+)
+
 Descriptor_Deck_Pack_Su_17M4_HE2_SOV_1_1 is DeckPackDescriptor
 (
     Xp = 1
@@ -13304,10 +16574,31 @@ Descriptor_Deck_Pack_Su_17M4_HE2_SOV_1_1 is DeckPackDescriptor
     Number = 1
 )
 
+Descriptor_Deck_Pack_Su_17M4_SEAD_SOV_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Unit = $/GFX/Unit/Descriptor_Unit_Su_17M4_SEAD_SOV
+    Number = 1
+)
+
+Descriptor_Deck_Pack_Su_17M4_SOV_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Unit = $/GFX/Unit/Descriptor_Unit_Su_17M4_SOV
+    Number = 1
+)
+
 Descriptor_Deck_Pack_Su_17M4_thermo_SOV_1_1 is DeckPackDescriptor
 (
     Xp = 1
     Unit = $/GFX/Unit/Descriptor_Unit_Su_17M4_thermo_SOV
+    Number = 1
+)
+
+Descriptor_Deck_Pack_Su_22_AT2_DDR_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Unit = $/GFX/Unit/Descriptor_Unit_Su_22_AT2_DDR
     Number = 1
 )
 
@@ -13353,6 +16644,13 @@ Descriptor_Deck_Pack_Su_22_AT_TCH_2_2 is DeckPackDescriptor
     Number = 2
 )
 
+Descriptor_Deck_Pack_Su_22_RKT3_POL_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Unit = $/GFX/Unit/Descriptor_Unit_Su_22_RKT3_POL
+    Number = 1
+)
+
 Descriptor_Deck_Pack_Su_22_RKT_DDR_1_1 is DeckPackDescriptor
 (
     Xp = 1
@@ -13364,6 +16662,13 @@ Descriptor_Deck_Pack_Su_22_SEAD2_TCH_1_1 is DeckPackDescriptor
 (
     Xp = 1
     Unit = $/GFX/Unit/Descriptor_Unit_Su_22_SEAD2_TCH
+    Number = 1
+)
+
+Descriptor_Deck_Pack_Su_22_SEAD_DDR_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Unit = $/GFX/Unit/Descriptor_Unit_Su_22_SEAD_DDR
     Number = 1
 )
 
@@ -13479,6 +16784,13 @@ Descriptor_Deck_Pack_Su_24M_clu2_SOV_1_1 is DeckPackDescriptor
     Number = 1
 )
 
+Descriptor_Deck_Pack_Su_24M_clu_SOV_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Unit = $/GFX/Unit/Descriptor_Unit_Su_24M_clu_SOV
+    Number = 1
+)
+
 Descriptor_Deck_Pack_Su_24M_clu_SOV_1_999 is DeckPackDescriptor
 (
     Xp = 1
@@ -13507,10 +16819,31 @@ Descriptor_Deck_Pack_Su_24M_thermo_SOV_1_1 is DeckPackDescriptor
     Number = 1
 )
 
+Descriptor_Deck_Pack_Su_24_CLU_SOV_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Unit = $/GFX/Unit/Descriptor_Unit_Su_24_CLU_SOV
+    Number = 1
+)
+
+Descriptor_Deck_Pack_Su_24_RKT_SOV_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Unit = $/GFX/Unit/Descriptor_Unit_Su_24_RKT_SOV
+    Number = 1
+)
+
 Descriptor_Deck_Pack_Su_25T_SOV_1_1 is DeckPackDescriptor
 (
     Xp = 1
     Unit = $/GFX/Unit/Descriptor_Unit_Su_25T_SOV
+    Number = 1
+)
+
+Descriptor_Deck_Pack_Su_25_AT2_SOV_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Unit = $/GFX/Unit/Descriptor_Unit_Su_25_AT2_SOV
     Number = 1
 )
 
@@ -13526,6 +16859,13 @@ Descriptor_Deck_Pack_Su_25_NPLM_TCH_2_2 is DeckPackDescriptor
     Xp = 2
     Unit = $/GFX/Unit/Descriptor_Unit_Su_25_NPLM_TCH
     Number = 2
+)
+
+Descriptor_Deck_Pack_Su_25_RKT3_SOV_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Unit = $/GFX/Unit/Descriptor_Unit_Su_25_RKT3_SOV
+    Number = 1
 )
 
 Descriptor_Deck_Pack_Su_25_RKT_TCH_1_1 is DeckPackDescriptor
@@ -13598,6 +16938,27 @@ Descriptor_Deck_Pack_Su_27S_SOV_1_1 is DeckPackDescriptor
     Number = 1
 )
 
+Descriptor_Deck_Pack_Su_27S_jammers_SOV_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Unit = $/GFX/Unit/Descriptor_Unit_Su_27S_jammers_SOV
+    Number = 1
+)
+
+Descriptor_Deck_Pack_Su_7BKL_EW_POL_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Unit = $/GFX/Unit/Descriptor_Unit_Su_7BKL_EW_POL
+    Number = 1
+)
+
+Descriptor_Deck_Pack_Su_7BKL_RKT_POL_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Unit = $/GFX/Unit/Descriptor_Unit_Su_7BKL_RKT_POL
+    Number = 1
+)
+
 Descriptor_Deck_Pack_Supacat_ATMP_Javelin_LML_UK_1_1 is DeckPackDescriptor
 (
     Xp = 1
@@ -13659,6 +17020,12 @@ Descriptor_Deck_Pack_T34_85M_CMD_POL_0_6 is DeckPackDescriptor
     Number = 6
 )
 
+Descriptor_Deck_Pack_T34_85M_CUB_0_1 is DeckPackDescriptor
+(
+    Unit = $/GFX/Unit/Descriptor_Unit_T34_85M_CUB
+    Number = 1
+)
+
 Descriptor_Deck_Pack_T34_85M_DDR_0_1 is DeckPackDescriptor
 (
     Unit = $/GFX/Unit/Descriptor_Unit_T34_85M_DDR
@@ -13681,6 +17048,26 @@ Descriptor_Deck_Pack_T34_85M_reco_TCH_1_1 is DeckPackDescriptor
 (
     Xp = 1
     Unit = $/GFX/Unit/Descriptor_Unit_T34_85M_reco_TCH
+    Number = 1
+)
+
+Descriptor_Deck_Pack_T34_D30_CUB_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Unit = $/GFX/Unit/Descriptor_Unit_T34_D30_CUB
+    Number = 1
+)
+
+Descriptor_Deck_Pack_T34_KS19_CUB_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Unit = $/GFX/Unit/Descriptor_Unit_T34_KS19_CUB
+    Number = 1
+)
+
+Descriptor_Deck_Pack_T34_M46_CUB_0_1 is DeckPackDescriptor
+(
+    Unit = $/GFX/Unit/Descriptor_Unit_T34_M46_CUB
     Number = 1
 )
 
@@ -13710,6 +17097,13 @@ Descriptor_Deck_Pack_T54B_POL_2_20 is DeckPackDescriptor
     Xp = 2
     Unit = $/GFX/Unit/Descriptor_Unit_T54B_POL
     Number = 20
+)
+
+Descriptor_Deck_Pack_T54B_Reserve_DDR_2_1 is DeckPackDescriptor
+(
+    Xp = 2
+    Unit = $/GFX/Unit/Descriptor_Unit_T54B_Reserve_DDR
+    Number = 1
 )
 
 Descriptor_Deck_Pack_T54B_TCH_1_1 is DeckPackDescriptor
@@ -13742,6 +17136,12 @@ Descriptor_Deck_Pack_T55AM1_TCH_2_1 is DeckPackDescriptor
 (
     Xp = 2
     Unit = $/GFX/Unit/Descriptor_Unit_T55AM1_TCH
+    Number = 1
+)
+
+Descriptor_Deck_Pack_T55AM2B_DDR_0_1 is DeckPackDescriptor
+(
+    Unit = $/GFX/Unit/Descriptor_Unit_T55AM2B_DDR
     Number = 1
 )
 
@@ -13779,9 +17179,30 @@ Descriptor_Deck_Pack_T55AM2_TCH_1_1 is DeckPackDescriptor
     Number = 1
 )
 
+Descriptor_Deck_Pack_T55AMD_SOV_2_1 is DeckPackDescriptor
+(
+    Xp = 2
+    Unit = $/GFX/Unit/Descriptor_Unit_T55AMD_SOV
+    Number = 1
+)
+
+Descriptor_Deck_Pack_T55AMD_reco_SOV_2_1 is DeckPackDescriptor
+(
+    Xp = 2
+    Unit = $/GFX/Unit/Descriptor_Unit_T55AMD_reco_SOV
+    Number = 1
+)
+
 Descriptor_Deck_Pack_T55AMS_Merida_POL_0_1 is DeckPackDescriptor
 (
     Unit = $/GFX/Unit/Descriptor_Unit_T55AMS_Merida_POL
+    Number = 1
+)
+
+Descriptor_Deck_Pack_T55AMV_SOV_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Unit = $/GFX/Unit/Descriptor_Unit_T55AMV_SOV
     Number = 1
 )
 
@@ -13789,6 +17210,13 @@ Descriptor_Deck_Pack_T55AM_1_SOV_1_1 is DeckPackDescriptor
 (
     Xp = 1
     Unit = $/GFX/Unit/Descriptor_Unit_T55AM_1_SOV
+    Number = 1
+)
+
+Descriptor_Deck_Pack_T55AM_CMD_SOV_2_1 is DeckPackDescriptor
+(
+    Xp = 2
+    Unit = $/GFX/Unit/Descriptor_Unit_T55AM_CMD_SOV
     Number = 1
 )
 
@@ -13860,6 +17288,13 @@ Descriptor_Deck_Pack_T55A_DDR_1_1 is DeckPackDescriptor
     Number = 1
 )
 
+Descriptor_Deck_Pack_T55A_Naval_POL_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Unit = $/GFX/Unit/Descriptor_Unit_T55A_Naval_POL
+    Number = 1
+)
+
 Descriptor_Deck_Pack_T55A_POL_0_1 is DeckPackDescriptor
 (
     Unit = $/GFX/Unit/Descriptor_Unit_T55A_POL
@@ -13869,6 +17304,13 @@ Descriptor_Deck_Pack_T55A_POL_0_1 is DeckPackDescriptor
 Descriptor_Deck_Pack_T55A_POL_1_1 is DeckPackDescriptor
 (
     Xp = 1
+    Unit = $/GFX/Unit/Descriptor_Unit_T55A_POL
+    Number = 1
+)
+
+Descriptor_Deck_Pack_T55A_POL_2_1 is DeckPackDescriptor
+(
+    Xp = 2
     Unit = $/GFX/Unit/Descriptor_Unit_T55A_POL
     Number = 1
 )
@@ -13884,6 +17326,13 @@ Descriptor_Deck_Pack_T55A_obr81_SOV_1_1 is DeckPackDescriptor
 (
     Xp = 1
     Unit = $/GFX/Unit/Descriptor_Unit_T55A_obr81_SOV
+    Number = 1
+)
+
+Descriptor_Deck_Pack_T55U_POL_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Unit = $/GFX/Unit/Descriptor_Unit_T55U_POL
     Number = 1
 )
 
@@ -13928,9 +17377,99 @@ Descriptor_Deck_Pack_T62MV_SOV_1_4 is DeckPackDescriptor
     Number = 4
 )
 
+Descriptor_Deck_Pack_T62M_APS_SOV_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Unit = $/GFX/Unit/Descriptor_Unit_T62M_APS_SOV
+    Number = 1
+)
+
 Descriptor_Deck_Pack_T62M_SOV_0_1 is DeckPackDescriptor
 (
     Unit = $/GFX/Unit/Descriptor_Unit_T62M_SOV
+    Number = 1
+)
+
+Descriptor_Deck_Pack_T62_obr67_CMD_CUB_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Unit = $/GFX/Unit/Descriptor_Unit_T62_obr67_CMD_CUB
+    Number = 1
+)
+
+Descriptor_Deck_Pack_T62_obr67_CUB_2_1 is DeckPackDescriptor
+(
+    Xp = 2
+    Unit = $/GFX/Unit/Descriptor_Unit_T62_obr67_CUB
+    Number = 1
+)
+
+Descriptor_Deck_Pack_T62_obr67_Reserve_CMD_SOV_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Unit = $/GFX/Unit/Descriptor_Unit_T62_obr67_Reserve_CMD_SOV
+    Number = 1
+)
+
+Descriptor_Deck_Pack_T62_obr67_Reserve_SOV_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Unit = $/GFX/Unit/Descriptor_Unit_T62_obr67_Reserve_SOV
+    Number = 1
+)
+
+Descriptor_Deck_Pack_T62_obr67_SOV_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Unit = $/GFX/Unit/Descriptor_Unit_T62_obr67_SOV
+    Number = 1
+)
+
+Descriptor_Deck_Pack_T62_obr72_CUB_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Unit = $/GFX/Unit/Descriptor_Unit_T62_obr72_CUB
+    Number = 1
+)
+
+Descriptor_Deck_Pack_T62_obr72_Reserve_SOV_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Unit = $/GFX/Unit/Descriptor_Unit_T62_obr72_Reserve_SOV
+    Number = 1
+)
+
+Descriptor_Deck_Pack_T62_obr72_SOV_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Unit = $/GFX/Unit/Descriptor_Unit_T62_obr72_SOV
+    Number = 1
+)
+
+Descriptor_Deck_Pack_T62_obr75_Reserve_SOV_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Unit = $/GFX/Unit/Descriptor_Unit_T62_obr75_Reserve_SOV
+    Number = 1
+)
+
+Descriptor_Deck_Pack_T62_obr75_SOV_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Unit = $/GFX/Unit/Descriptor_Unit_T62_obr75_SOV
+    Number = 1
+)
+
+Descriptor_Deck_Pack_T64AV_SOV_0_1 is DeckPackDescriptor
+(
+    Unit = $/GFX/Unit/Descriptor_Unit_T64AV_SOV
+    Number = 1
+)
+
+Descriptor_Deck_Pack_T64AV_SOV_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Unit = $/GFX/Unit/Descriptor_Unit_T64AV_SOV
     Number = 1
 )
 
@@ -13938,6 +17477,19 @@ Descriptor_Deck_Pack_T64A_CMD_SOV_1_1 is DeckPackDescriptor
 (
     Xp = 1
     Unit = $/GFX/Unit/Descriptor_Unit_T64A_CMD_SOV
+    Number = 1
+)
+
+Descriptor_Deck_Pack_T64A_Instructor_SOV_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Unit = $/GFX/Unit/Descriptor_Unit_T64A_Instructor_SOV
+    Number = 1
+)
+
+Descriptor_Deck_Pack_T64A_Obr84_SOV_0_1 is DeckPackDescriptor
+(
+    Unit = $/GFX/Unit/Descriptor_Unit_T64A_Obr84_SOV
     Number = 1
 )
 
@@ -14024,10 +17576,24 @@ Descriptor_Deck_Pack_T64B_SOV_1_999 is DeckPackDescriptor
     Number = 999
 )
 
+Descriptor_Deck_Pack_T64B_SOV_2_1 is DeckPackDescriptor
+(
+    Xp = 2
+    Unit = $/GFX/Unit/Descriptor_Unit_T64B_SOV
+    Number = 1
+)
+
 Descriptor_Deck_Pack_T64R_SOV_1_1 is DeckPackDescriptor
 (
     Xp = 1
     Unit = $/GFX/Unit/Descriptor_Unit_T64R_SOV
+    Number = 1
+)
+
+Descriptor_Deck_Pack_T72AV_SOV_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Unit = $/GFX/Unit/Descriptor_Unit_T72AV_SOV
     Number = 1
 )
 
@@ -14056,6 +17622,13 @@ Descriptor_Deck_Pack_T72B_SOV_1_1 is DeckPackDescriptor
 (
     Xp = 1
     Unit = $/GFX/Unit/Descriptor_Unit_T72B_SOV
+    Number = 1
+)
+
+Descriptor_Deck_Pack_T72B_obr89_Instructor_SOV_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Unit = $/GFX/Unit/Descriptor_Unit_T72B_obr89_Instructor_SOV
     Number = 1
 )
 
@@ -14098,6 +17671,13 @@ Descriptor_Deck_Pack_T72M1_DDR_1_1 is DeckPackDescriptor
 (
     Xp = 1
     Unit = $/GFX/Unit/Descriptor_Unit_T72M1_DDR
+    Number = 1
+)
+
+Descriptor_Deck_Pack_T72M1_Instructor_SOV_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Unit = $/GFX/Unit/Descriptor_Unit_T72M1_Instructor_SOV
     Number = 1
 )
 
@@ -14192,6 +17772,13 @@ Descriptor_Deck_Pack_T72M_DDR_1_1 is DeckPackDescriptor
     Number = 1
 )
 
+Descriptor_Deck_Pack_T72M_Instructor_TCH_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Unit = $/GFX/Unit/Descriptor_Unit_T72M_Instructor_TCH
+    Number = 1
+)
+
 Descriptor_Deck_Pack_T72M_POL_1_1 is DeckPackDescriptor
 (
     Xp = 1
@@ -14227,13 +17814,6 @@ Descriptor_Deck_Pack_T72M_TCH_2_1 is DeckPackDescriptor
     Number = 1
 )
 
-Descriptor_Deck_Pack_T72M_noSmoke_TCH_1_1 is DeckPackDescriptor
-(
-    Xp = 1
-    Unit = $/GFX/Unit/Descriptor_Unit_T72M_noSmoke_TCH
-    Number = 1
-)
-
 Descriptor_Deck_Pack_T72M_noSmoke_TCH_2_1 is DeckPackDescriptor
 (
     Xp = 2
@@ -14262,10 +17842,38 @@ Descriptor_Deck_Pack_T72S_TCH_1_6 is DeckPackDescriptor
     Number = 6
 )
 
+Descriptor_Deck_Pack_T72_CMD_SOV_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Unit = $/GFX/Unit/Descriptor_Unit_T72_CMD_SOV
+    Number = 1
+)
+
 Descriptor_Deck_Pack_T72_DDR_1_1 is DeckPackDescriptor
 (
     Xp = 1
     Unit = $/GFX/Unit/Descriptor_Unit_T72_DDR
+    Number = 1
+)
+
+Descriptor_Deck_Pack_T72_Instructor_DDR_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Unit = $/GFX/Unit/Descriptor_Unit_T72_Instructor_DDR
+    Number = 1
+)
+
+Descriptor_Deck_Pack_T72_SOV_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Unit = $/GFX/Unit/Descriptor_Unit_T72_SOV
+    Number = 1
+)
+
+Descriptor_Deck_Pack_T72_obr77_SOV_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Unit = $/GFX/Unit/Descriptor_Unit_T72_obr77_SOV
     Number = 1
 )
 
@@ -14629,6 +18237,20 @@ Descriptor_Deck_Pack_Tornado_IDS_SEAD_RFA_1_1 is DeckPackDescriptor
     Number = 1
 )
 
+Descriptor_Deck_Pack_Tornado_Marine_CLU_RFA_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Unit = $/GFX/Unit/Descriptor_Unit_Tornado_Marine_CLU_RFA
+    Number = 1
+)
+
+Descriptor_Deck_Pack_Tornado_Marine_SEAD_RFA_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Unit = $/GFX/Unit/Descriptor_Unit_Tornado_Marine_SEAD_RFA
+    Number = 1
+)
+
 Descriptor_Deck_Pack_Tracked_Rapier_UK_1_1 is DeckPackDescriptor
 (
     Xp = 1
@@ -14641,6 +18263,13 @@ Descriptor_Deck_Pack_Tracked_Rapier_UK_3_6 is DeckPackDescriptor
     Xp = 3
     Unit = $/GFX/Unit/Descriptor_Unit_Tracked_Rapier_UK
     Number = 6
+)
+
+Descriptor_Deck_Pack_Tu_143_SOV_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Unit = $/GFX/Unit/Descriptor_Unit_Tu_143_SOV
+    Number = 1
 )
 
 Descriptor_Deck_Pack_Tu_143_TCH_1_1 is DeckPackDescriptor
@@ -14670,6 +18299,13 @@ Descriptor_Deck_Pack_Tunguska_2K22_SOV_2_999 is DeckPackDescriptor
     Number = 999
 )
 
+Descriptor_Deck_Pack_UAZ_469_CMD_DDR_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Unit = $/GFX/Unit/Descriptor_Unit_UAZ_469_CMD_DDR
+    Number = 1
+)
+
 Descriptor_Deck_Pack_UAZ_469_CMD_POL_1_1 is DeckPackDescriptor
 (
     Xp = 1
@@ -14684,11 +18320,25 @@ Descriptor_Deck_Pack_UAZ_469_CMD_Para_POL_2_1 is DeckPackDescriptor
     Number = 1
 )
 
+Descriptor_Deck_Pack_UAZ_469_CMD_SOV_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Unit = $/GFX/Unit/Descriptor_Unit_UAZ_469_CMD_SOV
+    Number = 1
+)
+
 Descriptor_Deck_Pack_UAZ_469_CMD_VDV_SOV_2_999 is DeckPackDescriptor
 (
     Xp = 2
     Unit = $/GFX/Unit/Descriptor_Unit_UAZ_469_CMD_VDV_SOV
     Number = 999
+)
+
+Descriptor_Deck_Pack_UAZ_469_FAV_CUB_2_1 is DeckPackDescriptor
+(
+    Xp = 2
+    Unit = $/GFX/Unit/Descriptor_Unit_UAZ_469_FAV_CUB
+    Number = 1
 )
 
 Descriptor_Deck_Pack_UAZ_469_Konkurs_VDV_SOV_1_1 is DeckPackDescriptor
@@ -14733,6 +18383,19 @@ Descriptor_Deck_Pack_UH1A_US_1_1 is DeckPackDescriptor
     Number = 1
 )
 
+Descriptor_Deck_Pack_UH1B_gunship_VEN_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Unit = $/GFX/Unit/Descriptor_Unit_UH1B_gunship_VEN
+    Number = 1
+)
+
+Descriptor_Deck_Pack_UH1B_supply_COL_0_1 is DeckPackDescriptor
+(
+    Unit = $/GFX/Unit/Descriptor_Unit_UH1B_supply_COL
+    Number = 1
+)
+
 Descriptor_Deck_Pack_UH1D_Supply_RFA_1_999 is DeckPackDescriptor
 (
     Xp = 1
@@ -14740,9 +18403,8 @@ Descriptor_Deck_Pack_UH1D_Supply_RFA_1_999 is DeckPackDescriptor
     Number = 999
 )
 
-Descriptor_Deck_Pack_UH1H_supply_US_1_1 is DeckPackDescriptor
+Descriptor_Deck_Pack_UH1H_supply_US_0_1 is DeckPackDescriptor
 (
-    Xp = 1
     Unit = $/GFX/Unit/Descriptor_Unit_UH1H_supply_US
     Number = 1
 )
@@ -14754,10 +18416,31 @@ Descriptor_Deck_Pack_UH1M_gunship_US_1_1 is DeckPackDescriptor
     Number = 1
 )
 
+Descriptor_Deck_Pack_UH1N_DASIP_reco_US_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Unit = $/GFX/Unit/Descriptor_Unit_UH1N_DASIP_reco_US
+    Number = 1
+)
+
 Descriptor_Deck_Pack_UH1N_TwinHuey_CRV7_CAN_1_1 is DeckPackDescriptor
 (
     Xp = 1
     Unit = $/GFX/Unit/Descriptor_Unit_UH1N_TwinHuey_CRV7_CAN
+    Number = 1
+)
+
+Descriptor_Deck_Pack_UH1N_TwinHuey_SS12_VEN_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Unit = $/GFX/Unit/Descriptor_Unit_UH1N_TwinHuey_SS12_VEN
+    Number = 1
+)
+
+Descriptor_Deck_Pack_UH1N_TwinHuey_reco_US_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Unit = $/GFX/Unit/Descriptor_Unit_UH1N_TwinHuey_reco_US
     Number = 1
 )
 
@@ -14780,6 +18463,20 @@ Descriptor_Deck_Pack_UH60A_Supply_US_1_9 is DeckPackDescriptor
     Xp = 1
     Unit = $/GFX/Unit/Descriptor_Unit_UH60A_Supply_US
     Number = 9
+)
+
+Descriptor_Deck_Pack_UR77_SOV_0_1 is DeckPackDescriptor
+(
+    Unit = $/GFX/Unit/Descriptor_Unit_UR77_SOV
+    Number = 1
+)
+
+Descriptor_Deck_Pack_URSN_SOV_Mi_8TV_non_arme_SOV_2_1 is DeckPackDescriptor
+(
+    Xp = 2
+    Transport = $/GFX/Unit/Descriptor_Unit_Mi_8TV_non_arme_SOV
+    Unit = $/GFX/Unit/Descriptor_Unit_URSN_SOV
+    Number = 1
 )
 
 Descriptor_Deck_Pack_Unimog_S_404_RFA_0_1 is DeckPackDescriptor
@@ -14900,6 +18597,20 @@ Descriptor_Deck_Pack_Ural_4320_ZPU_SOV_1_1 is DeckPackDescriptor
     Number = 1
 )
 
+Descriptor_Deck_Pack_Ural_4320_ZU_SOV_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Unit = $/GFX/Unit/Descriptor_Unit_Ural_4320_ZU_SOV
+    Number = 1
+)
+
+Descriptor_Deck_Pack_VAB_CMD_FR_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Unit = $/GFX/Unit/Descriptor_Unit_VAB_CMD_FR
+    Number = 1
+)
+
 Descriptor_Deck_Pack_VAB_CMD_FR_1_3 is DeckPackDescriptor
 (
     Xp = 1
@@ -14994,6 +18705,13 @@ Descriptor_Deck_Pack_VAB_Mortar_81_Legion_FR_1_999 is DeckPackDescriptor
     Xp = 1
     Unit = $/GFX/Unit/Descriptor_Unit_VAB_Mortar_81_Legion_FR
     Number = 999
+)
+
+Descriptor_Deck_Pack_VBC_90_FR_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Unit = $/GFX/Unit/Descriptor_Unit_VBC_90_FR
+    Number = 1
 )
 
 Descriptor_Deck_Pack_VBL_MILAN_FR_0_999 is DeckPackDescriptor
@@ -15192,6 +18910,12 @@ Descriptor_Deck_Pack_VLRA_supply_FR_1_4 is DeckPackDescriptor
     Number = 4
 )
 
+Descriptor_Deck_Pack_VLTT_P4_MILAN_FR_0_1 is DeckPackDescriptor
+(
+    Unit = $/GFX/Unit/Descriptor_Unit_VLTT_P4_MILAN_FR
+    Number = 1
+)
+
 Descriptor_Deck_Pack_VLTT_P4_MILAN_FR_1_999 is DeckPackDescriptor
 (
     Xp = 1
@@ -15237,6 +18961,14 @@ Descriptor_Deck_Pack_VLTT_P4_PC_FR_1_4 is DeckPackDescriptor
 Descriptor_Deck_Pack_Volvo_N10_supply_BEL_0_1 is DeckPackDescriptor
 (
     Unit = $/GFX/Unit/Descriptor_Unit_Volvo_N10_supply_BEL
+    Number = 1
+)
+
+Descriptor_Deck_Pack_Vysadkari_CMD_TCH_Mi_8TV_TCH_3_1 is DeckPackDescriptor
+(
+    Xp = 3
+    Transport = $/GFX/Unit/Descriptor_Unit_Mi_8TV_TCH
+    Unit = $/GFX/Unit/Descriptor_Unit_Vysadkari_CMD_TCH
     Number = 1
 )
 
@@ -15366,9 +19098,47 @@ Descriptor_Deck_Pack_Wiesel_TOW_RFA_1_10 is DeckPackDescriptor
     Number = 10
 )
 
+Descriptor_Deck_Pack_X1A2_Carcara_BRZ_0_1 is DeckPackDescriptor
+(
+    Unit = $/GFX/Unit/Descriptor_Unit_X1A2_Carcara_BRZ
+    Number = 1
+)
+
+Descriptor_Deck_Pack_X1_Pioneiro_BRZ_0_1 is DeckPackDescriptor
+(
+    Unit = $/GFX/Unit/Descriptor_Unit_X1_Pioneiro_BRZ
+    Number = 1
+)
+
+Descriptor_Deck_Pack_YCQM_121A_Pave_Tiger_US_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Unit = $/GFX/Unit/Descriptor_Unit_YCQM_121A_Pave_Tiger_US
+    Number = 1
+)
+
 Descriptor_Deck_Pack_YP_408_TOW_NL_0_1 is DeckPackDescriptor
 (
     Unit = $/GFX/Unit/Descriptor_Unit_YP_408_TOW_NL
+    Number = 1
+)
+
+Descriptor_Deck_Pack_Yak28_PP_EW_SOV_2_1 is DeckPackDescriptor
+(
+    Xp = 2
+    Unit = $/GFX/Unit/Descriptor_Unit_Yak28_PP_EW_SOV
+    Number = 1
+)
+
+Descriptor_Deck_Pack_ZIL_131_supply_SOV_0_1 is DeckPackDescriptor
+(
+    Unit = $/GFX/Unit/Descriptor_Unit_ZIL_131_supply_SOV
+    Number = 1
+)
+
+Descriptor_Deck_Pack_ZIL_135M_supply_SOV_0_1 is DeckPackDescriptor
+(
+    Unit = $/GFX/Unit/Descriptor_Unit_ZIL_135M_supply_SOV
     Number = 1
 )
 
@@ -15376,6 +19146,12 @@ Descriptor_Deck_Pack_ZSU_23_Shilka_Afghan_SOV_1_1 is DeckPackDescriptor
 (
     Xp = 1
     Unit = $/GFX/Unit/Descriptor_Unit_ZSU_23_Shilka_Afghan_SOV
+    Number = 1
+)
+
+Descriptor_Deck_Pack_ZSU_23_Shilka_DDR_0_1 is DeckPackDescriptor
+(
+    Unit = $/GFX/Unit/Descriptor_Unit_ZSU_23_Shilka_DDR
     Number = 1
 )
 
@@ -15391,6 +19167,19 @@ Descriptor_Deck_Pack_ZSU_23_Shilka_DDR_3_6 is DeckPackDescriptor
     Xp = 3
     Unit = $/GFX/Unit/Descriptor_Unit_ZSU_23_Shilka_DDR
     Number = 6
+)
+
+Descriptor_Deck_Pack_ZSU_23_Shilka_Naval_SOV_1_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Unit = $/GFX/Unit/Descriptor_Unit_ZSU_23_Shilka_Naval_SOV
+    Number = 1
+)
+
+Descriptor_Deck_Pack_ZSU_23_Shilka_POL_0_1 is DeckPackDescriptor
+(
+    Unit = $/GFX/Unit/Descriptor_Unit_ZSU_23_Shilka_POL
+    Number = 1
 )
 
 Descriptor_Deck_Pack_ZSU_23_Shilka_POL_1_1 is DeckPackDescriptor
@@ -15441,39 +19230,9 @@ Descriptor_Deck_Pack_ZSU_23_Shilka_reco_SOV_1_1 is DeckPackDescriptor
     Number = 1
 )
 
-Descriptor_Deck_Pack_FOB_SWE_1_1 is DeckPackDescriptor
+Descriptor_Deck_Pack_ZiL_157_supply_CUB_0_1 is DeckPackDescriptor
 (
-    Xp = 1
-    Unit = $/GFX/Unit/Descriptor_Unit_FOB_SWE
+    Unit = $/GFX/Unit/Descriptor_Unit_ZiL_157_supply_CUB
     Number = 1
 )
 
-Descriptor_Deck_Pack_Hjtrak_319V_Trakk_3T_SWE_0_1 is DeckPackDescriptor
-(
-    Unit = $/GFX/Unit/Descriptor_Unit_Hjtrak_319V_Trakk_3T_SWE
-    Number = 1
-)
-
-Descriptor_Deck_Pack_Tgb_311A_Supply_SWE_0_1 is DeckPackDescriptor
-(
-    Unit = $/GFX/Unit/Descriptor_Unit_Tgb_311A_Supply_SWE
-    Number = 1
-)
-
-Descriptor_Deck_Pack_Tgb_411B_Moelven_Supply_SWE_0_1 is DeckPackDescriptor
-(
-    Unit = $/GFX/Unit/Descriptor_Unit_Tgb_411B_Moelven_Supply_SWE
-    Number = 1
-)
-
-Descriptor_Deck_Pack_Raptgb_9033_CMD_SWE_0_1 is DeckPackDescriptor
-(
-    Unit = $/GFX/Unit/Descriptor_Unit_Raptgb_9033_CMD_SWE
-    Number = 1
-)
-
-Descriptor_Deck_Pack_StabsTgb_m42A_CMD_SWE_0_1 is DeckPackDescriptor
-(
-    Unit = $/GFX/Unit/Descriptor_Unit_StabsTgb_m42A_CMD_SWE
-    Number = 1
-)

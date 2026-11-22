@@ -1,0 +1,14 @@
+export Modele_SeaKing_Mk41_RFA is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/RFA/Helico/SeaKing_Mk41/SeaKing_Mk41.fbx"
+)
+
+export Modele_SeaKing_Mk41_RFA_MID is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/RFA/Helico/SeaKing_Mk41_MID/SeaKing_Mk41_MID.fbx"
+)
+
+export Modele_SeaKing_Mk41_RFA_LOW is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/RFA/Helico/SeaKing_Mk41_LOW/SeaKing_Mk41_LOW.fbx"
+)

@@ -1,0 +1,17 @@
+export Modele_UH60A_Black_Hawk_COL is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/US/Helico/UH_60A_Black_Hawk/UH_60A_Black_Hawk.fbx"
+    Textures="GameData:/Assets/3D/Units/COL/Helico/UH_60A_Black_Hawk"
+)
+
+export Modele_UH60A_Black_Hawk_COL_MID is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/US/Helico/UH_60A_Black_Hawk_MID/UH_60A_Black_Hawk_MID.fbx"
+    Textures="GameData:/Assets/3D/Units/COL/Helico/UH_60A_Black_Hawk_MID"
+)
+
+export Modele_UH60A_Black_Hawk_COL_LOW is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/US/Helico/UH_60A_Black_Hawk_LOW/UH_60A_Black_Hawk_LOW.fbx"
+    Textures="GameData:/Assets/3D/Units/COL/Helico/UH_60A_Black_Hawk_LOW"
+)

@@ -4,8 +4,8 @@ export fx_traine_Fusil_Mitrailleur_AK_tres_petite_4 is SimultaneousActionDeclara
 (
     Params =
     [
+        private parBombTrajectory is TActionAlias( ExpectedType = 'bool' DefaultValue = false ),
         private parDestination is TActionAlias( ExpectedType = 'float3' DefaultValue = float3[20000,0,0] ),
-        private parFluidFriction is TActionAlias( ExpectedType = 'float' DefaultValue = 1 ),
         private parFlyDuration is TActionAlias( ExpectedType = 'float' DefaultValue = 0.45 ),
         private parImpactOnGround is TActionAlias( ExpectedType = 'bool' DefaultValue = false ),
         private parInitialShotDelay is TActionAlias( ExpectedType = 'float' DefaultValue = 0 ),
@@ -79,8 +79,8 @@ export fx_traine_Fusil_Mitrailleur_AK_tres_petite_4 is SimultaneousActionDeclara
                 (
                     Action = $/VFX_Bank/Dummy_Traine
                     NamedParams = MAP[
+                        ( 'parDummyBombTrajectory', parBombTrajectory ),
                         ( 'parDummyDestination', parDestination ),
-                        ( 'parDummyFluidFriction', parFluidFriction ),
                         ( 'parDummyFlyDuration', parFlyDuration ),
                         ( 'parDummyImpactOnGround', parImpactOnGround ),
                         ( 'parDummyInitialSpeed', parInitialSpeed ),

@@ -96,10 +96,10 @@ export BANK_FireBalls is SimultaneousActionDeclaration
                 (
                     RenderInfo = ParticleRenderInfo
                     (
-                        ZTest = True
-                        ZWrite = False
-                        SortTriangles = True
-                        Use3DRotation = True
+                        ZTest = true
+                        ZWrite = false
+                        SortTriangles = true
+                        Use3DRotation = true
                         TextureName = 'GameData:/Assets/2D/Fx/anim_explosion_03_002.png'
                         Calque = 'Particles'
                         EmissiveParticle = true
@@ -113,7 +113,7 @@ export BANK_FireBalls is SimultaneousActionDeclaration
                     )
                     ParticleRenderer = $/VFX_Bank/LitParticleRenderer
                 )
-                PositionIndependentFromEmitter = False
+                PositionIndependentFromEmitter = false
             )
         ),
     ]
@@ -209,7 +209,7 @@ export BANK_FireBalls_HQTex is SimultaneousActionDeclaration
                     )
                     ParticleRenderer = $/VFX_Bank/LitParticleRenderer
                 )
-                PositionIndependentFromEmitter = False
+                PositionIndependentFromEmitter = false
             )
         ),
     ]
@@ -297,10 +297,10 @@ export BANK_FireBalls_HQTex_Orientable is SimultaneousActionDeclaration
                 (
                     RenderInfo = ParticleRenderInfo
                     (
-                        ZTest = True
-                        ZWrite = False
-                        SortTriangles = True
-                        Use3DRotation = True
+                        ZTest = true
+                        ZWrite = false
+                        SortTriangles = true
+                        Use3DRotation = true
                         TextureName = 'GameData:/Assets/2D/Fx/anim_explosion_03_002.png'
                         Calque = 'Particles'
                         EmissiveParticle = true
@@ -315,7 +315,7 @@ export BANK_FireBalls_HQTex_Orientable is SimultaneousActionDeclaration
                     )
                     ParticleRenderer = $/VFX_Bank/LitParticleRenderer
                 )
-                PositionIndependentFromEmitter = False
+                PositionIndependentFromEmitter = false
             )
         ),
         WaitInSec(Duration = 2),
@@ -425,10 +425,10 @@ export BANK_FireBalls_Oriented is SimultaneousActionDeclaration
                 (
                     RenderInfo = ParticleRenderInfo
                     (
-                        ZTest = True
-                        ZWrite = False
-                        SortTriangles = True
-                        Use3DRotation = True
+                        ZTest = true
+                        ZWrite = false
+                        SortTriangles = true
+                        Use3DRotation = true
                         TextureName = 'GameData:/Assets/2D/Fx/anim_explosion_01_003.png'
                         Calque = 'Particles'
                         EmissiveParticle = true
@@ -442,7 +442,7 @@ export BANK_FireBalls_Oriented is SimultaneousActionDeclaration
                     )
                     ParticleRenderer = $/VFX_Bank/LitParticleRenderer
                 )
-                PositionIndependentFromEmitter = False
+                PositionIndependentFromEmitter = false
             )
         ),
         ParticleBombSpawner
@@ -476,10 +476,10 @@ export BANK_FireBalls_Oriented is SimultaneousActionDeclaration
                 (
                     RenderInfo = ParticleRenderInfo
                     (
-                        ZTest = True
-                        ZWrite = False
-                        SortTriangles = True
-                        Use3DRotation = True
+                        ZTest = true
+                        ZWrite = false
+                        SortTriangles = true
+                        Use3DRotation = true
                         TextureName = 'GameData:/Assets/2D/Fx/anim_explosion_03_002.png'
                         Calque = 'Particles'
                         EmissiveParticle = true
@@ -493,7 +493,7 @@ export BANK_FireBalls_Oriented is SimultaneousActionDeclaration
                     )
                     ParticleRenderer = $/VFX_Bank/LitParticleRenderer
                 )
-                PositionIndependentFromEmitter = False
+                PositionIndependentFromEmitter = false
             )
         ),
     ]
@@ -542,10 +542,10 @@ export BANK_FireBalls_Alt is SimultaneousActionDeclaration
                     ParticleRenderer = $/VFX_Bank/LitParticleRenderer
                     RenderInfo = ParticleRenderInfo
                     (
-                        ZTest = True
-                        ZWrite = False
-                        SortTriangles = True
-                        Use3DRotation = True
+                        ZTest = true
+                        ZWrite = false
+                        SortTriangles = true
+                        Use3DRotation = true
                         TextureName = 'GameData:/Assets/2D/Fx/anim_explosion_03_002.png'
                         Calque = 'Particles'
                         EmissiveParticle = true

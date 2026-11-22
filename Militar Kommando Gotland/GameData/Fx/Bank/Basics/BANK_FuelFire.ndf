@@ -118,7 +118,7 @@ export BANK_FuelFire is SimultaneousActionDeclaration
                                             Opacity = 0
                                             EmissivePower = AttackDecay[ParticleLifeRatio, 0.3] * ParticleCustomFloat_3
                                             RotationSpeed = ParticleCustomFloat3_1 * ParticleRemainingLifeRatio
-                                            UseHardCodedRotation = True
+                                            UseHardCodedRotation = true
                                             Animation = ParticleLifeRatio
                                         )
                                     )
@@ -235,7 +235,7 @@ export BANK_FuelSmoke is SimultaneousActionDeclaration
                                             ColorModifier = lerp[ParticleLifeRatio, LinearColor[0.05, 0.05, 0.05], LinearColor[0.17, 0.17, 0.17]]
                                             Opacity = AttackSustainDecay[ParticleLifeRatio, ParticleCustomFloat_4, 0.8] * ParticleCustomFloat_6 * ParticleCustomFloat_3
                                             RotationSpeed = ParticleCustomFloat3_1 * ParticleRemainingLifeRatio
-                                            UseHardCodedRotation = True
+                                            UseHardCodedRotation = true
                                             AdditionnalEvolvers =
                                             [
                                                 Template_TextureAnimation

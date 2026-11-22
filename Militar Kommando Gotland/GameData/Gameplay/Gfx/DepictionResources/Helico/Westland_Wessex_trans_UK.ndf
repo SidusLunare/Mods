@@ -17,3 +17,8 @@ export Modele_Westland_Wessex_trans_UK_Tourelle_01 is TResourceMesh
 (
     Mesh=ModelFile_MAG_t1
 )
+
+export Modele_Westland_Wessex_trans_UK_Tourelle_02 is TResourceMesh
+(
+    Mesh=ModelFile_MAG_t2
+)

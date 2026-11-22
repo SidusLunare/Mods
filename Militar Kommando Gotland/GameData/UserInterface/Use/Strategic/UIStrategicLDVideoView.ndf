@@ -20,7 +20,6 @@ UIStrategicLDVideoViewDescriptor is TUICommonLDVideoViewDescriptor
     ]
     MainComponentDescriptor = BUCKContainerDescriptor(ComponentFrame=TUIFramePropertyRTTI())
     MainComponentContainerUniqueName = "CutSceneVideoContainer"
-    SkipVideoOption = $/MiscOptions/SkipMovies
     ShowSubtitles = $/GameplayOption/ShowSubtitles
     VideoLoadingPriority = 1000
 )
@@ -88,10 +87,8 @@ template Steelman_video
         (
                 ComponentFrame = TUIFramePropertyRTTI
                 (
-                        RelativeWidthHeight = [1,1]
-                        AlignementToAnchor = [0.0, 0.0]
-                        AlignementToFather = [0.0, 0.0]
-                    )
+                    RelativeWidthHeight = [1.0, 1.0]
+                )
                 TextureToken = <TextureToken>
             )
     ]

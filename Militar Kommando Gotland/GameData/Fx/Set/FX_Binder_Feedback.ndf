@@ -69,7 +69,7 @@ template Template_FX_Feedback_Screenspace_GoUp
 
     Mobile = TMobileFactoryTransWorldScene2D
     (
-        DoNotInheritCentroid = False
+        DoNotInheritCentroid = false
         WorldToObserve = $/M3D/Scene/WorldInterface2D
     )
 
@@ -172,11 +172,11 @@ template Template_FX_Feedback_CenterTexture
         (
             RenderInfo = ParticleRenderInfo
             (
-                OpaqueParticle = True
+                OpaqueParticle = true
                 //TextureName = 'GameData:/Assets/2D/FxFeedback2D/squaretarget.png'
                 TextureName = <CenterTexture>
                 Calque = 'Particles'
-                ZTest = False
+                ZTest = false
             )
             Evolvers = Template_List
             (
@@ -229,10 +229,10 @@ template Template_FX_Feedback_CrossLine
                 (
                     RenderInfo = ParticleRenderInfo
                     (
-                        OpaqueParticle = True
+                        OpaqueParticle = true
                         TextureName = 'GameData:/Assets/2D/FxFeedback2D/square_background.png'
                         Calque = FX_Feedback_Calque
-                        ZTest = False
+                        ZTest = false
                     )
                     Evolvers = Template_List
                     (
@@ -271,10 +271,10 @@ template Template_FX_Feedback_CrossLine
                 (
                     RenderInfo = ParticleRenderInfo
                     (
-                        OpaqueParticle = True
+                        OpaqueParticle = true
                         TextureName = 'GameData:/Assets/2D/FxFeedback2D/square_background.png'
                         Calque = FX_Feedback_Calque
-                        ZTest = False
+                        ZTest = false
                     )
                     Evolvers = Template_List
                     (
@@ -338,7 +338,7 @@ template Template_FX_Feedback_CenterTextureAndCross
         (
             Mobile = TMobileFactoryTransWorldScene2D
             (
-                DoNotInheritCentroid = True
+                DoNotInheritCentroid = true
                 WorldToObserve = $/M3D/Scene/WorldInterface2D
             )
 

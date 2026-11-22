@@ -262,9 +262,7 @@ BUCKSpecificMultiLobbyShortcutsMainComponentDescriptor is BUCKContainerDescripto
     ComponentFrame = TUIFramePropertyRTTI
     (
         MagnifiableWidthHeight = [700,138+5]
-        MagnifiableOffset = [0,-5]
-        AlignementToFather = [0.0, 0.0]
-        AlignementToAnchor = [0.0, 0.0]
+        MagnifiableOffset = [0.0, -5.0]
     )
 
     Components =
@@ -307,8 +305,6 @@ BUCKSpecificMultiLobbyShortcutsMainComponentDescriptor is BUCKContainerDescripto
             ComponentFrame = TUIFramePropertyRTTI
             (
                 MagnifiableOffset = [24,32]
-                AlignementToFather = [0.0, 0.0]
-                AlignementToAnchor = [0.0, 0.0]
             )
 
             Axis = ~/ListAxis/Horizontal
@@ -333,11 +329,10 @@ UISpecificMultiLobbyShortcutsViewDescriptor is TUISpecificMultiLobbyShortcutsVie
     [
         TLobbyNDFDescriptor
         (
-            NameToDisplay = "QCK_3V3T"
+            NameToDisplay   = "QCK_3V3"
             NumberOfPlayers = 6
-            InitMoney       = 1000
             UseAutofill     = false
-            CombatRule      = ~/ECombatRule/Conquest
+            CombatRule      = ~/ECombatRule/NotSpecified
         ),
         TLobbyNDFDescriptor
         (
@@ -345,15 +340,15 @@ UISpecificMultiLobbyShortcutsViewDescriptor is TUISpecificMultiLobbyShortcutsVie
             NumberOfPlayers = 20
             InitMoney       = 1500
             UseAutofill     = false
-            CombatRule      = ~/ECombatRule/Conquest
+            CombatRule      = ~/ECombatRule/NotSpecified
         ),
         TLobbyNDFDescriptor
         (
-            NameToDisplay = "QCK_10V10T"
+            NameToDisplay   = "QCK_10V10T"
             NumberOfPlayers = 20
             InitMoney       = 1000
-            UseAutofill = false
-            CombatRule      = ~/ECombatRule/Conquest
+            UseAutofill     = false
+            CombatRule      = ~/ECombatRule/NotSpecified
         ),
     ]
 )

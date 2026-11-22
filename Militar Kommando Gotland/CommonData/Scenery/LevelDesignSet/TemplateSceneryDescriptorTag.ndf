@@ -79,7 +79,7 @@ template template_SceneryDescriptorTag_ReinforcementLine
 [
     Name                : string,
     AddOn               : TGameDesignAddOn_Name,
-    WidthInMeters       : float,
+    WidthLBU            : float,
     ArrowWidthInMeters  : float,
     ArrowLengthInMeters : float,
     Color,
@@ -93,7 +93,7 @@ template template_SceneryDescriptorTag_ReinforcementLine
 
     LineFeedback = TSceneryDescriptorBezierTriangleStringArrow
     (
-        WidthInLBU              = <WidthInMeters>
+        WidthInLBU              = <WidthLBU>
         ArrowWidthInLBU         = <ArrowWidthInMeters>
         ArrowLengthInLBU        = <ArrowLengthInMeters>
         Color                   = <Color>

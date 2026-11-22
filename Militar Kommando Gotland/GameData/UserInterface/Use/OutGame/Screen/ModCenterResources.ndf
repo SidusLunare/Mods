@@ -92,9 +92,9 @@ private ModCenterPanelDetailsButton is BUCKButtonDescriptor
 
 private ModCenterStarRatingTexture is BUCKTextureDescriptor
 (
-    ClipTextureToComponent = True
+    ClipTextureToComponent = true
     TextureToken = "OutgameTexture_ModCenter_Star"
-    TileTextureInComponent = True
+    TileTextureInComponent = true
     ComponentFrame = TUIFramePropertyRTTI
     (
         RelativeWidthHeight = [0, 0]
@@ -107,7 +107,6 @@ private ModCenterStarRatingTexture is BUCKTextureDescriptor
     )
 )
 
-ModCenter_LineBackground is TUIResourceTexture_Common(FileName = "GameData:/Assets/2D/Interface/UseOutGame/ModCenter/line_background.png")
 
 private ModCenterInactiveContainerDescriptor is BUCKContainerDescriptor
 (

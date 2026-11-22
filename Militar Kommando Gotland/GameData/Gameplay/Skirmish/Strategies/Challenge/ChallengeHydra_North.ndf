@@ -6,7 +6,7 @@ export ChallengeHydra_North_Strategy is TIAGeneralStrategy
 (
     StrategyName = "HydraAIn"
     FirstGenerator = ChalHydra_N_Choose_Strategy
-    AuthorizedCorridorList = [2]
+    AuthorizedCorridorList = [ 2 ]
     TransitionList =
     [
         ChalHydra_N_Transition_StartToPhaseCommand,
@@ -24,7 +24,7 @@ export ChalHydra_N_Condition_GotoGeneric is TSequenceCondition_True
 //-------------------------------------------------------------------------
 export ChalHydra_N_Condition_CommandPhase is TSequenceCondition_Phase
 (
-    PhaseType = CommandPhase
+    PhaseType = ~/TGamePhase/Command
 )
 
 //-------------------------------------------------------------------------

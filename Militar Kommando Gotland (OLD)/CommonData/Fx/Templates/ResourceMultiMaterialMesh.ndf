@@ -1,0 +1,10 @@
+template Template_ResourceMesh
+[
+    Value : TFileName[Mesh] = "CommonData:/Assets/3D/PlaceHolder/PlaceHolder.Ase2NdfBin",
+] is TConstant
+(
+    Value = TResourceMesh
+    (
+       Mesh = <Value>
+    )
+)

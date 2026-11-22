@@ -1,0 +1,24 @@
+export Modele_Mi_24V_CUB is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/POL/Helico/Mi_24V/Mi_24V.fbx"
+    Textures="GameData:/Assets/3D/Units/CUBA/Helico/Mi_24V"
+)
+
+export Modele_Mi_24V_CUB_MID is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/POL/Helico/Mi_24V_MID/Mi_24V_MID.fbx"
+    Textures="GameData:/Assets/3D/Units/CUBA/Helico/Mi_24V_MID"
+)
+
+export Modele_Mi_24V_CUB_LOW is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/POL/Helico/Mi_24V_LOW/Mi_24V_LOW.fbx"
+    Textures="GameData:/Assets/3D/Units/CUBA/Helico/Mi_24V_LOW"
+)
+
+export HandWritten_Mi_24V_CUB is TDepictionHandWrittenPart
+(
+    Operators = [
+        Mi_24P_landing_gears
+    ]
+)

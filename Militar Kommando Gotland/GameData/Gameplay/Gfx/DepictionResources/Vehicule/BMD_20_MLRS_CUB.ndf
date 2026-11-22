@@ -1,0 +1,14 @@
+export Modele_BMD_20_MLRS_CUB is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/CUBA/Artillerie/BMD_20_MLRS/BMD_20_MLRS.fbx"
+)
+
+export Modele_BMD_20_MLRS_CUB_MID is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/CUBA/Artillerie/BMD_20_MLRS_MID/BMD_20_MLRS_MID.fbx"
+)
+
+export Modele_BMD_20_MLRS_CUB_LOW is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/CUBA/Artillerie/BMD_20_MLRS_LOW/BMD_20_MLRS_LOW.fbx"
+)

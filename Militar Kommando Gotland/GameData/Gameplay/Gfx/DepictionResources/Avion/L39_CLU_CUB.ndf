@@ -1,0 +1,19 @@
+export Modele_L39_CLU_CUB is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/CUBA/Avion/L39C/L39C.fbx"
+)
+
+export Modele_L39_CLU_CUB_MID is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/CUBA/Avion/L39C_MID/L39C_MID.fbx"
+)
+
+export Modele_L39_CLU_CUB_LOW is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/CUBA/Avion/L39C_LOW/L39C_LOW.fbx"
+)
+
+export Modele_L39_CLU_CUB_train is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/CUBA/Avion/L39C/L39C_train.fbx"
+)

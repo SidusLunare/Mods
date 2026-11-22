@@ -1,0 +1,120 @@
+export FX_BANK_Rocket_Fire is SimultaneousActionDeclaration
+(
+    Params =
+    [
+        private parOpacity is Template_Param_Float(DefaultValue = 1.0),
+        private parWidth is Template_Param_Float(DefaultValue = 4.0),
+        private parLength is Template_Param_Float(DefaultValue = 2.0),
+        private parDuration is Template_Param_Float(DefaultValue = 5.0),
+        private parOffset is Template_Param_Float(DefaultValue = 0.0),
+    ]
+    Mobile = MobileUnCentroid()
+    Actions =
+    [
+        Reactor_Fire is ParticleBombSpawner
+        (
+            ParticleMaxDurationForSpawnSkip = 0
+            Count = 1
+            Spawner = ParticleSpawner
+            (
+                ParticleLifetime = parDuration
+                Initialisers =
+                [
+                    Initialiser_SetMobileWrapper(),
+                    ParticleInitialiserList
+                    (
+                        CustomFloat_1 = parOpacity
+                        CustomFloat_2 = parWidth
+                        CustomFloat_3 = parLength
+                        CustomFloat_4 = parOffset
+                    )
+                ]
+
+                ParticleDescriptor = ParticleDescriptor
+                (
+                    ParticleRenderer = $/VFX_Bank/NullRenderer
+                    RenderInfo = $/VFX_Bank/NullRenderInfo
+                    Evolvers = Template_List
+                    (
+                        Evolvers =
+                        [
+                        Template_EvolverPosition( EvolveFunction = ParticleMobileWrapperPositionUnScaled ),
+                        EvolverSpraySpawner
+                        (
+                            Frequency = 10
+                            MaxSpawnedParticleLifetime = 0.5
+                            Spawner = ParticleSpawner
+                            (
+                                ParticleLifetime = 0.3
+                                Initialisers =
+                                [
+                                    Initialiser_SetSpawningParticleMobileWrapper(),
+                                    ParticleInitialiserList
+                                    (
+                                        Size = 300
+                                        Alpha = 1.0
+
+                                        CustomFloat_1 = SpawningParticleCustomFloat_1
+                                        CustomFloat_2 = 250 * SpawningParticleCustomFloat_2
+                                        CustomFloat_3 = SpawningParticleCustomFloat_3
+                                        CustomFloat_4 = RandomRange[0.8, 1]
+                                        CustomFloat_5 = SpawningParticleCustomFloat_4
+                                        ColorModifier = LinearColor[1,1,1]
+                                    )
+                                ]
+
+                                ParticleDescriptor = ParticleDescriptor
+                                (
+                                    ParticleRenderer = $/VFX_Bank/LitParticleRendererNoCentroidPositioning
+                                    RenderInfo = ParticleRenderInfo
+                                    (
+                                        SortTriangles = true
+                                        TextureName = 'GameData:/Assets/2D/Fx/reactor.png'
+                                        Calque = 'Particles'
+                                        EmissiveParticle = True
+                                    )
+                                    Evolvers = ParticleStandardEvolverList
+                                    (
+                                        UseHardCodedRotation = false
+                                        Position = ParticleMobileWrapperPositionUnScaled
+
+                                        EmissivePower = ParticleCustomFloat_1 * AttackSustainDecay[ParticleLifeRatio, 0.01, 0.5] * AttackSustainDecay[ParticleLifeRatio, 0.05, 0.5] * lerp[RandomRange[0,1],0.45,0.55] * 0.1
+
+                                        Size = lerp[ParticleLifeRatio, 0.25, 1] * ParticleCustomFloat_2 * ParticleCustomFloat_4
+
+                                        OffsetAlongDirection = - ($/VFX_Bank/ParticleSize * $/VFX_Bank/ParticleStretching) * 0.44 - ParticleCustomFloat_5
+                                        Direction = normalized[ParticleMobileWrapperAxeX]
+                                        Stretching = lerp[ParticleLifeRatio, 0.25, ParticleCustomFloat_3]
+                                    )
+
+                                )
+                            )
+                        )
+                        ]
+                    )
+                )
+            )
+        ),
+        WaitInSec(Duration = parDuration),
+    ]
+)
+
+export FX_BANK_Rocket_Fire_Simple is ActionCallWithParameters
+(
+    Action = FX_BANK_Rocket_Fire
+    Params =
+    [
+        private parOpacity                is Template_Param_Float ( DefaultValue = 1.0 ),
+        private parWidth                  is Template_Param_Float ( DefaultValue = 4.0 ),
+        private parLength                 is Template_Param_Float ( DefaultValue = 2.0 ),
+        private DurationInSec             is Template_Param_Float ( DefaultValue = 2.0 ),
+        private parStopSpawnerRatio       is Template_Param_Float ( DefaultValue = 2.0 ),
+    ]
+    NamedParameters = MAP
+    [
+        ( 'parOpacity'                    , parOpacity ),
+        ( 'parWidth'                      , parWidth ),
+        ( 'parLength'                     , parLength ),
+        ( 'parDuration'                   , DurationInSec * parStopSpawnerRatio),
+    ]
+)

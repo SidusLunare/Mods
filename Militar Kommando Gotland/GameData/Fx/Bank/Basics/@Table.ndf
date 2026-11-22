@@ -23,7 +23,7 @@ private MinusOneToOneFakeNoise_Table is Template_FloatTable
         0.0741866,
         -0.189207,
     ]
-    Interpolate = False
+    Interpolate = false
 )
 export MinusOneToOneFakeNoise is Template_FunctionDeclaration
 (
@@ -63,7 +63,7 @@ private MinusOneToOneFakeNoise_Interpolate_Table is Template_FloatTable
         0.0741866,
         -0.189207,
     ]
-    Interpolate = True
+    Interpolate = true
 )
 export MinusOneToOneFakeNoise_Interpolate is Template_FunctionDeclaration
 (
@@ -108,7 +108,7 @@ private MinusOneToOneFakeNoise_Table_Float3 is Template_Float3Table
         float3[-0.189207,-0.0917199,-0.372789],
 
     ]
-    Interpolate = False
+    Interpolate = false
 )
 
 export MinusOneToOneFakeNoise_Float3 is Template_FunctionDeclaration
@@ -151,7 +151,7 @@ private MinusOneToOneFakeNoise_Table_Float3_Interpolate is Template_Float3Table
         float3[-0.189207,-0.0917199,-0.372789],
 
     ]
-    Interpolate = True
+    Interpolate = true
 )
 
 export MinusOneToOneFakeNoise_Float3_Interpolate is Template_FunctionDeclaration
@@ -271,7 +271,7 @@ private MinusOneToOneLargeFakeNoise_Interpolate_Table is Template_FloatTable
         0.399518,
         0.00961333,
     ]
-    Interpolate = True
+    Interpolate = true
 )
 export MinusOneToOneLargeFakeNoise_Interpolate is Template_FunctionDeclaration
 (
@@ -490,7 +490,7 @@ private MinusOneToOneLargeFakeNoise_Table_Float3_Interpolate is Template_Float3T
         float3[-0.714652,0.394574,-0.38554],
         float3[0.351482,-0.864315,-0.210303],
     ]
-    Interpolate = True
+    Interpolate = true
 )
 
 export MinusOneToOneLargeFakeNoise_Float3_Interpolate is Template_FunctionDeclaration

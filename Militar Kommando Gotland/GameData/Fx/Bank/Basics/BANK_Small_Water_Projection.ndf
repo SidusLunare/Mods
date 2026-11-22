@@ -126,9 +126,9 @@ export BANK_SmallWater_Projection is SimultaneousActionDeclaration
                 (
                     RenderInfo = ParticleRenderInfo
                     (
-                        OpaqueParticle = True
-                        ZTest = True
-                        SortTriangles = True
+                        OpaqueParticle = true
+                        ZTest = true
+                        SortTriangles = true
                         Use3DRotation = false
                         TextureName = 'GameData:/Assets/2D/Fx/anim_explo_002.png'
                         Calque = 'Particles'
@@ -139,7 +139,7 @@ export BANK_SmallWater_Projection is SimultaneousActionDeclaration
                         FluidFriction = $/VFX_Bank/ParticleCustomFloat_2
                         PhysicAccelerationField = GenFloat3[0, 0, $/VFX_Bank/ParticleCustomFloat_1]
                         PhysicWindField = $/VFX_Bank/MapWind * 2
-                        ForceSlicing = False
+                        ForceSlicing = false
                         Size = lerp[$/VFX_Bank/ParticleLifeRatio, 1, $/VFX_Bank/ParticleCustomFloat_4] * $/VFX_Bank/ParticleCustomFloat_3
                         Opacity = $/VFX_Bank/ParticleRemainingLifeRatio
                         AdditionnalEvolvers =
@@ -244,9 +244,9 @@ export Test_anim_water_splash is SimultaneousActionDeclaration
                 (
                     RenderInfo = ParticleRenderInfo
                     (
-                        OpaqueParticle = True
-                        ZTest = True
-                        SortTriangles = True
+                        OpaqueParticle = true
+                        ZTest = true
+                        SortTriangles = true
                         Use3DRotation = false
                         Calque = 'Particles'
                     )

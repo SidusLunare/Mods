@@ -1,0 +1,182 @@
+template ParticleRenderInfo
+[
+    ZTest                   : boolean[GroupBy = "Render Info"] = true,
+    ZWrite                  : boolean[GroupBy = "Render Info"] = false,
+    SortTriangles           : boolean[GroupBy = "Render Info"] = false,
+    Use3DRotation           : boolean[GroupBy = "Render Info"] = true,
+    TextureName             : TFileName[Texture] = 'GameData:/Assets/2D/Fx/spot.png',
+    EmissiveParticle        : boolean[GroupBy = "Render Info"] = false,
+    OpaqueParticle          : boolean[GroupBy = "Render Info"] = false,
+    Calque                  : string
+                              [
+                                values =
+                                [
+                                    'First',
+                                    'Last',
+                                    'AfterPostProcess',
+                                    'Particles',
+                                    'Billboard',
+                                    'PostUI',
+                                ],
+                              ] = 'Particles',
+] is TFxElementRenderInfo
+(
+    StandardMaterial is TMeshMaterial
+    (
+        TextureDico = MAP[('OARTexture0', <TextureName>)]
+        MaterialType = 'Particle'
+        Tags = [<ZTest> ? 'ZTest' : 'NoZTest',
+                <ZWrite> ? 'ZWrite' : 'NoZWrite' ]
+                + (<EmissiveParticle> ? ['EmissiveParticle']:[])
+                + (<OpaqueParticle> ? ['OpaqueParticle']:[])
+    )
+
+    MeshMaterial = ((<EmissiveParticle> | <OpaqueParticle> ) ? StandardMaterial : nil)
+
+    SortTriangles = <SortTriangles>
+    Use3DRotation = <Use3DRotation>
+
+    private CalqueToViewVariantConfig is MAP[
+        ('Particles', $/VFX_Bank/FXRenderLayerSelector),
+        ('Billboard', $/VFX_Bank/FXBillboardRenderLayerSelector),
+        ('First', $/VFX_Bank/FXFirstRenderLayerSelector),
+        ('Last', $/VFX_Bank/FXLastRenderLayerSelector),
+        ('AfterPostProcess', $/VFX_Bank/FXAfterPostProcessRenderLayerSelector),
+        ('PostUI', $/VFX_Bank/FXPostUIRenderLayerSelector),
+    ]
+    RenderLayerSelector = CalqueToViewVariantConfig[<Calque>]
+    ContentType = ContentType_Texture_FX
+)
+
+export NullRenderInfo is TFxElementRenderInfo
+(
+    MeshMaterial = TMeshMaterial(MaterialType = 'ParticleNull')
+    RenderLayerSelector = $/VFX_Bank/FXRenderLayerSelector
+)
+
+template Template_DistortionParticleRenderInfo
+[
+    SortTriangles           : boolean[GroupBy = "Render Info"] = false,
+    TextureName             : TFileName[Texture] = 'GameData:/Assets/2D/Fx/spot.png',
+] is TFxElementRenderInfo
+(
+    StandardMaterial is TMeshMaterial
+    (
+        TextureDico = MAP[('OARTexture0', <TextureName>)]
+        MaterialType = 'ParticleDistortion'
+    )
+
+    MeshMaterial = StandardMaterial
+
+    SortTriangles = <SortTriangles>
+    Use3DRotation = False
+
+    RenderLayerSelector = $/VFX_Bank/FXDistortionRenderLayerSelector
+    ContentType = ContentType_Texture_FX
+)
+
+
+template LitParticleRenderInfo
+[
+    TextureName             : TFileName[Texture] = 'GameData:/Assets/2D/Fx/spot.png',
+] is TFxElementRenderInfo
+(
+    StandardMaterial is TMeshMaterial
+    (
+        TextureDico = MAP[('OARTexture0', <TextureName>)]
+        MaterialType = 'Particle'
+        Tags = ['ZTest',
+                'NoZWrite',
+                'EmissiveParticle',
+                'OpaqueParticle']
+    )
+
+    MeshMaterial = StandardMaterial
+
+    SortTriangles = True
+    Use3DRotation = True
+
+    RenderLayerSelector = $/VFX_Bank/FXRenderLayerSelector
+    ContentType = ContentType_Texture_FX
+)
+
+template DeferredParticleRenderInfo
+[
+    Use3DRotation           : boolean[GroupBy = "Render Info"] = true,
+    TextureName             : TFileName[Texture] = 'GameData:/Assets/2D/Fx/spot.png',
+    Calque                  : string
+                              [
+                                values =
+                                [
+                                    'First',
+                                    'AfterPostProcess',
+                                    'Particles',
+                                ],
+                              ] = 'Particles',
+] is TFxElementRenderInfo
+(
+    DeferredMeshMaterial is TMeshMaterial
+    (
+        TextureDico = MAP[('OARTexture0', <TextureName>)]
+        MaterialType = 'DeferredParticle'
+    )
+
+    MeshMaterial = DeferredMeshMaterial
+
+    SortTriangles = true
+    Use3DRotation = <Use3DRotation>
+
+    private CalqueToDeferredViewVariantConfig is MAP[
+        ('Particles', $/VFX_Bank/FXDeferredRenderLayerSelector),
+        ('First', $/VFX_Bank/FXDeferredFirstRenderLayerSelector),
+        ('AfterPostProcess', $/VFX_Bank/FXDeferredAfterPostProcessRenderLayerSelector),
+    ]
+    RenderLayerSelector = CalqueToDeferredViewVariantConfig[<Calque>]
+    ContentType = ContentType_Texture_FX
+)
+
+template ParticleRenderInfoForMeshParticle
+[
+    RenderInShadowScene,
+] is TFxElementRenderInfo
+(
+    MeshMaterial = TMeshMaterial
+    (
+        MaterialType = 'SurfaceStandard'
+    )
+    SortTriangles = false
+    Use3DRotation = false
+    RenderLayerSelector = $/M3D/Scene/DefaultFxParticleOpaqueRenderPlace
+    RenderInShadowScene = <RenderInShadowScene>
+    ContentType = ContentType_Texture_FX
+)
+
+ShadowedParticleMeshRenderInfo is ParticleRenderInfoForMeshParticle(RenderInShadowScene = true)
+ParticleMeshRenderInfo is ParticleRenderInfoForMeshParticle(RenderInShadowScene = false)
+export RotorParticleRenderInfo is TFxElementRenderInfo
+(
+    MeshMaterial = TMeshMaterial
+    (
+        MaterialPasses = TGetMaterialPassesSinglePass( ShaderDescriptor = $/M3D/Shader/ShaderRotor )
+        TextureDico = MAP[('OARTexture0', 'GameData:/Assets/2D/Fx/pale_rotor.png')]
+    )
+
+    SortTriangles = True
+    Use3DRotation = True
+
+    RenderLayerSelector = $/VFX_Bank/FXLastRenderLayerSelector
+    ContentType = ContentType_Texture_FX
+)
+
+LightRenderInfo is TFxElementRenderInfo
+(
+    MeshMaterial = TMeshMaterial
+    (
+        MaterialType = 'ParticleLight'
+        TextureDico = MAP[('OARTexture0', 'GameData:/Assets/2D/Fx/spot.png')]
+    )
+    SortTriangles = False
+    Use3DRotation = True
+    RenderLayerSelector = $/VFX_Bank/FXLightRenderLayerSelector
+    ContentType = ContentType_Texture_FX
+)

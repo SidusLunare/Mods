@@ -4,8 +4,8 @@ export fx_traine_obus_artillerie_grand is SimultaneousActionDeclaration
 (
     Params =
     [
+        private parBombTrajectory is TActionAlias( ExpectedType = 'bool' DefaultValue = false ),
         private parDestination is TActionAlias( ExpectedType = 'float3' DefaultValue = float3[68527.66,68527.66,0] ),
-        private parFluidFriction is TActionAlias( ExpectedType = 'float' DefaultValue = 0.01 ),
         private parFlyDuration is TActionAlias( ExpectedType = 'float' DefaultValue = 7.564738 ),
         private parImpactOnGround is TActionAlias( ExpectedType = 'bool' DefaultValue = false ),
         private parInitialShotDelay is TActionAlias( ExpectedType = 'float' DefaultValue = 0 ),
@@ -32,8 +32,8 @@ export fx_traine_obus_artillerie_grand is SimultaneousActionDeclaration
                     Action = $/VFX_Bank/ProjectileMover
                     NamedParams = MAP[
                         ( 'AbsoluteEndPosition', parDestination ),
+                        ( 'BombTrajectory', parBombTrajectory ),
                         ( 'DurationInSec', parFlyDuration ),
-                        ( 'FluidFriction', parFluidFriction ),
                         ( 'InitialSpeed', parInitialSpeed ),
                         ( 'UsePhysicSolver', parTirPhysic ),
                         ( 'UseTirTendu', parTirTendu ),
@@ -102,8 +102,8 @@ export fx_traine_obus_artillerie_grand is SimultaneousActionDeclaration
                         (
                             Action = $/VFX_Bank/Dummy_Traine
                             NamedParams = MAP[
+                                ( 'parDummyBombTrajectory', parBombTrajectory ),
                                 ( 'parDummyDestination', parDestination ),
-                                ( 'parDummyFluidFriction', parFluidFriction ),
                                 ( 'parDummyFlyDuration', parFlyDuration ),
                                 ( 'parDummyImpactOnGround', parImpactOnGround ),
                                 ( 'parDummyInitialSpeed', parInitialSpeed ),

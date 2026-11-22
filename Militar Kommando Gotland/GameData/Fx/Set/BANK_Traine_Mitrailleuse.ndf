@@ -24,7 +24,7 @@ export BANK_Traine_Mitrailleuse_Simple is ActionCallWithParameters
         private DurationInSec                   is Template_Param_Float  ( DefaultValue = 0),
         private parPinShotCount                 is Template_Param_Int    ( DefaultValue = 0),
         private parPinWaitBetweenShot           is Template_Param_Float  ( DefaultValue = 0),
-        private parPinImpactOnGround            is Template_Param_Bool   ( DefaultValue = False),
+        private parPinImpactOnGround            is Template_Param_Bool   ( DefaultValue = false),
         private parInitialDelay                 is Template_Param_Float  ( DefaultValue = 0 ), //*
         private parMaxStretch                   is Template_Param_Float  ( DefaultValue = 50),
         private parRebondExplosion              is Template_Param_Int    ( DefaultValue = 0 ),
@@ -61,7 +61,7 @@ BANK_Traine_Mitrailleuse is SimultaneousActionDeclaration
         private parFlyDuration             is Template_Param_Float  ( DefaultValue = 0),
         private parShotCount               is Template_Param_Int    ( DefaultValue = 0),
         private parWaitBetweenShot         is Template_Param_Float  ( DefaultValue = 0),
-        private parImpactOnGround          is Template_Param_Bool   ( DefaultValue = False),
+        private parImpactOnGround          is Template_Param_Bool   ( DefaultValue = false),
         private parInitialDelay            is Template_Param_Float  ( DefaultValue = 0 ), //*
         private MaxStretch                 is Template_Param_Float  ( DefaultValue = 50 ),
         private RebondExplosion            is Template_Param_Int    ( DefaultValue = 0 ),
@@ -119,7 +119,7 @@ BANK_Traine_Mitrailleuse is SimultaneousActionDeclaration
                         SortTriangles = true
                         TextureName = 'GameData:/Assets/2D/Fx/trail_mitrailleuse_00.png'
                         Calque = 'Particles'
-                        EmissiveParticle = True
+                        EmissiveParticle = true
                     )
                     ParticleRenderer = $/VFX_Bank/LitParticleRendererNoCentroidPositioning
                     Evolvers = ParticleStandardEvolverList
@@ -269,7 +269,7 @@ export BANK_Rebond_Mitrailleuse is SimultaneousActionDeclaration
                         SortTriangles = true
                         TextureName = 'GameData:/Assets/2D/Fx/trail_mitrailleuse_00.png'
                         Calque = 'Particles'
-                        EmissiveParticle = True
+                        EmissiveParticle = true
                     )
                     ParticleRenderer = $/VFX_Bank/LitParticleRendererNoCentroidPositioning
                     Evolvers = ParticleStandardEvolverListWithPhysic

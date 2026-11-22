@@ -14,6 +14,50 @@ export fx_impact_vehicule is SimultaneousActionDeclaration
     [
         TSimultaneousAction
         (
+            Mobile = TMobileWithLocalRepereMatrixFactory
+            (
+                Position = parPosition
+            )
+            Actions =
+            [
+                TActionCall
+                (
+                    Action = $/VFX_Bank/BANK_Bomb_Distort_Simple
+                    NamedParams = MAP[
+                        ( 'parDuration', 0.4 ),
+                        ( 'parFinalSize', 1700 ),
+                        ( 'parInitialSize', 80 ),
+                        ( 'parIntensity', 250 ),
+                        ( 'parPositionRelative', float3[0,0,0] ),
+                    ]
+                ),
+                TActionCall
+                (
+                    Action = $/VFX_Bank/BANK_WasteGroundDust_Simple
+                    NamedParams = MAP[
+                        ( 'parAlphaStartDecayValue', 0.01 ),
+                        ( 'parCount', 15 ),
+                        ( 'parEndColor', float3[0.9921569,0.9843138,0.9843138] ),
+                        ( 'parEndSize', 3178 ),
+                        ( 'parFluidFriction', 3.9 ),
+                        ( 'parInitialDelay', parInitialShotDelay ),
+                        ( 'parLifetime', 1.9 ),
+                        ( 'parOpacity', 0.7 ),
+                        ( 'parRandomInitPosRadius', 150 ),
+                        ( 'parRotationFactor', 1 ),
+                        ( 'parScaleSizeFactor', 1 ),
+                        ( 'parStartColor', float3[0.9921569,0.9921569,0.9921569] ),
+                        ( 'parStartHeight', 400 ),
+                        ( 'parStartRotation', 0.25 ),
+                        ( 'parStartSize', 648 ),
+                        ( 'parStartSpeed3D', float3[4000,4000,0] ),
+                        ( 'parWindWeight', 2.3 ),
+                    ]
+                ),
+            ]
+        ),
+        TSimultaneousAction
+        (
             Mobile = nil
             Actions =
             [
@@ -88,50 +132,6 @@ export fx_impact_vehicule is SimultaneousActionDeclaration
                     ]
                 ),
                 TWaitInSec( Duration = 0.8),
-            ]
-        ),
-        TSimultaneousAction
-        (
-            Mobile = TMobileWithLocalRepereMatrixFactory
-            (
-                Position = parPosition
-            )
-            Actions =
-            [
-                TActionCall
-                (
-                    Action = $/VFX_Bank/BANK_Bomb_Distort_Simple
-                    NamedParams = MAP[
-                        ( 'parDuration', 0.4 ),
-                        ( 'parFinalSize', 1700 ),
-                        ( 'parInitialSize', 80 ),
-                        ( 'parIntensity', 250 ),
-                        ( 'parPositionRelative', float3[0,0,0] ),
-                    ]
-                ),
-                TActionCall
-                (
-                    Action = $/VFX_Bank/BANK_WasteGroundDust_Simple
-                    NamedParams = MAP[
-                        ( 'parAlphaStartDecayValue', 0.01 ),
-                        ( 'parCount', 15 ),
-                        ( 'parEndColor', float3[0.9921569,0.9843138,0.9843138] ),
-                        ( 'parEndSize', 3178 ),
-                        ( 'parFluidFriction', 3.9 ),
-                        ( 'parInitialDelay', parInitialShotDelay ),
-                        ( 'parLifetime', 1.9 ),
-                        ( 'parOpacity', 0.7 ),
-                        ( 'parRandomInitPosRadius', 150 ),
-                        ( 'parRotationFactor', 1 ),
-                        ( 'parScaleSizeFactor', 1 ),
-                        ( 'parStartColor', float3[0.9921569,0.9921569,0.9921569] ),
-                        ( 'parStartHeight', 400 ),
-                        ( 'parStartRotation', 0.25 ),
-                        ( 'parStartSize', 648 ),
-                        ( 'parStartSpeed3D', float3[4000,4000,0] ),
-                        ( 'parWindWeight', 2.3 ),
-                    ]
-                ),
             ]
         ),
     ]

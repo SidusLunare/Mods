@@ -6,6 +6,8 @@ private DummyComponentForBlur is BUCKContainerDescriptor
     )
 )
 
+//-------------------------------------------------------------------------------------
+
 ShowRoomResource is TUISpecificShowRoomResources
 (
     Handler = $/UI/ResourcesHandler/ShowRoomResourcesHandler
@@ -15,7 +17,6 @@ ShowRoomResource is TUISpecificShowRoomResources
     UILayerLDHint               = $/UserInterface/UILayer_2DInterfaceLDHint
 
     CommonResources             = ~/UICommonResource
-    InGameResourcesHandler      = $/UI/ResourcesHandler/InGameResourcesHandler
     OutGameResourcesHandler     = $/UI/ResourcesHandler/OutGameResourcesHandler
     MousePointerMaskLayer       = $/UserInterface/UILayer_ShowRoomMousePointerMask
 
@@ -41,6 +42,7 @@ ShowRoomResource is TUISpecificShowRoomResources
     LabelResource                   = ~/CommonLabelResource
     MainContainerResource           = ~/ShowRoomMainContainerResource
     MousePolicyManagerResources     = nil
+    UnitNameResources               = ~/UICommonUnitNameResources
 
     WarningPanelResources           = ~/WarningPanelInGameResources
 
@@ -57,6 +59,8 @@ ShowRoomResource is TUISpecificShowRoomResources
     ShortcutUserInputLayer = $/M3D/Input/UserInputLayerHandler/InputLayer_InGameShortcuts
     LDScriptUserInputLayer =  $/M3D/Input/UserInputLayerHandler/InputLayer_LDScriptInterceptor
 )
+
+//-------------------------------------------------------------------------------------
 
 ShowRoomMainContainerResource is TUICommonMainContainerResource
 (

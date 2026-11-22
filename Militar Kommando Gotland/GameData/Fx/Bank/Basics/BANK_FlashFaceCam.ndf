@@ -117,10 +117,10 @@ export BANK_FlashFaceCam is SimultaneousActionDeclaration
                     ParticleRenderer = $/VFX_Bank/LitParticleRendererNoCentroidPositioning
                     RenderInfo = ParticleRenderInfo
                     (
-                        SortTriangles = True
+                        SortTriangles = true
                         TextureName = 'GameData:/Assets/2D/Fx/impactflash.png'
                         Calque = 'Particles'
-                        EmissiveParticle = True
+                        EmissiveParticle = true
                     )
 
                     Evolvers = ParticleStandardEvolverList

@@ -160,7 +160,6 @@ template BUCKWithTabsDescriptor
     // Components : LIST<TBUCKContainerDescriptor> = [],                              // On empêche d'ajouter des composants directement au container des tabs
 
     // -- BUCKContainerDescriptor
-    CanReselectTabs : bool = false,                                                   // Permet de déclencher les events OnTabSelected lorsqu'on re-sélectionne l'onglet actuel
     CannotDeselectTabs : bool = true,                                                 // Permet d'empêcher la déselection des tabs (Vrai par défaut)
 
     InterMarginBetweenTabsAndContent : TRTTILength = TRTTILength(),                   // Défini l'écartement entre les tabs et le contenu
@@ -212,7 +211,6 @@ is TBUCKWithTabsDescriptor
     ComponentStateLocked = <ComponentStateLocked>
     // -- BUCKContainerDescriptor
 
-    CanReselectTabs = <CanReselectTabs>
     CannotDeselectTabs = <CannotDeselectTabs>
 
     TabsAndContent = <TabsAndContent>

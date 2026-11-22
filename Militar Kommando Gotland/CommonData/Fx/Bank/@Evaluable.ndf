@@ -1,5 +1,3 @@
-// numero de version pour forcer la regeneration des Fx. a incrementer quand on en a besoin :
-// Fx Glad Version = 0
 export negate is           Template_FunctionDeclaration( Params = [a is Template_Alias()] Intrinsic = $/System/EvaluableIntrinsics/negate)
 
 export FxQuality is             ($/GraphicOption/FxQuality/Value div 100)
@@ -48,17 +46,17 @@ export CameraDirection is                   Template_CameraDirection_ForBank    
 export CameraAxeX is                        Template_CameraAxeX_ForBank             ( Camera = $/M3D/Scene/FxCameraProvider_CameraPrincipale)
 export CameraAxeY is                        Template_CameraAxeY_ForBank             ( Camera = $/M3D/Scene/FxCameraProvider_CameraPrincipale)
 export MousePosition is                     Template_MousePosition_ForBank          ( World = $/M3D/Scene/DefaultWorld)
-export MobileWrapper is                     Template_ActionDependentValue_ForBank   ( ValueName = 'MobileWrapper' ExpectedType : PClassWithVirtualDestructor)
-export MobilePosition is                    Template_ActionDependentValue_ForBank   ( ValueName = 'MobilePosition' ExpectedType : float3)
-export MobileDirection is                   Template_ActionDependentValue_ForBank   ( ValueName = 'MobileDirection' ExpectedType : float3)
+export MobileWrapper is                     Template_ActionDependentValue_ForBank   ( ValueName = 'MobileWrapper' ExpectedType = "TClassWithVirtualDestructor*")
+export MobilePosition is                    Template_ActionDependentValue_ForBank   ( ValueName = 'MobilePosition' ExpectedType = "float3")
+export MobileDirection is                   Template_ActionDependentValue_ForBank   ( ValueName = 'MobileDirection' ExpectedType = "float3")
 export ifte is                              Template_FunctionDeclaration(           Intrinsic = $/System/EvaluableIntrinsics/ifte Params = [Template_Alias(), Template_Alias(), Template_Alias()])
 export ToFloat3 is                          Template_FunctionDeclaration            ( Intrinsic = $/System/EvaluableIntrinsics/GenFloat3 Params = [Template_Alias()])
 export ToString is                          Template_FunctionDeclaration            ( Intrinsic = $/System/EvaluableIntrinsics/ToString Params = [Template_Alias()])
 export ToInt is                             Template_FunctionDeclaration            ( Intrinsic = $/System/EvaluableIntrinsics/ToInt Params = [Template_Alias()])
 export TimeInSecondsNonPausable is          Template_TimeInSecondsNonPausable_ForBank ()
-export ActionLifeRatio is                   Template_ActionDependentValue_ForBank   ( ValueName = 'LifeRatio' ExpectedType : float)
-export ActionRemainingLifeRatio is          (1 - TActionDependentValue(Name = 'LifeRatio' ExpectedType : float))
-export ActionElapsedTime is                 Template_ActionDependentValue_ForBank   ( ValueName = 'ElapsedTime' ExpectedType : float)
+export ActionLifeRatio is                   Template_ActionDependentValue_ForBank   ( ValueName = 'LifeRatio' ExpectedType = "float")
+export ActionRemainingLifeRatio is          (1 - TActionDependentValue(Name = 'LifeRatio' ExpectedType = "float"))
+export ActionElapsedTime is                 Template_ActionDependentValue_ForBank   ( ValueName = 'ElapsedTime' ExpectedType = "float")
 export PI is                                TConstantFloat(Value = 3.1415927)
 export PI2 is                               TConstantFloat(Value = 3.1415927 * 2)
 export OOPI2 is                             TConstantFloat(Value = 1. div (3.1415927 * 2) )
@@ -381,9 +379,9 @@ export PhysicComputePosition_Simple is Template_FunctionDeclaration
 (
     Params =
     [
-        parParticleAcceleration is Template_Alias(ExpectedType : float3),
-        parSpeed is Template_Alias(ExpectedType : float3),
-        parPosition is Template_Alias(ExpectedType : float3),
+        parParticleAcceleration is Template_Alias(ExpectedType = "float3"),
+        parSpeed is Template_Alias(ExpectedType = "float3"),
+        parPosition is Template_Alias(ExpectedType = "float3"),
     ]
 
     // Intégration de d²x/dt² = a, en considérant a constant : X = x0 + v0 * t + 1/2 * a * t²
@@ -396,8 +394,8 @@ export PhysicComputeSpeed_Simple is Template_FunctionDeclaration
 (
     Params =
     [
-        parParticleAcceleration is Template_Alias(ExpectedType : float3),
-        parSpeed is Template_Alias(ExpectedType : float3),
+        parParticleAcceleration is Template_Alias(ExpectedType = "float3"),
+        parSpeed is Template_Alias(ExpectedType = "float3"),
     ]
     // intégration de d²v/dt² = a, en considérant a constant : V = v0 + a * t
     // (intégration d'Euler)

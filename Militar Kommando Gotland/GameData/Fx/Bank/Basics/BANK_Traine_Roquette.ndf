@@ -36,32 +36,40 @@ export Roquette_Meshs_List is TEugBListPBaseClass
 (
     Value =
     [
-        private Roc_5in             is Template_CallRoquette(Mesh = 'GameData:/Assets/3D/Units/Ammo/Roquettes/127mm_US.fbx'),
-        private Roc_110mm           is Template_CallRoquette(Mesh = 'GameData:/Assets/3D/Units/Ammo/Roquettes/127mm_US.fbx'),
-        private RP3HE               is Template_CallRoquette(Mesh = 'GameData:/Assets/3D/Units/Ammo/Roquettes/RP3_UK_HE.fbx'),
-        private RP3HESAP            is Template_CallRoquette(Mesh = 'GameData:/Assets/3D/Units/Ammo/Roquettes/RP3_UK_AP.fbx'),
-        private Roc_210mm           is Template_CallRoquette(Mesh = 'GameData:/Assets/3D/Units/Ammo/Roquettes/210mm.fbx'),
-        private Obus_AT             is Template_CallRoquette(Mesh = 'GameData:/Assets/3D/Units/Ammo/Roquettes/Obus_AT.fbx'),
+        private Roc_5in             is Template_CallRoquette(Mesh = 'GameData:/Assets/3D/Ammo/Roquettes/127mm_US.fbx'),
+        private Roc_110mm           is Template_CallRoquette(Mesh = 'GameData:/Assets/3D/Ammo/Roquettes/127mm_US.fbx'),
+        private RP3HE               is Template_CallRoquette(Mesh = 'GameData:/Assets/3D/Ammo/Roquettes/RP3_UK_HE.fbx'),
+        private RP3HESAP            is Template_CallRoquette(Mesh = 'GameData:/Assets/3D/Ammo/Roquettes/RP3_UK_AP.fbx'),
+        private Roc_210mm           is Template_CallRoquette(Mesh = 'GameData:/Assets/3D/Ammo/Roquettes/210mm.fbx'),
+        private Obus_AT             is Template_CallRoquette(Mesh = 'GameData:/Assets/3D/Ammo/Roquettes/Obus_AT.fbx'),
         //rajouts FULDA
-        private FFAR_70mm           is Template_CallRoquette(Mesh = 'GameData:/Assets/3D/Units/Ammo/Roquettes/FFAR_70mm.fbx'),
-        private Hydra_70mm          is Template_CallRoquette(Mesh = 'GameData:/Assets/3D/Units/Ammo/Roquettes/US/Roquette_Hydra_70mm.fbx'),
-        private Katyusha            is Template_CallRoquette(Mesh = 'GameData:/Assets/3D/Units/Ammo/Roquettes/Katyusha.fbx'),
-        private Mk_32_Zuni_127mm    is Template_CallRoquette(Mesh = 'GameData:/Assets/3D/Units/Ammo/Roquettes/Mk_32_Zuni_127mm.fbx'),
-        private MLRS                is Template_CallRoquette(Mesh = 'GameData:/Assets/3D/Units/Ammo/Roquettes/MLRS.fbx'),
-        private S_24_240mm          is Template_CallRoquette(Mesh = 'GameData:/Assets/3D/Units/Ammo/Roquettes/SOV/S24_240mm/S24_240mm.fbx'),
-        private S5                  is Template_CallRoquette(Mesh = 'GameData:/Assets/3D/Units/Ammo/Roquettes/SOV/S5_57mm/S5_57mm.fbx'),
-        private S13_122mm           is Template_CallRoquette(Mesh = 'GameData:/Assets/3D/Units/Ammo/Roquettes/SOV/S13_122mm/S13_122mm.fbx'),
-        private SNEB68mm_Rocket     is Template_CallRoquette(Mesh = 'GameData:/Assets/3D/Units/Ammo/Roquettes/FR/68mm_Rocket.fbx'),
-        private MD_24F              is Template_CallRoquette(Mesh = 'GameData:/Assets/3D/Units/Ammo/Roquettes/SOV/MD_24F/MD_24F.fbx'),
-        private PW_LWD              is Template_CallRoquette(Mesh = 'GameData:/Assets/3D/Units/Ammo/Roquettes/SOV/PW_LWD/PW_LWD.fbx'),
-        private MK22_Mod_2_Rocket   is Template_CallRoquette(Mesh = 'GameData:/Assets/3D/Units/Ammo/Roquettes/US/MK22_Mod_2_ROCKET/MK22_Mod_2_ROCKET.fbx'),
-        private HVAR                is Template_CallRoquette(Mesh = 'GameData:/Assets/3D/Units/Ammo/Roquettes/US/HVAR/HVAR.fbx'),
-        private JROFL_122           is Template_CallRoquette(Mesh = 'GameData:/Assets/3D/Units/Ammo/Roquettes/SOV/122_JROFL/122_JROFL.fbx'),
-        private SVO_247mm           is Template_CallRoquette(Mesh = 'GameData:/Assets/3D/Units/Ammo/Roquettes/SOV/SVO_247mm/SVO_247mm.fbx'),
-        private D_Rocket_300mm      is Template_CallRoquette(Mesh = 'GameData:/Assets/3D/Units/Ammo/Roquettes/US/D_Rocket_300mm/D_Rocket_300mm.fbx'),
-        private CATFAE_ROCKET       is Template_CallRoquette(Mesh = 'GameData:/Assets/3D/Units/Ammo/Roquettes/US/CATFAE_ROCKET/CATFAE_ROCKET.fbx'),
-
-
+        private FFAR_70mm           is Template_CallRoquette(Mesh = 'GameData:/Assets/3D/Ammo/Roquettes/FFAR_70mm.fbx'),
+        private Hydra_70mm          is Template_CallRoquette(Mesh = 'GameData:/Assets/3D/Ammo/Roquettes/US/Roquette_Hydra_70mm.fbx'),
+        private Katyusha            is Template_CallRoquette(Mesh = 'GameData:/Assets/3D/Ammo/Roquettes/Katyusha.fbx'),
+        private Mk_32_Zuni_127mm    is Template_CallRoquette(Mesh = 'GameData:/Assets/3D/Ammo/Roquettes/Mk_32_Zuni_127mm.fbx'),
+        private MLRS                is Template_CallRoquette(Mesh = 'GameData:/Assets/3D/Ammo/Roquettes/MLRS.fbx'),
+        private S_24_240mm          is Template_CallRoquette(Mesh = 'GameData:/Assets/3D/Ammo/Roquettes/SOV/S24_240mm/S24_240mm.fbx'),
+        private S5                  is Template_CallRoquette(Mesh = 'GameData:/Assets/3D/Ammo/Roquettes/SOV/S5_57mm/S5_57mm.fbx'),
+        private S13_122mm           is Template_CallRoquette(Mesh = 'GameData:/Assets/3D/Ammo/Roquettes/SOV/S13_122mm/S13_122mm.fbx'),
+        private SNEB68mm_Rocket     is Template_CallRoquette(Mesh = 'GameData:/Assets/3D/Ammo/Roquettes/FR/68mm_Rocket.fbx'),
+        private MD_20F              is Template_CallRoquette(Mesh = 'GameData:/Assets/3D/Ammo/Roquettes/SOV/MD_20F/MD_20F.fbx'),
+        private MD_24F              is Template_CallRoquette(Mesh = 'GameData:/Assets/3D/Ammo/Roquettes/SOV/MD_24F/MD_24F.fbx'),
+        private PW_LWD              is Template_CallRoquette(Mesh = 'GameData:/Assets/3D/Ammo/Roquettes/SOV/PW_LWD/PW_LWD.fbx'),
+        private DM70                is Template_CallRoquette(Mesh = 'GameData:/Assets/3D/Ammo/Roquettes/SOV/DM70/DM70.fbx'),
+        private MK22_Mod_2_Rocket   is Template_CallRoquette(Mesh = 'GameData:/Assets/3D/Ammo/Roquettes/US/MK22_Mod_2_ROCKET/MK22_Mod_2_ROCKET.fbx'),
+        private HVAR                is Template_CallRoquette(Mesh = 'GameData:/Assets/3D/Ammo/Roquettes/US/HVAR/HVAR.fbx'),
+        private JROFL_122           is Template_CallRoquette(Mesh = 'GameData:/Assets/3D/Ammo/Roquettes/SOV/122_JROFL/122_JROFL.fbx'),
+        private SVO_247mm           is Template_CallRoquette(Mesh = 'GameData:/Assets/3D/Ammo/Roquettes/SOV/SVO_247mm/SVO_247mm.fbx'),
+        private SVO_247mm_unique    is Template_CallRoquette(Mesh = 'GameData:/Assets/3D/Ammo/Roquettes/SOV/SVO_247mm/SVO_247mm_unique.fbx'),
+        private D_Rocket_300mm      is Template_CallRoquette(Mesh = 'GameData:/Assets/3D/Ammo/Roquettes/US/D_Rocket_300mm/D_Rocket_300mm.fbx'),
+        private CATFAE_ROCKET       is Template_CallRoquette(Mesh = 'GameData:/Assets/3D/Ammo/Roquettes/US/CATFAE_ROCKET/CATFAE_ROCKET.fbx'),
+        private S_25O               is Template_CallRoquette(Mesh = 'GameData:/Assets/3D/Ammo/Roquettes/SOV/S_25O/S_25O.fbx'),
+        private S_25OFM             is Template_CallRoquette(Mesh = 'GameData:/Assets/3D/Ammo/Roquettes/SOV/S_25OFM/S_25OFM.fbx'),
+        private SS30_127mm          is Template_CallRoquette(Mesh = 'GameData:/Assets/3D/Ammo/Roquettes/BRZ/SS30_127mm_rocket/SS30_127mm_rocket.fbx'),
+        private SS60_300mm          is Template_CallRoquette(Mesh = 'GameData:/Assets/3D/Ammo/Roquettes/BRZ/SS60_300mm_rocket/SS60_300mm_rocket.fbx'),
+        private R108                is Template_CallRoquette(Mesh = 'GameData:/Assets/3D/Ammo/Roquettes/BRZ/108R_rocket/108R_rocket.fbx'),
+        private LAR_160mm           is Template_CallRoquette(Mesh = 'GameData:/Assets/3D/Ammo/Roquettes/VEN/LAR_160mm/LAR_160mm.fbx'),
+        private RBU_6000            is Template_CallRoquette(Mesh = 'GameData:/Assets/3D/Ammo/Roquettes/SOV/RBU_6000/RBU_6000.fbx'),
     ]
 )
 
@@ -103,7 +111,7 @@ is SimultaneousActionDeclaration
                 ]
                 ParticleDescriptor = ParticleDescriptor
                 (
-                    RenderInfo = ShadowedParticleMeshRenderInfo
+                    RenderInfo = ParticleMeshRenderInfo
                     Evolvers = ParticleStandardEvolverList
                     (
                         Position = ParticleMobileWrapperPositionUnScaled

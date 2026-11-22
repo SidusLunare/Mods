@@ -1,0 +1,14 @@
+export Modele_Fiat_ACM52_Quadrinata_Alpini_ITA is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/ITA/DCA/Fiat_ACM52_Quadrinata/Fiat_ACM52_Quadrinata.fbx"
+)
+
+export Modele_Fiat_ACM52_Quadrinata_Alpini_ITA_MID is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/ITA/DCA/Fiat_ACM52_Quadrinata_MID/Fiat_ACM52_Quadrinata_MID.fbx"
+)
+
+export Modele_Fiat_ACM52_Quadrinata_Alpini_ITA_LOW is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/ITA/DCA/Fiat_ACM52_Quadrinata_LOW/Fiat_ACM52_Quadrinata_LOW.fbx"
+)

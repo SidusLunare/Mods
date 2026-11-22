@@ -1,9 +1,9 @@
+NicknameMaximumLength is 50
 
 private NicknameChangePanel is SpecificModalWindow
 (
     UniqueName = "NicknameChangePanel"
     TitleToken = 'T_CHGPSUDO'
-    ContentMagnifiableWidthHeight = [0.0, 150.0]
 
     ButtonList =
     [
@@ -32,6 +32,7 @@ private NicknameChangePanel is SpecificModalWindow
                 TextToken = "pseudo"
                 HasText = true
                 EditableTextElementName = "NicknameEditableText"
+                MaxChars = ~/NicknameMaximumLength
             )
         ),
         BUCKListElementDescriptor

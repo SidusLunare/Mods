@@ -89,9 +89,9 @@ export BANK_FlammeBurst is SimultaneousActionDeclaration
                                         ParticleRenderer = $/VFX_Bank/LitParticleRenderer
                                         RenderInfo = ParticleRenderInfo
                                         (
-                                            SortTriangles = True
-                                            ZTest = True
-                                            ZWrite = False
+                                            SortTriangles = true
+                                            ZTest = true
+                                            ZWrite = false
                                             TextureName = 'GameData:/Assets/2D/Fx/anim_flameburst2_01.png'
                                             Calque = 'Particles'
                                             EmissiveParticle = true
@@ -173,9 +173,9 @@ export BANK_FlammeBurst_Once is SimultaneousActionDeclaration
                     ParticleRenderer = $/VFX_Bank/LitParticleRenderer
                     RenderInfo = ParticleRenderInfo
                     (
-                        SortTriangles = True
-                        ZTest = True
-                        ZWrite = False
+                        SortTriangles = true
+                        ZTest = true
+                        ZWrite = false
                         TextureName = 'GameData:/Assets/2D/Fx/anim_flameburst2_01.png'
                         Calque = 'Particles'
                         EmissiveParticle = true

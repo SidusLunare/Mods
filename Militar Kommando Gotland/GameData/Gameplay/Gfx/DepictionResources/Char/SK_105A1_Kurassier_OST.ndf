@@ -1,0 +1,15 @@
+export Modele_SK_105A1_Kurassier_OST is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/OST/Char/SK_105A1_Kurassier/SK_105A1_Kurassier.fbx"
+)
+
+export Modele_SK_105A1_Kurassier_OST_MID is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/OST/Char/SK_105A1_Kurassier/SK_105A1_Kurassier.fbx"
+)
+
+export Modele_SK_105A1_Kurassier_OST_LOW is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/OST/Char/SK_105A1_Kurassier/SK_105A1_Kurassier.fbx"
+)
+

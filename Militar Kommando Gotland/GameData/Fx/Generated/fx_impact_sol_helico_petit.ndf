@@ -17,6 +17,16 @@ export fx_impact_sol_helico_petit is SimultaneousActionDeclaration
             Mobile = nil
             Actions =
             [
+                TActionCall
+                (
+                    Action = $/VFX_Bank/BANK_Bomb_Distort_Plane_Simple
+                    NamedParams = MAP[
+                        ( 'parDuration', 0.5 ),
+                        ( 'parFinalSize', 60000 ),
+                        ( 'parInitialSize', 0 ),
+                        ( 'parIntensity', 1000 ),
+                    ]
+                ),
                 TSequentialAction
                 (Actions =
                     [
@@ -123,16 +133,6 @@ export fx_impact_sol_helico_petit is SimultaneousActionDeclaration
                                 ( 'parPositionRelative', float3[1150,-462,0] + parPosition ),
                             ]
                         ),
-                    ]
-                ),
-                TActionCall
-                (
-                    Action = $/VFX_Bank/BANK_Bomb_Distort_Plane_Simple
-                    NamedParams = MAP[
-                        ( 'parDuration', 0.5 ),
-                        ( 'parFinalSize', 60000 ),
-                        ( 'parInitialSize', 0 ),
-                        ( 'parIntensity', 1000 ),
                     ]
                 ),
                 TSequentialAction
@@ -580,31 +580,6 @@ export fx_impact_sol_helico_petit is SimultaneousActionDeclaration
                 ),
                 TActionCall
                 (
-                    Action = $/VFX_Bank/BANK_Rubble2_Oriented_Simple
-                    NamedParams = MAP[
-                        ( 'parCountDebrits', 20 ),
-                        ( 'parCountDebritsWithFire', 0 ),
-                        ( 'parCountDebritsWithSmoke', 0 ),
-                        ( 'parDebritSizeMul', 2 ),
-                        ( 'parDir', parDirection ),
-                        ( 'parDispersion', 340 ),
-                        ( 'parFireParticleEndSize', 0 ),
-                        ( 'parFireParticleStartSize', 300 ),
-                        ( 'parGravity', 1000 ),
-                        ( 'parLifetime', 4 ),
-                        ( 'parMeshType', 1 ),
-                        ( 'parNarrowness', 0.01 ),
-                        ( 'parParticleOpacity', 0.19 ),
-                        ( 'parSmokeColor', float3[0.5411765,0.5411765,0.5372549] ),
-                        ( 'parSmokeColorMultiplier', 0.2000001 ),
-                        ( 'parSmokeDensity', 100 ),
-                        ( 'parSmokeParticleEndSize', 3000 ),
-                        ( 'parSmokeParticleStartSize', 600 ),
-                        ( 'parSpeed', float3[4280,4350,8000] ),
-                    ]
-                ),
-                TActionCall
-                (
                     Action = $/VFX_Bank/BANK_Rubble2_Simple
                     NamedParams = MAP[
                         ( 'parCountDebrits', 10 ),
@@ -649,6 +624,31 @@ export fx_impact_sol_helico_petit is SimultaneousActionDeclaration
                         ( 'parSmokeParticleStartSize', 100 ),
                         ( 'parSpeed', float3[4250,4360,9983] ),
                         ( 'parSpeedDispersion', 0 ),
+                    ]
+                ),
+                TActionCall
+                (
+                    Action = $/VFX_Bank/BANK_Rubble2_Oriented_Simple
+                    NamedParams = MAP[
+                        ( 'parCountDebrits', 20 ),
+                        ( 'parCountDebritsWithFire', 0 ),
+                        ( 'parCountDebritsWithSmoke', 0 ),
+                        ( 'parDebritSizeMul', 2 ),
+                        ( 'parDir', parDirection ),
+                        ( 'parDispersion', 340 ),
+                        ( 'parFireParticleEndSize', 0 ),
+                        ( 'parFireParticleStartSize', 300 ),
+                        ( 'parGravity', 1000 ),
+                        ( 'parLifetime', 4 ),
+                        ( 'parMeshType', 1 ),
+                        ( 'parNarrowness', 0.01 ),
+                        ( 'parParticleOpacity', 0.19 ),
+                        ( 'parSmokeColor', float3[0.5411765,0.5411765,0.5372549] ),
+                        ( 'parSmokeColorMultiplier', 0.2000001 ),
+                        ( 'parSmokeDensity', 100 ),
+                        ( 'parSmokeParticleEndSize', 3000 ),
+                        ( 'parSmokeParticleStartSize', 600 ),
+                        ( 'parSpeed', float3[4280,4350,8000] ),
                     ]
                 ),
                 TSequentialAction

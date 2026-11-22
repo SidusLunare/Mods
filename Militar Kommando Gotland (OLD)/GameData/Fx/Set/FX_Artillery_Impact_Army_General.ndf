@@ -1,0 +1,26 @@
+export SFX_Artillery_Impact_Army_General is SimultaneousActionDeclaration
+(
+    Actions =
+    [
+        Ambiance_Artillery_Impact_Army_General,
+    ]
+)
+
+export Ambiance_Artillery_Impact_Army_General is Template_RepeatSequential
+(
+    Actions =
+    [
+        WaitInSec ( Duration = RandomRange [160,300] ),
+
+        SimultaneousActionDeclaration
+        (
+            Actions =
+            [
+                $/GFX/GameFx/Army_General_Shake_Camera_Dust_Explo,
+                TActionDescriptorPlaySoundList ( SoundDescriptor = $/GFX/Sound/Sound_AmbianceArtilleryImpactsArmyGeneral),
+                //TActionDescriptorPlaySoundList ( SoundDescriptor = $/GFX/Sound/Sound_FULDA_CriticalFX_Alarm_Plane_HUD ), // pour debug
+            ]
+        )
+    ]
+    Forever = true
+)

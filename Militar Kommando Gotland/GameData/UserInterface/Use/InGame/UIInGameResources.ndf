@@ -49,6 +49,7 @@ UIInGameResource is TUISpecificInGameResources
     ]
 
     MainContainerResource       = ~/InGameMainContainerResource
+    UnitNameResources           = ~/UICommonUnitNameResources
     ShortcutUserInputLayer      = $/M3D/Input/UserInputLayerHandler/InputLayer_InGameShortcuts
     LDScriptUserInputLayer      =  $/M3D/Input/UserInputLayerHandler/InputLayer_LDScriptInterceptor
 
@@ -73,9 +74,9 @@ UIInGameResource is TUISpecificInGameResources
     GroupSelectionReminderResources = ~/GroupSelectionReminder
     PositionEvents              = ~/MainPositionEvents
     MousePolicyManagerResources = ~/InGameMousePolicyManagerResources
-    OptionManager               = $/GameOptionsInterface/GameOptionsInterfaceWrapper
 
     CommanderResources          = ~/CommanderResources
+    CubeActionResources         = ~/TacticCubeActionResources
 
     HelperVisibility            = ~/InGameVisibilityHelper
 

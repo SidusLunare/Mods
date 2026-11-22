@@ -930,44 +930,6 @@ ShowHideArrow is BUCKContainerDescriptor
 
 //-------------------------------------------------------------------------------------
 
-// Modal needs to be updated to WARNO style when it will be possible to show it
-ModaleConfirmUseDlcContentWindowFrame is SpecificModaleWindowFrame
-(
-    ContentMagnifiableWidthHeight = [550.0, 150.0]
-    TitleToken = 'DLC_USE'
-    TitleBigLineAction = ~/BigLineAction/MultiLine
-
-    ButtonList =
-    [
-        BUCKListElementDescriptor
-        (
-            ComponentDescriptor = StandardButton
-            (
-                ElementName = 'AlwaysConfirmButton'
-                TextToken = 'Val_Always'
-            )
-        ),
-        BUCKListElementDescriptor(
-            ComponentDescriptor = ConfirmButton
-            (
-                ElementName = 'ConfirmButton'
-                TextToken = 'Val_YesMaj'
-                Mapping = TEugBMutablePBaseClass( Value = TUserInputMapping( KeyboardEventID = UserInputKeyboard/KEY_ENTER ) )
-            )
-        ),
-        BUCKListElementDescriptor(
-            ComponentDescriptor = CancelButton
-            (
-                ElementName = 'CancelButton'
-                TextToken = 'Val_NoMaj'
-                Mapping = TEugBMutablePBaseClass( Value = TUserInputMapping( KeyboardEventID = UserInputKeyboard/KEY_ESCAPE ) )
-            )
-        ),
-    ]
-)
-
-//-------------------------------------------------------------------------------------
-
 UISpecificOutGameLobbyViewDescriptor is TUISpecificOutGameLobbyViewDescriptor
 (
     MainComponentDescriptor = ~/BUCKSpecificOutGameLobbyMainComponentDescriptor
@@ -976,7 +938,6 @@ UISpecificOutGameLobbyViewDescriptor is TUISpecificOutGameLobbyViewDescriptor
     PlayerListViewDescriptor = ~/UISpecificOutGameLobbyPlayerListViewDescriptor
     PlayerLineViewDescriptor = ~/UISpecificOutGameLobbyPlayerViewDescriptor
 
-    ModaleConfirmUseDlcContent = ~/ModaleConfirmUseDlcContentWindowFrame
     NbPlayersWarning = ~/NbPlayersWarning
     NbPlayersAlert = ~/NbPlayersAlert
 
@@ -1016,4 +977,9 @@ UISpecificOutGameLobbyViewDescriptor is TUISpecificOutGameLobbyViewDescriptor
         "GS_PRIVATE",
         "GS_PUBLIC",
     ]
+
+    LobbyFullSound = ~/SoundEvent_LobbyFull
+    SettingsChangedSound = ~/SoundEvent_LobbySettingsChanged
+    PlayerJoinSound = ~/SoundEvent_LobbyPlayerJoin
+    PlayerLeaveSound = ~/SoundEvent_LobbyPlayerLeave
 )

@@ -973,13 +973,35 @@ private SkirmishProductionMenuUnitList is BUCKListDescriptor
 // SmartGroupProductionButtonDescriptor
 // -------------------------------------------------------------------------------------------------
 
+private SmartGroupInfosProductionButton is BUCKButtonDescriptor
+(
+    ElementName = "SmartGroupProductionButton"
+
+    ComponentFrame = TUIFramePropertyRTTI
+    (
+        RelativeWidthHeight = [1.0, 1.0]
+    )
+
+    IsTogglable = true
+    CannotDeselect = true
+    ForceEvents = true
+
+    MaskEvents = false
+    HidePointerEvents = true
+    PointerEventsToAllow = ~/EAllowablePointerEventType/Move
+
+    HasBorder = true
+    BorderLineColorToken = "BoutonVignetteAchat"
+    BorderThicknessToken = "2"
+)
+
 private SmartGroupProductionButtonContainerDescriptor is BUCKContainerDescriptor
 (
     ElementName = "SmartGroupProductionContainer"
 
     ComponentFrame = TUIFramePropertyRTTI
     (
-        MagnifiableWidthHeight = [~/SmartGroupUnitButtonSize[0], 20.0]
+        MagnifiableWidthHeight = [~/SmartGroupUnitButtonSize[0], 0.0]
     )
 
     FitStyle = ~/ContainerFitStyle/FitToContentVertically
@@ -1022,6 +1044,7 @@ private SmartGroupProductionButtonContainerDescriptor is BUCKContainerDescriptor
                                     RelativeWidthHeight = [1.0, 0.0]
                                 )
                                 IsEditable = false
+                                ForegroundComponents = [~/SmartGroupInfosProductionButton]
                             )
                         ),
                         BUCKListElementDescriptor
@@ -1111,9 +1134,6 @@ template UISpecificSkirmishProductionMenuViewDescriptor
 
     NbMaxPlanes = 9
 
-    SquadGroupName = "HPROD_SQD"
-    HalfSquadGroupName = "HPROD_HSQD"
-
     CategoryButtonDescriptor = ~/SkirmishProductionMenuCategoryButton
     CategoryRadioButtonManager = ~/SkirmishProductionMenuCategoryButtonRadioButtonManager
 
@@ -1127,8 +1147,8 @@ template UISpecificSkirmishProductionMenuViewDescriptor
 
     ProductionMenuButtonSpotlights = MAP
     [
-        (EFactory/Infantry, ProductionSpotlight(UniqueName = "Spotlight_logInf")),
-        (EFactory/Recons, ProductionSpotlight(UniqueName = "Spotlight_logRec"))
+        (Factory/Infantry, ProductionSpotlight(UniqueName = "Spotlight_logInf")),
+        (Factory/Recons, ProductionSpotlight(UniqueName = "Spotlight_logRec"))
     ]
 
     UnitContainerDescriptor = UISpecificUnitButtonViewDescriptor

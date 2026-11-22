@@ -230,3 +230,80 @@ DepictionOperator_AnimationServant_ATGM_Right is DepictionOperator_AnimationServ
     MoveRightAnimation = $/GFX/DepictionResources/ServantATGMRightMoveRight
     ReloadAnimation = $/GFX/DepictionResources/ServantATGMRightReload
 )
+
+// ****************************************************************************************************************************************
+// ***** Servants ATGM en deux populations : porteurs (visibles hors déploiement) et tireurs (visibles déployés) ***********************
+// ****************************************************************************************************************************************
+// Le porteur ne joue que le portage (et la mort) : les états déployés ne lui sont jamais visibles.
+// Le tireur ne joue que les états déployés : il est masqué en mouvement, ses anims de déplacement retombent sur l'Idle.
+// Les virages reprennent l'anim de portage : les anims Turn des servants de canon ne tiennent pas un ATGM.
+// Portage à mains verrouillées (Gunner_ATGM_*_Porteur*.fbx) : les mains ne suivent plus le rebond de la course.
+// Le TOW porté rebondit en keyframes (DepictionOperator_Deployable_*) et les mains le suivent : la boucle des porteurs doit
+// démarrer au même tick que celle du lanceur. D'où un fondu nul (TransitionDuration = 0, porteurs invisibles à l'arrêt) et des états
+// d'attente sur l'anim de marche arrière. Fold = course avant : la boucle démarre au tick « Starting », sans attendre une vitesse non nulle
+// (l'opérateur garde l'anim courante tant que speed == 0) ; le lanceur, lui, démarre au tick suivant : sa boucle Move est avancée
+// de quelques frames (GUN_SHIFT du script de production) pour compenser ce tick.
+
+DepictionOperator_AnimationServant_ATGM_Porteur_Left is TCosmeticSkeletalAnimationServantOperatorDesc
+(
+    OperatorId = 'AnimationServant'
+    TransitionDuration = 0.0
+    AimAnimation = $/GFX/DepictionResources/ServantATGMLeftPorteurBack
+    DeadAnimation = $/GFX/DepictionResources/ServantATGMLeftDead
+    DeployAnimation = $/GFX/DepictionResources/ServantATGMLeftPorteurBack
+    FireAnimation = $/GFX/DepictionResources/ServantATGMLeftPorteurBack
+    FoldAnimation = $/GFX/DepictionResources/ServantATGMLeftPorteur
+    IdleAnimation = $/GFX/DepictionResources/ServantATGMLeftPorteurBack
+    MoveBackAnimation = $/GFX/DepictionResources/ServantATGMLeftPorteurBack
+    MoveFrontAnimation = $/GFX/DepictionResources/ServantATGMLeftPorteur
+    MoveLeftAnimation = $/GFX/DepictionResources/ServantATGMLeftPorteur
+    MoveRightAnimation = $/GFX/DepictionResources/ServantATGMLeftPorteur
+    ReloadAnimation = $/GFX/DepictionResources/ServantATGMLeftPorteurBack
+)
+
+DepictionOperator_AnimationServant_ATGM_Porteur_Right is TCosmeticSkeletalAnimationServantOperatorDesc
+(
+    OperatorId = 'AnimationServant'
+    TransitionDuration = 0.0
+    AimAnimation = $/GFX/DepictionResources/ServantATGMRightPorteurBack
+    DeadAnimation = $/GFX/DepictionResources/ServantATGMRightDead
+    DeployAnimation = $/GFX/DepictionResources/ServantATGMRightPorteurBack
+    FireAnimation = $/GFX/DepictionResources/ServantATGMRightPorteurBack
+    FoldAnimation = $/GFX/DepictionResources/ServantATGMRightPorteur
+    IdleAnimation = $/GFX/DepictionResources/ServantATGMRightPorteurBack
+    MoveBackAnimation = $/GFX/DepictionResources/ServantATGMRightPorteurBack
+    MoveFrontAnimation = $/GFX/DepictionResources/ServantATGMRightPorteur
+    MoveLeftAnimation = $/GFX/DepictionResources/ServantATGMRightPorteur
+    MoveRightAnimation = $/GFX/DepictionResources/ServantATGMRightPorteur
+    ReloadAnimation = $/GFX/DepictionResources/ServantATGMRightPorteurBack
+)
+
+DepictionOperator_AnimationServant_ATGM_Tireur_Left is DepictionOperator_AnimationServant
+(
+    AimAnimation = $/GFX/DepictionResources/ServantATGMLeftAim
+    DeadAnimation = $/GFX/DepictionResources/ServantATGMLeftIdle
+    DeployAnimation = $/GFX/DepictionResources/ServantATGMLeftIdle
+    FireAnimation = $/GFX/DepictionResources/ServantATGMLeftFire
+    FoldAnimation = $/GFX/DepictionResources/ServantATGMLeftIdle
+    IdleAnimation = $/GFX/DepictionResources/ServantATGMLeftIdle
+    MoveBackAnimation = $/GFX/DepictionResources/ServantATGMLeftIdle
+    MoveFrontAnimation = $/GFX/DepictionResources/ServantATGMLeftIdle
+    MoveLeftAnimation = $/GFX/DepictionResources/ServantATGMLeftIdle
+    MoveRightAnimation = $/GFX/DepictionResources/ServantATGMLeftIdle
+    ReloadAnimation = $/GFX/DepictionResources/ServantATGMLeftReload
+)
+
+DepictionOperator_AnimationServant_ATGM_Tireur_Right is DepictionOperator_AnimationServant
+(
+    AimAnimation = $/GFX/DepictionResources/ServantATGMRightAim
+    DeadAnimation = $/GFX/DepictionResources/ServantATGMRightIdle
+    DeployAnimation = $/GFX/DepictionResources/ServantATGMRightIdle
+    FireAnimation = $/GFX/DepictionResources/ServantATGMRightFire
+    FoldAnimation = $/GFX/DepictionResources/ServantATGMRightIdle
+    IdleAnimation = $/GFX/DepictionResources/ServantATGMRightIdle
+    MoveBackAnimation = $/GFX/DepictionResources/ServantATGMRightIdle
+    MoveFrontAnimation = $/GFX/DepictionResources/ServantATGMRightIdle
+    MoveLeftAnimation = $/GFX/DepictionResources/ServantATGMRightIdle
+    MoveRightAnimation = $/GFX/DepictionResources/ServantATGMRightIdle
+    ReloadAnimation = $/GFX/DepictionResources/ServantATGMRightReload
+)

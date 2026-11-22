@@ -170,11 +170,11 @@ export Smoky_Dust_Projections is SimultaneousActionDeclaration
                 (
                     RenderInfo = ParticleRenderInfo
                     (
-                        ZTest = True
-                        SortTriangles = True
+                        ZTest = true
+                        SortTriangles = true
                         ZWrite = false
                         TextureName = 'GameData:/Assets/2D/Fx/fx_trail.png'
-                        OpaqueParticle = True
+                        OpaqueParticle = true
                     )
                     ParticleRenderer = $/VFX_Bank/LitParticleRenderer
                     Evolvers = ParticleStandardEvolverList

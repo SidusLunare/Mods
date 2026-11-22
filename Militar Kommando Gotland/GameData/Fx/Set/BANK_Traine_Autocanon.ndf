@@ -11,13 +11,13 @@ export BANK_Traine_Autocanon_Simple is ActionCallWithParameters
         private TrailLengthScale                is Template_Param_Float  ( DefaultValue = 1 ),
         private RadiusRandom                    is Template_Param_Float  ( DefaultValue = 0.03 ),
         private parPinPower                     is Template_Param_Float  ( DefaultValue = 0),
-        private parPinShotOnGround              is Template_Param_Bool   ( DefaultValue = False),
+        private parPinShotOnGround              is Template_Param_Bool   ( DefaultValue = false),
         private AbsoluteEndPosition             is Template_Param_Float3 ( DefaultValue = float3[1, 0, 0]),
         private InitialSpeed                    is Template_Param_Float3( DefaultValue = float3[1000.0, 0.0, 0.0] ),
         private DurationInSec                   is Template_Param_Float  ( DefaultValue = 0),
         private parPinShotCount                 is Template_Param_Int    ( DefaultValue = 0),
         private parPinWaitBetweenShot           is Template_Param_Float  ( DefaultValue = 0),
-        private parPinImpactOnGround            is Template_Param_Bool   ( DefaultValue = False),
+        private parPinImpactOnGround            is Template_Param_Bool   ( DefaultValue = false),
         private parInitialDelay                 is Template_Param_Float  ( DefaultValue = 0 ),
         private parPojectileSpeedMult           is Template_Param_Float  ( DefaultValue = 1 ),
         private parCurveHeight                  is Template_Param_Float  ( DefaultValue = 1 ),
@@ -60,13 +60,13 @@ export BANK_Traine_Autocanon is SimultaneousActionDeclaration
         private TrailWidthScale                 is Template_Param_Float  ( DefaultValue = 1 ),
         private RadiusRandom                    is Template_Param_Float  ( DefaultValue = 0.03 ),
         private parPower                        is Template_Param_Float  ( DefaultValue = 0),
-        private parShotOnGround                 is Template_Param_Bool   ( DefaultValue = False),
+        private parShotOnGround                 is Template_Param_Bool   ( DefaultValue = false),
         private parDestination                  is Template_Param_Float3 ( DefaultValue = float3[1, 0, 0]),
         private parInitialSpeed                 is Template_Param_Float3 ( DefaultValue = float3[1000, 0, 0] ),
         private parFlyDuration                  is Template_Param_Float  ( DefaultValue = 0),
         private parShotCount                    is Template_Param_Int    ( DefaultValue = 0),
         private parWaitBetweenShot              is Template_Param_Float  ( DefaultValue = 0),
-        private parImpactOnGround               is Template_Param_Bool   ( DefaultValue = False),
+        private parImpactOnGround               is Template_Param_Bool   ( DefaultValue = false),
         private parInitialDelay                 is Template_Param_Float  ( DefaultValue = 0 ),
         private parPojectileSpeedMult           is Template_Param_Float  ( DefaultValue = 1 ),
         private parCurveHeight                  is Template_Param_Float  ( DefaultValue = 1 ),
@@ -272,7 +272,7 @@ export BANK_Traine_Autocanon_Rebond is SimultaneousActionDeclaration
                     RenderInfo = ParticleRenderInfo
                     (
                         ZTest = true
-                        ZWrite = False
+                        ZWrite = false
                         SortTriangles = true
                         TextureName = 'GameData:/Assets/2D/Fx/trail_obus_white.png'
                         Calque = 'Particles'

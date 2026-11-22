@@ -14,6 +14,55 @@ export fx_Ouverture_Bombe_Cluster is SimultaneousActionDeclaration
     [
         TSimultaneousAction
         (
+            Mobile = TMobileWithLocalRepereMatrixFactory
+            (
+                Position = parPosition
+            )
+            Actions =
+            [
+                TActionCall
+                (
+                    Action = $/VFX_Bank/BANK_Bomb_Distort_Simple
+                    NamedParams = MAP[
+                        ( 'parDuration', 0.6 ),
+                        ( 'parFinalSize', 5000 ),
+                        ( 'parInitialSize', 50 ),
+                        ( 'parIntensity', 300 ),
+                        ( 'parPositionRelative', float3[0,0,0] ),
+                    ]
+                ),
+                TSequentialAction
+                (Actions =
+                    [
+                        TWaitInSec( Duration = 0.1 ),
+                        TActionCall
+                        (
+                            Action = $/VFX_Bank/ShakeCamera
+                            NamedParams = MAP[
+                                ( 'parDuration', 1.5 ),
+                                ( 'parFrequency', 4 ),
+                                ( 'parPeriod', 0.05 ),
+                                ( 'parPower', 1 ),
+                                ( 'parRadius', 40000 ),
+                            ]
+                        ),
+                    ]
+                ),
+                TActionCall
+                (
+                    Action = $/VFX_Bank/BANK_Bomb_ShockWave
+                    NamedParams = MAP[
+                        ( 'parCount', 1 ),
+                        ( 'parDuration', 0.35 ),
+                        ( 'parFinalSize', 3500 ),
+                        ( 'parInitialSize', 15 ),
+                        ( 'parZBias', 500 ),
+                    ]
+                ),
+            ]
+        ),
+        TSimultaneousAction
+        (
             Mobile = nil
             Actions =
             [
@@ -37,27 +86,6 @@ export fx_Ouverture_Bombe_Cluster is SimultaneousActionDeclaration
                         ( 'Pos', parPosition ),
                         ( 'RadPhy', parRadiusPhysical ),
                         ( 'RadSupr', parRadiusSuppress ),
-                    ]
-                ),
-                TSequentialAction
-                (Actions =
-                    [
-                        TWaitInSec( Duration = 0.1 ),
-                        TActionCall
-                        (
-                            Action = $/VFX_Bank/BANK_FireBalls_HQTex_Simple
-                            NamedParams = MAP[
-                                ( 'parColor', float3[0.482353,0.4705883,0.4627451] ),
-                                ( 'parCount', 4 ),
-                                ( 'parDeltaPosition', float3[0,0,0] ),
-                                ( 'parDuration', 2 ),
-                                ( 'parLuminosite', 4 ),
-                                ( 'parOpacity', 1 ),
-                                ( 'parSize', 3000 ),
-                                ( 'parSpeed', 0 ),
-                                ( 'parStartPosition', parPosition ),
-                            ]
-                        ),
                     ]
                 ),
                 TSequentialAction
@@ -120,6 +148,27 @@ export fx_Ouverture_Bombe_Cluster is SimultaneousActionDeclaration
                         ( 'parDeltaPositionAdditif', float3[-22,-1,-632] + parPosition ),
                     ]
                 ),
+                TSequentialAction
+                (Actions =
+                    [
+                        TWaitInSec( Duration = 0.1 ),
+                        TActionCall
+                        (
+                            Action = $/VFX_Bank/BANK_FireBalls_HQTex_Simple
+                            NamedParams = MAP[
+                                ( 'parColor', float3[0.482353,0.4705883,0.4627451] ),
+                                ( 'parCount', 4 ),
+                                ( 'parDeltaPosition', float3[0,0,0] ),
+                                ( 'parDuration', 2 ),
+                                ( 'parLuminosite', 4 ),
+                                ( 'parOpacity', 1 ),
+                                ( 'parSize', 3000 ),
+                                ( 'parSpeed', 0 ),
+                                ( 'parStartPosition', parPosition ),
+                            ]
+                        ),
+                    ]
+                ),
                 TActionCall
                 (
                     Action = $/VFX_Bank/BANK_Dynamic_Flash_Only_Two_Simple
@@ -135,55 +184,6 @@ export fx_Ouverture_Bombe_Cluster is SimultaneousActionDeclaration
                     ]
                 ),
                 TWaitInSec( Duration = 0.2),
-            ]
-        ),
-        TSimultaneousAction
-        (
-            Mobile = TMobileWithLocalRepereMatrixFactory
-            (
-                Position = parPosition
-            )
-            Actions =
-            [
-                TActionCall
-                (
-                    Action = $/VFX_Bank/BANK_Bomb_Distort_Simple
-                    NamedParams = MAP[
-                        ( 'parDuration', 0.6 ),
-                        ( 'parFinalSize', 5000 ),
-                        ( 'parInitialSize', 50 ),
-                        ( 'parIntensity', 300 ),
-                        ( 'parPositionRelative', float3[0,0,0] ),
-                    ]
-                ),
-                TSequentialAction
-                (Actions =
-                    [
-                        TWaitInSec( Duration = 0.1 ),
-                        TActionCall
-                        (
-                            Action = $/VFX_Bank/ShakeCamera
-                            NamedParams = MAP[
-                                ( 'parDuration', 1.5 ),
-                                ( 'parFrequency', 4 ),
-                                ( 'parPeriod', 0.05 ),
-                                ( 'parPower', 1 ),
-                                ( 'parRadius', 40000 ),
-                            ]
-                        ),
-                    ]
-                ),
-                TActionCall
-                (
-                    Action = $/VFX_Bank/BANK_Bomb_ShockWave
-                    NamedParams = MAP[
-                        ( 'parCount', 1 ),
-                        ( 'parDuration', 0.35 ),
-                        ( 'parFinalSize', 3500 ),
-                        ( 'parInitialSize', 15 ),
-                        ( 'parZBias', 500 ),
-                    ]
-                ),
             ]
         ),
         TSimultaneousAction
@@ -212,6 +212,42 @@ export fx_Ouverture_Bombe_Cluster is SimultaneousActionDeclaration
                         ( 'parSpawnerSpeed', 2000 ),
                     ]
                 ),
+            ]
+        ),
+        TSimultaneousAction
+        (
+            Mobile = TMobileWithLocalRepereMatrixFactory
+            (
+                Position = float3[13,14,33] + parPosition
+            )
+            Actions =
+            [
+                TActionCall
+                (
+                    Action = $/VFX_Bank/BANK_Rubble2_Oriented_Simple
+                    NamedParams = MAP[
+                        ( 'parCountDebrits', 4 ),
+                        ( 'parCountDebritsWithFire', 0 ),
+                        ( 'parCountDebritsWithSmoke', 0 ),
+                        ( 'parDebritSizeMul', 0.5 ),
+                        ( 'parDir', float3[0,0,1] ),
+                        ( 'parDispersion', 1000 ),
+                        ( 'parFireParticleEndSize', 150 ),
+                        ( 'parFireParticleStartSize', 0 ),
+                        ( 'parGravity', 3000 ),
+                        ( 'parLifetime', 10 ),
+                        ( 'parMeshType', 4 ),
+                        ( 'parNarrowness', 0.01 ),
+                        ( 'parParticleOpacity', 0.19 ),
+                        ( 'parSmokeColor', float3[0.9058824,0.9058824,0.9019608] ),
+                        ( 'parSmokeColorMultiplier', 0.2000001 ),
+                        ( 'parSmokeDensity', 100 ),
+                        ( 'parSmokeParticleEndSize', 2100 ),
+                        ( 'parSmokeParticleStartSize', 600 ),
+                        ( 'parSpeed', float3[6000,1000,1000] ),
+                    ]
+                ),
+                TWaitInSec( Duration = 10),
             ]
         ),
         TSimultaneousAction
@@ -253,38 +289,30 @@ export fx_Ouverture_Bombe_Cluster is SimultaneousActionDeclaration
         ),
         TSimultaneousAction
         (
-            Mobile = TMobileWithLocalRepereMatrixFactory
-            (
-                Position = float3[13,14,33] + parPosition
-            )
+            Mobile = nil
             Actions =
             [
                 TActionCall
                 (
-                    Action = $/VFX_Bank/BANK_Rubble2_Oriented_Simple
+                    Action = $/VFX_Bank/BANK_Bomb_NewSparks_Simple
                     NamedParams = MAP[
-                        ( 'parCountDebrits', 4 ),
-                        ( 'parCountDebritsWithFire', 0 ),
-                        ( 'parCountDebritsWithSmoke', 0 ),
-                        ( 'parDebritSizeMul', 0.5 ),
-                        ( 'parDir', float3[0,0,1] ),
-                        ( 'parDispersion', 1000 ),
-                        ( 'parFireParticleEndSize', 150 ),
-                        ( 'parFireParticleStartSize', 0 ),
-                        ( 'parGravity', 3000 ),
-                        ( 'parLifetime', 10 ),
-                        ( 'parMeshType', 4 ),
-                        ( 'parNarrowness', 0.01 ),
-                        ( 'parParticleOpacity', 0.19 ),
-                        ( 'parSmokeColor', float3[0.9058824,0.9058824,0.9019608] ),
-                        ( 'parSmokeColorMultiplier', 0.2000001 ),
-                        ( 'parSmokeDensity', 100 ),
-                        ( 'parSmokeParticleEndSize', 2100 ),
-                        ( 'parSmokeParticleStartSize', 600 ),
-                        ( 'parSpeed', float3[6000,1000,1000] ),
+                        ( 'parColor', float3[0.8980393,0.8980393,0.8980393] ),
+                        ( 'parColorMultiplier', 8 ),
+                        ( 'parCount', 100 ),
+                        ( 'parDir', parDirection ),
+                        ( 'parFluidFriction', 1.1 ),
+                        ( 'parGravity', 1000 ),
+                        ( 'parLifetime', 3 ),
+                        ( 'parNarrowness', 0.2 ),
+                        ( 'parPositionRadius', 500 ),
+                        ( 'parPositionRelative', parPosition ),
+                        ( 'parSize', 6 ),
+                        ( 'parSpeedMax', 6000 ),
+                        ( 'parSpeedMin', 2000 ),
+                        ( 'parStretch', 2.5 ),
+                        ( 'parWindFactor', 1 ),
                     ]
                 ),
-                TWaitInSec( Duration = 10),
             ]
         ),
         TSimultaneousAction
@@ -312,34 +340,6 @@ export fx_Ouverture_Bombe_Cluster is SimultaneousActionDeclaration
                         ( 'parStretch', 1 ),
                         ( 'parWindFactor', 0.25 ),
                         ( 'parDir', float3[0.9963702,0.00609992,0.0849072] ),
-                    ]
-                ),
-            ]
-        ),
-        TSimultaneousAction
-        (
-            Mobile = nil
-            Actions =
-            [
-                TActionCall
-                (
-                    Action = $/VFX_Bank/BANK_Bomb_NewSparks_Simple
-                    NamedParams = MAP[
-                        ( 'parColor', float3[0.8980393,0.8980393,0.8980393] ),
-                        ( 'parColorMultiplier', 8 ),
-                        ( 'parCount', 100 ),
-                        ( 'parDir', parDirection ),
-                        ( 'parFluidFriction', 1.1 ),
-                        ( 'parGravity', 1000 ),
-                        ( 'parLifetime', 3 ),
-                        ( 'parNarrowness', 0.2 ),
-                        ( 'parPositionRadius', 500 ),
-                        ( 'parPositionRelative', parPosition ),
-                        ( 'parSize', 6 ),
-                        ( 'parSpeedMax', 6000 ),
-                        ( 'parSpeedMin', 2000 ),
-                        ( 'parStretch', 2.5 ),
-                        ( 'parWindFactor', 1 ),
                     ]
                 ),
             ]

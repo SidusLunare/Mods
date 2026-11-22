@@ -6,14 +6,14 @@ export Modele_MiG_21bis_NPLM_TCH is TResourceMesh
 
 export Modele_MiG_21bis_NPLM_TCH_MID is TResourceMesh
 (
-    Mesh="GameData:/Assets/3D/Units/DDR/Avion/MiG_21_PFM/MiG_21_PFM_AS.fbx"
-    Textures="GameData:/Assets/3D/Units/TCH/Avion/MiG_21_PFM"
+    Mesh="GameData:/Assets/3D/Units/DDR/Avion/MiG_21_PFM_MID/MiG_21_PFM_AS_MID.fbx"
+    Textures="GameData:/Assets/3D/Units/TCH/Avion/MiG_21_PFM_MID"
 )
 
 export Modele_MiG_21bis_NPLM_TCH_LOW is TResourceMesh
 (
-    Mesh="GameData:/Assets/3D/Units/DDR/Avion/MiG_21_PFM/MiG_21_PFM_AS.fbx"
-    Textures="GameData:/Assets/3D/Units/TCH/Avion/MiG_21_PFM"
+    Mesh="GameData:/Assets/3D/Units/DDR/Avion/MiG_21_PFM_LOW/MiG_21_PFM_AS_LOW.fbx"
+    Textures="GameData:/Assets/3D/Units/TCH/Avion/MiG_21_PFM_LOW"
 )
 
 export Modele_MiG_21bis_NPLM_TCH_train is TResourceMesh

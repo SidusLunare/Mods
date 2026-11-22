@@ -1,0 +1,175 @@
+// GameData:/Fx/Set/AoA_FX_Prop_Dest.ndf
+// Call Test_Prop_Dest in FX Tester
+// Fx/Falling Props/
+
+export Falling_Panneau_Virage_Droite is Template_FX_Prop_Dest(Modele = 'GameData:/Assets/3D/Decors/Fulda/Props/Signalisation/Panneau_Virage_Droite.fbx')
+export Falling_Panneau_Virage_Gauche is Template_FX_Prop_Dest(Modele = 'GameData:/Assets/3D/Decors/Fulda/Props/Signalisation/Panneau_Virage_Gauche.fbx')
+export Falling_Panneau_Danger is Template_FX_Prop_Dest(Modele = 'GameData:/Assets/3D/Decors/Fulda/Props/Signalisation/Panneau_Danger.fbx')
+export Falling_Panneau_FeuRouge is Template_FX_Prop_Dest(Modele = 'GameData:/Assets/3D/Decors/Fulda/Props/Panneaux_Travaux/Panneau_FeuRouge.fbx')
+export Falling_Panneau_Traffic is Template_FX_Prop_Dest(Modele = 'GameData:/Assets/3D/Decors/Fulda/Props/Panneaux_Travaux/Panneau_Traffic.fbx')
+export Falling_Panneau_Deviation is Template_FX_Prop_Dest(Modele = 'GameData:/Assets/3D/Decors/Fulda/Props/Panneaux_Travaux/Panneau_Deviation.fbx')
+export Falling_Panneau_Virage is Template_FX_Prop_Dest(Modele = 'GameData:/Assets/3D/Decors/Fulda/Props/Panneaux_Travaux/Panneau_Virage.fbx')
+export Falling_Panneau_Travaux_A is Template_FX_Prop_Dest(Modele = 'GameData:/Assets/3D/Decors/Fulda/Props/Panneaux_Travaux/Panneau_Travaux_A.fbx')
+export Falling_Panneau_Travaux_B is Template_FX_Prop_Dest(Modele = 'GameData:/Assets/3D/Decors/Fulda/Props/Panneaux_Travaux/Panneau_Travaux_B.fbx')
+export Falling_Barriere_Travaux is Template_FX_Prop_Dest(Modele = 'GameData:/Assets/3D/Decors/Fulda/Props/Panneaux_Travaux/Barriere_Travaux.fbx')
+export Falling_BoiteAuxLettres_Rouge is Template_FX_Prop_Dest(Modele = 'GameData:/Assets/3D/Decors/Fulda/Props/BoiteAuxLettres/Boite_Aux_Lettres_01_Rouge.fbx')
+export Falling_BoiteAuxLettres_Verte is Template_FX_Prop_Dest(Modele = 'GameData:/Assets/3D/Decors/Fulda/Props/BoiteAuxLettres/Boite_Aux_Lettres_01_Verte.fbx')
+export Falling_BoiteAuxLettres_Bleue is Template_FX_Prop_Dest(Modele = 'GameData:/Assets/3D/Decors/Fulda/Props/BoiteAuxLettres/Boite_Aux_Lettres_01_Bleue.fbx')
+export Falling_BorneIncendie is Template_FX_Prop_Dest(Modele = 'GameData:/Assets/3D/Decors/Fulda/Props/Mobilier_urbain/BorneIncendie.fbx')
+export Falling_Chaise_Jardin is Template_FX_Prop_Dest(Modele = 'GameData:/Assets/3D/Decors/Fulda/Props/Jardin/Chaise_01_Jardin.fbx')
+export Falling_Chaise_TerrainTennis is Template_FX_Prop_Dest(Modele = 'GameData:/Assets/3D/Decors/Fulda/Props/Equipements_Sportif/Chaise_Terrain_Tennis_01.fbx')
+export Falling_Cloture_Pavillon_01_A is Template_FX_Prop_Dest(Modele = 'GameData:/Assets/3D/Decors/Fulda/Props/Cloture_Pavillon/Cloture_Pavillon_01_A.fbx')
+export Falling_Cloture_Pavillon_01_Extremite is Template_FX_Prop_Dest(Modele = 'GameData:/Assets/3D/Decors/Fulda/Props/Cloture_Pavillon/Cloture_Pavillon_01_Extremite.fbx')
+export Falling_Cloture_Securite_Extremite is Template_FX_Prop_Dest(Modele = 'GameData:/Assets/3D/Decors/Fulda/Props/Cloture_Batiment/Cloture_Securite_Extremite.fbx')
+export Falling_Cloture_Terrain_Tennis_Debut is Template_FX_Prop_Dest(Modele = 'GameData:/Assets/3D/Decors/Fulda/Props/Equipements_Sportif/Cloture_Terrain_Tennis_Debut.fbx')
+export Falling_Cloture_Terrain_Tennis_Fin is Template_FX_Prop_Dest(Modele = 'GameData:/Assets/3D/Decors/Fulda/Props/Equipements_Sportif/Cloture_Terrain_Tennis_Fin.fbx')
+export Falling_Dechets_Bouteille_A is Template_FX_Prop_Dest(Modele = 'GameData:/Assets/3D/Decors/Fulda/Props/Debris_Urbains/Dechets_Bouteille_A.fbx')
+export Falling_Dechets_Bouteille_B is Template_FX_Prop_Dest(Modele = 'GameData:/Assets/3D/Decors/Fulda/Props/Debris_Urbains/Dechets_Bouteille_B.fbx')
+export Falling_FeuRouge is Template_FX_Prop_Dest(Modele = 'GameData:/Assets/3D/Decors/Fulda/Props/Signalisation/FeuRouge_A.fbx')
+export Falling_Lampadaire_01 is Template_FX_Prop_Dest(Modele = 'GameData:/Assets/3D/Decors/Fulda/Props/Lampadaires/Lampadaire_01.fbx')
+export Falling_Panneau_Publicitaire_01 is Template_FX_Prop_Dest(Modele = 'GameData:/Assets/3D/Decors/Fulda/Props/Panneaux_Publicitaire/Panneau_Publicitaire_01.fbx')
+export Falling_Panneau_Publicitaire_03 is Template_FX_Prop_Dest(Modele = 'GameData:/Assets/3D/Decors/Fulda/Props/Panneaux_Publicitaire/Panneau_Publicitaire_03.fbx')
+export Falling_Panneau_Publicitaire_04 is Template_FX_Prop_Dest(Modele = 'GameData:/Assets/3D/Decors/Fulda/Props/Panneaux_Publicitaire/Panneau_Publicitaire_04.fbx')
+export Falling_Parasol_01_Jardin is Template_FX_Prop_Dest(Modele = 'GameData:/Assets/3D/Decors/Fulda/Props/Jardin/Parasol_01_Jardin.fbx')
+export Falling_Parasol_Ferme_01_Jardin is Template_FX_Prop_Dest(Modele = 'GameData:/Assets/3D/Decors/Fulda/Props/Jardin/Parasol_Ferme_01_Jardin.fbx')
+export Falling_Poteau_Electrique_01_Extremite is Template_FX_Prop_Dest(Modele = 'GameData:/Assets/3D/Decors/Fulda/Props/Poteau_Electrique/Poteau_Electrique_01_Extremite.fbx')
+export Falling_Poubelle_Allemande_01 is Template_FX_Prop_Dest(Modele = 'GameData:/Assets/3D/Decors/Fulda/Props/Bennes/Poubelle_Allemande_01.fbx')
+export Falling_Poubelle_Allemande_01_Grise is Template_FX_Prop_Dest(Modele = 'GameData:/Assets/3D/Decors/Fulda/Props/Bennes/Poubelle_Allemande_01_Grise_Dechets_B.fbx')
+export Falling_Poubelle_Allemande_01_Fermee is Template_FX_Prop_Dest(Modele = 'GameData:/Assets/3D/Decors/Fulda/Props/Bennes/Poubelle_Allemande_01_Fermee.fbx')
+export Falling_Poubelle_Allemande_01_Grise_Fermee is Template_FX_Prop_Dest(Modele = 'GameData:/Assets/3D/Decors/Fulda/Props/Bennes/Poubelle_Allemande_01_Grise_Fermee.fbx')
+export Falling_Poubelle_SuperMarche_01 is Template_FX_Prop_Dest(Modele = 'GameData:/Assets/3D/Decors/Fulda/Props/SuperMarche/Poubelle_SuperMarche_01.fbx')
+export Falling_Table_01_Jardin is Template_FX_Prop_Dest(Modele = 'GameData:/Assets/3D/Decors/Fulda/Props/Jardin/Table_01_Jardin.fbx')
+export Falling_Velo_Rouge is Template_FX_Prop_Dest(Modele = 'GameData:/Assets/3D/Decors/Fulda/Props/Velo/Velo_Rouge.fbx')
+export Falling_Velo_Bleu is Template_FX_Prop_Dest(Modele = 'GameData:/Assets/3D/Decors/Fulda/Props/Velo/Velo_Bleu.fbx')
+export Falling_Velo_Marron is Template_FX_Prop_Dest(Modele = 'GameData:/Assets/3D/Decors/Fulda/Props/Velo/Velo_Marron.fbx')
+export Falling_Zebras is Template_FX_Prop_Dest(Modele = 'GameData:/Assets/3D/Decors/Fulda/Props/Panneaux_Travaux/Zebras.fbx')
+export Falling_ArbreBrule_01 is Template_FX_Prop_Dest(Modele = 'GameData:/Assets/3D/Decors/Fulda/Vegetation/Vegetation_Brulee/ArbreBrule_01.fbx')
+export Falling_ArbreBrule_02 is Template_FX_Prop_Dest(Modele = 'GameData:/Assets/3D/Decors/Fulda/Vegetation/Vegetation_Brulee/ArbreBrule_02.fbx')
+export Falling_ArbreBrule_03 is Template_FX_Prop_Dest(Modele = 'GameData:/Assets/3D/Decors/Fulda/Vegetation/Vegetation_Brulee/ArbreBrule_03.fbx')
+export Falling_Poteau_Electrique_01 is Template_FX_Prop_Dest(Modele = 'GameData:/Assets/3D/Decors/Fulda/Props/Poteau_Electrique/Poteau_Electrique_01_Falling.fbx')
+export Falling_RailWay_Panneau_Croisement_Route is Template_FX_Prop_Dest(Modele = 'GameData:/Assets/3D/Decors/Fulda/Props/Rail/RailWay_Panneau_Croisement_Route.fbx')
+export Falling_RailWay_Boite_Electrique is Template_FX_Prop_Dest(Modele = 'GameData:/Assets/3D/Decors/Fulda/Props/Rail/RailWay_Boite_Electrique.fbx')
+export Falling_RailWay_Feu_Train_01 is Template_FX_Prop_Dest(Modele = 'GameData:/Assets/3D/Decors/Fulda/Props/Rail/RailWay_Feu_Train_01.fbx')
+export Falling_RailWay_Feu_Train_02 is Template_FX_Prop_Dest(Modele = 'GameData:/Assets/3D/Decors/Fulda/Props/Rail/RailWay_Feu_Train_02.fbx')
+export Falling_RailWay_Panneau_01 is Template_FX_Prop_Dest(Modele = 'GameData:/Assets/3D/Decors/Fulda/Props/Rail/RailWay_Panneau_01.fbx')
+export Falling_RailWay_Panneau_02 is Template_FX_Prop_Dest(Modele = 'GameData:/Assets/3D/Decors/Fulda/Props/Rail/RailWay_Panneau_02.fbx')
+export Falling_RailWay_Panneau_03 is Template_FX_Prop_Dest(Modele = 'GameData:/Assets/3D/Decors/Fulda/Props/Rail/RailWay_Panneau_03.fbx')
+export Falling_RailWay_Panneau_04 is Template_FX_Prop_Dest(Modele = 'GameData:/Assets/3D/Decors/Fulda/Props/Rail/RailWay_Panneau_04.fbx')
+export Falling_RailWay_Panneau_05 is Template_FX_Prop_Dest(Modele = 'GameData:/Assets/3D/Decors/Fulda/Props/Rail/RailWay_Panneau_05.fbx')
+
+
+export Test_Small_Props_Dest is Simultaneous
+(
+    Mobile = MobileUnCentroid()
+    Actions =
+    [
+        Template_ActionDescriptorDestroySceneryCircle
+        (
+            Radius = 500
+        ),
+    ]
+)
+
+export FX_Small_Props_Dest is Template_Small_Props_Dest()
+export FX_Dest_Pierres is Template_Small_Props_Dest
+(
+    Fx = $/VFX_Bank/BANK_Debris_Pierres
+    Color = LinearColor255[128, 128, 128]
+    Distribution = mesh_rubble_pierres[RandomUnit]
+)
+
+export FX_Dest_Bois is Template_Small_Props_Dest
+(
+    Fx = $/VFX_Bank/BANK_Debris_Bois
+    Color = LinearColor255[128, 128, 128]
+    Distribution = mesh_rubble_bois[RandomUnit]
+)
+
+template Template_Small_Props_Dest
+[
+    Fx = $/VFX_Bank/BANK_Rubble2,
+    Color = LinearColor255[77, 77, 77],
+    Distribution = mesh_rubble_building[RandomUnit],
+] is SimultaneousActionDeclaration
+(
+    Params =
+    [
+        private SizeSmoke is Template_Param_Float(),
+        private SizeDebris is Template_Param_Float(),
+        private NombreDebris is Template_Param_Float(),
+    ]
+    Actions =
+    [
+        private Dust is Template_ActionCall
+        (
+            Action = $/VFX_Bank/BANK_WasteGroundDust
+            NamedParameters = MAP[
+                ('BANK_ParticleLifetime', RandomRange[1.5, 2.5] ),
+                ('BANK_InitRotation', RandomUnit ),
+                ('BANK_ParticuleStartSize', 800),
+                ('BANK_ParticuleEndSize', 1450),
+                ('BANK_ParticleCount', 40),
+                ('BANK_ParticleRotationFactor', RandomRange[0.5, 1.5]),
+                ('BANK_InitRGBcolor', <Color>),
+                ('BANK_EndRGBcolor', <Color>),
+                ('BANK_OffsetPos', float3[0,0,0]),
+                ('BANK_InitPosition', 200 * MinusOneToOneRandomHemisphereVolume),
+                ('BANK_InitSpeed', MinusOneToOneRandomDisc * 1500 * SizeSmoke),
+                ('BANK_AlphaMul', RandomRange[3, 7]  ),
+                ('BANK_AlphaStartDecayValue', 0.1 ),
+                ('BANK_FluidFriction', 1.5 ),
+                ('BANK_AccelerationField', $/VFX_Bank/MapWind + float3[0.00, 0.00, 100.00] ),
+                ('BANK_ParticuleScaleSizeFactor', RandomRange[0.5, 1.5] * SizeSmoke)
+            ]
+        ),
+        private Rubbles is Template_ActionCall
+        (
+            Action = <Fx>
+            NamedParameters = MAP[
+                ('BANK_Mesh_Distribution', <Distribution>),
+                ('BANK_Count_Debrits_With_Fire', 0),
+                ('BANK_Count_Debrits', NombreDebris),
+                ('BANK_Count_Debrits_With_Smoke', 0),
+                ('BANK_SmokeRGBColor', <Color>),
+                ('BANK_InitPosition', float3[200, 500, 200] * MinusOneToOneRandomHemisphereSurface),
+                ('BANK_speed', 2000 * MinusOneToOneRandomHemisphereVolume),
+                ('BANK_Debrits_size_mul', RandomRange[0.5, 1.5] * SizeDebris),
+                ('BANK_lifetime', RandomRange[1, 2] * SizeDebris),
+            ]
+        ),
+    ]
+)
+
+template FX_Small_Props_Descriptor
+[
+    SizeSmoke = 1,
+    SizeDebris = 1,
+    NombreDebris = 3,
+    FX = $/GFX/GameFx/FX_Small_Props_Dest,
+] is TActionCall
+(
+    Action = <FX>
+    NamedParams = MAP
+    [
+        ('SizeSmoke', <SizeSmoke>),
+        ('SizeDebris', <SizeDebris>),
+        ('NombreDebris', <NombreDebris>),
+    ]
+)
+
+export FX_Small_Props_SmokeOnly is FX_Small_Props_Descriptor( SizeSmoke = 2 SizeDebris = 0 NombreDebris = 0)
+export FX_Small_Props_Smoke_OneSmallDebris is FX_Small_Props_Descriptor( SizeSmoke = 1 SizeDebris = 0.3 NombreDebris = 1)
+export FX_Small_Props_Smoke_ThreeSmallDebris is FX_Small_Props_Descriptor( SizeSmoke = 1 SizeDebris = 0.3 NombreDebris = 3)
+export FX_Small_Props_Smoke_OneBigDebris is FX_Small_Props_Descriptor( SizeSmoke = 1 SizeDebris = 1 NombreDebris = 1)
+
+export FX_Small_Props_Stone_One is FX_Small_Props_Descriptor( SizeSmoke = 0.3 SizeDebris = 1 NombreDebris = 1 FX = $/GFX/GameFx/FX_Dest_Pierres)
+export FX_Small_Props_Stone_Two is FX_Small_Props_Descriptor( SizeSmoke = 0.3 SizeDebris = 1 NombreDebris = 2 FX = $/GFX/GameFx/FX_Dest_Pierres)
+export FX_Small_Props_Stone_Eight is FX_Small_Props_Descriptor( SizeSmoke = 1.5 SizeDebris = 1 NombreDebris = 8 FX = $/GFX/GameFx/FX_Dest_Pierres)
+export FX_Small_Props_Stone_Ten is FX_Small_Props_Descriptor( SizeSmoke = 2 SizeDebris = 1 NombreDebris = 10 FX = $/GFX/GameFx/FX_Dest_Pierres)
+export FX_Small_Props_Stone_Fifteen_Small is FX_Small_Props_Descriptor( SizeSmoke = 1.8 SizeDebris = 1 NombreDebris = 15 FX = $/GFX/GameFx/FX_Dest_Pierres)
+export FX_Small_Props_Stone_Fifteen_Medium is FX_Small_Props_Descriptor( SizeSmoke = 2 SizeDebris = 1 NombreDebris = 15 FX = $/GFX/GameFx/FX_Dest_Pierres)
+export FX_Small_Props_Stone_Fifteen_Big is FX_Small_Props_Descriptor( SizeSmoke = 2.1 SizeDebris = 1 NombreDebris = 15 FX = $/GFX/GameFx/FX_Dest_Pierres)
+
+export FX_Small_Props_Wood_Big is FX_Small_Props_Descriptor( SizeSmoke = 1.4 SizeDebris = 1 NombreDebris = 3)
+export FX_Small_Props_Wood_Medium is FX_Small_Props_Descriptor( SizeSmoke = 1 SizeDebris = 1 NombreDebris = 3)
+export FX_Small_Props_Wood_Small is FX_Small_Props_Descriptor( SizeSmoke = 0.6 SizeDebris = 1 NombreDebris = 3)

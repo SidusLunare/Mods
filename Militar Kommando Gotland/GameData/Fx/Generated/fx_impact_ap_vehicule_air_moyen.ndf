@@ -14,6 +14,70 @@ export fx_impact_ap_vehicule_air_moyen is SimultaneousActionDeclaration
     [
         TSimultaneousAction
         (
+            Mobile = TMobileWithLocalRepereMatrixFactory
+            (
+                Position = parPosition
+            )
+            Actions =
+            [
+                TActionCall
+                (
+                    Action = $/VFX_Bank/BANK_Bomb_Distort_Simple
+                    NamedParams = MAP[
+                        ( 'parDuration', 0.4 ),
+                        ( 'parFinalSize', 2500 ),
+                        ( 'parInitialSize', 80 ),
+                        ( 'parIntensity', 250 ),
+                        ( 'parPositionRelative', float3[0,0,0] ),
+                    ]
+                ),
+                TActionCall
+                (
+                    Action = $/VFX_Bank/DarkSmoke_Simple
+                    NamedParams = MAP[
+                        ( 'parCloudsize', float3[1000,1000,1000] ),
+                        ( 'parColor', float3[0.7686275,0.7490196,0.7490196] ),
+                        ( 'parCount', 20 ),
+                        ( 'parDecayLength', 0.45 ),
+                        ( 'parDecayStart', 0.8 ),
+                        ( 'parEmissive', 0.7 ),
+                        ( 'parOpacity', 0.8 ),
+                        ( 'parParticleSize', 1500 ),
+                        ( 'parRandomPosition', 0 ),
+                        ( 'parSmokeDuration', 6 ),
+                        ( 'parSpawnerDuration', 0.7 ),
+                        ( 'parSpawnerSpeed', 800 ),
+                    ]
+                ),
+                TActionCall
+                (
+                    Action = $/VFX_Bank/BANK_Rubble2_Simple
+                    NamedParams = MAP[
+                        ( 'parCountDebrits', 8 ),
+                        ( 'parCountDebritsWithFire', 2 ),
+                        ( 'parCountDebritsWithSmoke', 4 ),
+                        ( 'parDebritSizeMul', 2 ),
+                        ( 'parDispersion', 10 ),
+                        ( 'parFireParticleEndSize', 350 ),
+                        ( 'parFireParticleStartSize', 75 ),
+                        ( 'parLifetime', 8 ),
+                        ( 'parMeshType', 0 ),
+                        ( 'parMinSpeedRatio', 0.75 ),
+                        ( 'parParticleOpacity', 0.7 ),
+                        ( 'parSmokeColor', float3[0.7058824,0.682353,0.5764706] ),
+                        ( 'parSmokeColorMultiplier', 0.1 ),
+                        ( 'parSmokeDensity', 100 ),
+                        ( 'parSmokeParticleEndSize', 250 ),
+                        ( 'parSmokeParticleStartSize', 100 ),
+                        ( 'parSpeed', float3[4000,4000,4000] ),
+                        ( 'parSpeedDispersion', 0 ),
+                    ]
+                ),
+                TWaitInSec( Duration = 8),
+            ]
+        ),
+        TSimultaneousAction
+        (
             Mobile = nil
             Actions =
             [
@@ -91,70 +155,6 @@ export fx_impact_ap_vehicule_air_moyen is SimultaneousActionDeclaration
                     ]
                 ),
                 TWaitInSec( Duration = 0.6),
-            ]
-        ),
-        TSimultaneousAction
-        (
-            Mobile = TMobileWithLocalRepereMatrixFactory
-            (
-                Position = parPosition
-            )
-            Actions =
-            [
-                TActionCall
-                (
-                    Action = $/VFX_Bank/BANK_Bomb_Distort_Simple
-                    NamedParams = MAP[
-                        ( 'parDuration', 0.4 ),
-                        ( 'parFinalSize', 2500 ),
-                        ( 'parInitialSize', 80 ),
-                        ( 'parIntensity', 250 ),
-                        ( 'parPositionRelative', float3[0,0,0] ),
-                    ]
-                ),
-                TActionCall
-                (
-                    Action = $/VFX_Bank/DarkSmoke_Simple
-                    NamedParams = MAP[
-                        ( 'parCloudsize', float3[1000,1000,1000] ),
-                        ( 'parColor', float3[0.7686275,0.7490196,0.7490196] ),
-                        ( 'parCount', 20 ),
-                        ( 'parDecayLength', 0.45 ),
-                        ( 'parDecayStart', 0.8 ),
-                        ( 'parEmissive', 0.7 ),
-                        ( 'parOpacity', 0.8 ),
-                        ( 'parParticleSize', 1500 ),
-                        ( 'parRandomPosition', 0 ),
-                        ( 'parSmokeDuration', 6 ),
-                        ( 'parSpawnerDuration', 0.7 ),
-                        ( 'parSpawnerSpeed', 800 ),
-                    ]
-                ),
-                TActionCall
-                (
-                    Action = $/VFX_Bank/BANK_Rubble2_Simple
-                    NamedParams = MAP[
-                        ( 'parCountDebrits', 8 ),
-                        ( 'parCountDebritsWithFire', 2 ),
-                        ( 'parCountDebritsWithSmoke', 4 ),
-                        ( 'parDebritSizeMul', 2 ),
-                        ( 'parDispersion', 10 ),
-                        ( 'parFireParticleEndSize', 350 ),
-                        ( 'parFireParticleStartSize', 75 ),
-                        ( 'parLifetime', 8 ),
-                        ( 'parMeshType', 0 ),
-                        ( 'parMinSpeedRatio', 0.75 ),
-                        ( 'parParticleOpacity', 0.7 ),
-                        ( 'parSmokeColor', float3[0.7058824,0.682353,0.5764706] ),
-                        ( 'parSmokeColorMultiplier', 0.1 ),
-                        ( 'parSmokeDensity', 100 ),
-                        ( 'parSmokeParticleEndSize', 250 ),
-                        ( 'parSmokeParticleStartSize', 100 ),
-                        ( 'parSpeed', float3[4000,4000,4000] ),
-                        ( 'parSpeedDispersion', 0 ),
-                    ]
-                ),
-                TWaitInSec( Duration = 8),
             ]
         ),
         TSimultaneousAction

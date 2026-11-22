@@ -129,9 +129,9 @@ export ClusterFragment is SimultaneousActionDeclaration
                     ParticleRenderer =  $/VFX_Bank/LitParticleRenderer
                     RenderInfo = ParticleRenderInfo
                     (
-                        ZTest = True
-                        ZWrite = False
-                        SortTriangles = True
+                        ZTest = true
+                        ZWrite = false
+                        SortTriangles = true
                         TextureName = 'GameData:/Assets/2D/Fx/flare_jaune_opaque.png'
                         Calque = 'Particles'
                         EmissiveParticle = true
@@ -191,7 +191,7 @@ export ClusterFragment is SimultaneousActionDeclaration
                                     (
                                         RenderInfo = DeferredParticleRenderInfo
                                         (
-                                            Use3DRotation = False
+                                            Use3DRotation = false
                                             TextureName = 'GameData:/Assets/2D/Fx/trail_flare.png'
                                             Calque = 'First'
                                         )

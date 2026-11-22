@@ -106,6 +106,42 @@ export fx_impact_sol_Smoke_Dispenser_2 is SimultaneousActionDeclaration
         (
             Mobile = TMobileWithLocalRepereMatrixFactory
             (
+                Position = float3[-76,-87,4513] + parPosition
+            )
+            Actions =
+            [
+                TActionCall
+                (
+                    Action = $/VFX_Bank/BANK_Rubble2_Oriented_Simple
+                    NamedParams = MAP[
+                        ( 'parCountDebrits', 0 ),
+                        ( 'parCountDebritsWithFire', 0 ),
+                        ( 'parCountDebritsWithSmoke', 4 ),
+                        ( 'parDebritSizeMul', 0.01 ),
+                        ( 'parDir', float3[0,0,0] ),
+                        ( 'parDispersion', 1000 ),
+                        ( 'parFireParticleEndSize', 150 ),
+                        ( 'parFireParticleStartSize', 0 ),
+                        ( 'parGravity', 3000 ),
+                        ( 'parLifetime', 10 ),
+                        ( 'parMeshType', 4 ),
+                        ( 'parNarrowness', 0.01 ),
+                        ( 'parParticleOpacity', 0.19 ),
+                        ( 'parSmokeColor', float3[0.9058824,0.9058824,0.9019608] ),
+                        ( 'parSmokeColorMultiplier', 0.2000001 ),
+                        ( 'parSmokeDensity', 100 ),
+                        ( 'parSmokeParticleEndSize', 800 ),
+                        ( 'parSmokeParticleStartSize', 400 ),
+                        ( 'parSpeed', float3[6000,1000,1000] ),
+                    ]
+                ),
+                TWaitInSec( Duration = 10),
+            ]
+        ),
+        TSimultaneousAction
+        (
+            Mobile = TMobileWithLocalRepereMatrixFactory
+            (
                 Position = float3[-97,-97,4520] + parPosition
                 EulerAngles = float3[3.14819,0,0]
             )
@@ -178,38 +214,57 @@ export fx_impact_sol_Smoke_Dispenser_2 is SimultaneousActionDeclaration
         ),
         TSimultaneousAction
         (
-            Mobile = TMobileWithLocalRepereMatrixFactory
-            (
-                Position = float3[-76,-87,4513] + parPosition
-            )
+            Mobile = nil
             Actions =
             [
                 TActionCall
                 (
-                    Action = $/VFX_Bank/BANK_Rubble2_Oriented_Simple
+                    Action = $/VFX_Bank/BANK_Bomb_NewSparks_Simple
                     NamedParams = MAP[
-                        ( 'parCountDebrits', 0 ),
-                        ( 'parCountDebritsWithFire', 0 ),
-                        ( 'parCountDebritsWithSmoke', 4 ),
-                        ( 'parDebritSizeMul', 0.01 ),
-                        ( 'parDir', float3[0,0,0] ),
-                        ( 'parDispersion', 1000 ),
-                        ( 'parFireParticleEndSize', 150 ),
-                        ( 'parFireParticleStartSize', 0 ),
-                        ( 'parGravity', 3000 ),
-                        ( 'parLifetime', 10 ),
-                        ( 'parMeshType', 4 ),
-                        ( 'parNarrowness', 0.01 ),
-                        ( 'parParticleOpacity', 0.19 ),
-                        ( 'parSmokeColor', float3[0.9058824,0.9058824,0.9019608] ),
-                        ( 'parSmokeColorMultiplier', 0.2000001 ),
-                        ( 'parSmokeDensity', 100 ),
-                        ( 'parSmokeParticleEndSize', 800 ),
-                        ( 'parSmokeParticleStartSize', 400 ),
-                        ( 'parSpeed', float3[6000,1000,1000] ),
+                        ( 'parColor', float3[0.8980393,0.8980393,0.8980393] ),
+                        ( 'parColorMultiplier', 10 ),
+                        ( 'parCount', 75 ),
+                        ( 'parDir', parDirection ),
+                        ( 'parFluidFriction', 1.1 ),
+                        ( 'parGravity', 800 ),
+                        ( 'parLifetime', 3 ),
+                        ( 'parNarrowness', 0.5 ),
+                        ( 'parPositionRadius', 750 ),
+                        ( 'parSize', 5 ),
+                        ( 'parSpeedMax', 7000 ),
+                        ( 'parSpeedMin', 3000 ),
+                        ( 'parStretch', 2.5 ),
+                        ( 'parWindFactor', 1 ),
+                        ( 'parPositionRelative', float3[0,0,4480] + parPosition ),
                     ]
                 ),
-                TWaitInSec( Duration = 10),
+                TSequentialAction
+                (Actions =
+                    [
+                        TWaitInSec( Duration = 0.5 ),
+                        TActionCall
+                        (
+                            Action = $/VFX_Bank/BANK_Bomb_NewSparks_Simple
+                            NamedParams = MAP[
+                                ( 'parColor', float3[0.8980393,0.8980393,0.8980393] ),
+                                ( 'parColorMultiplier', 10 ),
+                                ( 'parCount', 75 ),
+                                ( 'parDir', parDirection ),
+                                ( 'parFluidFriction', 1.1 ),
+                                ( 'parGravity', 750 ),
+                                ( 'parLifetime', 2 ),
+                                ( 'parNarrowness', 0.2 ),
+                                ( 'parPositionRadius', 500 ),
+                                ( 'parPositionRelative', parPosition ),
+                                ( 'parSize', 6 ),
+                                ( 'parSpeedMax', 6000 ),
+                                ( 'parSpeedMin', 2000 ),
+                                ( 'parStretch', 2.5 ),
+                                ( 'parWindFactor', 0.5 ),
+                            ]
+                        ),
+                    ]
+                ),
             ]
         ),
         TSimultaneousAction
@@ -263,61 +318,6 @@ export fx_impact_sol_Smoke_Dispenser_2 is SimultaneousActionDeclaration
                                 ( 'parStretch', 1 ),
                                 ( 'parWindFactor', 0.25 ),
                                 ( 'parDir', float3[0.9962764,-0.01497342,0.08490732] ),
-                            ]
-                        ),
-                    ]
-                ),
-            ]
-        ),
-        TSimultaneousAction
-        (
-            Mobile = nil
-            Actions =
-            [
-                TActionCall
-                (
-                    Action = $/VFX_Bank/BANK_Bomb_NewSparks_Simple
-                    NamedParams = MAP[
-                        ( 'parColor', float3[0.8980393,0.8980393,0.8980393] ),
-                        ( 'parColorMultiplier', 10 ),
-                        ( 'parCount', 75 ),
-                        ( 'parDir', parDirection ),
-                        ( 'parFluidFriction', 1.1 ),
-                        ( 'parGravity', 800 ),
-                        ( 'parLifetime', 3 ),
-                        ( 'parNarrowness', 0.5 ),
-                        ( 'parPositionRadius', 750 ),
-                        ( 'parSize', 5 ),
-                        ( 'parSpeedMax', 7000 ),
-                        ( 'parSpeedMin', 3000 ),
-                        ( 'parStretch', 2.5 ),
-                        ( 'parWindFactor', 1 ),
-                        ( 'parPositionRelative', float3[0,0,4480] + parPosition ),
-                    ]
-                ),
-                TSequentialAction
-                (Actions =
-                    [
-                        TWaitInSec( Duration = 0.5 ),
-                        TActionCall
-                        (
-                            Action = $/VFX_Bank/BANK_Bomb_NewSparks_Simple
-                            NamedParams = MAP[
-                                ( 'parColor', float3[0.8980393,0.8980393,0.8980393] ),
-                                ( 'parColorMultiplier', 10 ),
-                                ( 'parCount', 75 ),
-                                ( 'parDir', parDirection ),
-                                ( 'parFluidFriction', 1.1 ),
-                                ( 'parGravity', 750 ),
-                                ( 'parLifetime', 2 ),
-                                ( 'parNarrowness', 0.2 ),
-                                ( 'parPositionRadius', 500 ),
-                                ( 'parPositionRelative', parPosition ),
-                                ( 'parSize', 6 ),
-                                ( 'parSpeedMax', 6000 ),
-                                ( 'parSpeedMin', 2000 ),
-                                ( 'parStretch', 2.5 ),
-                                ( 'parWindFactor', 0.5 ),
                             ]
                         ),
                     ]

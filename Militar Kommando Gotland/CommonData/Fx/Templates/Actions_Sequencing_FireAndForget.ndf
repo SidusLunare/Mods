@@ -1,8 +1,8 @@
 template Template_FireAndForget
 [
     Action                      : TActionDescriptor[required] = nil,
-    IntroduceNewCentroid        : boolean = false,
-    ForgetOrientation           : boolean = false,
+    IntroduceNewCentroid        : bool = false,
+    ForgetOrientation           : bool = false,
     LocalVariables              = [],
 ] is TActionDescriptorFireAndForget
 (

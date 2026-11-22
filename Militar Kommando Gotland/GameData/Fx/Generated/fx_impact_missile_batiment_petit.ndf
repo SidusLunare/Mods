@@ -14,101 +14,6 @@ export fx_impact_missile_batiment_petit is SimultaneousActionDeclaration
     [
         TSimultaneousAction
         (
-            Mobile = nil
-            Actions =
-            [
-                TActionCall
-                (
-                    Action = $/VFX_Bank/BANK_Bomb_Flash
-                    NamedParams = MAP[
-                        ( 'parCount', 3 ),
-                        ( 'parDuration', 0.1 ),
-                        ( 'parFinalSize', 2500 ),
-                        ( 'parInitialSize', 200 ),
-                        ( 'parPositionRelative', parPosition ),
-                        ( 'parZBias', 255 ),
-                    ]
-                ),
-                TActionCall
-                (
-                    Action = $/GFX/GameFx/dummy_impact_for_exporter_hack
-                    NamedParams = MAP[
-                        ( 'Dir', parDirection ),
-                        ( 'Pos', parPosition ),
-                        ( 'RadPhy', parRadiusPhysical ),
-                        ( 'RadSupr', parRadiusSuppress ),
-                    ]
-                ),
-                TActionCall
-                (
-                    Action = $/VFX_Bank/BANK_FireBalls_Simple
-                    NamedParams = MAP[
-                        ( 'parColor', float3[1,0.9019608,0.5019608] ),
-                        ( 'parCount', 10 ),
-                        ( 'parDeltaPositionMobileDirection', 250 ),
-                        ( 'parDispersion', 400 ),
-                        ( 'parDuration', 0.9 ),
-                        ( 'parInitialDelay', parInitialShotDelay ),
-                        ( 'parLuminosite', 1 ),
-                        ( 'parOpacity', 0 ),
-                        ( 'parSize', 700 ),
-                        ( 'parDeltaPositionAdditif', parPosition ),
-                    ]
-                ),
-                TActionCall
-                (
-                    Action = $/VFX_Bank/BANK_Dynamic_Flash_Only_Two_Simple
-                    NamedParams = MAP[
-                        ( 'parColorEnd', float3[0.9294118,0.2156863,0.007843138] ),
-                        ( 'parColorStart', float3[0.9294118,0.5882353,0.07843138] ),
-                        ( 'parDuration', 0.1 ),
-                        ( 'parInitialDelay', parInitialShotDelay ),
-                        ( 'parOpacity', 0.2 ),
-                        ( 'parSize', 1500 ),
-                        ( 'parSpeed', float3[0,0,0] ),
-                        ( 'Position', parPosition ),
-                    ]
-                ),
-                TActionCall
-                (
-                    Action = $/VFX_Bank/BANK_Dynamic_Flash_Only_Two_Simple
-                    NamedParams = MAP[
-                        ( 'parColorEnd', float3[0.09411766,0.02352941,0] ),
-                        ( 'parColorStart', float3[0.9294118,0.5882353,0.07843138] ),
-                        ( 'parDuration', 1 ),
-                        ( 'parInitialDelay', parInitialShotDelay ),
-                        ( 'parOpacity', 0.5 ),
-                        ( 'parSize', 1500 ),
-                        ( 'parSpeed', float3[0,0,700] ),
-                        ( 'Position', parPosition ),
-                    ]
-                ),
-                TActionCall
-                (
-                    Action = $/VFX_Bank/BANK_Bomb_NewSparks_Simple
-                    NamedParams = MAP[
-                        ( 'parColor', float3[0.7764707,0.7764707,0.7764707] ),
-                        ( 'parColorMultiplier', 3 ),
-                        ( 'parCount', 30 ),
-                        ( 'parDir', parDirection ),
-                        ( 'parFluidFriction', 0.4 ),
-                        ( 'parGravity', -500 ),
-                        ( 'parLifetime', 0.7 ),
-                        ( 'parNarrowness', 0.3 ),
-                        ( 'parPositionRadius', 100 ),
-                        ( 'parPositionRelative', parPosition ),
-                        ( 'parSize', 10 ),
-                        ( 'parSpeedMax', 3000 ),
-                        ( 'parSpeedMin', 1300 ),
-                        ( 'parStretch', 4 ),
-                        ( 'parWindFactor', 1 ),
-                    ]
-                ),
-                TWaitInSec( Duration = 1),
-            ]
-        ),
-        TSimultaneousAction
-        (
             Mobile = TMobileWithLocalRepereMatrixFactory
             (
                 Position = parPosition
@@ -243,6 +148,101 @@ export fx_impact_missile_batiment_petit is SimultaneousActionDeclaration
                     ]
                 ),
                 TWaitInSec( Duration = 0.6),
+            ]
+        ),
+        TSimultaneousAction
+        (
+            Mobile = nil
+            Actions =
+            [
+                TActionCall
+                (
+                    Action = $/VFX_Bank/BANK_Bomb_Flash
+                    NamedParams = MAP[
+                        ( 'parCount', 3 ),
+                        ( 'parDuration', 0.1 ),
+                        ( 'parFinalSize', 2500 ),
+                        ( 'parInitialSize', 200 ),
+                        ( 'parPositionRelative', parPosition ),
+                        ( 'parZBias', 255 ),
+                    ]
+                ),
+                TActionCall
+                (
+                    Action = $/GFX/GameFx/dummy_impact_for_exporter_hack
+                    NamedParams = MAP[
+                        ( 'Dir', parDirection ),
+                        ( 'Pos', parPosition ),
+                        ( 'RadPhy', parRadiusPhysical ),
+                        ( 'RadSupr', parRadiusSuppress ),
+                    ]
+                ),
+                TActionCall
+                (
+                    Action = $/VFX_Bank/BANK_FireBalls_Simple
+                    NamedParams = MAP[
+                        ( 'parColor', float3[1,0.9019608,0.5019608] ),
+                        ( 'parCount', 10 ),
+                        ( 'parDeltaPositionMobileDirection', 250 ),
+                        ( 'parDispersion', 400 ),
+                        ( 'parDuration', 0.9 ),
+                        ( 'parInitialDelay', parInitialShotDelay ),
+                        ( 'parLuminosite', 1 ),
+                        ( 'parOpacity', 0 ),
+                        ( 'parSize', 700 ),
+                        ( 'parDeltaPositionAdditif', parPosition ),
+                    ]
+                ),
+                TActionCall
+                (
+                    Action = $/VFX_Bank/BANK_Dynamic_Flash_Only_Two_Simple
+                    NamedParams = MAP[
+                        ( 'parColorEnd', float3[0.9294118,0.2156863,0.007843138] ),
+                        ( 'parColorStart', float3[0.9294118,0.5882353,0.07843138] ),
+                        ( 'parDuration', 0.1 ),
+                        ( 'parInitialDelay', parInitialShotDelay ),
+                        ( 'parOpacity', 0.2 ),
+                        ( 'parSize', 1500 ),
+                        ( 'parSpeed', float3[0,0,0] ),
+                        ( 'Position', parPosition ),
+                    ]
+                ),
+                TActionCall
+                (
+                    Action = $/VFX_Bank/BANK_Dynamic_Flash_Only_Two_Simple
+                    NamedParams = MAP[
+                        ( 'parColorEnd', float3[0.09411766,0.02352941,0] ),
+                        ( 'parColorStart', float3[0.9294118,0.5882353,0.07843138] ),
+                        ( 'parDuration', 1 ),
+                        ( 'parInitialDelay', parInitialShotDelay ),
+                        ( 'parOpacity', 0.5 ),
+                        ( 'parSize', 1500 ),
+                        ( 'parSpeed', float3[0,0,700] ),
+                        ( 'Position', parPosition ),
+                    ]
+                ),
+                TActionCall
+                (
+                    Action = $/VFX_Bank/BANK_Bomb_NewSparks_Simple
+                    NamedParams = MAP[
+                        ( 'parColor', float3[0.7764707,0.7764707,0.7764707] ),
+                        ( 'parColorMultiplier', 3 ),
+                        ( 'parCount', 30 ),
+                        ( 'parDir', parDirection ),
+                        ( 'parFluidFriction', 0.4 ),
+                        ( 'parGravity', -500 ),
+                        ( 'parLifetime', 0.7 ),
+                        ( 'parNarrowness', 0.3 ),
+                        ( 'parPositionRadius', 100 ),
+                        ( 'parPositionRelative', parPosition ),
+                        ( 'parSize', 10 ),
+                        ( 'parSpeedMax', 3000 ),
+                        ( 'parSpeedMin', 1300 ),
+                        ( 'parStretch', 4 ),
+                        ( 'parWindFactor', 1 ),
+                    ]
+                ),
+                TWaitInSec( Duration = 1),
             ]
         ),
     ]

@@ -1,0 +1,17 @@
+export Modele_BAV_485_Naval_supply_SOV is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/POL/Vehicule/BAV_485/BAV_485_Supply.fbx"
+    Textures="GameData:/Assets/3D/Units/URSS/Vehicule/BAV_485"
+)
+
+export Modele_BAV_485_Naval_supply_SOV_MID is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/POL/Vehicule/BAV_485_MID/BAV_485_Supply_MID.fbx"
+    Textures="GameData:/Assets/3D/Units/URSS/Vehicule/BAV_485_MID"
+)
+
+export Modele_BAV_485_Naval_supply_SOV_LOW is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/POL/Vehicule/BAV_485_LOW/BAV_485_Supply_LOW.fbx"
+    Textures="GameData:/Assets/3D/Units/URSS/Vehicule/BAV_485_LOW"
+)

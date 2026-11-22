@@ -354,9 +354,5 @@ private StrategicMousePolicyManagerResources is TUIStrategicMousePolicyManagerRe
             "StrategicMouseWidgetSelector_Default",
             ~/StrategicMouseWidgetSelector_Default
         ),
-        (
-            "MouseWidgetSelector_DefaultOrder",
-            ~/MouseWidgetSelector_DefaultOrder //Nico : Ca me parait bizarre de pas utiliser celui du strategic ici mais je porte le comportement tel qu'il était
-        ),
     ]
 )

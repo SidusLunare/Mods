@@ -81,7 +81,6 @@ UnitSpecialties is TUnitSpecialtiesContainer
                 SpecialtyTextureName       = "Texture_Speciality_Icon_amphibie"
                 SpecialtyHintTitleToken    = "UDXYROJWVH"
                 SpecialtyHintBodyToken     = "QIOAXNCXTO"
-                SpecialtyHintExtendedToken = "QBQLKNVKST"
                 ShowAsFilterInShowroom = True
             )
         ),
@@ -93,6 +92,17 @@ UnitSpecialties is TUnitSpecialtiesContainer
                 SpecialtyHintTitleToken    = "DRNJAVYWZZ"
                 SpecialtyHintBodyToken     = "WFDQQPKCLN"
                 SpecialtyHintExtendedToken = "ARDXKSHFIO"
+                ShowAsFilterInShowroom = True
+            )
+        ),
+        (
+            "_cbr",
+            TUnitSpecialtyDescriptor
+            (
+                SpecialtyTextureName       = "Texture_Speciality_Icon_Counter_Battery_Radar"
+                SpecialtyHintTitleToken    = "OBUJMSLAAU"
+                SpecialtyHintBodyToken     = "FBAPLIAEOO"
+                SpecialtyHintExtendedToken = "WZVEMZOVSU"
                 ShowAsFilterInShowroom = True
             )
         ),
@@ -174,13 +184,13 @@ UnitSpecialties is TUnitSpecialtiesContainer
             )
         ),
         (
-            "_guidedmunition",
+            "_gunship_plane",
             TUnitSpecialtyDescriptor
             (
-                SpecialtyHintTitleToken    = "RGAHSNEABX"
-                SpecialtyHintBodyToken     = "WRJYXEDJKO"
-                SpecialtyHintExtendedToken = "EJVINZUHAB"
-                ShowAsFilterInShowroom = False
+                SpecialtyTextureName       = "Texture_Speciality_Icon_gunship_plane"
+                SpecialtyHintTitleToken    = "ACOKFUBEAA"
+                SpecialtyHintBodyToken     = "XSPSWTNWEQ"
+                ShowAsFilterInShowroom = True
             )
         ),
         (
@@ -214,16 +224,6 @@ UnitSpecialties is TUnitSpecialtiesContainer
                 SpecialtyHintBodyToken     = "ALBKAPAUKL"
                 SpecialtyHintExtendedToken = "OMRDTDBYQW"
                 ShowAsFilterInShowroom = True
-            )
-        ),
-        (
-            "_laserdesignator",
-            TUnitSpecialtyDescriptor
-            (
-                SpecialtyHintTitleToken    = "VRHIUPVROI"
-                SpecialtyHintBodyToken     = "OGUNVXTNLM"
-                SpecialtyHintExtendedToken = "DVODPWBUTW"
-                ShowAsFilterInShowroom = False
             )
         ),
         (
@@ -791,16 +791,6 @@ UnitSpecialties is TUnitSpecialtiesContainer
                 SpecialtyTextureName       = "Texture_Speciality_Icon_team"
                 SpecialtyHintTitleToken    = "PWLQGRCLQB"
                 SpecialtyHintBodyToken     = "ONEJEZTOYS"
-                ShowAsFilterInShowroom = False
-            )
-        ),
-        (
-            "test",
-            TUnitSpecialtyDescriptor
-            (
-                SpecialtyHintTitleToken    = "test"
-                SpecialtyHintBodyToken     = "test"
-                SpecialtyHintExtendedToken = "test"
                 ShowAsFilterInShowroom = False
             )
         ),

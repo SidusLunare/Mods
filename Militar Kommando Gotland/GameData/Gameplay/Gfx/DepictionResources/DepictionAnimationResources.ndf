@@ -121,3 +121,9 @@ export ServantATGMRightDead      is SkeletalServantATGMAnimationTemplate(FileNam
 export ServantATGMRightMoveLeft  is SkeletalServantATGMAnimationTemplate(FileName = 'Gunner_R_Turn_Left.fbx' PlayInLoop = true)
 export ServantATGMRightMoveRight is SkeletalServantATGMAnimationTemplate(FileName = 'Gunner_R_Turn_Right.fbx' PlayInLoop = true)
 
+// Portage ATGM à mains verrouillées (IK des bras sur la pose de la frame 1) : le tube porté par le Carriable ne rebondit pas.
+export ServantATGMLeftPorteur       is SkeletalServantATGMAnimationTemplate(FileName = 'Gunner_ATGM_L_Porteur.fbx' PlayInLoop = true)
+export ServantATGMLeftPorteurBack   is SkeletalServantATGMAnimationTemplate(FileName = 'Gunner_ATGM_L_Porteur_Back.fbx' PlayInLoop = true)
+export ServantATGMRightPorteur      is SkeletalServantATGMAnimationTemplate(FileName = 'Gunner_ATGM_R_Porteur.fbx' PlayInLoop = true)
+export ServantATGMRightPorteurBack  is SkeletalServantATGMAnimationTemplate(FileName = 'Gunner_ATGM_R_Porteur_Back.fbx' PlayInLoop = true)
+

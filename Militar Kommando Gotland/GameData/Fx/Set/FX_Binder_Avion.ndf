@@ -29,13 +29,13 @@ export FX_Binder_Avion_Vortex is SimultaneousActionDeclaration
                                     (
                                         RenderInfo = ParticleRenderInfo
                                         (
-                                            ZTest = True
-                                            ZWrite = False
-                                            SortTriangles = True
-                                            Use3DRotation = False
+                                            ZTest = true
+                                            ZWrite = false
+                                            SortTriangles = true
+                                            Use3DRotation = false
                                             TextureName = 'GameData:/Assets/2D/Fx/trail_nuage_strip_32_01.png'
                                             Calque = 'Particles'
-                                            OpaqueParticle = True
+                                            OpaqueParticle = true
                                         )
                                         Evolvers = Template_List
                                         (
@@ -75,7 +75,7 @@ export FX_Binder_Avion_Vortex is SimultaneousActionDeclaration
                 [
                     Initialiser_CreateTrailId
                     (
-                        OverrideValueFromSpawner = False
+                        OverrideValueFromSpawner = false
                     ),
                     Initialiser_SetMobileWrapper(),
                     Initialiser_Size( InitFunction = 100 ),
@@ -201,7 +201,7 @@ template template_FX_Reactor_Fire
                                 SortTriangles = true
                                 TextureName = 'GameData:/Assets/2D/Fx/reactor.png'
                                 Calque = 'Particles'
-                                EmissiveParticle = True
+                                EmissiveParticle = true
                             )
                             Evolvers = ParticleStandardEvolverList
                             (
@@ -313,7 +313,7 @@ template template_FX_Binder_Avion_Reacteur
                                     (
                                         RenderInfo = Template_DistortionParticleRenderInfo
                                         (
-                                            SortTriangles = True
+                                            SortTriangles = true
                                             TextureName = 'GameData:/Assets/2D/Fx/Distortion/trail_distort.png'
                                         )
                                         Evolvers = Template_List
@@ -383,10 +383,10 @@ template template_FX_Binder_Avion_Reacteur
                                     (
                                         RenderInfo = ParticleRenderInfo
                                         (
-                                            SortTriangles = True
+                                            SortTriangles = true
                                             TextureName = 'GameData:/Assets/2D/Fx/trail_nuage_strip_32_02.png'
                                             Calque = 'Particles'
-                                            OpaqueParticle = True
+                                            OpaqueParticle = true
                                         )
                                         ParticleRenderer = ParticleRendererMeshTrail( ScalingMode = 1 )
 

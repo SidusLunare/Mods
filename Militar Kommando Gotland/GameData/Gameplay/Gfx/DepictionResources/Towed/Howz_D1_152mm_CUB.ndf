@@ -1,0 +1,3 @@
+export Modele_Howz_D1_152mm_CUB is TResourceMesh( Mesh="GameData:/Assets/3D/Units/CUBA/Canon/Howz_D1_152mm/Howz_D1_152mm.fbx")
+export Modele_Howz_D1_152mm_CUB_MID is TResourceMesh( Mesh="GameData:/Assets/3D/Units/CUBA/Canon/Howz_D1_152mm_MID/Howz_D1_152mm_MID.fbx")
+export Modele_Howz_D1_152mm_CUB_LOW is TResourceMesh( Mesh="GameData:/Assets/3D/Units/CUBA/Canon/Howz_D1_152mm_LOW/Howz_D1_152mm_LOW.fbx")

@@ -1,24 +1,24 @@
-Texture_STRATEGIC_front is TUIResourceTexture_Common
+Texture_STRATEGIC_front is TUIResourceTexture
 (
     FileName = 'GameData:/Assets/2D/Interface/UseStrategic/LabelIcons/BattleOrder/front.png'
 )
 
-Texture_STRATEGIC_brigade is TUIResourceTexture_Common
+Texture_STRATEGIC_brigade is TUIResourceTexture
 (
     FileName = 'GameData:/Assets/2D/Interface/UseStrategic/LabelIcons/BattleOrder/brigade.png'
 )
 
-Texture_STRATEGIC_corps is TUIResourceTexture_Common
+Texture_STRATEGIC_corps is TUIResourceTexture
 (
     FileName = 'GameData:/Assets/2D/Interface/UseStrategic/LabelIcons/BattleOrder/corps.png'
 )
 
-Texture_STRATEGIC_division is TUIResourceTexture_Common
+Texture_STRATEGIC_division is TUIResourceTexture
 (
     FileName = 'GameData:/Assets/2D/Interface/UseStrategic/LabelIcons/BattleOrder/division.png'
 )
 
-Texture_STRATEGIC_regiment is TUIResourceTexture_Common
+Texture_STRATEGIC_regiment is TUIResourceTexture
 (
     FileName = 'GameData:/Assets/2D/Interface/UseStrategic/LabelIcons/BattleOrder/regiment.png'
 )

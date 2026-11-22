@@ -61,10 +61,10 @@ export BANK_Bomb_ShockWave is SimultaneousActionDeclaration
                 (
                     RenderInfo = ParticleRenderInfo
                     (
-                        ZTest = True
-                        ZWrite = False
-                        SortTriangles = True
-                        Use3DRotation = False
+                        ZTest = true
+                        ZWrite = false
+                        SortTriangles = true
+                        Use3DRotation = false
                         TextureName = 'GameData:/Assets/2D/Fx/ring.png'
                         EmissiveParticle = true
                     )

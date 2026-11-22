@@ -67,7 +67,7 @@ is BUCKContainerDescriptor
 
             TextureToken = <TopTextureToken>
             TextureDrawer  = <TextureDrawer>
-            TileTextureInComponent = True
+            TileTextureInComponent = true
             TextureFrame   = TUIFramePropertyRTTI( RelativeWidthHeight = [1.0, 1.0] )
             ClipTextureToComponent = true
         )
@@ -87,7 +87,7 @@ is BUCKContainerDescriptor
 
             TextureToken = <RightTextureToken>
             TextureDrawer  = <TextureDrawer>
-            TileTextureInComponent = True
+            TileTextureInComponent = true
             TextureFrame   = TUIFramePropertyRTTI( RelativeWidthHeight = [1.0, 1.0] )
             ClipTextureToComponent = true
         )
@@ -107,7 +107,7 @@ is BUCKContainerDescriptor
 
             TextureToken = <BottomTextureToken>
             TextureDrawer  = <TextureDrawer>
-            TileTextureInComponent = True
+            TileTextureInComponent = true
             TextureFrame   = TUIFramePropertyRTTI( RelativeWidthHeight = [1.0, 1.0] )
             ClipTextureToComponent = true
         )
@@ -128,7 +128,7 @@ is BUCKContainerDescriptor
 
             TextureToken = <LeftTextureToken>
             TextureDrawer  = <TextureDrawer>
-            TileTextureInComponent = True
+            TileTextureInComponent = true
             TextureFrame   = TUIFramePropertyRTTI( RelativeWidthHeight = [1.0, 1.0] )
             ClipTextureToComponent = true
         )
@@ -143,8 +143,6 @@ is BUCKContainerDescriptor
             ComponentFrame = TUIFramePropertyRTTI
             (
                 MagnifiableWidthHeight = [<AuraBorderSize>, <AuraBorderSize>]
-                AlignementToAnchor = [0.0, 0.0]
-                AlignementToFather = [0.0, 0.0]
             )
 
             TextureToken = <TopLeftTexture>

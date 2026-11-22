@@ -189,13 +189,13 @@ export BANK_Bomb_Smoke_MGS_homogeneous is SimultaneousActionDeclaration
                 (
                     RenderInfo = ParticleRenderInfo
                     (
-                        ZTest = True
-                        SortTriangles = True
-                        Use3DRotation = True
-                        ZWrite = False
+                        ZTest = true
+                        SortTriangles = true
+                        Use3DRotation = true
+                        ZWrite = false
                         Calque = 'Particles'
                         TextureName = 'GameData:/Assets/2D/Fx/nuage_00.png'
-                        OpaqueParticle = True
+                        OpaqueParticle = true
                     )
                     ParticleRenderer = StandardRenderer
                     Evolvers = ParticleStandardEvolverListWithPhysic

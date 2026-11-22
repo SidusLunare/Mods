@@ -55,31 +55,6 @@ private EscapePanelRestartButton is ConfirmButton
 
 // -------------------------------------------------------------------------------------------------
 
-private EscapePanelHelpButton is ConfirmButton
-(
-    ElementName = "HelpButton"
-    TextToken = 'AB_HELP'
-
-    HintableAreaComponent = BUCKSpecificHintableArea
-    (
-        HintTitleToken = "OES_HELPT"
-        HintBodyToken = "OES_HELPB"
-        HintExtendedToken = "OES_HELPE"
-    )
-
-    ButtonMagnifiableWidthHeight = [EscapeMenuButtonWidth, 35.0]
-    TextTypefaceToken = "UISecondFont"
-    TextStyle = 'TextStyleEcranMoniteur'
-    TextColorToken = 'loginBlanc'
-    BorderLineColorToken = 'VertLogin'
-    HasBackground = true
-    BackgroundBlockColorToken = 'loginBoutonBackground_vert'
-    TextSizeToken = '24'
-    BorderThicknessToken = '3'
-)
-
-// -------------------------------------------------------------------------------------------------
-
 private EscapePanelSaveButton is ConfirmButton
 (
     ElementName = "SaveButton"
@@ -374,7 +349,6 @@ EscapePanelResource is TUISpecificOutGameEscapePanelResources
 
     EscapePanelContinueButton = ~/EscapePanelContinueButton
     EscapePanelRestartButton = ~/EscapePanelRestartButton
-    EscapePanelHelpButton = ~/EscapePanelHelpButton
     EscapePanelSaveButton = ~/EscapePanelSaveButton
     EscapePanelLoadButton = ~/EscapePanelLoadButton
     EscapePanelOptionsButton = ~/EscapePanelOptionsButton

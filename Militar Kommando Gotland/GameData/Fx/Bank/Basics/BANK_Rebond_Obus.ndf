@@ -68,7 +68,7 @@ export BANK_Rebond_Obus is SimultaneousActionDeclaration
                 ParticleLifetime = FlyingTime
                 Initialisers =
                 [
-                    Initialiser_CreateTrailId( OverrideValueFromSpawner = False ), // pour pouvoir avoir une trail derrière.
+                    Initialiser_CreateTrailId( OverrideValueFromSpawner = false ), // pour pouvoir avoir une trail derrière.
                     Initialiser_SetMobileWrapper(), // pour pouvoir suivre le mobile.
                     ParticleInitialiserList
                     (
@@ -96,12 +96,12 @@ export BANK_Rebond_Obus is SimultaneousActionDeclaration
                 (
                     RenderInfo = ParticleRenderInfo
                     (
-                        ZTest = True
-                        ZWrite = False
+                        ZTest = true
+                        ZWrite = false
                         SortTriangles = true
                         TextureName = 'GameData:/Assets/2D/Fx/reactor.png'
                         Calque = 'Particles'
-                        EmissiveParticle = True
+                        EmissiveParticle = true
                     )
                     ParticleRenderer = $/VFX_Bank/LitParticleRendererNoCentroidPositioning
                     Evolvers = Template_List
@@ -146,12 +146,12 @@ export BANK_Rebond_Obus is SimultaneousActionDeclaration
                                     (
                                         RenderInfo = ParticleRenderInfo
                                         (
-                                            ZTest = True
-                                            ZWrite = False
-                                            SortTriangles = True
+                                            ZTest = true
+                                            ZWrite = false
+                                            SortTriangles = true
                                             TextureName = 'GameData:/Assets/2D/Fx/trail_nuage_strip_32_02.png'
                                             Calque = 'Last'
-                                            OpaqueParticle = True
+                                            OpaqueParticle = true
                                         )
                                         Evolvers = ParticleStandardEvolverList
                                         (

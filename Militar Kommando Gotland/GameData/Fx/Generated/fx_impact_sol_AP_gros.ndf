@@ -300,38 +300,6 @@ export fx_impact_sol_AP_gros is SimultaneousActionDeclaration
         (
             Mobile = TMobileWithLocalRepereMatrixFactory
             (
-                Position = float3[36,-25,0]
-            )
-            Actions =
-            [
-                TActionCall
-                (
-                    Action = $/VFX_Bank/BANK_WasteGroundDustStickOnGround_Simple
-                    NamedParams = MAP[
-                        ( 'parAlphaStartDecayValue', 0.01 ),
-                        ( 'parCount', 50 ),
-                        ( 'parEndColor', float3[0.9921569,0.7764707,0.6] ),
-                        ( 'parEndSize', 2500 ),
-                        ( 'parFluidFriction', 2 ),
-                        ( 'parInitialDelay', parInitialShotDelay ),
-                        ( 'parLifetime', 8 ),
-                        ( 'parOpacity', 0.4 ),
-                        ( 'parRotationFactor', 1 ),
-                        ( 'parScaleSizeFactor', 2 ),
-                        ( 'parStartColor', float3[0.9921569,0.7764707,0.6] ),
-                        ( 'parStartRandomRadius', 400 ),
-                        ( 'parStartRotation', 0.25 ),
-                        ( 'parStartSize', 25 ),
-                        ( 'parStartSpeed', 8 ),
-                        ( 'parWindWeight', 6 ),
-                    ]
-                ),
-            ]
-        ),
-        TSimultaneousAction
-        (
-            Mobile = TMobileWithLocalRepereMatrixFactory
-            (
                 Position = float3[10,0,0] + parPosition
             )
             Actions =
@@ -357,6 +325,38 @@ export fx_impact_sol_AP_gros is SimultaneousActionDeclaration
                         ( 'parStartSize', 300 ),
                         ( 'parStartSpeed3D', float3[2000,2000,0] ),
                         ( 'parWindWeight', 1 ),
+                    ]
+                ),
+            ]
+        ),
+        TSimultaneousAction
+        (
+            Mobile = TMobileWithLocalRepereMatrixFactory
+            (
+                Position = float3[36,-25,0]
+            )
+            Actions =
+            [
+                TActionCall
+                (
+                    Action = $/VFX_Bank/BANK_WasteGroundDustStickOnGround_Simple
+                    NamedParams = MAP[
+                        ( 'parAlphaStartDecayValue', 0.01 ),
+                        ( 'parCount', 50 ),
+                        ( 'parEndColor', float3[0.9921569,0.7764707,0.6] ),
+                        ( 'parEndSize', 2500 ),
+                        ( 'parFluidFriction', 2 ),
+                        ( 'parInitialDelay', parInitialShotDelay ),
+                        ( 'parLifetime', 8 ),
+                        ( 'parOpacity', 0.4 ),
+                        ( 'parRotationFactor', 1 ),
+                        ( 'parScaleSizeFactor', 2 ),
+                        ( 'parStartColor', float3[0.9921569,0.7764707,0.6] ),
+                        ( 'parStartRandomRadius', 400 ),
+                        ( 'parStartRotation', 0.25 ),
+                        ( 'parStartSize', 25 ),
+                        ( 'parStartSpeed', 8 ),
+                        ( 'parWindWeight', 6 ),
                     ]
                 ),
             ]

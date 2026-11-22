@@ -15,6 +15,6 @@ export Modele_Jaguar_1_RFA_LOW is TResourceMesh
 
 export Modele_Jaguar_1_RFA_Tourelle_01 is TResourceMesh
 (
-    Mesh="GameData:/Assets/3D/Units/Ammo/Armes/FR/HOT_t1.fbx"
+    Mesh="GameData:/Assets/3D/Ammo/Armes/FR/HOT_t1.fbx"
 )
 

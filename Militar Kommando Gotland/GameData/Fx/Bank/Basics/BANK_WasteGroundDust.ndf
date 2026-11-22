@@ -148,7 +148,7 @@ export BANK_WasteGroundDustStickOnGround is Template_BANK_WasteGroundDust( Stick
 
 template  Template_BANK_WasteGroundDust
 [
-    StickOnGround = False
+    StickOnGround = false
 ]
 is SimultaneousActionDeclaration
 (

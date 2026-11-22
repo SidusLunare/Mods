@@ -1,0 +1,38 @@
+template Template_PeriodicBox
+[
+    BoxSize         : TEvaluable[required] = nil,
+    Disabled        : boolean = false
+] is TParticleEvolver_PeriodicBox
+(
+    BoxSize = <BoxSize>
+    Disabled = <Disabled>
+    Camera = $/M3D/Scene/FxCameraProvider_CameraPrincipale
+)
+
+
+template Template_EvolverPeriodicBox
+[
+    BoxSize  : TEvaluable = float3[1000,1000,1000],
+    Position : TEvaluable = float3[0,0,0]
+] is TVersatileParticleEvolver
+(
+    EvolveFunction = Mod[<Position>, <BoxSize>] - (<BoxSize> * 0.5)
+    Field = $/Particle/Position
+)
+
+template Template_EvolverPeriodicBoxNoZ
+[
+    BoxSize  : TEvaluable = float3[1000,1000,1000],
+    Position : TEvaluable = float3[0,0,0],
+    DistanceFromGround : TEvaluable = float3[0,0,0]
+] is TVersatileParticleEvolver
+(
+    EvolveFunction = Mod[Mod[<Position> - CameraPosition - (<BoxSize> * 0.5), <BoxSize>] + <BoxSize>, <BoxSize>] + CameraPosition - (<BoxSize> * 0.5) - (<DistanceFromGround> - (<BoxSize> * 0.5)) * float3[0,0,1]
+    Field = $/Particle/Position
+)
+
+PositionForPeriodicBox is Template_FunctionDeclaration
+(
+    Params = [BoxSize is Template_Alias(), Position is Template_Alias()]
+    Code = CameraPosition - (BoxSize * 0.5) + Mod[Mod[Position - CameraPosition - (BoxSize * 0.5), BoxSize] + BoxSize, BoxSize]
+)

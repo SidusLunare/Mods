@@ -1,0 +1,3 @@
+export Modele_Howz_GC45_155mm_OST is TResourceMesh( Mesh="GameData:/Assets/3D/Units/FR/Canon/Howz_TRF1_155mm/Howz_TRF1_155mm.fbx")
+export Modele_Howz_GC45_155mm_OST_MID is TResourceMesh( Mesh="GameData:/Assets/3D/Units/FR/Canon/Howz_TRF1_155mm_MID/Howz_TRF1_155mm_MID.fbx")
+export Modele_Howz_GC45_155mm_OST_LOW is TResourceMesh( Mesh="GameData:/Assets/3D/Units/FR/Canon/Howz_TRF1_155mm_LOW/Howz_TRF1_155mm_LOW.fbx")

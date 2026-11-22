@@ -1,0 +1,19 @@
+export Modele_J5_RKT_ALB is TResourceMesh
+(
+    Mesh=ModelFile_J5_ALB
+)
+
+export Modele_J5_RKT_ALB_MID is TResourceMesh
+(
+    Mesh=ModelFile_J5_ALB
+)
+
+export Modele_J5_RKT_ALB_LOW is TResourceMesh
+(
+    Mesh=ModelFile_J5_ALB
+)
+
+export Modele_J5_RKT_ALB_train is TResourceMesh
+(
+    Mesh=ModelFile_J5_ALB_train
+)

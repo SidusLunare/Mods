@@ -303,27 +303,6 @@ export fx_impact_balle_eau_moyen is SimultaneousActionDeclaration
                 ),
                 TActionCall
                 (
-                    Action = $/VFX_Bank/BANK_Bomb_NewSparks_Omni_Simple
-                    NamedParams = MAP[
-                        ( 'parColor', float3[0.9764706,0.9764706,0.9764706] ),
-                        ( 'parColorMultiplier', 6.400001 ),
-                        ( 'parCount', 25 ),
-                        ( 'parDir', parDirection ),
-                        ( 'parFluidFriction', 2.5 ),
-                        ( 'parGravity', 1500 ),
-                        ( 'parLifetime', 8 ),
-                        ( 'parNarrowness', 4 ),
-                        ( 'parPositionRadius', 310 ),
-                        ( 'parSize', 10 ),
-                        ( 'parSpeedMax', 4000 ),
-                        ( 'parSpeedMin', 1000 ),
-                        ( 'parStretch', 1 ),
-                        ( 'parWindFactor', 1 ),
-                        ( 'parPositionRelative', float3[-8,-15,0] + parPosition ),
-                    ]
-                ),
-                TActionCall
-                (
                     Action = $/VFX_Bank/BANK_Bomb_NewSparks_Simple
                     NamedParams = MAP[
                         ( 'parColor', float3[0.7333333,0.8000001,0.9921569] ),
@@ -383,6 +362,27 @@ export fx_impact_balle_eau_moyen is SimultaneousActionDeclaration
                         ( 'parSpeedMin', 4000 ),
                         ( 'parStretch', 1 ),
                         ( 'parWindFactor', 0 ),
+                    ]
+                ),
+                TActionCall
+                (
+                    Action = $/VFX_Bank/BANK_Bomb_NewSparks_Omni_Simple
+                    NamedParams = MAP[
+                        ( 'parColor', float3[0.9764706,0.9764706,0.9764706] ),
+                        ( 'parColorMultiplier', 6.400001 ),
+                        ( 'parCount', 25 ),
+                        ( 'parDir', parDirection ),
+                        ( 'parFluidFriction', 2.5 ),
+                        ( 'parGravity', 1500 ),
+                        ( 'parLifetime', 8 ),
+                        ( 'parNarrowness', 4 ),
+                        ( 'parPositionRadius', 310 ),
+                        ( 'parSize', 10 ),
+                        ( 'parSpeedMax', 4000 ),
+                        ( 'parSpeedMin', 1000 ),
+                        ( 'parStretch', 1 ),
+                        ( 'parWindFactor', 1 ),
+                        ( 'parPositionRelative', float3[-8,-15,0] + parPosition ),
                     ]
                 ),
                 TSequentialAction

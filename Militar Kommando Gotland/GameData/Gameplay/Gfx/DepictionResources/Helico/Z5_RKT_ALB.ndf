@@ -1,0 +1,19 @@
+export Modele_Z5_RKT_ALB is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/TCH/Helico/Mi_4AV/Mi_4AV_no_pod.fbx"
+)
+
+export Modele_Z5_RKT_ALB_MID is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/TCH/Helico/Mi_4AV_MID/Mi_4AV_no_pod_MID.fbx"
+)
+
+export Modele_Z5_RKT_ALB_LOW is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/TCH/Helico/Mi_4AV_LOW/Mi_4AV_no_pod_LOW.fbx"
+)
+
+export Modele_Z5_RKT_ALB_Tourelle_01 is TResourceMesh
+(
+    Mesh=ModelFile_A_127mm_t1
+)

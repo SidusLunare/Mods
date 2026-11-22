@@ -456,6 +456,8 @@ is BUCKListDescriptor
     ComponentFrame = TUIFramePropertyRTTI
     (
         MagnifiableWidthHeight = [0.0, 20.0]
+        AlignementToAnchor = [0.5, 0.0]
+        AlignementToFather = [0.5, 0.0]
     )
 
     Axis = ~/ListAxis/Horizontal
@@ -463,19 +465,15 @@ is BUCKListDescriptor
 
     Elements =
     [
-        BUCKListElementDescriptor
-        (
-            ExtendWeight = 1.0
-            ComponentDescriptor = BUCKContainerDescriptor(ComponentFrame = TUIFramePropertyRTTI ())
-        ),
         // nom de  la munition
         BUCKListElementDescriptor
         (
-            ComponentDescriptor = BUCKTextDescriptor
+            ComponentDescriptor = BUCKSpecificTextWithHint
             (
                 ElementName = <ElementNameCalibre>
                 ComponentFrame = TUIFramePropertyRTTI
                 (
+                    MagnifiableWidthHeight = [110.0, 0.0]
                     AlignementToAnchor = [0.0, 0.5]
                     AlignementToFather = [0.0, 0.5]
                 )
@@ -484,7 +482,7 @@ is BUCKListDescriptor
 
                 TextStyle = "Default"
 
-                HorizontalFitStyle = ~/FitStyle/FitToContent
+                HorizontalFitStyle = ~/FitStyle/MinBetweenUserDefinedAndContent
                 VerticalFitStyle = ~/FitStyle/FitToContent
 
                 TypefaceToken = "Eurostyle"
@@ -511,7 +509,6 @@ is BUCKListDescriptor
             (
                 ComponentFrame = TUIFramePropertyRTTI
                 (
-
                     AlignementToFather = [0.0, 0.5]
                     AlignementToAnchor = [0.0, 0.5]
                 )
@@ -563,11 +560,6 @@ is BUCKListDescriptor
                     HintBodyToken = 'HIPW_amn'
                 )
             )
-        ),
-        BUCKListElementDescriptor
-        (
-            ExtendWeight = 1.0
-            ComponentDescriptor = BUCKContainerDescriptor(ComponentFrame = TUIFramePropertyRTTI ())
         ),
     ]
 )

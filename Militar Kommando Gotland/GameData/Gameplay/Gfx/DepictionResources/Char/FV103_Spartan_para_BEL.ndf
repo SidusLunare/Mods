@@ -5,12 +5,12 @@ export Modele_FV103_Spartan_para_BEL is TResourceMesh
 
 export Modele_FV103_Spartan_para_BEL_MID is TResourceMesh
 (
-    Mesh="GameData:/Assets/3D/Units/BEL/APC/FV103_Spartan/FV103_Spartan.fbx"
+    Mesh="GameData:/Assets/3D/Units/BEL/APC/FV103_Spartan_MID/FV103_Spartan_MID.fbx"
 )
 
 export Modele_FV103_Spartan_para_BEL_LOW is TResourceMesh
 (
-    Mesh="GameData:/Assets/3D/Units/BEL/APC/FV103_Spartan/FV103_Spartan.fbx"
+    Mesh="GameData:/Assets/3D/Units/BEL/APC/FV103_Spartan_LOW/FV103_Spartan_LOW.fbx"
 )
 
 export Modele_FV103_Spartan_para_BEL_Tourelle_01 is TResourceMesh

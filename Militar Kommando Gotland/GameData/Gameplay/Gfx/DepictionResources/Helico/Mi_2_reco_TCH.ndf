@@ -6,12 +6,12 @@ export Modele_Mi_2_reco_TCH is TResourceMesh
 
 export Modele_Mi_2_reco_TCH_MID is TResourceMesh
 (
-    Mesh="GameData:/Assets/3D/Units/URSS/Helico/Mi_2_reco/Mi_2_reco.fbx"
-    Textures="GameData:/Assets/3D/Units/TCH/Helico/Mi_2_Reco"
+    Mesh="GameData:/Assets/3D/Units/URSS/Helico/Mi_2_reco_MID/Mi_2_reco_MID.fbx"
+    Textures="GameData:/Assets/3D/Units/TCH/Helico/Mi_2_Reco_MID"
 )
 
 export Modele_Mi_2_reco_TCH_LOW is TResourceMesh
 (
-    Mesh="GameData:/Assets/3D/Units/URSS/Helico/Mi_2_reco/Mi_2_reco.fbx"
-    Textures="GameData:/Assets/3D/Units/TCH/Helico/Mi_2_Reco"
+    Mesh="GameData:/Assets/3D/Units/URSS/Helico/Mi_2_reco_LOW/Mi_2_reco_LOW.fbx"
+    Textures="GameData:/Assets/3D/Units/TCH/Helico/Mi_2_Reco_LOW"
 )

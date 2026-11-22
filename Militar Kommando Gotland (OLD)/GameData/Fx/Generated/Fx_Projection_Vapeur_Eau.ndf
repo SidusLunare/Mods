@@ -1,0 +1,53 @@
+// Ne pas éditer, ce fichier est généré
+
+export Fx_Projection_Vapeur_Eau is Simultaneous
+(
+    Actions = ActionList is
+    [
+        TSimultaneousAction
+        (
+            Mobile = TMobileWithLocalRepereMatrixFactory
+            (
+                Position = float3[0,0,-246]
+                EulerAngles = float3[1.570522,0,0]
+            )
+            Actions =
+            [
+                TActionCall
+                (
+                    Action = $/VFX_Bank/AoA_FX_BANK_FireAndDarkSmoke_Simple
+                    NamedParams = MAP[
+                        ( 'Feu_Size_Mul', 0 ),
+                        ( 'FireCountMul', 1 ),
+                        ( 'FireDuration', 0 ),
+                        ( 'Ground_Size', 0.25 ),
+                        ( 'SmokeCountMul', 2 ),
+                        ( 'SmokeDuration', 4 ),
+                        ( 'SmokeOpacity', 0.5 ),
+                        ( 'SmokeSpeed', 0.2 ),
+                        ( 'Smoke_Size_Mul', 0.5 ),
+                        ( 'SparksCountMul', 0 ),
+                        ( 'SparksDuration', 0 ),
+                    ]
+                ),
+            ]
+        ),
+        TSimultaneousAction
+        (
+            Mobile = nil
+            Actions =
+            [
+                TActionCall
+                (
+                    Action = $/VFX_Bank/BANK_Light_Follow_Mobile_Random_Flash_Infinite_Simple
+                    NamedParams = MAP[
+                        ( 'parColor', float3[0.01176471,0.01176471,0.01176471] ),
+                        ( 'parHeight', 500 ),
+                        ( 'parOpacity', 0 ),
+                        ( 'parSizeLBU', 0.004651163 ),
+                    ]
+                ),
+            ]
+        ),
+    ]
+)

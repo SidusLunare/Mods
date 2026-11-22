@@ -15,6 +15,27 @@ export fx_destruction_unite_MBT_3 is SimultaneousActionDeclaration
     [
         TSimultaneousAction
         (
+            Mobile = TMobileWithLocalRepereMatrixFactory
+            (
+                Position = float3[49,0,0] + parPosition
+            )
+            Actions =
+            [
+                TActionCall
+                (
+                    Action = $/VFX_Bank/BANK_Bomb_Distort_Simple
+                    NamedParams = MAP[
+                        ( 'parDuration', 0.3 ),
+                        ( 'parFinalSize', 50000 ),
+                        ( 'parInitialSize', 0 ),
+                        ( 'parIntensity', 3000 ),
+                        ( 'parPositionRelative', float3[49,0,0] ),
+                    ]
+                ),
+            ]
+        ),
+        TSimultaneousAction
+        (
             Mobile = nil
             Actions =
             [
@@ -139,6 +160,44 @@ export fx_destruction_unite_MBT_3 is SimultaneousActionDeclaration
                 TSequentialAction
                 (Actions =
                     [
+                        TWaitInSec( Duration = 1 ),
+                        TActionCall
+                        (
+                            Action = $/VFX_Bank/BANK_FireBalls_Simple
+                            NamedParams = MAP[
+                                ( 'parColor', float3[1,0.9019608,0.5019608] ),
+                                ( 'parCount', 4 ),
+                                ( 'parDeltaPositionAdditif', parPosition ),
+                                ( 'parDeltaPositionMobileDirection', 0 ),
+                                ( 'parDispersion', 500 ),
+                                ( 'parDuration', 1 ),
+                                ( 'parInitialDelay', parInitialShotDelay ),
+                                ( 'parLuminosite', 3 ),
+                                ( 'parOpacity', 1 ),
+                                ( 'parSize', 1000 ),
+                            ]
+                        ),
+                    ]
+                ),
+                TActionCall
+                (
+                    Action = $/VFX_Bank/BANK_FireBalls_Simple
+                    NamedParams = MAP[
+                        ( 'parColor', float3[1,0.9019608,0.5019608] ),
+                        ( 'parCount', 4 ),
+                        ( 'parDeltaPositionAdditif', parPosition ),
+                        ( 'parDeltaPositionMobileDirection', 0 ),
+                        ( 'parDispersion', 500 ),
+                        ( 'parDuration', 0.4 ),
+                        ( 'parInitialDelay', parInitialShotDelay ),
+                        ( 'parLuminosite', 3 ),
+                        ( 'parOpacity', 1 ),
+                        ( 'parSize', 4000 ),
+                    ]
+                ),
+                TSequentialAction
+                (Actions =
+                    [
                         TWaitInSec( Duration = 0.25 ),
                         TActionCall
                         (
@@ -212,44 +271,6 @@ export fx_destruction_unite_MBT_3 is SimultaneousActionDeclaration
                         ( 'parSize', 2500 ),
                         ( 'parSpeed', 0 ),
                         ( 'parStartPosition', parPosition ),
-                    ]
-                ),
-                TSequentialAction
-                (Actions =
-                    [
-                        TWaitInSec( Duration = 1 ),
-                        TActionCall
-                        (
-                            Action = $/VFX_Bank/BANK_FireBalls_Simple
-                            NamedParams = MAP[
-                                ( 'parColor', float3[1,0.9019608,0.5019608] ),
-                                ( 'parCount', 4 ),
-                                ( 'parDeltaPositionAdditif', parPosition ),
-                                ( 'parDeltaPositionMobileDirection', 0 ),
-                                ( 'parDispersion', 500 ),
-                                ( 'parDuration', 1 ),
-                                ( 'parInitialDelay', parInitialShotDelay ),
-                                ( 'parLuminosite', 3 ),
-                                ( 'parOpacity', 1 ),
-                                ( 'parSize', 1000 ),
-                            ]
-                        ),
-                    ]
-                ),
-                TActionCall
-                (
-                    Action = $/VFX_Bank/BANK_FireBalls_Simple
-                    NamedParams = MAP[
-                        ( 'parColor', float3[1,0.9019608,0.5019608] ),
-                        ( 'parCount', 4 ),
-                        ( 'parDeltaPositionAdditif', parPosition ),
-                        ( 'parDeltaPositionMobileDirection', 0 ),
-                        ( 'parDispersion', 500 ),
-                        ( 'parDuration', 0.4 ),
-                        ( 'parInitialDelay', parInitialShotDelay ),
-                        ( 'parLuminosite', 3 ),
-                        ( 'parOpacity', 1 ),
-                        ( 'parSize', 4000 ),
                     ]
                 ),
                 TActionCall
@@ -570,27 +591,6 @@ export fx_destruction_unite_MBT_3 is SimultaneousActionDeclaration
         (
             Mobile = TMobileWithLocalRepereMatrixFactory
             (
-                Position = float3[49,0,0] + parPosition
-            )
-            Actions =
-            [
-                TActionCall
-                (
-                    Action = $/VFX_Bank/BANK_Bomb_Distort_Simple
-                    NamedParams = MAP[
-                        ( 'parDuration', 0.3 ),
-                        ( 'parFinalSize', 50000 ),
-                        ( 'parInitialSize', 0 ),
-                        ( 'parIntensity', 3000 ),
-                        ( 'parPositionRelative', float3[49,0,0] ),
-                    ]
-                ),
-            ]
-        ),
-        TSimultaneousAction
-        (
-            Mobile = TMobileWithLocalRepereMatrixFactory
-            (
                 Position = parPosition
             )
             Actions =
@@ -817,6 +817,18 @@ export fx_destruction_unite_MBT_3 is SimultaneousActionDeclaration
             [
                 TActionCall
                 (
+                    Action = $/VFX_Bank/BANK_Dynamic_Flash_Simple
+                    NamedParams = MAP[
+                        ( 'parColorEnd', float3[0.003921569,0.003921569,0] ),
+                        ( 'parColorStart', float3[0.6,0.2980392,0.09803922] ),
+                        ( 'parDuration', 2 ),
+                        ( 'parOpacity', 0.2 ),
+                        ( 'parSizeLBU', 46.51163 ),
+                        ( 'Position', float3[-1184,97,0] + parPosition ),
+                    ]
+                ),
+                TActionCall
+                (
                     Action = $/VFX_Bank/BANK_Dynamic_Flash_Only_Two_Simple
                     NamedParams = MAP[
                         ( 'parColorEnd', float3[0.003921569,0.003921569,0] ),
@@ -826,18 +838,6 @@ export fx_destruction_unite_MBT_3 is SimultaneousActionDeclaration
                         ( 'parOpacity', 0.2 ),
                         ( 'parSize', 15000 ),
                         ( 'parSpeed', float3[0,0,0] ),
-                        ( 'Position', float3[-1184,97,0] + parPosition ),
-                    ]
-                ),
-                TActionCall
-                (
-                    Action = $/VFX_Bank/BANK_Dynamic_Flash_Simple
-                    NamedParams = MAP[
-                        ( 'parColorEnd', float3[0.003921569,0.003921569,0] ),
-                        ( 'parColorStart', float3[0.6,0.2980392,0.09803922] ),
-                        ( 'parDuration', 2 ),
-                        ( 'parOpacity', 0.2 ),
-                        ( 'parSizeLBU', 46.51163 ),
                         ( 'Position', float3[-1184,97,0] + parPosition ),
                     ]
                 ),
@@ -970,6 +970,41 @@ export fx_destruction_unite_MBT_3 is SimultaneousActionDeclaration
         (
             Mobile = TMobileWithLocalRepereMatrixFactory
             (
+                Position = float3[0,0,100] + parPosition
+            )
+            Actions =
+            [
+                TActionCall
+                (
+                    Action = $/VFX_Bank/BANK_Rubble2_Simple
+                    NamedParams = MAP[
+                        ( 'parCountDebrits', 20 ),
+                        ( 'parCountDebritsWithFire', 8 ),
+                        ( 'parCountDebritsWithSmoke', 33 ),
+                        ( 'parDebritSizeMul', 1.049999 ),
+                        ( 'parDispersion', 200 ),
+                        ( 'parFireParticleEndSize', 0 ),
+                        ( 'parFireParticleStartSize', 200 ),
+                        ( 'parLifetime', 6 ),
+                        ( 'parMeshType', 0 ),
+                        ( 'parMinSpeedRatio', 0.1500003 ),
+                        ( 'parParticleOpacity', 0.7 ),
+                        ( 'parSmokeColor', float3[0.1921569,0.1921569,0.1921569] ),
+                        ( 'parSmokeColorMultiplier', 1 ),
+                        ( 'parSmokeDensity', 100 ),
+                        ( 'parSmokeParticleEndSize', 1000 ),
+                        ( 'parSmokeParticleStartSize', 150 ),
+                        ( 'parSpeed', float3[5000,6000,10000] ),
+                        ( 'parSpeedDispersion', 0.4000029 ),
+                    ]
+                ),
+                TWaitInSec( Duration = 6),
+            ]
+        ),
+        TSimultaneousAction
+        (
+            Mobile = TMobileWithLocalRepereMatrixFactory
+            (
                 Position = float3[17,6,0] + parPosition
             )
             Actions =
@@ -1036,41 +1071,6 @@ export fx_destruction_unite_MBT_3 is SimultaneousActionDeclaration
                     ]
                 ),
                 TWaitInSec( Duration = 30),
-            ]
-        ),
-        TSimultaneousAction
-        (
-            Mobile = TMobileWithLocalRepereMatrixFactory
-            (
-                Position = float3[0,0,100] + parPosition
-            )
-            Actions =
-            [
-                TActionCall
-                (
-                    Action = $/VFX_Bank/BANK_Rubble2_Simple
-                    NamedParams = MAP[
-                        ( 'parCountDebrits', 20 ),
-                        ( 'parCountDebritsWithFire', 8 ),
-                        ( 'parCountDebritsWithSmoke', 33 ),
-                        ( 'parDebritSizeMul', 1.049999 ),
-                        ( 'parDispersion', 200 ),
-                        ( 'parFireParticleEndSize', 0 ),
-                        ( 'parFireParticleStartSize', 200 ),
-                        ( 'parLifetime', 6 ),
-                        ( 'parMeshType', 0 ),
-                        ( 'parMinSpeedRatio', 0.1500003 ),
-                        ( 'parParticleOpacity', 0.7 ),
-                        ( 'parSmokeColor', float3[0.1921569,0.1921569,0.1921569] ),
-                        ( 'parSmokeColorMultiplier', 1 ),
-                        ( 'parSmokeDensity', 100 ),
-                        ( 'parSmokeParticleEndSize', 1000 ),
-                        ( 'parSmokeParticleStartSize', 150 ),
-                        ( 'parSpeed', float3[5000,6000,10000] ),
-                        ( 'parSpeedDispersion', 0.4000029 ),
-                    ]
-                ),
-                TWaitInSec( Duration = 6),
             ]
         ),
     ]

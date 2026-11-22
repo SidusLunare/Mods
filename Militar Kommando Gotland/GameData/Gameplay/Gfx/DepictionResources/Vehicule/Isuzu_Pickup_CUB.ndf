@@ -1,0 +1,14 @@
+export Modele_Isuzu_Pickup_CUB is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/CUBA/Vehicule/Isuzu_Pickup/Isuzu_Pickup.fbx"
+)
+
+export Modele_Isuzu_Pickup_CUB_MID is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/CUBA/Vehicule/Isuzu_Pickup_MID/Isuzu_Pickup_MID.fbx"
+)
+
+export Modele_Isuzu_Pickup_CUB_LOW is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/CUBA/Vehicule/Isuzu_Pickup_LOW/Isuzu_Pickup_LOW.fbx"
+)

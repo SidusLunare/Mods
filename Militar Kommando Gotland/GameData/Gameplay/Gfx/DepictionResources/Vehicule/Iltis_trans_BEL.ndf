@@ -5,10 +5,10 @@ export Modele_Iltis_trans_BEL is TResourceMesh
 
 export Modele_Iltis_trans_BEL_MID is TResourceMesh
 (
-    Mesh="GameData:/Assets/3D/Units/BEL/Vehicule/Iltis/Iltis_trans.fbx"
+    Mesh="GameData:/Assets/3D/Units/BEL/Vehicule/Iltis_MID/Iltis_trans_MID.fbx"
 )
 
 export Modele_Iltis_trans_BEL_LOW is TResourceMesh
 (
-    Mesh="GameData:/Assets/3D/Units/BEL/Vehicule/Iltis/Iltis_trans.fbx"
+    Mesh="GameData:/Assets/3D/Units/BEL/Vehicule/Iltis_LOW/Iltis_trans_LOW.fbx"
 )

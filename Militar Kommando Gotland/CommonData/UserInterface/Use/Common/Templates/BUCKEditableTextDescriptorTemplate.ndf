@@ -61,8 +61,8 @@ template BUCKEditableTextDescriptor
     PlaceHolderTextMagnifiableOffset : float2 = [15.0, 0.0],
     Flags : int = 0,                                                                                                  // Les Flags permettant de paramétrer le copy/paste etc...
                                                                                                                       //   (Renseigner un EditableTextFlag défini dans UICommonEnum.ndf)
-    DontMaskEventOnValidate : bool = false,                                                                           // True = ne masquera pas l'évenement "Enter".
-    SelectTextOnFocus : bool = false,                                                                                 // True = sélectionne tout le texte quand on gagne le focus
+    DontMaskEventOnValidate : bool = false,                                                                           // true = ne masquera pas l'évenement "Enter".
+    SelectTextOnFocus : bool = false,                                                                                 // true = sélectionne tout le texte quand on gagne le focus
     // -- BUCKEditableTextDescriptor
 ]
 is TBUCKEditableTextDescriptor

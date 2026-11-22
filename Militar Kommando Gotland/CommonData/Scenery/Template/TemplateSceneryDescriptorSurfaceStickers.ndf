@@ -1,0 +1,248 @@
+//------------------------------------------------------------------------------
+//******************************************************************************
+//------------------------------------------------------------------------------
+template template_SurfaceSticker
+[
+    RegistrationName : string,
+    Tags : LIST<string> = [],
+    ColorCode : color = RGBA[0, 0, 0, 0],
+
+    // Principal map
+    DiffuseShade                    : float3 = float3[0.5, 0.5, 0.5],
+    TextureDiffuse                  : string,
+    TextureNormalMap                : string = 'VirtualData:/NormalZ',
+    TextureORSMap                   : string = 'VirtualData:/ToutBlanc',
+    TextureAlpha                    : string = 'VirtualData:/ToutBlanc',
+    TextureTileInMeters             : float,
+    TextureAlphaTileInMeters        : float = 1,
+    MaterialID                      : int,
+
+    // Displacement est mis dans le canal alpha de TextureNormalmap
+    DisplacementAmplitudeInMeters   : float = 0,
+    DisplacementMapZero             : float = 0.5,
+    TextureDisplacementTileInMeters : float = 1,
+
+    // Texture overlay diffuse
+    TextureOverlayDiffuse           : string = 'VirtualData:/ToutGris128',
+    TextureOverlayTileInMeters      : float = 1,
+    TextureOverlayInfluence         : float = 1,
+
+    UseDiversityMap                 : bool = true,
+
+    UseWorldPosAsUV                 : bool = false,
+
+    FadingLengthInMeters            : float = 0.0,
+
+    RenderLayerIndex                : int
+] is TSceneryDescriptorSurfaceSticker
+(
+    TextureTiling               is 1.0 div <TextureTileInMeters>
+    TextureAlphaTiling          is 1.0 div <TextureAlphaTileInMeters>
+    DisplacementTiling          is 1.0 div <TextureDisplacementTileInMeters>
+    OverlayTiling               is 1.0 div <TextureOverlayTileInMeters>
+    UseDisplacement             is (<DisplacementAmplitudeInMeters> != 0)
+
+    SymbolDatabaseProxy = $/M3D/Scene/LevelBuildSymbolDatabaseProxy
+    RegistrationName = <RegistrationName>
+    Tags = <Tags>
+    ColorCode = <ColorCode>
+    Mode = SDMode_Sticker // visu dans l'editeur + baking.
+
+    FadingLengthInLBU = <FadingLengthInMeters>
+    UseWorldPosAsUV = <UseWorldPosAsUV>
+
+    UVTilingInLBU = 1
+
+    SceneryMeshBucketHandlerDico = SceneryMeshBucketHandlerDicoForSurfaceSticker
+    (
+        MaterialType = UseDisplacement ? 'StickerDisplacementPBR' : 'StickerPBR'
+        MaterialTag = <UseDiversityMap> ? 'UseDiversityMap' : ''
+        RenderLayerIndex = <RenderLayerIndex>
+    )
+
+    MeshMaterial = TMeshMaterial
+    (
+        MaterialNameOnlyForReporting = <RegistrationName>
+
+        ParameterDico =
+        MAP[
+            ('DiffuseShade', <DiffuseShade>),
+            ('TextureTiling', TextureTiling),
+            ('TextureAlphaTiling', float2[TextureAlphaTiling, TextureAlphaTiling]),
+            ('MaterialID', <MaterialID>),
+            ('TextureOverlayTiling', float2[OverlayTiling, OverlayTiling]),
+            ('TextureOverlayInfluence', <TextureOverlayInfluence>),
+        ]
+        + (UseDisplacement ? MAP[
+            ('DisplacementAmplitudeLBU',<DisplacementAmplitudeInMeters>),
+            ('DisplacementMapZero',<DisplacementMapZero>),
+            ('TextureExtraNormalTiling', DisplacementTiling),
+            ('TextureDisplacementTiling', DisplacementTiling),
+        ] : MAP[])
+
+        TextureDico = MAP[
+            ('Diffuse', <TextureDiffuse>),
+            ('NormalMap', <TextureNormalMap>),
+            ('ORSMap', <TextureORSMap>),
+            ('SeparateAlpha', <TextureAlpha>),
+            ('OverlayDiffuse', <TextureOverlayDiffuse>),
+        ]
+        + (UseDisplacement ? MAP[
+            ('DisplacementMap', <TextureNormalMap>),
+        ] : MAP[])
+    )
+
+    TypeVertex = $/M3D/System/VertexType/TVertex__Position_3f__TexCoord0_2f__TangentIn01_4ubn
+)
+//------------------------------------------------------------------------------
+//******************************************************************************
+//------------------------------------------------------------------------------
+template template_SurfaceSticker_WithDetail
+[
+    RegistrationName : string,
+    Tags : LIST<string> = [],
+    ColorCode : color = RGBA[0, 0, 0, 0],
+
+    // Principal map
+    DiffuseShade                    : float3 = float3[0.5, 0.5, 0.5],
+    TextureDiffuse                  : string,
+    TextureNormalMap                : string = 'VirtualData:/NormalZ',
+    TextureORSMap                   : string = 'VirtualData:/ToutBlanc',
+    TextureAlpha                    : string = 'VirtualData:/ToutBlanc',
+    TextureTileInMeters             : float,
+    TextureAlphaTileInMeters        : float = 1,
+    MaterialID                      : int,
+
+    // Detail map
+    DetailDiffuseShade              : float3 = float3[0.5, 0.5, 0.5],
+    TextureDetailDiffuse            : string,
+    TextureDetailNormalMap          : string = 'VirtualData:/NormalZ',
+    TextureDetailORSMap             : string = 'VirtualData:/ToutBlanc',
+    TextureDetailTileInMeters       : float,
+    DetailMaterialID                : int,
+
+    TextureDetailSelector           : string,
+    TextureDetailSelectorTileInMeters : float,
+
+    // Displacement est mis dans le canal alpha de TextureExtraNormalmap
+    TextureExtraNormalmap           : string = '',
+    DisplacementAmplitudeInMeters   : float = 0,
+    DisplacementMapZero             : float = 0.5,
+    TextureExtraNormalDispTileInMeters : float = 1,
+
+    // Texture overlay diffuse
+    TextureOverlayDiffuse           : string = 'VirtualData:/ToutGris128',
+    TextureOverlayTileInMeters      : float = 1,
+    TextureOverlayInfluence         : float = 1,
+
+    UseDiversityMap                 : bool = true,
+
+    UseWorldPosAsUV                 : bool = false,
+
+    FadingLengthInMeters            : float = 0.0,
+
+    RenderLayerIndex                : int
+] is TSceneryDescriptorSurfaceSticker
+(
+    HasExtraNormalMap           is (<TextureExtraNormalmap> != '')
+    UseDisplacement             is (<DisplacementAmplitudeInMeters> != 0)
+    HasDisplacementMap          is (UseDisplacement & HasExtraNormalMap)
+
+    HasNormalOrDisplacementMap  is (HasExtraNormalMap | HasDisplacementMap)
+
+    TextureTiling               is 1.0 div <TextureTileInMeters>
+    TextureAlphaTiling          is 1.0 div <TextureAlphaTileInMeters>
+    DetailTiling                is 1.0 div <TextureDetailTileInMeters>
+    DetailSelectorTiling        is 1.0 div <TextureDetailSelectorTileInMeters>
+    ExtraNormalTiling           is 1.0 div <TextureExtraNormalDispTileInMeters>
+    OverlayTiling               is 1.0 div <TextureOverlayTileInMeters>
+
+    SymbolDatabaseProxy = $/M3D/Scene/LevelBuildSymbolDatabaseProxy
+    RegistrationName = <RegistrationName>
+    Tags = <Tags>
+    ColorCode = <ColorCode>
+    Mode = SDMode_Sticker // visu dans l'editeur + baking.
+
+    FadingLengthInLBU = <FadingLengthInMeters>
+    UseWorldPosAsUV = <UseWorldPosAsUV>
+
+    UVTilingInLBU = 1
+
+    SceneryMeshBucketHandlerDico = SceneryMeshBucketHandlerDicoForSurfaceSticker
+    (
+        MaterialType = HasDisplacementMap ? 'StickerDisplacementPBR' : 'StickerPBR'
+        MaterialTag = <UseDiversityMap> ? 'UseDiversityMap' : ''
+        RenderLayerIndex = <RenderLayerIndex>
+    )
+
+    MeshMaterial = TMeshMaterial
+    (
+        MaterialNameOnlyForReporting = <RegistrationName>
+
+        ParameterDico =
+        MAP[
+            ('DiffuseShade', <DiffuseShade>),
+            ('TextureTiling', TextureTiling),
+            ('TextureAlphaTiling', float2[TextureAlphaTiling, TextureAlphaTiling]),
+            ('DetailDiffuseShade', <DetailDiffuseShade>),
+            ('TextureDetailTiling', DetailTiling),
+            ('MaterialID', <MaterialID>),
+            ('DetailMaterialID', <DetailMaterialID>),
+            ('TextureDetailSelectorTiling', float2[DetailSelectorTiling, DetailSelectorTiling]),
+            ('TextureOverlayTiling', float2[OverlayTiling, OverlayTiling]),
+            ('TextureOverlayInfluence', <TextureOverlayInfluence>),
+        ]
+        + (HasNormalOrDisplacementMap ? MAP[
+            ('DisplacementAmplitudeLBU', <DisplacementAmplitudeInMeters>),
+            ('DisplacementMapZero', <DisplacementMapZero>),
+            ('TextureExtraNormalTiling', ExtraNormalTiling),
+            ('TextureDisplacementTiling', ExtraNormalTiling),
+        ] : MAP[])
+
+        TextureDico = MAP[
+            ('Diffuse', <TextureDiffuse>),
+            ('NormalMap', <TextureNormalMap>),
+            ('ORSMap', <TextureORSMap>),
+            ('DetailDiffuse', <TextureDetailDiffuse>),
+            ('DetailNormalMap', <TextureDetailNormalMap>),
+            ('DetailORSMap', <TextureDetailORSMap>),
+            ('SeparateAlpha', <TextureAlpha>),
+            ('OverlayDiffuse', <TextureOverlayDiffuse>),
+            ('DetailSelector', <TextureDetailSelector>),
+        ]
+        + (HasExtraNormalMap ? MAP[
+            ('ExtraNormalMap', <TextureExtraNormalmap>),
+        ] : MAP[])
+        + (HasDisplacementMap ? MAP[
+            ('DisplacementMap', <TextureExtraNormalmap>),
+        ] : MAP[])
+    )
+    TypeVertex = $/M3D/System/VertexType/TVertex__Position_3f__TexCoord0_2f__TangentIn01_4ubn
+)
+//------------------------------------------------------------------------------
+//******************************************************************************
+//------------------------------------------------------------------------------
+template SceneryMeshBucketHandlerDicoForSurfaceSticker
+[
+    MaterialType,
+    MaterialTag,
+    RenderLayerIndex
+] is TSceneryMeshBucketHandlerDico
+(
+    MaterialType = <MaterialType>
+    MaterialTag = <MaterialTag>
+    RenderLayerSelector = TRenderLayerSelector
+    (
+        RenderLayerName = 'Calque_Sticker'
+        RenderLayerArrayIndex = <RenderLayerIndex>
+    )
+
+    BaseBucketVertexCount = 1500
+    BaseBucketIndexCount  = 3000
+    MaxBucketVertexCount = 60000
+    MaxBucketIndexCount  = 120000
+    UseMeshBucketMemoryThreshold = 0
+    CastShadow = false
+    ContentType = ContentType_Sticker
+    SupportSubCase = false
+)

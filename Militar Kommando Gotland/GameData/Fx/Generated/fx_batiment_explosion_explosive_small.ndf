@@ -14,6 +14,72 @@ export fx_batiment_explosion_explosive_small is SimultaneousActionDeclaration
     [
         TSimultaneousAction
         (
+            Mobile = TMobileWithLocalRepereMatrixFactory
+            (
+                Position = parPosition
+            )
+            Actions =
+            [
+                TActionCall
+                (
+                    Action = $/VFX_Bank/BANK_Bomb_Distort_Simple
+                    NamedParams = MAP[
+                        ( 'parDuration', 0.4 ),
+                        ( 'parFinalSize', 12000 ),
+                        ( 'parInitialSize', 200 ),
+                        ( 'parIntensity', 500 ),
+                        ( 'parPositionRelative', float3[0,0,0] ),
+                    ]
+                ),
+                TActionCall
+                (
+                    Action = $/VFX_Bank/ShakeCamera
+                    NamedParams = MAP[
+                        ( 'parDuration', 0.5 ),
+                        ( 'parFrequency', 6 ),
+                        ( 'parPeriod', 0.05 ),
+                        ( 'parPower', 0.9 ),
+                        ( 'parRadius', 45000 ),
+                    ]
+                ),
+                TActionCall
+                (
+                    Action = $/VFX_Bank/BANK_Bomb_ShockWave
+                    NamedParams = MAP[
+                        ( 'parCount', 1 ),
+                        ( 'parDuration', 0.4 ),
+                        ( 'parFinalSize', 12000 ),
+                        ( 'parInitialSize', 200 ),
+                        ( 'parZBias', 0 ),
+                    ]
+                ),
+                TActionCall
+                (
+                    Action = $/VFX_Bank/BANK_WasteGroundDust_Simple
+                    NamedParams = MAP[
+                        ( 'parAlphaStartDecayValue', 0.01 ),
+                        ( 'parCount', 75 ),
+                        ( 'parEndColor', float3[0.5019608,0.5019608,0.5019608] ),
+                        ( 'parEndSize', 2000 ),
+                        ( 'parFluidFriction', 1.7 ),
+                        ( 'parInitialDelay', parInitialShotDelay ),
+                        ( 'parLifetime', 5 ),
+                        ( 'parOpacity', 0.85 ),
+                        ( 'parRandomInitPosRadius', 0 ),
+                        ( 'parRotationFactor', 1 ),
+                        ( 'parScaleSizeFactor', 2 ),
+                        ( 'parStartColor', float3[0.5019608,0.5019608,0.5019608] ),
+                        ( 'parStartHeight', 0 ),
+                        ( 'parStartRotation', 0.25 ),
+                        ( 'parStartSize', 1000 ),
+                        ( 'parStartSpeed3D', float3[6000,6000,2000] ),
+                        ( 'parWindWeight', 1 ),
+                    ]
+                ),
+            ]
+        ),
+        TSimultaneousAction
+        (
             Mobile = nil
             Actions =
             [
@@ -91,72 +157,6 @@ export fx_batiment_explosion_explosive_small is SimultaneousActionDeclaration
                     ]
                 ),
                 TWaitInSec( Duration = 0.6),
-            ]
-        ),
-        TSimultaneousAction
-        (
-            Mobile = TMobileWithLocalRepereMatrixFactory
-            (
-                Position = parPosition
-            )
-            Actions =
-            [
-                TActionCall
-                (
-                    Action = $/VFX_Bank/BANK_Bomb_Distort_Simple
-                    NamedParams = MAP[
-                        ( 'parDuration', 0.4 ),
-                        ( 'parFinalSize', 12000 ),
-                        ( 'parInitialSize', 200 ),
-                        ( 'parIntensity', 500 ),
-                        ( 'parPositionRelative', float3[0,0,0] ),
-                    ]
-                ),
-                TActionCall
-                (
-                    Action = $/VFX_Bank/ShakeCamera
-                    NamedParams = MAP[
-                        ( 'parDuration', 0.5 ),
-                        ( 'parFrequency', 6 ),
-                        ( 'parPeriod', 0.05 ),
-                        ( 'parPower', 0.9 ),
-                        ( 'parRadius', 45000 ),
-                    ]
-                ),
-                TActionCall
-                (
-                    Action = $/VFX_Bank/BANK_Bomb_ShockWave
-                    NamedParams = MAP[
-                        ( 'parCount', 1 ),
-                        ( 'parDuration', 0.4 ),
-                        ( 'parFinalSize', 12000 ),
-                        ( 'parInitialSize', 200 ),
-                        ( 'parZBias', 0 ),
-                    ]
-                ),
-                TActionCall
-                (
-                    Action = $/VFX_Bank/BANK_WasteGroundDust_Simple
-                    NamedParams = MAP[
-                        ( 'parAlphaStartDecayValue', 0.01 ),
-                        ( 'parCount', 75 ),
-                        ( 'parEndColor', float3[0.5019608,0.5019608,0.5019608] ),
-                        ( 'parEndSize', 2000 ),
-                        ( 'parFluidFriction', 1.7 ),
-                        ( 'parInitialDelay', parInitialShotDelay ),
-                        ( 'parLifetime', 5 ),
-                        ( 'parOpacity', 0.85 ),
-                        ( 'parRandomInitPosRadius', 0 ),
-                        ( 'parRotationFactor', 1 ),
-                        ( 'parScaleSizeFactor', 2 ),
-                        ( 'parStartColor', float3[0.5019608,0.5019608,0.5019608] ),
-                        ( 'parStartHeight', 0 ),
-                        ( 'parStartRotation', 0.25 ),
-                        ( 'parStartSize', 1000 ),
-                        ( 'parStartSpeed3D', float3[6000,6000,2000] ),
-                        ( 'parWindWeight', 1 ),
-                    ]
-                ),
             ]
         ),
         TSimultaneousAction

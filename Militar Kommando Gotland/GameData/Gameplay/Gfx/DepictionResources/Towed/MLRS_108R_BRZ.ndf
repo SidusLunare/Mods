@@ -1,0 +1,3 @@
+export Modele_MLRS_108R_BRZ is TResourceMesh( Mesh="GameData:/Assets/3D/Units/BRZ/Canon/MLRS_108R/MLRS_108R.fbx")
+export Modele_MLRS_108R_BRZ_MID is TResourceMesh( Mesh="GameData:/Assets/3D/Units/BRZ/Canon/MLRS_108R_MID/MLRS_108R_MID.fbx")
+export Modele_MLRS_108R_BRZ_LOW is TResourceMesh( Mesh="GameData:/Assets/3D/Units/BRZ/Canon/MLRS_108R_LOW/MLRS_108R_LOW.fbx")

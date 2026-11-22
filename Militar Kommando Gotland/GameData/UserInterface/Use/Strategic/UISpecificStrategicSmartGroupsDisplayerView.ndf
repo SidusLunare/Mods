@@ -57,7 +57,10 @@ template SmartGroupRackContainerStrategic
                     InterItemMargin = TRTTILength(Magnifiable = 5.0)
                     LastMargin = TRTTILength(Magnifiable = 5.0)
 
-                    BladeDescriptor = ~/SmartGroupContainer
+                    BladeDescriptor = SmartGroupContainer
+                    (
+                        IsSmartGroupNameEditable = false
+                    )
                 ),
             ]
         ),

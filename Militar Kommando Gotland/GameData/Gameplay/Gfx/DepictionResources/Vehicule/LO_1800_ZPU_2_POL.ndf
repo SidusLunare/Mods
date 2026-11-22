@@ -1,14 +1,17 @@
 export Modele_LO_1800_ZPU_2_POL is TResourceMesh
 (
-    Mesh="GameData:/Assets/3D/Units/URSS/DCA/GAZ_66B_ZU/GAZ_66B_ZU.fbx"
+    Mesh="GameData:/Assets/3D/Units/DDR/DCA/LO_1800_ZPU2/LO_1800_ZPU2.fbx"
+    Textures="GameData:/Assets/3D/Units/POL/DCA/LO_1800_ZPU2"
 )
 
 export Modele_LO_1800_ZPU_2_POL_MID is TResourceMesh
 (
-    Mesh="GameData:/Assets/3D/Units/URSS/DCA/GAZ_66B_ZU/GAZ_66B_ZU.fbx"
+    Mesh="GameData:/Assets/3D/Units/DDR/DCA/LO_1800_ZPU2_MID/LO_1800_ZPU2_MID.fbx"
+    Textures="GameData:/Assets/3D/Units/POL/DCA/LO_1800_ZPU2_MID"
 )
 
 export Modele_LO_1800_ZPU_2_POL_LOW is TResourceMesh
 (
-    Mesh="GameData:/Assets/3D/Units/URSS/DCA/GAZ_66B_ZU/GAZ_66B_ZU.fbx"
+    Mesh="GameData:/Assets/3D/Units/DDR/DCA/LO_1800_ZPU2_LOW/LO_1800_ZPU2_LOW.fbx"
+    Textures="GameData:/Assets/3D/Units/POL/DCA/LO_1800_ZPU2_LOW"
 )

@@ -1,0 +1,3 @@
+export Modele_M325_CMD_VEN     is TResourceMesh( Mesh="GameData:/Assets/3D/Units/VEN/Vehicule/M325_CMD/M325_CMD.fbx" )
+export Modele_M325_CMD_VEN_MID is TResourceMesh( Mesh="GameData:/Assets/3D/Units/VEN/Vehicule/M325_CMD_MID/M325_CMD_MID.fbx" )
+export Modele_M325_CMD_VEN_LOW is TResourceMesh( Mesh="GameData:/Assets/3D/Units/VEN/Vehicule/M325_CMD_LOW/M325_CMD_LOW.fbx" )

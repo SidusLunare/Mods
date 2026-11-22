@@ -6,8 +6,8 @@ export ProjectileMover is Template_ActionWithParameters
     [
         private AbsoluteEndPosition is Template_Param_Float3(),
         private InitialSpeed        is Template_Param_Float3(),
-        private FluidFriction       is Template_Param_Float (),
         private DurationInSec       is Template_Param_Float (),
+        private BombTrajectory      is Template_Param_Bool (),
         private UsePhysicSolver     is Template_Param_Bool (),
         private UseTirTendu         is Template_Param_Bool (),
     ]
@@ -15,8 +15,8 @@ export ProjectileMover is Template_ActionWithParameters
     (
         AbsoluteEndPosition = AbsoluteEndPosition
         InitialSpeed = InitialSpeed
-        FluidFriction = FluidFriction
         DurationInSec = DurationInSec
+        BombTrajectory = BombTrajectory
         UsePhysicSolver = UsePhysicSolver
         UseTirTendu = UseTirTendu
     )

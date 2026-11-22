@@ -1,0 +1,14 @@
+export Modele_Mi_8TV_non_arme_CUB is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/CUBA/Helico/Mi_8_supply/Mi_8_supply.fbx"
+)
+
+export Modele_Mi_8TV_non_arme_CUB_MID is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/CUBA/Helico/Mi_8_supply_MID/Mi_8_supply_MID.fbx"
+)
+
+export Modele_Mi_8TV_non_arme_CUB_LOW is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/CUBA/Helico/Mi_8_supply_LOW/Mi_8_supply_LOW.fbx"
+)

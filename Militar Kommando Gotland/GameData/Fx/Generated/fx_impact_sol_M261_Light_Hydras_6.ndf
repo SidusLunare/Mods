@@ -397,6 +397,45 @@ export fx_impact_sol_M261_Light_Hydras_6 is SimultaneousActionDeclaration
         (
             Mobile = TMobileWithLocalRepereMatrixFactory
             (
+                Position = float3[76,35,0] + parPosition
+            )
+            Actions =
+            [
+                TSequentialAction
+                (Actions =
+                    [
+                        TWaitInSec( Duration = 1.25 ),
+                        TActionCall
+                        (
+                            Action = $/VFX_Bank/BANK_WasteGroundDust_Simple
+                            NamedParams = MAP[
+                                ( 'parAlphaStartDecayValue', 0.01 ),
+                                ( 'parCount', 5 ),
+                                ( 'parEndColor', float3[0,0,0] ),
+                                ( 'parEndSize', 10000 ),
+                                ( 'parFluidFriction', 1 ),
+                                ( 'parInitialDelay', parInitialShotDelay ),
+                                ( 'parLifetime', 8 ),
+                                ( 'parOpacity', 0.4 ),
+                                ( 'parRandomInitPosRadius', 150 ),
+                                ( 'parRotationFactor', 1.2 ),
+                                ( 'parScaleSizeFactor', 1 ),
+                                ( 'parStartColor', float3[0.5686275,0.4156863,0.2862745] ),
+                                ( 'parStartHeight', 0 ),
+                                ( 'parStartRotation', 0.25 ),
+                                ( 'parStartSize', 300 ),
+                                ( 'parStartSpeed3D', float3[1500,2500,0] ),
+                                ( 'parWindWeight', 8 ),
+                            ]
+                        ),
+                    ]
+                ),
+            ]
+        ),
+        TSimultaneousAction
+        (
+            Mobile = TMobileWithLocalRepereMatrixFactory
+            (
                 Position = float3[-280,7,0]
             )
             Actions =
@@ -570,45 +609,6 @@ export fx_impact_sol_M261_Light_Hydras_6 is SimultaneousActionDeclaration
                                 ( 'parStartRotation', 0.25 ),
                                 ( 'parStartSize', 100 ),
                                 ( 'parStartSpeed', 50 ),
-                                ( 'parWindWeight', 8 ),
-                            ]
-                        ),
-                    ]
-                ),
-            ]
-        ),
-        TSimultaneousAction
-        (
-            Mobile = TMobileWithLocalRepereMatrixFactory
-            (
-                Position = float3[76,35,0] + parPosition
-            )
-            Actions =
-            [
-                TSequentialAction
-                (Actions =
-                    [
-                        TWaitInSec( Duration = 1.25 ),
-                        TActionCall
-                        (
-                            Action = $/VFX_Bank/BANK_WasteGroundDust_Simple
-                            NamedParams = MAP[
-                                ( 'parAlphaStartDecayValue', 0.01 ),
-                                ( 'parCount', 5 ),
-                                ( 'parEndColor', float3[0,0,0] ),
-                                ( 'parEndSize', 10000 ),
-                                ( 'parFluidFriction', 1 ),
-                                ( 'parInitialDelay', parInitialShotDelay ),
-                                ( 'parLifetime', 8 ),
-                                ( 'parOpacity', 0.4 ),
-                                ( 'parRandomInitPosRadius', 150 ),
-                                ( 'parRotationFactor', 1.2 ),
-                                ( 'parScaleSizeFactor', 1 ),
-                                ( 'parStartColor', float3[0.5686275,0.4156863,0.2862745] ),
-                                ( 'parStartHeight', 0 ),
-                                ( 'parStartRotation', 0.25 ),
-                                ( 'parStartSize', 300 ),
-                                ( 'parStartSpeed3D', float3[1500,2500,0] ),
                                 ( 'parWindWeight', 8 ),
                             ]
                         ),

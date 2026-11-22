@@ -3,11 +3,11 @@ template TrailSpawner
     DistanceBetweenSpawn                : TEvaluable = TConstantFloat(Value = 500.0),
     Spawner                             : TParticleSpawner[required] = nil,
     Condition                           : TEvaluable = nil,
-    Disabled                            : boolean = false,
-    ForceSlicing                        : boolean = false,
+    Disabled                            : bool = false,
+    ForceSlicing                        : bool = false,
     PreviousEvolverSpawnPositionField   : TParticleSubPart = nil,
     SpawnStartedField                   : TParticleSubPart = nil,
-    UseGameEngineUnits                  : boolean = false,
+    UseGameEngineUnits                  : bool = false,
 ] is TParticleEvolver_TrailSpawner
 (
     DistanceBetweenSpawn = <DistanceBetweenSpawn>

@@ -27,6 +27,19 @@ is TemplateDepictionPose
     Animation = $/GFX/DepictionResources/DriverLSV
 )
 
+template TemplateDepictionDriverBiker
+[
+    MeshDescriptorHigh,
+    MeshDescriptorLow,
+]
+is TemplateDepictionPose
+(
+    MeshDescriptorHigh = <MeshDescriptorHigh>
+    MeshDescriptorLow = <MeshDescriptorLow>
+    Selector = CommonPilotDepictionSelector
+    Animation = $/GFX/DepictionResources/DriverBiker
+)
+
 template TemplateDepictionPose
 [
     MeshDescriptorHigh,
@@ -77,6 +90,9 @@ is TSubDepiction ( Anchors = ['driver'] Depiction = TemplateDepictionDriver(Mesh
 
 template SubDepiction_DriverLSV [ MeshDescriptorHigh, MeshDescriptorLow ]
 is TSubDepiction ( Anchors = ['driver'] Depiction = TemplateDepictionDriverLSV(MeshDescriptorHigh = <MeshDescriptorHigh> MeshDescriptorLow = <MeshDescriptorLow>) )
+
+template SubDepiction_DriverBiker [ MeshDescriptorHigh, MeshDescriptorLow ]
+is TSubDepiction ( Anchors = ['biker'] Depiction = TemplateDepictionDriverBiker(MeshDescriptorHigh = <MeshDescriptorHigh> MeshDescriptorLow = <MeshDescriptorLow>) )
 
 template SubDepiction_DriverUndeployed [ MeshDescriptorHigh, MeshDescriptorLow ]
 is TSubDepiction
@@ -171,12 +187,45 @@ template SubDepiction_ATGMServantRight [ MeshDescriptorHigh, MeshDescriptorLow ]
     Selector = HumanAlwaysVisibleSelector
     AnimationOperator = DepictionOperator_AnimationServant_ATGM_Right
 )
+// ATGM en deux populations : le porteur (ancre racine) remplace le tireur (ancre sous la tourelle) dès que l'unité n'est plus déployée.
+template SubDepiction_ATGMPorteurLeft [ MeshDescriptorHigh, MeshDescriptorLow ] is SubDepiction_ServantTemplate
+(
+    Anchor = 'porteur_g'
+    MeshDescriptorHigh = <MeshDescriptorHigh>
+    MeshDescriptorLow  = <MeshDescriptorLow>
+    Selector = HumanVisibleWhenDeadOrUndeployedSelector
+    AnimationOperator = DepictionOperator_AnimationServant_ATGM_Porteur_Left
+)
+template SubDepiction_ATGMPorteurRight [ MeshDescriptorHigh, MeshDescriptorLow ] is SubDepiction_ServantTemplate
+(
+    Anchor = 'porteur_d'
+    MeshDescriptorHigh = <MeshDescriptorHigh>
+    MeshDescriptorLow  = <MeshDescriptorLow>
+    Selector = HumanVisibleWhenDeadOrUndeployedSelector
+    AnimationOperator = DepictionOperator_AnimationServant_ATGM_Porteur_Right
+)
+template SubDepiction_ATGMTireurLeft [ MeshDescriptorHigh, MeshDescriptorLow ] is SubDepiction_ServantTemplate
+(
+    Anchor = 'tireur_g'
+    MeshDescriptorHigh = <MeshDescriptorHigh>
+    MeshDescriptorLow  = <MeshDescriptorLow>
+    Selector = HumanVisibleWhenDeployedSelector
+    AnimationOperator = DepictionOperator_AnimationServant_ATGM_Tireur_Left
+)
+template SubDepiction_ATGMTireurRight [ MeshDescriptorHigh, MeshDescriptorLow ] is SubDepiction_ServantTemplate
+(
+    Anchor = 'tireur_d'
+    MeshDescriptorHigh = <MeshDescriptorHigh>
+    MeshDescriptorLow  = <MeshDescriptorLow>
+    Selector = HumanVisibleWhenDeployedSelector
+    AnimationOperator = DepictionOperator_AnimationServant_ATGM_Tireur_Right
+)
 template SubDepiction_ServantWalkOnlyLeft [ MeshDescriptorHigh, MeshDescriptorLow ] is SubDepiction_ServantTemplate
 (
     Anchor = 'servant_g'
     MeshDescriptorHigh = <MeshDescriptorHigh>
     MeshDescriptorLow  = <MeshDescriptorLow>
-    Selector = HumanVisibleWhenUndeployedSelector
+    Selector = HumanVisibleWhenDeadOrUndeployedSelector
     AnimationOperator = DepictionOperator_AnimationServant_Cannon_Left
 )
 template SubDepiction_ServantWalkOnlyRight [ MeshDescriptorHigh, MeshDescriptorLow ] is SubDepiction_ServantTemplate
@@ -184,7 +233,7 @@ template SubDepiction_ServantWalkOnlyRight [ MeshDescriptorHigh, MeshDescriptorL
     Anchor = 'servant_d'
     MeshDescriptorHigh = <MeshDescriptorHigh>
     MeshDescriptorLow  = <MeshDescriptorLow>
-    Selector = HumanVisibleWhenUndeployedSelector
+    Selector = HumanVisibleWhenDeadOrUndeployedSelector
     AnimationOperator = DepictionOperator_AnimationServant_Cannon_Right
 )
 
@@ -336,6 +385,20 @@ template ShowroomSubDepiction_ATGMServantLeft [ MeshDescriptor ] is ShowroomSubD
 template ShowroomSubDepiction_ATGMServantRight [ MeshDescriptor ] is ShowroomSubDepiction_Template
 (
     Anchor = 'servant_d'
+    MeshDescriptor = <MeshDescriptor>
+    Animation = $/GFX/DepictionResources/ServantATGMRightIdle
+)
+
+template ShowroomSubDepiction_ATGMTireurLeft [ MeshDescriptor ] is ShowroomSubDepiction_Template
+(
+    Anchor = 'tireur_g'
+    MeshDescriptor = <MeshDescriptor>
+    Animation = $/GFX/DepictionResources/ServantATGMLeftIdle
+)
+
+template ShowroomSubDepiction_ATGMTireurRight [ MeshDescriptor ] is ShowroomSubDepiction_Template
+(
+    Anchor = 'tireur_d'
     MeshDescriptor = <MeshDescriptor>
     Animation = $/GFX/DepictionResources/ServantATGMRightIdle
 )

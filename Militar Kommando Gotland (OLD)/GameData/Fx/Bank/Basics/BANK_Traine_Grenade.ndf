@@ -1,0 +1,152 @@
+export BANK_Traine_Grenade_Simple is Template_ActionWithParameters
+(
+    Params =
+    [
+        private parDisableSFX           is Template_Param_Bool  ( DefaultValue = false ),
+        private parMeshId               is Template_Param_Int   ( DefaultValue = 1 ),
+        private parSFXId                is Template_Param_Int   ( DefaultValue = 1 ),
+        private DurationInSec           is Template_Param_Float ( DefaultValue = 1 ),
+        private parPowerPinnable        is Template_Param_Float ( DefaultValue = 1 ),
+    ]
+    Action = TActionDescriptor_Select
+    (
+        Index = parMeshId + 1
+        Actions = Grenade_Model_List.Value
+    )
+
+)
+
+template Template_CallGrenade
+[
+    Mesh,
+] is Template_ActionCall
+(
+    Action = Template_TraineGrenade(Mesh = Template_MeshResourcesForFxEditor(Value = <Mesh>))
+    NamedParameters = MAP
+    [
+        ( 'parDisableSFX'               , BANK_Traine_Grenade_Simple/parDisableSFX ),
+        ( 'parMeshId'                   , BANK_Traine_Grenade_Simple/parMeshId ),
+        ( 'parSFXId'                    , BANK_Traine_Grenade_Simple/parSFXId ),
+        ( 'parFlyDuration'              , BANK_Traine_Grenade_Simple/DurationInSec ),
+        ( 'parPower'                    , BANK_Traine_Grenade_Simple/parPowerPinnable ),
+    ]
+)
+
+
+export Grenade_Model_List is TEugBListPBaseClass
+(
+    Value =
+    [
+        public AN_M16_smoke_grenade     is Template_CallGrenade(Mesh = 'GameData:/Assets/3D/Units/Ammo/Grenades/AN_M16_smoke_grenade.fbx'),
+        public German_bundle_grenade    is Template_CallGrenade(Mesh = 'GameData:/Assets/3D/Units/Ammo/Grenades/German_bundle_grenade.fbx'),
+        public Panzerknacker            is Template_CallGrenade(Mesh = 'GameData:/Assets/3D/Units/Ammo/Grenades/Panzerknacker.fbx'),
+        public Pineapple_grenade        is Template_CallGrenade(Mesh = 'GameData:/Assets/3D/Units/Ammo/Grenades/Pineapple_grenade.fbx'),
+        public Satchem                  is Template_CallGrenade(Mesh = 'GameData:/Assets/3D/Units/Ammo/Grenades/Satchem.fbx'),
+        public Stielhandgranate         is Template_CallGrenade(Mesh = 'GameData:/Assets/3D/Units/Ammo/Grenades/Stielhandgranate.fbx'),
+        public KB44                     is Template_CallGrenade(Mesh = 'GameData:/Assets/3D/FX/Mesh_Particles/KB44_particle/KB44_particle.fbx'),
+    ]
+)
+
+template Template_TraineGrenade
+[
+    Mesh,
+] is SimultaneousActionDeclaration
+(
+    Params =
+    [
+        private parDisableSFX      is Template_Param_Bool  ( DefaultValue = false ),
+        private parMeshId          is Template_Param_Int   ( DefaultValue = 1 ),
+        private parSFXId           is Template_Param_Int   ( DefaultValue = 1 ),
+        private parFlyDuration     is Template_Param_Float ( DefaultValue = 1 ),
+        private parPower           is Template_Param_Float ( DefaultValue = 1 ),
+    ]
+    MaxDuration = 30
+    LocalVariables =
+    [
+        public FlyingTime is Template_Pinnable
+        (
+            InitialValue = parFlyDuration
+            ExpectedType = 'float'
+        ),
+    ]
+    Actions =
+    [
+        Competition
+        (
+            Mobile = Template_MobileSoundSlotFactory()
+            Disabled = parDisableSFX
+            Actions =
+            [
+                Template_Select
+                (
+                    Actions = [
+                        Petit is Template_SFX_Propulsion_x3
+                        (
+                            SoundFile1 = 'GameData:/Assets/Sounds/SFX/Traine/Traine_Bombe_Petit_01.wav'
+                            SoundFile2 = 'GameData:/Assets/Sounds/SFX/Traine/Traine_Bombe_Petit_02.wav'
+                            SoundFile3 = 'GameData:/Assets/Sounds/SFX/Traine/Traine_Bombe_Petit_03.wav'
+                        ),
+                         Gros is Template_SFX_Propulsion_x3
+                        (
+                            SoundFile1 = 'GameData:/Assets/Sounds/SFX/Traine/Traine_Bombe_Gros_01.wav'
+                            SoundFile2 = 'GameData:/Assets/Sounds/SFX/Traine/Traine_Bombe_Gros_02.wav'
+                            SoundFile3 = 'GameData:/Assets/Sounds/SFX/Traine/Traine_Bombe_Gros_03.wav'
+                        ),
+                    ]
+                    Index = parSFXId
+                ),
+                WaitInSec
+                (
+                    Duration = FlyingTime
+                )
+            ]
+        )
+    ]
+    +
+    [
+        private Projectile_Mesh is ParticleBombSpawner
+        (
+            ParticleMaxDurationForSpawnSkip = FlyingTime * 1.1
+            Count = 1
+            Spawner = ParticleSpawner
+            (
+                ParticleLifetime = FlyingTime
+                Initialisers =
+                [
+                    Initialiser_SetMobileWrapper(),
+                    ParticleInitialiserList
+                    (
+                        CustomFloat_2 = parPower
+                        ScaleForMesh = 2
+                        DynamicMesh = <Mesh>
+                        Direction = normalized[ParticleMobileWrapperAxeX]
+                    )
+                ]
+                ParticleDescriptor = ParticleDescriptor
+                (
+                    RenderInfo = ShadowedParticleMeshRenderInfo
+                    Evolvers = ParticleStandardEvolverList
+                    (
+                        Position = ParticleMobileWrapperPositionUnScaled
+                        Direction = normalized[ParticleMobileWrapperAxeX]
+                        RotationAxisForMesh = float3[0.00, 1.00, 0.00]
+                        Alpha = 1
+                    )
+                    ParticleRenderer = Template_ParticleRendererDynamicMesh
+                    (
+                        AuthorizedMeshes = [<Mesh>]
+                    )
+                )
+            )
+        )
+    ]
+)
+
+export Grenade_Sfx_List is TEugBListPBaseClass
+(
+    Value =
+    [
+        public Petit is TConstant( Value = '' ),
+        public Gros is  TConstant( Value = '' ),
+    ]
+)

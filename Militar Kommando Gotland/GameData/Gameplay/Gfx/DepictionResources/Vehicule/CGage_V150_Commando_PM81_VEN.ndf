@@ -1,0 +1,19 @@
+export Modele_CGage_V150_Commando_PM81_VEN is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/VEN/Vehicule/CGage_V150_Commando_PM81/CGage_V150_Commando_PM81.fbx"
+)
+
+export Modele_CGage_V150_Commando_PM81_VEN_MID is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/VEN/Vehicule/CGage_V150_Commando_PM81_MID/CGage_V150_Commando_PM81_MID.fbx"
+)
+
+export Modele_CGage_V150_Commando_PM81_VEN_LOW is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/VEN/Vehicule/CGage_V150_Commando_PM81_LOW/CGage_V150_Commando_PM81_LOW.fbx"
+)
+
+export Modele_CGage_V150_Commando_PM81_VEN_Tourelle_02 is TResourceMesh
+(
+    Mesh=ModelFile_M60_cosmetic
+)

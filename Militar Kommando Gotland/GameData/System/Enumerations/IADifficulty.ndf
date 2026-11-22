@@ -1,8 +1,7 @@
-// A maintenir synchro avec EnumerationsNdf/IADifficulty.ndf
-// A maintenir synchro avec Data/Python/Eugen/leveldesign_specific/enum_ia_difficulty.py
-// Penser aussi à corriger {GAME}/Code/Eugen/CPP/DedicatedServerCommonSpecific/SpecificDedicatedUserVariablesDeclaration.h si nécessaire
+// Sync with EnumerationsNdf/IADifficulty.ndf
+// and {GAME}/Code/Eugen/CPP/DedicatedServerCommonSpecific/SpecificDedicatedUserVariablesDeclaration.h
 
-IADifficulty is TBaseClass
+EIADifficulty is TBaseClass
 (
     AnyDifficulty is 0
     HumanDifficulty is 0

@@ -20,15 +20,6 @@ OffMapUnitTexture is BUCKContainerDescriptor
             TextureFrame   = TUIFramePropertyRTTI( RelativeWidthHeight = [1,1] )
             TextureColorToken = "Fulda2_Orange100"
         ),
-
-        BUCKSpecificHintableArea
-        (
-            ElementName = 'UnitTextureHint'
-            DicoToken = ~/LocalisationConstantes/dico_units
-            HintTitleToken = "UNKNOWN"
-            HintBodyToken = "UNKNOWN"
-            HintExtendedToken = "UNKNOWN"
-        ),
     ]
 )
 

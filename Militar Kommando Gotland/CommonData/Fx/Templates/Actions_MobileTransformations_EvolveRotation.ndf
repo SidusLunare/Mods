@@ -3,12 +3,12 @@ template Template_RotateMobile
     Orientation                 : TEvaluable = nil,
     UpVector                    : TEvaluable = nil,
     EulerAngles                 : TEvaluable = nil,
-    Absolute                    : boolean = false,
+    Absolute                    : bool = false,
     StartDelay                  : TEvaluable = nil,
     Duration                    : TEvaluable = TConstantFloat(Value = 1.0),
     Period                      : TEvaluable = nil,
-    Forever                     : boolean = false,
-    Slice                       : boolean = false,
+    Forever                     : bool = false,
+    Slice                       : bool = false,
     WaitAtLeastBetweenFrame     : TEvaluable = nil,
 ] is TActionDescriptorRotateMobile
 (

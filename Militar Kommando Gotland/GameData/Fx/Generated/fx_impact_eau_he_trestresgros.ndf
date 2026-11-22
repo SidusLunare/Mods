@@ -16,6 +16,49 @@ export fx_impact_eau_he_trestresgros is SimultaneousActionDeclaration
         (
             Mobile = TMobileWithLocalRepereMatrixFactory
             (
+                Position = parPosition
+                EulerAngles = float3[3.141593,0,0]
+            )
+            Actions =
+            [
+                TActionCall
+                (
+                    Action = $/VFX_Bank/BANK_Bomb_Distort_Simple
+                    NamedParams = MAP[
+                        ( 'parDuration', 0.7000002 ),
+                        ( 'parFinalSize', 6300 ),
+                        ( 'parInitialSize', 10000 ),
+                        ( 'parIntensity', 5000 ),
+                        ( 'parPositionRelative', float3[0,0,0] ),
+                    ]
+                ),
+                TActionCall
+                (
+                    Action = $/VFX_Bank/Conic_Ground_Projection_Simple
+                    NamedParams = MAP[
+                        ( 'parColor', float3[0.4588236,0.4039216,0.3568628] ),
+                        ( 'parCount', 8 ),
+                        ( 'parDuration', 1.5 ),
+                        ( 'parSize', 900 ),
+                    ]
+                ),
+                TActionCall
+                (
+                    Action = $/VFX_Bank/BANK_Bomb_ShockWave
+                    NamedParams = MAP[
+                        ( 'parCount', 1 ),
+                        ( 'parDuration', 0.5 ),
+                        ( 'parFinalSize', 19400 ),
+                        ( 'parInitialSize', 2200 ),
+                        ( 'parZBias', 1000 ),
+                    ]
+                ),
+            ]
+        ),
+        TSimultaneousAction
+        (
+            Mobile = TMobileWithLocalRepereMatrixFactory
+            (
                 EulerAngles = float3[3.141593,0,0]
             )
             Actions =
@@ -75,49 +118,6 @@ export fx_impact_eau_he_trestresgros is SimultaneousActionDeclaration
                                 ( 'parTopGrowFactor', 6 ),
                             ]
                         ),
-                    ]
-                ),
-            ]
-        ),
-        TSimultaneousAction
-        (
-            Mobile = TMobileWithLocalRepereMatrixFactory
-            (
-                Position = parPosition
-                EulerAngles = float3[3.141593,0,0]
-            )
-            Actions =
-            [
-                TActionCall
-                (
-                    Action = $/VFX_Bank/BANK_Bomb_Distort_Simple
-                    NamedParams = MAP[
-                        ( 'parDuration', 0.7000002 ),
-                        ( 'parFinalSize', 6300 ),
-                        ( 'parInitialSize', 10000 ),
-                        ( 'parIntensity', 5000 ),
-                        ( 'parPositionRelative', float3[0,0,0] ),
-                    ]
-                ),
-                TActionCall
-                (
-                    Action = $/VFX_Bank/Conic_Ground_Projection_Simple
-                    NamedParams = MAP[
-                        ( 'parColor', float3[0.4588236,0.4039216,0.3568628] ),
-                        ( 'parCount', 8 ),
-                        ( 'parDuration', 1.5 ),
-                        ( 'parSize', 900 ),
-                    ]
-                ),
-                TActionCall
-                (
-                    Action = $/VFX_Bank/BANK_Bomb_ShockWave
-                    NamedParams = MAP[
-                        ( 'parCount', 1 ),
-                        ( 'parDuration', 0.5 ),
-                        ( 'parFinalSize', 19400 ),
-                        ( 'parInitialSize', 2200 ),
-                        ( 'parZBias', 1000 ),
                     ]
                 ),
             ]
@@ -287,27 +287,6 @@ export fx_impact_eau_he_trestresgros is SimultaneousActionDeclaration
             [
                 TActionCall
                 (
-                    Action = $/VFX_Bank/BANK_Bomb_NewSparks_Omni_Simple
-                    NamedParams = MAP[
-                        ( 'parColor', float3[1,0.2509804,0] ),
-                        ( 'parColorMultiplier', 6.400001 ),
-                        ( 'parCount', 20 ),
-                        ( 'parDir', parDirection ),
-                        ( 'parFluidFriction', 0 ),
-                        ( 'parGravity', -1000 ),
-                        ( 'parLifetime', 1.45 ),
-                        ( 'parNarrowness', 0 ),
-                        ( 'parPositionRadius', 680 ),
-                        ( 'parPositionRelative', parPosition ),
-                        ( 'parSize', 11 ),
-                        ( 'parSpeedMax', 2800 ),
-                        ( 'parSpeedMin', 300 ),
-                        ( 'parStretch', 0.5 ),
-                        ( 'parWindFactor', 0 ),
-                    ]
-                ),
-                TActionCall
-                (
                     Action = $/VFX_Bank/BANK_Bomb_NewSparks_Simple
                     NamedParams = MAP[
                         ( 'parColor', float3[0.8745099,0.4470589,0.2509804] ),
@@ -325,6 +304,27 @@ export fx_impact_eau_he_trestresgros is SimultaneousActionDeclaration
                         ( 'parSpeedMin', 8000 ),
                         ( 'parStretch', 2 ),
                         ( 'parWindFactor', 1 ),
+                    ]
+                ),
+                TActionCall
+                (
+                    Action = $/VFX_Bank/BANK_Bomb_NewSparks_Omni_Simple
+                    NamedParams = MAP[
+                        ( 'parColor', float3[1,0.2509804,0] ),
+                        ( 'parColorMultiplier', 6.400001 ),
+                        ( 'parCount', 20 ),
+                        ( 'parDir', parDirection ),
+                        ( 'parFluidFriction', 0 ),
+                        ( 'parGravity', -1000 ),
+                        ( 'parLifetime', 1.45 ),
+                        ( 'parNarrowness', 0 ),
+                        ( 'parPositionRadius', 680 ),
+                        ( 'parPositionRelative', parPosition ),
+                        ( 'parSize', 11 ),
+                        ( 'parSpeedMax', 2800 ),
+                        ( 'parSpeedMin', 300 ),
+                        ( 'parStretch', 0.5 ),
+                        ( 'parWindFactor', 0 ),
                     ]
                 ),
             ]

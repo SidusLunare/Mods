@@ -1,0 +1,8 @@
+template ParticleRendererMeshTrail
+[
+    ScalingMode                 : integer [Enum = True, Values = ['Scale Size and Position', 'Scale Size Only']] = 0,
+] is TParticleRendererTrail_NewSystem
+(
+    ScalingMode = <ScalingMode>
+)
+

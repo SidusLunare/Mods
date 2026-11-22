@@ -4,8 +4,8 @@ export fx_tir_lance_flammes_4 is SimultaneousActionDeclaration
 (
     Params =
     [
+        private parBombTrajectory is TActionAlias( ExpectedType = 'bool' DefaultValue = false ),
         private parDestination is TActionAlias( ExpectedType = 'float3' DefaultValue = float3[12214,0,0] ),
-        private parFluidFriction is TActionAlias( ExpectedType = 'float' DefaultValue = 0.9 ),
         private parFlyDuration is TActionAlias( ExpectedType = 'float' DefaultValue = 1 ),
         private parImpactOnGround is TActionAlias( ExpectedType = 'bool' DefaultValue = false ),
         private parInitialShotDelay is TActionAlias( ExpectedType = 'float' DefaultValue = 0 ),
@@ -32,8 +32,8 @@ export fx_tir_lance_flammes_4 is SimultaneousActionDeclaration
                     Action = $/VFX_Bank/ProjectileMover
                     NamedParams = MAP[
                         ( 'AbsoluteEndPosition', parDestination ),
+                        ( 'BombTrajectory', parBombTrajectory ),
                         ( 'DurationInSec', parFlyDuration ),
-                        ( 'FluidFriction', parFluidFriction ),
                         ( 'InitialSpeed', parInitialSpeed ),
                         ( 'UsePhysicSolver', parTirPhysic ),
                         ( 'UseTirTendu', parTirTendu ),
@@ -212,8 +212,8 @@ export fx_tir_lance_flammes_4 is SimultaneousActionDeclaration
                         (
                             Action = $/VFX_Bank/Dummy_Traine
                             NamedParams = MAP[
+                                ( 'parDummyBombTrajectory', parBombTrajectory ),
                                 ( 'parDummyDestination', parDestination ),
-                                ( 'parDummyFluidFriction', parFluidFriction ),
                                 ( 'parDummyFlyDuration', parFlyDuration ),
                                 ( 'parDummyImpactOnGround', parImpactOnGround ),
                                 ( 'parDummyInitialSpeed', parInitialSpeed ),

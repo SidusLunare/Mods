@@ -1,0 +1,227 @@
+private BANK_Bomb_Smoke_MGS_homogeneous_test is Simultaneous
+(
+    Actions =
+    [
+        private Optim is Simultaneous
+        (
+            Actions =
+            [
+                private TEST_BANK_Bomb_Smoke_MGS_homogeneous is Template_ActionCall
+                (
+                    Action = ~/BANK_Bomb_Smoke_MGS_homogeneous
+                    NamedParameters = MAP[
+                        ( 'BANK_Color', float3[1.00, 0.98, 0.80] ),
+                        ( 'BANK_Lifetime_Mul', 20 ),
+                        ( 'BANK_Count', 10 ),
+                        ( 'BANK_Alpha_Mul', 1.25 ),
+                        ( 'BANK_Colormultiplier_Mul', 0.4 ),
+                        ( 'BANK_Orientation', float3[0.00, 0.00, 0.00] ),
+                        ( 'BANK_Fluid_Friction', 10 ),
+                        ( 'BANK_Speed', 30000 ),
+                        ( 'BANK_AccelerationFiled', 4000 ),
+                        ( 'BANK_StartSize', 500 ),
+                        ( 'BANK_EndSize', 3000 ),
+                        ( 'BANK_BottomGrowFactor', 2 ),
+                        ( 'BANK_TopGrowFactor', 2 ),
+                        ( 'BANK_Rotation_Mul', 3.5 )
+                    ]
+
+                ),
+            ]
+        ),
+    ]
+)
+
+export BANK_Bomb_Smoke_MGS_homogeneous_Simple is ActionCallWithParameters
+(
+    Action = BANK_Bomb_Smoke_MGS_homogeneous
+    Params =
+    [
+        private parColor                    is Template_Param_Float3 (),
+        private parLifetimeMul              is Template_Param_Float (),
+        private parCount                    is Template_Param_Int (),
+        private parAlphaMul                 is Template_Param_Float (),
+        private parColormultiplierMul       is Template_Param_Float (),
+        private parFluidFriction            is Template_Param_Float (),
+        private parSpeed                    is Template_Param_Float (),
+        private parAccelerationField        is Template_Param_Float (),
+        private parStartSize                is Template_Param_Float (),
+        private parEndSize                  is Template_Param_Float (),
+        private parBottomGrowFactor         is Template_Param_Float (),
+        private parTopGrowFactor            is Template_Param_Float (),
+        private parRotationMul              is Template_Param_Float (),
+    ]
+    NamedParameters = MAP
+    [
+        ( 'BANK_Color'                      , LinearColor[parColor] ),
+        ( 'BANK_Lifetime_Mul'               , parLifetimeMul * RandomRange[0.8, 1.25] ),
+        ( 'BANK_Count'                      , parCount ),
+        ( 'BANK_Alpha_Mul'                  , parAlphaMul ),
+        ( 'BANK_Colormultiplier_Mul'        , parColormultiplierMul ),
+        ( 'BANK_Orientation'                , float3[0.0, 0.0, 0.0] ),
+        ( 'BANK_Fluid_Friction'             , parFluidFriction ),
+        ( 'BANK_Speed'                      , parSpeed * RandomRange[0.8, 1.25] ),
+        ( 'BANK_AccelerationFiled'          , parAccelerationField ),
+        ( 'BANK_StartSize'                  , parStartSize * RandomRange[0.8, 1.25] ),
+        ( 'BANK_EndSize'                    , parEndSize * RandomRange[0.8, 1.25] ),
+        ( 'BANK_BottomGrowFactor'           , parBottomGrowFactor ),
+        ( 'BANK_TopGrowFactor'              , parTopGrowFactor ),
+        ( 'BANK_Rotation_Mul'               , parRotationMul ),
+    ]
+)
+
+export BANK_Bomb_Smoke_MGS_homogeneous is SimultaneousActionDeclaration
+(
+    Params =
+    [
+        private BANK_Color is Template_ActionAlias
+        (
+            ExpectedType = 'any'
+            DefaultValue = float3[1.00, 0.98, 0.80]
+        ),
+        private BANK_Lifetime_Mul is Template_ActionAlias
+        (
+            ExpectedType = 'any'
+            DefaultValue = 20
+        ),
+        private BANK_Count is Template_ActionAlias
+        (
+            ExpectedType = 'any'
+            DefaultValue = 10
+        ),
+        private BANK_Alpha_Mul is Template_ActionAlias
+        (
+            ExpectedType = 'any'
+            DefaultValue = 1.25
+        ),
+        private BANK_Colormultiplier_Mul is Template_ActionAlias
+        (
+            ExpectedType = 'any'
+            DefaultValue = 0.4
+        ),
+        private BANK_Orientation is Template_ActionAlias
+        (
+            ExpectedType = 'any'
+            DefaultValue = float3[0.00, 0.00, 0.00]
+        ),
+        private BANK_Fluid_Friction is Template_ActionAlias
+        (
+            ExpectedType = 'any'
+            DefaultValue = 10
+        ),
+        private BANK_Speed is Template_ActionAlias
+        (
+            ExpectedType = 'any'
+            DefaultValue = 30000
+        ),
+        private BANK_AccelerationFiled is Template_ActionAlias
+        (
+            ExpectedType = 'any'
+            DefaultValue = 4000
+        ),
+        private BANK_StartSize is Template_ActionAlias
+        (
+            ExpectedType = 'any'
+            DefaultValue = 500
+        ),
+        private BANK_EndSize is Template_ActionAlias
+        (
+            ExpectedType = 'any'
+            DefaultValue = 3000
+        ),
+        private BANK_BottomGrowFactor is Template_ActionAlias
+        (
+            ExpectedType = 'any'
+            DefaultValue = 2
+        ),
+        private BANK_TopGrowFactor is Template_ActionAlias
+        (
+            ExpectedType = 'any'
+            DefaultValue = 2
+        ),
+        private BANK_Rotation_Mul is Template_ActionAlias
+        (
+            ExpectedType = 'any'
+            DefaultValue = 3.5
+        ),
+    ]
+    Mobile = Template_MobileWithLocalRepereMatrixFactory
+    (
+        EulerAngles = BANK_Orientation
+        MaxScale = 11
+    )
+    Actions =
+    [
+        private bomb_fumees00 is ParticleBombSpawner
+        (
+            Count = BANK_Count
+            Spawner = private Flammes is ParticleSpawner
+            (
+                ParticleLifetime = RandomRange[0.75, 1] * BANK_Lifetime_Mul
+                Initialisers =
+                [
+                    private particules_flammes is ParticleInitialiserList
+                    (
+                        Alpha = 1.0
+                        ColorMultiplier = 1.0
+
+                        Position = GenFloat3[RandomRange[-1, 1] * 0.075, RandomRange[-1, 1] * 0.075, Pow[$/VFX_Bank/HomogeneousUnit, 2]]
+                        Speed = BANK_Speed * $/VFX_Bank/ParticlePosition
+                        Size = 300
+                        Opacity = 1
+                        ColorModifier = BANK_Color
+                        Rotation = RandomRange[0.2, 0.3]
+                        CustomFloat_1 = RandomRange[0.75, 1.25] * lerp[getZ[$/VFX_Bank/ParticlePosition], BANK_StartSize, BANK_EndSize]
+                        CustomFloat_2 = BANK_Fluid_Friction
+                        CustomFloat_3 = BANK_Alpha_Mul
+                        CustomFloat_4 = BANK_Colormultiplier_Mul
+                        CustomFloat_5 = BANK_AccelerationFiled
+                        CustomFloat3_1 = Cross[$/VFX_Bank/ParticlePosition, float3[0.00, 0.00, -1.00]]
+                        CustomFloat3_2 = $/VFX_Bank/ParticlePosition
+                        CustomFloat3_3 = GenFloat3[BANK_BottomGrowFactor, BANK_TopGrowFactor, BANK_Rotation_Mul]
+                    ),
+                    Initialiser_TextureSmallIndex
+                    (
+                        InitFunction = ~/textureTable_Bomb_Smoke_MGS_homogeneous[$/VFX_Bank/RandomUnit]
+                    ),
+                ]
+                ParticleDescriptor = ParticleDescriptor
+                (
+                    RenderInfo = ParticleRenderInfo
+                    (
+                        ZTest = True
+                        SortTriangles = True
+                        Use3DRotation = True
+                        ZWrite = False
+                        Calque = 'Particles'
+                        TextureName = 'GameData:/Assets/2D/Fx/nuage_00.png'
+                        OpaqueParticle = True
+                    )
+                    ParticleRenderer = StandardRenderer
+                    Evolvers = ParticleStandardEvolverListWithPhysic
+                    (
+                        FluidFriction = $/VFX_Bank/ParticleCustomFloat_2
+                        PhysicAccelerationField = $/VFX_Bank/ParticleCustomFloat3_2 * $/VFX_Bank/ParticleCustomFloat_5 * float3[0.10, 0.10, 1.00]
+                        PhysicWindField = $/VFX_Bank/MapWind
+                        Size = $/VFX_Bank/ParticleCustomFloat_1 * lerp[$/VFX_Bank/ParticleLifeRatio, 1, lerp[getZ[$/VFX_Bank/ParticleCustomFloat3_2], getX[$/VFX_Bank/ParticleCustomFloat3_3], getY[$/VFX_Bank/ParticleCustomFloat3_3]]]
+                        Opacity = ( ( 1 - getZ[$/VFX_Bank/ParticleCustomFloat3_2] ) * $/VFX_Bank/ParticleRemainingLifeRatio * $/VFX_Bank/ParticleCustomFloat_3 ) * AttackDecay[$/VFX_Bank/ParticleLifeRatio, 0.01]
+                        ColorMultiplier = Max[$/VFX_Bank/ParticleRemainingLifeRatio, 0.75] * $/VFX_Bank/ParticleCustomFloat_4
+                        ZBias = 0.25 * $/VFX_Bank/ParticleCustomFloat_1
+                        RotationSpeed = getZ[$/VFX_Bank/ParticleCustomFloat3_3] * $/VFX_Bank/ParticleCustomFloat3_1
+                    )
+                )
+            )
+        ),
+    ]
+    MaxDuration = 2
+)
+private textureTable_Bomb_Smoke_MGS_homogeneous is Template_EvaluableTable
+(
+    Values =
+    [
+        TConstantTexture (TextureName = 'GameData:/Assets/2D/Fx/nuage_00.png' ),
+        TConstantTexture (TextureName = 'GameData:/Assets/2D/Fx/nuage_00.png' ),
+        TConstantTexture (TextureName = 'GameData:/Assets/2D/Fx/nuage_00.png' ),
+        TConstantTexture (TextureName = 'GameData:/Assets/2D/Fx/nuage_01.png' ),
+    ]
+)

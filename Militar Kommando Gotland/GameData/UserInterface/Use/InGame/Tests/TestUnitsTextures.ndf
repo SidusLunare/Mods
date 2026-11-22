@@ -1,5 +1,5 @@
 
-Texture_Test_Minimap_Unit is TUIResourceTexture_Common
+Texture_Test_Minimap_Unit is TUIResourceTexture
 (
     FileName = "CommonData:/Assets/2D/Interface/UseInGame/TestUnits/Minimap/unit.png"
 )

@@ -1,0 +1,119 @@
+//BANK_distortion_spray
+
+export BANK_DistortionSpray is SimultaneousActionDeclaration
+(
+    Params =
+    [
+        private parDensity            is Template_Param_Float(DefaultValue = 0.5),
+        private parRadius             is Template_Param_Float(DefaultValue = 1000),
+        private parHeight             is Template_Param_Float(DefaultValue = 10),
+        private parSpreadingTime       is Template_Param_Float(DefaultValue = 10), //*
+    ]
+    Actions =
+    [
+    FireHeatDistortionSpawnerParticle  is ParticleSpraySpawnerWithEvaluable
+        (
+            Frequency = 0.5//WaitBeforeRepeat == 0 ? BANK_Freqency : ((currentRepeat[ActionElapsedTime] - currentRepeat[ActionElapsedTime - Duration]) * BANK_Freqency)
+            SpawnFirstParticleAtStart = true
+            InitialDelayInSec = 0//parInitialDelay //*
+            DurationInSec = 60 //WaitBeforeRepeat == 0 ? Duration : (BANK_RepeatCount == 0 ? 666 : Duration + WaitBeforeRepeat * (BANK_RepeatCount))
+            Spawner = ParticleSpawner
+            (
+                ParticleLifetime = 60
+                Initialisers =
+                [   Initialiser_SetMobileWrapper(),
+                    private Init is ParticleInitialiserList
+                    (
+                        ColorModifier = float3[1, 1, 1]
+                        Size = 100
+                        Alpha = 1
+                        Opacity = 0
+                        ColorRGB = LinearColor[1,1,1]
+                        Rotation = RandomRange[-0.125, 0.125]
+                        ColorMultiplier = 1
+                        CustomFloat_1 = parRadius
+                        CustomFloat_2 = parHeight
+                        CustomFloat_3 = parDensity
+                        CustomFloat_4 = parSpreadingTime
+                    ),
+                ]
+
+                ParticleDescriptor = ParticleDescriptor
+                (
+                    ParticleRenderer = $/VFX_Bank/NullRenderer
+                    RenderInfo = $/VFX_Bank/NullRenderInfo
+                    InfiniteParticles = true
+                    Evolvers = Template_List
+                    (
+                        FireSurface is ( 3.14159265 * sqr[ParticleCustomFloat_1] )
+                        FireDensity is ParticleCustomFloat_3
+                        Evolvers =
+                        [
+                            Template_EvolverPosition( EvolveFunction = ParticleMobileWrapperPosition ),
+                            Template_EvolverDirection( EvolveFunction = ParticleMobileWrapperAxeX ),
+                            Template_EvolverOpacity( EvolveFunction = 0 ),
+
+                            EvolverSpraySpawner
+                            (
+                                Frequency = Min[50, 5 * ParticleCustomFloat_1*ParticleCustomFloat_1 div 9500000]//FireSurface * FireDensity
+                                MaxSpawnedParticleLifetime = 1
+                                Spawner = ParticleSpawner
+                                (
+                                    ParticleLifetime = 1
+                                    ParticleDescriptor = ParticleDescriptor
+                                    (
+                                        RenderInfo = Template_DistortionParticleRenderInfo
+                                        (
+                                            SortTriangles = True
+                                            TextureName = 'GameData:/Assets/2D/Fx/Distortion/distort.png'
+                                        )
+                                        Evolvers = Template_List
+                                        (
+                                            Evolvers =
+                                            [
+                                                Template_EvolverCustomFloat3_2 ( EvolveFunction = ParticleCustomFloat3_2 + ((1 + sin[ParticleLifeRatio*10]) * MapWind * 0.001)),
+                                                Template_EvolverPosition ( EvolveFunction = lerp[ ParticleLifeRatio, ParticleCustomFloat3_1, ParticleCustomFloat3_2]),
+                                                Template_EvolverOpacity ( EvolveFunction =  MapToLinearSmoothRect[ ParticleLifeRatio, 0.1, 0.2, 0.5, 0.95 ] * 0.35),
+                                                Template_EvolverSize ( EvolveFunction = 2000 * (1. - ParticleLifeRatio) )
+                                            ]
+                                        )
+                                        ParticleRenderer = StandardRenderer
+                                    )
+                                    Initialisers =
+                                    [
+                                        Initialiser_Opacity ( InitFunction = 0 ),
+                                        Initialiser_ColorModifier ( InitFunction = LinearColor[1, 1, 1] ),
+                                        Initialiser_ColorMultiplier ( InitFunction = 1 ),
+                                        Initialiser_Rotation ( InitFunction = RandomUnit ),
+                                        Initialiser_CustomFloat3_1 ( InitFunction = float3[1,1,0.8] *SpawningParticlePosition + (SpawningParticleCustomFloat_1 * MinusOneToOneRandomDisc div 1.5) + float3[0,0,1] * RandomRange[1500, 2500] ) ,
+                                        Initialiser_CustomFloat3_2 ( InitFunction = ParticleCustomFloat3_1  ),
+                                        Initialiser_CustomFloat_1 ( InitFunction = SpawningParticleCustomFloat_1 ),
+                                    ]
+                                )
+                            )
+                        ]
+                    )
+                )
+            )
+        ),
+    ]
+)
+
+export BANK_DistortionSpray_simple is ActionCallWithParameters
+(
+    Action = BANK_DistortionSpray
+    Params =
+    [
+        private parDensity            is Template_Param_Float(DefaultValue = 0.5),
+        private parRadius             is Template_Param_Float(DefaultValue = 1000),
+        private parHeight             is Template_Param_Float(DefaultValue = 10),
+        private parSpreadingTime       is Template_Param_Float(DefaultValue = 10), //*
+    ]
+    NamedParameters = MAP
+    [
+        ( 'parDensity'             , parDensity),
+        ( 'parRadius'              , parRadius),
+        ( 'parHeight'              , parHeight),
+        ( 'parSpreadingTime'       , parSpreadingTime ), //*
+    ]
+)
