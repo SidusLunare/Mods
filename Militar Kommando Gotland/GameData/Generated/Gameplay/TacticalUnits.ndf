@@ -951617,7 +951617,240 @@ export Descriptor_Unit_Z326T_reco_CUB is TEntityDescriptor
         ),
     ]
 )
+export Descriptor_Unit_Hjtrak_319V_Trakk_3T_SWE is TEntityDescriptor
+(
+    DescriptorId       = GUID:{69750ccb-1b48-48ae-a266-5040c77fcba6}
+    ClassNameForDebug  = 'Unit_Hjtrak_319V_Trakk_3T_SWE'
+    ModulesDescriptors = [
+        TTypeUnitModuleDescriptor
+        (
+            Coalition                        = TWargameCoalition/NATO
+            MotherCountry                    = 'SWE'
+            AcknowUnitTypes = [
+                ~/TAcknowUnitType_Logistic,
+            ]
+        ),
+        TFormationModuleDescriptor(TypeUnitFormation = 'Supply'),
+        TankFlagsModuleDescriptor,
+        $/GFX/CriticalEffects/CriticalEffectModule_Vehicule_NonArme,
+        ~/TargetCoordinatorModuleDescriptor,
+        ~/UnitPositionModuleDescriptor,
+        ~/PlayerMissionModuleDescriptor,
+        ~/LinkTeamModuleDescriptor,
+        TTagsModuleDescriptor
+        (
+            TagSet = [
+                "AllUnits",
+                "AllowedForMissileRoE",
+                "GroundUnits",
+                "UNITE_Hjtrak_319V_Trakk_3T_SWE",
+                "Unite",
+                "Vehicule",
+                "Vehicule_Logistique",
+            ]
+        ),
+        TExperienceModuleDescriptor
+        (
+            ExperienceLevelsPackDescriptor = ~/ExperienceLevelsPackDescriptor_XP_pack_simple_v3
+            ExperienceMultiplierBonusOnKill = ~/ExperienceMultiplierBonusOnKill
+        ),
+        TVisibilityModuleDescriptor
+        (
+            UnitConcealmentBonus = 1.5
+        ),
+        VehicleApparenceModuleDescriptor
+        (
+            MimeticName = "Gama_Goat_supply_US"
+            BlackHoleKey = "Gama_Goat_supply_US"
+            GameplayBBoxBoneName = "chassis"
+            ReferenceMesh = $/GFX/DepictionResources/Modele_Gama_Goat_supply_US
+        ),
+        TAutoCoverModuleDescriptor
+        (
+            AutoCoverRangeGRU          = 123.0
+            OccupationRadiusGRU        = 35.0
+            TerrainList                = [~/ETerrainType/ForetLegere, ~/ETerrainType/ForetDense, ]
+            UseTerrainsForEscape       = False
+        ),
+        TBaseDamageModuleDescriptor
+        (
+            MaxPhysicalDamages = 4
+            MaxSuppressionDamages = ~/GroundUnit_MaxSuppressionDamages
+            MaxStunDamages = ~/GroundUnit_MaxStunDamages
+            PhysicalDamageLevelsPack = ~/DamageLevelsPackDescriptor_Default_pack_paliers_degats_phy
+            SuppressDamageLevelsPack = ~/DamageLevelsPackDescriptor_GroundUnits_packSupp
+            StunDamageLevelsPack = ~/DamageLevelsPackDescriptor_Unit_packStun
+        ),
+        TDamageModuleDescriptor
+        (
+            SuppressDamagesRegenRatio = ~/GroundUnit_SuppressDamagesRegenRatioList
+            StunDamagesRegen = ~/GroundUnit_StunDamagesRegen
+            BlindageProperties = TBlindageProperties
+            (
+                ResistanceFront = TResistanceTypeRTTI(Family=ResistanceFamily_vehicule Index=1)
+                ResistanceSides = TResistanceTypeRTTI(Family=ResistanceFamily_vehicule Index=1)
+                ResistanceRear = TResistanceTypeRTTI(Family=ResistanceFamily_vehicule Index=1)
+                ResistanceTop = TResistanceTypeRTTI(Family=ResistanceFamily_vehicule Index=1)
+                ExplosiveReactiveArmor = False
+            )
+            KillWhenDamagesReachMax = True
+            HitRollECM = 0.0
+            UseTopArmorAgainstFire = True
+        ),
+        TRoutModuleDescriptor(MoralLevel = 0),
 
+        ~/FacingInfosModuleDescriptor,
+        TGenericMovementModuleDescriptor
+        (
+            MaxSpeedInKmph = 50
+            PathfindType = $/Pathfind/PathfindTypes/Vehicle
+        ),
+        TLandMovementModuleDescriptor
+        (
+            UnitMovingType = EUnitMovingType/Wheel
+            SpeedBonusFactorOnRoad = 2.26
+            MaxAccelerationGRU = 27.0
+            MaxDecelerationGRU = 55.0
+            TempsDemiTour = 4.0
+            EngineCooldownTime = 0
+            TerrainSpeedFactors = $/GFX/Terrains/WheelVehicleTerrainSpeedFactors
+        ),
+        TSupplyModuleDescriptor
+        (
+            SupplyDescriptor   = $/GFX/Weapon/StandardSupply
+            SupplyCapacity     = 500.0
+            SupplyPriority     = -1
+        ),
+        ~/CapturableModuleDescriptor,
+        TScannerConfigurationDescriptor
+        (
+            VisionRangesGRU = MAP [
+                ( EVisionRange/Standard, 3500.0 ),
+                ( EVisionRange/LowAltitude, 4947.0 ),
+                ( EVisionRange/HighAltitude, 5654.0 ),
+            ]
+            OpticalStrengths = MAP [
+                ( EOpticalStrength/Standard, 1590.0 ),
+                ( EOpticalStrength/LowAltitude, 1590.0 ),
+                ( EOpticalStrength/HighAltitude, 353.0 ),
+            ]
+        ),
+        TReverseScannerWithIdentificationDescriptor
+        (
+            IdentifyBaseProbability     = 0.1
+            TimeBetweenEachIdentifyRoll = 15.0
+            VisibilityRuleDescriptor    = $/GFX/VisionRules/StandardWargameVisibilityRollRule
+        ),
+        UnitCadaverGeneratorModuleDescriptor
+        (
+            KillMode = EKillMode/Vehicle
+            CadaverDuration = ~/CadaverDurationApresFeu
+            DeathExplosionAmmo = $/GFX/Weapon/Ammo_Mort_Unite_ravitaillement
+        ),
+        TIAStratModuleDescriptor
+        (
+            DatabaseId = 0
+            GameplayBehavior = EGameplayBehavior/Nothing | EGameplayBehavior/TacticalAttackNearCover
+        ),
+        ~/IAStratZoneIndexModuleDescriptor,
+        ~/UnitStateEngineUnitModuleDescriptor,
+        ~/UnitStateEngineSubUnitModuleDescriptor,
+        ~/SelectionModuleDescriptor,
+        ~/EffectApplierModuleDescriptor,
+        TProductionModuleDescriptor
+        (
+            FactoryType        = Factory/Logistic
+            ProductionTime     = 5
+            ProductionRessourcesNeeded = MAP [
+                ($/GFX/Resources/Resource_CommandPoints, 25),
+            ]
+        ),
+        ~/InfluencePositionModuleDescriptor,
+        ~/InfluenceDataModuleDescriptor,
+        TAttackReactionModuleDescriptor
+        (
+            CanAssist = False
+            AssistRequestBroadcastRadiusGRU = 0.0
+            DistanceToFleeGRU = 353
+            MaxDistanceForOffensiveReactionGRU = 353
+            MaxDistanceForEngagementGRU = 0.0
+            SearchedTagsInEngagementTarget = [
+               "AllUnits",
+            ]
+        ),
+
+        TMinimapDisplayModuleDescriptor
+        (
+            Texture = "Texture_Minimap_Unit_unit"
+            FollowUnitOrientation = False
+        ),
+        TOrderConfigModuleDescriptor
+        (
+            ValidOrders = ~/Descriptor_OrderAvailability_Gama_Goat_supply_US
+        ),
+        TOrderableModuleDescriptor
+        (
+            UnlockableOrders = ~/Descriptor_OrderAvailability_Gama_Goat_supply_US
+        ),
+        ~/OrderDisplayModuleDescriptor,
+        ~/GroupableUnitModuleDescriptor,
+        TTacticalLabelModuleDescriptor
+        (
+            MultiSelectionSortingOrder = 10025
+            IdentifiedTexture = TBUCKToolAlternativeValues_TUIValueTextureNameFromTEugBMutableInteger
+            (
+                CommandNameTrigger = ~/SpecificCommandName/UpdateGUIFromIconType
+                Alterator = $/GUIOption/IconType
+                Values =
+                [
+                    "Texture_RTS_H_supply",
+                    "Texture_supply"
+                ]
+            )
+            UnidentifiedTexture = TBUCKToolAlternativeValues_TUIValueTextureNameFromTEugBMutableInteger
+            (
+                CommandNameTrigger = ~/SpecificCommandName/UpdateGUIFromIconType
+                Alterator = $/GUIOption/IconType
+                Values =
+                [
+                    "Texture_RTS_H_veh_nonIdentifie",
+                    "Texture_veh_nonIdentifie"
+                ]
+            )
+            PositionHeightOffset = 1000.0
+        ),
+        ~/TargetDataModuleDescriptor,
+        TStrategicDataModuleDescriptor
+        (
+            UnitAttackValue = 1
+            UnitDefenseValue = 11
+            UnitBonusXpPerLevelValue = 1
+        ),
+        TUnitUIModuleDescriptor
+        (
+            PriceCategory = 'tank_D'
+            UnitRole = 'supply'
+            SpecialtiesList = [
+            ]
+            NameToken = 'HJTRAK319V'
+            InfoPanelConfigurationToken = 'VehiculeSupplier'
+            DisplayRoadSpeedInKmph = 90
+            UpgradeFromUnit = Descriptor_Unit_CUCV_US
+            MenuIconTexture = 'Texture_RTS_H_supply'
+            ButtonTexture = 'Texture_Button_Unit_Gama_Goat_supply_US'
+            TypeStrategicCount = ETypeStrategicDetailedCount/Supply
+        ),
+        ~/SellModuleDescriptor,
+        TUnitUpkeepModuleDescriptor( UpkeepPercentage = 0.0 ),
+        TVisualShootPositionsModuleDescriptor(),
+        TCameraShowroomModuleDescriptor
+        (
+            SpawnType = EShowroomSpawnType/Vehicle
+            ShowRoomBlackHoleIdentifier = "showroom_Gama_Goat_supply_US"
+            HasServants = False
+        ),
+    ]
+)
 export Descriptor_Unit_Tgb_311A_Supply_SWE is TEntityDescriptor 
 (
     DescriptorId       = GUID:{d60fad3d-ae94-4fc9-9c7f-9a43646e5ec8}
@@ -952082,240 +952315,6 @@ export Descriptor_Unit_Tgb_411B_Moelven_Supply_SWE is TEntityDescriptor
         (
             SpawnType = EShowroomSpawnType/Vehicle
             ShowRoomBlackHoleIdentifier = "showroom_DAF_YHZ_2300_NL"
-            HasServants = False
-        ),
-    ]
-)
-export Descriptor_Unit_Hjtrak_319V_Trakk_3T_SWE is TEntityDescriptor
-(
-    DescriptorId       = GUID:{69750ccb-1b48-48ae-a266-5040c77fcba6}
-    ClassNameForDebug  = 'Unit_Hjtrak_319V_Trakk_3T_SWE'
-    ModulesDescriptors = [
-        TTypeUnitModuleDescriptor
-        (
-            Coalition                        = TWargameCoalition/NATO
-            MotherCountry                    = 'SWE'
-            AcknowUnitTypes = [
-                ~/TAcknowUnitType_Logistic,
-            ]
-        ),
-        TFormationModuleDescriptor(TypeUnitFormation = 'Supply'),
-        TankFlagsModuleDescriptor,
-        $/GFX/CriticalEffects/CriticalEffectModule_Vehicule_NonArme,
-        ~/TargetCoordinatorModuleDescriptor,
-        ~/UnitPositionModuleDescriptor,
-        ~/PlayerMissionModuleDescriptor,
-        ~/LinkTeamModuleDescriptor,
-        TTagsModuleDescriptor
-        (
-            TagSet = [
-                "AllUnits",
-                "AllowedForMissileRoE",
-                "GroundUnits",
-                "UNITE_Hjtrak_319V_Trakk_3T_SWE",
-                "Unite",
-                "Vehicule",
-                "Vehicule_Logistique",
-            ]
-        ),
-        TExperienceModuleDescriptor
-        (
-            ExperienceLevelsPackDescriptor = ~/ExperienceLevelsPackDescriptor_XP_pack_simple_v3
-            ExperienceMultiplierBonusOnKill = ~/ExperienceMultiplierBonusOnKill
-        ),
-        TVisibilityModuleDescriptor
-        (
-            UnitConcealmentBonus = 1.5
-        ),
-        VehicleApparenceModuleDescriptor
-        (
-            MimeticName = "Gama_Goat_supply_US"
-            BlackHoleKey = "Gama_Goat_supply_US"
-            GameplayBBoxBoneName = "chassis"
-            ReferenceMesh = $/GFX/DepictionResources/Modele_Gama_Goat_supply_US
-        ),
-        TAutoCoverModuleDescriptor
-        (
-            AutoCoverRangeGRU          = 123.0
-            OccupationRadiusGRU        = 35.0
-            TerrainList                = [~/ETerrainType/ForetLegere, ~/ETerrainType/ForetDense, ]
-            UseTerrainsForEscape       = False
-        ),
-        TBaseDamageModuleDescriptor
-        (
-            MaxPhysicalDamages = 4
-            MaxSuppressionDamages = ~/GroundUnit_MaxSuppressionDamages
-            MaxStunDamages = ~/GroundUnit_MaxStunDamages
-            PhysicalDamageLevelsPack = ~/DamageLevelsPackDescriptor_Default_pack_paliers_degats_phy
-            SuppressDamageLevelsPack = ~/DamageLevelsPackDescriptor_GroundUnits_packSupp
-            StunDamageLevelsPack = ~/DamageLevelsPackDescriptor_Unit_packStun
-        ),
-        TDamageModuleDescriptor
-        (
-            SuppressDamagesRegenRatio = ~/GroundUnit_SuppressDamagesRegenRatioList
-            StunDamagesRegen = ~/GroundUnit_StunDamagesRegen
-            BlindageProperties = TBlindageProperties
-            (
-                ResistanceFront = TResistanceTypeRTTI(Family=ResistanceFamily_vehicule Index=1)
-                ResistanceSides = TResistanceTypeRTTI(Family=ResistanceFamily_vehicule Index=1)
-                ResistanceRear = TResistanceTypeRTTI(Family=ResistanceFamily_vehicule Index=1)
-                ResistanceTop = TResistanceTypeRTTI(Family=ResistanceFamily_vehicule Index=1)
-                ExplosiveReactiveArmor = False
-            )
-            KillWhenDamagesReachMax = True
-            HitRollECM = 0.0
-            UseTopArmorAgainstFire = True
-        ),
-        TRoutModuleDescriptor(MoralLevel = 0),
-
-        ~/FacingInfosModuleDescriptor,
-        TGenericMovementModuleDescriptor
-        (
-            MaxSpeedInKmph = 50
-            PathfindType = $/Pathfind/PathfindTypes/Vehicle
-        ),
-        TLandMovementModuleDescriptor
-        (
-            UnitMovingType = EUnitMovingType/Wheel
-            SpeedBonusFactorOnRoad = 2.26
-            MaxAccelerationGRU = 27.0
-            MaxDecelerationGRU = 55.0
-            TempsDemiTour = 4.0
-            EngineCooldownTime = 0
-            TerrainSpeedFactors = $/GFX/Terrains/WheelVehicleTerrainSpeedFactors
-        ),
-        TSupplyModuleDescriptor
-        (
-            SupplyDescriptor   = $/GFX/Weapon/StandardSupply
-            SupplyCapacity     = 500.0
-            SupplyPriority     = -1
-        ),
-        ~/CapturableModuleDescriptor,
-        TScannerConfigurationDescriptor
-        (
-            VisionRangesGRU = MAP [
-                ( EVisionRange/Standard, 3500.0 ),
-                ( EVisionRange/LowAltitude, 4947.0 ),
-                ( EVisionRange/HighAltitude, 5654.0 ),
-            ]
-            OpticalStrengths = MAP [
-                ( EOpticalStrength/Standard, 1590.0 ),
-                ( EOpticalStrength/LowAltitude, 1590.0 ),
-                ( EOpticalStrength/HighAltitude, 353.0 ),
-            ]
-        ),
-        TReverseScannerWithIdentificationDescriptor
-        (
-            IdentifyBaseProbability     = 0.1
-            TimeBetweenEachIdentifyRoll = 15.0
-            VisibilityRuleDescriptor    = $/GFX/VisionRules/StandardWargameVisibilityRollRule
-        ),
-        UnitCadaverGeneratorModuleDescriptor
-        (
-            KillMode = EKillMode/Vehicle
-            CadaverDuration = ~/CadaverDurationApresFeu
-            DeathExplosionAmmo = $/GFX/Weapon/Ammo_Mort_Unite_ravitaillement
-        ),
-        TIAStratModuleDescriptor
-        (
-            DatabaseId = 0
-            GameplayBehavior = EGameplayBehavior/Nothing | EGameplayBehavior/TacticalAttackNearCover
-        ),
-        ~/IAStratZoneIndexModuleDescriptor,
-        ~/UnitStateEngineUnitModuleDescriptor,
-        ~/UnitStateEngineSubUnitModuleDescriptor,
-        ~/SelectionModuleDescriptor,
-        ~/EffectApplierModuleDescriptor,
-        TProductionModuleDescriptor
-        (
-            FactoryType        = Factory/Logistic
-            ProductionTime     = 5
-            ProductionRessourcesNeeded = MAP [
-                ($/GFX/Resources/Resource_CommandPoints, 25),
-            ]
-        ),
-        ~/InfluencePositionModuleDescriptor,
-        ~/InfluenceDataModuleDescriptor,
-        TAttackReactionModuleDescriptor
-        (
-            CanAssist = False
-            AssistRequestBroadcastRadiusGRU = 0.0
-            DistanceToFleeGRU = 353
-            MaxDistanceForOffensiveReactionGRU = 353
-            MaxDistanceForEngagementGRU = 0.0
-            SearchedTagsInEngagementTarget = [
-               "AllUnits",
-            ]
-        ),
-
-        TMinimapDisplayModuleDescriptor
-        (
-            Texture = "Texture_Minimap_Unit_unit"
-            FollowUnitOrientation = False
-        ),
-        TOrderConfigModuleDescriptor
-        (
-            ValidOrders = ~/Descriptor_OrderAvailability_Gama_Goat_supply_US
-        ),
-        TOrderableModuleDescriptor
-        (
-            UnlockableOrders = ~/Descriptor_OrderAvailability_Gama_Goat_supply_US
-        ),
-        ~/OrderDisplayModuleDescriptor,
-        ~/GroupableUnitModuleDescriptor,
-        TTacticalLabelModuleDescriptor
-        (
-            MultiSelectionSortingOrder = 10025
-            IdentifiedTexture = TBUCKToolAlternativeValues_TUIValueTextureNameFromTEugBMutableInteger
-            (
-                CommandNameTrigger = ~/SpecificCommandName/UpdateGUIFromIconType
-                Alterator = $/GUIOption/IconType
-                Values =
-                [
-                    "Texture_RTS_H_supply",
-                    "Texture_supply"
-                ]
-            )
-            UnidentifiedTexture = TBUCKToolAlternativeValues_TUIValueTextureNameFromTEugBMutableInteger
-            (
-                CommandNameTrigger = ~/SpecificCommandName/UpdateGUIFromIconType
-                Alterator = $/GUIOption/IconType
-                Values =
-                [
-                    "Texture_RTS_H_veh_nonIdentifie",
-                    "Texture_veh_nonIdentifie"
-                ]
-            )
-            PositionHeightOffset = 1000.0
-        ),
-        ~/TargetDataModuleDescriptor,
-        TStrategicDataModuleDescriptor
-        (
-            UnitAttackValue = 1
-            UnitDefenseValue = 11
-            UnitBonusXpPerLevelValue = 1
-        ),
-        TUnitUIModuleDescriptor
-        (
-            PriceCategory = 'tank_D'
-            UnitRole = 'supply'
-            SpecialtiesList = [
-            ]
-            NameToken = 'HJTRAK319V'
-            InfoPanelConfigurationToken = 'VehiculeSupplier'
-            DisplayRoadSpeedInKmph = 90
-            UpgradeFromUnit = Descriptor_Unit_CUCV_US
-            MenuIconTexture = 'Texture_RTS_H_supply'
-            ButtonTexture = 'Texture_Button_Unit_Gama_Goat_supply_US'
-            TypeStrategicCount = ETypeStrategicDetailedCount/Supply
-        ),
-        ~/SellModuleDescriptor,
-        TUnitUpkeepModuleDescriptor( UpkeepPercentage = 0.0 ),
-        TVisualShootPositionsModuleDescriptor(),
-        TCameraShowroomModuleDescriptor
-        (
-            SpawnType = EShowroomSpawnType/Vehicle
-            ShowRoomBlackHoleIdentifier = "showroom_Gama_Goat_supply_US"
             HasServants = False
         ),
     ]
@@ -954541,6 +954540,243 @@ export Descriptor_Unit_HKP_4_SWE is TEntityDescriptor
         ),
     ]
 )
+export Descriptor_Unit_Dtgb_953B_SWE is TEntityDescriptor
+(
+    DescriptorId       = GUID:{fbf59064-fec7-4dd9-a2cf-1d56118af100}
+    ClassNameForDebug  = 'Unit_Dtgb_953B_SWE'
+    ModulesDescriptors = [
+        TTypeUnitModuleDescriptor
+        (
+            Coalition                        = TWargameCoalition/NATO
+            MotherCountry                    = 'SWE'
+            AcknowUnitTypes = [
+                ~/TAcknowUnitType_Transport,
+            ]
+        ),
+        TFormationModuleDescriptor(TypeUnitFormation = 'Char'),
+        TankFlagsModuleDescriptor,
+        $/GFX/CriticalEffects/CriticalEffectModule_Vehicule_NonArme,
+        ~/TargetCoordinatorModuleDescriptor,
+        ~/UnitPositionModuleDescriptor,
+        ~/PlayerMissionModuleDescriptor,
+        ~/LinkTeamModuleDescriptor,
+        TTagsModuleDescriptor
+        (
+            TagSet = [
+                "AllUnits",
+                "GroundUnits",
+                "UNITE_Dtgb_953B_SWE",
+                "Unite",
+                "Vehicule",
+                "Vehicule_Transport",
+            ]
+        ),
+        TExperienceModuleDescriptor
+        (
+            ExperienceLevelsPackDescriptor = ~/ExperienceLevelsPackDescriptor_XP_pack_simple_v3
+            ExperienceMultiplierBonusOnKill = ~/ExperienceMultiplierBonusOnKill
+        ),
+        TVisibilityModuleDescriptor
+        (
+            UnitConcealmentBonus = 1.0
+        ),
+        VehicleApparenceModuleDescriptor
+        (
+            MimeticName = "ZIL_135M_supply_SOV"
+            BlackHoleKey = "ZIL_135M_supply_SOV"
+            GameplayBBoxBoneName = "chassis"
+            ReferenceMesh = $/GFX/DepictionResources/Modele_ZIL_135M_supply_SOV
+        ),
+        TAutoCoverModuleDescriptor
+        (
+            AutoCoverRangeGRU          = 123.0
+            OccupationRadiusGRU        = 35.0
+            TerrainList                = [~/ETerrainType/ForetLegere, ~/ETerrainType/ForetDense, ]
+            UseTerrainsForEscape       = False
+        ),
+        TBaseDamageModuleDescriptor
+        (
+            MaxPhysicalDamages = 8
+            MaxSuppressionDamages = ~/GroundUnit_MaxSuppressionDamages
+            MaxStunDamages = ~/GroundUnit_MaxStunDamages
+            PhysicalDamageLevelsPack = ~/DamageLevelsPackDescriptor_Default_pack_paliers_degats_phy
+            SuppressDamageLevelsPack = ~/DamageLevelsPackDescriptor_GroundUnits_packSupp
+            StunDamageLevelsPack = ~/DamageLevelsPackDescriptor_Unit_packStun
+        ),
+        TDamageModuleDescriptor
+        (
+            SuppressDamagesRegenRatio = ~/GroundUnit_SuppressDamagesRegenRatioList
+            StunDamagesRegen = ~/GroundUnit_StunDamagesRegen
+            BlindageProperties = TBlindageProperties
+            (
+                ResistanceFront = TResistanceTypeRTTI(Family=ResistanceFamily_vehicule Index=1)
+                ResistanceSides = TResistanceTypeRTTI(Family=ResistanceFamily_vehicule Index=1)
+                ResistanceRear = TResistanceTypeRTTI(Family=ResistanceFamily_vehicule Index=1)
+                ResistanceTop = TResistanceTypeRTTI(Family=ResistanceFamily_vehicule Index=1)
+                ExplosiveReactiveArmor = False
+            )
+            KillWhenDamagesReachMax = True
+            HitRollECM = 0.0
+            UseTopArmorAgainstFire = True
+        ),
+        TRoutModuleDescriptor(MoralLevel = 0),
+        ~/FacingInfosModuleDescriptor,
+        TGenericMovementModuleDescriptor
+        (
+            MaxSpeedInKmph = 65
+            PathfindType = $/Pathfind/PathfindTypes/Vehicle
+        ),
+        TLandMovementModuleDescriptor
+        (
+            UnitMovingType = EUnitMovingType/Wheel
+            SpeedBonusFactorOnRoad = 1.74
+            MaxAccelerationGRU = 27.0
+            MaxDecelerationGRU = 55.0
+            TempsDemiTour = 4.0
+            EngineCooldownTime = 0
+            TerrainSpeedFactors = $/GFX/Terrains/WheelVehicleTerrainSpeedFactors
+        ),
+        ~/CapturableModuleDescriptor,
+        TScannerConfigurationDescriptor
+        (
+            VisionRangesGRU = MAP [
+                ( EVisionRange/Standard, 3500.0 ),
+                ( EVisionRange/LowAltitude, 4947.0 ),
+                ( EVisionRange/HighAltitude, 5654.0 ),
+            ]
+            OpticalStrengths = MAP [
+                ( EOpticalStrength/Standard, 1590.0 ),
+                ( EOpticalStrength/LowAltitude, 1590.0 ),
+                ( EOpticalStrength/HighAltitude, 353.0 ),
+            ]
+        ),
+        TReverseScannerWithIdentificationDescriptor
+        (
+            IdentifyBaseProbability     = 0.1
+            TimeBetweenEachIdentifyRoll = 15.0
+            VisibilityRuleDescriptor    = $/GFX/VisionRules/StandardWargameVisibilityRollRule
+        ),
+        TTransporterModuleDescriptor
+        (
+           TransportableTagSet            = [
+                                "Crew",
+                                "Unite_transportable",
+                                            ]
+           NbSeatsAvailable               = 1
+           WreckUnloadPhysicalDamageBonus = WreckUnloadDamageBonus_Default_Physical
+           WreckUnloadSuppressDamageBonus = WreckUnloadDamageBonus_Default_Suppress
+           WreckUnloadStunDamageBonus     = WreckUnloadDamageBonus_Default_Stun
+           LoadRadiusGRU                     = 70
+        ),
+        UnitCadaverGeneratorModuleDescriptor
+        (
+            KillMode = EKillMode/Vehicle
+            CadaverDuration = ~/CadaverDurationApresFeu
+            DeathExplosionAmmo = $/GFX/Weapon/Ammo_Mort_Unite_ravitaillement
+        ),
+        TIAStratModuleDescriptor
+        (
+            DatabaseId = 0
+            GameplayBehavior = EGameplayBehavior/Nothing | EGameplayBehavior/TacticalAttackNearCover
+        ),
+        ~/IAStratZoneIndexModuleDescriptor,
+        ~/UnitStateEngineUnitModuleDescriptor,
+        ~/UnitStateEngineSubUnitModuleDescriptor,
+        ~/SelectionModuleDescriptor,
+        ~/EffectApplierModuleDescriptor,
+        TProductionModuleDescriptor
+        (
+            FactoryType        = Factory/Infantry
+            ProductionTime     = 5
+            ProductionRessourcesNeeded = MAP [
+                ($/GFX/Resources/Resource_CommandPoints, 20),
+            ]
+        ),
+        ~/InfluencePositionModuleDescriptor,
+        ~/InfluenceDataModuleDescriptor,
+        TAttackReactionModuleDescriptor
+        (
+            CanAssist = False
+            AssistRequestBroadcastRadiusGRU = 0.0
+            DistanceToFleeGRU = 353
+            MaxDistanceForOffensiveReactionGRU = 353
+            MaxDistanceForEngagementGRU = 0.0
+            SearchedTagsInEngagementTarget = [
+               "AllUnits",
+            ]
+        ),
+        TMinimapDisplayModuleDescriptor
+        (
+            Texture = "Texture_Minimap_Unit_unit"
+            FollowUnitOrientation = False
+        ),
+        TOrderConfigModuleDescriptor
+        (
+            ValidOrders = ~/Descriptor_OrderAvailability_Dtgb_953B_SWE
+        ),
+        TOrderableModuleDescriptor
+        (
+            UnlockableOrders = ~/Descriptor_OrderAvailability_Dtgb_953B_SWE
+        ),
+        ~/OrderDisplayModuleDescriptor,
+        ~/GroupableUnitModuleDescriptor,
+        TTacticalLabelModuleDescriptor
+        (
+            MultiSelectionSortingOrder = 10060
+            IdentifiedTexture = TBUCKToolAlternativeValues_TUIValueTextureNameFromTEugBMutableInteger
+            (
+                CommandNameTrigger = ~/SpecificCommandName/UpdateGUIFromIconType
+                Alterator = $/GUIOption/IconType
+                Values =
+                [
+                    "Texture_RTS_H_transport_noweapon",
+                    "Texture_transport_noweapon"
+                ]
+            )
+            UnidentifiedTexture = TBUCKToolAlternativeValues_TUIValueTextureNameFromTEugBMutableInteger
+            (
+                CommandNameTrigger = ~/SpecificCommandName/UpdateGUIFromIconType
+                Alterator = $/GUIOption/IconType
+                Values =
+                [
+                    "Texture_RTS_H_veh_nonIdentifie",
+                    "Texture_veh_nonIdentifie"
+                ]
+            )
+            PositionHeightOffset = 1000.0
+        ),
+        ~/TargetDataModuleDescriptor,
+        TStrategicDataModuleDescriptor
+        (
+            UnitAttackValue = 1
+            UnitDefenseValue = 81
+            UnitBonusXpPerLevelValue = 1
+        ),
+        TUnitUIModuleDescriptor
+        (
+            PriceCategory = 'tank_C'
+            UnitRole = 'transport'
+            SpecialtiesList = [
+            ]
+            NameToken = 'Dtgb953b'
+            InfoPanelConfigurationToken = 'VehiculeTransporter'
+            DisplayRoadSpeedInKmph = 90
+            UpgradeFromUnit = Descriptor_Unit_UAZ_469_supply_SOV
+            MenuIconTexture = 'Texture_RTS_H_supply'
+            ButtonTexture = 'Texture_Button_Unit_ZIL_135M_supply_SOV'
+            TypeStrategicCount = ETypeStrategicDetailedCount/Transport
+        ),
+        ~/SellModuleDescriptor,
+        TUnitUpkeepModuleDescriptor( UpkeepPercentage = 1.0 ),
+        TVisualShootPositionsModuleDescriptor(),
+        TCameraShowroomModuleDescriptor
+        (
+            SpawnType = EShowroomSpawnType/Vehicle
+            ShowRoomBlackHoleIdentifier = "showroom_ZIL_135M_supply_SOV"
+            HasServants = False
+        ),
+    ]
+)
 export Descriptor_Unit_Pltgb_903_Ksp_SWE is TEntityDescriptor
 (
     DescriptorId       = GUID:{c044f105-b573-493c-be33-90a584584b57}
@@ -955472,11 +955708,11 @@ export Descriptor_Unit_Mortar_Minrojningsorm_1_SWE is TEntityDescriptor
         ),
         TOrderConfigModuleDescriptor
         (
-            ValidOrders = ~/Descriptor_OrderAvailability_Mortier_M29_81mm_NL
+            ValidOrders = ~/Descriptor_OrderAvailability_Mortar_Minrojningsorm_1_SWE
         ),
         TOrderableModuleDescriptor
         (
-            UnlockableOrders = ~/Descriptor_OrderAvailability_Mortier_M29_81mm_NL
+            UnlockableOrders = ~/Descriptor_OrderAvailability_Mortar_Minrojningsorm_1_SWE
         ),
         ~/OrderDisplayModuleDescriptor,
         ~/GroupableUnitModuleDescriptor,
@@ -955766,10 +956002,10 @@ export Descriptor_Unit_Kapjas_m65_SWE is TEntityDescriptor
         TUnitUIModuleDescriptor
         (
             PriceCategory = 'tank_D'
-            UnitRole = 'AT'
+            UnitRole = 'howitzer'
             SpecialtiesList = [
             ]
-            NameToken = 'KAPJASM65'
+            NameToken = 'KPJSM65'
             InfoPanelConfigurationToken = 'Default'
             DisplayRoadSpeedInKmph = 16
             UpgradeFromUnit = Descriptor_Unit_AT_D44_85mm_VDV_SOV
@@ -955940,6 +956176,8 @@ export Descriptor_Unit_Howz_Haubits_m40_SWE is TEntityDescriptor
         TCapaciteModuleDescriptor
         (
             DefaultSkillList = [
+                $/GFX/EffectCapacity/Capacite_reserviste,
+                $/GFX/EffectCapacity/Capacite_militia,
                 $/GFX/EffectCapacity/Capacite_Artillerie_tag_on_shoot,
             ]
         ),
@@ -956018,8 +956256,10 @@ export Descriptor_Unit_Howz_Haubits_m40_SWE is TEntityDescriptor
             PriceCategory = 'tank_D'
             UnitRole = 'howitzer'
             SpecialtiesList = [
+                '_reservist',
+                '_militia',
             ]
-            NameToken = 'HvHbts40'
+            NameToken = 'HVHAUBM40'
             InfoPanelConfigurationToken = 'Infantry'
             DisplayRoadSpeedInKmph = 16
             MenuIconTexture = 'Texture_RTS_H_howitzer'
@@ -956290,3 +956530,2178 @@ export Descriptor_Unit_Howz_Haubits_m4140_SWE is TEntityDescriptor
         ),
     ]
 )
+export Descriptor_Unit_Howz_Faltpjas_m37_SWE is TEntityDescriptor
+(
+    DescriptorId       = GUID:{be7fae84-ad87-4fac-8c13-3e0e72fa1afb}
+    ClassNameForDebug  = 'Unit_Howz_Faltpjas_m37_SWE'
+    ModulesDescriptors = [
+        TTypeUnitModuleDescriptor
+        (
+            Coalition                        = TWargameCoalition/NATO
+            MotherCountry                    = 'SWE'
+            AcknowUnitTypes = [
+                ~/TAcknowUnitType_ArtShell,
+            ]
+        ),
+        TFormationModuleDescriptor(TypeUnitFormation = 'Artillerie'),
+        TankFlagsModuleDescriptor,
+        $/GFX/CriticalEffects/CriticalEffectModule_Vehicule_ArmeSansTourelle,
+        ~/TargetCoordinatorModuleDescriptor,
+        ~/UnitPositionModuleDescriptor,
+        ~/PlayerMissionModuleDescriptor,
+        ~/LinkTeamModuleDescriptor,
+        TTagsModuleDescriptor
+        (
+            TagSet = [
+                "AllUnits",
+                "AllowedForMissileRoE",
+                "Artillerie",
+                "Artillerie_Longue_Portee",
+                "GroundUnits",
+                "Radio",
+                "UNITE_Howz_Faltpjas_m37_SWE",
+                "Unite",
+                "Unite_transportable",
+            ]
+        ),
+        TExperienceModuleDescriptor
+        (
+            ExperienceLevelsPackDescriptor = ~/ExperienceLevelsPackDescriptor_XP_pack_artillery
+            ExperienceMultiplierBonusOnKill = ~/ExperienceMultiplierBonusOnKill
+        ),
+        TVisibilityModuleDescriptor
+        (
+            UnitConcealmentBonus = 1.5
+        ),
+        VehicleApparenceModuleDescriptor
+        (
+            MimeticName = "Howz_M59_LongTom_155mm_DK"
+            BlackHoleKey = "Howz_M59_LongTom_155mm_DK"
+            ReferenceMesh = $/GFX/DepictionResources/Modele_Howz_M59_LongTom_155mm_DK
+        ),
+        TAutoCoverModuleDescriptor
+        (
+            AutoCoverRangeGRU          = 123.0
+            OccupationRadiusGRU        = 35.0
+            TerrainList                = [~/ETerrainType/ForetLegere, ~/ETerrainType/ForetDense, ]
+            UseTerrainsForEscape       = False
+        ),
+        $/GFX/Weapon/WeaponDescriptor_Howz_Faltpjas_m37_SWE,
+        TBaseDamageModuleDescriptor
+        (
+            MaxPhysicalDamages = 8
+            MaxSuppressionDamages = ~/Infanterie_MaxSuppressionDamages
+            MaxStunDamages = ~/Infanterie_MaxStunDamages
+            PhysicalDamageLevelsPack = ~/DamageLevelsPackDescriptor_Default_pack_paliers_degats_phy
+            SuppressDamageLevelsPack = ~/DamageLevelsPackDescriptor_ArtyUnits_packSupp
+            StunDamageLevelsPack = ~/DamageLevelsPackDescriptor_Unit_packStun_Artillerie
+        ),
+        TDamageModuleDescriptor
+        (
+            SuppressDamagesRegenRatio = ~/Infanterie_SuppressDamagesRegenRatioList
+            StunDamagesRegen = ~/Infanterie_StunDamagesRegen
+            BlindageProperties = TBlindageProperties
+            (
+                ResistanceFront = TResistanceTypeRTTI(Family=ResistanceFamily_vehicule Index=2)
+                ResistanceSides = TResistanceTypeRTTI(Family=ResistanceFamily_vehicule Index=1)
+                ResistanceRear = TResistanceTypeRTTI(Family=ResistanceFamily_vehicule Index=1)
+                ResistanceTop = TResistanceTypeRTTI(Family=ResistanceFamily_vehicule Index=1)
+                ExplosiveReactiveArmor = False
+            )
+            KillWhenDamagesReachMax = True
+            HitRollECM = 0.0
+            UseTopArmorAgainstFire = True
+        ),
+        TDangerousnessModuleDescriptor(Dangerousness  = 32),
+        TRoutModuleDescriptor(MoralLevel = 0),
+        ~/FacingInfosModuleDescriptor,
+        TGenericMovementModuleDescriptor
+        (
+            MaxSpeedInKmph = 9
+            PathfindType = $/Pathfind/PathfindTypes/Infantry
+        ),
+        TLandMovementModuleDescriptor
+        (
+            UnitMovingType = EUnitMovingType/Infantry
+            SpeedBonusFactorOnRoad = 2.22
+            MaxAccelerationGRU = 11.0
+            MaxDecelerationGRU = 4.0
+            TempsDemiTour = 5.0
+            VehicleSizeInMeter = [5.0, 4.0]
+            EngineCooldownTime = 1.5
+            TerrainSpeedFactors = $/GFX/Terrains/InfantryTerrainSpeedFactors
+        ),
+        TScannerConfigurationDescriptor
+        (
+            VisionRangesGRU = MAP [
+                ( EVisionRange/Standard, 3500.0 ),
+                ( EVisionRange/LowAltitude, 4947.0 ),
+                ( EVisionRange/HighAltitude, 5654.0 ),
+            ]
+            OpticalStrengths = MAP [
+                ( EOpticalStrength/Standard, 1590.0 ),
+                ( EOpticalStrength/LowAltitude, 1590.0 ),
+                ( EOpticalStrength/HighAltitude, 353.0 ),
+            ]
+        ),
+        TReverseScannerWithIdentificationDescriptor
+        (
+            IdentifyBaseProbability     = 0.1
+            TimeBetweenEachIdentifyRoll = 15.0
+            VisibilityRuleDescriptor    = $/GFX/VisionRules/StandardWargameVisibilityRollRule
+        ),
+        TTransportableModuleDescriptor
+        (
+            TransportedTexture                     = "UseInGame_Transport_howitzer"
+            TransportedSoldier                     = 'Howz_M59_LongTom_155mm_DK'
+            NbSeatsOccupied                        = 1
+            TimeToLoad                             = CanonsLoadingTime
+            IsTowable                              = True
+        ),
+        UnitCadaverGeneratorModuleDescriptor
+        (
+            KillMode = EKillMode/Vehicle
+            CadaverDuration = ~/CadaverDurationApresFeu
+            DeathExplosionAmmo = $/GFX/Weapon/Ammo_Mort_Unite_faible
+        ),
+        TIAStratModuleDescriptor
+        (
+            DatabaseId = 0
+            GameplayBehavior = EGameplayBehavior/Nothing
+        ),
+        ~/IAStratZoneIndexModuleDescriptor,
+        ~/UnitStateEngineUnitModuleDescriptor,
+        ~/UnitStateEngineSubUnitModuleDescriptor,
+        ~/SelectionModuleDescriptor,
+        ~/EffectApplierModuleDescriptor,
+        TCapaciteModuleDescriptor
+        (
+            DefaultSkillList = [
+                $/GFX/EffectCapacity/Capacite_Artillerie_tag_on_shoot,
+            ]
+        ),
+        TProductionModuleDescriptor
+        (
+            FactoryType        = Factory/Art
+            ProductionTime     = 5
+            ProductionRessourcesNeeded = MAP [
+                ($/GFX/Resources/Resource_CommandPoints, 110),
+                ($/GFX/Resources/Resource_Tickets, 2),
+            ]
+        ),
+        ~/InfluencePositionModuleDescriptor,
+        ~/InfluenceDataModuleDescriptor,
+        TAttackReactionModuleDescriptor
+        (
+            CanAssist = True
+            AssistRequestBroadcastRadiusGRU = 0.0
+            DistanceToFleeGRU = 353
+            MaxDistanceForOffensiveReactionGRU = 353
+            MaxDistanceForEngagementGRU = 0.0
+            SearchedTagsInEngagementTarget = [
+               "AllUnits",
+            ]
+        ),
+        TMinimapDisplayModuleDescriptor
+        (
+            Texture = "Texture_Minimap_Unit_unit"
+            FollowUnitOrientation = False
+        ),
+        TOrderConfigModuleDescriptor
+        (
+            ValidOrders = ~/Descriptor_OrderAvailability_Howz_Faltpjas_m37_SWE
+        ),
+        TOrderableModuleDescriptor
+        (
+            UnlockableOrders = ~/Descriptor_OrderAvailability_Howz_Faltpjas_m37_SWE
+        ),
+        ~/OrderDisplayModuleDescriptor,
+        ~/GroupableUnitModuleDescriptor,
+        TTacticalLabelModuleDescriptor
+        (
+            MultiSelectionSortingOrder = 12110
+            IdentifiedTexture = TBUCKToolAlternativeValues_TUIValueTextureNameFromTEugBMutableInteger
+            (
+                CommandNameTrigger = ~/SpecificCommandName/UpdateGUIFromIconType
+                Alterator = $/GUIOption/IconType
+                Values =
+                [
+                    "Texture_RTS_H_howitzer",
+                    "Texture_howitzer"
+                ]
+            )
+            UnidentifiedTexture = TBUCKToolAlternativeValues_TUIValueTextureNameFromTEugBMutableInteger
+            (
+                CommandNameTrigger = ~/SpecificCommandName/UpdateGUIFromIconType
+                Alterator = $/GUIOption/IconType
+                Values =
+                [
+                    "Texture_RTS_H_infantry_nonIdentifie",
+                    "Texture_infantry_nonIdentifie"
+                ]
+            )
+            PositionHeightOffset = 1000.0
+        ),
+        ~/TargetDataModuleDescriptor,
+        TStrategicDataModuleDescriptor
+        (
+            UnitAttackValue = 91
+            UnitDefenseValue = 91
+            UnitBonusXpPerLevelValue = 1
+        ),
+        TUnitUIModuleDescriptor
+        (
+            PriceCategory = 'tank_C'
+            UnitRole = 'howitzer'
+            SpecialtiesList = [
+            ]
+            NameToken = 'FLTPJSM37'
+            InfoPanelConfigurationToken = 'Infantry'
+            DisplayRoadSpeedInKmph = 16
+            UpgradeFromUnit = Descriptor_Unit_Kapjas_m65_SWE
+            MenuIconTexture = 'Texture_RTS_H_howitzer'
+            ButtonTexture = 'Texture_Button_Unit_Howz_M59_LongTom_155mm_DK'
+            TypeStrategicCount = ETypeStrategicDetailedCount/Howitzer
+        ),
+        TUnitUpkeepModuleDescriptor( UpkeepPercentage = 1.0 ),
+        TVisualShootPositionsModuleDescriptor(),
+        TCameraShowroomModuleDescriptor
+        (
+            SpawnType = EShowroomSpawnType/Vehicle
+            ShowRoomBlackHoleIdentifier = "showroom_Howz_M59_LongTom_155mm_DK"
+            HasServants = False
+        ),
+        TWeaponDeploymentModuleDescriptor
+        (
+            TimeForWeaponDeployment = 10
+            TimeForWeaponPacking = 25
+        ),
+    ]
+)
+export Descriptor_Unit_Howz_Canon_FH_77B_SWE is TEntityDescriptor
+(
+    DescriptorId       = GUID:{c113a950-121e-427e-889c-f93a81218c21}
+    ClassNameForDebug  = 'Unit_Howz_Canon_FH_77B_SWE'
+    ModulesDescriptors = [
+        TTypeUnitModuleDescriptor
+        (
+            Coalition                        = TWargameCoalition/NATO
+            MotherCountry                    = 'SWE'
+            AcknowUnitTypes = [
+                ~/TAcknowUnitType_ArtShell,
+            ]
+        ),
+        TFormationModuleDescriptor(TypeUnitFormation = 'Artillerie'),
+        TankFlagsModuleDescriptor,
+        $/GFX/CriticalEffects/CriticalEffectModule_Vehicule_ArmeSansTourelle,
+        ~/TargetCoordinatorModuleDescriptor,
+        ~/UnitPositionModuleDescriptor,
+        ~/PlayerMissionModuleDescriptor,
+        ~/LinkTeamModuleDescriptor,
+        TTagsModuleDescriptor
+        (
+            TagSet = [
+                "AllUnits",
+                "AllowedForMissileRoE",
+                "Artillerie",
+                "Artillerie_Longue_Portee",
+                "GroundUnits",
+                "Radio",
+                "UNITE_Howz_Canon_FH_77B_SWE",
+                "Unite",
+                "Unite_transportable",
+            ]
+        ),
+        TExperienceModuleDescriptor
+        (
+            ExperienceLevelsPackDescriptor = ~/ExperienceLevelsPackDescriptor_XP_pack_artillery
+            ExperienceMultiplierBonusOnKill = ~/ExperienceMultiplierBonusOnKill
+        ),
+        TVisibilityModuleDescriptor
+        (
+            UnitConcealmentBonus = 1.5
+        ),
+        VehicleApparenceModuleDescriptor
+        (
+            MimeticName = "Howz_TRF1_155mm_FR"
+            BlackHoleKey = "Howz_TRF1_155mm_FR"
+            ReferenceMesh = $/GFX/DepictionResources/Modele_Howz_TRF1_155mm_FR
+        ),
+        TAutoCoverModuleDescriptor
+        (
+            AutoCoverRangeGRU          = 123.0
+            OccupationRadiusGRU        = 35.0
+            TerrainList                = [~/ETerrainType/ForetLegere, ~/ETerrainType/ForetDense, ]
+            UseTerrainsForEscape       = False
+        ),
+        $/GFX/Weapon/WeaponDescriptor_Howz_Canon_FH_77B_SWE,
+        TBaseDamageModuleDescriptor
+        (
+            MaxPhysicalDamages = 8
+            MaxSuppressionDamages = ~/Infanterie_MaxSuppressionDamages
+            MaxStunDamages = ~/Infanterie_MaxStunDamages
+            PhysicalDamageLevelsPack = ~/DamageLevelsPackDescriptor_Default_pack_paliers_degats_phy
+            SuppressDamageLevelsPack = ~/DamageLevelsPackDescriptor_ArtyUnits_packSupp
+            StunDamageLevelsPack = ~/DamageLevelsPackDescriptor_Unit_packStun_Artillerie
+        ),
+        TDamageModuleDescriptor
+        (
+            SuppressDamagesRegenRatio = ~/Infanterie_SuppressDamagesRegenRatioList
+            StunDamagesRegen = ~/Infanterie_StunDamagesRegen
+            BlindageProperties = TBlindageProperties
+            (
+                ResistanceFront = TResistanceTypeRTTI(Family=ResistanceFamily_vehicule Index=2)
+                ResistanceSides = TResistanceTypeRTTI(Family=ResistanceFamily_vehicule Index=1)
+                ResistanceRear = TResistanceTypeRTTI(Family=ResistanceFamily_vehicule Index=1)
+                ResistanceTop = TResistanceTypeRTTI(Family=ResistanceFamily_vehicule Index=1)
+                ExplosiveReactiveArmor = False
+            )
+            KillWhenDamagesReachMax = True
+            HitRollECM = 0.0
+            UseTopArmorAgainstFire = True
+        ),
+        TDangerousnessModuleDescriptor(Dangerousness  = 32),
+        TRoutModuleDescriptor(MoralLevel = 0),
+        ~/FacingInfosModuleDescriptor,
+        TGenericMovementModuleDescriptor
+        (
+            MaxSpeedInKmph = 9
+            PathfindType = $/Pathfind/PathfindTypes/Infantry
+        ),
+        TLandMovementModuleDescriptor
+        (
+            UnitMovingType = EUnitMovingType/Infantry
+            SpeedBonusFactorOnRoad = 2.22
+            MaxAccelerationGRU = 11.0
+            MaxDecelerationGRU = 4.0
+            TempsDemiTour = 5.0
+            VehicleSizeInMeter = [8.0, 4.0]
+            EngineCooldownTime = 1.5
+            TerrainSpeedFactors = $/GFX/Terrains/InfantryTerrainSpeedFactors
+        ),
+        TScannerConfigurationDescriptor
+        (
+            VisionRangesGRU = MAP [
+                ( EVisionRange/Standard, 3500.0 ),
+                ( EVisionRange/LowAltitude, 4947.0 ),
+                ( EVisionRange/HighAltitude, 5654.0 ),
+            ]
+            OpticalStrengths = MAP [
+                ( EOpticalStrength/Standard, 1590.0 ),
+                ( EOpticalStrength/LowAltitude, 1590.0 ),
+                ( EOpticalStrength/HighAltitude, 353.0 ),
+            ]
+        ),
+        TReverseScannerWithIdentificationDescriptor
+        (
+            IdentifyBaseProbability     = 0.1
+            TimeBetweenEachIdentifyRoll = 15.0
+            VisibilityRuleDescriptor    = $/GFX/VisionRules/StandardWargameVisibilityRollRule
+        ),
+        TTransportableModuleDescriptor
+        (
+            TransportedTexture                     = "UseInGame_Transport_howitzer"
+            TransportedSoldier                     = 'Howz_TRF1_155mm_FR'
+            NbSeatsOccupied                        = 1
+            TimeToLoad                             = CanonsLoadingTime
+            IsTowable                              = True
+        ),
+        UnitCadaverGeneratorModuleDescriptor
+        (
+            KillMode = EKillMode/Vehicle
+            CadaverDuration = ~/CadaverDurationApresFeu
+            DeathExplosionAmmo = $/GFX/Weapon/Ammo_Mort_Unite_faible
+        ),
+        TIAStratModuleDescriptor
+        (
+            DatabaseId = 0
+            GameplayBehavior = EGameplayBehavior/Nothing
+        ),
+        ~/IAStratZoneIndexModuleDescriptor,
+        ~/UnitStateEngineUnitModuleDescriptor,
+        ~/UnitStateEngineSubUnitModuleDescriptor,
+        ~/SelectionModuleDescriptor,
+        ~/EffectApplierModuleDescriptor,
+        TCapaciteModuleDescriptor
+        (
+            DefaultSkillList = [
+                $/GFX/EffectCapacity/Capacite_Artillerie_tag_on_shoot,
+            ]
+        ),
+        TProductionModuleDescriptor
+        (
+            FactoryType        = Factory/Art
+            ProductionTime     = 5
+            ProductionRessourcesNeeded = MAP [
+                ($/GFX/Resources/Resource_CommandPoints, 150),
+                ($/GFX/Resources/Resource_Tickets, 2),
+            ]
+        ),
+        ~/InfluencePositionModuleDescriptor,
+        ~/InfluenceDataModuleDescriptor,
+        TAttackReactionModuleDescriptor
+        (
+            CanAssist = True
+            AssistRequestBroadcastRadiusGRU = 0.0
+            DistanceToFleeGRU = 353
+            MaxDistanceForOffensiveReactionGRU = 353
+            MaxDistanceForEngagementGRU = 0.0
+            SearchedTagsInEngagementTarget = [
+               "AllUnits",
+            ]
+        ),
+        TMinimapDisplayModuleDescriptor
+        (
+            Texture = "Texture_Minimap_Unit_unit"
+            FollowUnitOrientation = False
+        ),
+        TOrderConfigModuleDescriptor
+        (
+            ValidOrders = ~/Descriptor_OrderAvailability_Howz_TRF1_155mm_FR
+        ),
+        TOrderableModuleDescriptor
+        (
+            UnlockableOrders = ~/Descriptor_OrderAvailability_Howz_TRF1_155mm_FR
+        ),
+        ~/OrderDisplayModuleDescriptor,
+        ~/GroupableUnitModuleDescriptor,
+        TTacticalLabelModuleDescriptor
+        (
+            MultiSelectionSortingOrder = 12150
+            IdentifiedTexture = TBUCKToolAlternativeValues_TUIValueTextureNameFromTEugBMutableInteger
+            (
+                CommandNameTrigger = ~/SpecificCommandName/UpdateGUIFromIconType
+                Alterator = $/GUIOption/IconType
+                Values =
+                [
+                    "Texture_RTS_H_howitzer",
+                    "Texture_howitzer"
+                ]
+            )
+            UnidentifiedTexture = TBUCKToolAlternativeValues_TUIValueTextureNameFromTEugBMutableInteger
+            (
+                CommandNameTrigger = ~/SpecificCommandName/UpdateGUIFromIconType
+                Alterator = $/GUIOption/IconType
+                Values =
+                [
+                    "Texture_RTS_H_infantry_nonIdentifie",
+                    "Texture_infantry_nonIdentifie"
+                ]
+            )
+            PositionHeightOffset = 1000.0
+        ),
+        ~/TargetDataModuleDescriptor,
+        TStrategicDataModuleDescriptor
+        (
+            UnitAttackValue = 151
+            UnitDefenseValue = 151
+            UnitBonusXpPerLevelValue = 1
+        ),
+        TUnitUIModuleDescriptor
+        (
+            PriceCategory = 'tank_C'
+            UnitRole = 'howitzer'
+            SpecialtiesList = [
+            ]
+            NameToken = 'FH77B'
+            InfoPanelConfigurationToken = 'Infantry'
+            DisplayRoadSpeedInKmph = 16
+            UpgradeFromUnit = Descriptor_Unit_Howz_M101_105mm_FR
+            MenuIconTexture = 'Texture_RTS_H_howitzer'
+            ButtonTexture = 'Texture_Button_Unit_Howz_TRF1_155mm_FR'
+            TypeStrategicCount = ETypeStrategicDetailedCount/Howitzer
+        ),
+        TUnitUpkeepModuleDescriptor( UpkeepPercentage = 1.0 ),
+        TVisualShootPositionsModuleDescriptor(),
+        TCameraShowroomModuleDescriptor
+        (
+            SpawnType = EShowroomSpawnType/Vehicle
+            ShowRoomBlackHoleIdentifier = "showroom_Howz_TRF1_155mm_FR"
+            HasServants = False
+        ),
+        TWeaponDeploymentModuleDescriptor
+        (
+            TimeForWeaponDeployment = 10
+            TimeForWeaponPacking = 25
+        ),
+    ]
+)
+export Descriptor_Unit_DCA_Lvakan_M4070_SWE is TEntityDescriptor
+(
+    DescriptorId       = GUID:{0c2a4f60-96f3-4fe8-9b08-52252e80ed77}
+    ClassNameForDebug  = 'Unit_DCA_Lvakan_M4070_SWE'
+    ModulesDescriptors = [
+        TTypeUnitModuleDescriptor
+        (
+            Coalition                        = TWargameCoalition/NATO
+            MotherCountry                    = 'SWE'
+            AcknowUnitTypes = [
+                ~/TAcknowUnitType_CanonAA,
+            ]
+        ),
+        TFormationModuleDescriptor(TypeUnitFormation = 'Artillerie'),
+        TankFlagsModuleDescriptor,
+        $/GFX/CriticalEffects/CriticalEffectModule_Vehicule_ArmeSansTourelle,
+        ~/TargetCoordinatorModuleDescriptor,
+        ~/UnitPositionModuleDescriptor,
+        ~/PlayerMissionModuleDescriptor,
+        ~/LinkTeamModuleDescriptor,
+        TTagsModuleDescriptor
+        (
+            TagSet = [
+                "AllUnits",
+                "AllowedForMissileRoE",
+                "Canon_AA",
+                "Canon_AA_Porte",
+                "GroundUnits",
+                "UNITE_DCA_Lvakan_M4070_SWE",
+                "Unite",
+                "Unite_transportable",
+            ]
+        ),
+        TExperienceModuleDescriptor
+        (
+            ExperienceLevelsPackDescriptor = ~/ExperienceLevelsPackDescriptor_XP_pack_simple_v3
+            ExperienceMultiplierBonusOnKill = ~/ExperienceMultiplierBonusOnKill
+        ),
+        TVisibilityModuleDescriptor
+        (
+            UnitConcealmentBonus = 2.0
+        ),
+        VehicleApparenceModuleDescriptor
+        (
+            MimeticName = "DCA_GAI_BO1_20mm_SWI"
+            BlackHoleKey = "DCA_GAI_BO1_20mm_SWI"
+            ReferenceMesh = $/GFX/DepictionResources/Modele_DCA_GAI_BO1_20mm_SWI
+        ),
+        TAutoCoverModuleDescriptor
+        (
+            AutoCoverRangeGRU          = 123.0
+            OccupationRadiusGRU        = 35.0
+            TerrainList                = [~/ETerrainType/ForetLegere, ~/ETerrainType/ForetDense, ]
+            UseTerrainsForEscape       = False
+        ),
+        $/GFX/Weapon/WeaponDescriptor_DCA_GAI_BO1_20mm_SWI,
+        TBaseDamageModuleDescriptor
+        (
+            MaxPhysicalDamages = 4
+            MaxSuppressionDamages = ~/Infanterie_MaxSuppressionDamages
+            MaxStunDamages = ~/Infanterie_MaxStunDamages
+            PhysicalDamageLevelsPack = ~/DamageLevelsPackDescriptor_Default_pack_paliers_degats_phy
+            SuppressDamageLevelsPack = ~/DamageLevelsPackDescriptor_GroundUnits_packSupp
+            StunDamageLevelsPack = ~/DamageLevelsPackDescriptor_Unit_packStun
+        ),
+        TDamageModuleDescriptor
+        (
+            SuppressDamagesRegenRatio = ~/Infanterie_SuppressDamagesRegenRatioList
+            StunDamagesRegen = ~/Infanterie_StunDamagesRegen
+            BlindageProperties = TBlindageProperties
+            (
+                ResistanceFront = TResistanceTypeRTTI(Family=ResistanceFamily_infanterie Index=1)
+                ResistanceSides = TResistanceTypeRTTI(Family=ResistanceFamily_infanterie Index=1)
+                ResistanceRear = TResistanceTypeRTTI(Family=ResistanceFamily_infanterie Index=1)
+                ResistanceTop = TResistanceTypeRTTI(Family=ResistanceFamily_infanterie Index=1)
+                ExplosiveReactiveArmor = False
+            )
+            KillWhenDamagesReachMax = True
+            HitRollECM = 0.0
+            UseTopArmorAgainstFire = True
+        ),
+        TDangerousnessModuleDescriptor(Dangerousness  = 7),
+        TRoutModuleDescriptor(MoralLevel = 0),
+        ~/FacingInfosModuleDescriptor,
+        TGenericMovementModuleDescriptor
+        (
+            MaxSpeedInKmph = 9
+            PathfindType = $/Pathfind/PathfindTypes/Infantry
+        ),
+        TLandMovementModuleDescriptor
+        (
+            UnitMovingType = EUnitMovingType/Infantry
+            SpeedBonusFactorOnRoad = 2.22
+            MaxAccelerationGRU = 11.0
+            MaxDecelerationGRU = 4.0
+            TempsDemiTour = 5.0
+            VehicleSizeInMeter = [3.0, 2.0]
+            EngineCooldownTime = 0
+            TerrainSpeedFactors = $/GFX/Terrains/InfantryTerrainSpeedFactors
+        ),
+        TScannerConfigurationDescriptor
+        (
+            VisionRangesGRU = MAP [
+                ( EVisionRange/Standard, 3500.0 ),
+                ( EVisionRange/LowAltitude, 4947.0 ),
+                ( EVisionRange/HighAltitude, 10601.0 ),
+            ]
+            OpticalStrengths = MAP [
+                ( EOpticalStrength/Standard, 2473.0 ),
+                ( EOpticalStrength/LowAltitude, 2473.0 ),
+                ( EOpticalStrength/HighAltitude, 4240.0 ),
+            ]
+        ),
+        TReverseScannerWithIdentificationDescriptor
+        (
+            IdentifyBaseProbability     = 0.2
+            TimeBetweenEachIdentifyRoll = 12.0
+            VisibilityRuleDescriptor    = $/GFX/VisionRules/StandardWargameVisibilityRollRule
+        ),
+        TTransportableModuleDescriptor
+        (
+            TransportedTexture                     = "UseInGame_Transport_flak"
+            TransportedSoldier                     = 'DCA_GAI_BO1_20mm_SWI'
+            NbSeatsOccupied                        = 1
+            TimeToLoad                             = 0
+            IsTowable                              = False
+        ),
+        UnitCadaverGeneratorModuleDescriptor
+        (
+            KillMode = EKillMode/Vehicle
+            CadaverDuration = ~/CadaverDurationApresFeu
+            DeathExplosionAmmo = $/GFX/Weapon/Ammo_Mort_Unite_infanterie
+        ),
+        TIAStratModuleDescriptor
+        (
+            DatabaseId = 0
+            GameplayBehavior = EGameplayBehavior/Nothing | EGameplayBehavior/TacticalAttackInCover
+        ),
+        ~/IAStratZoneIndexModuleDescriptor,
+        ~/UnitStateEngineUnitModuleDescriptor,
+        ~/UnitStateEngineSubUnitModuleDescriptor,
+        ~/SelectionModuleDescriptor,
+        ~/EffectApplierModuleDescriptor,
+        TProductionModuleDescriptor
+        (
+            FactoryType        = Factory/DCA
+            ProductionTime     = 5
+            ProductionRessourcesNeeded = MAP [
+                ($/GFX/Resources/Resource_CommandPoints, 25),
+                ($/GFX/Resources/Resource_Tickets, 2),
+            ]
+        ),
+        ~/InfluencePositionModuleDescriptor,
+        ~/InfluenceDataModuleDescriptor,
+        TAttackReactionModuleDescriptor
+        (
+            CanAssist = True
+            AssistRequestBroadcastRadiusGRU = 0.0
+            DistanceToFleeGRU = 353
+            MaxDistanceForOffensiveReactionGRU = 353
+            MaxDistanceForEngagementGRU = 0.0
+            SearchedTagsInEngagementTarget = [
+               "AllUnits",
+            ]
+        ),
+        TMinimapDisplayModuleDescriptor
+        (
+            Texture = "Texture_Minimap_Unit_unit"
+            FollowUnitOrientation = False
+        ),
+        TOrderConfigModuleDescriptor
+        (
+            ValidOrders = ~/Descriptor_OrderAvailability_DCA_GAI_BO1_20mm_SWI
+        ),
+        TOrderableModuleDescriptor
+        (
+            UnlockableOrders = ~/Descriptor_OrderAvailability_DCA_GAI_BO1_20mm_SWI
+        ),
+        ~/OrderDisplayModuleDescriptor,
+        ~/GroupableUnitModuleDescriptor,
+        TTacticalLabelModuleDescriptor
+        (
+            MultiSelectionSortingOrder = 17025
+            IdentifiedTexture = TBUCKToolAlternativeValues_TUIValueTextureNameFromTEugBMutableInteger
+            (
+                CommandNameTrigger = ~/SpecificCommandName/UpdateGUIFromIconType
+                Alterator = $/GUIOption/IconType
+                Values =
+                [
+                    "Texture_RTS_H_AA_veh",
+                    "Texture_AA_veh"
+                ]
+            )
+            UnidentifiedTexture = TBUCKToolAlternativeValues_TUIValueTextureNameFromTEugBMutableInteger
+            (
+                CommandNameTrigger = ~/SpecificCommandName/UpdateGUIFromIconType
+                Alterator = $/GUIOption/IconType
+                Values =
+                [
+                    "Texture_RTS_H_infantry_nonIdentifie",
+                    "Texture_infantry_nonIdentifie"
+                ]
+            )
+            PositionHeightOffset = 1000.0
+        ),
+        ~/TargetDataModuleDescriptor,
+        TStrategicDataModuleDescriptor
+        (
+            UnitAttackValue = 14
+            UnitDefenseValue = 26
+            UnitBonusXpPerLevelValue = 1
+        ),
+        TUnitUIModuleDescriptor
+        (
+            PriceCategory = 'tank_D'
+            UnitRole = 'AA'
+            SpecialtiesList = [
+            ]
+            NameToken = 'LVKM4070'
+            InfoPanelConfigurationToken = 'Infantry'
+            DisplayRoadSpeedInKmph = 16
+            MenuIconTexture = 'Texture_RTS_H_AA_veh'
+            ButtonTexture = 'Texture_Button_Unit_DCA_GAI_BO1_20mm_SWI'
+            TypeStrategicCount = ETypeStrategicDetailedCount/AA_Veh
+        ),
+        TUnitUpkeepModuleDescriptor( UpkeepPercentage = 1.0 ),
+        TVisualShootPositionsModuleDescriptor(),
+        TCameraShowroomModuleDescriptor
+        (
+            SpawnType = EShowroomSpawnType/Vehicle
+            ShowRoomBlackHoleIdentifier = "showroom_DCA_GAI_BO1_20mm_SWI"
+            HasServants = False
+        ),
+    ]
+)
+export Descriptor_Unit_DCA_Lvakan_M36_SWE is TEntityDescriptor
+(
+    DescriptorId       = GUID:{d8c2d029-9942-4d70-b6df-d27a1b440698}
+    ClassNameForDebug  = 'Unit_DCA_Lvakan_M36_SWE'
+    ModulesDescriptors = [
+        TTypeUnitModuleDescriptor
+        (
+            Coalition                        = TWargameCoalition/NATO
+            MotherCountry                    = 'SWE'
+            AcknowUnitTypes = [
+                ~/TAcknowUnitType_CanonAA,
+            ]
+        ),
+        TFormationModuleDescriptor(TypeUnitFormation = 'Artillerie'),
+        TankFlagsModuleDescriptor,
+        $/GFX/CriticalEffects/CriticalEffectModule_Vehicule_ArmeSansTourelle,
+        ~/TargetCoordinatorModuleDescriptor,
+        ~/UnitPositionModuleDescriptor,
+        ~/PlayerMissionModuleDescriptor,
+        ~/LinkTeamModuleDescriptor,
+        TTagsModuleDescriptor
+        (
+            TagSet = [
+                "AllUnits",
+                "AllowedForMissileRoE",
+                "Canon_AA",
+                "Canon_AA_Porte",
+                "GroundUnits",
+                "UNITE_DCA_Lvakan_M36_SWE",
+                "Unite",
+                "Unite_transportable",
+            ]
+        ),
+        TExperienceModuleDescriptor
+        (
+            ExperienceLevelsPackDescriptor = ~/ExperienceLevelsPackDescriptor_XP_pack_simple_v3
+            ExperienceMultiplierBonusOnKill = ~/ExperienceMultiplierBonusOnKill
+        ),
+        TVisibilityModuleDescriptor
+        (
+            UnitConcealmentBonus = 2.0
+        ),
+        VehicleApparenceModuleDescriptor
+        (
+            MimeticName = "DCA_Bofors_L60_DK"
+            BlackHoleKey = "DCA_Bofors_L60_DK"
+            ReferenceMesh = $/GFX/DepictionResources/Modele_DCA_Bofors_L60_DK
+        ),
+        TAutoCoverModuleDescriptor
+        (
+            AutoCoverRangeGRU          = 123.0
+            OccupationRadiusGRU        = 35.0
+            TerrainList                = [~/ETerrainType/ForetLegere, ~/ETerrainType/ForetDense, ]
+            UseTerrainsForEscape       = False
+        ),
+        $/GFX/Weapon/WeaponDescriptor_DCA_Lvakan_M36_SWE,
+        TBaseDamageModuleDescriptor
+        (
+            MaxPhysicalDamages = 4
+            MaxSuppressionDamages = ~/Infanterie_MaxSuppressionDamages
+            MaxStunDamages = ~/Infanterie_MaxStunDamages
+            PhysicalDamageLevelsPack = ~/DamageLevelsPackDescriptor_Default_pack_paliers_degats_phy
+            SuppressDamageLevelsPack = ~/DamageLevelsPackDescriptor_GroundUnits_packSupp
+            StunDamageLevelsPack = ~/DamageLevelsPackDescriptor_Unit_packStun_aa
+        ),
+        TDamageModuleDescriptor
+        (
+            SuppressDamagesRegenRatio = ~/Infanterie_SuppressDamagesRegenRatioList
+            StunDamagesRegen = ~/Infanterie_StunDamagesRegen
+            BlindageProperties = TBlindageProperties
+            (
+                ResistanceFront = TResistanceTypeRTTI(Family=ResistanceFamily_infanterie Index=1)
+                ResistanceSides = TResistanceTypeRTTI(Family=ResistanceFamily_infanterie Index=1)
+                ResistanceRear = TResistanceTypeRTTI(Family=ResistanceFamily_infanterie Index=1)
+                ResistanceTop = TResistanceTypeRTTI(Family=ResistanceFamily_infanterie Index=1)
+                ExplosiveReactiveArmor = False
+            )
+            KillWhenDamagesReachMax = True
+            HitRollECM = 0.0
+            UseTopArmorAgainstFire = True
+        ),
+        TDangerousnessModuleDescriptor(Dangerousness  = 9),
+        TRoutModuleDescriptor(MoralLevel = 0),
+        ~/FacingInfosModuleDescriptor,
+        TGenericMovementModuleDescriptor
+        (
+            MaxSpeedInKmph = 9
+            PathfindType = $/Pathfind/PathfindTypes/Infantry
+        ),
+        TLandMovementModuleDescriptor
+        (
+            UnitMovingType = EUnitMovingType/Infantry
+            SpeedBonusFactorOnRoad = 2.22
+            MaxAccelerationGRU = 11.0
+            MaxDecelerationGRU = 4.0
+            TempsDemiTour = 5.0
+            VehicleSizeInMeter = [6.0, 3.0]
+            EngineCooldownTime = 1.5
+            TerrainSpeedFactors = $/GFX/Terrains/InfantryTerrainSpeedFactors
+        ),
+        TScannerConfigurationDescriptor
+        (
+            VisionRangesGRU = MAP [
+                ( EVisionRange/Standard, 3500.0 ),
+                ( EVisionRange/LowAltitude, 4947.0 ),
+                ( EVisionRange/HighAltitude, 10601.0 ),
+            ]
+            OpticalStrengths = MAP [
+                ( EOpticalStrength/Standard, 2473.0 ),
+                ( EOpticalStrength/LowAltitude, 2473.0 ),
+                ( EOpticalStrength/HighAltitude, 4240.0 ),
+            ]
+        ),
+        TReverseScannerWithIdentificationDescriptor
+        (
+            IdentifyBaseProbability     = 0.2
+            TimeBetweenEachIdentifyRoll = 12.0
+            VisibilityRuleDescriptor    = $/GFX/VisionRules/StandardWargameVisibilityRollRule
+        ),
+        TTransportableModuleDescriptor
+        (
+            TransportedTexture                     = "UseInGame_Transport_flak"
+            TransportedSoldier                     = 'DCA_Bofors_L60_DK'
+            NbSeatsOccupied                        = 1
+            TimeToLoad                             = CanonsLoadingTime
+            IsTowable                              = True
+        ),
+        UnitCadaverGeneratorModuleDescriptor
+        (
+            KillMode = EKillMode/Vehicle
+            CadaverDuration = ~/CadaverDurationApresFeu
+            DeathExplosionAmmo = $/GFX/Weapon/Ammo_Mort_Unite_faible
+        ),
+        TIAStratModuleDescriptor
+        (
+            DatabaseId = 0
+            GameplayBehavior = EGameplayBehavior/Nothing | EGameplayBehavior/TacticalAttackInCover
+        ),
+        ~/IAStratZoneIndexModuleDescriptor,
+        ~/UnitStateEngineUnitModuleDescriptor,
+        ~/UnitStateEngineSubUnitModuleDescriptor,
+        ~/SelectionModuleDescriptor,
+        ~/EffectApplierModuleDescriptor,
+        TProductionModuleDescriptor
+        (
+            FactoryType        = Factory/DCA
+            ProductionTime     = 5
+            ProductionRessourcesNeeded = MAP [
+                ($/GFX/Resources/Resource_CommandPoints, 25),
+                ($/GFX/Resources/Resource_Tickets, 2),
+            ]
+        ),
+        ~/InfluencePositionModuleDescriptor,
+        ~/InfluenceDataModuleDescriptor,
+        TAttackReactionModuleDescriptor
+        (
+            CanAssist = False
+            AssistRequestBroadcastRadiusGRU = 0.0
+            DistanceToFleeGRU = 353
+            MaxDistanceForOffensiveReactionGRU = 353
+            MaxDistanceForEngagementGRU = 0.0
+            SearchedTagsInEngagementTarget = [
+               "AllUnits",
+            ]
+        ),
+        TMinimapDisplayModuleDescriptor
+        (
+            Texture = "Texture_Minimap_Unit_unit"
+            FollowUnitOrientation = False
+        ),
+        TOrderConfigModuleDescriptor
+        (
+            ValidOrders = ~/Descriptor_OrderAvailability_DCA_Bofors_L60_DK
+        ),
+        TOrderableModuleDescriptor
+        (
+            UnlockableOrders = ~/Descriptor_OrderAvailability_DCA_Bofors_L60_DK
+        ),
+        ~/OrderDisplayModuleDescriptor,
+        ~/GroupableUnitModuleDescriptor,
+        TTacticalLabelModuleDescriptor
+        (
+            MultiSelectionSortingOrder = 17025
+            IdentifiedTexture = TBUCKToolAlternativeValues_TUIValueTextureNameFromTEugBMutableInteger
+            (
+                CommandNameTrigger = ~/SpecificCommandName/UpdateGUIFromIconType
+                Alterator = $/GUIOption/IconType
+                Values =
+                [
+                    "Texture_RTS_H_AA_veh",
+                    "Texture_AA_veh"
+                ]
+            )
+            UnidentifiedTexture = TBUCKToolAlternativeValues_TUIValueTextureNameFromTEugBMutableInteger
+            (
+                CommandNameTrigger = ~/SpecificCommandName/UpdateGUIFromIconType
+                Alterator = $/GUIOption/IconType
+                Values =
+                [
+                    "Texture_RTS_H_infantry_nonIdentifie",
+                    "Texture_infantry_nonIdentifie"
+                ]
+            )
+            PositionHeightOffset = 1000.0
+        ),
+        ~/TargetDataModuleDescriptor,
+        TStrategicDataModuleDescriptor
+        (
+            UnitAttackValue = 14
+            UnitDefenseValue = 26
+            UnitBonusXpPerLevelValue = 1
+        ),
+        TUnitUIModuleDescriptor
+        (
+            PriceCategory = 'tank_D'
+            UnitRole = 'AA'
+            SpecialtiesList = [
+            ]
+            NameToken = 'LVKMM36'
+            InfoPanelConfigurationToken = 'Infantry'
+            DisplayRoadSpeedInKmph = 16
+            UpgradeFromUnit = Descriptor_Unit_DCA_Lvakan_M4070_SWE
+            MenuIconTexture = 'Texture_RTS_H_AA_veh'
+            ButtonTexture = 'Texture_Button_Unit_DCA_Bofors_L60_DK'
+            TypeStrategicCount = ETypeStrategicDetailedCount/AA_Veh
+        ),
+        TUnitUpkeepModuleDescriptor( UpkeepPercentage = 1.0 ),
+        TVisualShootPositionsModuleDescriptor(),
+        TCameraShowroomModuleDescriptor
+        (
+            SpawnType = EShowroomSpawnType/Vehicle
+            ShowRoomBlackHoleIdentifier = "showroom_DCA_Bofors_L60_DK"
+            HasServants = False
+        ),
+    ]
+)
+export Descriptor_Unit_DCA_Lvakan_M48_SWE is TEntityDescriptor
+(
+    DescriptorId       = GUID:{b8a46285-a6ff-4954-a2f5-6e6501a0f236}
+    ClassNameForDebug  = 'Unit_DCA_Lvakan_M48_SWE'
+    ModulesDescriptors = [
+        TTypeUnitModuleDescriptor
+        (
+            Coalition                        = TWargameCoalition/NATO
+            MotherCountry                    = 'SWE'
+            AcknowUnitTypes = [
+                ~/TAcknowUnitType_CanonAA,
+            ]
+        ),
+        TFormationModuleDescriptor(TypeUnitFormation = 'Artillerie'),
+        TankFlagsModuleDescriptor,
+        $/GFX/CriticalEffects/CriticalEffectModule_Vehicule_ArmeSansTourelle,
+        ~/TargetCoordinatorModuleDescriptor,
+        ~/UnitPositionModuleDescriptor,
+        ~/PlayerMissionModuleDescriptor,
+        ~/LinkTeamModuleDescriptor,
+        TTagsModuleDescriptor
+        (
+            TagSet = [
+                "AllUnits",
+                "AllowedForMissileRoE",
+                "Canon_AA",
+                "Canon_AA_Porte",
+                "GroundUnits",
+                "UNITE_DCA_Lvakan_M48_SWE",
+                "Unite",
+                "Unite_transportable",
+            ]
+        ),
+        TExperienceModuleDescriptor
+        (
+            ExperienceLevelsPackDescriptor = ~/ExperienceLevelsPackDescriptor_XP_pack_simple_v3
+            ExperienceMultiplierBonusOnKill = ~/ExperienceMultiplierBonusOnKill
+        ),
+        TVisibilityModuleDescriptor
+        (
+            UnitConcealmentBonus = 2.0
+        ),
+        VehicleApparenceModuleDescriptor
+        (
+            MimeticName = "Bofors_40mm_RFA"
+            BlackHoleKey = "Bofors_40mm_RFA"
+            ReferenceMesh = $/GFX/DepictionResources/Modele_Bofors_40mm_RFA
+        ),
+        TAutoCoverModuleDescriptor
+        (
+            AutoCoverRangeGRU          = 123.0
+            OccupationRadiusGRU        = 35.0
+            TerrainList                = [~/ETerrainType/ForetLegere, ~/ETerrainType/ForetDense, ]
+            UseTerrainsForEscape       = False
+        ),
+        $/GFX/Weapon/WeaponDescriptor_DCA_Lvakan_M48_SWE,
+        TBaseDamageModuleDescriptor
+        (
+            MaxPhysicalDamages = 4
+            MaxSuppressionDamages = ~/Infanterie_MaxSuppressionDamages
+            MaxStunDamages = ~/Infanterie_MaxStunDamages
+            PhysicalDamageLevelsPack = ~/DamageLevelsPackDescriptor_Default_pack_paliers_degats_phy
+            SuppressDamageLevelsPack = ~/DamageLevelsPackDescriptor_GroundUnits_packSupp
+            StunDamageLevelsPack = ~/DamageLevelsPackDescriptor_Unit_packStun_aa
+        ),
+        TDamageModuleDescriptor
+        (
+            SuppressDamagesRegenRatio = ~/Infanterie_SuppressDamagesRegenRatioList
+            StunDamagesRegen = ~/Infanterie_StunDamagesRegen
+            BlindageProperties = TBlindageProperties
+            (
+                ResistanceFront = TResistanceTypeRTTI(Family=ResistanceFamily_infanterie Index=1)
+                ResistanceSides = TResistanceTypeRTTI(Family=ResistanceFamily_infanterie Index=1)
+                ResistanceRear = TResistanceTypeRTTI(Family=ResistanceFamily_infanterie Index=1)
+                ResistanceTop = TResistanceTypeRTTI(Family=ResistanceFamily_infanterie Index=1)
+                ExplosiveReactiveArmor = False
+            )
+            KillWhenDamagesReachMax = True
+            HitRollECM = 0.0
+            UseTopArmorAgainstFire = True
+        ),
+        TDangerousnessModuleDescriptor(Dangerousness  = 9),
+        TRoutModuleDescriptor(MoralLevel = 0),
+        ~/FacingInfosModuleDescriptor,
+        TGenericMovementModuleDescriptor
+        (
+            MaxSpeedInKmph = 9
+            PathfindType = $/Pathfind/PathfindTypes/Infantry
+        ),
+        TLandMovementModuleDescriptor
+        (
+            UnitMovingType = EUnitMovingType/Infantry
+            SpeedBonusFactorOnRoad = 2.22
+            MaxAccelerationGRU = 11.0
+            MaxDecelerationGRU = 4.0
+            TempsDemiTour = 5.0
+            VehicleSizeInMeter = [6.0, 3.0]
+            EngineCooldownTime = 1.5
+            TerrainSpeedFactors = $/GFX/Terrains/InfantryTerrainSpeedFactors
+        ),
+        TScannerConfigurationDescriptor
+        (
+            VisionRangesGRU = MAP [
+                ( EVisionRange/Standard, 3500.0 ),
+                ( EVisionRange/LowAltitude, 4947.0 ),
+                ( EVisionRange/HighAltitude, 10601.0 ),
+            ]
+            OpticalStrengths = MAP [
+                ( EOpticalStrength/Standard, 2473.0 ),
+                ( EOpticalStrength/LowAltitude, 2473.0 ),
+                ( EOpticalStrength/HighAltitude, 4240.0 ),
+            ]
+        ),
+        TReverseScannerWithIdentificationDescriptor
+        (
+            IdentifyBaseProbability     = 0.2
+            TimeBetweenEachIdentifyRoll = 12.0
+            VisibilityRuleDescriptor    = $/GFX/VisionRules/StandardWargameVisibilityRollRule
+        ),
+        TTransportableModuleDescriptor
+        (
+            TransportedTexture                     = "UseInGame_Transport_flak"
+            TransportedSoldier                     = 'Bofors_40mm_RFA'
+            NbSeatsOccupied                        = 1
+            TimeToLoad                             = CanonsLoadingTime
+            IsTowable                              = True
+        ),
+        UnitCadaverGeneratorModuleDescriptor
+        (
+            KillMode = EKillMode/Vehicle
+            CadaverDuration = ~/CadaverDurationApresFeu
+            DeathExplosionAmmo = $/GFX/Weapon/Ammo_Mort_Unite_faible
+        ),
+        TIAStratModuleDescriptor
+        (
+            DatabaseId = 0
+            GameplayBehavior = EGameplayBehavior/Nothing | EGameplayBehavior/TacticalAttackInCover
+        ),
+        ~/IAStratZoneIndexModuleDescriptor,
+        ~/UnitStateEngineUnitModuleDescriptor,
+        ~/UnitStateEngineSubUnitModuleDescriptor,
+        ~/SelectionModuleDescriptor,
+        ~/EffectApplierModuleDescriptor,
+        TProductionModuleDescriptor
+        (
+            FactoryType        = Factory/DCA
+            ProductionTime     = 5
+            ProductionRessourcesNeeded = MAP [
+                ($/GFX/Resources/Resource_CommandPoints, 35),
+                ($/GFX/Resources/Resource_Tickets, 2),
+            ]
+        ),
+        ~/InfluencePositionModuleDescriptor,
+        ~/InfluenceDataModuleDescriptor,
+        TAttackReactionModuleDescriptor
+        (
+            CanAssist = False
+            AssistRequestBroadcastRadiusGRU = 0.0
+            DistanceToFleeGRU = 353
+            MaxDistanceForOffensiveReactionGRU = 353
+            MaxDistanceForEngagementGRU = 0.0
+            SearchedTagsInEngagementTarget = [
+               "AllUnits",
+            ]
+        ),
+        TMinimapDisplayModuleDescriptor
+        (
+            Texture = "Texture_Minimap_Unit_unit"
+            FollowUnitOrientation = False
+        ),
+        TOrderConfigModuleDescriptor
+        (
+            ValidOrders = ~/Descriptor_OrderAvailability_Bofors_40mm_RFA
+        ),
+        TOrderableModuleDescriptor
+        (
+            UnlockableOrders = ~/Descriptor_OrderAvailability_Bofors_40mm_RFA
+        ),
+        ~/OrderDisplayModuleDescriptor,
+        ~/GroupableUnitModuleDescriptor,
+        TTacticalLabelModuleDescriptor
+        (
+            MultiSelectionSortingOrder = 17035
+            IdentifiedTexture = TBUCKToolAlternativeValues_TUIValueTextureNameFromTEugBMutableInteger
+            (
+                CommandNameTrigger = ~/SpecificCommandName/UpdateGUIFromIconType
+                Alterator = $/GUIOption/IconType
+                Values =
+                [
+                    "Texture_RTS_H_AA_veh",
+                    "Texture_AA_veh"
+                ]
+            )
+            UnidentifiedTexture = TBUCKToolAlternativeValues_TUIValueTextureNameFromTEugBMutableInteger
+            (
+                CommandNameTrigger = ~/SpecificCommandName/UpdateGUIFromIconType
+                Alterator = $/GUIOption/IconType
+                Values =
+                [
+                    "Texture_RTS_H_infantry_nonIdentifie",
+                    "Texture_infantry_nonIdentifie"
+                ]
+            )
+            PositionHeightOffset = 1000.0
+        ),
+        ~/TargetDataModuleDescriptor,
+        TStrategicDataModuleDescriptor
+        (
+            UnitAttackValue = 14
+            UnitDefenseValue = 26
+            UnitBonusXpPerLevelValue = 1
+        ),
+        TUnitUIModuleDescriptor
+        (
+            PriceCategory = 'tank_D'
+            UnitRole = 'AA'
+            SpecialtiesList = [
+            ]
+            NameToken = 'LVKMM48'
+            InfoPanelConfigurationToken = 'Infantry'
+            DisplayRoadSpeedInKmph = 16
+            UpgradeFromUnit = Descriptor_Unit_DCA_Lvakan_M36_SWE
+            MenuIconTexture = 'Texture_RTS_H_AA_veh'
+            ButtonTexture = 'Texture_Button_Unit_Bofors_40mm_RFA'
+            TypeStrategicCount = ETypeStrategicDetailedCount/AA_Veh
+        ),
+        TUnitUpkeepModuleDescriptor( UpkeepPercentage = 1.0 ),
+        TVisualShootPositionsModuleDescriptor(),
+        TCameraShowroomModuleDescriptor
+        (
+            SpawnType = EShowroomSpawnType/Vehicle
+            ShowRoomBlackHoleIdentifier = "showroom_Bofors_40mm_RFA"
+            HasServants = False
+        ),
+    ]
+)
+export Descriptor_Unit_DCA_LVS_75M_SWE is TEntityDescriptor
+(
+    DescriptorId       = GUID:{4b7da63d-3c9c-4ec2-92bf-afeb3c2f10b3}
+    ClassNameForDebug  = 'Unit_DCA_LVS_75M_SWE'
+    ModulesDescriptors = [
+        TTypeUnitModuleDescriptor
+        (
+            Coalition                        = TWargameCoalition/NATO
+            MotherCountry                    = 'SWE'
+            AcknowUnitTypes = [
+                ~/TAcknowUnitType_CanonAA,
+            ]
+        ),
+        TFormationModuleDescriptor(TypeUnitFormation = 'Artillerie'),
+        TankFlagsModuleDescriptor,
+        $/GFX/CriticalEffects/CriticalEffectModule_Vehicule_ArmeSansTourelle,
+        ~/TargetCoordinatorModuleDescriptor,
+        ~/UnitPositionModuleDescriptor,
+        ~/PlayerMissionModuleDescriptor,
+        ~/LinkTeamModuleDescriptor,
+        TTagsModuleDescriptor
+        (
+            TagSet = [
+                "AllUnits",
+                "AllowedForMissileRoE",
+                "Canon_AA",
+                "Canon_AA_Porte",
+                "GroundUnits",
+                "UNITE_DCA_LVS_75M_SWE",
+                "Unite",
+                "Unite_transportable",
+            ]
+        ),
+        TExperienceModuleDescriptor
+        (
+            ExperienceLevelsPackDescriptor = ~/ExperienceLevelsPackDescriptor_XP_pack_simple_v3
+            ExperienceMultiplierBonusOnKill = ~/ExperienceMultiplierBonusOnKill
+        ),
+        TVisibilityModuleDescriptor
+        (
+            UnitConcealmentBonus = 2.0
+        ),
+        VehicleApparenceModuleDescriptor
+        (
+            MimeticName = "DCA_Bofors_upgrade_NL"
+            BlackHoleKey = "DCA_Bofors_upgrade_NL"
+            ReferenceMesh = $/GFX/DepictionResources/Modele_DCA_Bofors_upgrade_NL
+        ),
+        TAutoCoverModuleDescriptor
+        (
+            AutoCoverRangeGRU          = 123.0
+            OccupationRadiusGRU        = 35.0
+            TerrainList                = [~/ETerrainType/ForetLegere, ~/ETerrainType/ForetDense, ]
+            UseTerrainsForEscape       = False
+        ),
+        $/GFX/Weapon/WeaponDescriptor_DCA_LVS_75M_SWE,
+        TBaseDamageModuleDescriptor
+        (
+            MaxPhysicalDamages = 4
+            MaxSuppressionDamages = ~/Infanterie_MaxSuppressionDamages
+            MaxStunDamages = ~/Infanterie_MaxStunDamages
+            PhysicalDamageLevelsPack = ~/DamageLevelsPackDescriptor_Default_pack_paliers_degats_phy
+            SuppressDamageLevelsPack = ~/DamageLevelsPackDescriptor_GroundUnits_packSupp
+            StunDamageLevelsPack = ~/DamageLevelsPackDescriptor_Unit_packStun_aa
+        ),
+        TDamageModuleDescriptor
+        (
+            SuppressDamagesRegenRatio = ~/Infanterie_SuppressDamagesRegenRatioList
+            StunDamagesRegen = ~/Infanterie_StunDamagesRegen
+            BlindageProperties = TBlindageProperties
+            (
+                ResistanceFront = TResistanceTypeRTTI(Family=ResistanceFamily_infanterie Index=1)
+                ResistanceSides = TResistanceTypeRTTI(Family=ResistanceFamily_infanterie Index=1)
+                ResistanceRear = TResistanceTypeRTTI(Family=ResistanceFamily_infanterie Index=1)
+                ResistanceTop = TResistanceTypeRTTI(Family=ResistanceFamily_infanterie Index=1)
+                ExplosiveReactiveArmor = False
+            )
+            KillWhenDamagesReachMax = True
+            HitRollECM = 0.0
+            UseTopArmorAgainstFire = True
+        ),
+        TDangerousnessModuleDescriptor(Dangerousness  = 9),
+        TRoutModuleDescriptor(MoralLevel = 0),
+        ~/FacingInfosModuleDescriptor,
+        TGenericMovementModuleDescriptor
+        (
+            MaxSpeedInKmph = 9
+            PathfindType = $/Pathfind/PathfindTypes/Infantry
+        ),
+        TLandMovementModuleDescriptor
+        (
+            UnitMovingType = EUnitMovingType/Infantry
+            SpeedBonusFactorOnRoad = 2.22
+            MaxAccelerationGRU = 11.0
+            MaxDecelerationGRU = 4.0
+            TempsDemiTour = 5.0
+            VehicleSizeInMeter = [6.0, 3.0]
+            EngineCooldownTime = 1.5
+            TerrainSpeedFactors = $/GFX/Terrains/InfantryTerrainSpeedFactors
+        ),
+        TScannerConfigurationDescriptor
+        (
+            VisionRangesGRU = MAP [
+                ( EVisionRange/Standard, 3500.0 ),
+                ( EVisionRange/LowAltitude, 4947.0 ),
+                ( EVisionRange/HighAltitude, 10601.0 ),
+            ]
+            OpticalStrengths = MAP [
+                ( EOpticalStrength/Standard, 2473.0 ),
+                ( EOpticalStrength/LowAltitude, 2473.0 ),
+                ( EOpticalStrength/HighAltitude, 4240.0 ),
+            ]
+        ),
+        TReverseScannerWithIdentificationDescriptor
+        (
+            IdentifyBaseProbability     = 0.2
+            TimeBetweenEachIdentifyRoll = 12.0
+            VisibilityRuleDescriptor    = $/GFX/VisionRules/StandardWargameVisibilityRollRule
+        ),
+        TTransportableModuleDescriptor
+        (
+            TransportedTexture                     = "UseInGame_Transport_flak"
+            TransportedSoldier                     = 'DCA_Bofors_upgrade_NL'
+            NbSeatsOccupied                        = 1
+            TimeToLoad                             = CanonsLoadingTime
+            IsTowable                              = True
+        ),
+        UnitCadaverGeneratorModuleDescriptor
+        (
+            KillMode = EKillMode/Vehicle
+            CadaverDuration = ~/CadaverDurationApresFeu
+            DeathExplosionAmmo = $/GFX/Weapon/Ammo_Mort_Unite_faible
+        ),
+        TIAStratModuleDescriptor
+        (
+            DatabaseId = 0
+            GameplayBehavior = EGameplayBehavior/Nothing | EGameplayBehavior/TacticalAttackInCover
+        ),
+        ~/IAStratZoneIndexModuleDescriptor,
+        ~/UnitStateEngineUnitModuleDescriptor,
+        ~/UnitStateEngineSubUnitModuleDescriptor,
+        ~/SelectionModuleDescriptor,
+        ~/EffectApplierModuleDescriptor,
+        TProductionModuleDescriptor
+        (
+            FactoryType        = Factory/DCA
+            ProductionTime     = 5
+            ProductionRessourcesNeeded = MAP [
+                ($/GFX/Resources/Resource_CommandPoints, 50),
+                ($/GFX/Resources/Resource_Tickets, 2),
+            ]
+        ),
+        ~/InfluencePositionModuleDescriptor,
+        ~/InfluenceDataModuleDescriptor,
+        TAttackReactionModuleDescriptor
+        (
+            CanAssist = False
+            AssistRequestBroadcastRadiusGRU = 0.0
+            DistanceToFleeGRU = 353
+            MaxDistanceForOffensiveReactionGRU = 353
+            MaxDistanceForEngagementGRU = 0.0
+            SearchedTagsInEngagementTarget = [
+               "AllUnits",
+            ]
+        ),
+        TMinimapDisplayModuleDescriptor
+        (
+            Texture = "Texture_Minimap_Unit_unit"
+            FollowUnitOrientation = False
+        ),
+        TOrderConfigModuleDescriptor
+        (
+            ValidOrders = ~/Descriptor_OrderAvailability_DCA_Bofors_upgrade_NL
+        ),
+        TOrderableModuleDescriptor
+        (
+            UnlockableOrders = ~/Descriptor_OrderAvailability_DCA_Bofors_upgrade_NL
+        ),
+        ~/OrderDisplayModuleDescriptor,
+        ~/GroupableUnitModuleDescriptor,
+        TTacticalLabelModuleDescriptor
+        (
+            MultiSelectionSortingOrder = 17050
+            IdentifiedTexture = TBUCKToolAlternativeValues_TUIValueTextureNameFromTEugBMutableInteger
+            (
+                CommandNameTrigger = ~/SpecificCommandName/UpdateGUIFromIconType
+                Alterator = $/GUIOption/IconType
+                Values =
+                [
+                    "Texture_RTS_H_AA_veh",
+                    "Texture_AA_veh"
+                ]
+            )
+            UnidentifiedTexture = TBUCKToolAlternativeValues_TUIValueTextureNameFromTEugBMutableInteger
+            (
+                CommandNameTrigger = ~/SpecificCommandName/UpdateGUIFromIconType
+                Alterator = $/GUIOption/IconType
+                Values =
+                [
+                    "Texture_RTS_H_infantry_nonIdentifie",
+                    "Texture_infantry_nonIdentifie"
+                ]
+            )
+            PositionHeightOffset = 1000.0
+        ),
+        ~/TargetDataModuleDescriptor,
+        TStrategicDataModuleDescriptor
+        (
+            UnitAttackValue = 14
+            UnitDefenseValue = 26
+            UnitBonusXpPerLevelValue = 1
+        ),
+        TUnitUIModuleDescriptor
+        (
+            PriceCategory = 'tank_C'
+            UnitRole = 'AA'
+            SpecialtiesList = [
+            ]
+            NameToken = 'LVS75M40'
+            InfoPanelConfigurationToken = 'Infantry'
+            DisplayRoadSpeedInKmph = 16
+            UpgradeFromUnit = Descriptor_Unit_DCA_Lvakan_M48_SWE
+            MenuIconTexture = 'Texture_RTS_H_AA_veh'
+            ButtonTexture = 'Texture_Button_Unit_DCA_Bofors_upgrade_NL'
+            TypeStrategicCount = ETypeStrategicDetailedCount/AA_Veh
+        ),
+        TUnitUpkeepModuleDescriptor( UpkeepPercentage = 1.0 ),
+        TVisualShootPositionsModuleDescriptor(),
+        TCameraShowroomModuleDescriptor
+        (
+            SpawnType = EShowroomSpawnType/Vehicle
+            ShowRoomBlackHoleIdentifier = "showroom_DCA_Bofors_upgrade_NL"
+            HasServants = False
+        ),
+    ]
+)
+export Descriptor_Unit_DCA_VLVK_M3037_SWE is TEntityDescriptor
+(
+    DescriptorId       = GUID:{bd72dc5c-c012-4bb5-b986-7a7e8fc07da0}
+    ClassNameForDebug  = 'Unit_DCA_VLVK_M3037_SWE'
+    ModulesDescriptors = [
+        TTypeUnitModuleDescriptor
+        (
+            Coalition                        = TWargameCoalition/PACT
+            MotherCountry                    = 'SWE'
+            AcknowUnitTypes = [
+                ~/TAcknowUnitType_CanonAA,
+            ]
+        ),
+        TFormationModuleDescriptor(TypeUnitFormation = 'Artillerie'),
+        TankFlagsModuleDescriptor,
+        $/GFX/CriticalEffects/CriticalEffectModule_Vehicule_ArmeSansTourelle,
+        ~/TargetCoordinatorModuleDescriptor,
+        ~/UnitPositionModuleDescriptor,
+        ~/PlayerMissionModuleDescriptor,
+        ~/LinkTeamModuleDescriptor,
+        TTagsModuleDescriptor
+        (
+            TagSet = [
+                "AllUnits",
+                "AllowedForMissileRoE",
+                "Canon_AA",
+                "Canon_AA_Porte",
+                "GroundUnits",
+                "UNITE_DCA_VLVK_M3037_SWE",
+                "Unite",
+                "Unite_transportable",
+            ]
+        ),
+        TExperienceModuleDescriptor
+        (
+            ExperienceLevelsPackDescriptor = ~/ExperienceLevelsPackDescriptor_XP_pack_simple_v3
+            ExperienceMultiplierBonusOnKill = ~/ExperienceMultiplierBonusOnKill
+        ),
+        TVisibilityModuleDescriptor
+        (
+            UnitConcealmentBonus = 2.0
+        ),
+        VehicleApparenceModuleDescriptor
+        (
+            MimeticName = "DCA_KS19_100mm_DDR"
+            BlackHoleKey = "DCA_KS19_100mm_DDR"
+            ReferenceMesh = $/GFX/DepictionResources/Modele_DCA_KS19_100mm_DDR
+        ),
+        TAutoCoverModuleDescriptor
+        (
+            AutoCoverRangeGRU          = 123.0
+            OccupationRadiusGRU        = 35.0
+            TerrainList                = [~/ETerrainType/ForetLegere, ~/ETerrainType/ForetDense, ]
+            UseTerrainsForEscape       = False
+        ),
+        $/GFX/Weapon/WeaponDescriptor_DCA_VLVK_M3037_SWE,
+        TBaseDamageModuleDescriptor
+        (
+            MaxPhysicalDamages = 4
+            MaxSuppressionDamages = ~/Infanterie_MaxSuppressionDamages
+            MaxStunDamages = ~/Infanterie_MaxStunDamages
+            PhysicalDamageLevelsPack = ~/DamageLevelsPackDescriptor_Default_pack_paliers_degats_phy
+            SuppressDamageLevelsPack = ~/DamageLevelsPackDescriptor_GroundUnits_packSupp
+            StunDamageLevelsPack = ~/DamageLevelsPackDescriptor_Unit_packStun_aa
+        ),
+        TDamageModuleDescriptor
+        (
+            SuppressDamagesRegenRatio = ~/Infanterie_SuppressDamagesRegenRatioList
+            StunDamagesRegen = ~/Infanterie_StunDamagesRegen
+            BlindageProperties = TBlindageProperties
+            (
+                ResistanceFront = TResistanceTypeRTTI(Family=ResistanceFamily_infanterie Index=1)
+                ResistanceSides = TResistanceTypeRTTI(Family=ResistanceFamily_infanterie Index=1)
+                ResistanceRear = TResistanceTypeRTTI(Family=ResistanceFamily_infanterie Index=1)
+                ResistanceTop = TResistanceTypeRTTI(Family=ResistanceFamily_infanterie Index=1)
+                ExplosiveReactiveArmor = False
+            )
+            KillWhenDamagesReachMax = True
+            HitRollECM = 0.0
+            UseTopArmorAgainstFire = True
+        ),
+        TDangerousnessModuleDescriptor(Dangerousness  = 26),
+        TRoutModuleDescriptor(MoralLevel = 0),
+        ~/FacingInfosModuleDescriptor,
+        TGenericMovementModuleDescriptor
+        (
+            MaxSpeedInKmph = 9
+            PathfindType = $/Pathfind/PathfindTypes/Infantry
+        ),
+        TLandMovementModuleDescriptor
+        (
+            UnitMovingType = EUnitMovingType/Infantry
+            SpeedBonusFactorOnRoad = 2.22
+            MaxAccelerationGRU = 11.0
+            MaxDecelerationGRU = 4.0
+            TempsDemiTour = 5.0
+            VehicleSizeInMeter = [6.0, 3.0]
+            EngineCooldownTime = 1.5
+            TerrainSpeedFactors = $/GFX/Terrains/InfantryTerrainSpeedFactors
+        ),
+        TScannerConfigurationDescriptor
+        (
+            VisionRangesGRU = MAP [
+                ( EVisionRange/Standard, 3500.0 ),
+                ( EVisionRange/LowAltitude, 4947.0 ),
+                ( EVisionRange/HighAltitude, 10601.0 ),
+            ]
+            OpticalStrengths = MAP [
+                ( EOpticalStrength/Standard, 2473.0 ),
+                ( EOpticalStrength/LowAltitude, 2473.0 ),
+                ( EOpticalStrength/HighAltitude, 4240.0 ),
+            ]
+        ),
+        TReverseScannerWithIdentificationDescriptor
+        (
+            IdentifyBaseProbability     = 0.2
+            TimeBetweenEachIdentifyRoll = 12.0
+            VisibilityRuleDescriptor    = $/GFX/VisionRules/StandardWargameVisibilityRollRule
+        ),
+        TTransportableModuleDescriptor
+        (
+            TransportedTexture                     = "UseInGame_Transport_flak"
+            TransportedSoldier                     = 'DCA_KS19_100mm_DDR'
+            NbSeatsOccupied                        = 1
+            TimeToLoad                             = CanonsLoadingTime
+            IsTowable                              = True
+        ),
+        UnitCadaverGeneratorModuleDescriptor
+        (
+            KillMode = EKillMode/Vehicle
+            CadaverDuration = ~/CadaverDurationApresFeu
+            DeathExplosionAmmo = $/GFX/Weapon/Ammo_Mort_Unite_faible
+        ),
+        TIAStratModuleDescriptor
+        (
+            DatabaseId = 0
+            GameplayBehavior = EGameplayBehavior/Nothing | EGameplayBehavior/TacticalAttackInCover
+        ),
+        ~/IAStratZoneIndexModuleDescriptor,
+        ~/UnitStateEngineUnitModuleDescriptor,
+        ~/UnitStateEngineSubUnitModuleDescriptor,
+        ~/SelectionModuleDescriptor,
+        ~/EffectApplierModuleDescriptor,
+        TCapaciteModuleDescriptor
+        (
+            DefaultSkillList = [
+                $/GFX/EffectCapacity/Capacite_reserviste,
+            ]
+        ),
+        TProductionModuleDescriptor
+        (
+            FactoryType        = Factory/DCA
+            ProductionTime     = 5
+            ProductionRessourcesNeeded = MAP [
+                ($/GFX/Resources/Resource_CommandPoints, 70),
+                ($/GFX/Resources/Resource_Tickets, 2),
+            ]
+        ),
+        ~/InfluencePositionModuleDescriptor,
+        ~/InfluenceDataModuleDescriptor,
+        TAttackReactionModuleDescriptor
+        (
+            CanAssist = False
+            AssistRequestBroadcastRadiusGRU = 0.0
+            DistanceToFleeGRU = 353
+            MaxDistanceForOffensiveReactionGRU = 353
+            MaxDistanceForEngagementGRU = 0.0
+            SearchedTagsInEngagementTarget = [
+               "AllUnits",
+            ]
+        ),
+        TMinimapDisplayModuleDescriptor
+        (
+            Texture = "Texture_Minimap_Unit_unit"
+            FollowUnitOrientation = False
+        ),
+        TOrderConfigModuleDescriptor
+        (
+            ValidOrders = ~/Descriptor_OrderAvailability_DCA_KS19_100mm_DDR
+        ),
+        TOrderableModuleDescriptor
+        (
+            UnlockableOrders = ~/Descriptor_OrderAvailability_DCA_KS19_100mm_DDR
+        ),
+        ~/OrderDisplayModuleDescriptor,
+        ~/GroupableUnitModuleDescriptor,
+        TTacticalLabelModuleDescriptor
+        (
+            MultiSelectionSortingOrder = 17070
+            IdentifiedTexture = TBUCKToolAlternativeValues_TUIValueTextureNameFromTEugBMutableInteger
+            (
+                CommandNameTrigger = ~/SpecificCommandName/UpdateGUIFromIconType
+                Alterator = $/GUIOption/IconType
+                Values =
+                [
+                    "Texture_RTS_H_AA_veh",
+                    "Texture_AA_veh"
+                ]
+            )
+            UnidentifiedTexture = TBUCKToolAlternativeValues_TUIValueTextureNameFromTEugBMutableInteger
+            (
+                CommandNameTrigger = ~/SpecificCommandName/UpdateGUIFromIconType
+                Alterator = $/GUIOption/IconType
+                Values =
+                [
+                    "Texture_RTS_H_infantry_nonIdentifie",
+                    "Texture_infantry_nonIdentifie"
+                ]
+            )
+            PositionHeightOffset = 1000.0
+        ),
+        ~/TargetDataModuleDescriptor,
+        TStrategicDataModuleDescriptor
+        (
+            UnitAttackValue = 11
+            UnitDefenseValue = 21
+            UnitBonusXpPerLevelValue = 1
+        ),
+        TUnitUIModuleDescriptor
+        (
+            PriceCategory = 'tank_B'
+            UnitRole = 'AA'
+            SpecialtiesList = [
+                '_reservist',
+            ]
+            NameToken = 'LKYVXDGXQK'
+            InfoPanelConfigurationToken = 'Infantry'
+            DisplayRoadSpeedInKmph = 16
+            UpgradeFromUnit = Descriptor_Unit_DCA_ZPU4_DDR
+            MenuIconTexture = 'Texture_RTS_H_AA_veh'
+            ButtonTexture = 'Texture_Button_Unit_DCA_KS19_100mm_DDR'
+            TypeStrategicCount = ETypeStrategicDetailedCount/AA_Veh
+        ),
+        TUnitUpkeepModuleDescriptor( UpkeepPercentage = 1.0 ),
+        TVisualShootPositionsModuleDescriptor(),
+        TCameraShowroomModuleDescriptor
+        (
+            SpawnType = EShowroomSpawnType/Vehicle
+            ShowRoomBlackHoleIdentifier = "showroom_DCA_KS19_100mm_DDR"
+            HasServants = False
+        ),
+    ]
+)
+export Descriptor_Unit_MANPAD_RBS69_SWE is TEntityDescriptor
+(
+    DescriptorId       = GUID:{7f0cd3ff-c5f9-4409-942b-207d33483c61}
+    ClassNameForDebug  = 'Unit_MANPAD_RBS69_SWE'
+    ModulesDescriptors = [
+        TTypeUnitModuleDescriptor
+        (
+            Coalition                        = TWargameCoalition/NATO
+            MotherCountry                    = 'SWE'
+            AcknowUnitTypes = [
+                ~/TAcknowUnitType_Inf,
+            ]
+        ),
+        TFormationModuleDescriptor(TypeUnitFormation = 'Char'),
+        InfantryFlagsModuleDescriptor,
+        $/GFX/CriticalEffects/CriticalEffectModule_Infanterie,
+        ~/TargetCoordinatorModuleDescriptor,
+        ~/UnitPositionModuleDescriptor,
+        ~/PlayerMissionModuleDescriptor,
+        ~/LinkTeamModuleDescriptor,
+        TTagsModuleDescriptor
+        (
+            TagSet = [
+                "AllUnits",
+                "AllowedForMissileRoE",
+                "Crew",
+                "GroundUnits",
+                "Inf_quartier_ok",
+                "Infanterie",
+                "Infanterie_AA",
+                "Infanterie_Spec_Defense",
+                "UNITE_MANPAD_RBS69_SWE",
+                "Unite",
+            ]
+        ),
+        TExperienceModuleDescriptor
+        (
+            ExperienceLevelsPackDescriptor = ~/ExperienceLevelsPackDescriptor_XP_pack_simple_v3
+            ExperienceMultiplierBonusOnKill = ~/ExperienceMultiplierBonusOnKill
+        ),
+        TVisibilityModuleDescriptor
+        (
+            UnitConcealmentBonus = 2.5
+        ),
+        InfantryApparenceModuleDescriptor
+        (
+            MimeticName = "squad_MANPAD_Stinger_C_NL"
+        ),
+        TAutoCoverModuleDescriptor
+        (
+            AutoCoverRangeGRU          = 123.0
+            OccupationRadiusGRU        = 35.0
+            TerrainList                = [~/ETerrainType/Batiment, ~/ETerrainType/Ruin, ~/ETerrainType/ForetLegere, ]
+            UseTerrainsForEscape       = True
+        ),
+        $/GFX/Weapon/WeaponDescriptor_MANPAD_RBS69_SWE,
+        TBaseDamageModuleDescriptor
+        (
+            MaxPhysicalDamages = 2
+            MaxSuppressionDamages = ~/Infanterie_MaxSuppressionDamages
+            MaxStunDamages = ~/Infanterie_MaxStunDamages
+            PhysicalDamageLevelsPack = ~/DamageLevelsPackDescriptor_Default_pack_paliers_degats_phy
+            SuppressDamageLevelsPack = ~/DamageLevelsPackDescriptor_GroundUnits_packSupp
+            StunDamageLevelsPack = ~/DamageLevelsPackDescriptor_Unit_packStun
+        ),
+        TDamageModuleDescriptor
+        (
+            SuppressDamagesRegenRatio = ~/Infanterie_SuppressDamagesRegenRatioList
+            StunDamagesRegen = ~/Infanterie_StunDamagesRegen
+            BlindageProperties = TBlindageProperties
+            (
+                ResistanceFront = TResistanceTypeRTTI(Family=ResistanceFamily_infanterie Index=1)
+                ResistanceSides = TResistanceTypeRTTI(Family=ResistanceFamily_infanterie Index=1)
+                ResistanceRear = TResistanceTypeRTTI(Family=ResistanceFamily_infanterie Index=1)
+                ResistanceTop = TResistanceTypeRTTI(Family=ResistanceFamily_infanterie Index=1)
+                ExplosiveReactiveArmor = False
+            )
+            KillWhenDamagesReachMax = True
+            HitRollECM = 0.0
+            UseTopArmorAgainstFire = True
+        ),
+        TDangerousnessModuleDescriptor(Dangerousness  = 9),
+        TRoutModuleDescriptor(MoralLevel = 0),
+        TInfantrySquadModuleDescriptor
+        (
+            SoldierCount = 2
+            SquadDataDescriptor = ~/SoldierSquadDataDescriptor
+            SoldierBlackHoleKey = 'MANPAD_Stinger_C_NL'
+            MimeticDescriptor   = Descriptor_Unit_MimeticUnit
+            (
+                DescriptorId = GUID:{4ea77dc4-3936-43b8-a616-e1d39089211d}
+                BlackHoleKey = 'MANPAD_Stinger_C_NL'
+            )
+        ),
+        ~/LineInfantrySquadSlotPositionsModuleDescriptor,
+        ~/FacingInfosModuleDescriptor,
+        TGenericMovementModuleDescriptor
+        (
+            MaxSpeedInKmph = 24
+            PathfindType = $/Pathfind/PathfindTypes/Infantry
+        ),
+        TLandMovementModuleDescriptor
+        (
+            UnitMovingType = EUnitMovingType/Infantry
+            SpeedBonusFactorOnRoad = 1.00
+            MaxAccelerationGRU = 11.0
+            MaxDecelerationGRU = 155.0
+            TempsDemiTour = 0.1
+            EngineCooldownTime = 0
+            TerrainSpeedFactors = $/GFX/Terrains/InfantryTerrainSpeedFactors
+        ),
+        TScannerConfigurationDescriptor
+        (
+            VisionRangesGRU = MAP [
+                ( EVisionRange/Standard, 3500.0 ),
+                ( EVisionRange/LowAltitude, 4947.0 ),
+                ( EVisionRange/HighAltitude, 8481.0 ),
+            ]
+            OpticalStrengths = MAP [
+                ( EOpticalStrength/Standard, 3180.0 ),
+                ( EOpticalStrength/LowAltitude, 3180.0 ),
+                ( EOpticalStrength/HighAltitude, 2826.0 ),
+            ]
+        ),
+        TReverseScannerWithIdentificationDescriptor
+        (
+            IdentifyBaseProbability     = 0.3
+            TimeBetweenEachIdentifyRoll = 10.0
+            VisibilityRuleDescriptor    = $/GFX/VisionRules/StandardWargameVisibilityRollRule
+        ),
+        TTransportableModuleDescriptor
+        (
+            TransportedTexture                     = "UseInGame_Transport_LAAD"
+            TransportedSoldier                     = 'Mortier_M29_81mm_NL'
+            NbSeatsOccupied                        = 1
+            TimeToLoad                             = 0
+            IsTowable                              = False
+        ),
+        UnitCadaverGeneratorModuleDescriptor
+        (
+            KillMode = EKillMode/Infantry
+            CadaverDuration = ~/CadaverDuration_Infanterie
+            DeathExplosionAmmo = $/GFX/Weapon/Ammo_Mort_Unite_infanterie
+        ),
+        TIAStratModuleDescriptor
+        (
+            DatabaseId = 0
+            GameplayBehavior = EGameplayBehavior/Nothing | EGameplayBehavior/TacticalAttackInCover
+        ),
+        ~/IAStratZoneIndexModuleDescriptor,
+        ~/UnitStateEngineUnitModuleDescriptor,
+        ~/UnitStateEngineSubUnitModuleDescriptor,
+        ~/SelectionModuleDescriptor,
+        ~/EffectApplierModuleDescriptor,
+        TProductionModuleDescriptor
+        (
+            FactoryType        = Factory/DCA
+            ProductionTime     = 5
+            ProductionRessourcesNeeded = MAP [
+                ($/GFX/Resources/Resource_CommandPoints, 25),
+                ($/GFX/Resources/Resource_Tickets, 1),
+            ]
+        ),
+        ~/InfluencePositionModuleDescriptor,
+        ~/InfluenceDataModuleDescriptor,
+        TAttackReactionModuleDescriptor
+        (
+            CanAssist = False
+            AssistRequestBroadcastRadiusGRU = 0.0
+            DistanceToFleeGRU = 353
+            MaxDistanceForOffensiveReactionGRU = 353
+            MaxDistanceForEngagementGRU = 0.0
+            SearchedTagsInEngagementTarget = [
+               "AllUnits",
+            ]
+        ),
+        TMinimapDisplayModuleDescriptor
+        (
+            Texture = "Texture_Minimap_Unit_inf"
+            FollowUnitOrientation = False
+        ),
+        TOrderConfigModuleDescriptor
+        (
+            ValidOrders = ~/Descriptor_OrderAvailability_MANPAD_Redeye_DK
+        ),
+        TOrderableModuleDescriptor
+        (
+            UnlockableOrders = ~/Descriptor_OrderAvailability_MANPAD_Redeye_DK
+        ),
+        ~/OrderDisplayModuleDescriptor,
+        ~/GroupableUnitModuleDescriptor,
+        TTacticalLabelModuleDescriptor
+        (
+            MultiSelectionSortingOrder = 13025
+            IdentifiedTexture = TBUCKToolAlternativeValues_TUIValueTextureNameFromTEugBMutableInteger
+            (
+                CommandNameTrigger = ~/SpecificCommandName/UpdateGUIFromIconType
+                Alterator = $/GUIOption/IconType
+                Values =
+                [
+                    "Texture_RTS_H_manpad",
+                    "Texture_manpad"
+                ]
+            )
+            UnidentifiedTexture = TBUCKToolAlternativeValues_TUIValueTextureNameFromTEugBMutableInteger
+            (
+                CommandNameTrigger = ~/SpecificCommandName/UpdateGUIFromIconType
+                Alterator = $/GUIOption/IconType
+                Values =
+                [
+                    "Texture_RTS_H_infantry_nonIdentifie",
+                    "Texture_infantry_nonIdentifie"
+                ]
+            )
+            PositionHeightOffset = 1000.0
+        ),
+        ~/LinkToDistrictModuleDescriptor,
+        ~/TargetDataModuleDescriptor,
+        TStrategicDataModuleDescriptor
+        (
+            UnitAttackValue = 1
+            UnitDefenseValue = 1
+            UnitBonusXpPerLevelValue = 1
+        ),
+        TUnitUIModuleDescriptor
+        (
+            PriceCategory = 'tank_C'
+            UnitRole = 'AA'
+            SpecialtiesList = [
+            ]
+            NameToken = 'PWTVLIYEDA'
+            InfoPanelConfigurationToken = 'Infantry'
+            MenuIconTexture = 'Texture_RTS_H_manpad'
+            ButtonTexture = 'Texture_Button_Unit_MANPAD_Redeye_DK'
+            TypeStrategicCount = ETypeStrategicDetailedCount/Manpad
+        ),
+        TUnitUpkeepModuleDescriptor( UpkeepPercentage = 1.0 ),
+        TVisualShootPositionsModuleDescriptor(),
+        TCameraShowroomModuleDescriptor
+        (
+            SpawnType = EShowroomSpawnType/Infantry
+            ShowRoomBlackHoleIdentifier = "squad_Rifles_DK"
+            HasServants = False
+        ),
+    ]
+)
+export Descriptor_Unit_MANPAD_RBS70_SWE is TEntityDescriptor
+(
+    DescriptorId       = GUID:{3ade04c6-365f-4441-b041-f4e84ac47d7a}
+    ClassNameForDebug  = 'Unit_MANPAD_RBS70_SWE'
+    ModulesDescriptors = [
+        TTypeUnitModuleDescriptor
+        (
+            Coalition                        = TWargameCoalition/NATO
+            MotherCountry                    = 'SWE'
+            AcknowUnitTypes = [
+                ~/TAcknowUnitType_Inf,
+            ]
+        ),
+        TFormationModuleDescriptor(TypeUnitFormation = 'Char'),
+        InfantryFlagsModuleDescriptor,
+        $/GFX/CriticalEffects/CriticalEffectModule_Infanterie,
+        ~/TargetCoordinatorModuleDescriptor,
+        ~/UnitPositionModuleDescriptor,
+        ~/PlayerMissionModuleDescriptor,
+        ~/LinkTeamModuleDescriptor,
+        TTagsModuleDescriptor
+        (
+            TagSet = [
+                "AllUnits",
+                "AllowedForMissileRoE",
+                "Crew",
+                "GroundUnits",
+                "Inf_quartier_ok",
+                "Infanterie",
+                "Infanterie_AA",
+                "Infanterie_Spec_Defense",
+                "UNITE_MANPAD_RBS70_SWE",
+                "Unite",
+            ]
+        ),
+        TExperienceModuleDescriptor
+        (
+            ExperienceLevelsPackDescriptor = ~/ExperienceLevelsPackDescriptor_XP_pack_simple_v3
+            ExperienceMultiplierBonusOnKill = ~/ExperienceMultiplierBonusOnKill
+        ),
+        TVisibilityModuleDescriptor
+        (
+            UnitConcealmentBonus = 2.5
+        ),
+        InfantryApparenceModuleDescriptor
+        (
+            MimeticName = "squad_MANPAD_Mistral_FR"
+        ),
+        TAutoCoverModuleDescriptor
+        (
+            AutoCoverRangeGRU          = 123.0
+            OccupationRadiusGRU        = 35.0
+            TerrainList                = [~/ETerrainType/Batiment, ~/ETerrainType/Ruin, ~/ETerrainType/ForetLegere, ]
+            UseTerrainsForEscape       = True
+        ),
+        $/GFX/Weapon/WeaponDescriptor_MANPAD_RBS70_SWE,
+        TBaseDamageModuleDescriptor
+        (
+            MaxPhysicalDamages = 3
+            MaxSuppressionDamages = ~/Infanterie_MaxSuppressionDamages
+            MaxStunDamages = ~/Infanterie_MaxStunDamages
+            PhysicalDamageLevelsPack = ~/DamageLevelsPackDescriptor_Default_pack_paliers_degats_phy
+            SuppressDamageLevelsPack = ~/DamageLevelsPackDescriptor_GroundUnits_packSupp
+            StunDamageLevelsPack = ~/DamageLevelsPackDescriptor_Unit_packStun
+        ),
+        TDamageModuleDescriptor
+        (
+            SuppressDamagesRegenRatio = ~/Infanterie_SuppressDamagesRegenRatioList
+            StunDamagesRegen = ~/Infanterie_StunDamagesRegen
+            BlindageProperties = TBlindageProperties
+            (
+                ResistanceFront = TResistanceTypeRTTI(Family=ResistanceFamily_infanterie Index=1)
+                ResistanceSides = TResistanceTypeRTTI(Family=ResistanceFamily_infanterie Index=1)
+                ResistanceRear = TResistanceTypeRTTI(Family=ResistanceFamily_infanterie Index=1)
+                ResistanceTop = TResistanceTypeRTTI(Family=ResistanceFamily_infanterie Index=1)
+                ExplosiveReactiveArmor = False
+            )
+            KillWhenDamagesReachMax = True
+            HitRollECM = 0.0
+            UseTopArmorAgainstFire = True
+        ),
+        TDangerousnessModuleDescriptor(Dangerousness  = 23),
+        TRoutModuleDescriptor(MoralLevel = 0),
+        TInfantrySquadModuleDescriptor
+        (
+            SoldierCount = 3
+            SquadDataDescriptor = ~/SoldierSquadDataDescriptor
+            SoldierBlackHoleKey = 'MANPAD_RBS70_OST'
+            MimeticDescriptor   = Descriptor_Unit_MimeticUnit
+            (
+                DescriptorId = GUID:{34c26795-eb0b-47e4-a78d-2ba8c079c15c}
+                BlackHoleKey = 'MANPAD_RBS70_OST'
+            )
+        ),
+        ~/LineInfantrySquadSlotPositionsModuleDescriptor,
+        ~/FacingInfosModuleDescriptor,
+        TGenericMovementModuleDescriptor
+        (
+            MaxSpeedInKmph = 24
+            PathfindType = $/Pathfind/PathfindTypes/Infantry
+        ),
+        TLandMovementModuleDescriptor
+        (
+            UnitMovingType = EUnitMovingType/Infantry
+            SpeedBonusFactorOnRoad = 1.00
+            MaxAccelerationGRU = 11.0
+            MaxDecelerationGRU = 155.0
+            TempsDemiTour = 0.1
+            EngineCooldownTime = 0
+            TerrainSpeedFactors = $/GFX/Terrains/MountaineerTerrainSpeedFactors
+        ),
+        TScannerConfigurationDescriptor
+        (
+            VisionRangesGRU = MAP [
+                ( EVisionRange/Standard, 3500.0 ),
+                ( EVisionRange/LowAltitude, 4947.0 ),
+                ( EVisionRange/HighAltitude, 8481.0 ),
+            ]
+            OpticalStrengths = MAP [
+                ( EOpticalStrength/Standard, 3180.0 ),
+                ( EOpticalStrength/LowAltitude, 3180.0 ),
+                ( EOpticalStrength/HighAltitude, 2826.0 ),
+            ]
+        ),
+        TReverseScannerWithIdentificationDescriptor
+        (
+            IdentifyBaseProbability     = 0.3
+            TimeBetweenEachIdentifyRoll = 10.0
+            VisibilityRuleDescriptor    = $/GFX/VisionRules/StandardWargameVisibilityRollRule
+        ),
+        TTransportableModuleDescriptor
+        (
+            TransportedTexture                     = "UseInGame_Transport_LAAD"
+            TransportedSoldier                     = 'MANPAD_Mistral_FR'
+            NbSeatsOccupied                        = 1
+            TimeToLoad                             = 0
+            IsTowable                              = False
+        ),
+        UnitCadaverGeneratorModuleDescriptor
+        (
+            KillMode = EKillMode/Infantry
+            CadaverDuration = ~/CadaverDuration_Infanterie
+            DeathExplosionAmmo = $/GFX/Weapon/Ammo_Mort_Unite_infanterie
+        ),
+        TIAStratModuleDescriptor
+        (
+            DatabaseId = 0
+            GameplayBehavior = EGameplayBehavior/Nothing | EGameplayBehavior/TacticalAttackInCover
+        ),
+        ~/IAStratZoneIndexModuleDescriptor,
+        ~/UnitStateEngineUnitModuleDescriptor,
+        ~/UnitStateEngineSubUnitModuleDescriptor,
+        ~/SelectionModuleDescriptor,
+        ~/EffectApplierModuleDescriptor,
+        TProductionModuleDescriptor
+        (
+            FactoryType        = Factory/DCA
+            ProductionTime     = 5
+            ProductionRessourcesNeeded = MAP [
+                ($/GFX/Resources/Resource_CommandPoints, 70),
+                ($/GFX/Resources/Resource_Tickets, 1),
+            ]
+        ),
+        ~/InfluencePositionModuleDescriptor,
+        ~/InfluenceDataModuleDescriptor,
+        TAttackReactionModuleDescriptor
+        (
+            CanAssist = False
+            AssistRequestBroadcastRadiusGRU = 0.0
+            DistanceToFleeGRU = 353
+            MaxDistanceForOffensiveReactionGRU = 353
+            MaxDistanceForEngagementGRU = 0.0
+            SearchedTagsInEngagementTarget = [
+               "AllUnits",
+            ]
+        ),
+        TMinimapDisplayModuleDescriptor
+        (
+            Texture = "Texture_Minimap_Unit_inf"
+            FollowUnitOrientation = False
+        ),
+        TOrderConfigModuleDescriptor
+        (
+            ValidOrders = ~/Descriptor_OrderAvailability_MANPAD_RBS70_OST
+        ),
+        TOrderableModuleDescriptor
+        (
+            UnlockableOrders = ~/Descriptor_OrderAvailability_MANPAD_RBS70_OST
+        ),
+        ~/OrderDisplayModuleDescriptor,
+        ~/GroupableUnitModuleDescriptor,
+        TTacticalLabelModuleDescriptor
+        (
+            MultiSelectionSortingOrder = 13070
+            IdentifiedTexture = TBUCKToolAlternativeValues_TUIValueTextureNameFromTEugBMutableInteger
+            (
+                CommandNameTrigger = ~/SpecificCommandName/UpdateGUIFromIconType
+                Alterator = $/GUIOption/IconType
+                Values =
+                [
+                    "Texture_RTS_H_manpad",
+                    "Texture_manpad"
+                ]
+            )
+            UnidentifiedTexture = TBUCKToolAlternativeValues_TUIValueTextureNameFromTEugBMutableInteger
+            (
+                CommandNameTrigger = ~/SpecificCommandName/UpdateGUIFromIconType
+                Alterator = $/GUIOption/IconType
+                Values =
+                [
+                    "Texture_RTS_H_infantry_nonIdentifie",
+                    "Texture_infantry_nonIdentifie"
+                ]
+            )
+            PositionHeightOffset = 1000.0
+        ),
+        ~/LinkToDistrictModuleDescriptor,
+        ~/TargetDataModuleDescriptor,
+        TStrategicDataModuleDescriptor
+        (
+            UnitAttackValue = 1
+            UnitDefenseValue = 1
+            UnitBonusXpPerLevelValue = 1
+        ),
+        TUnitUIModuleDescriptor
+        (
+            PriceCategory = 'tank_A'
+            UnitRole = 'AA'
+            SpecialtiesList = [
+            ]
+            NameToken = 'UEHVIDTFZF'
+            InfoPanelConfigurationToken = 'Infantry'
+            UpgradeFromUnit = Descriptor_Unit_MANPAD_Mistral_Geb_OST
+            MenuIconTexture = 'Texture_RTS_H_manpad'
+            ButtonTexture = 'Texture_Button_Unit_MANPAD_RBS70_OST'
+            TypeStrategicCount = ETypeStrategicDetailedCount/Manpad
+        ),
+        TUnitUpkeepModuleDescriptor( UpkeepPercentage = 1.0 ),
+        TVisualShootPositionsModuleDescriptor(),
+        TCameraShowroomModuleDescriptor
+        (
+            SpawnType = EShowroomSpawnType/Infantry
+            ShowRoomBlackHoleIdentifier = "squad_MANPAD_Mistral_FR"
+            HasServants = False
+        ),
+    ]
+)              

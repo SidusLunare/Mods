@@ -1,23 +1,41 @@
 "TOKEN";"REFTEXT"
 "MKG";"MILITÄRKOMMANDO GOTLAND"
 "CtrSWE";"Sweden"
+
+"LOREM1";"CALIBERS \/"
+
 "108mm";"108 mm"
 "75mm";"75 mm"
 "105mm";"105 mm"
+"152mm";"152 mm"
+
+"LOREM2";"UNIT NAMES \/"
+
 "FOBSWE";"Ammunitionsupplag"
+
 "HJTRAK319V";"Hjtrak 319V Trakk 3T"
 "TGB311ALOG";"Tgb 311A Log."
 "TGB411BLOG";"Tgb 411B Moelven"
+
+"RAPTGB9033";"RapTgb 9033"
+"STGBM42A";"StabsTgb m/42A"
+
 "LTGB934F";"Ltgb 934F"
-"TGB40TRA";"Tgb 40"
-"HKP4";"Hkp-4"
+"TGBM42A";"Tgb m/42A"
 "PLTGB903";"Pltgb 903"
 "HJTRAKPTP";"Hjtrak 319V PTP"
-"TGBM42A";"Tgb m/42A"
-"STGBM42A";"StabsTgb m/42A"
-"RAPTGB9033";"RapTgb 9033"
 "PV444MP";"PV 444 MP"
+"TGB40TRA";"Tgb 40"
+"HKP4";"Hkp-4"
+"Dtgb953b";"Dtgb 953B"
+
+"PLTGB903K";"Pltgb 903 Ksp"
+
+"AK4";"Ak 4"
 "KSPM58";"Ksp M/58"
+
+"LOREM3";"HOWITZER NAMES \/"
+
 "GRKM2939";"Grk m/29-39"
 "GRKM62";"Grk m/62"
 "MINRSORM1";"Minröjningsorm 1"
@@ -26,8 +44,19 @@
 "HABTSM4140";"Haubits m/4140"
 "FLTPJSM37";"Fältpjäs m/37"
 "FH77B";"FH 77B"
-"PLTGB903K";"Pltgb 903 Ksp"
-"KAPJASM65";"Kapjäs m/65"
-"FPJS1965";"Fältpjäs m/1965"
-"HvHbts40";"Hv.-Haubits m/40"
+
+"LOREM4";"HOWITZER GUNS NAMES \/"
+
+"FPJS1965";"Fältpjäs m/65"
+"HvHbts40";"Haubits m/40"
 "Hbts4140";"Haubits m/4140"
+
+"LOREM5";"ANTI-AIR NAMES \/"
+
+"RBS69";"RBS 69"
+"LVKM4070";"Lvakan m/40-70"
+"LVKMM36";"Lvakan m/36"
+"LVKMM48";"Lvakan m/48"
+"LVS75M40";"LVS-75M 40mm"
+"VLK3037L";"Värn-Lvakan m/30-37"
+"VLK3037S";"Lvkan m/37"

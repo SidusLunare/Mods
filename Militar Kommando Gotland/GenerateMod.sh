@@ -16,6 +16,18 @@ export STEAM_COMPAT_DATA_PATH="$COMPAT_DATA"
 export STEAM_COMPAT_CLIENT_INSTALL_PATH="$STEAM_ROOT"
 export STEAM_COMPAT_INSTALL_PATH="$GAME_ROOT"
 export SteamAppId=1611600 SteamGameId=1611600
+
+if [[ -f "$PROTON_MOD/Config.ini" ]]; then
+	CONFIG_BACKUP_DIR="$(mktemp -d)"
+	cp -p -- "$PROTON_MOD/Config.ini" "$CONFIG_BACKUP_DIR/Config.ini"
+	restore_config() {
+		cp -p -- "$CONFIG_BACKUP_DIR/Config.ini" "$PROTON_MOD/Config.ini"
+		rm -f -- "$CONFIG_BACKUP_DIR/Config.ini"
+		rmdir -- "$CONFIG_BACKUP_DIR"
+	}
+	trap restore_config EXIT
+fi
+
 python3 "$MOD_DIR/../Utils/Scripts/GenerateMod.py" WARNO "$MOD_NAME"
 
 if [[ ! -d "$GENERATED_MOD" || ! -f "$GENERATED_MOD/Config.ini" ]]; then
@@ -24,7 +36,12 @@ if [[ ! -d "$GENERATED_MOD" || ! -f "$GENERATED_MOD/Config.ini" ]]; then
 fi
 
 mkdir -p -- "$PROTON_MOD"
-cp -a -- "$GENERATED_MOD/." "$PROTON_MOD/"
+shopt -s dotglob nullglob
+for item in "$GENERATED_MOD"/*; do
+	[[ "${item##*/}" == Config.ini ]] && continue
+	cp -a -- "$item" "$PROTON_MOD/"
+done
+cp -an -- "$GENERATED_MOD/Config.ini" "$PROTON_MOD/Config.ini"
 
 if [[ ! -f "$PROTON_MOD/Config.ini" ]]; then
 	printf 'Per-mod Config.ini was not copied to the Proton mod folder.\n' >&2

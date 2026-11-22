@@ -637,6 +637,24 @@ Descriptor_Deck_Division_SWE_MilitarKommando_Gotland_multi is TDeckDivisionRule
         ),
         TDeckUniteRule
         (
+            UnitDescriptor = $/GFX/Unit/Descriptor_Unit_Howz_Faltpjas_m37_SWE
+            AvailableWithoutTransport = False
+            AvailableTransportList = [ $/GFX/Unit/Descriptor_Unit_Dtgb_953B_SWE ]
+            MaxPackNumber = 1
+            NumberOfUnitInPack = 2
+            NumberOfUnitInPackXPMultiplier = [1.0, 0.5, 0.0, 0.0]
+        ),
+        TDeckUniteRule
+        (
+            UnitDescriptor = $/GFX/Unit/Descriptor_Unit_Howz_Canon_FH_77B_SWE
+            AvailableWithoutTransport = False
+            AvailableTransportList = [ $/GFX/Unit/Descriptor_Unit_TGB_40_trans_SWE ]
+            MaxPackNumber = 1
+            NumberOfUnitInPack = 2
+            NumberOfUnitInPackXPMultiplier = [1.0, 0.5, 0.0, 0.0]
+        ),        
+        TDeckUniteRule
+        (
             UnitDescriptor = $/GFX/Unit/Descriptor_Unit_Howz_Haubits_m40_SWE
             AvailableWithoutTransport = False
             AvailableTransportList = [ $/GFX/Unit/Descriptor_Unit_Hjtrak_319V_PTP_SWE ]
@@ -653,7 +671,69 @@ Descriptor_Deck_Division_SWE_MilitarKommando_Gotland_multi is TDeckDivisionRule
             NumberOfUnitInPack = 4
             NumberOfUnitInPackXPMultiplier = [1.0, 0.6, 0.34, 0.0]
         ),
-        
+        TDeckUniteRule
+        (
+            UnitDescriptor = $/GFX/Unit/Descriptor_Unit_DCA_Lvakan_M4070_SWE
+            AvailableWithoutTransport = False
+            AvailableTransportList = [ $/GFX/Unit/Descriptor_Unit_Ltgb_934F_trans_SWE ]
+            MaxPackNumber = 2
+            NumberOfUnitInPack = 10
+            NumberOfUnitInPackXPMultiplier = [1.0, 0.68, 0.48, 0.0]
+        ),
+        TDeckUniteRule
+        (
+            UnitDescriptor = $/GFX/Unit/Descriptor_Unit_DCA_Lvakan_M36_SWE
+            AvailableWithoutTransport = False
+            AvailableTransportList = [ $/GFX/Unit/Descriptor_Unit_Ltgb_934F_trans_SWE ]
+            MaxPackNumber = 1
+            NumberOfUnitInPack = 9
+            NumberOfUnitInPackXPMultiplier = [1.0, 0.68, 0.49, 0.0]
+        ),
+        TDeckUniteRule
+        (
+            UnitDescriptor = $/GFX/Unit/Descriptor_Unit_DCA_Lvakan_M48_SWE
+            AvailableWithoutTransport = False
+            AvailableTransportList = [ $/GFX/Unit/Descriptor_Unit_Ltgb_934F_trans_SWE ]
+            MaxPackNumber = 2
+            NumberOfUnitInPack = 9
+            NumberOfUnitInPackXPMultiplier = [1.0, 0.68, 0.49, 0.0]
+        ),
+        TDeckUniteRule
+        (
+            UnitDescriptor = $/GFX/Unit/Descriptor_Unit_DCA_LVS_75M_SWE
+            AvailableWithoutTransport = False
+            AvailableTransportList = [ $/GFX/Unit/Descriptor_Unit_Ltgb_934F_trans_SWE ]
+            MaxPackNumber = 1
+            NumberOfUnitInPack = 6
+            NumberOfUnitInPackXPMultiplier = [1.0, 0.6, 0.34, 0.0]
+        ),
+        TDeckUniteRule
+        (
+            UnitDescriptor = $/GFX/Unit/Descriptor_Unit_DCA_VLVK_M3037_SWE
+            AvailableWithoutTransport = False
+            AvailableTransportList = [ $/GFX/Unit/Descriptor_Unit_Ltgb_934F_trans_SWE ]
+            MaxPackNumber = 1
+            NumberOfUnitInPack = 8
+            NumberOfUnitInPackXPMultiplier = [1.0, 0.64, 0.38, 0.0]
+        ),
+        TDeckUniteRule
+        (
+            UnitDescriptor = $/GFX/Unit/Descriptor_Unit_MANPAD_RBS69_SWE
+            AvailableWithoutTransport = False
+            AvailableTransportList = [ $/GFX/Unit/Descriptor_Unit_Pltgb_903_SWE ]
+            MaxPackNumber = 1
+            NumberOfUnitInPack = 12
+            NumberOfUnitInPackXPMultiplier = [1.0, 0.68, 0.49, 0.0]
+        ),
+        TDeckUniteRule
+        (
+            UnitDescriptor = $/GFX/Unit/Descriptor_Unit_MANPAD_RBS70_SWE
+            AvailableWithoutTransport = False
+            AvailableTransportList = [ $/GFX/Unit/Descriptor_Unit_Pltgb_903_SWE ]
+            MaxPackNumber = 1
+            NumberOfUnitInPack = 6
+            NumberOfUnitInPackXPMultiplier = [1.0, 0.6, 0.34, 0.0]
+        ),
     ]
 )
 Descriptor_Deck_Division_BEL_16e_Mecanisee_multi_Rule is TDeckDivisionRule

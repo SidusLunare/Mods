@@ -614821,7 +614821,7 @@ export Descriptor_Unit_Kapjas_m65_SWE is TEntityDescriptor
             UnitRole = 'AT'
             SpecialtiesList = [
             ]
-            NameToken = 'KAPJASM65'
+            NameToken = 'KPJSM65'
             InfoPanelConfigurationToken = 'Default'
             DisplayRoadSpeedInKmph = 16
             UpgradeFromUnit = Descriptor_Unit_AT_D44_85mm_VDV_SOV

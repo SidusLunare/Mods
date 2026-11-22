@@ -395847,6 +395847,84 @@ export WeaponDescriptor_81mm_Mortar_Grk_m2939 is TWeaponManagerModuleDescriptor
         ),
     ]
 )
+export WeaponDescriptor_120mm_Mortar_Grk_m62_SWE is TWeaponManagerModuleDescriptor
+(
+    AlwaysOrientArmorTowardsThreat = False
+    Salves = 
+    [
+        20,
+    ]
+    TurretDescriptorList = 
+    [
+        TTurretTwoAxisDescriptor
+        (
+            AngleRotationBase = 0
+            AngleRotationBasePitch = 1.221730476396031
+            AngleRotationMax = 0.5235987755982988
+            AngleRotationMaxPitch = 1.53588974175501
+            AngleRotationMinPitch = 0.08726646259971647
+            MountedWeaponDescriptorList = 
+            [
+                TMountedWeaponDescriptor
+                (
+                    AmmoBoxIndex = 0
+                    Ammunition = $/GFX/Weapon/Ammo_120mm_Mortar_Grk_m62
+                    Caliber = 'DYWXTLDKWR'
+                    InterfaceWeaponTexture = "Texture_Interface_Weapon_Mortier_ECIA_L65_120mm"
+                    Name = 'GRKM62'
+                    TraitsToken = [ 'STAT', 'HE', 'IND', ]
+                    TypeCategoryName = 'HYUWZSIKYW'
+                    WeaponDescriptionToken = 'YWFMBNSXOW'
+                    AnimateOnlyOneSoldier = False
+                    DispersionRadiusOffColor = RGBA[255,0,0,0]
+                    DispersionRadiusOffThickness = 0
+                    DispersionRadiusOnColor = RGBA[90,180,180,255]
+                    DispersionRadiusOnThickness = 0.8
+                    EffectTag = "FireEffect_Mortier_ECIA_L65_120mm"
+                    HandheldEquipmentKey = "WeaponAlternative_1"
+                    NbWeapons = 1
+                    ShowDispersion = True
+                    WeaponActiveAndCanShootPropertyName = "WeaponActiveAndCanShoot_1"
+                    WeaponIgnoredPropertyName = "WeaponIgnored_1"
+                    WeaponShootDataPropertyName = 
+                    [
+                        "WeaponShootData_0_1",
+                    ]
+                ),
+                TMountedWeaponDescriptor
+                (
+                    AmmoBoxIndex = 0
+                    Ammunition = $/GFX/Weapon/Ammo_120mm_Mortar_Grk_m62_SMOKE
+                    Caliber = 'DYWXTLDKWR'
+                    InterfaceWeaponTexture = "Texture_Interface_Weapon_Mortier_ECIA_L65_120mm"
+                    Name = 'GRKM62'
+                    TraitsToken = [ 'STAT', 'HE', 'IND', ]
+                    TypeCategoryName = 'HYUWZSIKYW'
+                    WeaponDescriptionToken = 'YWFMBNSXOW'
+                    AnimateOnlyOneSoldier = False
+                    DispersionRadiusOffColor = RGBA[0,0,0,0]
+                    DispersionRadiusOffThickness = -0.1
+                    DispersionRadiusOnColor = RGBA[0,0,0,0]
+                    DispersionRadiusOnThickness = -0.1
+                    EffectTag = "FireEffect_Mortier_ECIA_L65_120mm_SMOKE"
+                    HandheldEquipmentKey = "WeaponAlternative_2"
+                    NbWeapons = 1
+                    ShowDispersion = False
+                    WeaponActiveAndCanShootPropertyName = "WeaponActiveAndCanShoot_2"
+                    WeaponIgnoredPropertyName = "WeaponIgnored_2"
+                    WeaponShootDataPropertyName = 
+                    [
+                        "WeaponShootData_0_2",
+                    ]
+                ),
+            ]
+            OutOfRangeTrackingDuration = 3.5
+            Tag = "tourelle1"
+            VitesseRotation = 1.0471975511965976
+            YulBoneOrdinal = 1
+        ),
+    ]
+)
 export WeaponDescriptor_Mortar_Minrojningsorm_1_SWE is TWeaponManagerModuleDescriptor
 (
     AlwaysOrientArmorTowardsThreat = False
@@ -396161,7 +396239,7 @@ export WeaponDescriptor_Howz_Haubits_m4140_SWE is TWeaponManagerModuleDescriptor
                     Caliber = '105mm'
                     InterfaceWeaponTexture = "Texture_Interface_Weapon_D30"
                     Name = 'Hbts4140'
-                    TraitsToken = [ 'MOTION', 'HE', ]
+                    TraitsToken = [ 'STAT', 'HE', ]
                     TypeCategoryName = 'FIQMEQMUTK'
                     WeaponDescriptionToken = 'YDWRGQLHYI'
                     AnimateOnlyOneSoldier = False
@@ -396188,44 +396266,168 @@ export WeaponDescriptor_Howz_Haubits_m4140_SWE is TWeaponManagerModuleDescriptor
         ),
     ]
 )
-export WeaponDescriptor_120mm_Mortar_Grk_m62_SWE is TWeaponManagerModuleDescriptor
+export WeaponDescriptor_Howz_Faltpjas_m37_SWE is TWeaponManagerModuleDescriptor
 (
-    AlwaysOrientArmorTowardsThreat = False
+    AlwaysOrientArmorTowardsThreat = false
     Salves = 
     [
-        20,
+        8,
+        8
     ]
     TurretDescriptorList = 
     [
         TTurretTwoAxisDescriptor
         (
             AngleRotationBase = 0
-            AngleRotationBasePitch = 1.221730476396031
-            AngleRotationMax = 0.5235987755982988
-            AngleRotationMaxPitch = 1.53588974175501
-            AngleRotationMinPitch = 0.08726646259971647
+            AngleRotationBasePitch = 0.17453292519943275
+            AngleRotationMax = 0.2617993877991494
+            AngleRotationMaxPitch = 1.3089969389957472
+            AngleRotationMinPitch = -0.17453292519943295
             MountedWeaponDescriptorList = 
             [
                 TMountedWeaponDescriptor
                 (
                     AmmoBoxIndex = 0
-                    Ammunition = $/GFX/Weapon/Ammo_120mm_Mortar_Grk_m62
-                    Caliber = 'DYWXTLDKWR'
-                    InterfaceWeaponTexture = "Texture_Interface_Weapon_Mortier_ECIA_L65_120mm"
-                    Name = 'GRKM62'
-                    TraitsToken = [ 'STAT', 'HE', 'IND', ]
-                    TypeCategoryName = 'HYUWZSIKYW'
-                    WeaponDescriptionToken = 'YWFMBNSXOW'
-                    AnimateOnlyOneSoldier = False
+                    Ammunition = $/GFX/Weapon/Ammo_Howz_Canon_Faltpjas_m37_SWE
+                    AnimateOnlyOneSoldier = false
+                    Caliber = "152mm"
                     DispersionRadiusOffColor = RGBA[255,0,0,0]
                     DispersionRadiusOffThickness = 0
                     DispersionRadiusOnColor = RGBA[90,180,180,255]
                     DispersionRadiusOnThickness = 0.8
-                    EffectTag = "FireEffect_Mortier_ECIA_L65_120mm"
+                    EffectTag = "FireEffect_Howz_Canon_LongTom_155mm"
                     HandheldEquipmentKey = "WeaponAlternative_1"
+                    InterfaceWeaponTexture = "Texture_Interface_Weapon_Howz_Canon_LongTom_155mm"
+                    Name = "FLTPJSM37"
                     NbWeapons = 1
-                    ShowDispersion = True
+                    ShowDispersion = true
+                    TraitsToken = 
+                    [
+                        "STAT",
+                        "HE",
+                        "IND",
+                    ]
+                    TypeCategoryName = "KKZDHFFCTH"
                     WeaponActiveAndCanShootPropertyName = "WeaponActiveAndCanShoot_1"
+                    WeaponDescriptionToken = "RDHZLCYGPG"
+                    WeaponIgnoredPropertyName = "WeaponIgnored_1"
+                    WeaponShootDataPropertyName = 
+                    [
+                        "WeaponShootData_0_1",
+                    ]
+                ),
+                TMountedWeaponDescriptor
+                (
+                    AmmoBoxIndex = 1
+                    Ammunition = $/GFX/Weapon/Ammo_AP_Canon_Faltpjas_m37_SWE_DIRECT
+                    AnimateOnlyOneSoldier = false
+                    Caliber = "152mm"
+                    DispersionRadiusOffColor = RGBA[0,0,0,0]
+                    DispersionRadiusOffThickness = -0.1
+                    DispersionRadiusOnColor = RGBA[0,0,0,0]
+                    DispersionRadiusOnThickness = -0.1
+                    EffectTag = "FireEffect_Howz_Canon_LongTom_155mm"
+                    HandheldEquipmentKey = "WeaponAlternative_2"
+                    InterfaceWeaponTexture = "Texture_Interface_Weapon_Howz_Canon_LongTom_155mm"
+                    Name = "FLTPJSM37"
+                    NbWeapons = 1
+                    ShowDispersion = false
+                    TraitsToken = 
+                    [
+                        "STAT",
+                        "HE",
+                        "KINETIC",
+                    ]
+                    TypeCategoryName = "KKZDHFFCTH"
+                    WeaponActiveAndCanShootPropertyName = "WeaponActiveAndCanShoot_2"
+                    WeaponDescriptionToken = "RDHZLCYGPG"
+                    WeaponIgnoredPropertyName = "WeaponIgnored_2"
+                    WeaponShootDataPropertyName = 
+                    [
+                        "WeaponShootData_0_2",
+                    ]
+                ),
+                TMountedWeaponDescriptor
+                (
+                    AmmoBoxIndex = 1
+                    Ammunition = $/GFX/Weapon/Ammo_HE_Canon_Faltpjas_m37_SWE_DIRECT
+                    AnimateOnlyOneSoldier = false
+                    Caliber = "152mm"
+                    DispersionRadiusOffColor = RGBA[0,0,0,0]
+                    DispersionRadiusOffThickness = -0.1
+                    DispersionRadiusOnColor = RGBA[0,0,0,0]
+                    DispersionRadiusOnThickness = -0.1
+                    EffectTag = "FireEffect_Howz_Canon_LongTom_155mm"
+                    HandheldEquipmentKey = "WeaponAlternative_3"
+                    InterfaceWeaponTexture = "Texture_Interface_Weapon_Howz_Canon_LongTom_155mm"
+                    Name = "FLTPJSM37"
+                    NbWeapons = 1
+                    ShowDispersion = false
+                    TraitsToken = 
+                    [
+                        "STAT",
+                        "HE",
+                    ]
+                    TypeCategoryName = "KKZDHFFCTH"
+                    WeaponActiveAndCanShootPropertyName = "WeaponActiveAndCanShoot_3"
+                    WeaponDescriptionToken = "RDHZLCYGPG"
+                    WeaponIgnoredPropertyName = "WeaponIgnored_3"
+                    WeaponShootDataPropertyName = 
+                    [
+                        "WeaponShootData_0_3",
+                    ]
+                ),
+            ]
+            OutOfRangeTrackingDuration = 3.5
+            Tag = "tourelle1"
+            VitesseRotation = 1.0471975511965976
+            YulBoneOrdinal = 1
+        ),
+    ]
+)
+export WeaponDescriptor_Howz_Canon_FH_77B_SWE is TWeaponManagerModuleDescriptor
+(
+    AlwaysOrientArmorTowardsThreat = false
+    Salves = 
+    [
+        6,
+    ]
+    TurretDescriptorList = 
+    [
+        TTurretTwoAxisDescriptor
+        (
+            AngleRotationBase = 0
+            AngleRotationBasePitch = 0.17453292519943275
+            AngleRotationMax = 0.2617993877991494
+            AngleRotationMaxPitch = 1.3089969389957472
+            AngleRotationMinPitch = -0.17453292519943295
+            MountedWeaponDescriptorList = 
+            [
+                TMountedWeaponDescriptor
+                (
+                    AmmoBoxIndex = 0
+                    Ammunition = $/GFX/Weapon/Ammo_Howz_Canon_FH_77B_SWE
+                    AnimateOnlyOneSoldier = false
+                    Caliber = "155mm"
+                    DispersionRadiusOffColor = RGBA[255,0,0,0]
+                    DispersionRadiusOffThickness = 0
+                    DispersionRadiusOnColor = RGBA[90,180,180,255]
+                    DispersionRadiusOnThickness = 0.8
+                    EffectTag = "FireEffect_Howz_Canon_TRF1_155mm"
+                    HandheldEquipmentKey = "WeaponAlternative_1"
+                    InterfaceWeaponTexture = "Texture_Interface_Weapon_TRF1"
+                    Name = "FH77B"
+                    NbWeapons = 1
+                    ShowDispersion = true
+                    TraitsToken = 
+                    [
+                        "STAT",
+                        "HE",
+                        "IND",
+                    ]
+                    TypeCategoryName = "KKZDHFFCTH"
+                    WeaponActiveAndCanShootPropertyName = "WeaponActiveAndCanShoot_1"
+                    WeaponDescriptionToken = "RDHZLCYGPG"
                     WeaponIgnoredPropertyName = "WeaponIgnored_1"
                     WeaponShootDataPropertyName = 
                     [
@@ -396235,23 +396437,28 @@ export WeaponDescriptor_120mm_Mortar_Grk_m62_SWE is TWeaponManagerModuleDescript
                 TMountedWeaponDescriptor
                 (
                     AmmoBoxIndex = 0
-                    Ammunition = $/GFX/Weapon/Ammo_120mm_Mortar_Grk_m62_SMOKE
-                    Caliber = 'DYWXTLDKWR'
-                    InterfaceWeaponTexture = "Texture_Interface_Weapon_Mortier_ECIA_L65_120mm"
-                    Name = 'GRKM62'
-                    TraitsToken = [ 'STAT', 'HE', 'IND', ]
-                    TypeCategoryName = 'HYUWZSIKYW'
-                    WeaponDescriptionToken = 'YWFMBNSXOW'
-                    AnimateOnlyOneSoldier = False
+                    Ammunition = $/GFX/Weapon/Ammo_Howz_Canon_FH_77B_SWE_SMOKE
+                    AnimateOnlyOneSoldier = false
+                    Caliber = "155mm"
                     DispersionRadiusOffColor = RGBA[0,0,0,0]
                     DispersionRadiusOffThickness = -0.1
                     DispersionRadiusOnColor = RGBA[0,0,0,0]
                     DispersionRadiusOnThickness = -0.1
-                    EffectTag = "FireEffect_Mortier_ECIA_L65_120mm_SMOKE"
+                    EffectTag = "FireEffect_Howz_Canon_TRF1_155mm_SMOKE"
                     HandheldEquipmentKey = "WeaponAlternative_2"
+                    InterfaceWeaponTexture = "Texture_Interface_Weapon_TRF1"
+                    Name = "FH77B"
                     NbWeapons = 1
-                    ShowDispersion = False
+                    ShowDispersion = false
+                    TraitsToken = 
+                    [
+                        "STAT",
+                        "HE",
+                        "IND",
+                    ]
+                    TypeCategoryName = "KKZDHFFCTH"
                     WeaponActiveAndCanShootPropertyName = "WeaponActiveAndCanShoot_2"
+                    WeaponDescriptionToken = "RDHZLCYGPG"
                     WeaponIgnoredPropertyName = "WeaponIgnored_2"
                     WeaponShootDataPropertyName = 
                     [
@@ -396263,6 +396470,520 @@ export WeaponDescriptor_120mm_Mortar_Grk_m62_SWE is TWeaponManagerModuleDescript
             Tag = "tourelle1"
             VitesseRotation = 1.0471975511965976
             YulBoneOrdinal = 1
+        ),
+    ]
+)
+export WeaponDescriptor_DCA_Lvakan_M4070_SWE is TWeaponManagerModuleDescriptor
+(
+    AlwaysOrientArmorTowardsThreat = false
+    Salves = 
+    [
+        15,
+    ]
+    TurretDescriptorList = 
+    [
+        TTurretTwoAxisDescriptor
+        (
+            AngleRotationBase = 0
+            AngleRotationBasePitch = 0
+            AngleRotationMax = 6.283185307179586
+            AngleRotationMaxPitch = 1.3089969389957472
+            AngleRotationMinPitch = -0.2617993877991494
+            MountedWeaponDescriptorList = 
+            [
+                TMountedWeaponDescriptor
+                (
+                    AmmoBoxIndex = 0
+                    Ammunition = $/GFX/Weapon/Ammo_DCA_1_canon_GAI_BO1_20mm_TOWED
+                    AnimateOnlyOneSoldier = false
+                    Caliber = "EILGBJABHL"
+                    DispersionRadiusOffColor = RGBA[0,0,0,0]
+                    DispersionRadiusOffThickness = -0.1
+                    DispersionRadiusOnColor = RGBA[0,0,0,0]
+                    DispersionRadiusOnThickness = -0.1
+                    EffectTag = "FireEffect_DCA_1_canon_GAI_BO1_20mm_TOWED"
+                    HandheldEquipmentKey = "WeaponAlternative_1"
+                    InterfaceWeaponTexture = "Texture_Interface_Weapon_DCA_1_canon_GAI_BO1_20mm"
+                    Name = "LVKM4070"
+                    NbWeapons = 1
+                    ShowDispersion = false
+                    TraitsToken = 
+                    [
+                        "MOTION",
+                    ]
+                    TypeCategoryName = "YNDLJFDBIK"
+                    WeaponActiveAndCanShootPropertyName = "WeaponActiveAndCanShoot_1"
+                    WeaponDescriptionToken = "BGKHTMZYRF"
+                    WeaponIgnoredPropertyName = "WeaponIgnored_1"
+                    WeaponShootDataPropertyName = 
+                    [
+                        "WeaponShootData_0_1",
+                    ]
+                ),
+            ]
+            OutOfRangeTrackingDuration = 3.5
+            Tag = "tourelle1"
+            TurretIdleBehaviourDescriptor = ~/TurretIdle_DCAAutoMoteur
+            VitesseRotation = 2.0943951023931953
+            YulBoneOrdinal = 1
+        ),
+    ]
+)
+export WeaponDescriptor_DCA_Lvakan_M36_SWE is TWeaponManagerModuleDescriptor
+(
+    AlwaysOrientArmorTowardsThreat = false
+    Salves = 
+    [
+        30,
+    ]
+    TurretDescriptorList = 
+    [
+        TTurretTwoAxisDescriptor
+        (
+            AngleRotationBase = 0
+            AngleRotationBasePitch = 0
+            AngleRotationMax = 6.283185307179586
+            AngleRotationMaxPitch = 1.3089969389957472
+            AngleRotationMinPitch = -0.2617993877991494
+            MountedWeaponDescriptorList = 
+            [
+                TMountedWeaponDescriptor
+                (
+                    AmmoBoxIndex = 0
+                    Ammunition = $/GFX/Weapon/Ammo_DCA_1_canon_Bofors_40mm_L60
+                    AnimateOnlyOneSoldier = false
+                    Caliber = "SSSIABNVRC"
+                    DispersionRadiusOffColor = RGBA[0,0,0,0]
+                    DispersionRadiusOffThickness = -0.1
+                    DispersionRadiusOnColor = RGBA[0,0,0,0]
+                    DispersionRadiusOnThickness = -0.1
+                    EffectTag = "FireEffect_DCA_1_canon_Bofors_40mm_L60"
+                    HandheldEquipmentKey = "WeaponAlternative_1"
+                    InterfaceWeaponTexture = "Texture_Interface_Weapon_Bofors_L70"
+                    Name = "LVKMM36"
+                    NbWeapons = 1
+                    ShowDispersion = false
+                    TraitsToken = 
+                    [
+                        "STAT",
+                    ]
+                    TypeCategoryName = "YNDLJFDBIK"
+                    WeaponActiveAndCanShootPropertyName = "WeaponActiveAndCanShoot_1"
+                    WeaponDescriptionToken = "BGKHTMZYRF"
+                    WeaponIgnoredPropertyName = "WeaponIgnored_1"
+                    WeaponShootDataPropertyName = 
+                    [
+                        "WeaponShootData_0_1",
+                    ]
+                ),
+            ]
+            OutOfRangeTrackingDuration = 3.5
+            Tag = "tourelle1"
+            TurretIdleBehaviourDescriptor = ~/TurretIdle_DCAAutoMoteur
+            VitesseRotation = 2.0943951023931953
+            YulBoneOrdinal = 1
+        ),
+    ]
+)
+export WeaponDescriptor_DCA_Lvakan_M48_SWE is TWeaponManagerModuleDescriptor
+(
+    AlwaysOrientArmorTowardsThreat = false
+    Salves = 
+    [
+        30,
+    ]
+    TurretDescriptorList = 
+    [
+        TTurretTwoAxisDescriptor
+        (
+            AngleRotationBase = 0
+            AngleRotationBasePitch = 0
+            AngleRotationMax = 6.283185307179586
+            AngleRotationMaxPitch = 1.3089969389957472
+            AngleRotationMinPitch = -0.2617993877991494
+            MountedWeaponDescriptorList = 
+            [
+                TMountedWeaponDescriptor
+                (
+                    AmmoBoxIndex = 0
+                    Ammunition = $/GFX/Weapon/Ammo_DCA_1_canon_Bofors_40mm
+                    AnimateOnlyOneSoldier = false
+                    Caliber = "SSSIABNVRC"
+                    DispersionRadiusOffColor = RGBA[0,0,0,0]
+                    DispersionRadiusOffThickness = -0.1
+                    DispersionRadiusOnColor = RGBA[0,0,0,0]
+                    DispersionRadiusOnThickness = -0.1
+                    EffectTag = "FireEffect_DCA_1_canon_Bofors_40mm"
+                    HandheldEquipmentKey = "WeaponAlternative_1"
+                    InterfaceWeaponTexture = "Texture_Interface_Weapon_Bofors_L70"
+                    Name = "LVKMM48"
+                    NbWeapons = 1
+                    ShowDispersion = false
+                    TraitsToken = 
+                    [
+                        "STAT",
+                    ]
+                    TypeCategoryName = "YNDLJFDBIK"
+                    WeaponActiveAndCanShootPropertyName = "WeaponActiveAndCanShoot_1"
+                    WeaponDescriptionToken = "BGKHTMZYRF"
+                    WeaponIgnoredPropertyName = "WeaponIgnored_1"
+                    WeaponShootDataPropertyName = 
+                    [
+                        "WeaponShootData_0_1",
+                    ]
+                ),
+            ]
+            OutOfRangeTrackingDuration = 3.5
+            Tag = "tourelle1"
+            TurretIdleBehaviourDescriptor = ~/TurretIdle_DCAAutoMoteur
+            VitesseRotation = 2.0943951023931953
+            YulBoneOrdinal = 1
+        ),
+    ]
+)
+export WeaponDescriptor_DCA_LVS_75M_SWE is TWeaponManagerModuleDescriptor
+(
+    AlwaysOrientArmorTowardsThreat = false
+    Salves = 
+    [
+        30,
+    ]
+    TurretDescriptorList = 
+    [
+        TTurretTwoAxisDescriptor
+        (
+            AngleRotationBase = 0
+            AngleRotationBasePitch = 0
+            AngleRotationMax = 6.283185307179586
+            AngleRotationMaxPitch = 1.3089969389957472
+            AngleRotationMinPitch = -0.2617993877991494
+            MountedWeaponDescriptorList = 
+            [
+                TMountedWeaponDescriptor
+                (
+                    AmmoBoxIndex = 0
+                    Ammunition = $/GFX/Weapon/Ammo_DCA_1_canon_Bofors_upgrade_40mm_FPHE
+                    AnimateOnlyOneSoldier = false
+                    Caliber = "ZZHNMRYIAC"
+                    DispersionRadiusOffColor = RGBA[0,0,0,0]
+                    DispersionRadiusOffThickness = -0.1
+                    DispersionRadiusOnColor = RGBA[0,0,0,0]
+                    DispersionRadiusOnThickness = -0.1
+                    EffectTag = "FireEffect_DCA_1_canon_Bofors_upgrade_40mm_FPHE"
+                    HandheldEquipmentKey = "WeaponAlternative_1"
+                    InterfaceWeaponTexture = "Texture_Interface_Weapon_Bofors_L70"
+                    Name = "LVS75M40"
+                    NbWeapons = 1
+                    ShowDispersion = false
+                    TraitsToken = 
+                    [
+                        "STAT",
+                    ]
+                    TypeCategoryName = "YNDLJFDBIK"
+                    WeaponActiveAndCanShootPropertyName = "WeaponActiveAndCanShoot_1"
+                    WeaponDescriptionToken = "BGKHTMZYRF"
+                    WeaponIgnoredPropertyName = "WeaponIgnored_1"
+                    WeaponShootDataPropertyName = 
+                    [
+                        "WeaponShootData_0_1",
+                    ]
+                ),
+            ]
+            OutOfRangeTrackingDuration = 3.5
+            Tag = "tourelle1"
+            TurretIdleBehaviourDescriptor = ~/TurretIdle_DCAAutoMoteur
+            VitesseRotation = 2.0943951023931953
+            YulBoneOrdinal = 1
+        ),
+    ]
+)
+export WeaponDescriptor_DCA_VLVK_M3037_SWE is TWeaponManagerModuleDescriptor
+(
+    AlwaysOrientArmorTowardsThreat = false
+    Salves = 
+    [
+        20,
+        20,
+    ]
+    TurretDescriptorList = 
+    [
+        TTurretTwoAxisDescriptor
+        (
+            AngleRotationBase = 0
+            AngleRotationBasePitch = 0
+            AngleRotationMax = 6.283185307179586
+            AngleRotationMaxPitch = 1.3089969389957472
+            AngleRotationMinPitch = -0.2617993877991494
+            MountedWeaponDescriptorList = 
+            [
+                TMountedWeaponDescriptor
+                (
+                    AmmoBoxIndex = 0
+                    Ammunition = $/GFX/Weapon/Ammo_DCA_Canon_VLVK_M3037_SWE
+                    AnimateOnlyOneSoldier = false
+                    Caliber = "EOFGRIGVYK"
+                    DispersionRadiusOffColor = RGBA[0,0,0,0]
+                    DispersionRadiusOffThickness = -0.1
+                    DispersionRadiusOnColor = RGBA[0,0,0,0]
+                    DispersionRadiusOnThickness = -0.1
+                    EffectTag = "FireEffect_DCA_1_canon_KS19_100mm"
+                    HandheldEquipmentKey = "WeaponAlternative_1"
+                    InterfaceWeaponTexture = "Texture_Interface_Weapon_DCA_1_canon_KS19_100mm"
+                    Name = "VLK3037S"
+                    NbWeapons = 1
+                    ShowDispersion = false
+                    TraitsToken = 
+                    [
+                        "STAT",
+                    ]
+                    TypeCategoryName = "YNDLJFDBIK"
+                    WeaponActiveAndCanShootPropertyName = "WeaponActiveAndCanShoot_1"
+                    WeaponDescriptionToken = "BGKHTMZYRF"
+                    WeaponIgnoredPropertyName = "WeaponIgnored_1"
+                    WeaponShootDataPropertyName = 
+                    [
+                        "WeaponShootData_0_1",
+                    ]
+                ),
+                TMountedWeaponDescriptor
+                (
+                    AmmoBoxIndex = 1
+                    Ammunition = $/GFX/Weapon/Ammo_Canon_AP_VLVK_M3037_SWE
+                    AnimateOnlyOneSoldier = false
+                    Caliber = "EOFGRIGVYK"
+                    DispersionRadiusOffColor = RGBA[0,0,0,0]
+                    DispersionRadiusOffThickness = -0.1
+                    DispersionRadiusOnColor = RGBA[0,0,0,0]
+                    DispersionRadiusOnThickness = -0.1
+                    EffectTag = "FireEffect_Canon_AP_KS19_100mm"
+                    HandheldEquipmentKey = "WeaponAlternative_2"
+                    InterfaceWeaponTexture = "Texture_Interface_Weapon_Canon_AP_KS19_100mm"
+                    Name = "VLK3037S"
+                    NbWeapons = 1
+                    ShowDispersion = false
+                    TraitsToken = 
+                    [
+                        "MOTION",
+                        "HE",
+                        "KINETIC",
+                    ]
+                    TypeCategoryName = "FIQMEQMUTK"
+                    WeaponActiveAndCanShootPropertyName = "WeaponActiveAndCanShoot_2"
+                    WeaponDescriptionToken = "YDWRGQLHYI"
+                    WeaponIgnoredPropertyName = "WeaponIgnored_2"
+                    WeaponShootDataPropertyName = 
+                    [
+                        "WeaponShootData_0_2",
+                    ]
+                ),
+                TMountedWeaponDescriptor
+                (
+                    AmmoBoxIndex = 1
+                    Ammunition = $/GFX/Weapon/Ammo_Canon_HE_VLVK_M3037_SWE
+                    AnimateOnlyOneSoldier = false
+                    Caliber = "EOFGRIGVYK"
+                    DispersionRadiusOffColor = RGBA[0,0,0,0]
+                    DispersionRadiusOffThickness = -0.1
+                    DispersionRadiusOnColor = RGBA[0,0,0,0]
+                    DispersionRadiusOnThickness = -0.1
+                    EffectTag = "FireEffect_Canon_HE_KS19_100mm"
+                    HandheldEquipmentKey = "WeaponAlternative_3"
+                    InterfaceWeaponTexture = "Texture_Interface_Weapon_Canon_AP_KS19_100mm"
+                    Name = "VLK3037S"
+                    NbWeapons = 1
+                    ShowDispersion = false
+                    TraitsToken = 
+                    [
+                        "MOTION",
+                        "HE",
+                    ]
+                    TypeCategoryName = "FIQMEQMUTK"
+                    WeaponActiveAndCanShootPropertyName = "WeaponActiveAndCanShoot_3"
+                    WeaponDescriptionToken = "YDWRGQLHYI"
+                    WeaponIgnoredPropertyName = "WeaponIgnored_3"
+                    WeaponShootDataPropertyName = 
+                    [
+                        "WeaponShootData_0_3",
+                    ]
+                ),
+            ]
+            OutOfRangeTrackingDuration = 3.5
+            Tag = "tourelle1"
+            TurretIdleBehaviourDescriptor = ~/TurretIdle_VehicleReco
+            VitesseRotation = 2.0943951023931953
+            YulBoneOrdinal = 1
+        ),
+    ]
+)
+export WeaponDescriptor_MANPAD_RBS69_SWE is TWeaponManagerModuleDescriptor
+(
+    AlwaysOrientArmorTowardsThreat = false
+    Salves = 
+    [
+        52,
+        6,
+    ]
+    TurretDescriptorList = 
+    [
+        TTurretInfanterieDescriptor
+        (
+            MountedWeaponDescriptorList = 
+            [
+                TMountedWeaponDescriptor
+                (
+                    AmmoBoxIndex = 0
+                    Ammunition = $/GFX/Weapon/Ammo_FM_Ak4
+                    AnimateOnlyOneSoldier = false
+                    Caliber = "ARZDNMYCBF"
+                    DispersionRadiusOffColor = RGBA[0,0,0,0]
+                    DispersionRadiusOffThickness = -0.1
+                    DispersionRadiusOnColor = RGBA[0,0,0,0]
+                    DispersionRadiusOnThickness = -0.1
+                    EffectTag = "FireEffect_FM_G3KA4"
+                    HandheldEquipmentKey = "WeaponAlternative_1"
+                    InterfaceWeaponTexture = "Texture_Interface_Weapon_g3a4"
+                    Name = "AK4"
+                    NbWeapons = 2
+                    ShowDispersion = false
+                    TraitsToken = 
+                    [
+                        "MOTION",
+                        "CAC",
+                    ]
+                    TypeCategoryName = "THRUBJLEUJ"
+                    WeaponActiveAndCanShootPropertyName = "WeaponActiveAndCanShoot_1"
+                    WeaponDescriptionToken = "KQYZKDFEAI"
+                    WeaponIgnoredPropertyName = "WeaponIgnored_1"
+                    WeaponShootDataPropertyName = 
+                    [
+                        "WeaponShootData_0_1",
+                    ]
+                ),
+            ]
+            YulBoneOrdinal = 1
+        ),
+        TTurretInfanterieDescriptor
+        (
+            MountedWeaponDescriptorList = 
+            [
+                TMountedWeaponDescriptor
+                (
+                    AmmoBoxIndex = 1
+                    Ammunition = $/GFX/Weapon/Ammo_MANPAD_FIM43
+                    AnimateOnlyOneSoldier = true
+                    Caliber = "AFUPSCGVHW"
+                    DispersionRadiusOffColor = RGBA[0,0,0,0]
+                    DispersionRadiusOffThickness = -0.1
+                    DispersionRadiusOnColor = RGBA[0,0,0,0]
+                    DispersionRadiusOnThickness = -0.1
+                    EffectTag = "FireEffect_MANPAD_FIM43"
+                    HandheldEquipmentKey = "WeaponAlternative_2"
+                    InterfaceWeaponTexture = "Texture_Interface_Weapon_fim92"
+                    Name = "RBS69"
+                    NbWeapons = 1
+                    ShowDispersion = false
+                    TraitsToken = 
+                    [
+                        "STAT",
+                        "F&F",
+                    ]
+                    TypeCategoryName = "RGUHEGFUDW"
+                    WeaponActiveAndCanShootPropertyName = "WeaponActiveAndCanShoot_2"
+                    WeaponDescriptionToken = "WIPELYEGTV"
+                    WeaponIgnoredPropertyName = "WeaponIgnored_2"
+                    WeaponShootDataPropertyName = 
+                    [
+                        "WeaponShootData_0_2",
+                    ]
+                ),
+            ]
+            YulBoneOrdinal = 2
+        ),
+    ]
+)
+export WeaponDescriptor_MANPAD_RBS70_SWE is TWeaponManagerModuleDescriptor
+(
+    AlwaysOrientArmorTowardsThreat = false
+    Salves = 
+    [
+        78,
+        6,
+    ]
+    TurretDescriptorList = 
+    [
+        TTurretInfanterieDescriptor
+        (
+            MountedWeaponDescriptorList = 
+            [
+                TMountedWeaponDescriptor
+                (
+                    AmmoBoxIndex = 0
+                    Ammunition = $/GFX/Weapon/Ammo_FM_Ak4
+                    AnimateOnlyOneSoldier = false
+                    Caliber = "ARZDNMYCBF"
+                    DispersionRadiusOffColor = RGBA[0,0,0,0]
+                    DispersionRadiusOffThickness = -0.1
+                    DispersionRadiusOnColor = RGBA[0,0,0,0]
+                    DispersionRadiusOnThickness = -0.1
+                    EffectTag = "FireEffect_FM_G3KA4"
+                    HandheldEquipmentKey = "WeaponAlternative_1"
+                    InterfaceWeaponTexture = "Texture_Interface_Weapon_g3a4"
+                    Name = "AK4"
+                    NbWeapons = 3
+                    ShowDispersion = false
+                    TraitsToken = 
+                    [
+                        "MOTION",
+                        "CAC",
+                    ]
+                    TypeCategoryName = "THRUBJLEUJ"
+                    WeaponActiveAndCanShootPropertyName = "WeaponActiveAndCanShoot_1"
+                    WeaponDescriptionToken = "KQYZKDFEAI"
+                    WeaponIgnoredPropertyName = "WeaponIgnored_1"
+                    WeaponShootDataPropertyName = 
+                    [
+                        "WeaponShootData_0_1",
+                    ]
+                ),
+            ]
+            YulBoneOrdinal = 1
+        ),
+        TTurretInfanterieDescriptor
+        (
+            MountedWeaponDescriptorList = 
+            [
+                TMountedWeaponDescriptor
+                (
+                    AmmoBoxIndex = 1
+                    Ammunition = $/GFX/Weapon/Ammo_RBS70
+                    AnimateOnlyOneSoldier = true
+                    Caliber = "IYPFFGGZJE"
+                    DispersionRadiusOffColor = RGBA[0,0,0,0]
+                    DispersionRadiusOffThickness = -0.1
+                    DispersionRadiusOnColor = RGBA[0,0,0,0]
+                    DispersionRadiusOnThickness = -0.1
+                    EffectTag = "FireEffect_RBS70"
+                    HandheldEquipmentKey = "WeaponAlternative_2"
+                    InterfaceWeaponTexture = "Texture_Interface_Weapon_RBS70"
+                    Name = "LSENEJJAKZ"
+                    NbWeapons = 1
+                    ShowDispersion = false
+                    TraitsToken = 
+                    [
+                        "STAT",
+                        "manual",
+                    ]
+                    TypeCategoryName = "RGUHEGFUDW"
+                    WeaponActiveAndCanShootPropertyName = "WeaponActiveAndCanShoot_2"
+                    WeaponDescriptionToken = "WIPELYEGTV"
+                    WeaponIgnoredPropertyName = "WeaponIgnored_2"
+                    WeaponShootDataPropertyName = 
+                    [
+                        "WeaponShootData_0_2",
+                    ]
+                ),
+            ]
+            YulBoneOrdinal = 2
         ),
     ]
 )
