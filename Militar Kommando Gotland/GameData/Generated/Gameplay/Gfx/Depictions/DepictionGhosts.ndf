@@ -903,6 +903,12 @@ unnamed GhostVehicleDepictionRegistration
 )
 unnamed GhostVehicleDepictionRegistration
 (
+    Alternatives = Alternatives_AT_KSM65_100mm_SOV
+    BlackHoleKey = "Kapjas_m65_SWE"
+    Selector = SpecificMechanicalDepictionSelector
+)
+unnamed GhostVehicleDepictionRegistration
+(
     Alternatives = Alternatives_AT_M53_100mm_TCH
     BlackHoleKey = "AT_M53_100mm_TCH"
     Selector = SpecificMechanicalDepictionSelector
@@ -3027,6 +3033,12 @@ unnamed GhostVehicleDepictionRegistration
 )
 unnamed GhostVehicleDepictionRegistration
 (
+    Alternatives = Alternatives_Bofors_40mm_RFA
+    BlackHoleKey = "DCA_Lvakan_M48_SWE"
+    Selector = SpecificMechanicalDepictionSelector
+)
+unnamed GhostVehicleDepictionRegistration
+(
     Alternatives = Alternatives_Bofors_40mm_capture_DDR
     BlackHoleKey = "Bofors_40mm_capture_DDR"
     Selector = SpecificMechanicalDepictionSelector
@@ -3253,10 +3265,17 @@ unnamed GhostVehicleDepictionRegistration
     BlackHoleKey = "DAF_YA_4400_NL"
     Selector = SpecificMechanicalDepictionSelector
 )
+
 unnamed GhostVehicleDepictionRegistration
 (
     Alternatives = Alternatives_DAF_YA_4400_supply_NL
     BlackHoleKey = "DAF_YA_4400_supply_NL"
+    Selector = SpecificMechanicalDepictionSelector
+)
+unnamed GhostVehicleDepictionRegistration
+(
+    Alternatives = Alternatives_DAF_YA_4400_supply_NL
+    BlackHoleKey = "Tgb_311A_Supply_SWE"
     Selector = SpecificMechanicalDepictionSelector
 )
 unnamed GhostVehicleDepictionRegistration
@@ -3267,8 +3286,20 @@ unnamed GhostVehicleDepictionRegistration
 )
 unnamed GhostVehicleDepictionRegistration
 (
+    Alternatives = Alternatives_DAF_YHZ_2300_NL
+    BlackHoleKey = "Tgb_411B_Moelven_Supply_SWE"
+    Selector = SpecificMechanicalDepictionSelector
+)
+unnamed GhostVehicleDepictionRegistration
+(
     Alternatives = Alternatives_DAF_YHZ_2300_trans_NL
     BlackHoleKey = "DAF_YHZ_2300_trans_NL"
+    Selector = SpecificMechanicalDepictionSelector
+)
+unnamed GhostVehicleDepictionRegistration
+(
+    Alternatives = Alternatives_DAF_YHZ_2300_trans_NL
+    BlackHoleKey = "TGB_40_trans_SWE"
     Selector = SpecificMechanicalDepictionSelector
 )
 unnamed GhostVehicleDepictionRegistration
@@ -3417,6 +3448,12 @@ unnamed GhostVehicleDepictionRegistration
 )
 unnamed GhostVehicleDepictionRegistration
 (
+    Alternatives = Alternatives_DCA_Bofors_L60_DK
+    BlackHoleKey = "DCA_Lvakan_M36_SWE"
+    Selector = SpecificMechanicalDepictionSelector
+)
+unnamed GhostVehicleDepictionRegistration
+(
     Alternatives = Alternatives_DCA_Bofors_L60_FR
     BlackHoleKey = "DCA_Bofors_L60_FR"
     Selector = SpecificMechanicalDepictionSelector
@@ -3461,6 +3498,12 @@ unnamed GhostVehicleDepictionRegistration
 (
     Alternatives = Alternatives_DCA_Bofors_upgrade_NL
     BlackHoleKey = "DCA_Bofors_upgrade_NL"
+    Selector = SpecificMechanicalDepictionSelector
+)
+unnamed GhostVehicleDepictionRegistration
+(
+    Alternatives = Alternatives_DCA_Bofors_upgrade_NL
+    BlackHoleKey = "DCA_LVS_75M_SWE"
     Selector = SpecificMechanicalDepictionSelector
 )
 unnamed GhostVehicleDepictionRegistration
@@ -3515,6 +3558,12 @@ unnamed GhostVehicleDepictionRegistration
 (
     Alternatives = Alternatives_DCA_GAI_BO1_20mm_SWI
     BlackHoleKey = "DCA_GAI_BO1_20mm_SWI"
+    Selector = SpecificMechanicalDepictionSelector
+)
+unnamed GhostVehicleDepictionRegistration
+(
+    Alternatives = Alternatives_DCA_GAI_BO1_20mm_SWI
+    BlackHoleKey = "DCA_Lvakan_M4070_SWE"
     Selector = SpecificMechanicalDepictionSelector
 )
 unnamed GhostVehicleDepictionRegistration
@@ -3617,6 +3666,12 @@ unnamed GhostVehicleDepictionRegistration
 (
     Alternatives = Alternatives_DCA_KS19_100mm_DDR
     BlackHoleKey = "DCA_KS19_100mm_DDR"
+    Selector = SpecificMechanicalDepictionSelector
+)
+unnamed GhostVehicleDepictionRegistration
+(
+    Alternatives = Alternatives_DCA_KS19_100mm_DDR
+    BlackHoleKey = "DCA_VLVK_M3037_SWE"
     Selector = SpecificMechanicalDepictionSelector
 )
 unnamed GhostVehicleDepictionRegistration
@@ -4779,6 +4834,12 @@ unnamed GhostVehicleDepictionRegistration
 )
 unnamed GhostVehicleDepictionRegistration
 (
+    Alternatives = Alternatives_Gama_Goat_supply_US
+    BlackHoleKey = "Hjtrak_319V_Trakk_3T_SWE"
+    Selector = SpecificMechanicalDepictionSelector
+)
+unnamed GhostVehicleDepictionRegistration
+(
     Alternatives = Alternatives_Gama_Goat_supply_USMCR_US
     BlackHoleKey = "Gama_Goat_supply_USMCR_US"
     Selector = SpecificMechanicalDepictionSelector
@@ -4787,6 +4848,12 @@ unnamed GhostVehicleDepictionRegistration
 (
     Alternatives = Alternatives_Gama_Goat_trans_US
     BlackHoleKey = "Gama_Goat_trans_US"
+    Selector = SpecificMechanicalDepictionSelector
+)
+unnamed GhostVehicleDepictionRegistration
+(
+    Alternatives = Alternatives_Gama_Goat_trans_US
+    BlackHoleKey = "Hjtrak_319V_PTP_SWE"
     Selector = SpecificMechanicalDepictionSelector
 )
 unnamed GhostVehicleDepictionRegistration
@@ -5613,6 +5680,12 @@ unnamed GhostVehicleDepictionRegistration
 )
 unnamed GhostVehicleDepictionRegistration
 (
+    Alternatives = Alternatives_Howz_D30_122mm_DDR
+    BlackHoleKey = "Howz_Haubits_m4140_SWE"
+    Selector = SpecificMechanicalDepictionSelector
+)
+unnamed GhostVehicleDepictionRegistration
+(
     Alternatives = Alternatives_Howz_D30_122mm_SOV
     BlackHoleKey = "Howz_D30_122mm_SOV"
     Selector = SpecificMechanicalDepictionSelector
@@ -5687,6 +5760,12 @@ unnamed GhostVehicleDepictionRegistration
 (
     Alternatives = Alternatives_Howz_M101_105mm_NL
     BlackHoleKey = "Howz_M101_105mm_NL"
+    Selector = SpecificMechanicalDepictionSelector
+)
+unnamed GhostVehicleDepictionRegistration
+(
+    Alternatives = Alternatives_Howz_M101_105mm_NL
+    BlackHoleKey = "Howz_Haubits_m40_SWE"
     Selector = SpecificMechanicalDepictionSelector
 )
 unnamed GhostVehicleDepictionRegistration
@@ -5973,6 +6052,12 @@ unnamed GhostVehicleDepictionRegistration
 )
 unnamed GhostVehicleDepictionRegistration
 (
+    Alternatives = Alternatives_Howz_M59_LongTom_155mm_DK
+    BlackHoleKey = "Howz_Faltpjas_m37_SWE"
+    Selector = SpecificMechanicalDepictionSelector
+)
+unnamed GhostVehicleDepictionRegistration
+(
     Alternatives = Alternatives_Howz_M59_LongTom_155mm_OST
     BlackHoleKey = "Howz_M59_LongTom_155mm_OST"
     Selector = SpecificMechanicalDepictionSelector
@@ -6023,6 +6108,12 @@ unnamed GhostVehicleDepictionRegistration
 (
     Alternatives = Alternatives_Howz_TRF1_155mm_FR
     BlackHoleKey = "Howz_TRF1_155mm_FR"
+    Selector = SpecificMechanicalDepictionSelector
+)
+unnamed GhostVehicleDepictionRegistration
+(
+    Alternatives = Alternatives_Howz_TRF1_155mm_FR
+    BlackHoleKey = "Howz_Canon_FH_77B_SWE"
     Selector = SpecificMechanicalDepictionSelector
 )
 unnamed GhostVehicleDepictionRegistration
@@ -6555,6 +6646,12 @@ unnamed GhostVehicleDepictionRegistration
 )
 unnamed GhostVehicleDepictionRegistration
 (
+    Alternatives = Alternatives_LandRover_CMD_nonBerlin_UK
+    BlackHoleKey = "Raptgb_9033_CMD_SWE"
+    Selector = SpecificMechanicalDepictionSelector
+)
+unnamed GhostVehicleDepictionRegistration
+(
     Alternatives = Alternatives_LandRover_DK
     BlackHoleKey = "LandRover_DK"
     Selector = SpecificMechanicalDepictionSelector
@@ -6657,6 +6754,12 @@ unnamed GhostVehicleDepictionRegistration
 )
 unnamed GhostVehicleDepictionRegistration
 (
+    Alternatives = Alternatives_LandRover_UK
+    BlackHoleKey = "Pltgb_903_SWE"
+    Selector = SpecificMechanicalDepictionSelector
+)
+unnamed GhostVehicleDepictionRegistration
+(
     Alternatives = Alternatives_LandRover_WOMBAT_Gurkhas_UK
     BlackHoleKey = "LandRover_WOMBAT_Gurkhas_UK"
     Selector = SpecificMechanicalDepictionSelector
@@ -6671,6 +6774,12 @@ unnamed GhostVehicleDepictionRegistration
 (
     Alternatives = Alternatives_LandRover_Yeoman_UK
     BlackHoleKey = "LandRover_Yeoman_UK"
+    Selector = SpecificMechanicalDepictionSelector
+)
+unnamed GhostVehicleDepictionRegistration
+(
+    Alternatives = Alternatives_LandRover_Yeoman_UK
+    BlackHoleKey = "Pltgb_903_Ksp_SWE"
     Selector = SpecificMechanicalDepictionSelector
 )
 unnamed GhostVehicleDepictionRegistration
@@ -8145,6 +8254,12 @@ unnamed GhostVehicleDepictionRegistration
 )
 unnamed GhostVehicleDepictionRegistration
 (
+    Alternatives = Alternatives_M35_trans_US
+    BlackHoleKey = "Ltgb_934F_trans_SWE"
+    Selector = SpecificMechanicalDepictionSelector
+)
+unnamed GhostVehicleDepictionRegistration
+(
     Alternatives = Alternatives_M35_trans_VEN
     BlackHoleKey = "M35_trans_VEN"
     Selector = SpecificMechanicalDepictionSelector
@@ -9285,6 +9400,12 @@ unnamed GhostVehicleDepictionRegistration
 )
 unnamed GhostVehicleDepictionRegistration
 (
+    Alternatives = Alternatives_Mortier_107mm_NL
+    BlackHoleKey = "120mm_Mortar_Grk_m62_SWE"
+    Selector = SpecificMechanicalDepictionSelector
+)
+unnamed GhostVehicleDepictionRegistration
+(
     Alternatives = Alternatives_Mortier_107mm_US
     BlackHoleKey = "Mortier_107mm_US"
     Selector = SpecificMechanicalDepictionSelector
@@ -9561,6 +9682,12 @@ unnamed GhostVehicleDepictionRegistration
 )
 unnamed GhostVehicleDepictionRegistration
 (
+    Alternatives = Alternatives_Mortier_M29_81mm_NL
+    BlackHoleKey = "81mm_Mortar_Grk_m2939"
+    Selector = SpecificMechanicalDepictionSelector
+)
+unnamed GhostVehicleDepictionRegistration
+(
     Alternatives = Alternatives_Mortier_M29_81mm_OST
     BlackHoleKey = "Mortier_M29_81mm_OST"
     Selector = SpecificMechanicalDepictionSelector
@@ -9671,6 +9798,12 @@ unnamed GhostVehicleDepictionRegistration
 (
     Alternatives = Alternatives_Mortier_MORT61_120mm_NL
     BlackHoleKey = "Mortier_MORT61_120mm_NL"
+    Selector = SpecificMechanicalDepictionSelector
+)
+unnamed GhostVehicleDepictionRegistration
+(
+    Alternatives = Alternatives_Mortier_MORT61_120mm_NL
+    BlackHoleKey = "Mortar_Minrojningsorm_1_SWE"
     Selector = SpecificMechanicalDepictionSelector
 )
 unnamed GhostVehicleDepictionRegistration
@@ -10653,8 +10786,20 @@ unnamed GhostVehicleDepictionRegistration
 )
 unnamed GhostVehicleDepictionRegistration
 (
+    Alternatives = Alternatives_Saxon_CMD_UK
+    BlackHoleKey = "StabsTgb_m42A_CMD_SWE"
+    Selector = SpecificMechanicalDepictionSelector
+)
+unnamed GhostVehicleDepictionRegistration
+(
     Alternatives = Alternatives_Saxon_UK
     BlackHoleKey = "Saxon_UK"
+    Selector = SpecificMechanicalDepictionSelector
+)
+unnamed GhostVehicleDepictionRegistration
+(
+    Alternatives = Alternatives_Saxon_UK
+    BlackHoleKey = "Tgb_m42A_trans_SWE"
     Selector = SpecificMechanicalDepictionSelector
 )
 unnamed GhostVehicleDepictionRegistration
@@ -12513,6 +12658,12 @@ unnamed GhostVehicleDepictionRegistration
 )
 unnamed GhostVehicleDepictionRegistration
 (
+    Alternatives = Alternatives_VLTT_P4_Gendarmerie_FR
+    BlackHoleKey = "PV444_MP_SWE"
+    Selector = SpecificMechanicalDepictionSelector
+)
+unnamed GhostVehicleDepictionRegistration
+(
     Alternatives = Alternatives_VLTT_P4_MG_FR
     BlackHoleKey = "VLTT_P4_MG_FR"
     Selector = SpecificMechanicalDepictionSelector
@@ -12701,6 +12852,12 @@ unnamed GhostVehicleDepictionRegistration
 (
     Alternatives = Alternatives_ZIL_135M_supply_SOV
     BlackHoleKey = "ZIL_135M_supply_SOV"
+    Selector = SpecificMechanicalDepictionSelector
+)
+unnamed GhostVehicleDepictionRegistration
+(
+    Alternatives = Alternatives_ZIL_135M_supply_SOV
+    BlackHoleKey = "Dtgb_953B_SWE"
     Selector = SpecificMechanicalDepictionSelector
 )
 unnamed GhostVehicleDepictionRegistration
@@ -13252,7 +13409,7 @@ unnamed GhostAerialDepictionRegistration
 unnamed GhostAerialDepictionRegistration
 (
     Alternatives = Alternatives_CH47_Chinook_UK
-    BlackHoleKey = "CH47_Chinook_UK"
+    BlackHoleKey = "HKP_4_SWE"
     Selector = SpecificMechanicalDepictionSelector
 )
 unnamed GhostAerialDepictionRegistration

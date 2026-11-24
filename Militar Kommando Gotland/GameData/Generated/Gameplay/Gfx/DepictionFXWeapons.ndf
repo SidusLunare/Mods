@@ -14312,6 +14312,32 @@ FXWeapon_MMG_FN_MAG_7_62mm is FiringAndProjectile
     ]
 )
 
+FXWeapon_MMG_ksp_m58_7_62mm is FiringAndProjectile
+(
+    Happenings = [
+        TRandomHappening
+        (
+            Alternatives =
+            [
+                FXFiring_8( Action = $/GFX/GameFx/fx_tir_mitrailleuse_M240_douilles_eject_1 ),
+                FXFiring_8( Action = $/GFX/GameFx/fx_tir_mitrailleuse_M240_douilles_eject_2 ),
+                FXFiring_8( Action = $/GFX/GameFx/fx_tir_mitrailleuse_M240_douilles_eject_3 ),
+                FXFiring_8( Action = $/GFX/GameFx/fx_tir_mitrailleuse_M240_douilles_eject_4 ),
+            ]
+        ),
+        TRandomHappening
+        (
+            Alternatives =
+            [
+                FXProjectile_16( Action = $/GFX/GameFx/fx_traine_M240_1 ),
+                FXProjectile_16( Action = $/GFX/GameFx/fx_traine_M240_2 ),
+                FXProjectile_16( Action = $/GFX/GameFx/fx_traine_M240_3 ),
+                FXProjectile_16( Action = $/GFX/GameFx/fx_traine_M240_4 ),
+            ]
+        )
+    ]
+)
+
 FXWeapon_MMG_FN_MAG_7_62mm_Helo is FiringAndProjectile
 (
     Happenings = [

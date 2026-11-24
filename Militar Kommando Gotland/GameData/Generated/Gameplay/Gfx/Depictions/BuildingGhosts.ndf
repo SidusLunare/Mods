@@ -17,6 +17,7 @@ unnamed TGhostBuildingMimeticRegistration
         ( 'FOB_FR', 'FOB_Nato_03' ),
         ( 'FOB_ITA', 'FOB_Nato_03' ),
         ( 'FOB_NL', 'FOB_Nato_03' ),
+        ( 'FOB_SWE', 'FOB_Nato_03' ),
         ( 'FOB_OST', 'FOB_Nato_03' ),
         ( 'FOB_POL', 'FOB_Pact_03' ),
         ( 'FOB_RFA', 'FOB_Nato_03' ),

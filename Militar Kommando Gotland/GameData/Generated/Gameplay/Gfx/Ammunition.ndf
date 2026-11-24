@@ -82849,7 +82849,7 @@ Ammo_FM_Ak4 is TAmmunitionDescriptor
     CanShootWhileMoving               = True
     HasDeploymentTime                 = False
     SimultaneousShotsCount            = 1
-    AffichageMunitionParSalve         = 3
+    AffichageMunitionParSalve         = 4
     SmokeDescriptor                   = nil
     FireDescriptor                    = nil
     IsHarmlessForAllies               = True
@@ -83274,12 +83274,10 @@ Ammo_Mortar_Minrojninsorm_1_SWE is TAmmunitionDescriptor
 Ammo_Howz_Canon_Kapjas_m65_SWE is TAmmunitionDescriptor
 (
     DescriptorId                      = GUID:{3a73499b-913a-45a1-a28e-7c2ae491fa4c}
-    HasDeploymentTime = True
     WeaponCursorType                  = Weapon_Cursor_CorrectedArtillery
     MinMaxCategory                    = MinMax_obusier
     Arme                              = TDamageTypeRTTI(Family=DamageFamily_howz Index=1)
     ProjectileType                    = EProjectileType/Artillerie
-    ProjectileSpeedGRU                = 1200
     ImpactHappening                   = 'Artillerie2A18122Mm'
     FxPower                           = EFXPower/Moyen
     TimeBetweenTwoShots               = 3.0
@@ -83306,6 +83304,9 @@ Ammo_Howz_Canon_Kapjas_m65_SWE is TAmmunitionDescriptor
     DisplaySalveAccuracy              = True
     TirIndirect                       = True
     TirReflexe                        = False
+    ForceHitTopArmorOnSuccess         = True
+    ComputeArmorFromImpactLocation    = True
+    ProjectileSpeedGRU                = 1200
     NoiseDissimulationMalus           = 2.0
     ShotsBeforeMaxNoise               = 2
     TargetOnlyOneUnitInDistrict       = False
@@ -83327,6 +83328,7 @@ Ammo_Howz_Canon_Kapjas_m65_SWE is TAmmunitionDescriptor
     TimeBetweenTwoSalvos_Max          = -1.0
     ShotsCountPerSalvo                = 6
     SupplyCost                        = 120.0
+    HasDeploymentTime                 = True
     NbSalvosShootOnPosition           = 1
     CanShootOnPosition                = True
     CanShootWhileMoving               = False
@@ -83341,7 +83343,7 @@ Ammo_Howz_Canon_Kapjas_m65_SWE is TAmmunitionDescriptor
     PitchForParabolic                 = 0.6108652381980153
     DamageTypeEvolutionOverRangeDescriptor  = nil
 )
-Ammo_Howz_Canon_Kapjas_m65_SWE_DIRECTAA is TAmmunitionDescriptor
+Ammo_Howz_Canon_Kapjas_m65_SWE_AA is TAmmunitionDescriptor
 (
     DescriptorId                      = GUID:{89e8043d-1544-4b18-b8db-cc51626e4af5}
     WeaponCursorType                  = Weapon_Cursor_FastCanon
@@ -83352,8 +83354,8 @@ Ammo_Howz_Canon_Kapjas_m65_SWE_DIRECTAA is TAmmunitionDescriptor
     FxPower                           = EFXPower/Moyen
     TimeBetweenTwoShots               = 0
     TimeBetweenTwoFx                  = 0
-    MinimumRangeGRU                   = 35
-    MaximumRangeGRU                   = 1925
+    MinimumRangeGRU                   = 0
+    MaximumRangeGRU                   = 0
     MinimumRangeHelicopterGRU         = 35
     MaximumRangeHelicopterGRU         = 2650
     MinimumRangeAirplaneGRU           = 35
@@ -83365,7 +83367,7 @@ Ammo_Howz_Canon_Kapjas_m65_SWE_DIRECTAA is TAmmunitionDescriptor
     DispersionAtMinRangeGRU           = 18
     SalvoShotsSorted                  = False
     RadiusSplashPhysicalDamagesGRU    = 16
-    PhysicalDamages                   = 1.995
+    PhysicalDamages                   = 1.67
     ShowDamageInUI                    = True
     RadiusSplashSuppressDamagesGRU    = 50
     SuppressDamages                   = 120.0
@@ -83395,7 +83397,7 @@ Ammo_Howz_Canon_Kapjas_m65_SWE_DIRECTAA is TAmmunitionDescriptor
     TimeBetweenTwoSalvos_Max          = -1.0
     ShotsCountPerSalvo                = 1
     SupplyCost                        = 6.0
-    CanShootOnPosition                = False
+    CanShootOnPosition                = True
     CanShootWhileMoving               = False
     HasDeploymentTime                 = False
     SimultaneousShotsCount            = 1
@@ -83408,6 +83410,74 @@ Ammo_Howz_Canon_Kapjas_m65_SWE_DIRECTAA is TAmmunitionDescriptor
     TandemCharge                      = False
     DamageTypeEvolutionOverRangeDescriptor  = ~/DamageTypeEvolutionOverRangeDescriptor_DCA
 )
+Ammo_HE_Canon_Kapjas_m65_SWE_DIRECT is TAmmunitionDescriptor
+(
+    DescriptorId                      = GUID:{549e839a-b715-4f70-aac7-8aaa2d07d49f}
+    WeaponCursorType                  = Weapon_Cursor_Canon
+    MinMaxCategory                    = MinMax_CanonAP
+    Arme                              = TDamageTypeRTTI(Family=DamageFamily_cac Index=1)
+    ProjectileType                    = EProjectileType/Obus
+    ImpactHappening                   = 'Artillerie2A18122Mm'
+    FxPower                           = EFXPower/Moyen
+    TimeBetweenTwoShots               = 0
+    TimeBetweenTwoFx                  = 0
+    MinimumRangeGRU                   = 25
+    MaximumRangeGRU                   = 1925
+    MinimumRangeHelicopterGRU         = 0
+    MaximumRangeHelicopterGRU         = 0
+    MinimumRangeAirplaneGRU           = 0
+    MaximumRangeAirplaneGRU           = 0
+    MinimumRangeProjectileGRU         = 0
+    MaximumRangeProjectileGRU         = 0
+    AngleDispersion                   = 0.0
+    DispersionAtMaxRangeGRU           = 156
+    DispersionAtMinRangeGRU           = 18
+    SalvoShotsSorted                  = False
+    RadiusSplashPhysicalDamagesGRU    = 27
+    PhysicalDamages                   = 1.67
+    ShowDamageInUI                    = True
+    RadiusSplashSuppressDamagesGRU    = 0
+    SuppressDamages                   = 202.0
+    AllowSuppressDamageWhenNoImpact   = False
+    DisplaySalveAccuracy              = False
+    TirIndirect                       = False
+    TirReflexe                        = True
+    ProjectileSpeedGRU                = 1250
+    NoiseDissimulationMalus           = 2.0
+    ShotsBeforeMaxNoise               = 2
+    TargetOnlyOneUnitInDistrict       = False
+    HitRollRuleDescriptor = TDiceHitRollRuleDescriptor
+    (
+        BaseCriticModifier = 25
+        BaseHitValueModifiers =
+        [
+            (EBaseHitValueModifier/Base, 0),
+            (EBaseHitValueModifier/Idling, 30),
+            (EBaseHitValueModifier/Moving, 0),
+            (EBaseHitValueModifier/Targeted, 0),
+        ]
+        DistanceToTarget = True
+    )
+    AimingTime                        = 2.5
+    TimeBetweenTwoSalvos              = 10.0
+    TimeBetweenTwoSalvos_Min          = -1.0
+    TimeBetweenTwoSalvos_Max          = -1.0
+    ShotsCountPerSalvo                = 1
+    SupplyCost                        = 20.0
+    NbSalvosShootOnPosition           = 1
+    CanShootOnPosition                = True
+    CanShootWhileMoving               = False
+    HasDeploymentTime                 = False
+    SimultaneousShotsCount            = 1
+    AffichageMunitionParSalve         = 1
+    SmokeDescriptor                   = nil
+    FireDescriptor                    = nil
+    FireTriggeringProbability         = 0
+    IsHarmlessForAllies               = False
+    PiercingWeapon                    = True
+    TandemCharge                      = False
+    DamageTypeEvolutionOverRangeDescriptor  = nil
+)
 Ammo_Howz_Canon_Kapjas_m65_SWE_SMOKE is TAmmunitionDescriptor
 (
     DescriptorId                      = GUID:{b1836e59-e12f-47bd-bcd9-c620ff7cd644}
@@ -83416,7 +83486,6 @@ Ammo_Howz_Canon_Kapjas_m65_SWE_SMOKE is TAmmunitionDescriptor
     MinMaxCategory                    = MinMax_obusier
     Arme                              = TDamageTypeRTTI(Family=DamageFamily_he Index=1)
     ProjectileType                    = EProjectileType/Artillerie
-    ProjectileSpeedGRU                = 1200
     ImpactHappening                   = 'Artillerie2A18122MmSmoke'
     FxPower                           = EFXPower/Moyen
     TimeBetweenTwoShots               = 3.0
@@ -83443,6 +83512,7 @@ Ammo_Howz_Canon_Kapjas_m65_SWE_SMOKE is TAmmunitionDescriptor
     DisplaySalveAccuracy              = True
     TirIndirect                       = True
     TirReflexe                        = False
+    ProjectileSpeedGRU                = 1200
     NoiseDissimulationMalus           = 2.0
     ShotsBeforeMaxNoise               = 2
     TargetOnlyOneUnitInDistrict       = False
@@ -84252,7 +84322,7 @@ Ammo_Canon_AP_VLVK_M3037_SWE is TAmmunitionDescriptor
     DescriptorId                      = GUID:{72e185cc-6f5d-492c-804e-9b143bef0db5}
     WeaponCursorType                  = Weapon_Cursor_Canon
     MinMaxCategory                    = MinMax_CanonAP
-    Arme                              = TDamageTypeRTTI(Family=DamageFamily_ap Index=26)
+    Arme                              = TDamageTypeRTTI(Family=DamageFamily_ap Index=22)
     ProjectileType                    = EProjectileType/Obus
     ImpactHappening                   = 'CanonGrosAPFDSU5TSDouille'
     FxPower                           = EFXPower/Moyen

@@ -587,7 +587,7 @@ Descriptor_Deck_Division_SWE_MilitarKommando_Gotland_multi is TDeckDivisionRule
         (
             UnitDescriptor = $/GFX/Unit/Descriptor_Unit_Raptgb_9033_CMD_SWE
             AvailableWithoutTransport = True
-            MaxPackNumber = 1
+            MaxPackNumber = 2
             NumberOfUnitInPack = 3
             NumberOfUnitInPackXPMultiplier = [0.0, 1.0, 0.5, 0.0]
         ),
@@ -595,7 +595,7 @@ Descriptor_Deck_Division_SWE_MilitarKommando_Gotland_multi is TDeckDivisionRule
         (
             UnitDescriptor = $/GFX/Unit/Descriptor_Unit_StabsTgb_m42A_CMD_SWE
             AvailableWithoutTransport = True
-            MaxPackNumber = 1
+            MaxPackNumber = 2
             NumberOfUnitInPack = 2
             NumberOfUnitInPackXPMultiplier = [0.0, 1.0, 0.5, 0.0]
         ),
@@ -646,15 +646,6 @@ Descriptor_Deck_Division_SWE_MilitarKommando_Gotland_multi is TDeckDivisionRule
         ),
         TDeckUniteRule
         (
-            UnitDescriptor = $/GFX/Unit/Descriptor_Unit_Howz_Canon_FH_77B_SWE
-            AvailableWithoutTransport = False
-            AvailableTransportList = [ $/GFX/Unit/Descriptor_Unit_TGB_40_trans_SWE ]
-            MaxPackNumber = 1
-            NumberOfUnitInPack = 2
-            NumberOfUnitInPackXPMultiplier = [1.0, 0.5, 0.0, 0.0]
-        ),        
-        TDeckUniteRule
-        (
             UnitDescriptor = $/GFX/Unit/Descriptor_Unit_Howz_Haubits_m40_SWE
             AvailableWithoutTransport = False
             AvailableTransportList = [ $/GFX/Unit/Descriptor_Unit_Hjtrak_319V_PTP_SWE ]
@@ -671,6 +662,15 @@ Descriptor_Deck_Division_SWE_MilitarKommando_Gotland_multi is TDeckDivisionRule
             NumberOfUnitInPack = 4
             NumberOfUnitInPackXPMultiplier = [1.0, 0.6, 0.34, 0.0]
         ),
+        TDeckUniteRule
+        (
+            UnitDescriptor = $/GFX/Unit/Descriptor_Unit_Howz_Canon_FH_77B_SWE
+            AvailableWithoutTransport = False
+            AvailableTransportList = [ $/GFX/Unit/Descriptor_Unit_TGB_40_trans_SWE ]
+            MaxPackNumber = 1
+            NumberOfUnitInPack = 2
+            NumberOfUnitInPackXPMultiplier = [1.0, 0.5, 0.0, 0.0]
+        ),        
         TDeckUniteRule
         (
             UnitDescriptor = $/GFX/Unit/Descriptor_Unit_DCA_Lvakan_M4070_SWE

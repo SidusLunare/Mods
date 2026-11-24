@@ -2746,6 +2746,47 @@ export Modele_Engineers_NL_03 is TResourceMesh( Mesh=NL_Infanterie_1 )
 export Modele_Engineers_NL_LOW is TResourceMesh( Mesh=NL_Infanterie_1_LOW )
 
 //------------------------------------------------------------------------------
+//                                   SOLDATS SWE---------------------------------
+//------------------------------------------------------------------------------
+
+SWE_Commando_1 is 'GameData:/Assets/3D/Units/NL/Infanterie/Commando/Commando_1.fbx'
+SWE_Commando_2 is 'GameData:/Assets/3D/Units/NL/Infanterie/Commando/Commando_2.fbx'
+SWE_Commando_NCO is 'GameData:/Assets/3D/Units/NL/Infanterie/Commando/Commando_NCO.fbx'
+SWE_Commando_LOW is 'GameData:/Assets/3D/Units/NL/Infanterie/Commando/Commando_1_LOW.fbx'
+SWE_Infanterie_1 is 'GameData:/Assets/3D/Units/NL/Infanterie/Infanterie/Infanterie_1.fbx'
+SWE_Infanterie_2 is 'GameData:/Assets/3D/Units/NL/Infanterie/Infanterie/Infanterie_2.fbx'
+SWE_Infanterie_3 is 'GameData:/Assets/3D/Units/NL/Infanterie/Infanterie/Infanterie_1.fbx'
+SWE_Infanterie_NCO is 'GameData:/Assets/3D/Units/NL/Infanterie/Infanterie/Infanterie_NCO.fbx'
+SWE_Infanterie_Officer is 'GameData:/Assets/3D/Units/NL/Infanterie/Infanterie/Infanterie_Officer.fbx'
+SWE_Infanterie_LOW is 'GameData:/Assets/3D/Units/NL/Infanterie/Infanterie/Infanterie_1_LOW.fbx'
+SWE_KMAR_1 is 'GameData:/Assets/3D/Units/NL/Infanterie/KMAR/KMAR_1.fbx'
+SWE_KMAR_2 is 'GameData:/Assets/3D/Units/NL/Infanterie/KMAR/KMAR_2.fbx'
+SWE_KMAR_LOW is 'GameData:/Assets/3D/Units/NL/Infanterie/KMAR/KMAR_1_LOW.fbx'
+SWE_Marinier_1 is 'GameData:/Assets/3D/Units/NL/Infanterie/Marinier/Marinier_1.fbx'
+SWE_Marinier_2 is 'GameData:/Assets/3D/Units/NL/Infanterie/Marinier/Marinier_2.fbx'
+SWE_Marinier_NCO is 'GameData:/Assets/3D/Units/NL/Infanterie/Marinier/Marinier_NCO.fbx'
+SWE_Marinier_Officer is 'GameData:/Assets/3D/Units/NL/Infanterie/Marinier/Marinier_Officer.fbx'
+SWE_Marinier_spe is 'GameData:/Assets/3D/Units/NL/Infanterie/Marinier/Marinier_spe.fbx'
+SWE_Marinier_LOW is 'GameData:/Assets/3D/Units/NL/Infanterie/Marinier/Marinier_1_LOW.fbx'
+SWE_MarinierCmdo_1 is 'GameData:/Assets/3D/Units/NL/Infanterie/MarinierCmdo/MarinierCmdo_1.fbx'
+SWE_MarinierCmdo_NCO is 'GameData:/Assets/3D/Units/NL/Infanterie/MarinierCmdo/MarinierCmdo_NCO.fbx'
+SWE_MarinierCmdo_LOW is 'GameData:/Assets/3D/Units/NL/Infanterie/MarinierCmdo/MarinierCmdo_1_LOW.fbx'
+SWE_Natres_1 is 'GameData:/Assets/3D/Units/NL/Infanterie/Natres/Natres_1.fbx'
+SWE_Natres_2 is 'GameData:/Assets/3D/Units/NL/Infanterie/Natres/Natres_2.fbx'
+SWE_Natres_LOW is 'GameData:/Assets/3D/Units/NL/Infanterie/Natres/Natres_1_LOW.fbx'
+
+//TEMPLATE
+//export Modele_x is TResourceMesh( Mesh=SWE_x_1 )
+//export Modele_x_02 is TResourceMesh( Mesh=SWE_x_2 )
+//export Modele_x_LOW is TResourceMesh( Mesh=SWE_x_LOW )
+
+//MANPAD
+export Modele_MANPAD_SWE is TResourceMesh( Mesh=SWE_Infanterie_1 )
+export Modele_MANPAD_SWE_02 is TResourceMesh( Mesh=SWE_Infanterie_2 )
+export Modele_MANPAD_SWE_03 is TResourceMesh( Mesh=SWE_Infanterie_3 )
+export Modele_MANPAD_SWE_LOW is TResourceMesh( Mesh=SWE_Infanterie_LOW )
+
+//------------------------------------------------------------------------------
 //
 //
 //                                   SOLDATS CAN

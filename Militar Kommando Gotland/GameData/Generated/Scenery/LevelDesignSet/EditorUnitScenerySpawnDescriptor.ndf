@@ -31155,6 +31155,14 @@ unnamed Template_SceneryDescriptorSpawn
 )
 unnamed Template_SceneryDescriptorSpawn
 (
+    RegistrationName      = 'FOB_SWE'
+    ClassName             = '$/GFX/Unit/Descriptor_Unit_FOB_SWE'
+    AutoNameBase          = 'FOB_SWE'
+    ModelResource         = $/GFX/DepictionResources/Modele_TestUnit_Building
+    ThumbstackScale       = 20
+)
+unnamed Template_SceneryDescriptorSpawn
+(
     RegistrationName      = 'FOB_OST'
     ClassName             = '$/GFX/Unit/Descriptor_Unit_FOB_OST'
     AutoNameBase          = 'FOB_OST'

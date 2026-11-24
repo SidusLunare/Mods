@@ -2481,6 +2481,27 @@ unnamed ShowroomAerialDepictionRegistration
 )
 unnamed ShowroomAerialDepictionRegistration
 (
+    BlackHoleKey = "showroom_HKP_4_SWE"
+    MeshDescriptor = $/GFX/DepictionResources/Modele_CH47_Chinook_UK
+    Operators = 
+    [
+        DepictionOperator_Reset_Generic,
+        TCosmeticFixedBoneRotationOperatorDesc
+        (
+            BoneName = "bloc_moteur_1"
+            RotationAxis = float3[0, 0, 1]
+            RotationInDegree = -30
+        ),
+        TCosmeticFixedBoneRotationOperatorDesc
+        (
+            BoneName = "bloc_moteur_2"
+            RotationAxis = float3[0, 0, 1]
+            RotationInDegree = 30
+        ),
+    ]
+)
+unnamed ShowroomAerialDepictionRegistration
+(
     BlackHoleKey = "showroom_CH47_Chinook_US"
     MeshDescriptor = $/GFX/DepictionResources/Modele_CH47_Chinook_US
     Operators = 

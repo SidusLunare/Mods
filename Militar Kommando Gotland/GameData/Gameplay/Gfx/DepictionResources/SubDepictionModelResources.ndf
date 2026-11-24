@@ -856,6 +856,49 @@ export MeshDescriptor_Servant_D_Marinier_NL_LOW is TResourceMesh
     Mesh="GameData:/Assets/3D/Units/NL/Infanterie/Marinier/Marinier_1_LOW.fbx"
 )
 //--------------------------------------------------------------------------------------------------------------------
+export MeshDescriptor_Servant_G_SWE is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/NL/Infanterie/Infanterie/Infanterie_1.fbx"
+)
+export MeshDescriptor_Servant_D_SWE is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/NL/Infanterie/Infanterie/Infanterie_2.fbx"
+)
+export MeshDescriptor_Servant_G_SWE_LOW is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/NL/Infanterie/Infanterie/Infanterie_1_LOW.fbx"
+)
+export MeshDescriptor_Servant_D_SWE_LOW is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/NL/Infanterie/Infanterie/Infanterie_1_LOW.fbx"
+)
+//--------------------------------------------------------------------------------------------------------------------
+export MeshDescriptor_Servant_G_HV_SWE is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/NL/Infanterie/Natres/Natres_1.fbx"
+)
+export MeshDescriptor_Servant_D_HV_SWE is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/NL/Infanterie/Natres/Natres_2.fbx"
+)
+export MeshDescriptor_Servant_G_HV_SWE_LOW is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/NL/Infanterie/Natres/Natres_1_LOW.fbx"
+)
+export MeshDescriptor_Servant_D_HV_SWE_LOW is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/NL/Infanterie/Natres/Natres_1_LOW.fbx"
+)
+//--------------------------------------------------------------------------------------------------------------------
+export MeshDescriptor_Driver_SWE is TResourceMesh
+(
+    Mesh=NL_Infanterie_1
+)
+export MeshDescriptor_Driver_SWE_LOW is TResourceMesh
+(
+    Mesh=NL_Infanterie_1_LOW
+)
+//--------------------------------------------------------------------------------------------------------------------
 export MeshDescriptor_Servant_G_COL is TResourceMesh
 (
     Mesh="GameData:/Assets/3D/Units/COL/Infanterie/COL_Rifle/COL_Rifle_1.fbx"

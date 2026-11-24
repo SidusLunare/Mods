@@ -1566,6 +1566,12 @@ unnamed ShowroomVehicleDepictionRegistration
 )
 unnamed ShowroomVehicleDepictionRegistration
 (
+    BlackHoleKey = "showroom_Kapjas_m65_SWE"
+    Alternatives = Alternatives_AT_KSM65_100mm_SOV
+    SubDepictions = HumanSubDepictionsShowroom_Kapjas_m65_SWE
+)
+unnamed ShowroomVehicleDepictionRegistration
+(
     BlackHoleKey = "showroom_AT_M53_100mm_TCH"
     Alternatives = Alternatives_AT_M53_100mm_TCH
     Operators = 
@@ -4451,6 +4457,12 @@ unnamed ShowroomVehicleDepictionRegistration
 )
 unnamed ShowroomVehicleDepictionRegistration
 (
+    BlackHoleKey = "showroom_DCA_Lvakan_M48_SWE"
+    Alternatives = Alternatives_Bofors_40mm_RFA
+    SubDepictions = HumanSubDepictionsShowroom_DCA_Lvakan_M48_SWE
+)
+unnamed ShowroomVehicleDepictionRegistration
+(
     BlackHoleKey = "showroom_Bofors_40mm_capture_DDR"
     Alternatives = Alternatives_Bofors_40mm_capture_DDR
     SubDepictions = HumanSubDepictionsShowroom_Bofors_40mm_capture_DDR
@@ -4853,15 +4865,33 @@ unnamed ShowroomVehicleDepictionRegistration
 )
 unnamed ShowroomVehicleDepictionRegistration
 (
+    BlackHoleKey = "showroom_Tgb_311A_Supply_SWE"
+    Alternatives = Alternatives_DAF_YA_4400_supply_NL
+    SubDepictions = HumanSubDepictionsShowroom_Tgb_311A_Supply_SWE
+)
+unnamed ShowroomVehicleDepictionRegistration
+(
     BlackHoleKey = "showroom_DAF_YHZ_2300_NL"
     Alternatives = Alternatives_DAF_YHZ_2300_NL
     SubDepictions = HumanSubDepictionsShowroom_DAF_YHZ_2300_NL
 )
 unnamed ShowroomVehicleDepictionRegistration
 (
+    BlackHoleKey = "showroom_Tgb_411B_Moelven_Supply_SWE"
+    Alternatives = Alternatives_DAF_YHZ_2300_NL
+    SubDepictions = HumanSubDepictionsShowroom_Tgb_411B_Moelven_Supply_SWE
+)
+unnamed ShowroomVehicleDepictionRegistration
+(
     BlackHoleKey = "showroom_DAF_YHZ_2300_trans_NL"
     Alternatives = Alternatives_DAF_YHZ_2300_trans_NL
     SubDepictions = HumanSubDepictionsShowroom_DAF_YHZ_2300_trans_NL
+)
+unnamed ShowroomVehicleDepictionRegistration
+(
+    BlackHoleKey = "showroom_TGB_40_trans_SWE"
+    Alternatives = Alternatives_DAF_YHZ_2300_trans_NL
+    SubDepictions = HumanSubDepictionsShowroom_TGB_40_trans_SWE
 )
 unnamed ShowroomVehicleDepictionRegistration
 (
@@ -5060,6 +5090,12 @@ unnamed ShowroomVehicleDepictionRegistration
 )
 unnamed ShowroomVehicleDepictionRegistration
 (
+    BlackHoleKey = "showroom_DCA_Lvakan_M36_SWE"
+    Alternatives = Alternatives_DCA_Bofors_L60_DK
+    SubDepictions = HumanSubDepictionsShowroom_DCA_Lvakan_M36_SWE
+)
+unnamed ShowroomVehicleDepictionRegistration
+(
     BlackHoleKey = "showroom_DCA_Bofors_L60_FR"
     Alternatives = Alternatives_DCA_Bofors_L60_FR
     SubDepictions = HumanSubDepictionsShowroom_DCA_Bofors_L60_FR
@@ -5105,6 +5141,12 @@ unnamed ShowroomVehicleDepictionRegistration
     BlackHoleKey = "showroom_DCA_Bofors_upgrade_NL"
     Alternatives = Alternatives_DCA_Bofors_upgrade_NL
     SubDepictions = HumanSubDepictionsShowroom_DCA_Bofors_upgrade_NL
+)
+unnamed ShowroomVehicleDepictionRegistration
+(
+    BlackHoleKey = "showroom_DCA_LVS_75M_SWE"
+    Alternatives = Alternatives_DCA_Bofors_upgrade_NL
+    SubDepictions = HumanSubDepictionsShowroom_DCA_LVS_75M_SWE
 )
 unnamed ShowroomVehicleDepictionRegistration
 (
@@ -5179,6 +5221,12 @@ unnamed ShowroomVehicleDepictionRegistration
     BlackHoleKey = "showroom_DCA_GAI_BO1_20mm_SWI"
     Alternatives = Alternatives_DCA_GAI_BO1_20mm_SWI
     SubDepictions = HumanSubDepictionsShowroom_DCA_GAI_BO1_20mm_SWI
+)
+unnamed ShowroomVehicleDepictionRegistration
+(
+    BlackHoleKey = "showroom_DCA_Lvakan_M4070_SWE"
+    Alternatives = Alternatives_DCA_GAI_BO1_20mm_SWI
+    SubDepictions = HumanSubDepictionsShowroom_DCA_Lvakan_M4070_SWE
 )
 unnamed ShowroomVehicleDepictionRegistration
 (
@@ -5333,6 +5381,12 @@ unnamed ShowroomVehicleDepictionRegistration
     BlackHoleKey = "showroom_DCA_KS19_100mm_DDR"
     Alternatives = Alternatives_DCA_KS19_100mm_DDR
     SubDepictions = HumanSubDepictionsShowroom_DCA_KS19_100mm_DDR
+)
+unnamed ShowroomVehicleDepictionRegistration
+(
+    BlackHoleKey = "showroom_DCA_VLVK_M3037_SWE"
+    Alternatives = Alternatives_DCA_KS19_100mm_DDR
+    SubDepictions = HumanSubDepictionsShowroom_DCA_VLVK_M3037_SWE
 )
 unnamed ShowroomVehicleDepictionRegistration
 (
@@ -7013,6 +7067,12 @@ unnamed ShowroomVehicleDepictionRegistration
 )
 unnamed ShowroomVehicleDepictionRegistration
 (
+    BlackHoleKey = "showroom_Hjtrak_319V_Trakk_3T_SWE"
+    Alternatives = Alternatives_Gama_Goat_supply_US
+    SubDepictions = HumanSubDepictionsShowroom_Hjtrak_319V_Trakk_3T_SWE
+)
+unnamed ShowroomVehicleDepictionRegistration
+(
     BlackHoleKey = "showroom_Gama_Goat_supply_USMCR_US"
     Alternatives = Alternatives_Gama_Goat_supply_USMCR_US
     SubDepictions = HumanSubDepictionsShowroom_Gama_Goat_supply_USMCR_US
@@ -7022,6 +7082,12 @@ unnamed ShowroomVehicleDepictionRegistration
     BlackHoleKey = "showroom_Gama_Goat_trans_US"
     Alternatives = Alternatives_Gama_Goat_trans_US
     SubDepictions = HumanSubDepictionsShowroom_Gama_Goat_trans_US
+)
+unnamed ShowroomVehicleDepictionRegistration
+(
+    BlackHoleKey = "showroom_Hjtrak_319V_PTP_SWE"
+    Alternatives = Alternatives_Gama_Goat_trans_US
+    SubDepictions = HumanSubDepictionsShowroom_Hjtrak_319V_PTP_SWE
 )
 unnamed ShowroomVehicleDepictionRegistration
 (
@@ -8006,6 +8072,22 @@ unnamed ShowroomVehicleDepictionRegistration
 )
 unnamed ShowroomVehicleDepictionRegistration
 (
+    BlackHoleKey = "showroom_Howz_Haubits_m4140_SWE"
+    Alternatives = Alternatives_Howz_D30_122mm_DDR
+    Operators = 
+    [
+        DepictionOperator_Reset_Generic,
+        TCosmeticFixedBoneRotationOperatorDesc
+        (
+            BoneName = "axe_canon_01"
+            RotationAxis = float3[0, 1, 0]
+            RotationInDegree = -10
+        ),
+    ]
+    SubDepictions = HumanSubDepictionsShowroom_Howz_Haubits_m4140_SWE
+)
+unnamed ShowroomVehicleDepictionRegistration
+(
     BlackHoleKey = "showroom_Howz_D30_122mm_SOV"
     Alternatives = Alternatives_Howz_D30_122mm_SOV
     Operators = 
@@ -8211,6 +8293,22 @@ unnamed ShowroomVehicleDepictionRegistration
         ),
     ]
     SubDepictions = HumanSubDepictionsShowroom_Howz_M101_105mm_NL
+)
+unnamed ShowroomVehicleDepictionRegistration
+(
+    BlackHoleKey = "showroom_Howz_Haubits_m40_SWE"
+    Alternatives = Alternatives_Howz_M101_105mm_NL
+    Operators = 
+    [
+        DepictionOperator_Reset_Generic,
+        TCosmeticFixedBoneRotationOperatorDesc
+        (
+            BoneName = "axe_canon_01"
+            RotationAxis = float3[0, 1, 0]
+            RotationInDegree = -10
+        ),
+    ]
+    SubDepictions = HumanSubDepictionsShowroom_Howz_Haubits_m40_SWE
 )
 unnamed ShowroomVehicleDepictionRegistration
 (
@@ -8966,6 +9064,22 @@ unnamed ShowroomVehicleDepictionRegistration
 )
 unnamed ShowroomVehicleDepictionRegistration
 (
+    BlackHoleKey = "showroom_Howz_Faltpjas_m37_SWE"
+    Alternatives = Alternatives_Howz_M59_LongTom_155mm_DK
+    Operators = 
+    [
+        DepictionOperator_Reset_Generic,
+        TCosmeticFixedBoneRotationOperatorDesc
+        (
+            BoneName = "axe_canon_01"
+            RotationAxis = float3[0, 1, 0]
+            RotationInDegree = -10
+        ),
+    ]
+    SubDepictions = HumanSubDepictionsShowroom_Howz_Faltpjas_m37_SWE
+)
+unnamed ShowroomVehicleDepictionRegistration
+(
     BlackHoleKey = "showroom_Howz_M59_LongTom_155mm_OST"
     Alternatives = Alternatives_Howz_M59_LongTom_155mm_OST
     Operators = 
@@ -9107,6 +9221,22 @@ unnamed ShowroomVehicleDepictionRegistration
         ),
     ]
     SubDepictions = HumanSubDepictionsShowroom_Howz_TRF1_155mm_FR
+)
+unnamed ShowroomVehicleDepictionRegistration
+(
+    BlackHoleKey = "showroom_Howz_Canon_FH_77B_SWE"
+    Alternatives = Alternatives_Howz_TRF1_155mm_FR
+    Operators = 
+    [
+        DepictionOperator_Reset_Generic,
+        TCosmeticFixedBoneRotationOperatorDesc
+        (
+            BoneName = "axe_canon_01"
+            RotationAxis = float3[0, 1, 0]
+            RotationInDegree = -10
+        ),
+    ]
+    SubDepictions = HumanSubDepictionsShowroom_Howz_Canon_FH_77B_SWE
 )
 unnamed ShowroomVehicleDepictionRegistration
 (
@@ -9856,6 +9986,12 @@ unnamed ShowroomVehicleDepictionRegistration
 )
 unnamed ShowroomVehicleDepictionRegistration
 (
+    BlackHoleKey = "showroom_Raptgb_9033_CMD_SWE"
+    Alternatives = Alternatives_LandRover_CMD_nonBerlin_UK
+    SubDepictions = HumanSubDepictionsShowroom_Raptgb_9033_CMD_SWE
+)
+unnamed ShowroomVehicleDepictionRegistration
+(
     BlackHoleKey = "showroom_LandRover_DK"
     Alternatives = Alternatives_LandRover_DK
     SubDepictions = HumanSubDepictionsShowroom_LandRover_DK
@@ -10010,6 +10146,12 @@ unnamed ShowroomVehicleDepictionRegistration
 )
 unnamed ShowroomVehicleDepictionRegistration
 (
+    BlackHoleKey = "showroom_Pltgb_903_SWE"
+    Alternatives = Alternatives_LandRover_UK
+    SubDepictions = HumanSubDepictionsShowroom_Pltgb_903_SWE
+)
+unnamed ShowroomVehicleDepictionRegistration
+(
     BlackHoleKey = "showroom_LandRover_WOMBAT_Gurkhas_UK"
     Alternatives = Alternatives_LandRover_WOMBAT_Gurkhas_UK
     SubDepictions = HumanSubDepictionsShowroom_LandRover_WOMBAT_Gurkhas_UK
@@ -10035,6 +10177,34 @@ unnamed ShowroomVehicleDepictionRegistration
         ),
     ]
     SubDepictions = HumanSubDepictionsShowroom_LandRover_Yeoman_UK + 
+    [
+        ObjectSubDepiction
+        (
+            Anchor = "base_tourelle_01"
+            MeshDescriptor = $/GFX/DepictionResources/Modele_LandRover_Yeoman_UK_Tourelle_01
+        ),
+        ObjectSubDepiction
+        (
+            Anchor = "base_tourelle_02"
+            MeshDescriptor = $/GFX/DepictionResources/Modele_LandRover_Yeoman_UK_Tourelle_02
+        ),
+    ]
+)
+unnamed ShowroomVehicleDepictionRegistration
+(
+    BlackHoleKey = "showroom_Pltgb_903_Ksp_SWE"
+    Alternatives = Alternatives_LandRover_Yeoman_UK
+    Operators = 
+    [
+        DepictionOperator_Reset_Generic,
+        TCosmeticFixedBoneRotationOperatorDesc
+        (
+            BoneName = "axe_canon_02"
+            RotationAxis = float3[0, 1, 0]
+            RotationInDegree = -10
+        ),
+    ]
+    SubDepictions = HumanSubDepictionsShowroom_Pltgb_903_Ksp_SWE + 
     [
         ObjectSubDepiction
         (
@@ -13013,6 +13183,12 @@ unnamed ShowroomVehicleDepictionRegistration
 )
 unnamed ShowroomVehicleDepictionRegistration
 (
+    BlackHoleKey = "showroom_Ltgb_934F_trans_SWE"
+    Alternatives = Alternatives_M35_trans_US
+    SubDepictions = HumanSubDepictionsShowroom_Ltgb_934F_trans_SWE
+)
+unnamed ShowroomVehicleDepictionRegistration
+(
     BlackHoleKey = "showroom_M35_trans_VEN"
     Alternatives = Alternatives_M35_trans_VEN
     SubDepictions = HumanSubDepictionsShowroom_M35_trans_VEN
@@ -14792,6 +14968,22 @@ unnamed ShowroomVehicleDepictionRegistration
 )
 unnamed ShowroomVehicleDepictionRegistration
 (
+    BlackHoleKey = "showroom_120mm_Mortar_Grk_m62_SWE"
+    Alternatives = Alternatives_Mortier_107mm_NL
+    Operators = 
+    [
+        DepictionOperator_Reset_Generic,
+        TCosmeticFixedBoneRotationOperatorDesc
+        (
+            BoneName = "axe_canon_01"
+            RotationAxis = float3[0, 1, 0]
+            RotationInDegree = -70
+        ),
+    ]
+    SubDepictions = HumanSubDepictionsShowroom_120mm_Mortar_Grk_m62_SWE
+)
+unnamed ShowroomVehicleDepictionRegistration
+(
     BlackHoleKey = "showroom_Mortier_107mm_US"
     Alternatives = Alternatives_Mortier_107mm_US
     Operators = 
@@ -15528,6 +15720,22 @@ unnamed ShowroomVehicleDepictionRegistration
 )
 unnamed ShowroomVehicleDepictionRegistration
 (
+    BlackHoleKey = "showroom_81mm_Mortar_Grk_m2939"
+    Alternatives = Alternatives_Mortier_M29_81mm_NL
+    Operators = 
+    [
+        DepictionOperator_Reset_Generic,
+        TCosmeticFixedBoneRotationOperatorDesc
+        (
+            BoneName = "axe_canon_01"
+            RotationAxis = float3[0, 1, 0]
+            RotationInDegree = -70
+        ),
+    ]
+    SubDepictions = HumanSubDepictionsShowroom_81mm_Mortar_Grk_m2939
+)
+unnamed ShowroomVehicleDepictionRegistration
+(
     BlackHoleKey = "showroom_Mortier_M29_81mm_OST"
     Alternatives = Alternatives_Mortier_M29_81mm_OST
     Operators = 
@@ -15829,6 +16037,22 @@ unnamed ShowroomVehicleDepictionRegistration
         ),
     ]
     SubDepictions = HumanSubDepictionsShowroom_Mortier_MORT61_120mm_NL
+)
+unnamed ShowroomVehicleDepictionRegistration
+(
+    BlackHoleKey = "showroom_Mortar_Minrojningsorm_1_SWE"
+    Alternatives = Alternatives_Mortier_MORT61_120mm_NL
+    Operators = 
+    [
+        DepictionOperator_Reset_Generic,
+        TCosmeticFixedBoneRotationOperatorDesc
+        (
+            BoneName = "axe_canon_01"
+            RotationAxis = float3[0, 1, 0]
+            RotationInDegree = -70
+        ),
+    ]
+    SubDepictions = HumanSubDepictionsShowroom_Mortar_Minrojningsorm_1_SWE
 )
 unnamed ShowroomVehicleDepictionRegistration
 (
@@ -17287,7 +17511,37 @@ unnamed ShowroomVehicleDepictionRegistration
 )
 unnamed ShowroomVehicleDepictionRegistration
 (
+    BlackHoleKey = "showroom_StabsTgb_m42A_CMD_SWE"
+    Alternatives = Alternatives_Saxon_CMD_UK
+    Operators = 
+    [
+        DepictionOperator_Reset_Generic,
+        TCosmeticFixedBoneRotationOperatorDesc
+        (
+            BoneName = "axe_canon_01"
+            RotationAxis = float3[0, 1, 0]
+            RotationInDegree = -10
+        ),
+    ]
+)
+unnamed ShowroomVehicleDepictionRegistration
+(
     BlackHoleKey = "showroom_Saxon_UK"
+    Alternatives = Alternatives_Saxon_UK
+    Operators = 
+    [
+        DepictionOperator_Reset_Generic,
+        TCosmeticFixedBoneRotationOperatorDesc
+        (
+            BoneName = "axe_canon_01"
+            RotationAxis = float3[0, 1, 0]
+            RotationInDegree = -10
+        ),
+    ]
+)
+unnamed ShowroomVehicleDepictionRegistration
+(
+    BlackHoleKey = "showroom_Tgb_m42A_trans_SWE"
     Alternatives = Alternatives_Saxon_UK
     Operators = 
     [
@@ -20635,6 +20889,12 @@ unnamed ShowroomVehicleDepictionRegistration
 )
 unnamed ShowroomVehicleDepictionRegistration
 (
+    BlackHoleKey = "showroom_PV444_MP_SWE"
+    Alternatives = Alternatives_VLTT_P4_Gendarmerie_FR
+    SubDepictions = HumanSubDepictionsShowroom_PV444_MP_SWE
+)
+unnamed ShowroomVehicleDepictionRegistration
+(
     BlackHoleKey = "showroom_VLTT_P4_MG_FR"
     Alternatives = Alternatives_VLTT_P4_MG_FR
     SubDepictions = HumanSubDepictionsShowroom_VLTT_P4_MG_FR + 
@@ -20856,6 +21116,12 @@ unnamed ShowroomVehicleDepictionRegistration
     BlackHoleKey = "showroom_ZIL_135M_supply_SOV"
     Alternatives = Alternatives_ZIL_135M_supply_SOV
     SubDepictions = HumanSubDepictionsShowroom_ZIL_135M_supply_SOV
+)
+unnamed ShowroomVehicleDepictionRegistration
+(
+    BlackHoleKey = "showroom_Dtgb_953B_SWE"
+    Alternatives = Alternatives_ZIL_135M_supply_SOV
+    SubDepictions = HumanSubDepictionsShowroom_Dtgb_953B_SWE
 )
 unnamed ShowroomVehicleDepictionRegistration
 (

@@ -951660,8 +951660,8 @@ export Descriptor_Unit_Hjtrak_319V_Trakk_3T_SWE is TEntityDescriptor
         ),
         VehicleApparenceModuleDescriptor
         (
-            MimeticName = "Gama_Goat_supply_US"
-            BlackHoleKey = "Gama_Goat_supply_US"
+            MimeticName = "Hjtrak_319V_Trakk_3T_SWE"
+            BlackHoleKey = "Hjtrak_319V_Trakk_3T_SWE"
             GameplayBBoxBoneName = "chassis"
             ReferenceMesh = $/GFX/DepictionResources/Modele_Gama_Goat_supply_US
         ),
@@ -951846,7 +951846,7 @@ export Descriptor_Unit_Hjtrak_319V_Trakk_3T_SWE is TEntityDescriptor
         TCameraShowroomModuleDescriptor
         (
             SpawnType = EShowroomSpawnType/Vehicle
-            ShowRoomBlackHoleIdentifier = "showroom_Gama_Goat_supply_US"
+            ShowRoomBlackHoleIdentifier = "showroom_Hjtrak_319V_Trakk_3T_SWE"
             HasServants = False
         ),
     ]
@@ -951894,8 +951894,8 @@ export Descriptor_Unit_Tgb_311A_Supply_SWE is TEntityDescriptor
         ),
         VehicleApparenceModuleDescriptor
         (
-            MimeticName = "DAF_YA_4400_supply_NL"
-            BlackHoleKey = "DAF_YA_4400_supply_NL"
+            MimeticName = "Tgb_311A_Supply_SWE"
+            BlackHoleKey = "Tgb_311A_Supply_SWE"
             GameplayBBoxBoneName = "chassis"
             ReferenceMesh = $/GFX/DepictionResources/Modele_DAF_YA_4400_supply_NL
         ),
@@ -952080,7 +952080,7 @@ export Descriptor_Unit_Tgb_311A_Supply_SWE is TEntityDescriptor
         TCameraShowroomModuleDescriptor
         (
             SpawnType = EShowroomSpawnType/Vehicle
-            ShowRoomBlackHoleIdentifier = "showroom_DAF_YA_4400_supply_NL"
+            ShowRoomBlackHoleIdentifier = "showroom_Tgb_311A_Supply_SWE"
             HasServants = False
         ),
     ]
@@ -952128,8 +952128,8 @@ export Descriptor_Unit_Tgb_411B_Moelven_Supply_SWE is TEntityDescriptor
         ),
         VehicleApparenceModuleDescriptor
         (
-            MimeticName = "DAF_YHZ_2300_NL"
-            BlackHoleKey = "DAF_YHZ_2300_NL"
+            MimeticName = "Tgb_411B_Moelven_Supply_SWE"
+            BlackHoleKey = "Tgb_411B_Moelven_Supply_SWE"
             GameplayBBoxBoneName = "chassis"
             ReferenceMesh = $/GFX/DepictionResources/Modele_DAF_YHZ_2300_NL
         ),
@@ -952314,7 +952314,7 @@ export Descriptor_Unit_Tgb_411B_Moelven_Supply_SWE is TEntityDescriptor
         TCameraShowroomModuleDescriptor
         (
             SpawnType = EShowroomSpawnType/Vehicle
-            ShowRoomBlackHoleIdentifier = "showroom_DAF_YHZ_2300_NL"
+            ShowRoomBlackHoleIdentifier = "showroom_Tgb_411B_Moelven_Supply_SWE"
             HasServants = False
         ),
     ]
@@ -952365,8 +952365,8 @@ export Descriptor_Unit_Raptgb_9033_CMD_SWE is TEntityDescriptor
         ),
         VehicleApparenceModuleDescriptor
         (
-            MimeticName = "LandRover_CMD_nonBerlin_UK"
-            BlackHoleKey = "LandRover_CMD_nonBerlin_UK"
+            MimeticName = "Raptgb_9033_CMD_SWE"
+            BlackHoleKey = "Raptgb_9033_CMD_SWE"
             GameplayBBoxBoneName = "chassis"
             ReferenceMesh = $/GFX/DepictionResources/Modele_LandRover_CMD_nonBerlin_UK
         ),
@@ -952557,7 +952557,7 @@ export Descriptor_Unit_Raptgb_9033_CMD_SWE is TEntityDescriptor
         TCameraShowroomModuleDescriptor
         (
             SpawnType = EShowroomSpawnType/Vehicle
-            ShowRoomBlackHoleIdentifier = "showroom_LandRover_CMD_nonBerlin_UK"
+            ShowRoomBlackHoleIdentifier = "showroom_Raptgb_9033_CMD_SWE"
             HasServants = False
         ),
     ]
@@ -952608,8 +952608,8 @@ export Descriptor_Unit_StabsTgb_m42A_CMD_SWE is TEntityDescriptor
         ),
         VehicleApparenceModuleDescriptor
         (
-            MimeticName = "Saxon_CMD_UK"
-            BlackHoleKey = "Saxon_CMD_UK"
+            MimeticName = "StabsTgb_m42A_CMD_SWE"
+            BlackHoleKey = "StabsTgb_m42A_CMD_SWE"
             GameplayBBoxBoneName = "chassis"
             ReferenceMesh = $/GFX/DepictionResources/Modele_Saxon_CMD_UK
         ),
@@ -952804,7 +952804,7 @@ export Descriptor_Unit_StabsTgb_m42A_CMD_SWE is TEntityDescriptor
         TCameraShowroomModuleDescriptor
         (
             SpawnType = EShowroomSpawnType/Vehicle
-            ShowRoomBlackHoleIdentifier = "showroom_Saxon_CMD_UK"
+            ShowRoomBlackHoleIdentifier = "showroom_StabsTgb_m42A_CMD_SWE"
             HasServants = False
         ),
     ]
@@ -952851,8 +952851,8 @@ export Descriptor_Unit_Ltgb_934F_trans_SWE is TEntityDescriptor
         ),
         VehicleApparenceModuleDescriptor
         (
-            MimeticName = "M35_trans_US"
-            BlackHoleKey = "M35_trans_US"
+            MimeticName = "Ltgb_934F_trans_SWE"
+            BlackHoleKey = "Ltgb_934F_trans_SWE"
             GameplayBBoxBoneName = "chassis"
             ReferenceMesh = $/GFX/DepictionResources/Modele_M35_trans_US
         ),
@@ -953049,7 +953049,7 @@ export Descriptor_Unit_Ltgb_934F_trans_SWE is TEntityDescriptor
         TCameraShowroomModuleDescriptor
         (
             SpawnType = EShowroomSpawnType/Vehicle
-            ShowRoomBlackHoleIdentifier = "showroom_M35_trans_US"
+            ShowRoomBlackHoleIdentifier = "showroom_Ltgb_934F_trans_SWE"
             HasServants = False
         ),
     ]
@@ -953096,8 +953096,8 @@ export Descriptor_Unit_Tgb_m42A_trans_SWE is TEntityDescriptor
         ),
         VehicleApparenceModuleDescriptor
         (
-            MimeticName = "Saxon_UK"
-            BlackHoleKey = "Saxon_UK"
+            MimeticName = "Tgb_m42A_trans_SWE"
+            BlackHoleKey = "Tgb_m42A_trans_SWE"
             GameplayBBoxBoneName = "chassis"
             ReferenceMesh = $/GFX/DepictionResources/Modele_Saxon_UK
         ),
@@ -953296,7 +953296,7 @@ export Descriptor_Unit_Tgb_m42A_trans_SWE is TEntityDescriptor
         TCameraShowroomModuleDescriptor
         (
             SpawnType = EShowroomSpawnType/Vehicle
-            ShowRoomBlackHoleIdentifier = "showroom_Saxon_UK"
+            ShowRoomBlackHoleIdentifier = "showroom_Tgb_m42A_trans_SWE"
             HasServants = False
         ),
     ]
@@ -953343,8 +953343,8 @@ export Descriptor_Unit_Pltgb_903_SWE is TEntityDescriptor
         ),
         VehicleApparenceModuleDescriptor
         (
-            MimeticName = "LandRover_UK"
-            BlackHoleKey = "LandRover_UK"
+            MimeticName = "Pltgb_903_SWE"
+            BlackHoleKey = "Pltgb_903_SWE"
             GameplayBBoxBoneName = "chassis"
             ReferenceMesh = $/GFX/DepictionResources/Modele_LandRover_UK
         ),
@@ -953541,7 +953541,7 @@ export Descriptor_Unit_Pltgb_903_SWE is TEntityDescriptor
         TCameraShowroomModuleDescriptor
         (
             SpawnType = EShowroomSpawnType/Vehicle
-            ShowRoomBlackHoleIdentifier = "showroom_LandRover_UK"
+            ShowRoomBlackHoleIdentifier = "showroom_Pltgb_903_SWE"
             HasServants = False
         ),
     ]
@@ -953588,8 +953588,8 @@ export Descriptor_Unit_Hjtrak_319V_PTP_SWE is TEntityDescriptor
         ),
         VehicleApparenceModuleDescriptor
         (
-            MimeticName = "Gama_Goat_trans_US"
-            BlackHoleKey = "Gama_Goat_trans_US"
+            MimeticName = "Hjtrak_319V_PTP_SWE"
+            BlackHoleKey = "Hjtrak_319V_PTP_SWE"
             GameplayBBoxBoneName = "chassis"
             ReferenceMesh = $/GFX/DepictionResources/Modele_Gama_Goat_trans_US
         ),
@@ -953786,7 +953786,7 @@ export Descriptor_Unit_Hjtrak_319V_PTP_SWE is TEntityDescriptor
         TCameraShowroomModuleDescriptor
         (
             SpawnType = EShowroomSpawnType/Vehicle
-            ShowRoomBlackHoleIdentifier = "showroom_Gama_Goat_trans_US"
+            ShowRoomBlackHoleIdentifier = "showroom_Hjtrak_319V_PTP_SWE"
             HasServants = False
         ),
     ]
@@ -953835,8 +953835,8 @@ export Descriptor_Unit_PV444_MP_SWE is TEntityDescriptor
         ),
         VehicleApparenceModuleDescriptor
         (
-            MimeticName = "VLTT_P4_Gendarmerie_FR"
-            BlackHoleKey = "VLTT_P4_Gendarmerie_FR"
+            MimeticName = "PV444_MP_SWE"
+            BlackHoleKey = "PV444_MP_SWE"
             GameplayBBoxBoneName = "chassis"
             ReferenceMesh = $/GFX/DepictionResources/Modele_VLTT_P4_Gendarmerie_FR
         ),
@@ -954040,7 +954040,7 @@ export Descriptor_Unit_PV444_MP_SWE is TEntityDescriptor
         TCameraShowroomModuleDescriptor
         (
             SpawnType = EShowroomSpawnType/Vehicle
-            ShowRoomBlackHoleIdentifier = "showroom_VLTT_P4_Gendarmerie_FR"
+            ShowRoomBlackHoleIdentifier = "showroom_PV444_MP_SWE"
             HasServants = False
         ),
     ]
@@ -954087,8 +954087,8 @@ export Descriptor_Unit_TGB_40_trans_SWE is TEntityDescriptor
         ),
         VehicleApparenceModuleDescriptor
         (
-            MimeticName = "DAF_YHZ_2300_trans_NL"
-            BlackHoleKey = "DAF_YHZ_2300_trans_NL"
+            MimeticName = "TGB_40_trans_SWE"
+            BlackHoleKey = "TGB_40_trans_SWE"
             GameplayBBoxBoneName = "chassis"
             ReferenceMesh = $/GFX/DepictionResources/Modele_DAF_YHZ_2300_trans_NL
         ),
@@ -954285,7 +954285,7 @@ export Descriptor_Unit_TGB_40_trans_SWE is TEntityDescriptor
         TCameraShowroomModuleDescriptor
         (
             SpawnType = EShowroomSpawnType/Vehicle
-            ShowRoomBlackHoleIdentifier = "showroom_DAF_YHZ_2300_trans_NL"
+            ShowRoomBlackHoleIdentifier = "showroom_TGB_40_trans_SWE"
             HasServants = False
         ),
     ]
@@ -954330,8 +954330,8 @@ export Descriptor_Unit_HKP_4_SWE is TEntityDescriptor
         ),
         VehicleApparenceModuleDescriptor
         (
-            MimeticName = "CH47_Chinook_UK"
-            BlackHoleKey = "CH47_Chinook_UK"
+            MimeticName = "HKP_4_SWE"
+            BlackHoleKey = "HKP_4_SWE"
             GameplayBBoxBoneName = "chassis"
             ReferenceMesh = $/GFX/DepictionResources/Modele_CH47_Chinook_UK
         ),
@@ -954535,7 +954535,7 @@ export Descriptor_Unit_HKP_4_SWE is TEntityDescriptor
         TCameraShowroomModuleDescriptor
         (
             SpawnType = EShowroomSpawnType/Helico
-            ShowRoomBlackHoleIdentifier = "showroom_CH47_Chinook_UK"
+            ShowRoomBlackHoleIdentifier = "showroom_HKP_4_SWE"
             HasServants = False
         ),
     ]
@@ -954582,8 +954582,8 @@ export Descriptor_Unit_Dtgb_953B_SWE is TEntityDescriptor
         ),
         VehicleApparenceModuleDescriptor
         (
-            MimeticName = "ZIL_135M_supply_SOV"
-            BlackHoleKey = "ZIL_135M_supply_SOV"
+            MimeticName = "Dtgb_953B_SWE"
+            BlackHoleKey = "Dtgb_953B_SWE"
             GameplayBBoxBoneName = "chassis"
             ReferenceMesh = $/GFX/DepictionResources/Modele_ZIL_135M_supply_SOV
         ),
@@ -954672,7 +954672,7 @@ export Descriptor_Unit_Dtgb_953B_SWE is TEntityDescriptor
         (
             KillMode = EKillMode/Vehicle
             CadaverDuration = ~/CadaverDurationApresFeu
-            DeathExplosionAmmo = $/GFX/Weapon/Ammo_Mort_Unite_ravitaillement
+            DeathExplosionAmmo = $/GFX/Weapon/Ammo_Mort_Unite_faible
         ),
         TIAStratModuleDescriptor
         (
@@ -954722,7 +954722,7 @@ export Descriptor_Unit_Dtgb_953B_SWE is TEntityDescriptor
         ~/GroupableUnitModuleDescriptor,
         TTacticalLabelModuleDescriptor
         (
-            MultiSelectionSortingOrder = 10060
+            MultiSelectionSortingOrder = 11020
             IdentifiedTexture = TBUCKToolAlternativeValues_TUIValueTextureNameFromTEugBMutableInteger
             (
                 CommandNameTrigger = ~/SpecificCommandName/UpdateGUIFromIconType
@@ -954749,7 +954749,7 @@ export Descriptor_Unit_Dtgb_953B_SWE is TEntityDescriptor
         TStrategicDataModuleDescriptor
         (
             UnitAttackValue = 1
-            UnitDefenseValue = 81
+            UnitDefenseValue = 1
             UnitBonusXpPerLevelValue = 1
         ),
         TUnitUIModuleDescriptor
@@ -954757,12 +954757,13 @@ export Descriptor_Unit_Dtgb_953B_SWE is TEntityDescriptor
             PriceCategory = 'tank_C'
             UnitRole = 'transport'
             SpecialtiesList = [
+                '_transport2',
             ]
             NameToken = 'Dtgb953b'
             InfoPanelConfigurationToken = 'VehiculeTransporter'
             DisplayRoadSpeedInKmph = 90
             UpgradeFromUnit = Descriptor_Unit_UAZ_469_supply_SOV
-            MenuIconTexture = 'Texture_RTS_H_supply'
+            MenuIconTexture = 'Texture_RTS_H_transport_noweapon'
             ButtonTexture = 'Texture_Button_Unit_ZIL_135M_supply_SOV'
             TypeStrategicCount = ETypeStrategicDetailedCount/Transport
         ),
@@ -954772,7 +954773,7 @@ export Descriptor_Unit_Dtgb_953B_SWE is TEntityDescriptor
         TCameraShowroomModuleDescriptor
         (
             SpawnType = EShowroomSpawnType/Vehicle
-            ShowRoomBlackHoleIdentifier = "showroom_ZIL_135M_supply_SOV"
+            ShowRoomBlackHoleIdentifier = "showroom_Dtgb_953B_SWE"
             HasServants = False
         ),
     ]
@@ -954823,8 +954824,8 @@ export Descriptor_Unit_Pltgb_903_Ksp_SWE is TEntityDescriptor
         ),
         VehicleApparenceModuleDescriptor
         (
-            MimeticName = "LandRover_Yeoman_UK"
-            BlackHoleKey = "LandRover_Yeoman_UK"
+            MimeticName = "Pltgb_903_Ksp_SWE"
+            BlackHoleKey = "Pltgb_903_Ksp_SWE"
             GameplayBBoxBoneName = "chassis"
             ReferenceMesh = $/GFX/DepictionResources/Modele_LandRover_Yeoman_UK
         ),
@@ -955024,7 +955025,7 @@ export Descriptor_Unit_Pltgb_903_Ksp_SWE is TEntityDescriptor
         TCameraShowroomModuleDescriptor
         (
             SpawnType = EShowroomSpawnType/Vehicle
-            ShowRoomBlackHoleIdentifier = "showroom_LandRover_Yeoman_UK"
+            ShowRoomBlackHoleIdentifier = "showroom_Pltgb_903_Ksp_SWE"
             HasServants = False
         ),
     ]
@@ -955074,9 +955075,9 @@ export Descriptor_Unit_81mm_Mortar_Grk_m2939 is TEntityDescriptor
         ),
         VehicleApparenceModuleDescriptor
         (
-            MimeticName = "Mortier_81mm_L65_ESP"
-            BlackHoleKey = "Mortier_81mm_L65_ESP"
-            ReferenceMesh = $/GFX/DepictionResources/Modele_Mortier_81mm_L65_ESP
+            MimeticName = "81mm_Mortar_Grk_m2939"
+            BlackHoleKey = "81mm_Mortar_Grk_m2939"
+            ReferenceMesh = $/GFX/DepictionResources/Modele_Mortier_M29_81mm_NL
         ),
         TAutoCoverModuleDescriptor
         (
@@ -955152,7 +955153,7 @@ export Descriptor_Unit_81mm_Mortar_Grk_m2939 is TEntityDescriptor
         TTransportableModuleDescriptor
         (
             TransportedTexture                     = "UseInGame_Transport_Mortar"
-            TransportedSoldier                     = 'Mortier_81mm_L65_ESP'
+            TransportedSoldier                     = '81mm_Mortar_Grk_m2939'
             NbSeatsOccupied                        = 1
             TimeToLoad                             = 0
             IsTowable                              = False
@@ -955209,11 +955210,11 @@ export Descriptor_Unit_81mm_Mortar_Grk_m2939 is TEntityDescriptor
         ),
         TOrderConfigModuleDescriptor
         (
-            ValidOrders = ~/Descriptor_OrderAvailability_Mortier_81mm_L65_ESP
+            ValidOrders = ~/Descriptor_OrderAvailability_Mortier_M29_81mm_NL
         ),
         TOrderableModuleDescriptor
         (
-            UnlockableOrders = ~/Descriptor_OrderAvailability_Mortier_81mm_L65_ESP
+            UnlockableOrders = ~/Descriptor_OrderAvailability_Mortier_M29_81mm_NL
         ),
         ~/OrderDisplayModuleDescriptor,
         ~/GroupableUnitModuleDescriptor,
@@ -955260,7 +955261,7 @@ export Descriptor_Unit_81mm_Mortar_Grk_m2939 is TEntityDescriptor
             InfoPanelConfigurationToken = 'Infantry'
             DisplayRoadSpeedInKmph = 16
             MenuIconTexture = 'Texture_RTS_H_mortar'
-            ButtonTexture = 'Texture_Button_Unit_Mortier_81mm_L65_ESP'
+            ButtonTexture = 'Texture_Button_Unit_Mortier_M29_81mm_NL'
             TypeStrategicCount = ETypeStrategicDetailedCount/Mortar
         ),
         TUnitUpkeepModuleDescriptor( UpkeepPercentage = 1.0 ),
@@ -955268,7 +955269,7 @@ export Descriptor_Unit_81mm_Mortar_Grk_m2939 is TEntityDescriptor
         TCameraShowroomModuleDescriptor
         (
             SpawnType = EShowroomSpawnType/Vehicle
-            ShowRoomBlackHoleIdentifier = "showroom_Mortier_81mm_L65_ESP"
+            ShowRoomBlackHoleIdentifier = "showroom_81mm_Mortar_Grk_m2939"
             HasServants = False
         ),
         TWeaponDeploymentModuleDescriptor
@@ -955323,9 +955324,9 @@ export Descriptor_Unit_120mm_Mortar_Grk_m62_SWE is TEntityDescriptor
         ),
         VehicleApparenceModuleDescriptor
         (
-            MimeticName = "Mortier_120mm_L65_ESP"
-            BlackHoleKey = "Mortier_120mm_L65_ESP"
-            ReferenceMesh = $/GFX/DepictionResources/Modele_Mortier_120mm_L65_ESP
+            MimeticName = "120mm_Mortar_Grk_m62_SWE"
+            BlackHoleKey = "120mm_Mortar_Grk_m62_SWE"
+            ReferenceMesh = $/GFX/DepictionResources/Modele_Mortier_107mm_NL
         ),
         TAutoCoverModuleDescriptor
         (
@@ -955334,7 +955335,7 @@ export Descriptor_Unit_120mm_Mortar_Grk_m62_SWE is TEntityDescriptor
             TerrainList                = [~/ETerrainType/ForetLegere, ~/ETerrainType/ForetDense, ]
             UseTerrainsForEscape       = False
         ),
-        $/GFX/Weapon/WeaponDescriptor_Mortier_120mm_L65_ESP,
+        $/GFX/Weapon/WeaponDescriptor_120mm_Mortar_Grk_m62_SWE,
         TBaseDamageModuleDescriptor
         (
             MaxPhysicalDamages = 2
@@ -955401,7 +955402,7 @@ export Descriptor_Unit_120mm_Mortar_Grk_m62_SWE is TEntityDescriptor
         TTransportableModuleDescriptor
         (
             TransportedTexture                     = "UseInGame_Transport_Mortar"
-            TransportedSoldier                     = 'Mortier_120mm_L65_ESP'
+            TransportedSoldier                     = '120mm_Mortar_Grk_m62_SWE'
             NbSeatsOccupied                        = 1
             TimeToLoad                             = 0
             IsTowable                              = False
@@ -955510,7 +955511,7 @@ export Descriptor_Unit_120mm_Mortar_Grk_m62_SWE is TEntityDescriptor
             DisplayRoadSpeedInKmph = 16
             UpgradeFromUnit = Descriptor_Unit_81mm_Mortar_Grk_m2939
             MenuIconTexture = 'Texture_RTS_H_mortar'
-            ButtonTexture = 'Texture_Button_Unit_Mortier_120mm_L65_ESP'
+            ButtonTexture = 'Texture_Button_Unit_Mortier_107mm_NL'
             TypeStrategicCount = ETypeStrategicDetailedCount/Mortar
         ),
         TUnitUpkeepModuleDescriptor( UpkeepPercentage = 1.0 ),
@@ -955518,7 +955519,7 @@ export Descriptor_Unit_120mm_Mortar_Grk_m62_SWE is TEntityDescriptor
         TCameraShowroomModuleDescriptor
         (
             SpawnType = EShowroomSpawnType/Vehicle
-            ShowRoomBlackHoleIdentifier = "showroom_Mortier_120mm_L65_ESP"
+            ShowRoomBlackHoleIdentifier = "showroom_120mm_Mortar_Grk_m62_SWE"
             HasServants = False
         ),
         TWeaponDeploymentModuleDescriptor
@@ -955573,9 +955574,9 @@ export Descriptor_Unit_Mortar_Minrojningsorm_1_SWE is TEntityDescriptor
         ),
         VehicleApparenceModuleDescriptor
         (
-            MimeticName = "Mortier_M29_81mm_NL"
-            BlackHoleKey = "Mortier_M29_81mm_NL"
-            ReferenceMesh = $/GFX/DepictionResources/Modele_Mortier_M29_81mm_NL
+            MimeticName = "Mortar_Minrojningsorm_1_SWE"
+            BlackHoleKey = "Mortar_Minrojningsorm_1_SWE"
+            ReferenceMesh = $/GFX/DepictionResources/Modele_Mortier_MORT61_120mm_NL
         ),
         TAutoCoverModuleDescriptor
         (
@@ -955651,7 +955652,7 @@ export Descriptor_Unit_Mortar_Minrojningsorm_1_SWE is TEntityDescriptor
         TTransportableModuleDescriptor
         (
             TransportedTexture                     = "UseInGame_Transport_Mortar"
-            TransportedSoldier                     = 'Mortier_M29_81mm_NL'
+            TransportedSoldier                     = 'Mortar_Minrojningsorm_1_SWE'
             NbSeatsOccupied                        = 1
             TimeToLoad                             = 0
             IsTowable                              = False
@@ -955759,7 +955760,7 @@ export Descriptor_Unit_Mortar_Minrojningsorm_1_SWE is TEntityDescriptor
             InfoPanelConfigurationToken = 'Infantry'
             DisplayRoadSpeedInKmph = 16
             MenuIconTexture = 'Texture_RTS_H_mortar'
-            ButtonTexture = 'Texture_Button_Unit_Mortier_M29_81mm_NL'
+            ButtonTexture = 'Texture_Button_Unit_Mortier_MORT61_120mm_NL'
             TypeStrategicCount = ETypeStrategicDetailedCount/Mortar
         ),
         TUnitUpkeepModuleDescriptor( UpkeepPercentage = 1.0 ),
@@ -955767,7 +955768,7 @@ export Descriptor_Unit_Mortar_Minrojningsorm_1_SWE is TEntityDescriptor
         TCameraShowroomModuleDescriptor
         (
             SpawnType = EShowroomSpawnType/Vehicle
-            ShowRoomBlackHoleIdentifier = "showroom_Mortier_M29_81mm_NL"
+            ShowRoomBlackHoleIdentifier = "showroom_Mortar_Minrojningsorm_1_SWE"
             HasServants = False
         ),
         TWeaponDeploymentModuleDescriptor
@@ -955823,8 +955824,8 @@ export Descriptor_Unit_Kapjas_m65_SWE is TEntityDescriptor
         ),
         VehicleApparenceModuleDescriptor
         (
-            MimeticName = "AT_KSM65_100mm_SOV"
-            BlackHoleKey = "AT_KSM65_100mm_SOV"
+            MimeticName = "Kapjas_m65_SWE"
+            BlackHoleKey = "Kapjas_m65_SWE"
             ReferenceMesh = $/GFX/DepictionResources/Modele_AT_KSM65_100mm_SOV
         ),
         TAutoCoverModuleDescriptor
@@ -955902,7 +955903,7 @@ export Descriptor_Unit_Kapjas_m65_SWE is TEntityDescriptor
         TTransportableModuleDescriptor
         (
             TransportedTexture                     = "UseInGame_Transport_ATGun"
-            TransportedSoldier                     = 'AT_KSM65_100mm_SOV'
+            TransportedSoldier                     = 'Kapjas_m65_SWE'
             NbSeatsOccupied                        = 1
             TimeToLoad                             = CanonsLoadingTime
             IsTowable                              = True
@@ -956009,16 +956010,16 @@ export Descriptor_Unit_Kapjas_m65_SWE is TEntityDescriptor
             InfoPanelConfigurationToken = 'Default'
             DisplayRoadSpeedInKmph = 16
             UpgradeFromUnit = Descriptor_Unit_AT_D44_85mm_VDV_SOV
-            MenuIconTexture = 'Texture_RTS_H_ATGun'
+            MenuIconTexture = 'Texture_RTS_H_howitzer'
             ButtonTexture = 'Texture_Button_Unit_AT_KSM65_100mm_SOV'
-            TypeStrategicCount = ETypeStrategicDetailedCount/AT_Gun
+            TypeStrategicCount = ETypeStrategicDetailedCount/Howitzer
         ),
         TUnitUpkeepModuleDescriptor( UpkeepPercentage = 1.0 ),
         TVisualShootPositionsModuleDescriptor(),
         TCameraShowroomModuleDescriptor
         (
             SpawnType = EShowroomSpawnType/Vehicle
-            ShowRoomBlackHoleIdentifier = "showroom_AT_KSM65_100mm_SOV"
+            ShowRoomBlackHoleIdentifier = "showroom_Kapjas_m65_SWE"
             HasServants = False
         ),
         TWeaponDeploymentModuleDescriptor
@@ -956073,8 +956074,8 @@ export Descriptor_Unit_Howz_Haubits_m40_SWE is TEntityDescriptor
         ),
         VehicleApparenceModuleDescriptor
         (
-            MimeticName = "Howz_M101_105mm_NL"
-            BlackHoleKey = "Howz_M101_105mm_NL"
+            MimeticName = "Howz_Haubits_m40_SWE"
+            BlackHoleKey = "Howz_Haubits_m40_SWE"
             ReferenceMesh = $/GFX/DepictionResources/Modele_Howz_M101_105mm_NL
         ),
         TAutoCoverModuleDescriptor
@@ -956152,7 +956153,7 @@ export Descriptor_Unit_Howz_Haubits_m40_SWE is TEntityDescriptor
         TTransportableModuleDescriptor
         (
             TransportedTexture                     = "UseInGame_Transport_howitzer"
-            TransportedSoldier                     = 'Howz_M101_105mm_NL'
+            TransportedSoldier                     = 'Howz_Haubits_m40_SWE'
             NbSeatsOccupied                        = 1
             TimeToLoad                             = CanonsLoadingTime
             IsTowable                              = True
@@ -956271,7 +956272,7 @@ export Descriptor_Unit_Howz_Haubits_m40_SWE is TEntityDescriptor
         TCameraShowroomModuleDescriptor
         (
             SpawnType = EShowroomSpawnType/Vehicle
-            ShowRoomBlackHoleIdentifier = "showroom_Howz_M101_105mm_NL"
+            ShowRoomBlackHoleIdentifier = "showroom_Howz_Haubits_m40_SWE"
             HasServants = False
         ),
         TWeaponDeploymentModuleDescriptor
@@ -956326,8 +956327,8 @@ export Descriptor_Unit_Howz_Haubits_m4140_SWE is TEntityDescriptor
         ),
         VehicleApparenceModuleDescriptor
         (
-            MimeticName = "Howz_D30_122mm_DDR"
-            BlackHoleKey = "Howz_D30_122mm_DDR"
+            MimeticName = "Howz_Haubits_m4140_SWE"
+            BlackHoleKey = "Howz_Haubits_m4140_SWE"
             ReferenceMesh = $/GFX/DepictionResources/Modele_Howz_D30_122mm_DDR
         ),
         TAutoCoverModuleDescriptor
@@ -956405,7 +956406,7 @@ export Descriptor_Unit_Howz_Haubits_m4140_SWE is TEntityDescriptor
         TTransportableModuleDescriptor
         (
             TransportedTexture                     = "UseInGame_Transport_howitzer"
-            TransportedSoldier                     = 'Howz_D30_122mm_DDR'
+            TransportedSoldier                     = 'Howz_Haubits_m4140_SWE'
             NbSeatsOccupied                        = 1
             TimeToLoad                             = CanonsLoadingTime
             IsTowable                              = True
@@ -956520,7 +956521,7 @@ export Descriptor_Unit_Howz_Haubits_m4140_SWE is TEntityDescriptor
         TCameraShowroomModuleDescriptor
         (
             SpawnType = EShowroomSpawnType/Vehicle
-            ShowRoomBlackHoleIdentifier = "showroom_Howz_D30_122mm_DDR"
+            ShowRoomBlackHoleIdentifier = "showroom_Howz_Haubits_m4140_SWE"
             HasServants = False
         ),
         TWeaponDeploymentModuleDescriptor
@@ -956575,8 +956576,8 @@ export Descriptor_Unit_Howz_Faltpjas_m37_SWE is TEntityDescriptor
         ),
         VehicleApparenceModuleDescriptor
         (
-            MimeticName = "Howz_M59_LongTom_155mm_DK"
-            BlackHoleKey = "Howz_M59_LongTom_155mm_DK"
+            MimeticName = "Howz_Faltpjas_m37_SWE"
+            BlackHoleKey = "Howz_Faltpjas_m37_SWE"
             ReferenceMesh = $/GFX/DepictionResources/Modele_Howz_M59_LongTom_155mm_DK
         ),
         TAutoCoverModuleDescriptor
@@ -956653,7 +956654,7 @@ export Descriptor_Unit_Howz_Faltpjas_m37_SWE is TEntityDescriptor
         TTransportableModuleDescriptor
         (
             TransportedTexture                     = "UseInGame_Transport_howitzer"
-            TransportedSoldier                     = 'Howz_M59_LongTom_155mm_DK'
+            TransportedSoldier                     = 'Howz_Faltpjas_m37_SWE'
             NbSeatsOccupied                        = 1
             TimeToLoad                             = CanonsLoadingTime
             IsTowable                              = True
@@ -956768,7 +956769,7 @@ export Descriptor_Unit_Howz_Faltpjas_m37_SWE is TEntityDescriptor
         TCameraShowroomModuleDescriptor
         (
             SpawnType = EShowroomSpawnType/Vehicle
-            ShowRoomBlackHoleIdentifier = "showroom_Howz_M59_LongTom_155mm_DK"
+            ShowRoomBlackHoleIdentifier = "showroom_Howz_Faltpjas_m37_SWE"
             HasServants = False
         ),
         TWeaponDeploymentModuleDescriptor
@@ -956823,8 +956824,8 @@ export Descriptor_Unit_Howz_Canon_FH_77B_SWE is TEntityDescriptor
         ),
         VehicleApparenceModuleDescriptor
         (
-            MimeticName = "Howz_TRF1_155mm_FR"
-            BlackHoleKey = "Howz_TRF1_155mm_FR"
+            MimeticName = "Howz_Canon_FH_77B_SWE"
+            BlackHoleKey = "Howz_Canon_FH_77B_SWE"
             ReferenceMesh = $/GFX/DepictionResources/Modele_Howz_TRF1_155mm_FR
         ),
         TAutoCoverModuleDescriptor
@@ -956901,7 +956902,7 @@ export Descriptor_Unit_Howz_Canon_FH_77B_SWE is TEntityDescriptor
         TTransportableModuleDescriptor
         (
             TransportedTexture                     = "UseInGame_Transport_howitzer"
-            TransportedSoldier                     = 'Howz_TRF1_155mm_FR'
+            TransportedSoldier                     = 'Howz_Canon_FH_77B_SWE'
             NbSeatsOccupied                        = 1
             TimeToLoad                             = CanonsLoadingTime
             IsTowable                              = True
@@ -957016,7 +957017,7 @@ export Descriptor_Unit_Howz_Canon_FH_77B_SWE is TEntityDescriptor
         TCameraShowroomModuleDescriptor
         (
             SpawnType = EShowroomSpawnType/Vehicle
-            ShowRoomBlackHoleIdentifier = "showroom_Howz_TRF1_155mm_FR"
+            ShowRoomBlackHoleIdentifier = "showroom_Howz_Canon_FH_77B_SWE"
             HasServants = False
         ),
         TWeaponDeploymentModuleDescriptor
@@ -957070,8 +957071,8 @@ export Descriptor_Unit_DCA_Lvakan_M4070_SWE is TEntityDescriptor
         ),
         VehicleApparenceModuleDescriptor
         (
-            MimeticName = "DCA_GAI_BO1_20mm_SWI"
-            BlackHoleKey = "DCA_GAI_BO1_20mm_SWI"
+            MimeticName = "DCA_Lvakan_M4070_SWE"
+            BlackHoleKey = "DCA_Lvakan_M4070_SWE"
             ReferenceMesh = $/GFX/DepictionResources/Modele_DCA_GAI_BO1_20mm_SWI
         ),
         TAutoCoverModuleDescriptor
@@ -957081,7 +957082,7 @@ export Descriptor_Unit_DCA_Lvakan_M4070_SWE is TEntityDescriptor
             TerrainList                = [~/ETerrainType/ForetLegere, ~/ETerrainType/ForetDense, ]
             UseTerrainsForEscape       = False
         ),
-        $/GFX/Weapon/WeaponDescriptor_DCA_GAI_BO1_20mm_SWI,
+        $/GFX/Weapon/WeaponDescriptor_DCA_Lvakan_M4070_SWE,
         TBaseDamageModuleDescriptor
         (
             MaxPhysicalDamages = 4
@@ -957148,7 +957149,7 @@ export Descriptor_Unit_DCA_Lvakan_M4070_SWE is TEntityDescriptor
         TTransportableModuleDescriptor
         (
             TransportedTexture                     = "UseInGame_Transport_flak"
-            TransportedSoldier                     = 'DCA_GAI_BO1_20mm_SWI'
+            TransportedSoldier                     = 'DCA_Lvakan_M4070_SWE'
             NbSeatsOccupied                        = 1
             TimeToLoad                             = 0
             IsTowable                              = False
@@ -957256,7 +957257,7 @@ export Descriptor_Unit_DCA_Lvakan_M4070_SWE is TEntityDescriptor
         TCameraShowroomModuleDescriptor
         (
             SpawnType = EShowroomSpawnType/Vehicle
-            ShowRoomBlackHoleIdentifier = "showroom_DCA_GAI_BO1_20mm_SWI"
+            ShowRoomBlackHoleIdentifier = "showroom_DCA_Lvakan_M4070_SWE"
             HasServants = False
         ),
     ]
@@ -957305,8 +957306,8 @@ export Descriptor_Unit_DCA_Lvakan_M36_SWE is TEntityDescriptor
         ),
         VehicleApparenceModuleDescriptor
         (
-            MimeticName = "DCA_Bofors_L60_DK"
-            BlackHoleKey = "DCA_Bofors_L60_DK"
+            MimeticName = "DCA_Lvakan_M36_SWE"
+            BlackHoleKey = "DCA_Lvakan_M36_SWE"
             ReferenceMesh = $/GFX/DepictionResources/Modele_DCA_Bofors_L60_DK
         ),
         TAutoCoverModuleDescriptor
@@ -957383,7 +957384,7 @@ export Descriptor_Unit_DCA_Lvakan_M36_SWE is TEntityDescriptor
         TTransportableModuleDescriptor
         (
             TransportedTexture                     = "UseInGame_Transport_flak"
-            TransportedSoldier                     = 'DCA_Bofors_L60_DK'
+            TransportedSoldier                     = 'DCA_Lvakan_M36_SWE'
             NbSeatsOccupied                        = 1
             TimeToLoad                             = CanonsLoadingTime
             IsTowable                              = True
@@ -957404,6 +957405,12 @@ export Descriptor_Unit_DCA_Lvakan_M36_SWE is TEntityDescriptor
         ~/UnitStateEngineSubUnitModuleDescriptor,
         ~/SelectionModuleDescriptor,
         ~/EffectApplierModuleDescriptor,
+        TCapaciteModuleDescriptor
+        (
+            DefaultSkillList = [
+                $/GFX/EffectCapacity/Capacite_reserviste,
+            ]
+        ),
         TProductionModuleDescriptor
         (
             FactoryType        = Factory/DCA
@@ -957478,11 +957485,12 @@ export Descriptor_Unit_DCA_Lvakan_M36_SWE is TEntityDescriptor
             PriceCategory = 'tank_D'
             UnitRole = 'AA'
             SpecialtiesList = [
+                '_reservist',
             ]
             NameToken = 'LVKMM36'
             InfoPanelConfigurationToken = 'Infantry'
             DisplayRoadSpeedInKmph = 16
-            UpgradeFromUnit = Descriptor_Unit_DCA_Lvakan_M4070_SWE
+            UpgradeFromUnit = Descriptor_Unit_TRM_2000_20mm_FR
             MenuIconTexture = 'Texture_RTS_H_AA_veh'
             ButtonTexture = 'Texture_Button_Unit_DCA_Bofors_L60_DK'
             TypeStrategicCount = ETypeStrategicDetailedCount/AA_Veh
@@ -957492,7 +957500,7 @@ export Descriptor_Unit_DCA_Lvakan_M36_SWE is TEntityDescriptor
         TCameraShowroomModuleDescriptor
         (
             SpawnType = EShowroomSpawnType/Vehicle
-            ShowRoomBlackHoleIdentifier = "showroom_DCA_Bofors_L60_DK"
+            ShowRoomBlackHoleIdentifier = "showroom_DCA_Lvakan_M36_SWE"
             HasServants = False
         ),
     ]
@@ -957541,8 +957549,8 @@ export Descriptor_Unit_DCA_Lvakan_M48_SWE is TEntityDescriptor
         ),
         VehicleApparenceModuleDescriptor
         (
-            MimeticName = "Bofors_40mm_RFA"
-            BlackHoleKey = "Bofors_40mm_RFA"
+            MimeticName = "DCA_Lvakan_M48_SWE"
+            BlackHoleKey = "DCA_Lvakan_M48_SWE"
             ReferenceMesh = $/GFX/DepictionResources/Modele_Bofors_40mm_RFA
         ),
         TAutoCoverModuleDescriptor
@@ -957619,7 +957627,7 @@ export Descriptor_Unit_DCA_Lvakan_M48_SWE is TEntityDescriptor
         TTransportableModuleDescriptor
         (
             TransportedTexture                     = "UseInGame_Transport_flak"
-            TransportedSoldier                     = 'Bofors_40mm_RFA'
+            TransportedSoldier                     = 'DCA_Lvakan_M48_SWE'
             NbSeatsOccupied                        = 1
             TimeToLoad                             = CanonsLoadingTime
             IsTowable                              = True
@@ -957728,7 +957736,7 @@ export Descriptor_Unit_DCA_Lvakan_M48_SWE is TEntityDescriptor
         TCameraShowroomModuleDescriptor
         (
             SpawnType = EShowroomSpawnType/Vehicle
-            ShowRoomBlackHoleIdentifier = "showroom_Bofors_40mm_RFA"
+            ShowRoomBlackHoleIdentifier = "DCA_Lvakan_M48_SWE"
             HasServants = False
         ),
     ]
@@ -957777,8 +957785,8 @@ export Descriptor_Unit_DCA_LVS_75M_SWE is TEntityDescriptor
         ),
         VehicleApparenceModuleDescriptor
         (
-            MimeticName = "DCA_Bofors_upgrade_NL"
-            BlackHoleKey = "DCA_Bofors_upgrade_NL"
+            MimeticName = "DCA_LVS_75M_SWE"
+            BlackHoleKey = "DCA_LVS_75M_SWE"
             ReferenceMesh = $/GFX/DepictionResources/Modele_DCA_Bofors_upgrade_NL
         ),
         TAutoCoverModuleDescriptor
@@ -957855,7 +957863,7 @@ export Descriptor_Unit_DCA_LVS_75M_SWE is TEntityDescriptor
         TTransportableModuleDescriptor
         (
             TransportedTexture                     = "UseInGame_Transport_flak"
-            TransportedSoldier                     = 'DCA_Bofors_upgrade_NL'
+            TransportedSoldier                     = 'DCA_LVS_75M_SWE'
             NbSeatsOccupied                        = 1
             TimeToLoad                             = CanonsLoadingTime
             IsTowable                              = True
@@ -957964,7 +957972,7 @@ export Descriptor_Unit_DCA_LVS_75M_SWE is TEntityDescriptor
         TCameraShowroomModuleDescriptor
         (
             SpawnType = EShowroomSpawnType/Vehicle
-            ShowRoomBlackHoleIdentifier = "showroom_DCA_Bofors_upgrade_NL"
+            ShowRoomBlackHoleIdentifier = "showroom_DCA_LVS_75M_SWE"
             HasServants = False
         ),
     ]
@@ -958013,8 +958021,8 @@ export Descriptor_Unit_DCA_VLVK_M3037_SWE is TEntityDescriptor
         ),
         VehicleApparenceModuleDescriptor
         (
-            MimeticName = "DCA_KS19_100mm_DDR"
-            BlackHoleKey = "DCA_KS19_100mm_DDR"
+            MimeticName = "DCA_VLVK_M3037_SWE"
+            BlackHoleKey = "DCA_VLVK_M3037_SWE"
             ReferenceMesh = $/GFX/DepictionResources/Modele_DCA_KS19_100mm_DDR
         ),
         TAutoCoverModuleDescriptor
@@ -958091,7 +958099,7 @@ export Descriptor_Unit_DCA_VLVK_M3037_SWE is TEntityDescriptor
         TTransportableModuleDescriptor
         (
             TransportedTexture                     = "UseInGame_Transport_flak"
-            TransportedSoldier                     = 'DCA_KS19_100mm_DDR'
+            TransportedSoldier                     = 'DCA_VLVK_M3037_SWE'
             NbSeatsOccupied                        = 1
             TimeToLoad                             = CanonsLoadingTime
             IsTowable                              = True
@@ -958114,9 +958122,7 @@ export Descriptor_Unit_DCA_VLVK_M3037_SWE is TEntityDescriptor
         ~/EffectApplierModuleDescriptor,
         TCapaciteModuleDescriptor
         (
-            DefaultSkillList = [
-                $/GFX/EffectCapacity/Capacite_reserviste,
-            ]
+            DefaultSkillList = []
         ),
         TProductionModuleDescriptor
         (
@@ -958191,10 +958197,8 @@ export Descriptor_Unit_DCA_VLVK_M3037_SWE is TEntityDescriptor
         (
             PriceCategory = 'tank_B'
             UnitRole = 'AA'
-            SpecialtiesList = [
-                '_reservist',
-            ]
-            NameToken = 'LKYVXDGXQK'
+            SpecialtiesList = []
+            NameToken = 'VLK3037L'
             InfoPanelConfigurationToken = 'Infantry'
             DisplayRoadSpeedInKmph = 16
             UpgradeFromUnit = Descriptor_Unit_DCA_ZPU4_DDR
@@ -958207,7 +958211,7 @@ export Descriptor_Unit_DCA_VLVK_M3037_SWE is TEntityDescriptor
         TCameraShowroomModuleDescriptor
         (
             SpawnType = EShowroomSpawnType/Vehicle
-            ShowRoomBlackHoleIdentifier = "showroom_DCA_KS19_100mm_DDR"
+            ShowRoomBlackHoleIdentifier = "showroom_DCA_VLVK_M3037_SWE"
             HasServants = False
         ),
     ]
@@ -958258,7 +958262,7 @@ export Descriptor_Unit_MANPAD_RBS69_SWE is TEntityDescriptor
         ),
         InfantryApparenceModuleDescriptor
         (
-            MimeticName = "squad_MANPAD_Stinger_C_NL"
+            MimeticName = "squad_MANPAD_RBS69_SWE"
         ),
         TAutoCoverModuleDescriptor
         (
@@ -958299,11 +958303,11 @@ export Descriptor_Unit_MANPAD_RBS69_SWE is TEntityDescriptor
         (
             SoldierCount = 2
             SquadDataDescriptor = ~/SoldierSquadDataDescriptor
-            SoldierBlackHoleKey = 'MANPAD_Stinger_C_NL'
+            SoldierBlackHoleKey = 'MANPAD_RBS69_SWE'
             MimeticDescriptor   = Descriptor_Unit_MimeticUnit
             (
                 DescriptorId = GUID:{4ea77dc4-3936-43b8-a616-e1d39089211d}
-                BlackHoleKey = 'MANPAD_Stinger_C_NL'
+                BlackHoleKey = 'MANPAD_RBS69_SWE'
             )
         ),
         ~/LineInfantrySquadSlotPositionsModuleDescriptor,
@@ -958345,7 +958349,7 @@ export Descriptor_Unit_MANPAD_RBS69_SWE is TEntityDescriptor
         TTransportableModuleDescriptor
         (
             TransportedTexture                     = "UseInGame_Transport_LAAD"
-            TransportedSoldier                     = 'Mortier_M29_81mm_NL'
+            TransportedSoldier                     = 'MANPAD_RBS69_SWE'
             NbSeatsOccupied                        = 1
             TimeToLoad                             = 0
             IsTowable                              = False
@@ -958442,10 +958446,10 @@ export Descriptor_Unit_MANPAD_RBS69_SWE is TEntityDescriptor
             UnitRole = 'AA'
             SpecialtiesList = [
             ]
-            NameToken = 'PWTVLIYEDA'
+            NameToken = 'RBS69'
             InfoPanelConfigurationToken = 'Infantry'
             MenuIconTexture = 'Texture_RTS_H_manpad'
-            ButtonTexture = 'Texture_Button_Unit_MANPAD_Redeye_DK'
+            ButtonTexture = 'Texture_Button_Unit_MANPAD_Stinger_C_NL'
             TypeStrategicCount = ETypeStrategicDetailedCount/Manpad
         ),
         TUnitUpkeepModuleDescriptor( UpkeepPercentage = 1.0 ),
@@ -958453,7 +958457,7 @@ export Descriptor_Unit_MANPAD_RBS69_SWE is TEntityDescriptor
         TCameraShowroomModuleDescriptor
         (
             SpawnType = EShowroomSpawnType/Infantry
-            ShowRoomBlackHoleIdentifier = "squad_Rifles_DK"
+            ShowRoomBlackHoleIdentifier = "squad_MANPAD_RBS69_SWE"
             HasServants = False
         ),
     ]
@@ -958504,7 +958508,7 @@ export Descriptor_Unit_MANPAD_RBS70_SWE is TEntityDescriptor
         ),
         InfantryApparenceModuleDescriptor
         (
-            MimeticName = "squad_MANPAD_Mistral_FR"
+            MimeticName = "squad_MANPAD_RBS70_SWE"
         ),
         TAutoCoverModuleDescriptor
         (
@@ -958545,11 +958549,11 @@ export Descriptor_Unit_MANPAD_RBS70_SWE is TEntityDescriptor
         (
             SoldierCount = 3
             SquadDataDescriptor = ~/SoldierSquadDataDescriptor
-            SoldierBlackHoleKey = 'MANPAD_RBS70_OST'
+            SoldierBlackHoleKey = 'MANPAD_RBS70_SWE'
             MimeticDescriptor   = Descriptor_Unit_MimeticUnit
             (
-                DescriptorId = GUID:{34c26795-eb0b-47e4-a78d-2ba8c079c15c}
-                BlackHoleKey = 'MANPAD_RBS70_OST'
+                DescriptorId = GUID:{7a4fb769-b791-4a30-b4ac-b8584906ecdc}
+                BlackHoleKey = 'MANPAD_RBS70_SWE'
             )
         ),
         ~/LineInfantrySquadSlotPositionsModuleDescriptor,
@@ -958591,7 +958595,7 @@ export Descriptor_Unit_MANPAD_RBS70_SWE is TEntityDescriptor
         TTransportableModuleDescriptor
         (
             TransportedTexture                     = "UseInGame_Transport_LAAD"
-            TransportedSoldier                     = 'MANPAD_Mistral_FR'
+            TransportedSoldier                     = 'MANPAD_RBS70_SWE'
             NbSeatsOccupied                        = 1
             TimeToLoad                             = 0
             IsTowable                              = False
@@ -958692,7 +958696,7 @@ export Descriptor_Unit_MANPAD_RBS70_SWE is TEntityDescriptor
             InfoPanelConfigurationToken = 'Infantry'
             UpgradeFromUnit = Descriptor_Unit_MANPAD_Mistral_Geb_OST
             MenuIconTexture = 'Texture_RTS_H_manpad'
-            ButtonTexture = 'Texture_Button_Unit_MANPAD_RBS70_OST'
+            ButtonTexture = 'Texture_Button_Unit_MANPAD_Stinger_C_NL'
             TypeStrategicCount = ETypeStrategicDetailedCount/Manpad
         ),
         TUnitUpkeepModuleDescriptor( UpkeepPercentage = 1.0 ),
@@ -958700,7 +958704,7 @@ export Descriptor_Unit_MANPAD_RBS70_SWE is TEntityDescriptor
         TCameraShowroomModuleDescriptor
         (
             SpawnType = EShowroomSpawnType/Infantry
-            ShowRoomBlackHoleIdentifier = "squad_MANPAD_Mistral_FR"
+            ShowRoomBlackHoleIdentifier = "squad_MANPAD_RBS70_SWE"
             HasServants = False
         ),
     ]

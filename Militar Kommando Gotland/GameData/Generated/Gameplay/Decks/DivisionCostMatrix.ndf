@@ -121,7 +121,7 @@ MatrixCostName_Challenge is MAP
 MatrixCostName_SWE_MilitarKommando_Gotland_multi is MAP
 [
     (Factory/Art, [1, 1, 1, 2, 2, 3, 3,]),
-    (Factory/DCA, [1, 1, 2, 3]),
+    (Factory/DCA, [1, 1, 2, 2, 3]),
     (Factory/Defense, []),
     (Factory/Helis, []),
     (Factory/Infantry, [1, 1, 1, 1, 2, 2, 2, 2]),

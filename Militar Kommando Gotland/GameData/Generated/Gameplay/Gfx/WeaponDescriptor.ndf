@@ -395476,56 +395476,10 @@ export WeaponDescriptor_StabsTgb_m42A_CMD_SWE is TWeaponManagerModuleDescriptor
     AlwaysOrientArmorTowardsThreat = true
     Salves = 
     [
-        10,
         1,
     ]
     TurretDescriptorList = 
     [
-        TTurretTwoAxisDescriptor
-        (
-            AngleRotationBase = 0
-            AngleRotationBasePitch = 0.17453292519943275
-            AngleRotationMax = 6.283185307179586
-            AngleRotationMaxPitch = 0.7853981633974483
-            AngleRotationMinPitch = -0.17453292519943295
-            MountedWeaponDescriptorList = 
-            [
-                TMountedWeaponDescriptor
-                (
-                    AmmoBoxIndex = 0
-                    Ammunition = $/GFX/Weapon/Ammo_MMG_ksp_m58_7_62mm
-                    AnimateOnlyOneSoldier = false
-                    Caliber = "ARZDNMYCBF"
-                    DispersionRadiusOffColor = RGBA[0,0,0,0]
-                    DispersionRadiusOffThickness = -0.1
-                    DispersionRadiusOnColor = RGBA[0,0,0,0]
-                    DispersionRadiusOnThickness = -0.1
-                    EffectTag = "FireEffect_MMG_L37A2_7_62mm"
-                    HandheldEquipmentKey = "WeaponAlternative_1"
-                    InterfaceWeaponTexture = "Texture_Interface_Weapon_mag"
-                    Name = "KSPM58"
-                    NbWeapons = 1
-                    ShowDispersion = false
-                    TraitsToken = 
-                    [
-                        "MOTION",
-                    ]
-                    TypeCategoryName = "BBQBDWUTJX"
-                    WeaponActiveAndCanShootPropertyName = "WeaponActiveAndCanShoot_1"
-                    WeaponDescriptionToken = "FUQCRZJUJQ"
-                    WeaponIgnoredPropertyName = "WeaponIgnored_1"
-                    WeaponShootDataPropertyName = 
-                    [
-                        "WeaponShootData_0_1",
-                    ]
-                ),
-            ]
-            OutOfRangeTrackingDuration = 3.5
-            Tag = "tourelle1"
-            TurretIdleBehaviourDescriptor = ~/TurretIdle_WatchForwardMG
-            VitesseRotation = 1.0471975511965976
-            YulBoneOrdinal = 1
-        ),
         TTurretUnitDescriptor
         (
             AngleRotationMax = 2.0943951023931953
@@ -395535,7 +395489,7 @@ export WeaponDescriptor_StabsTgb_m42A_CMD_SWE is TWeaponManagerModuleDescriptor
             [
                 TMountedWeaponDescriptor
                 (
-                    AmmoBoxIndex = 1
+                    AmmoBoxIndex = 0
                     Ammunition = $/GFX/Weapon/Ammo_SMOKE_Vehicle_Grenadex8
                     AnimateOnlyOneSoldier = true
                     Caliber = "smoke"
@@ -395609,7 +395563,7 @@ export WeaponDescriptor_Tgb_m42A_SWE is TWeaponManagerModuleDescriptor
                     DispersionRadiusOnThickness = -0.1
                     EffectTag = "FireEffect_MMG_L37A2_7_62mm"
                     HandheldEquipmentKey = "WeaponAlternative_1"
-                    NbWeapons = 1
+                    NbWeapons = 2
                     ShowDispersion = False
                     WeaponActiveAndCanShootPropertyName = "WeaponActiveAndCanShoot_1"
                     WeaponIgnoredPropertyName = "WeaponIgnored_1"
@@ -396052,7 +396006,7 @@ export WeaponDescriptor_Kapjas_m65_SWE is TWeaponManagerModuleDescriptor
                 TMountedWeaponDescriptor
                 (
                     AmmoBoxIndex = 1
-                    Ammunition = $/GFX/Weapon/Ammo_Howz_Canon_Kapjas_m65_SWE_DIRECTAA
+                    Ammunition = $/GFX/Weapon/Ammo_Howz_Canon_Kapjas_m65_SWE_AA
                     Caliber = '75mm'
                     InterfaceWeaponTexture = "Texture_Interface_Weapon_2A65"
                     Name = 'FPJS1965'
@@ -396064,7 +396018,7 @@ export WeaponDescriptor_Kapjas_m65_SWE is TWeaponManagerModuleDescriptor
                     DispersionRadiusOffThickness = -0.1
                     DispersionRadiusOnColor = RGBA[0,0,0,0]
                     DispersionRadiusOnThickness = -0.1
-                    EffectTag = "FireEffect_Howz_Canon_M118_105mm_Direct"
+                    EffectTag = "Texture_Interface_Weapon_DCA_1_canon_KS19_100mm"
                     HandheldEquipmentKey = "WeaponAlternative_3"
                     NbWeapons = 1
                     ShowDispersion = False
@@ -396073,6 +396027,32 @@ export WeaponDescriptor_Kapjas_m65_SWE is TWeaponManagerModuleDescriptor
                     WeaponShootDataPropertyName = 
                     [
                         "WeaponShootData_0_3",
+                    ]
+                ),
+                TMountedWeaponDescriptor
+                (
+                    AmmoBoxIndex = 1
+                    Ammunition = $/GFX/Weapon/Ammo_HE_Canon_Kapjas_m65_SWE_DIRECT
+                    Caliber = '75mm'
+                    InterfaceWeaponTexture = "Texture_Interface_Weapon_2A65"
+                    Name = 'FPJS1965'
+                    TraitsToken = [ 'STAT', 'HE' ]
+                    TypeCategoryName = 'DIRECT'
+                    WeaponDescriptionToken = 'BGKHTMZYRF'
+                    AnimateOnlyOneSoldier = False
+                    DispersionRadiusOffColor = RGBA[0,0,0,0]
+                    DispersionRadiusOffThickness = -0.1
+                    DispersionRadiusOnColor = RGBA[0,0,0,0]
+                    DispersionRadiusOnThickness = -0.1
+                    EffectTag = "FireEffect_Canon_HE_KS19_100mm"
+                    HandheldEquipmentKey = "WeaponAlternative_4"
+                    NbWeapons = 1
+                    ShowDispersion = False
+                    WeaponActiveAndCanShootPropertyName = "WeaponActiveAndCanShoot_4"
+                    WeaponIgnoredPropertyName = "WeaponIgnored_4"
+                    WeaponShootDataPropertyName = 
+                    [
+                        "WeaponShootData_0_4",
                     ]
                 ),
             ]
@@ -396175,7 +396155,7 @@ export WeaponDescriptor_Howz_Haubits_m4140_SWE is TWeaponManagerModuleDescriptor
         (
             AngleRotationBase = 0
             AngleRotationBasePitch = 0.17453292519943275
-            AngleRotationMax = 0.2617993877991494
+            AngleRotationMax = 6.283185307179586
             AngleRotationMaxPitch = 1.3089969389957472
             AngleRotationMinPitch = -0.17453292519943295
             MountedWeaponDescriptorList = 
@@ -396240,7 +396220,7 @@ export WeaponDescriptor_Howz_Haubits_m4140_SWE is TWeaponManagerModuleDescriptor
                     InterfaceWeaponTexture = "Texture_Interface_Weapon_D30"
                     Name = 'Hbts4140'
                     TraitsToken = [ 'STAT', 'HE', ]
-                    TypeCategoryName = 'FIQMEQMUTK'
+                    TypeCategoryName = 'DIRECT'
                     WeaponDescriptionToken = 'YDWRGQLHYI'
                     AnimateOnlyOneSoldier = False
                     DispersionRadiusOffColor = RGBA[0,0,0,0]
@@ -396326,7 +396306,7 @@ export WeaponDescriptor_Howz_Faltpjas_m37_SWE is TWeaponManagerModuleDescriptor
                     DispersionRadiusOffThickness = -0.1
                     DispersionRadiusOnColor = RGBA[0,0,0,0]
                     DispersionRadiusOnThickness = -0.1
-                    EffectTag = "FireEffect_Howz_Canon_LongTom_155mm"
+                    EffectTag = "FireEffect_Canon_AP_KS19_100mm"
                     HandheldEquipmentKey = "WeaponAlternative_2"
                     InterfaceWeaponTexture = "Texture_Interface_Weapon_Howz_Canon_LongTom_155mm"
                     Name = "FLTPJSM37"
@@ -396338,7 +396318,7 @@ export WeaponDescriptor_Howz_Faltpjas_m37_SWE is TWeaponManagerModuleDescriptor
                         "HE",
                         "KINETIC",
                     ]
-                    TypeCategoryName = "KKZDHFFCTH"
+                    TypeCategoryName = "DIRECT"
                     WeaponActiveAndCanShootPropertyName = "WeaponActiveAndCanShoot_2"
                     WeaponDescriptionToken = "RDHZLCYGPG"
                     WeaponIgnoredPropertyName = "WeaponIgnored_2"
@@ -396357,7 +396337,7 @@ export WeaponDescriptor_Howz_Faltpjas_m37_SWE is TWeaponManagerModuleDescriptor
                     DispersionRadiusOffThickness = -0.1
                     DispersionRadiusOnColor = RGBA[0,0,0,0]
                     DispersionRadiusOnThickness = -0.1
-                    EffectTag = "FireEffect_Howz_Canon_LongTom_155mm"
+                    EffectTag = "FireEffect_Canon_HE_KS19_100mm"
                     HandheldEquipmentKey = "WeaponAlternative_3"
                     InterfaceWeaponTexture = "Texture_Interface_Weapon_Howz_Canon_LongTom_155mm"
                     Name = "FLTPJSM37"
@@ -396368,7 +396348,7 @@ export WeaponDescriptor_Howz_Faltpjas_m37_SWE is TWeaponManagerModuleDescriptor
                         "STAT",
                         "HE",
                     ]
-                    TypeCategoryName = "KKZDHFFCTH"
+                    TypeCategoryName = "DIRECT"
                     WeaponActiveAndCanShootPropertyName = "WeaponActiveAndCanShoot_3"
                     WeaponDescriptionToken = "RDHZLCYGPG"
                     WeaponIgnoredPropertyName = "WeaponIgnored_3"
@@ -396721,7 +396701,7 @@ export WeaponDescriptor_DCA_VLVK_M3037_SWE is TWeaponManagerModuleDescriptor
                     AmmoBoxIndex = 0
                     Ammunition = $/GFX/Weapon/Ammo_DCA_Canon_VLVK_M3037_SWE
                     AnimateOnlyOneSoldier = false
-                    Caliber = "EOFGRIGVYK"
+                    Caliber = "75mm"
                     DispersionRadiusOffColor = RGBA[0,0,0,0]
                     DispersionRadiusOffThickness = -0.1
                     DispersionRadiusOnColor = RGBA[0,0,0,0]
@@ -396750,7 +396730,7 @@ export WeaponDescriptor_DCA_VLVK_M3037_SWE is TWeaponManagerModuleDescriptor
                     AmmoBoxIndex = 1
                     Ammunition = $/GFX/Weapon/Ammo_Canon_AP_VLVK_M3037_SWE
                     AnimateOnlyOneSoldier = false
-                    Caliber = "EOFGRIGVYK"
+                    Caliber = "75mm"
                     DispersionRadiusOffColor = RGBA[0,0,0,0]
                     DispersionRadiusOffThickness = -0.1
                     DispersionRadiusOnColor = RGBA[0,0,0,0]
@@ -396767,7 +396747,7 @@ export WeaponDescriptor_DCA_VLVK_M3037_SWE is TWeaponManagerModuleDescriptor
                         "HE",
                         "KINETIC",
                     ]
-                    TypeCategoryName = "FIQMEQMUTK"
+                    TypeCategoryName = "DIRECT"
                     WeaponActiveAndCanShootPropertyName = "WeaponActiveAndCanShoot_2"
                     WeaponDescriptionToken = "YDWRGQLHYI"
                     WeaponIgnoredPropertyName = "WeaponIgnored_2"
@@ -396797,7 +396777,7 @@ export WeaponDescriptor_DCA_VLVK_M3037_SWE is TWeaponManagerModuleDescriptor
                         "MOTION",
                         "HE",
                     ]
-                    TypeCategoryName = "FIQMEQMUTK"
+                    TypeCategoryName = "DIRECT"
                     WeaponActiveAndCanShootPropertyName = "WeaponActiveAndCanShoot_3"
                     WeaponDescriptionToken = "YDWRGQLHYI"
                     WeaponIgnoredPropertyName = "WeaponIgnored_3"
@@ -396820,7 +396800,7 @@ export WeaponDescriptor_MANPAD_RBS69_SWE is TWeaponManagerModuleDescriptor
     AlwaysOrientArmorTowardsThreat = false
     Salves = 
     [
-        52,
+        30,
         6,
     ]
     TurretDescriptorList = 
@@ -396906,7 +396886,7 @@ export WeaponDescriptor_MANPAD_RBS70_SWE is TWeaponManagerModuleDescriptor
     AlwaysOrientArmorTowardsThreat = false
     Salves = 
     [
-        78,
+        45,
         6,
     ]
     TurretDescriptorList = 

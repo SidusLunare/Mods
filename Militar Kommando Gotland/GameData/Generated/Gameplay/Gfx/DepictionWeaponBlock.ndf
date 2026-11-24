@@ -393,6 +393,14 @@ Weapon_MMG_FN_MAG_7_62mm is TCompositeHappening
         $/GFX/Sound/SoundHappening_FULDA_L37A2_Firing,
     ]
 )
+Weapon_MMG_ksp_m58_7_62mm is TCompositeHappening
+(
+    SubHappenings = 
+    [
+        FXWeapon_MMG_ksp_m58_7_62mm,
+        $/GFX/Sound/SoundHappening_FULDA_L37A2_Firing,
+    ]
+)
 Weapon_ATGM_MILAN is TCompositeHappening
 (
     SubHappenings = 

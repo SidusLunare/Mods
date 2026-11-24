@@ -1,3 +1,10 @@
+ZZ:/Localisation/Generated/Gameplay/Unit/Names/NAMES_SWE-FR.dic
+ZZ:/Localisation/Generated/Gameplay/Unit/Names/NAMES_SWE-GER.dic
+ZZ:/Localisation/Generated/Gameplay/Unit/Names/NAMES_SWE-POL.dic
+ZZ:/Localisation/Generated/Gameplay/Unit/Names/NAMES_SWE-RU.dic
+ZZ:/Localisation/Generated/Gameplay/Unit/Names/NAMES_SWE-SC.dic
+ZZ:/Localisation/Generated/Gameplay/Unit/Names/NAMES_SWE-SPA.dic
+ZZ:/Localisation/Generated/Gameplay/Unit/Names/NAMES_SWE-US.dic
 ZZ:/Localisation/Localisation/Militar Kommando Gotland/INTERFACE_OUTGAME-FR.dic
 ZZ:/Localisation/Localisation/Militar Kommando Gotland/INTERFACE_OUTGAME-GER.dic
 ZZ:/Localisation/Localisation/Militar Kommando Gotland/INTERFACE_OUTGAME-POL.dic
@@ -16,3 +23,4 @@ ZZ:/MeshPack/Militar Kommando Gotland/Mesh_All.spk
 ZZ:/PC/Texture/Assets/2D/Interface/Common/Flags/SWE_FLAG.tgv
 ZZ:/PC/Texture/Assets/2D/Interface/UseOutGame/Division/Emblem/SWE_MilitarKommando_Gotland.tgv
 ZZ:/TextureProxy/Militar Kommando Gotland/Mesh_All.ndfbin
+ZZ:/Video/Assets/Videos/Logo/custom_intro.vid
