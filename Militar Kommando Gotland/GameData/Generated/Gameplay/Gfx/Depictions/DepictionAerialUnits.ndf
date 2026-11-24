@@ -5082,6 +5082,74 @@ unnamed TacticAerialDepictionRegistration
             ),
         ]        
 )
+// Dépiction de l'unité Alouette_II_reco_BEL HKP_5B_SWE
+unnamed TacticAerialDepictionRegistration
+(
+    AdditionalTextures = $/M3D/Shader/HelicoDestTextures
+    Selector = SpecificMechanicalDepictionSelector
+    BlackHoleKey = 'HKP_5B_SWE'
+    Alternatives = Alternatives_Alouette_II_reco_BEL
+
+    Operators = 
+        [
+            $/GFX/Sound/DepictionOperator_MovementSound_SM_Helico_Alouette,
+            DepictionOperator_SoundProbe,
+            DepictionOperator_CriticalEffects,
+            DepictionOperator_HelicopterLanding,
+            DepictionOperator_GroundPuff_Helico,
+            DepictionOperator_ShadowPointCloudProvider,
+            DepictionOperator_Rotors
+            (
+                HelixList = 
+                [
+                    THelix
+                    (
+                        BladeCount = 3
+                        BladesBoneName = "helice_ls_1"
+                        BlurActionId = "FX_Helice_1"
+                        Clockwise = false
+                        HelixBoneName = "bloc_moteur_1"
+                        RotationAxis = 2
+                        RotationSpeed = 242
+                    ),
+                    THelix
+                    (
+                        BladeCount = 2
+                        BladesBoneName = "helice_ls_2"
+                        BlurActionId = "FX_Helice_2"
+                        Clockwise = false
+                        HelixBoneName = "bloc_moteur_2"
+                        RotationAxis = 1
+                        RotationSpeed = 242
+                    ),
+                ]
+            ),
+            DepictionOperator_Feedback_Degat_Level1,
+            DepictionOperator_Feedback_Degat_Level2,
+            DepictionOperator_Heat,
+            DepictionOperator_EjectableProps_Helico,
+        ]
+        Actions = MAP[
+                ]
+                + DepictionAction_Stress_And_Wrecked_Helicopter
+                + MAP [ ('FX_Helice_1', Template_DepictionAction_Rotor( PaleLength = 1150 PaleCount = 3 RotationAxis = float3[0, 0, 1] SousMobile = "bloc_moteur_1" ))]
+                + MAP [ ('FX_Helice_2', Template_DepictionAction_Rotor( PaleLength = 250 PaleCount = 2 RotationAxis = float3[0, 1, 0] SousMobile = "bloc_moteur_2" ))]
+                + DepictionAction_CriticalFX_Helicopter
+
+        SubDepictions = 
+
+        [
+            TSubDepiction
+            (
+                Anchors = 
+                [
+                    "pilot",
+                    "pilot2",
+                ]
+                Depiction = Pilot_Pilote_Helico_US
+            ),
+        ]        
+)
 // Dépiction de l'unité Alouette_II_reco_RFA
 unnamed TacticAerialDepictionRegistration
 (
@@ -6747,13 +6815,13 @@ unnamed TacticAerialDepictionRegistration
             ),
         ]        
 )
-// Dépiction de l'unité CH47_Chinook_UK HKP_4_SWE
+// Dépiction de l'unité CH46E_SeaKnight_trans_US HKP_4_SWE
 unnamed TacticAerialDepictionRegistration
 (
     AdditionalTextures = $/M3D/Shader/HelicoDestTextures
     Selector = SpecificMechanicalDepictionSelector
     BlackHoleKey = 'HKP_4_SWE'
-    Alternatives = Alternatives_CH47_Chinook_UK
+    Alternatives = Alternatives_CH46E_SeaKnight_trans_US
 
     Operators = 
         [
@@ -6798,8 +6866,8 @@ unnamed TacticAerialDepictionRegistration
         Actions = MAP[
                 ]
                 + DepictionAction_Stress_And_Wrecked_Helicopter
-                + MAP [ ('FX_Helice_1', Template_DepictionAction_Rotor( PaleLength = 1900 PaleCount = 3 RotationAxis = float3[0, 0, 1] SousMobile = "bloc_moteur_1" ))]
-                + MAP [ ('FX_Helice_2', Template_DepictionAction_Rotor( PaleLength = 1900 PaleCount = 3 RotationAxis = float3[0, 0, 1] SousMobile = "bloc_moteur_2" ))]
+                + MAP [ ('FX_Helice_1', Template_DepictionAction_Rotor( PaleLength = 1600 PaleCount = 3 RotationAxis = float3[0, 0, 1] SousMobile = "bloc_moteur_1" ))]
+                + MAP [ ('FX_Helice_2', Template_DepictionAction_Rotor( PaleLength = 1600 PaleCount = 3 RotationAxis = float3[0, 0, 1] SousMobile = "bloc_moteur_2" ))]
                 + DepictionAction_CriticalFX_Helicopter
                 + DepictionAction_Flare_Simple
 

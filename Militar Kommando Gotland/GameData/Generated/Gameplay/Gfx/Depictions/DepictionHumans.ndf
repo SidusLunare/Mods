@@ -14070,6 +14070,16 @@ HumanSubDepictions_LandRover_M40_CYP is
     ),
 ]
 HumanSubDepictionsShowroom_LandRover_M40_CYP is []
+HumanSubDepictions_PvpjTgb_9031_SWE is 
+[
+    SubDepiction_Driver
+    (
+        MeshDescriptorHigh = $/GFX/DepictionResources/MeshDescriptor_Driver_SWE
+        MeshDescriptorLow = $/GFX/DepictionResources/MeshDescriptor_Driver_SWE_LOW
+    ),
+]
+HumanSubDepictionsShowroom_PvpjTgb_9031_SWE is []
+
 HumanSubDepictions_LandRover_M40_ESP is 
 [
     SubDepiction_Driver
@@ -14913,6 +14923,15 @@ HumanSubDepictions_M38A1_RCL_NL is
     ),
 ]
 HumanSubDepictionsShowroom_M38A1_RCL_NL is []
+HumanSubDepictions_Pvpjtgb_1111_SWE is 
+[
+    SubDepiction_Driver
+    (
+        MeshDescriptorHigh = $/GFX/DepictionResources/MeshDescriptor_Driver_SWE
+        MeshDescriptorLow = $/GFX/DepictionResources/MeshDescriptor_Driver_SWE_LOW
+    ),
+]
+HumanSubDepictionsShowroom_Pvpjtgb_1111_SWE is []
 HumanSubDepictions_M38A1_RCL_SWI is 
 [
     SubDepiction_Driver
@@ -27314,6 +27333,26 @@ unnamed TTransportedInfantryCatalogEntries
             ]
             UniqueCount = 1
         ),
+                TTransportedInfantryEntry
+        (
+            Count = 1
+            Identifier = "Pvpjtgb_1111_SWE"
+            Meshes = 
+            [
+                $/GFX/DepictionResources/MeshDescriptor_Driver_SWE,
+            ]
+            UniqueCount = 1
+        ),
+                TTransportedInfantryEntry
+        (
+            Count = 1
+            Identifier = "LandRover_M40_CYP"
+            Meshes = 
+            [
+                $/GFX/DepictionResources/MeshDescriptor_Driver_SWE,
+            ]
+            UniqueCount = 1
+        ),
         TTransportedInfantryEntry
         (
             Count = 1
@@ -28221,6 +28260,16 @@ unnamed TTransportedInfantryCatalogEntries
         (
             Count = 1
             Identifier = "M38A1_RCL_NL"
+            Meshes = 
+            [
+                $/GFX/DepictionResources/MeshDescriptor_Driver_NL,
+            ]
+            UniqueCount = 1
+        ),
+        TTransportedInfantryEntry
+        (
+            Count = 1
+            Identifier = "Pvpjtgb_1111_SWE"
             Meshes = 
             [
                 $/GFX/DepictionResources/MeshDescriptor_Driver_NL,

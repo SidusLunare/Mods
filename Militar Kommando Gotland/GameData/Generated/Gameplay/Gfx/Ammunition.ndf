@@ -82926,6 +82926,413 @@ Ammo_MMG_ksp_m58_7_62mm is TAmmunitionDescriptor
     TandemCharge                      = False
     DamageTypeEvolutionOverRangeDescriptor  = nil
 )
+Ammo_RocketInf_Pansarvarnspjas_1110 is TAmmunitionDescriptor
+(
+    DescriptorId                      = GUID:{e4a1f8c2-5b3d-4c9a-8e12-7d4b9f02a110}
+    WeaponCursorType                  = Weapon_Cursor_Canon
+    MinMaxCategory                    = MinMax_CanonAP
+    Arme                              = TDamageTypeRTTI(Family=DamageFamily_ap_missile Index=18)
+    ProjectileType                    = EProjectileType/Obus
+    ImpactHappening                   = 'RoquetteRecoilessGun'
+    FxPower                           = EFXPower/Moyen
+    TimeBetweenTwoShots               = 1.0
+    TimeBetweenTwoFx                  = 1.0
+    MinimumRangeGRU                   = 35
+    MaximumRangeGRU                   = 1575
+    MinimumRangeHelicopterGRU         = 0
+    MaximumRangeHelicopterGRU         = 0
+    MinimumRangeAirplaneGRU           = 0
+    MaximumRangeAirplaneGRU           = 0
+    MinimumRangeProjectileGRU         = 0
+    MaximumRangeProjectileGRU         = 0
+    AngleDispersion                   = 0.0
+    DispersionAtMaxRangeGRU           = 78
+    DispersionAtMinRangeGRU           = 16
+    SalvoShotsSorted                  = True
+    RadiusSplashPhysicalDamagesGRU    = 5
+    PhysicalDamages                   = 1.0
+    ShowDamageInUI                    = False
+    RadiusSplashSuppressDamagesGRU    = 45
+    SuppressDamages                   = 145.0
+    AllowSuppressDamageWhenNoImpact   = False
+    DisplaySalveAccuracy              = True
+    TirIndirect                       = False
+    TirReflexe                        = True
+    ProjectileSpeedGRU                = 2150
+    NoiseDissimulationMalus           = 2.5
+    ShotsBeforeMaxNoise               = 2
+    TargetOnlyOneUnitInDistrict       = True
+    HitRollRuleDescriptor = TDiceHitRollRuleDescriptor
+    (
+        BaseCriticModifier = 0
+        BaseHitValueModifiers =
+        [
+            (EBaseHitValueModifier/Base, 0),
+            (EBaseHitValueModifier/Idling, 40),
+            (EBaseHitValueModifier/Moving, 0),
+            (EBaseHitValueModifier/Targeted, 0),
+        ]
+        DistanceToTarget = True
+    )
+    AimingTime                        = 2.0
+    TimeBetweenTwoSalvos              = 9.0
+    TimeBetweenTwoSalvos_Min          = -1.0
+    TimeBetweenTwoSalvos_Max          = -1.0
+    ShotsCountPerSalvo                = 1
+    SupplyCost                        = 15.0
+    CanShootOnPosition                = False
+    CanShootWhileMoving               = False
+    HasDeploymentTime                 = False
+    SimultaneousShotsCount            = 1
+    AffichageMunitionParSalve         = 1
+    SmokeDescriptor                   = nil
+    FireDescriptor                    = nil
+    IsHarmlessForAllies               = True
+    PiercingWeapon                    = True
+    TandemCharge                      = False
+    DamageTypeEvolutionOverRangeDescriptor  = nil
+)
+Ammo_RocketInf_Pansarvarnspjas_1110_HE is TAmmunitionDescriptor
+(
+    DescriptorId                      = GUID:{9c8f4b21-7d3e-4a19-b502-6e1a8f34d922}
+    WeaponCursorType                  = Weapon_Cursor_Canon
+    MinMaxCategory                    = MinMax_CanonAP
+    Arme                              = TDamageTypeRTTI(Family=DamageFamily_he Index=1)
+    ProjectileType                    = EProjectileType/Obus
+    ImpactHappening                   = 'RoquetteRecoilessGun'
+    FxPower                           = EFXPower/Moyen
+    TimeBetweenTwoShots               = 1.0
+    TimeBetweenTwoFx                  = 1.0
+    MinimumRangeGRU                   = 35
+    MaximumRangeGRU                   = 1575
+    MinimumRangeHelicopterGRU         = 0
+    MaximumRangeHelicopterGRU         = 0
+    MinimumRangeAirplaneGRU           = 0
+    MaximumRangeAirplaneGRU           = 0
+    MinimumRangeProjectileGRU         = 0
+    MaximumRangeProjectileGRU         = 0
+    AngleDispersion                   = 0.0
+    DispersionAtMaxRangeGRU           = 78
+    DispersionAtMinRangeGRU           = 16
+    SalvoShotsSorted                  = True
+    RadiusSplashPhysicalDamagesGRU    = 0
+    PhysicalDamages                   = 0.90
+    ShowDamageInUI                    = True
+    RadiusSplashSuppressDamagesGRU    = 45
+    SuppressDamages                   = 145.0
+    AllowSuppressDamageWhenNoImpact   = False
+    DisplaySalveAccuracy              = True
+    TirIndirect                       = False
+    TirReflexe                        = True
+    ProjectileSpeedGRU                = 2150
+    NoiseDissimulationMalus           = 2.5
+    ShotsBeforeMaxNoise               = 2
+    TargetOnlyOneUnitInDistrict       = True
+    HitRollRuleDescriptor = TDiceHitRollRuleDescriptor
+    (
+        BaseCriticModifier = 25
+        BaseHitValueModifiers =
+        [
+            (EBaseHitValueModifier/Base, 0),
+            (EBaseHitValueModifier/Idling, 40),
+            (EBaseHitValueModifier/Moving, 0),
+            (EBaseHitValueModifier/Targeted, 0),
+        ]
+        DistanceToTarget = True
+    )
+    AimingTime                        = 2.0
+    TimeBetweenTwoSalvos              = 9.0
+    TimeBetweenTwoSalvos_Min          = -1.0
+    TimeBetweenTwoSalvos_Max          = -1.0
+    ShotsCountPerSalvo                = 1
+    SupplyCost                        = 2.0
+    NbSalvosShootOnPosition           = 1
+    CanShootOnPosition                = True
+    CanShootWhileMoving               = False
+    HasDeploymentTime                 = False
+    SimultaneousShotsCount            = 1
+    AffichageMunitionParSalve         = 1
+    SmokeDescriptor                   = nil
+    FireDescriptor                    = $/GFX/Weapon/Descriptor_Fire_Incendie
+    FireTriggeringProbability         = 0.05
+    IsHarmlessForAllies               = False
+    PiercingWeapon                    = False
+    TandemCharge                      = False
+    DamageTypeEvolutionOverRangeDescriptor  = nil
+)
+Ammo_Canon_AP_105mm_L7_Strv_102_SWE is TAmmunitionDescriptor
+(
+    DescriptorId                      = GUID:{bef5f1b8-7c01-4bff-ae96-030aee96b64a}
+    WeaponCursorType                  = Weapon_Cursor_Canon
+    MinMaxCategory                    = MinMax_CanonAP
+    Arme                              = TDamageTypeRTTI(Family=DamageFamily_ap Index=27)
+    ProjectileType                    = EProjectileType/Obus
+    ImpactHappening                   = 'CanonGrosAPFDSM1Abrams'
+    FxPower                           = EFXPower/Moyen
+    TimeBetweenTwoShots               = 1.0
+    TimeBetweenTwoFx                  = 1.0
+    MinimumRangeGRU                   = 35
+    MaximumRangeGRU                   = 2275
+    MinimumRangeHelicopterGRU         = 0
+    MaximumRangeHelicopterGRU         = 0
+    MinimumRangeAirplaneGRU           = 0
+    MaximumRangeAirplaneGRU           = 0
+    MinimumRangeProjectileGRU         = 0
+    MaximumRangeProjectileGRU         = 0
+    AngleDispersion                   = 0.0
+    DispersionAtMaxRangeGRU           = 106
+    DispersionAtMinRangeGRU           = 18
+    SalvoShotsSorted                  = False
+    RadiusSplashPhysicalDamagesGRU    = 1
+    PhysicalDamages                   = 1.0
+    ShowDamageInUI                    = False
+    RadiusSplashSuppressDamagesGRU    = 37
+    SuppressDamages                   = 71.0
+    AllowSuppressDamageWhenNoImpact   = True
+    DisplaySalveAccuracy              = False
+    TirIndirect                       = False
+    TirReflexe                        = True
+    ProjectileSpeedGRU                = 2088
+    NoiseDissimulationMalus           = 2.5
+    ShotsBeforeMaxNoise               = 2
+    TargetOnlyOneUnitInDistrict       = True
+    HitRollRuleDescriptor = TDiceHitRollRuleDescriptor
+    (
+        BaseCriticModifier = 0
+        BaseHitValueModifiers =
+        [
+            (EBaseHitValueModifier/Base, 0),
+            (EBaseHitValueModifier/Idling, 55),
+            (EBaseHitValueModifier/Moving, 35),
+            (EBaseHitValueModifier/Targeted, 0),
+        ]
+        DistanceToTarget = True
+    )
+    MaxSuccessiveHitCount             = 3
+    AimingTime                        = 3.0
+    TimeBetweenTwoSalvos              = 6.5
+    TimeBetweenTwoSalvos_Min          = -1.0
+    TimeBetweenTwoSalvos_Max          = -1.0
+    ShotsCountPerSalvo                = 1
+    SupplyCost                        = 12.0
+    CanShootOnPosition                = False
+    CanShootWhileMoving               = True
+    HasDeploymentTime                 = False
+    SimultaneousShotsCount            = 1
+    AffichageMunitionParSalve         = 1
+    SmokeDescriptor                   = nil
+    FireDescriptor                    = $/GFX/Weapon/Descriptor_Fire_Incendie
+    FireTriggeringProbability         = 0.05
+    IsHarmlessForAllies               = True
+    PiercingWeapon                    = True
+    TandemCharge                      = False
+    DamageTypeEvolutionOverRangeDescriptor  = ~/DamageTypeEvolutionOverRangeDescriptor_AP1_1Km
+)
+Ammo_Canon_HE_105mm_L7_Strv_102_SWE is TAmmunitionDescriptor
+(
+    DescriptorId                      = GUID:{5f294bb1-cafc-4e1e-abad-1f96c1fc7c52}
+    WeaponCursorType                  = Weapon_Cursor_Canon
+    MinMaxCategory                    = MinMax_CanonAP
+    Arme                              = TDamageTypeRTTI(Family=DamageFamily_he Index=1)
+    ProjectileType                    = EProjectileType/Obus
+    ImpactHappening                   = 'CanonGrosHEM1Abrams'
+    FxPower                           = EFXPower/Moyen
+    TimeBetweenTwoShots               = 1.0
+    TimeBetweenTwoFx                  = 1.0
+    MinimumRangeGRU                   = 35
+    MaximumRangeGRU                   = 2275
+    MinimumRangeHelicopterGRU         = 0
+    MaximumRangeHelicopterGRU         = 0
+    MinimumRangeAirplaneGRU           = 0
+    MaximumRangeAirplaneGRU           = 0
+    MinimumRangeProjectileGRU         = 0
+    MaximumRangeProjectileGRU         = 0
+    AngleDispersion                   = 0.0
+    DispersionAtMaxRangeGRU           = 106
+    DispersionAtMinRangeGRU           = 18
+    SalvoShotsSorted                  = False
+    RadiusSplashPhysicalDamagesGRU    = 19
+    PhysicalDamages                   = 1.05
+    ShowDamageInUI                    = True
+    RadiusSplashSuppressDamagesGRU    = 31
+    SuppressDamages                   = 142.0
+    AllowSuppressDamageWhenNoImpact   = True
+    DisplaySalveAccuracy              = False
+    TirIndirect                       = False
+    TirReflexe                        = True
+    ProjectileSpeedGRU                = 1767
+    NoiseDissimulationMalus           = 2.5
+    ShotsBeforeMaxNoise               = 2
+    TargetOnlyOneUnitInDistrict       = True
+    HitRollRuleDescriptor = TDiceHitRollRuleDescriptor
+    (
+        BaseCriticModifier = 25
+        BaseHitValueModifiers =
+        [
+            (EBaseHitValueModifier/Base, 0),
+            (EBaseHitValueModifier/Idling, 55),
+            (EBaseHitValueModifier/Moving, 35),
+            (EBaseHitValueModifier/Targeted, 0),
+        ]
+        DistanceToTarget = True
+    )
+    MaxSuccessiveHitCount             = 3
+    AimingTime                        = 3.0
+    TimeBetweenTwoSalvos              = 6.5
+    TimeBetweenTwoSalvos_Min          = -1.0
+    TimeBetweenTwoSalvos_Max          = -1.0
+    ShotsCountPerSalvo                = 1
+    SupplyCost                        = 2.0
+    NbSalvosShootOnPosition           = 1
+    CanShootOnPosition                = True
+    CanShootWhileMoving               = True
+    HasDeploymentTime                 = False
+    SimultaneousShotsCount            = 1
+    AffichageMunitionParSalve         = 1
+    SmokeDescriptor                   = nil
+    FireDescriptor                    = $/GFX/Weapon/Descriptor_Fire_Incendie
+    FireTriggeringProbability         = 0.05
+    IsHarmlessForAllies               = False
+    PiercingWeapon                    = False
+    TandemCharge                      = False
+    DamageTypeEvolutionOverRangeDescriptor  = nil
+)
+Ammo_Canon_AP_75mm_kanon_m41_SWE is TAmmunitionDescriptor
+(
+    DescriptorId                      = GUID:{97c03faf-8807-466c-b6a1-990b36b61gfe}
+    WeaponCursorType                  = Weapon_Cursor_Canon
+    MinMaxCategory                    = MinMax_CanonAP
+    Arme                              = TDamageTypeRTTI(Family=DamageFamily_ap Index=18)
+    ProjectileType                    = EProjectileType/Obus
+    ImpactHappening                   = 'CanonMoyenAPPT76'
+    FxPower                           = EFXPower/Moyen
+    TimeBetweenTwoShots               = 5.0
+    TimeBetweenTwoFx                  = 3.0
+    MinimumRangeGRU                   = 35
+    MaximumRangeGRU                   = 1750
+    MinimumRangeHelicopterGRU         = 0
+    MaximumRangeHelicopterGRU         = 0
+    MinimumRangeAirplaneGRU           = 0
+    MaximumRangeAirplaneGRU           = 0
+    MinimumRangeProjectileGRU         = 0
+    MaximumRangeProjectileGRU         = 0
+    AngleDispersion                   = 0.0
+    DispersionAtMaxRangeGRU           = 106
+    DispersionAtMinRangeGRU           = 18
+    SalvoShotsSorted                  = False
+    RadiusSplashPhysicalDamagesGRU    = 0
+    PhysicalDamages                   = 1.0
+    ShowDamageInUI                    = False
+    RadiusSplashSuppressDamagesGRU    = 13
+    SuppressDamages                   = 25.0
+    AllowSuppressDamageWhenNoImpact   = False
+    DisplaySalveAccuracy              = False
+    TirIndirect                       = False
+    TirReflexe                        = True
+    ProjectileSpeedGRU                = 2088
+    NoiseDissimulationMalus           = 2.5
+    ShotsBeforeMaxNoise               = 2
+    TargetOnlyOneUnitInDistrict       = True
+    HitRollRuleDescriptor = TDiceHitRollRuleDescriptor
+    (
+        BaseCriticModifier = 0
+        BaseHitValueModifiers =
+        [
+            (EBaseHitValueModifier/Base, 0),
+            (EBaseHitValueModifier/Idling, 45),
+            (EBaseHitValueModifier/Moving, 0),
+            (EBaseHitValueModifier/Targeted, 0),
+        ]
+        DistanceToTarget = True
+    )
+    MaxSuccessiveHitCount             = 3
+    AimingTime                        = 3.0
+    TimeBetweenTwoSalvos              = 5.0
+    TimeBetweenTwoSalvos_Min          = -1.0
+    TimeBetweenTwoSalvos_Max          = -1.0
+    ShotsCountPerSalvo                = 1
+    SupplyCost                        = 8.0
+    CanShootOnPosition                = False
+    CanShootWhileMoving               = False
+    HasDeploymentTime                 = False
+    SimultaneousShotsCount            = 1
+    AffichageMunitionParSalve         = 1
+    SmokeDescriptor                   = nil
+    FireDescriptor                    = nil
+    IsHarmlessForAllies               = True
+    PiercingWeapon                    = True
+    TandemCharge                      = False
+    DamageTypeEvolutionOverRangeDescriptor  = ~/DamageTypeEvolutionOverRangeDescriptor_AP1_1Km
+)
+Ammo_Canon_HE_75mm_kanon_m41_SWE is TAmmunitionDescriptor
+(
+    DescriptorId                      = GUID:{1d15572c-08b6-4a0e-936e-0ie723ade5dc}
+    WeaponCursorType                  = Weapon_Cursor_Canon
+    MinMaxCategory                    = MinMax_CanonAP
+    Arme                              = TDamageTypeRTTI(Family=DamageFamily_he Index=1)
+    ProjectileType                    = EProjectileType/Obus
+    ImpactHappening                   = 'CanonMoyenHEPT76'
+    FxPower                           = EFXPower/Moyen
+    TimeBetweenTwoShots               = 5.0
+    TimeBetweenTwoFx                  = 3.0
+    MinimumRangeGRU                   = 35
+    MaximumRangeGRU                   = 1750
+    MinimumRangeHelicopterGRU         = 0
+    MaximumRangeHelicopterGRU         = 0
+    MinimumRangeAirplaneGRU           = 0
+    MaximumRangeAirplaneGRU           = 0
+    MinimumRangeProjectileGRU         = 0
+    MaximumRangeProjectileGRU         = 0
+    AngleDispersion                   = 0.0
+    DispersionAtMaxRangeGRU           = 106
+    DispersionAtMinRangeGRU           = 18
+    SalvoShotsSorted                  = False
+    RadiusSplashPhysicalDamagesGRU    = 7
+    PhysicalDamages                   = 1.75
+    ShowDamageInUI                    = True
+    RadiusSplashSuppressDamagesGRU    = 13
+    SuppressDamages                   = 180.0
+    AllowSuppressDamageWhenNoImpact   = False
+    DisplaySalveAccuracy              = False
+    TirIndirect                       = False
+    TirReflexe                        = True
+    ProjectileSpeedGRU                = 1767
+    NoiseDissimulationMalus           = 2.5
+    ShotsBeforeMaxNoise               = 2
+    TargetOnlyOneUnitInDistrict       = True
+    HitRollRuleDescriptor = TDiceHitRollRuleDescriptor
+    (
+        BaseCriticModifier = 25
+        BaseHitValueModifiers =
+        [
+            (EBaseHitValueModifier/Base, 0),
+            (EBaseHitValueModifier/Idling, 45),
+            (EBaseHitValueModifier/Moving, 0),
+            (EBaseHitValueModifier/Targeted, 0),
+        ]
+        DistanceToTarget = True
+    )
+    MaxSuccessiveHitCount             = 3
+    AimingTime                        = 3.0
+    TimeBetweenTwoSalvos              = 5.0
+    TimeBetweenTwoSalvos_Min          = -1.0
+    TimeBetweenTwoSalvos_Max          = -1.0
+    ShotsCountPerSalvo                = 1
+    SupplyCost                        = 8.0
+    NbSalvosShootOnPosition           = 1
+    CanShootOnPosition                = True
+    CanShootWhileMoving               = False
+    HasDeploymentTime                 = False
+    SimultaneousShotsCount            = 1
+    AffichageMunitionParSalve         = 1
+    SmokeDescriptor                   = nil
+    FireDescriptor                    = $/GFX/Weapon/Descriptor_Fire_Incendie
+    FireTriggeringProbability         = 0.05
+    IsHarmlessForAllies               = False
+    PiercingWeapon                    = False
+    TandemCharge                      = False
+    DamageTypeEvolutionOverRangeDescriptor  = nil
+)
 Ammo_81mm_Mortar_Grk_m2939 is TAmmunitionDescriptor
 (
     DescriptorId                      = GUID:{16fc3d9a-039f-46e1-b575-f0defa8a8492}
@@ -83250,8 +83657,8 @@ Ammo_Mortar_Minrojninsorm_1_SWE is TAmmunitionDescriptor
         ]
         DistanceToTarget = True
     )
-    AimingTime                        = 5.0
-    TimeBetweenTwoSalvos              = 15.0
+    AimingTime                        = 17.0
+    TimeBetweenTwoSalvos              = 25.0
     TimeBetweenTwoSalvos_Min          = -1.0
     TimeBetweenTwoSalvos_Max          = -1.0
     ShotsCountPerSalvo                = 1
@@ -83280,8 +83687,8 @@ Ammo_Howz_Canon_Kapjas_m65_SWE is TAmmunitionDescriptor
     ProjectileType                    = EProjectileType/Artillerie
     ImpactHappening                   = 'Artillerie2A18122Mm'
     FxPower                           = EFXPower/Moyen
-    TimeBetweenTwoShots               = 3.0
-    TimeBetweenTwoFx                  = 3.0
+    TimeBetweenTwoShots               = 6.0
+    TimeBetweenTwoFx                  = 6.0
     MinimumRangeGRU                   = 1925
     MaximumRangeGRU                   = 14100
     MinimumRangeHelicopterGRU         = 0
@@ -83296,7 +83703,7 @@ Ammo_Howz_Canon_Kapjas_m65_SWE is TAmmunitionDescriptor
     SalvoShotsSorted                  = False
     CorrectedShotDispersionMultiplier = 0.7
     RadiusSplashPhysicalDamagesGRU    = 44
-    PhysicalDamages                   = 1.8832
+    PhysicalDamages                   = 1.6
     ShowDamageInUI                    = True
     RadiusSplashSuppressDamagesGRU    = 80
     SuppressDamages                   = 126.0
@@ -83322,8 +83729,8 @@ Ammo_Howz_Canon_Kapjas_m65_SWE is TAmmunitionDescriptor
         ]
         DistanceToTarget = True
     )
-    AimingTime                        = 13.5
-    TimeBetweenTwoSalvos              = 30.0
+    AimingTime                        = 18.5
+    TimeBetweenTwoSalvos              = 28.0
     TimeBetweenTwoSalvos_Min          = -1.0
     TimeBetweenTwoSalvos_Max          = -1.0
     ShotsCountPerSalvo                = 6
@@ -83340,10 +83747,10 @@ Ammo_Howz_Canon_Kapjas_m65_SWE is TAmmunitionDescriptor
     IsHarmlessForAllies               = False
     PiercingWeapon                    = False
     TandemCharge                      = False
-    PitchForParabolic                 = 0.6108652381980153
+    PitchForParabolic                 = 0.9108652381980153
     DamageTypeEvolutionOverRangeDescriptor  = nil
 )
-Ammo_Howz_Canon_Kapjas_m65_SWE_AA is TAmmunitionDescriptor
+Ammo_DCA_Canon_Kapjas_m65_SWE_AA is TAmmunitionDescriptor
 (
     DescriptorId                      = GUID:{89e8043d-1544-4b18-b8db-cc51626e4af5}
     WeaponCursorType                  = Weapon_Cursor_FastCanon
@@ -83367,7 +83774,7 @@ Ammo_Howz_Canon_Kapjas_m65_SWE_AA is TAmmunitionDescriptor
     DispersionAtMinRangeGRU           = 18
     SalvoShotsSorted                  = False
     RadiusSplashPhysicalDamagesGRU    = 16
-    PhysicalDamages                   = 1.67
+    PhysicalDamages                   = 1.2
     ShowDamageInUI                    = True
     RadiusSplashSuppressDamagesGRU    = 50
     SuppressDamages                   = 120.0
@@ -83385,19 +83792,19 @@ Ammo_Howz_Canon_Kapjas_m65_SWE_AA is TAmmunitionDescriptor
         BaseHitValueModifiers =
         [
             (EBaseHitValueModifier/Base, 0),
-            (EBaseHitValueModifier/Idling, 15),
+            (EBaseHitValueModifier/Idling, 5),
             (EBaseHitValueModifier/Moving, 0),
             (EBaseHitValueModifier/Targeted, 0.0),
         ]
         DistanceToTarget = True
     )
     AimingTime                        = 2.0
-    TimeBetweenTwoSalvos              = 6.0
+    TimeBetweenTwoSalvos              = 8.0
     TimeBetweenTwoSalvos_Min          = -1.0
     TimeBetweenTwoSalvos_Max          = -1.0
     ShotsCountPerSalvo                = 1
     SupplyCost                        = 6.0
-    CanShootOnPosition                = True
+    CanShootOnPosition                = False
     CanShootWhileMoving               = False
     HasDeploymentTime                 = False
     SimultaneousShotsCount            = 1
@@ -83415,7 +83822,7 @@ Ammo_HE_Canon_Kapjas_m65_SWE_DIRECT is TAmmunitionDescriptor
     DescriptorId                      = GUID:{549e839a-b715-4f70-aac7-8aaa2d07d49f}
     WeaponCursorType                  = Weapon_Cursor_Canon
     MinMaxCategory                    = MinMax_CanonAP
-    Arme                              = TDamageTypeRTTI(Family=DamageFamily_cac Index=1)
+    Arme                              = TDamageTypeRTTI(Family=DamageFamily_he Index=1)
     ProjectileType                    = EProjectileType/Obus
     ImpactHappening                   = 'Artillerie2A18122Mm'
     FxPower                           = EFXPower/Moyen
@@ -83434,7 +83841,7 @@ Ammo_HE_Canon_Kapjas_m65_SWE_DIRECT is TAmmunitionDescriptor
     DispersionAtMinRangeGRU           = 18
     SalvoShotsSorted                  = False
     RadiusSplashPhysicalDamagesGRU    = 27
-    PhysicalDamages                   = 1.67
+    PhysicalDamages                   = 1.2
     ShowDamageInUI                    = True
     RadiusSplashSuppressDamagesGRU    = 0
     SuppressDamages                   = 202.0
@@ -83452,14 +83859,14 @@ Ammo_HE_Canon_Kapjas_m65_SWE_DIRECT is TAmmunitionDescriptor
         BaseHitValueModifiers =
         [
             (EBaseHitValueModifier/Base, 0),
-            (EBaseHitValueModifier/Idling, 30),
+            (EBaseHitValueModifier/Idling, 15),
             (EBaseHitValueModifier/Moving, 0),
             (EBaseHitValueModifier/Targeted, 0),
         ]
         DistanceToTarget = True
     )
     AimingTime                        = 2.5
-    TimeBetweenTwoSalvos              = 10.0
+    TimeBetweenTwoSalvos              = 8.0
     TimeBetweenTwoSalvos_Min          = -1.0
     TimeBetweenTwoSalvos_Max          = -1.0
     ShotsCountPerSalvo                = 1
@@ -83474,7 +83881,7 @@ Ammo_HE_Canon_Kapjas_m65_SWE_DIRECT is TAmmunitionDescriptor
     FireDescriptor                    = nil
     FireTriggeringProbability         = 0
     IsHarmlessForAllies               = False
-    PiercingWeapon                    = True
+    PiercingWeapon                    = False
     TandemCharge                      = False
     DamageTypeEvolutionOverRangeDescriptor  = nil
 )
@@ -83698,8 +84105,8 @@ Ammo_Howz_Canon_Haubits_m4140_SWE is TAmmunitionDescriptor
     ProjectileSpeedGRU                = 1200
     ImpactHappening                   = 'Artillerie2A18122Mm'
     FxPower                           = EFXPower/Moyen
-    TimeBetweenTwoShots               = 2.4
-    TimeBetweenTwoFx                  = 2.4
+    TimeBetweenTwoShots               = 4.0
+    TimeBetweenTwoFx                  = 4.0
     MinimumRangeGRU                   = 1925
     MaximumRangeGRU                   = 14100
     MinimumRangeHelicopterGRU         = 0
@@ -83828,7 +84235,7 @@ Ammo_Howz_Canon_Haubits_m4140_SWE_SMOKE is TAmmunitionDescriptor
     PitchForParabolic                 = 0.6108652381980153
     DamageTypeEvolutionOverRangeDescriptor  = nil
 )
-Ammo_Canon_Haubits_m4140_SWE_Direct is TAmmunitionDescriptor
+Ammo_HE_Canon_Haubits_m4140_SWE_Direct is TAmmunitionDescriptor
 (
     DescriptorId                      = GUID:{8233cba2-2087-4296-81f1-c2c53e3fa189}
     WeaponCursorType                  = Weapon_Cursor_Canon
@@ -83838,8 +84245,8 @@ Ammo_Canon_Haubits_m4140_SWE_Direct is TAmmunitionDescriptor
     ProjectileSpeedGRU                = 1767
     ImpactHappening                   = 'Artillerie2A18122Mm'
     FxPower                           = EFXPower/Moyen
-    TimeBetweenTwoShots               = 2.4
-    TimeBetweenTwoFx                  = 2.4
+    TimeBetweenTwoShots               = 6.4
+    TimeBetweenTwoFx                  = 6.4
     MinimumRangeGRU                   = 35
     MaximumRangeGRU                   = 1925
     MinimumRangeHelicopterGRU         = 0
@@ -83853,7 +84260,7 @@ Ammo_Canon_Haubits_m4140_SWE_Direct is TAmmunitionDescriptor
     DispersionAtMinRangeGRU           = 18
     SalvoShotsSorted                  = False
     RadiusSplashPhysicalDamagesGRU    = 62
-    PhysicalDamages                   = 1.8832
+    PhysicalDamages                   = 1.2
     ShowDamageInUI                    = True
     RadiusSplashSuppressDamagesGRU    = 107
     SuppressDamages                   = 160.0
@@ -83878,7 +84285,7 @@ Ammo_Canon_Haubits_m4140_SWE_Direct is TAmmunitionDescriptor
     )
     MaxSuccessiveHitCount             = 3
     AimingTime                        = 3.0
-    TimeBetweenTwoSalvos              = 2.4
+    TimeBetweenTwoSalvos              = 6.4
     TimeBetweenTwoSalvos_Min          = -1.0
     TimeBetweenTwoSalvos_Max          = -1.0
     ShotsCountPerSalvo                = 1
@@ -84044,7 +84451,7 @@ Ammo_HE_Canon_Faltpjas_m37_SWE_DIRECT is TAmmunitionDescriptor
     MinMaxCategory                    = MinMax_CanonAP
     Arme                              = TDamageTypeRTTI(Family=DamageFamily_cac Index=1)
     ProjectileType                    = EProjectileType/Obus
-    ImpactHappening                   = 'CanonGrosHESHERIDAN'
+    ImpactHappening                   = 'ArtillerieM185155Mm'
     FxPower                           = EFXPower/Moyen
     TimeBetweenTwoShots               = 0
     TimeBetweenTwoFx                  = 0
@@ -84291,14 +84698,14 @@ Ammo_DCA_Canon_VLVK_M3037_SWE is TAmmunitionDescriptor
         BaseHitValueModifiers =
         [
             (EBaseHitValueModifier/Base, 0),
-            (EBaseHitValueModifier/Idling, 10),
+            (EBaseHitValueModifier/Idling, 20),
             (EBaseHitValueModifier/Moving, 0),
             (EBaseHitValueModifier/Targeted, 0),
         ]
         DistanceToTarget = True
     )
     AimingTime                        = 2.0
-    TimeBetweenTwoSalvos              = 5.0
+    TimeBetweenTwoSalvos              = 6.0
     TimeBetweenTwoSalvos_Min          = -1.0
     TimeBetweenTwoSalvos_Max          = -1.0
     ShotsCountPerSalvo                = 3
@@ -84359,15 +84766,15 @@ Ammo_Canon_AP_VLVK_M3037_SWE is TAmmunitionDescriptor
         BaseHitValueModifiers =
         [
             (EBaseHitValueModifier/Base, 0),
-            (EBaseHitValueModifier/Idling, 45),
+            (EBaseHitValueModifier/Idling, 35),
             (EBaseHitValueModifier/Moving, 0),
             (EBaseHitValueModifier/Targeted, 0),
         ]
         DistanceToTarget = True
     )
     MaxSuccessiveHitCount             = 3
-    AimingTime                        = 3.0
-    TimeBetweenTwoSalvos              = 5.0
+    AimingTime                        = 2.8
+    TimeBetweenTwoSalvos              = 8.0
     TimeBetweenTwoSalvos_Min          = -1.0
     TimeBetweenTwoSalvos_Max          = -1.0
     ShotsCountPerSalvo                = 1
@@ -84426,15 +84833,15 @@ Ammo_Canon_HE_VLVK_M3037_SWE is TAmmunitionDescriptor
         BaseHitValueModifiers =
         [
             (EBaseHitValueModifier/Base, 0),
-            (EBaseHitValueModifier/Idling, 45),
+            (EBaseHitValueModifier/Idling, 35),
             (EBaseHitValueModifier/Moving, 0),
             (EBaseHitValueModifier/Targeted, 0),
         ]
         DistanceToTarget = True
     )
     MaxSuccessiveHitCount             = 3
-    AimingTime                        = 3.0
-    TimeBetweenTwoSalvos              = 5.0
+    AimingTime                        = 2.8
+    TimeBetweenTwoSalvos              = 8.0
     TimeBetweenTwoSalvos_Min          = -1.0
     TimeBetweenTwoSalvos_Max          = -1.0
     ShotsCountPerSalvo                = 1

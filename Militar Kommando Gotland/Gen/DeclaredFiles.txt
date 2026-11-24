@@ -5,6 +5,13 @@ ZZ:/Localisation/Generated/Gameplay/Unit/Names/NAMES_SWE-RU.dic
 ZZ:/Localisation/Generated/Gameplay/Unit/Names/NAMES_SWE-SC.dic
 ZZ:/Localisation/Generated/Gameplay/Unit/Names/NAMES_SWE-SPA.dic
 ZZ:/Localisation/Generated/Gameplay/Unit/Names/NAMES_SWE-US.dic
+ZZ:/Localisation/Localisation/Militar Kommando Gotland/INTERFACE_INGAME-FR.dic
+ZZ:/Localisation/Localisation/Militar Kommando Gotland/INTERFACE_INGAME-GER.dic
+ZZ:/Localisation/Localisation/Militar Kommando Gotland/INTERFACE_INGAME-POL.dic
+ZZ:/Localisation/Localisation/Militar Kommando Gotland/INTERFACE_INGAME-RU.dic
+ZZ:/Localisation/Localisation/Militar Kommando Gotland/INTERFACE_INGAME-SC.dic
+ZZ:/Localisation/Localisation/Militar Kommando Gotland/INTERFACE_INGAME-SPA.dic
+ZZ:/Localisation/Localisation/Militar Kommando Gotland/INTERFACE_INGAME-US.dic
 ZZ:/Localisation/Localisation/Militar Kommando Gotland/INTERFACE_OUTGAME-FR.dic
 ZZ:/Localisation/Localisation/Militar Kommando Gotland/INTERFACE_OUTGAME-GER.dic
 ZZ:/Localisation/Localisation/Militar Kommando Gotland/INTERFACE_OUTGAME-POL.dic

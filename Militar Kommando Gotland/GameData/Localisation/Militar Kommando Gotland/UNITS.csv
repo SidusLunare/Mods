@@ -2,12 +2,14 @@
 "MKG";"MILITÄRKOMMANDO GOTLAND"
 "CtrSWE";"Sweden"
 "DIRECT";"DIRECT FIRE"
+"RCL";"Recoilless Rifle"
 
 "LOREM1";"CALIBERS \/"
 
-"108mm";"108 mm"
 "75mm";"75 mm"
+"90mm";"90 mm"
 "105mm";"105 mm"
+"108mm";"108 mm"
 "152mm";"152 mm"
 
 "LOREM2";"UNIT NAMES \/"
@@ -22,18 +24,27 @@
 "STGBM42A";"StabsTgb m/42A"
 
 "LTGB934F";"Ltgb 934F"
-"TGBM42A";"Tgb m/42A"
+"TGBM42D";"Tgb m/42D SKPF"
 "PLTGB903";"Pltgb 903"
 "HJTRAKPTP";"Hjtrak 319V PTP"
 "PV444MP";"PV 444 MP"
 "TGB40TRA";"Tgb 40"
 "HKP4";"Hkp-4"
+"HKP5B";"HKP-5B"
 "Dtgb953b";"Dtgb 953B"
 
 "PLTGB903K";"Pltgb 903 Ksp"
+"PTgb1111";"Pvpj Terrängbil 1111"
+"PTgb9031";"Pvpj Terrängbil 9031 Spanning"
+"Strv102";"Stridsvagn 102"
+"CStrv102";"Stri-Stridsvagn 102"
+"Vkanm42";"Värnkanon m/42"
 
 "AK4";"Ak 4"
+"KSPM39";"Ksp m/39"
 "KSPM58";"Ksp M/58"
+"Pvpj1110";"Pansarvärnspjäs 1110"
+"Kanonm41";"kanon m/41"
 
 "LOREM3";"HOWITZER NAMES \/"
 

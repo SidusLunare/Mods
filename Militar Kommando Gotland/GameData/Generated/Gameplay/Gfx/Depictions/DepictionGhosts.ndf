@@ -6646,7 +6646,7 @@ unnamed GhostVehicleDepictionRegistration
 )
 unnamed GhostVehicleDepictionRegistration
 (
-    Alternatives = Alternatives_LandRover_CMD_nonBerlin_UK
+    Alternatives = Alternatives_Rover_101FC_UK
     BlackHoleKey = "Raptgb_9033_CMD_SWE"
     Selector = SpecificMechanicalDepictionSelector
 )
@@ -6678,6 +6678,18 @@ unnamed GhostVehicleDepictionRegistration
 (
     Alternatives = Alternatives_LandRover_M40_CYP
     BlackHoleKey = "LandRover_M40_CYP"
+    Selector = SpecificMechanicalDepictionSelector
+)
+unnamed GhostVehicleDepictionRegistration
+(
+    Alternatives = Alternatives_Munga_RCL_RFA
+    BlackHoleKey = "Pvpjtgb_1111_SWE"
+    Selector = SpecificMechanicalDepictionSelector
+)
+unnamed GhostVehicleDepictionRegistration
+(
+    Alternatives = Alternatives_GAZ_69_RCL_CUB
+    BlackHoleKey = "PvpjTgb_9031_SWE"
     Selector = SpecificMechanicalDepictionSelector
 )
 unnamed GhostVehicleDepictionRegistration
@@ -6754,7 +6766,7 @@ unnamed GhostVehicleDepictionRegistration
 )
 unnamed GhostVehicleDepictionRegistration
 (
-    Alternatives = Alternatives_LandRover_UK
+    Alternatives = Alternatives_Rover_101FC_UK
     BlackHoleKey = "Pltgb_903_SWE"
     Selector = SpecificMechanicalDepictionSelector
 )
@@ -8364,6 +8376,12 @@ unnamed GhostVehicleDepictionRegistration
 (
     Alternatives = Alternatives_M3A1_Stuart_COL
     BlackHoleKey = "M3A1_Stuart_COL"
+    Selector = SpecificMechanicalDepictionSelector
+)
+unnamed GhostVehicleDepictionRegistration
+(
+    Alternatives = Alternatives_M3A1_Stuart_COL
+    BlackHoleKey = "Varnkanon_m42_SWE"
     Selector = SpecificMechanicalDepictionSelector
 )
 unnamed GhostVehicleDepictionRegistration
@@ -10786,7 +10804,7 @@ unnamed GhostVehicleDepictionRegistration
 )
 unnamed GhostVehicleDepictionRegistration
 (
-    Alternatives = Alternatives_Saxon_CMD_UK
+    Alternatives = Alternatives_YP_408_APC_NL
     BlackHoleKey = "StabsTgb_m42A_CMD_SWE"
     Selector = SpecificMechanicalDepictionSelector
 )
@@ -10798,8 +10816,8 @@ unnamed GhostVehicleDepictionRegistration
 )
 unnamed GhostVehicleDepictionRegistration
 (
-    Alternatives = Alternatives_Saxon_UK
-    BlackHoleKey = "Tgb_m42A_trans_SWE"
+    Alternatives = Alternatives_YP_408_APC_NL
+    BlackHoleKey = "Tgb_m42D_trans_SWE"
     Selector = SpecificMechanicalDepictionSelector
 )
 unnamed GhostVehicleDepictionRegistration
@@ -12658,7 +12676,7 @@ unnamed GhostVehicleDepictionRegistration
 )
 unnamed GhostVehicleDepictionRegistration
 (
-    Alternatives = Alternatives_VLTT_P4_Gendarmerie_FR
+    Alternatives = Alternatives_Kubelwagen_181_MP_RFA
     BlackHoleKey = "PV444_MP_SWE"
     Selector = SpecificMechanicalDepictionSelector
 )
@@ -13277,6 +13295,12 @@ unnamed GhostAerialDepictionRegistration
 unnamed GhostAerialDepictionRegistration
 (
     Alternatives = Alternatives_Alouette_II_reco_BEL
+    BlackHoleKey = "HKP_5B_SWE"
+    Selector = SpecificMechanicalDepictionSelector
+)
+unnamed GhostAerialDepictionRegistration
+(
+    Alternatives = Alternatives_Alouette_II_reco_BEL
     BlackHoleKey = "Alouette_II_reco_BEL"
     Selector = SpecificMechanicalDepictionSelector
 )
@@ -13408,7 +13432,7 @@ unnamed GhostAerialDepictionRegistration
 )
 unnamed GhostAerialDepictionRegistration
 (
-    Alternatives = Alternatives_CH47_Chinook_UK
+    Alternatives = Alternatives_CH46E_SeaKnight_trans_US
     BlackHoleKey = "HKP_4_SWE"
     Selector = SpecificMechanicalDepictionSelector
 )

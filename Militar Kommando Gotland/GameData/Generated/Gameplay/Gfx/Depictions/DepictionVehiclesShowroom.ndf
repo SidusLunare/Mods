@@ -9987,7 +9987,7 @@ unnamed ShowroomVehicleDepictionRegistration
 unnamed ShowroomVehicleDepictionRegistration
 (
     BlackHoleKey = "showroom_Raptgb_9033_CMD_SWE"
-    Alternatives = Alternatives_LandRover_CMD_nonBerlin_UK
+    Alternatives = Alternatives_Rover_101FC_UK
     SubDepictions = HumanSubDepictionsShowroom_Raptgb_9033_CMD_SWE
 )
 unnamed ShowroomVehicleDepictionRegistration
@@ -10045,6 +10045,12 @@ unnamed ShowroomVehicleDepictionRegistration
             )
         ),
     ]
+)
+unnamed ShowroomVehicleDepictionRegistration
+(
+    BlackHoleKey = "showroom_PvpjTgb_9031_SWE"
+    Alternatives = Alternatives_GAZ_69_RCL_CUB
+    SubDepictions = HumanSubDepictionsShowroom_PvpjTgb_9031_SWE
 )
 unnamed ShowroomVehicleDepictionRegistration
 (
@@ -10147,7 +10153,7 @@ unnamed ShowroomVehicleDepictionRegistration
 unnamed ShowroomVehicleDepictionRegistration
 (
     BlackHoleKey = "showroom_Pltgb_903_SWE"
-    Alternatives = Alternatives_LandRover_UK
+    Alternatives = Alternatives_Rover_101FC_UK
     SubDepictions = HumanSubDepictionsShowroom_Pltgb_903_SWE
 )
 unnamed ShowroomVehicleDepictionRegistration
@@ -13277,6 +13283,12 @@ unnamed ShowroomVehicleDepictionRegistration
 )
 unnamed ShowroomVehicleDepictionRegistration
 (
+    BlackHoleKey = "showroom_Pvpjtgb_1111_SWE"
+    Alternatives = Alternatives_Munga_RCL_RFA
+    SubDepictions = HumanSubDepictionsShowroom_Pvpjtgb_1111_SWE
+)
+unnamed ShowroomVehicleDepictionRegistration
+(
     BlackHoleKey = "showroom_M38A1_RCL_SWI"
     Alternatives = Alternatives_M38A1_RCL_SWI
     SubDepictions = HumanSubDepictionsShowroom_M38A1_RCL_SWI
@@ -13337,6 +13349,11 @@ unnamed ShowroomVehicleDepictionRegistration
 unnamed ShowroomVehicleDepictionRegistration
 (
     BlackHoleKey = "showroom_M3A1_Stuart_COL"
+    Alternatives = Alternatives_M3A1_Stuart_COL
+)
+unnamed ShowroomVehicleDepictionRegistration
+(
+    BlackHoleKey = "showroom_Varnkanon_m42_SWE"
     Alternatives = Alternatives_M3A1_Stuart_COL
 )
 unnamed ShowroomVehicleDepictionRegistration
@@ -17512,7 +17529,7 @@ unnamed ShowroomVehicleDepictionRegistration
 unnamed ShowroomVehicleDepictionRegistration
 (
     BlackHoleKey = "showroom_StabsTgb_m42A_CMD_SWE"
-    Alternatives = Alternatives_Saxon_CMD_UK
+    Alternatives = Alternatives_YP_408_CMD_NL
     Operators = 
     [
         DepictionOperator_Reset_Generic,
@@ -17541,8 +17558,8 @@ unnamed ShowroomVehicleDepictionRegistration
 )
 unnamed ShowroomVehicleDepictionRegistration
 (
-    BlackHoleKey = "showroom_Tgb_m42A_trans_SWE"
-    Alternatives = Alternatives_Saxon_UK
+    BlackHoleKey = "showroom_Tgb_m42D_trans_SWE"
+    Alternatives = Alternatives_YP_408_APC_NL
     Operators = 
     [
         DepictionOperator_Reset_Generic,
@@ -20890,7 +20907,7 @@ unnamed ShowroomVehicleDepictionRegistration
 unnamed ShowroomVehicleDepictionRegistration
 (
     BlackHoleKey = "showroom_PV444_MP_SWE"
-    Alternatives = Alternatives_VLTT_P4_Gendarmerie_FR
+    Alternatives = Alternatives_Kubelwagen_181_MP_RFA
     SubDepictions = HumanSubDepictionsShowroom_PV444_MP_SWE
 )
 unnamed ShowroomVehicleDepictionRegistration
