@@ -211,6 +211,24 @@ export MeshDescriptor_Driver_COL_LOW is TResourceMesh
     Mesh=US_GI_1_LOW
 )
 //--------------------------------------------------------------------------------------------------------------------
+export MeshDescriptor_Driver_SWI is TResourceMesh
+(
+    Mesh=SWI_Grenadier_NCO
+)
+export MeshDescriptor_Driver_SWI_LOW is TResourceMesh
+(
+    Mesh=US_GI_1_LOW
+)
+//--------------------------------------------------------------------------------------------------------------------
+export MeshDescriptor_Driver_ALB is TResourceMesh
+(
+    Mesh=ALB_Soldier_NCO
+)
+export MeshDescriptor_Driver_ALB_LOW is TResourceMesh
+(
+    Mesh=US_GI_1_LOW
+)
+//--------------------------------------------------------------------------------------------------------------------
 //Pilotes AVIONS
 //--------------------------------------------------------------------------------------------------------------------
 export MeshDescriptor_Pilote_US      is TResourceMesh( Mesh="GameData:/Assets/3D/Units/US/Infanterie/USAF_Pilot/USAF_Pilot.fbx" )
@@ -914,6 +932,40 @@ export MeshDescriptor_Servant_G_COL_LOW is TResourceMesh
 export MeshDescriptor_Servant_D_COL_LOW is TResourceMesh
 (
     Mesh="GameData:/Assets/3D/Units/COL/Infanterie/COL_Rifle/COL_Rifle_3.fbx"
+)
+//--------------------------------------------------------------------------------------------------------------------
+export MeshDescriptor_Servant_G_SWI is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/SWI/Infanterie/SWI_Grenadier/SWI_Grenadier_1.fbx"
+)
+export MeshDescriptor_Servant_D_SWI is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/SWI/Infanterie/SWI_Grenadier/SWI_Grenadier_NCO.fbx"
+)
+export MeshDescriptor_Servant_G_SWI_LOW is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/SWI/Infanterie/SWI_Grenadier/SWI_Grenadier_1.fbx"
+)
+export MeshDescriptor_Servant_D_SWI_LOW is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/SWI/Infanterie/SWI_Grenadier/SWI_Grenadier_NCO.fbx"
+)
+//--------------------------------------------------------------------------------------------------------------------
+export MeshDescriptor_Servant_G_ALB is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/ALB/Infanterie/ALB_Soldier/ALB_Soldier_1.fbx"
+)
+export MeshDescriptor_Servant_D_ALB is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/ALB/Infanterie/ALB_Soldier/ALB_Soldier_NCO.fbx"
+)
+export MeshDescriptor_Servant_G_ALB_LOW is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/ALB/Infanterie/ALB_Soldier/ALB_Soldier_1.fbx"
+)
+export MeshDescriptor_Servant_D_ALB_LOW is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/ALB/Infanterie/ALB_Soldier/ALB_Soldier_NCO.fbx"
 )
 //--------------------------------------------------------------------------------------------------------------------
 export MeshDescriptor_Servant_D_vz60_TCH is TResourceMesh

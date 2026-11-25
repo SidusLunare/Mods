@@ -39,6 +39,8 @@ export Modele_Missile_RBS70   is TResourceMesh( Mesh="GameData:/Assets/3D/Ammo/M
 export Modele_Missile_LAR_160mm   is TResourceMesh( Mesh="GameData:/Assets/3D/Ammo/Roquettes/VEN/LAR_160mm/LAR_160mm.fbx" )
 //--emports ALB---------------------------------------------------------------------------------------------------
 export Modele_Missile_3000_2_BOMB   is TResourceMesh( Mesh="GameData:/Assets/3D/Ammo/Bombes/ALB/3000_2_BOMB/3000_2_BOMB.fbx" )
+export Modele_Missile_HJ8   is TResourceMesh( Mesh="GameData:/Assets/3D/Ammo/Missiles/ALB/Missile_HJ8/Missile_HJ8.fbx" )
+export Modele_Missile_Type63_107mm   is TResourceMesh( Mesh="GameData:/Assets/3D/Ammo/Roquettes/ALB/Rocket_Type63/Rocket_Type63.fbx" )
 //--emports OST---------------------------------------------------------------------------------------------------
 export Modele_Missile_SRAK_m55_75mm   is TResourceMesh( Mesh="GameData:/Assets/3D/Ammo/Roquettes/OST/SRAK_m55_75mm/SRAK_m55_75mm.fbx" )
 //--emports SWI---------------------------------------------------------------------------------------------------

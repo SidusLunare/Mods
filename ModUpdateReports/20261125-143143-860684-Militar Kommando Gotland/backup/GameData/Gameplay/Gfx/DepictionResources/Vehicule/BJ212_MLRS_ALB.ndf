@@ -1,0 +1,14 @@
+export Modele_BJ212_MLRS_ALB is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/DDR/Artillerie/BM21_Grad/BM21_Grad.fbx"
+)
+
+export Modele_BJ212_MLRS_ALB_MID is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/DDR/Artillerie/BM21_Grad_MID/BM21_Grad_MID.fbx"
+)
+
+export Modele_BJ212_MLRS_ALB_LOW is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/DDR/Artillerie/BM21_Grad_LOW/BM21_Grad_LOW.fbx"
+)

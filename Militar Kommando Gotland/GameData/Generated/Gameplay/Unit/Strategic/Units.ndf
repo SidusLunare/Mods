@@ -149591,7 +149591,7 @@ export Descriptor_Unit_pion_SOV_7MSBr_20 is TEntityDescriptor
         (
             CanBeInitialTarget = True
             HasZoneOfControl = True
-            BattleRole = ~/EStrategicBattleRole/AuxiliarySupport
+            BattleRole = ~/EStrategicBattleRole/Fighter
         ),
         TVisibilityModuleDescriptor
         (
@@ -149686,7 +149686,7 @@ export Descriptor_Unit_pion_SOV_7MSBr_3 is TEntityDescriptor
         (
             CanBeInitialTarget = True
             HasZoneOfControl = True
-            BattleRole = ~/EStrategicBattleRole/AuxiliarySupport
+            BattleRole = ~/EStrategicBattleRole/Fighter
         ),
         TVisibilityModuleDescriptor
         (
@@ -149781,7 +149781,7 @@ export Descriptor_Unit_pion_SOV_7MSBr_4 is TEntityDescriptor
         (
             CanBeInitialTarget = True
             HasZoneOfControl = True
-            BattleRole = ~/EStrategicBattleRole/AuxiliarySupport
+            BattleRole = ~/EStrategicBattleRole/Fighter
         ),
         TVisibilityModuleDescriptor
         (

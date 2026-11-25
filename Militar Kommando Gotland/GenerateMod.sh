@@ -17,21 +17,30 @@ export STEAM_COMPAT_CLIENT_INSTALL_PATH="$STEAM_ROOT"
 export STEAM_COMPAT_INSTALL_PATH="$GAME_ROOT"
 export SteamAppId=1611600 SteamGameId=1611600
 
+CONFIG_BACKUP_DIR="$(mktemp -d)"
+CONFIG_BACKUP=""
+HAD_PROTON_CONFIG=0
 if [[ -f "$PROTON_MOD/Config.ini" ]]; then
-	CONFIG_BACKUP_DIR="$(mktemp -d)"
+	HAD_PROTON_CONFIG=1
 	cp -p -- "$PROTON_MOD/Config.ini" "$CONFIG_BACKUP_DIR/Config.ini"
-	restore_config() {
-		cp -p -- "$CONFIG_BACKUP_DIR/Config.ini" "$PROTON_MOD/Config.ini"
-		rm -f -- "$CONFIG_BACKUP_DIR/Config.ini"
-		rmdir -- "$CONFIG_BACKUP_DIR"
-	}
-	trap restore_config EXIT
+	CONFIG_BACKUP="$CONFIG_BACKUP_DIR/Config.ini"
+elif [[ -f "$GENERATED_MOD/Config.ini" ]]; then
+	cp -p -- "$GENERATED_MOD/Config.ini" "$CONFIG_BACKUP_DIR/Config.ini"
+	CONFIG_BACKUP="$CONFIG_BACKUP_DIR/Config.ini"
 fi
+restore_config() {
+	if [[ "$HAD_PROTON_CONFIG" == 1 ]]; then
+		cp -p -- "$CONFIG_BACKUP" "$PROTON_MOD/Config.ini"
+	fi
+	rm -f -- "$CONFIG_BACKUP_DIR/Config.ini"
+	rmdir -- "$CONFIG_BACKUP_DIR"
+}
+trap restore_config EXIT
 
 python3 "$MOD_DIR/../Utils/Scripts/GenerateMod.py" WARNO "$MOD_NAME"
 
-if [[ ! -d "$GENERATED_MOD" || ! -f "$GENERATED_MOD/Config.ini" ]]; then
-	printf 'Generated mod data or its per-mod Config.ini is missing.\n' >&2
+if [[ ! -d "$GENERATED_MOD" || ! -f "$PROTON_MOD/Config.ini" ]]; then
+	printf 'Generated mod data or the game-generated Proton Config.ini is missing.\n' >&2
 	exit 1
 fi
 
@@ -41,9 +50,7 @@ for item in "$GENERATED_MOD"/*; do
 	[[ "${item##*/}" == Config.ini ]] && continue
 	cp -a -- "$item" "$PROTON_MOD/"
 done
-cp -an -- "$GENERATED_MOD/Config.ini" "$PROTON_MOD/Config.ini"
-
-if [[ ! -f "$PROTON_MOD/Config.ini" ]]; then
-	printf 'Per-mod Config.ini was not copied to the Proton mod folder.\n' >&2
-	exit 1
-fi
+python3 "$MOD_DIR/../Utils/Scripts/UpdateGeneratedConfig.py" "$PROTON_MOD/Config.ini" "$GENERATED_MOD/Config.ini" "$CONFIG_BACKUP" "$MOD_DIR/Gen/DataPackerConfig.ndf"
+trap - EXIT
+rm -f -- "$CONFIG_BACKUP_DIR/Config.ini"
+rmdir -- "$CONFIG_BACKUP_DIR"

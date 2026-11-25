@@ -6216,6 +6216,12 @@ Descriptor_Deck_Pack_GIGN_FR_Super_Puma_FR_2_1 is DeckPackDescriptor
     Number = 1
 )
 
+Descriptor_Deck_Pack_Gama_Goat_supply_US_0_1 is DeckPackDescriptor
+(
+    Unit = $/GFX/Unit/Descriptor_Unit_Gama_Goat_supply_US
+    Number = 1
+)
+
 Descriptor_Deck_Pack_Gama_Goat_supply_US_1_1 is DeckPackDescriptor
 (
     Xp = 1

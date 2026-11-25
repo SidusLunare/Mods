@@ -12,8 +12,10 @@ export InGameHUDResource is TUISpecificInGameHUDResource
     TurnOffWeaponsMapping      = $/KeyboardOption/Mapping_TurnOffWeapons
     DisplayAllOrdersMapping    = $/KeyboardOption/Mapping_DisplayAllOrders
 
-    HideInterfaceMapping       = $/KeyboardOption/Mapping_HideInterface
-    InterfaceLayersToHide      = ~/InterfaceLayers
+    VideoModeValue                  = $/M3D/Scene/ShootVideoMode
+    HideInterfaceEscaperInputLayer  = $/M3D/Input/UserInputLayerHandler/InputLayer_HideInterfaceEscaper
+    HideInterfaceMapping            = $/KeyboardOption/Mapping_HideInterface
+    InterfaceLayersToHide           = ~/InterfaceLayers
 
     OrderDisplayResources                   = ~/UIOrderDisplayResources
 

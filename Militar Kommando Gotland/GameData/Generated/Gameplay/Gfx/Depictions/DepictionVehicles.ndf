@@ -5412,54 +5412,6 @@ unnamed TacticVehicleDepictionRegistration
 
     SubDepictionGenerators = [ TransportedInfantrySubGenerator(Mesh = $/GFX/DepictionResources/Modele_AMX_13_VCI_20mm_FR) ]
 )
-// Dépiction de l'unité AMX_13_VCI_FAO_CYP
-DepictionOperator_AMX_13_VCI_FAO_CYP_Weapon1 is DepictionOperator_WeaponContinuousFire
-(
-    FireEffectTag = "weapon_effet_tag1"
-    Anchors = ["fx_tourelle1_tir_01"]
-    WeaponShootDataPropertyName = "WeaponShootData_0_1"
-    WeaponActiveAndCanShootPropertyName = "WeaponActiveAndCanShoot_1"
-    NbFX = 1
-)
-DepictionOperator_AMX_13_VCI_FAO_CYP_Weapon5 is DepictionOperator_WeaponInstantFire
-(
-    FireEffectTag = "weapon_effet_tag5"
-    Anchors = ["fx_tourelle5_tir_01", "fx_tourelle5_tir_02"]
-    WeaponShootDataPropertyName = ['WeaponShootData_0_5', 'WeaponShootData_1_5', 'WeaponShootData_2_5', 'WeaponShootData_3_5']
-    NbProj = 4
-)
-unnamed TacticVehicleDepictionRegistration
-(
-    BlackHoleKey = 'AMX_13_VCI_FAO_CYP'
-    Selector = SpecificMechanicalDepictionSelector
-    Alternatives = Alternatives_AMX_13_VCI_FAO_CYP
-
-    Operators = 
-    [
-        DepictionOperator_CropFlattening,
-        $/GFX/Sound/DepictionOperator_MovementSound_SM_AMX_10,
-        DepictionOperator_SoundProbe,
-        DepictionOperator_CriticalEffects,
-        DepictionOperator_Chassis_MediumTank_AutoCanon,
-        DepictionOperator_Propulsion_ContinuousTrack,
-        DepictionOperator_MovementFX_Standard,
-        DepictionOperator_Turret_1_Aim,
-        $/GFX/Sound/DepictionOperator_TurretSound_ST_Luchs,
-        DepictionOperator_Turret_1_HydraulicRecoil_AutoCannon,
-        DepictionOperator_AMX_13_VCI_FAO_CYP_Weapon1,
-        DepictionOperator_AMX_13_VCI_FAO_CYP_Weapon5,
-        DepictionOperator_Heat,
-        DepictionOperator_EjectableProps_Vehicle,
-    ]
-
-    Actions = MAP[
-                ( "weapon_effet_tag1", Weapon_MMG_AANF1_7_62mm ),
-                ( "weapon_effet_tag5", Weapon_SMOKE_Vehicle_Grenadex8 ),
-            ]
-            + DepictionAction_Stress_And_Wrecked
-            + DepictionAction_MovementFX_Tracked
-            + DepictionAction_CriticalFX_Tank
-)
 // Dépiction de l'unité AMX_13_VCI_supply_CYP
 unnamed TacticVehicleDepictionRegistration
 (
@@ -9358,8 +9310,8 @@ unnamed TacticVehicleDepictionRegistration
     ]
 
     Actions = MAP[
-                ( "weapon_effet_tag1", Weapon_Canon_AP_85mm_D44 ),
-                ( "weapon_effet_tag2", Weapon_Canon_HE_85mm_D44 ),
+                ( "weapon_effet_tag1", Weapon_Canon_AP_85mm_Type56_APFSDS ),
+                ( "weapon_effet_tag2", Weapon_Canon_HE_85mm_Type56_APFSDS ),
             ]
             + DepictionAction_CriticalFX_Towed
 
@@ -9629,6 +9581,41 @@ unnamed TacticVehicleDepictionRegistration
     SubDepictions = [
     ] + HumanSubDepictions_AT_vz59_RCL_Vysadkar_TCH
 )
+// Dépiction de l'unité ATteam_Bantam_SWI
+DepictionOperator_ATteam_Bantam_SWI_Weapon1 is DepictionOperator_WeaponMissileCarriageFire
+(
+    FireEffectTag = "weapon_effet_tag1"
+    Connoisseur = MissileCarriage_ATteam_Bantam_SWI
+    WeaponIndex = 1
+    WeaponShootDataPropertyName = ['WeaponShootData_0_1']
+    NbProj = 1
+)
+unnamed TacticVehicleDepictionRegistration
+(
+    BlackHoleKey = 'ATteam_Bantam_SWI'
+    Selector = SpecificMechanicalDepictionSelector
+    Alternatives = Alternatives_ATteam_Bantam_SWI
+
+    Operators = 
+    [
+        DepictionOperator_CropFlattening,
+        $/GFX/Sound/DepictionOperator_MovementSound_SM_Infanterie_GER,
+        DepictionOperator_SoundProbe,
+        DepictionOperator_CriticalEffects,
+        DepictionOperator_Turret_1_Aim,
+        DepictionOperator_ATteam_Bantam_SWI_Weapon1,
+        DepictionOperator_Carriable_ATGM_Immediat,
+        DepictionOperator_EjectableProps_Vehicle,
+    ]
+
+    Actions = MAP[
+                ( "weapon_effet_tag1", Weapon_ATGM_Bantam ),
+            ]
+            + DepictionAction_CriticalFX_ATGM
+
+    SubDepictions = [
+    ] + HumanSubDepictions_ATteam_Bantam_SWI
+)
 // Dépiction de l'unité ATteam_Fagot_Cuba_SOV
 DepictionOperator_ATteam_Fagot_Cuba_SOV_Weapon1 is DepictionOperator_WeaponMissileCarriageFire
 (
@@ -9844,6 +9831,41 @@ unnamed TacticVehicleDepictionRegistration
 
     SubDepictions = [
     ] + HumanSubDepictions_ATteam_Fagot_TCH
+)
+// Dépiction de l'unité ATteam_HJ73_ALB
+DepictionOperator_ATteam_HJ73_ALB_Weapon1 is DepictionOperator_WeaponMissileCarriageFire
+(
+    FireEffectTag = "weapon_effet_tag1"
+    Connoisseur = MissileCarriage_ATteam_HJ73_ALB
+    WeaponIndex = 1
+    WeaponShootDataPropertyName = ['WeaponShootData_0_1']
+    NbProj = 1
+)
+unnamed TacticVehicleDepictionRegistration
+(
+    BlackHoleKey = 'ATteam_HJ73_ALB'
+    Selector = SpecificMechanicalDepictionSelector
+    Alternatives = Alternatives_ATteam_HJ73_ALB
+
+    Operators = 
+    [
+        DepictionOperator_CropFlattening,
+        $/GFX/Sound/DepictionOperator_MovementSound_SM_Infanterie_SOVIET,
+        DepictionOperator_SoundProbe,
+        DepictionOperator_CriticalEffects,
+        DepictionOperator_Turret_1_Aim,
+        DepictionOperator_ATteam_HJ73_ALB_Weapon1,
+        DepictionOperator_Carriable_ATGM_Immediat,
+        DepictionOperator_EjectableProps_Vehicle,
+    ]
+
+    Actions = MAP[
+                ( "weapon_effet_tag1", Weapon_ATGM_HJ73 ),
+            ]
+            + DepictionAction_CriticalFX_ATGM
+
+    SubDepictions = [
+    ] + HumanSubDepictions_ATteam_HJ73_ALB
 )
 // Dépiction de l'unité ATteam_HJ8_ALB
 DepictionOperator_ATteam_HJ8_ALB_Weapon1 is DepictionOperator_WeaponMissileCarriageFire
@@ -10276,6 +10298,251 @@ unnamed TacticVehicleDepictionRegistration
 
     SubDepictions = [
     ] + HumanSubDepictions_ATteam_Konkurs_TTsko_SOV
+)
+// Dépiction de l'unité ATteam_Malyutka_CUB
+DepictionOperator_ATteam_Malyutka_CUB_Weapon1 is DepictionOperator_WeaponMissileCarriageFire
+(
+    FireEffectTag = "weapon_effet_tag1"
+    Connoisseur = MissileCarriage_ATteam_Malyutka_CUB
+    WeaponIndex = 1
+    WeaponShootDataPropertyName = ['WeaponShootData_0_1']
+    NbProj = 1
+)
+unnamed TacticVehicleDepictionRegistration
+(
+    BlackHoleKey = 'ATteam_Malyutka_CUB'
+    Selector = SpecificMechanicalDepictionSelector
+    Alternatives = Alternatives_ATteam_Malyutka_CUB
+
+    Operators = 
+    [
+        DepictionOperator_CropFlattening,
+        $/GFX/Sound/DepictionOperator_MovementSound_SM_Infanterie_SOVIET,
+        DepictionOperator_SoundProbe,
+        DepictionOperator_CriticalEffects,
+        DepictionOperator_Turret_1_Aim,
+        DepictionOperator_ATteam_Malyutka_CUB_Weapon1,
+        DepictionOperator_Carriable_ATGM_Immediat,
+        DepictionOperator_EjectableProps_Vehicle,
+    ]
+
+    Actions = MAP[
+                ( "weapon_effet_tag1", Weapon_ATGM_9M14_MalyutkaM1 ),
+            ]
+            + DepictionAction_CriticalFX_ATGM
+
+    SubDepictions = [
+    ] + HumanSubDepictions_ATteam_Malyutka_CUB
+)
+// Dépiction de l'unité ATteam_Malyutka_DDR
+DepictionOperator_ATteam_Malyutka_DDR_Weapon1 is DepictionOperator_WeaponMissileCarriageFire
+(
+    FireEffectTag = "weapon_effet_tag1"
+    Connoisseur = MissileCarriage_ATteam_Malyutka_DDR
+    WeaponIndex = 1
+    WeaponShootDataPropertyName = ['WeaponShootData_0_1']
+    NbProj = 1
+)
+unnamed TacticVehicleDepictionRegistration
+(
+    BlackHoleKey = 'ATteam_Malyutka_DDR'
+    Selector = SpecificMechanicalDepictionSelector
+    Alternatives = Alternatives_ATteam_Malyutka_DDR
+
+    Operators = 
+    [
+        DepictionOperator_CropFlattening,
+        $/GFX/Sound/DepictionOperator_MovementSound_SM_Infanterie_GER,
+        DepictionOperator_SoundProbe,
+        DepictionOperator_CriticalEffects,
+        DepictionOperator_Turret_1_Aim,
+        DepictionOperator_ATteam_Malyutka_DDR_Weapon1,
+        DepictionOperator_Carriable_ATGM_Immediat,
+        DepictionOperator_EjectableProps_Vehicle,
+    ]
+
+    Actions = MAP[
+                ( "weapon_effet_tag1", Weapon_ATGM_9M14_MalyutkaM1 ),
+            ]
+            + DepictionAction_CriticalFX_ATGM
+
+    SubDepictions = [
+    ] + HumanSubDepictions_ATteam_Malyutka_DDR
+)
+// Dépiction de l'unité ATteam_Malyutka_POL
+DepictionOperator_ATteam_Malyutka_POL_Weapon1 is DepictionOperator_WeaponMissileCarriageFire
+(
+    FireEffectTag = "weapon_effet_tag1"
+    Connoisseur = MissileCarriage_ATteam_Malyutka_POL
+    WeaponIndex = 1
+    WeaponShootDataPropertyName = ['WeaponShootData_0_1']
+    NbProj = 1
+)
+unnamed TacticVehicleDepictionRegistration
+(
+    BlackHoleKey = 'ATteam_Malyutka_POL'
+    Selector = SpecificMechanicalDepictionSelector
+    Alternatives = Alternatives_ATteam_Malyutka_POL
+
+    Operators = 
+    [
+        DepictionOperator_CropFlattening,
+        $/GFX/Sound/DepictionOperator_MovementSound_SM_Infanterie_POL,
+        DepictionOperator_SoundProbe,
+        DepictionOperator_CriticalEffects,
+        DepictionOperator_Turret_1_Aim,
+        DepictionOperator_ATteam_Malyutka_POL_Weapon1,
+        DepictionOperator_Carriable_ATGM_Immediat,
+        DepictionOperator_EjectableProps_Vehicle,
+    ]
+
+    Actions = MAP[
+                ( "weapon_effet_tag1", Weapon_ATGM_9M14_MalyutkaM1 ),
+            ]
+            + DepictionAction_CriticalFX_ATGM
+
+    SubDepictions = [
+    ] + HumanSubDepictions_ATteam_Malyutka_POL
+)
+// Dépiction de l'unité ATteam_Malyutka_Para_POL
+DepictionOperator_ATteam_Malyutka_Para_POL_Weapon1 is DepictionOperator_WeaponMissileCarriageFire
+(
+    FireEffectTag = "weapon_effet_tag1"
+    Connoisseur = MissileCarriage_ATteam_Malyutka_Para_POL
+    WeaponIndex = 1
+    WeaponShootDataPropertyName = ['WeaponShootData_0_1']
+    NbProj = 1
+)
+unnamed TacticVehicleDepictionRegistration
+(
+    BlackHoleKey = 'ATteam_Malyutka_Para_POL'
+    Selector = SpecificMechanicalDepictionSelector
+    Alternatives = Alternatives_ATteam_Malyutka_Para_POL
+
+    Operators = 
+    [
+        DepictionOperator_CropFlattening,
+        $/GFX/Sound/DepictionOperator_MovementSound_SM_Infanterie_POL,
+        DepictionOperator_SoundProbe,
+        DepictionOperator_CriticalEffects,
+        DepictionOperator_Turret_1_Aim,
+        DepictionOperator_ATteam_Malyutka_Para_POL_Weapon1,
+        DepictionOperator_Carriable_ATGM_Immediat,
+        DepictionOperator_EjectableProps_Vehicle,
+    ]
+
+    Actions = MAP[
+                ( "weapon_effet_tag1", Weapon_ATGM_9M14_MalyutkaM1 ),
+            ]
+            + DepictionAction_CriticalFX_ATGM
+
+    SubDepictions = [
+    ] + HumanSubDepictions_ATteam_Malyutka_Para_POL
+)
+// Dépiction de l'unité ATteam_Malyutka_Reserve_SOV
+DepictionOperator_ATteam_Malyutka_Reserve_SOV_Weapon1 is DepictionOperator_WeaponMissileCarriageFire
+(
+    FireEffectTag = "weapon_effet_tag1"
+    Connoisseur = MissileCarriage_ATteam_Malyutka_Reserve_SOV
+    WeaponIndex = 1
+    WeaponShootDataPropertyName = ['WeaponShootData_0_1']
+    NbProj = 1
+)
+unnamed TacticVehicleDepictionRegistration
+(
+    BlackHoleKey = 'ATteam_Malyutka_Reserve_SOV'
+    Selector = SpecificMechanicalDepictionSelector
+    Alternatives = Alternatives_ATteam_Malyutka_Reserve_SOV
+
+    Operators = 
+    [
+        DepictionOperator_CropFlattening,
+        $/GFX/Sound/DepictionOperator_MovementSound_SM_Infanterie_SOVIET,
+        DepictionOperator_SoundProbe,
+        DepictionOperator_CriticalEffects,
+        DepictionOperator_Turret_1_Aim,
+        DepictionOperator_ATteam_Malyutka_Reserve_SOV_Weapon1,
+        DepictionOperator_Carriable_ATGM_Immediat,
+        DepictionOperator_EjectableProps_Vehicle,
+    ]
+
+    Actions = MAP[
+                ( "weapon_effet_tag1", Weapon_ATGM_9M14_MalyutkaM1 ),
+            ]
+            + DepictionAction_CriticalFX_ATGM
+
+    SubDepictions = [
+    ] + HumanSubDepictions_ATteam_Malyutka_Reserve_SOV
+)
+// Dépiction de l'unité ATteam_Malyutka_SOV
+DepictionOperator_ATteam_Malyutka_SOV_Weapon1 is DepictionOperator_WeaponMissileCarriageFire
+(
+    FireEffectTag = "weapon_effet_tag1"
+    Connoisseur = MissileCarriage_ATteam_Malyutka_SOV
+    WeaponIndex = 1
+    WeaponShootDataPropertyName = ['WeaponShootData_0_1']
+    NbProj = 1
+)
+unnamed TacticVehicleDepictionRegistration
+(
+    BlackHoleKey = 'ATteam_Malyutka_SOV'
+    Selector = SpecificMechanicalDepictionSelector
+    Alternatives = Alternatives_ATteam_Malyutka_SOV
+
+    Operators = 
+    [
+        DepictionOperator_CropFlattening,
+        $/GFX/Sound/DepictionOperator_MovementSound_SM_Infanterie_SOVIET,
+        DepictionOperator_SoundProbe,
+        DepictionOperator_CriticalEffects,
+        DepictionOperator_Turret_1_Aim,
+        DepictionOperator_ATteam_Malyutka_SOV_Weapon1,
+        DepictionOperator_Carriable_ATGM_Immediat,
+        DepictionOperator_EjectableProps_Vehicle,
+    ]
+
+    Actions = MAP[
+                ( "weapon_effet_tag1", Weapon_ATGM_9M14_MalyutkaM1 ),
+            ]
+            + DepictionAction_CriticalFX_ATGM
+
+    SubDepictions = [
+    ] + HumanSubDepictions_ATteam_Malyutka_SOV
+)
+// Dépiction de l'unité ATteam_Malyutka_TCH
+DepictionOperator_ATteam_Malyutka_TCH_Weapon1 is DepictionOperator_WeaponMissileCarriageFire
+(
+    FireEffectTag = "weapon_effet_tag1"
+    Connoisseur = MissileCarriage_ATteam_Malyutka_TCH
+    WeaponIndex = 1
+    WeaponShootDataPropertyName = ['WeaponShootData_0_1']
+    NbProj = 1
+)
+unnamed TacticVehicleDepictionRegistration
+(
+    BlackHoleKey = 'ATteam_Malyutka_TCH'
+    Selector = SpecificMechanicalDepictionSelector
+    Alternatives = Alternatives_ATteam_Malyutka_TCH
+
+    Operators = 
+    [
+        DepictionOperator_CropFlattening,
+        $/GFX/Sound/DepictionOperator_MovementSound_SM_Infanterie_SOVIET,
+        DepictionOperator_SoundProbe,
+        DepictionOperator_CriticalEffects,
+        DepictionOperator_Turret_1_Aim,
+        DepictionOperator_ATteam_Malyutka_TCH_Weapon1,
+        DepictionOperator_Carriable_ATGM_Immediat,
+        DepictionOperator_EjectableProps_Vehicle,
+    ]
+
+    Actions = MAP[
+                ( "weapon_effet_tag1", Weapon_ATGM_9M14_MalyutkaM1 ),
+            ]
+            + DepictionAction_CriticalFX_ATGM
+
+    SubDepictions = [
+    ] + HumanSubDepictions_ATteam_Malyutka_TCH
 )
 // Dépiction de l'unité ATteam_Milan_1_BEL
 DepictionOperator_ATteam_Milan_1_BEL_Weapon1 is DepictionOperator_WeaponMissileCarriageFire
@@ -14740,7 +15007,7 @@ unnamed TacticVehicleDepictionRegistration
     Operators = 
     [
         DepictionOperator_CropFlattening,
-        $/GFX/Sound/DepictionOperator_MovementSound_SM_P4,
+        $/GFX/Sound/DepictionOperator_MovementSound_SM_UAZ,
         DepictionOperator_SoundProbe,
         DepictionOperator_CriticalEffects,
         DepictionOperator_Chassis_Vehicle,
@@ -14968,7 +15235,7 @@ unnamed TacticVehicleDepictionRegistration
     Operators = 
     [
         DepictionOperator_CropFlattening,
-        $/GFX/Sound/DepictionOperator_MovementSound_SM_Mutt_M151,
+        $/GFX/Sound/DepictionOperator_MovementSound_SM_UAZ,
         DepictionOperator_SoundProbe,
         DepictionOperator_CriticalEffects,
         DepictionOperator_Chassis_MediumTank_NoCanonRecoil,
@@ -14998,7 +15265,7 @@ unnamed TacticVehicleDepictionRegistration
     Operators = 
     [
         DepictionOperator_CropFlattening,
-        $/GFX/Sound/DepictionOperator_MovementSound_SM_Mutt_M151,
+        $/GFX/Sound/DepictionOperator_MovementSound_SM_UAZ,
         DepictionOperator_SoundProbe,
         DepictionOperator_CriticalEffects,
         DepictionOperator_Chassis_MediumTank_NoCanonRecoil,
@@ -15034,45 +15301,26 @@ unnamed TacticVehicleDepictionRegistration
     Operators = 
     [
         DepictionOperator_CropFlattening,
-        $/GFX/Sound/DepictionOperator_MovementSound_SM_Mutt_M151,
+        $/GFX/Sound/DepictionOperator_MovementSound_SM_UAZ,
         DepictionOperator_SoundProbe,
         DepictionOperator_CriticalEffects,
         DepictionOperator_Chassis_Vehicle,
         DepictionOperator_Propulsion_Wheels_Generic,
         DepictionOperator_MovementFX_Standard,
+        DepictionOperator_Turret_1_Aim,
+        DepictionOperator_Turret_1_HydraulicRecoil,
+        DepictionOperator_BJ212_HJ8_ALB_Weapon1,
         DepictionOperator_EjectableProps_Vehicle,
     ]
 
     Actions = MAP[
+                ( "weapon_effet_tag1", Weapon_ATGM_HJ8A ),
             ]
             + DepictionAction_Stress_And_Wrecked
             + DepictionAction_MovementFX_Wheeled
             + DepictionAction_CriticalFX_Tank
 
     SubDepictions = [
-        TSubDepiction
-        (
-            Anchors = ["base_tourelle_01"]
-            Depiction = TDepictionDescriptor
-            (
-                CoatingName = "BJ212_HJ8_ALB_turret1"
-                ResidentMaterialTags = [ MaterialTagMech ]
-                AdditionalTextures = $/M3D/Shader/VehicleDestTextures
-                Selector = ~/OnlyHighDepictionSelector
-                DepictionAlternatives = [
-                    DepictionVisual_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_BJ212_HJ8_ALB_Tourelle_01 )
-                ]
-                Operators = [
-                    DepictionOperator_Reset_Generic,
-                    DepictionOperator_Turret_1_Aim,
-                    DepictionOperator_Turret_1_HydraulicRecoil,
-                    DepictionOperator_BJ212_HJ8_ALB_Weapon1,
-                ]
-                Actions = MAP[
-                    ( "weapon_effet_tag1", Weapon_ATGM_HJ8A ),
-                ]
-            )
-        ),
     ] + HumanSubDepictions_BJ212_HJ8_ALB
 )
 // Dépiction de l'unité BJ212_MLRS_ALB
@@ -15092,7 +15340,7 @@ unnamed TacticVehicleDepictionRegistration
     Operators = 
     [
         DepictionOperator_CropFlattening,
-        $/GFX/Sound/DepictionOperator_MovementSound_SM_GAZ_66,
+        $/GFX/Sound/DepictionOperator_MovementSound_SM_UAZ,
         DepictionOperator_SoundProbe,
         DepictionOperator_CriticalEffects,
         DepictionOperator_Chassis_SmallTank,
@@ -15110,6 +15358,39 @@ unnamed TacticVehicleDepictionRegistration
             + DepictionAction_Stress_And_Wrecked
             + DepictionAction_MovementFX_Wheeled
             + DepictionAction_CriticalFX_Tank
+
+    SubDepictions = [
+    ] + HumanSubDepictions_BJ212_MLRS_ALB
+)
+// Dépiction de l'unité BJ212_MP_ALB
+unnamed TacticVehicleDepictionRegistration
+(
+    BlackHoleKey = 'BJ212_MP_ALB'
+    Selector = SpecificMechanicalDepictionSelector
+    Alternatives = Alternatives_BJ212_MP_ALB
+
+    Operators = 
+    [
+        DepictionOperator_CropFlattening,
+        $/GFX/Sound/DepictionOperator_MovementSound_SM_UAZ,
+        DepictionOperator_SoundProbe,
+        DepictionOperator_CriticalEffects,
+        DepictionOperator_Chassis_MediumTank_NoCanonRecoil,
+        DepictionOperator_Propulsion_Wheels_Generic,
+        DepictionOperator_MovementFX_Standard,
+        DepictionOperator_EjectableProps_Vehicle,
+    ]
+
+    Actions = MAP[
+            ]
+            + DepictionAction_Stress_And_Wrecked
+            + DepictionAction_MovementFX_Wheeled
+            + DepictionAction_CriticalFX_Tank
+
+    SubDepictions = [
+    ] + HumanSubDepictions_BJ212_MP_ALB
+
+    SubDepictionGenerators = [ TransportedInfantrySubGenerator(Mesh = $/GFX/DepictionResources/Modele_BJ212_MP_ALB), TowedUnitSubDepictionGenerator(Mesh = $/GFX/DepictionResources/Modele_BJ212_MP_ALB) ]
 )
 // Dépiction de l'unité BJ212_reco_ALB
 DepictionOperator_BJ212_reco_ALB_Weapon1 is DepictionOperator_WeaponContinuousFire
@@ -15129,45 +15410,26 @@ unnamed TacticVehicleDepictionRegistration
     Operators = 
     [
         DepictionOperator_CropFlattening,
-        $/GFX/Sound/DepictionOperator_MovementSound_SM_Iltis,
+        $/GFX/Sound/DepictionOperator_MovementSound_SM_UAZ,
         DepictionOperator_SoundProbe,
         DepictionOperator_CriticalEffects,
         DepictionOperator_Chassis_MediumTank_NoCanonRecoil,
         DepictionOperator_Propulsion_Wheels_Generic,
         DepictionOperator_MovementFX_Standard,
+        DepictionOperator_Turret_1_Aim,
+        DepictionOperator_Turret_1_TurretRockingRecoil_LightMachineGun,
+        DepictionOperator_BJ212_reco_ALB_Weapon1,
         DepictionOperator_EjectableProps_Vehicle,
     ]
 
     Actions = MAP[
+                ( "weapon_effet_tag1", Weapon_HMG_12_7_mm_Type54 ),
             ]
             + DepictionAction_Stress_And_Wrecked
             + DepictionAction_MovementFX_Wheeled
             + DepictionAction_CriticalFX_Tank
 
     SubDepictions = [
-        TSubDepiction
-        (
-            Anchors = ["base_tourelle_01"]
-            Depiction = TDepictionDescriptor
-            (
-                CoatingName = "BJ212_reco_ALB_turret1"
-                ResidentMaterialTags = [ MaterialTagMech ]
-                AdditionalTextures = $/M3D/Shader/VehicleDestTextures
-                Selector = ~/OnlyHighDepictionSelector
-                DepictionAlternatives = [
-                    DepictionVisual_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_BJ212_reco_ALB_Tourelle_01 )
-                ]
-                Operators = [
-                    DepictionOperator_Reset_Generic,
-                    DepictionOperator_Turret_1_Aim,
-                    DepictionOperator_Turret_1_TurretRockingRecoil_LightMachineGun,
-                    DepictionOperator_BJ212_reco_ALB_Weapon1,
-                ]
-                Actions = MAP[
-                    ( "weapon_effet_tag1", Weapon_HMG_12_7_mm_Type54 ),
-                ]
-            )
-        ),
     ] + HumanSubDepictions_BJ212_reco_ALB
 
     SubDepictionGenerators = [ TransportedInfantrySubGenerator(Mesh = $/GFX/DepictionResources/Modele_BJ212_reco_ALB) ]
@@ -23176,6 +23438,9 @@ unnamed TacticVehicleDepictionRegistration
             + DepictionAction_MovementFX_Wheeled
             + DepictionAction_CriticalFX_Tank
             + DepictionAction_FX_Amphibious_NoPropulsion
+
+    SubDepictions = [
+    ] + HumanSubDepictions_BTR_60_30_2_CUB
 )
 // Dépiction de l'unité BTR_60_CHAIKA_CMD_CUB
 unnamed TacticVehicleDepictionRegistration
@@ -38778,7 +39043,7 @@ unnamed TacticVehicleDepictionRegistration
     Operators = 
     [
         DepictionOperator_CropFlattening,
-        $/GFX/Sound/DepictionOperator_MovementSound_SM_VLRA,
+        $/GFX/Sound/DepictionOperator_MovementSound_SM_GAZ_66,
         DepictionOperator_SoundProbe,
         DepictionOperator_CriticalEffects,
         DepictionOperator_Chassis_Vehicle,
@@ -42044,7 +42309,7 @@ unnamed TacticVehicleDepictionRegistration
     ]
 
     Actions = MAP[
-                ( "weapon_effet_tag1", Weapon_MMG_team_7_62mm_MG3 ),
+                ( "weapon_effet_tag1", Weapon_MMG_team_7_62mm_MG42_59_ITA ),
             ]
             + DepictionAction_CriticalFX_ATGM
 
@@ -48433,9 +48698,9 @@ unnamed TacticVehicleDepictionRegistration
     ]
 
     Actions = MAP[
-                ( "weapon_effet_tag1", Weapon_Howz_Canon_D30_Howitzer_122mm ),
-                ( "weapon_effet_tag2", Weapon_Howz_Canon_D30_Howitzer_122mm_SMOKE ),
-                ( "weapon_effet_tag3", Weapon_Canon_AP_D30_122mm ),
+                ( "weapon_effet_tag1", Weapon_Howz_Canon_M30_Howitzer_122mm ),
+                ( "weapon_effet_tag2", Weapon_Howz_Canon_M30_Howitzer_122mm_SMOKE ),
+                ( "weapon_effet_tag3", Weapon_Howz_Canon_M30_Howitzer_122mm_Direct ),
             ]
             + DepictionAction_CriticalFX_Towed
 
@@ -56407,8 +56672,8 @@ unnamed TacticVehicleDepictionRegistration
     Actions = MAP[
                 ( "weapon_effet_tag1", Weapon_Canon_AP_120mm_L44_late_2A4 ),
                 ( "weapon_effet_tag2", Weapon_Canon_HE_120mm_L44_late_2A4 ),
-                ( "weapon_effet_tag3", Weapon_MMG_FN_MAG_7_62mm ),
-                ( "weapon_effet_tag4", Weapon_MMG_FN_MAG_7_62mm ),
+                ( "weapon_effet_tag3", Weapon_MMG_MG_51_7_5mm ),
+                ( "weapon_effet_tag4", Weapon_MMG_MG_51_7_5mm ),
                 ( "weapon_effet_tag6", Weapon_SMOKE_Vehicle_Grenadex8 ),
             ]
             + DepictionAction_Stress_And_Wrecked
@@ -56668,8 +56933,8 @@ unnamed TacticVehicleDepictionRegistration
     Actions = MAP[
                 ( "weapon_effet_tag1", Weapon_Canon_AP_120mm_L44_late_2A4 ),
                 ( "weapon_effet_tag2", Weapon_Canon_HE_120mm_L44_late_2A4 ),
-                ( "weapon_effet_tag3", Weapon_MMG_FN_MAG_7_62mm ),
-                ( "weapon_effet_tag4", Weapon_MMG_FN_MAG_7_62mm ),
+                ( "weapon_effet_tag3", Weapon_MMG_MG_51_7_5mm ),
+                ( "weapon_effet_tag4", Weapon_MMG_MG_51_7_5mm ),
                 ( "weapon_effet_tag6", Weapon_SMOKE_Vehicle_Grenadex8 ),
             ]
             + DepictionAction_Stress_And_Wrecked
@@ -76853,7 +77118,7 @@ unnamed TacticVehicleDepictionRegistration
         DepictionOperator_Turret_1_Aim,
         DepictionOperator_MLRS_Type63_107mm_ALB_Weapon1,
         DepictionOperator_Propulsion_Wheels_Canon,
-        DepictionOperator_Carriable_Canon_Arms30,
+        DepictionOperator_Carriable_Canon_NoArms,
         DepictionOperator_EjectableProps_Vehicle,
     ]
 
@@ -84437,32 +84702,6 @@ unnamed TacticVehicleDepictionRegistration
     Actions = MAP[
                 ( "weapon_effet_tag1", Weapon_HMG_14_5_mm_KPVT ),
                 ( "weapon_effet_tag4", Weapon_MMG_PKT_7_62mm ),
-            ]
-            + DepictionAction_Stress_And_Wrecked
-            + DepictionAction_MovementFX_Wheeled
-            + DepictionAction_CriticalFX_Tank
-            + DepictionAction_FX_Amphibious_NoPropulsion
-)
-// Dépiction de l'unité PSzH_FDC_HON
-unnamed TacticVehicleDepictionRegistration
-(
-    BlackHoleKey = 'PSzH_FDC_HON'
-    Selector = SpecificMechanicalDepictionSelector
-    Alternatives = Alternatives_PSzH_FDC_HON
-
-    Operators = 
-    [
-        DepictionOperator_CropFlattening,
-        $/GFX/Sound/DepictionOperator_MovementSound_SM_BTR_152,
-        DepictionOperator_SoundProbe,
-        DepictionOperator_CriticalEffects,
-        DepictionOperator_Chassis_Vehicle,
-        DepictionOperator_Propulsion_Wheels_Generic,
-        DepictionOperator_MovementFX_Amphibious,
-        DepictionOperator_EjectableProps_Vehicle,
-    ]
-
-    Actions = MAP[
             ]
             + DepictionAction_Stress_And_Wrecked
             + DepictionAction_MovementFX_Wheeled
@@ -104638,8 +104877,6 @@ unnamed TacticVehicleDepictionRegistration
 
     SubDepictions = [
     ] + HumanSubDepictions_Type_59_ARV_ALB
-
-    SubDepictionGenerators = [ TransportedInfantrySubGenerator(Mesh = $/GFX/DepictionResources/Modele_Type_59_ARV_ALB) ]
 )
 // Dépiction de l'unité Type_59_tank_ALB
 DepictionOperator_Type_59_tank_ALB_Weapon1 is DepictionOperator_WeaponInstantFire

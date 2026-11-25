@@ -759,6 +759,17 @@ DepictionOperator_Carriable_ATGM is template_DepictionOperator_Carriable
     ChassisMovementDeltaFrames = [0.75, 1.0]
 )
 
+// Variante de Carriable_ATGM levée dès l'ordre de mouvement (groupe 'ATGM levée immédiate', FUL-10745 Malyutka) :
+// même hauteur et même angle, levée sur 0,2 s sans attente ; pose sur 0,4 s sans attente (vitesse de pose de Carriable_ATGM).
+DepictionOperator_Carriable_ATGM_Immediat is template_DepictionOperator_Carriable
+(
+    ChassisMovingAngleInDegrees = 15
+    ChassisAltitudeTranslationInMeters = 0.5
+    StartingAnimationDuration = 0.2
+    StoppingAnimationDuration = 0.4
+    ChassisMovementDeltaFrames = [0.0, 1.0]
+)
+
 DepictionOperator_GroundPuff_Helico is TCosmeticHelicopterGroundPuffOperatorDesc
 (
     OperatorId = 'GroundPuff'

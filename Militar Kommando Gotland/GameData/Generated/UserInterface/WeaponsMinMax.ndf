@@ -678,7 +678,7 @@ MinMaxValuesInterfaceHelper is TWeaponsMinMaxValuesInterfaceHelper
                )
                // PhysicalDamages x weapon_count_ (Number of weapons)
                PhysicalDamages = TMinMaxValue (
-                       Max = 1.5
+                       Max = 1.4
                        Min = 0.5
                )
                RateOfFire = TMinMaxValue (
@@ -699,7 +699,7 @@ MinMaxValuesInterfaceHelper is TWeaponsMinMaxValuesInterfaceHelper
                )
                // SuppressDamages x weapon_count_ (Number of weapons)
                SuppressDamages = TMinMaxValue (
-                       Max = 375
+                       Max = 350
                        Min = 125
                )
                TimeBetweenTwoShots = TMinMaxValue (
@@ -1161,7 +1161,7 @@ MinMaxValuesInterfaceHelper is TWeaponsMinMaxValuesInterfaceHelper
                        Min = 0.0
                )
                MaxRangeAirplaneGRU = TMinMaxValue (
-                       Max = 0
+                       Max = 3175
                        Min = 0
                )
                MaxRangeGRU = TMinMaxValue (
@@ -1169,7 +1169,7 @@ MinMaxValuesInterfaceHelper is TWeaponsMinMaxValuesInterfaceHelper
                        Min = 1750
                )
                MaxRangeHelicopterGRU = TMinMaxValue (
-                       Max = 0
+                       Max = 2825
                        Min = 0
                )
                NbShotsBySalvo = TMinMaxValue (

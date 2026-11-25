@@ -2063,7 +2063,7 @@ unnamed TTowedUnitCatalogEntry
     MeshHigh = $/GFX/DepictionResources/Modele_MLRS_Type63_107mm_ALB
     MeshMid  = $/GFX/DepictionResources/Modele_MLRS_Type63_107mm_ALB_MID
     MeshLow  = $/GFX/DepictionResources/Modele_MLRS_Type63_107mm_ALB_LOW
-    InitialPose = TInitialPoseAngle( MeshDescriptor = $/GFX/DepictionResources/Modele_MLRS_Type63_107mm_ALB Angle = 0.5235987755982988 )
+    InitialPose = TInitialPoseAngle( MeshDescriptor = $/GFX/DepictionResources/Modele_MLRS_Type63_107mm_ALB Angle = 0.0 )
 )
 unnamed TTowedUnitCatalogEntry
 (

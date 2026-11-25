@@ -58,6 +58,7 @@ template BUCKGridDescriptor
     LastElementMargin : TRTTILength2 = TRTTILength2(),                                          // Taille de la marge après la dernière ligne et colonne de la grille en dimension 2
 
     IncrementalStepRowMargin : TRTTILength = TRTTILength(),                                     // Pas incrémental horizontal. Permet de créer un décalage horizontal a chaque noouvell ligne
+    NextRowsExtraFirstMargin : TRTTILength = TRTTILength(),                                     // Décalage horizontal constant appliqué à toutes les lignes après la première
 
     MaxElementsPerDimension : int2 = [0, 0],                                                    // Maximum d'éléments par ligne et colonne (défaut = 0)
     ElementMinWidthHeight : float2 = [0.0, 0.0],                                                // Taille minimum des Elements d'une liste (défaut = 0)
@@ -124,6 +125,7 @@ is TBUCKGridDescriptor
     LastElementMargin = <LastElementMargin>
 
     IncrementalStepRowMargin = <IncrementalStepRowMargin>
+    NextRowsExtraFirstMargin = <NextRowsExtraFirstMargin>
 
     MaxElementsPerDimension = <MaxElementsPerDimension>
     ElementMinWidthHeight = <ElementMinWidthHeight>

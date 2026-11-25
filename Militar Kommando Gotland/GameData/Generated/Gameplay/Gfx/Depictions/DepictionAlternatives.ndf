@@ -571,12 +571,6 @@ Alternatives_AMX_13_VCI_20mm_FR is
     DepictionVisual_LOD_Mid( MeshDescriptor=$/GFX/DepictionResources/Modele_AMX_13_VCI_20mm_FR_MID ),
     DepictionVisual_LOD_Low( MeshDescriptor=$/GFX/DepictionResources/Modele_AMX_13_VCI_20mm_FR_LOW ),
 ]
-Alternatives_AMX_13_VCI_FAO_CYP is 
-[
-    DepictionVisual_LOD_High( MeshDescriptor=$/GFX/DepictionResources/Modele_AMX_13_VCI_FAO_CYP ),
-    DepictionVisual_LOD_Mid( MeshDescriptor=$/GFX/DepictionResources/Modele_AMX_13_VCI_FAO_CYP_MID ),
-    DepictionVisual_LOD_Low( MeshDescriptor=$/GFX/DepictionResources/Modele_AMX_13_VCI_FAO_CYP_LOW ),
-]
 Alternatives_AMX_13_VCI_supply_CYP is 
 [
     DepictionVisual_LOD_High( MeshDescriptor=$/GFX/DepictionResources/Modele_AMX_13_VCI_supply_CYP ),
@@ -991,6 +985,12 @@ Alternatives_AT_vz59_RCL_Vysadkar_TCH is
     DepictionVisual_LOD_Mid( MeshDescriptor=$/GFX/DepictionResources/Modele_AT_vz59_RCL_Vysadkar_TCH_MID ),
     DepictionVisual_LOD_Low( MeshDescriptor=$/GFX/DepictionResources/Modele_AT_vz59_RCL_Vysadkar_TCH_LOW ),
 ]
+Alternatives_ATteam_Bantam_SWI is 
+[
+    DepictionVisual_LOD_High( MeshDescriptor=$/GFX/DepictionResources/Modele_ATteam_Bantam_SWI ),
+    DepictionVisual_LOD_Mid( MeshDescriptor=$/GFX/DepictionResources/Modele_ATteam_Bantam_SWI_MID ),
+    DepictionVisual_LOD_Low( MeshDescriptor=$/GFX/DepictionResources/Modele_ATteam_Bantam_SWI_LOW ),
+]
 Alternatives_ATteam_Fagot_Cuba_SOV is 
 [
     DepictionVisual_LOD_High( MeshDescriptor=$/GFX/DepictionResources/Modele_ATteam_Fagot_Cuba_SOV ),
@@ -1026,6 +1026,12 @@ Alternatives_ATteam_Fagot_TCH is
     DepictionVisual_LOD_High( MeshDescriptor=$/GFX/DepictionResources/Modele_ATteam_Fagot_TCH ),
     DepictionVisual_LOD_Mid( MeshDescriptor=$/GFX/DepictionResources/Modele_ATteam_Fagot_TCH_MID ),
     DepictionVisual_LOD_Low( MeshDescriptor=$/GFX/DepictionResources/Modele_ATteam_Fagot_TCH_LOW ),
+]
+Alternatives_ATteam_HJ73_ALB is 
+[
+    DepictionVisual_LOD_High( MeshDescriptor=$/GFX/DepictionResources/Modele_ATteam_HJ73_ALB ),
+    DepictionVisual_LOD_Mid( MeshDescriptor=$/GFX/DepictionResources/Modele_ATteam_HJ73_ALB_MID ),
+    DepictionVisual_LOD_Low( MeshDescriptor=$/GFX/DepictionResources/Modele_ATteam_HJ73_ALB_LOW ),
 ]
 Alternatives_ATteam_HJ8_ALB is 
 [
@@ -1098,6 +1104,48 @@ Alternatives_ATteam_Konkurs_TTsko_SOV is
     DepictionVisual_LOD_High( MeshDescriptor=$/GFX/DepictionResources/Modele_ATteam_Konkurs_TTsko_SOV ),
     DepictionVisual_LOD_Mid( MeshDescriptor=$/GFX/DepictionResources/Modele_ATteam_Konkurs_TTsko_SOV_MID ),
     DepictionVisual_LOD_Low( MeshDescriptor=$/GFX/DepictionResources/Modele_ATteam_Konkurs_TTsko_SOV_LOW ),
+]
+Alternatives_ATteam_Malyutka_CUB is 
+[
+    DepictionVisual_LOD_High( MeshDescriptor=$/GFX/DepictionResources/Modele_ATteam_Malyutka_CUB ),
+    DepictionVisual_LOD_Mid( MeshDescriptor=$/GFX/DepictionResources/Modele_ATteam_Malyutka_CUB_MID ),
+    DepictionVisual_LOD_Low( MeshDescriptor=$/GFX/DepictionResources/Modele_ATteam_Malyutka_CUB_LOW ),
+]
+Alternatives_ATteam_Malyutka_DDR is 
+[
+    DepictionVisual_LOD_High( MeshDescriptor=$/GFX/DepictionResources/Modele_ATteam_Malyutka_DDR ),
+    DepictionVisual_LOD_Mid( MeshDescriptor=$/GFX/DepictionResources/Modele_ATteam_Malyutka_DDR_MID ),
+    DepictionVisual_LOD_Low( MeshDescriptor=$/GFX/DepictionResources/Modele_ATteam_Malyutka_DDR_LOW ),
+]
+Alternatives_ATteam_Malyutka_POL is 
+[
+    DepictionVisual_LOD_High( MeshDescriptor=$/GFX/DepictionResources/Modele_ATteam_Malyutka_POL ),
+    DepictionVisual_LOD_Mid( MeshDescriptor=$/GFX/DepictionResources/Modele_ATteam_Malyutka_POL_MID ),
+    DepictionVisual_LOD_Low( MeshDescriptor=$/GFX/DepictionResources/Modele_ATteam_Malyutka_POL_LOW ),
+]
+Alternatives_ATteam_Malyutka_Para_POL is 
+[
+    DepictionVisual_LOD_High( MeshDescriptor=$/GFX/DepictionResources/Modele_ATteam_Malyutka_Para_POL ),
+    DepictionVisual_LOD_Mid( MeshDescriptor=$/GFX/DepictionResources/Modele_ATteam_Malyutka_Para_POL_MID ),
+    DepictionVisual_LOD_Low( MeshDescriptor=$/GFX/DepictionResources/Modele_ATteam_Malyutka_Para_POL_LOW ),
+]
+Alternatives_ATteam_Malyutka_Reserve_SOV is 
+[
+    DepictionVisual_LOD_High( MeshDescriptor=$/GFX/DepictionResources/Modele_ATteam_Malyutka_Reserve_SOV ),
+    DepictionVisual_LOD_Mid( MeshDescriptor=$/GFX/DepictionResources/Modele_ATteam_Malyutka_Reserve_SOV_MID ),
+    DepictionVisual_LOD_Low( MeshDescriptor=$/GFX/DepictionResources/Modele_ATteam_Malyutka_Reserve_SOV_LOW ),
+]
+Alternatives_ATteam_Malyutka_SOV is 
+[
+    DepictionVisual_LOD_High( MeshDescriptor=$/GFX/DepictionResources/Modele_ATteam_Malyutka_SOV ),
+    DepictionVisual_LOD_Mid( MeshDescriptor=$/GFX/DepictionResources/Modele_ATteam_Malyutka_SOV_MID ),
+    DepictionVisual_LOD_Low( MeshDescriptor=$/GFX/DepictionResources/Modele_ATteam_Malyutka_SOV_LOW ),
+]
+Alternatives_ATteam_Malyutka_TCH is 
+[
+    DepictionVisual_LOD_High( MeshDescriptor=$/GFX/DepictionResources/Modele_ATteam_Malyutka_TCH ),
+    DepictionVisual_LOD_Mid( MeshDescriptor=$/GFX/DepictionResources/Modele_ATteam_Malyutka_TCH_MID ),
+    DepictionVisual_LOD_Low( MeshDescriptor=$/GFX/DepictionResources/Modele_ATteam_Malyutka_TCH_LOW ),
 ]
 Alternatives_ATteam_Milan_1_BEL is 
 [
@@ -1794,6 +1842,12 @@ Alternatives_BJ212_MLRS_ALB is
     DepictionVisual_LOD_High( MeshDescriptor=$/GFX/DepictionResources/Modele_BJ212_MLRS_ALB ),
     DepictionVisual_LOD_Mid( MeshDescriptor=$/GFX/DepictionResources/Modele_BJ212_MLRS_ALB_MID ),
     DepictionVisual_LOD_Low( MeshDescriptor=$/GFX/DepictionResources/Modele_BJ212_MLRS_ALB_LOW ),
+]
+Alternatives_BJ212_MP_ALB is 
+[
+    DepictionVisual_LOD_High( MeshDescriptor=$/GFX/DepictionResources/Modele_BJ212_MP_ALB ),
+    DepictionVisual_LOD_Mid( MeshDescriptor=$/GFX/DepictionResources/Modele_BJ212_MP_ALB_MID ),
+    DepictionVisual_LOD_Low( DisabledOperators=[ "tourelle1" ] MeshDescriptor=$/GFX/DepictionResources/Modele_BJ212_MP_ALB_LOW ),
 ]
 Alternatives_BJ212_reco_ALB is 
 [
@@ -9811,12 +9865,6 @@ Alternatives_PSzH_CMD_HON is
     DepictionVisual_LOD_Mid( MeshDescriptor=$/GFX/DepictionResources/Modele_PSzH_CMD_HON_MID ),
     DepictionVisual_LOD_Low( MeshDescriptor=$/GFX/DepictionResources/Modele_PSzH_CMD_HON_LOW ),
 ]
-Alternatives_PSzH_FDC_HON is 
-[
-    DepictionVisual_LOD_High( MeshDescriptor=$/GFX/DepictionResources/Modele_PSzH_FDC_HON ),
-    DepictionVisual_LOD_Mid( MeshDescriptor=$/GFX/DepictionResources/Modele_PSzH_FDC_HON_MID ),
-    DepictionVisual_LOD_Low( MeshDescriptor=$/GFX/DepictionResources/Modele_PSzH_FDC_HON_LOW ),
-]
 Alternatives_PSzH_IV_20mm_HON is 
 [
     DepictionVisual_LOD_High( MeshDescriptor=$/GFX/DepictionResources/Modele_PSzH_IV_20mm_HON ),
@@ -14515,11 +14563,11 @@ Alternatives_Ka_27PL_SOV is
     DepictionVisual_LOD_Mid( MeshDescriptor=$/GFX/DepictionResources/Modele_Ka_27PL_SOV_MID ),
     DepictionVisual_LOD_Low( MeshDescriptor=$/GFX/DepictionResources/Modele_Ka_27PL_SOV_LOW ),
 ]
-Alternatives_Ka_27PV_SOV is 
+Alternatives_Ka_27_SOV is 
 [
-    DepictionVisual_LOD_High( MeshDescriptor=$/GFX/DepictionResources/Modele_Ka_27PV_SOV ),
-    DepictionVisual_LOD_Mid( MeshDescriptor=$/GFX/DepictionResources/Modele_Ka_27PV_SOV_MID ),
-    DepictionVisual_LOD_Low( MeshDescriptor=$/GFX/DepictionResources/Modele_Ka_27PV_SOV_LOW ),
+    DepictionVisual_LOD_High( MeshDescriptor=$/GFX/DepictionResources/Modele_Ka_27_SOV ),
+    DepictionVisual_LOD_Mid( MeshDescriptor=$/GFX/DepictionResources/Modele_Ka_27_SOV_MID ),
+    DepictionVisual_LOD_Low( MeshDescriptor=$/GFX/DepictionResources/Modele_Ka_27_SOV_LOW ),
 ]
 Alternatives_Ka_29_SOV is 
 [

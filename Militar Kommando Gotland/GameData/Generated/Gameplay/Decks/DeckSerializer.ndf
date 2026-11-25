@@ -2933,7 +2933,7 @@ unnamed TDeckSerializerEntries
         ($/GFX/Unit/Descriptor_Unit_T55AM_CMD_SOV, 3089),
         ($/GFX/Unit/Descriptor_Unit_ZSU_23_Shilka_Naval_SOV, 3090),
         ($/GFX/Unit/Descriptor_Unit_MiG_21SMT_AA_SOV, 3091),
-        ($/GFX/Unit/Descriptor_Unit_Ka_27PV_SOV, 3092),
+        ($/GFX/Unit/Descriptor_Unit_Ka_27_SOV, 3093),
         ($/GFX/Unit/Descriptor_Unit_Mi_14PL_recon_SOV, 3096),
         ($/GFX/Unit/Descriptor_Unit_ATteam_RCL_SPG9_Naval_VDV_SOV, 3097),
         ($/GFX/Unit/Descriptor_Unit_Atteam_Fagot_Naval_VDV_SOV, 3098),
@@ -3313,7 +3313,6 @@ unnamed TDeckSerializerEntries
         ($/GFX/Unit/Descriptor_Unit_Mortier_PM43_120mm_para_HON, 3537),
         ($/GFX/Unit/Descriptor_Unit_OT_65_HON, 3538),
         ($/GFX/Unit/Descriptor_Unit_PSzH_CMD_HON, 3539),
-        ($/GFX/Unit/Descriptor_Unit_PSzH_FDC_HON, 3540),
         ($/GFX/Unit/Descriptor_Unit_PSzH_IV_20mm_HON, 3541),
         ($/GFX/Unit/Descriptor_Unit_PT76B_HON, 3543),
         ($/GFX/Unit/Descriptor_Unit_T34_85M_HON, 3544),
@@ -3388,7 +3387,6 @@ unnamed TDeckSerializerEntries
         ($/GFX/Unit/Descriptor_Unit_PTS_2_Naval_supply_SOV, 3630),
         ($/GFX/Unit/Descriptor_Unit_PTS_2_supply_SOV, 3631),
         ($/GFX/Unit/Descriptor_Unit_Mi_14PS_supply_SOV, 3632),
-        ($/GFX/Unit/Descriptor_Unit_AMX_13_VCI_FAO_CYP, 3638),
         ($/GFX/Unit/Descriptor_Unit_AMX_13_VCI_supply_CYP, 3639),
         ($/GFX/Unit/Descriptor_Unit_AMX_30_B2_CMD_CYP, 3640),
         ($/GFX/Unit/Descriptor_Unit_AMX_30_B2_CYP, 3641),
@@ -4331,6 +4329,17 @@ unnamed TDeckSerializerEntries
         ($/GFX/Unit/Descriptor_Unit_EE9_Cascavel_tank_CYP, 5172),
         ($/GFX/Unit/Descriptor_Unit_MANPAD_Strela_2MA_CYP, 5173),
         ($/GFX/Unit/Descriptor_Unit_Ka_27PL_SOV, 5246),
+        ($/GFX/Unit/Descriptor_Unit_MP_ALB, 5335),
+        ($/GFX/Unit/Descriptor_Unit_ATteam_Malyutka_CUB, 5336),
+        ($/GFX/Unit/Descriptor_Unit_ATteam_HJ73_ALB, 5337),
+        ($/GFX/Unit/Descriptor_Unit_ATteam_Malyutka_DDR, 5338),
+        ($/GFX/Unit/Descriptor_Unit_ATteam_Malyutka_Para_POL, 5339),
+        ($/GFX/Unit/Descriptor_Unit_ATteam_Malyutka_Reserve_SOV, 5340),
+        ($/GFX/Unit/Descriptor_Unit_ATteam_Malyutka_SOV, 5341),
+        ($/GFX/Unit/Descriptor_Unit_ATteam_Malyutka_TCH, 5342),
+        ($/GFX/Unit/Descriptor_Unit_ATteam_Bantam_SWI, 5344),
+        ($/GFX/Unit/Descriptor_Unit_ATteam_Malyutka_POL, 5347),
+        ($/GFX/Unit/Descriptor_Unit_BJ212_MP_ALB, 5348),
         ($/GFX/Unit/Descriptor_Unit_FOB_SWE, 10000),
         ($/GFX/Unit/Descriptor_Unit_Hjtrak_319V_Trakk_3T_SWE, 10001),
         ($/GFX/Unit/Descriptor_Unit_Tgb_311A_Supply_SWE, 10002),
@@ -4363,9 +4372,5 @@ unnamed TDeckSerializerEntries
         ($/GFX/Unit/Descriptor_Unit_DCA_VLVK_M3037_SWE, 10104),
         ($/GFX/Unit/Descriptor_Unit_MANPAD_RBS69_SWE, 10105),
         ($/GFX/Unit/Descriptor_Unit_MANPAD_RBS70_SWE, 10106),
-        
-        
-        
-        
     ]
 )

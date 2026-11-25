@@ -1,19 +1,14 @@
 export Modele_BJ212_HJ8_ALB is TResourceMesh
 (
-    Mesh="GameData:/Assets/3D/Units/US/Vehicule/M151A2_Scout/M151A2_TOW.fbx"
+    Mesh="GameData:/Assets/3D/Units/ALB/Vehicule/BJ212_HJ8/BJ212_HJ8.fbx"
 )
 
 export Modele_BJ212_HJ8_ALB_MID is TResourceMesh
 (
-    Mesh="GameData:/Assets/3D/Units/US/Vehicule/M151A2_Scout_MID/M151A2_TOW_MID.fbx"
+    Mesh="GameData:/Assets/3D/Units/ALB/Vehicule/BJ212_HJ8/BJ212_HJ8.fbx"
 )
 
 export Modele_BJ212_HJ8_ALB_LOW is TResourceMesh
 (
-    Mesh="GameData:/Assets/3D/Units/US/Vehicule/M151A2_Scout_LOW/M151A2_TOW_LOW.fbx"
-)
-
-export Modele_BJ212_HJ8_ALB_Tourelle_01 is TResourceMesh
-(
-    Mesh=ModelFile_TOW_T1
+    Mesh="GameData:/Assets/3D/Units/ALB/Vehicule/BJ212_HJ8/BJ212_HJ8.fbx"
 )

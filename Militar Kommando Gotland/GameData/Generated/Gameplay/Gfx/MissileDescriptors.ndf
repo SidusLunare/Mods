@@ -9673,6 +9673,82 @@ export Descriptor_Missile_ATGM_9M128_Agona is TEntityDescriptor
         ~/TargetDataModuleDescriptor,
     ]
 )
+export Descriptor_Missile_ATGM_9M14_MalyutkaM1 is TEntityDescriptor
+(
+    DescriptorId       = GUID:{663b824f-de31-43ad-8433-f5633b512e1e}
+    ClassNameForDebug  = 'Missile_ATGM_9M14_MalyutkaM1'
+    ModulesDescriptors = [
+        ~/SimpleTypeUnitModuleDescriptor,
+        TTagsModuleDescriptor
+        (
+            TagSet = [
+                "MISSILE",
+                "MISSILE_ATGM_9M14_MalyutkaM1",
+            ]
+        ),
+        ~/MissileFlagsModuleDescriptor,
+        ~/MissilePositionModuleDescriptor,
+        ~/LinkTeamModuleDescriptor,
+        TApparenceModuleDescriptor
+        (
+            ReferenceMesh = $/GFX/DepictionResources/Modele_Missile_Malyutka
+            Depiction     = Template_DescriptorMissileBase
+            (
+                ProjectileModelResource = $/GFX/DepictionResources/Modele_Missile_Malyutka
+                Actions = MAP[
+                    ( "fx_propulsion_on", template_PropulsionActionHappening( Action = $/GFX/GameFx/fx_propulsion_missile_generation1 )),
+                ]
+            )
+        ),
+        TGuidedMissileModuleDescriptor(),
+        TGuidedMissileMovementModuleDescriptor
+        (
+            DefaultConfig = TGuidedMissileMovementConfigDescriptor
+            (
+                MaxSpeedGRU        = 310
+                MaxAccelerationGRU = 176
+                AutoGyr            = 1.7453292519943295
+            )
+            UncontrollableConfig = TGuidedMissileMovementConfigDescriptor
+            (
+                MaxSpeedGRU        = 310
+                MaxAccelerationGRU = 176
+                AutoGyr            = 0.2617993877991494
+            )
+            CruiseAltitudeGRU = 0.0
+            TimeMaxBetweenRandomMoveWhenUncontrollable = 1
+            TimeMinBetweenRandomMoveWhenUncontrollable = 0.5
+            TimeBetweenChaosUpdates = 0.1
+            RangeChaos = 2000
+            AngleMaxForRandomMouvUncontrollable = 0.02
+            RotationSpeedWhenUncontrollable = 1
+        ),
+        TBaseDamageModuleDescriptor
+        (
+            MaxPhysicalDamages = 2
+            MaxSuppressionDamages = ~/Missile_MaxSuppressionDamages
+            MaxStunDamages = ~/Missile_MaxStunDamages
+        ),
+        TDamageModuleDescriptor
+        (
+            SuppressDamagesRegenRatio = ~/Missile_SuppressDamagesRegenRatioList
+            StunDamagesRegen = ~/Missile_StunDamagesRegen
+            BlindageProperties = TBlindageProperties
+            (
+                ResistanceFront = TResistanceTypeRTTI(Family=ResistanceFamily_vehicule Index=1)
+                ResistanceSides = TResistanceTypeRTTI(Family=ResistanceFamily_vehicule Index=1)
+                ResistanceRear = TResistanceTypeRTTI(Family=ResistanceFamily_vehicule Index=1)
+                ResistanceTop = TResistanceTypeRTTI(Family=ResistanceFamily_vehicule Index=1)
+                ExplosiveReactiveArmor = False
+            )
+            KillWhenDamagesReachMax = True
+            HitRollECM = 0.0
+            UseTopArmorAgainstFire = False
+        ),
+        TDangerousnessModuleDescriptor(Dangerousness  = 200),
+        ~/TargetDataModuleDescriptor,
+    ]
+)
 export Descriptor_Missile_ATGM_9M14_MalyutkaP_IFV is TEntityDescriptor
 (
     DescriptorId       = GUID:{2a79b7bb-f7b9-41ca-8051-5d5ddd88b245}
@@ -11041,6 +11117,82 @@ export Descriptor_Missile_ATGM_BGM71_TOW is TEntityDescriptor
         ~/TargetDataModuleDescriptor,
     ]
 )
+export Descriptor_Missile_ATGM_Bantam is TEntityDescriptor
+(
+    DescriptorId       = GUID:{5208dae3-a11a-44c1-ad49-7328ffdba615}
+    ClassNameForDebug  = 'Missile_ATGM_Bantam'
+    ModulesDescriptors = [
+        ~/SimpleTypeUnitModuleDescriptor,
+        TTagsModuleDescriptor
+        (
+            TagSet = [
+                "MISSILE",
+                "MISSILE_ATGM_Bantam",
+            ]
+        ),
+        ~/MissileFlagsModuleDescriptor,
+        ~/MissilePositionModuleDescriptor,
+        ~/LinkTeamModuleDescriptor,
+        TApparenceModuleDescriptor
+        (
+            ReferenceMesh = $/GFX/DepictionResources/Modele_Missile_Rb53_Bantam
+            Depiction     = Template_DescriptorMissileBase
+            (
+                ProjectileModelResource = $/GFX/DepictionResources/Modele_Missile_Rb53_Bantam
+                Actions = MAP[
+                    ( "fx_propulsion_on", template_PropulsionActionHappening( Action = $/GFX/GameFx/fx_propulsion_missile_generation1 )),
+                ]
+            )
+        ),
+        TGuidedMissileModuleDescriptor(),
+        TGuidedMissileMovementModuleDescriptor
+        (
+            DefaultConfig = TGuidedMissileMovementConfigDescriptor
+            (
+                MaxSpeedGRU        = 310
+                MaxAccelerationGRU = 176
+                AutoGyr            = 1.7453292519943295
+            )
+            UncontrollableConfig = TGuidedMissileMovementConfigDescriptor
+            (
+                MaxSpeedGRU        = 310
+                MaxAccelerationGRU = 176
+                AutoGyr            = 0.2617993877991494
+            )
+            CruiseAltitudeGRU = 0.0
+            TimeMaxBetweenRandomMoveWhenUncontrollable = 1
+            TimeMinBetweenRandomMoveWhenUncontrollable = 0.5
+            TimeBetweenChaosUpdates = 0.1
+            RangeChaos = 2000
+            AngleMaxForRandomMouvUncontrollable = 0.02
+            RotationSpeedWhenUncontrollable = 1
+        ),
+        TBaseDamageModuleDescriptor
+        (
+            MaxPhysicalDamages = 2
+            MaxSuppressionDamages = ~/Missile_MaxSuppressionDamages
+            MaxStunDamages = ~/Missile_MaxStunDamages
+        ),
+        TDamageModuleDescriptor
+        (
+            SuppressDamagesRegenRatio = ~/Missile_SuppressDamagesRegenRatioList
+            StunDamagesRegen = ~/Missile_StunDamagesRegen
+            BlindageProperties = TBlindageProperties
+            (
+                ResistanceFront = TResistanceTypeRTTI(Family=ResistanceFamily_vehicule Index=1)
+                ResistanceSides = TResistanceTypeRTTI(Family=ResistanceFamily_vehicule Index=1)
+                ResistanceRear = TResistanceTypeRTTI(Family=ResistanceFamily_vehicule Index=1)
+                ResistanceTop = TResistanceTypeRTTI(Family=ResistanceFamily_vehicule Index=1)
+                ExplosiveReactiveArmor = False
+            )
+            KillWhenDamagesReachMax = True
+            HitRollECM = 0.0
+            UseTopArmorAgainstFire = False
+        ),
+        TDangerousnessModuleDescriptor(Dangerousness  = 200),
+        ~/TargetDataModuleDescriptor,
+    ]
+)
 export Descriptor_Missile_ATGM_Bantam_x9 is TEntityDescriptor
 (
     DescriptorId       = GUID:{d1228fed-89fd-42b2-99ae-0799da92c1c7}
@@ -11193,6 +11345,82 @@ export Descriptor_Missile_ATGM_Eryx is TEntityDescriptor
         ~/TargetDataModuleDescriptor,
     ]
 )
+export Descriptor_Missile_ATGM_HJ73 is TEntityDescriptor
+(
+    DescriptorId       = GUID:{99c0a73a-2b14-4300-99d2-af07c24ba41c}
+    ClassNameForDebug  = 'Missile_ATGM_HJ73'
+    ModulesDescriptors = [
+        ~/SimpleTypeUnitModuleDescriptor,
+        TTagsModuleDescriptor
+        (
+            TagSet = [
+                "MISSILE",
+                "MISSILE_ATGM_HJ73",
+            ]
+        ),
+        ~/MissileFlagsModuleDescriptor,
+        ~/MissilePositionModuleDescriptor,
+        ~/LinkTeamModuleDescriptor,
+        TApparenceModuleDescriptor
+        (
+            ReferenceMesh = $/GFX/DepictionResources/Modele_Missile_Malyutka
+            Depiction     = Template_DescriptorMissileBase
+            (
+                ProjectileModelResource = $/GFX/DepictionResources/Modele_Missile_Malyutka
+                Actions = MAP[
+                    ( "fx_propulsion_on", template_PropulsionActionHappening( Action = $/GFX/GameFx/fx_propulsion_missile_generation1 )),
+                ]
+            )
+        ),
+        TGuidedMissileModuleDescriptor(),
+        TGuidedMissileMovementModuleDescriptor
+        (
+            DefaultConfig = TGuidedMissileMovementConfigDescriptor
+            (
+                MaxSpeedGRU        = 310
+                MaxAccelerationGRU = 176
+                AutoGyr            = 1.7453292519943295
+            )
+            UncontrollableConfig = TGuidedMissileMovementConfigDescriptor
+            (
+                MaxSpeedGRU        = 310
+                MaxAccelerationGRU = 176
+                AutoGyr            = 0.2617993877991494
+            )
+            CruiseAltitudeGRU = 0.0
+            TimeMaxBetweenRandomMoveWhenUncontrollable = 1
+            TimeMinBetweenRandomMoveWhenUncontrollable = 0.5
+            TimeBetweenChaosUpdates = 0.1
+            RangeChaos = 2000
+            AngleMaxForRandomMouvUncontrollable = 0.02
+            RotationSpeedWhenUncontrollable = 1
+        ),
+        TBaseDamageModuleDescriptor
+        (
+            MaxPhysicalDamages = 2
+            MaxSuppressionDamages = ~/Missile_MaxSuppressionDamages
+            MaxStunDamages = ~/Missile_MaxStunDamages
+        ),
+        TDamageModuleDescriptor
+        (
+            SuppressDamagesRegenRatio = ~/Missile_SuppressDamagesRegenRatioList
+            StunDamagesRegen = ~/Missile_StunDamagesRegen
+            BlindageProperties = TBlindageProperties
+            (
+                ResistanceFront = TResistanceTypeRTTI(Family=ResistanceFamily_vehicule Index=1)
+                ResistanceSides = TResistanceTypeRTTI(Family=ResistanceFamily_vehicule Index=1)
+                ResistanceRear = TResistanceTypeRTTI(Family=ResistanceFamily_vehicule Index=1)
+                ResistanceTop = TResistanceTypeRTTI(Family=ResistanceFamily_vehicule Index=1)
+                ExplosiveReactiveArmor = False
+            )
+            KillWhenDamagesReachMax = True
+            HitRollECM = 0.0
+            UseTopArmorAgainstFire = False
+        ),
+        TDangerousnessModuleDescriptor(Dangerousness  = 200),
+        ~/TargetDataModuleDescriptor,
+    ]
+)
 export Descriptor_Missile_ATGM_HJ8A is TEntityDescriptor
 (
     DescriptorId       = GUID:{1fb8e606-2821-45f2-a4a5-bc68ae228f17}
@@ -11211,10 +11439,10 @@ export Descriptor_Missile_ATGM_HJ8A is TEntityDescriptor
         ~/LinkTeamModuleDescriptor,
         TApparenceModuleDescriptor
         (
-            ReferenceMesh = $/GFX/DepictionResources/Modele_Missile_Shturm
+            ReferenceMesh = $/GFX/DepictionResources/Modele_Missile_HJ8
             Depiction     = Template_DescriptorMissileBase
             (
-                ProjectileModelResource = $/GFX/DepictionResources/Modele_Missile_Shturm
+                ProjectileModelResource = $/GFX/DepictionResources/Modele_Missile_HJ8
                 Actions = MAP[
                     ( "fx_propulsion_on", template_PropulsionActionHappening( Action = $/GFX/GameFx/fx_propulsion_missile_generation3 )),
                 ]

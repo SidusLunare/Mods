@@ -1,14 +1,14 @@
 export Modele_Ka_26_reco_HON is TResourceMesh
 (
-    Mesh="GameData:/Assets/3D/Units/URSS/Helico/Mi_2_reco/Mi_2_reco.fbx"
+    Mesh="GameData:/Assets/3D/Units/HON/Helico/Ka_26_reco/Ka_26_reco.fbx"
 )
 
 export Modele_Ka_26_reco_HON_MID is TResourceMesh
 (
-    Mesh="GameData:/Assets/3D/Units/URSS/Helico/Mi_2_reco_MID/Mi_2_reco_MID.fbx"
+    Mesh="GameData:/Assets/3D/Units/HON/Helico/Ka_26_reco/Ka_26_reco.fbx"
 )
 
 export Modele_Ka_26_reco_HON_LOW is TResourceMesh
 (
-    Mesh="GameData:/Assets/3D/Units/URSS/Helico/Mi_2_reco_LOW/Mi_2_reco_LOW.fbx"
+    Mesh="GameData:/Assets/3D/Units/HON/Helico/Ka_26_reco/Ka_26_reco.fbx"
 )

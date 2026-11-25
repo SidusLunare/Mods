@@ -185,8 +185,7 @@ is BUCKContainerDescriptor
     ElementName = <ElementName>
     ComponentFrame = TUIFramePropertyRTTI
     (
-        MagnifiableWidthHeight = [UnitButtonMagnifiableWidth + UnitButtonXPAreaWidth, UnitButtonMagnifiableHeight]
-        PixelWidthHeight = [2*UnitButtonPixelBorderSize, 2*UnitButtonPixelBorderSize]
+        MagnifiableWidthHeight = [UnitButtonMagnifiableWidth + UnitButtonXPAreaWidth + 2*~/UnitButtonBorderSize, UnitButtonMagnifiableHeight + 2*~/UnitButtonBorderSize]
         AlignementToAnchor = [0.0, 0.5]
         AlignementToFather = [0.0, 0.5]
     )
@@ -440,25 +439,12 @@ DivisionGrid is BUCKSpecificScrollingContainerDescriptor
             Axis = ~/ListAxis/Vertical
 
             FirstMargin = TRTTILength( Magnifiable = 10.0 )
-            InterItemMargin = TRTTILength( Magnifiable = 5.0 )
+            InterItemMargin = TRTTILength( Magnifiable = 8.0 )
             LastMargin = TRTTILength( Magnifiable = 20.0 )
 
             MagnifierMultiplication = 1.0
 
-            BladeDescriptor = BUCKGridDescriptor
-            (
-                ElementName = "PackList"
-
-                ComponentFrame = TUIFramePropertyRTTI()
-
-                FirstElementMargin = TRTTILength2( Magnifiable = [25.0, 0.0] )
-                InterElementMargin = TRTTILength2( Magnifiable = [20.0, 15.0] )
-                LastElementMargin = TRTTILength2( Magnifiable = [25.0, 0.0] )
-
-                MaxElementsPerDimension = [MaxUnitByLineInUnitDivisionGridDeckCreator, 0]
-
-                // envoie UnitPackDescriptor
-            )
+            BladeDescriptor = ~/UnitListPackGrid
 
             BackgroundComponents =
             [
@@ -1614,15 +1600,14 @@ NoTransportButtonDescriptor is BUCKButtonDescriptor
 (
     ComponentFrame = TUIFramePropertyRTTI
     (
-        MagnifiableWidthHeight = [UnitButtonMagnifiableWidth, UnitButtonMagnifiableHeight]
-        PixelWidthHeight = [2*UnitButtonPixelBorderSize, 2*UnitButtonPixelBorderSize]
+        MagnifiableWidthHeight = [UnitButtonMagnifiableWidth + 2*~/UnitButtonBorderSize, UnitButtonMagnifiableHeight + 2*~/UnitButtonBorderSize]
         AlignementToAnchor = [0.0, 0.5]
         AlignementToFather = [0.0, 0.5]
     )
 
     HasBorder = true
     BorderLineColorToken = "BoutonVignetteAchatArmory"
-    BorderThicknessToken = ~/UnitButtonPixelBorderSizeAsString
+    BorderThicknessToken = ~/UnitButtonBorderSizeAsString
     IsTogglable = true
     RadioButtonManager = ~/DeckCreatorTransportUnitButtonRadioManager
 

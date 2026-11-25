@@ -5903,6 +5903,11 @@ ALB_Soldier_2 is 'GameData:/Assets/3D/Units/ALB/Infanterie/ALB_Soldier/ALB_Soldi
 ALB_Soldier_NCO is 'GameData:/Assets/3D/Units/ALB/Infanterie/ALB_Soldier/ALB_Soldier_NCO.fbx'
 ALB_Soldier_Officer is 'GameData:/Assets/3D/Units/ALB/Infanterie/ALB_Soldier/ALB_Soldier_Officer.fbx'
 
+//MP_ALB
+export Modele_MP_ALB is TResourceMesh( Mesh=ALB_MP )
+export Modele_MP_ALB_02 is TResourceMesh( Mesh=ALB_MP )
+export Modele_MP_ALB_LOW is TResourceMesh( Mesh=POL_Niebieskie_1_LOW )
+
 //MotRifles_ALB
 export Modele_MotRifles_ALB is TResourceMesh( Mesh=ALB_Soldier_NCO )
 export Modele_MotRifles_ALB_02 is TResourceMesh( Mesh=ALB_Soldier_1 )
@@ -6063,12 +6068,14 @@ export Modele_Rifles_CMD_SWI_LOW is TResourceMesh( Mesh=RFA_PzGrenadier_LOW )
 export Modele_Scout_SWI is TResourceMesh( Mesh=SWI_Grenadier_NCO )
 export Modele_Scout_SWI_02 is TResourceMesh( Mesh=SWI_Grenadier_Spe )
 export Modele_Scout_SWI_03 is TResourceMesh( Mesh=SWI_Grenadier_1 )
+export Modele_Scout_SWI_04 is TResourceMesh( Mesh=SWI_Grenadier_2 )
 export Modele_Scout_SWI_LOW is TResourceMesh( Mesh=RFA_PzGrenadier_LOW )
 
 //HvyScout_SWI
 export Modele_HvyScout_SWI is TResourceMesh( Mesh=SWI_Grenadier_NCO )
 export Modele_HvyScout_SWI_02 is TResourceMesh( Mesh=SWI_Grenadier_Spe )
 export Modele_HvyScout_SWI_03 is TResourceMesh( Mesh=SWI_Grenadier_1 )
+export Modele_HvyScout_SWI_04 is TResourceMesh( Mesh=SWI_Grenadier_2 )
 export Modele_HvyScout_SWI_LOW is TResourceMesh( Mesh=RFA_PzGrenadier_LOW )
 
 //Landwehr_SWI
@@ -6101,6 +6108,18 @@ export Modele_Landwehr_CMD_SWI_LOW is TResourceMesh( Mesh=RFA_PzGrenadier_LOW )
 export Modele_MP_SWI is TResourceMesh( Mesh=SWI_MP_1 )
 export Modele_MP_SWI_02 is TResourceMesh( Mesh=SWI_MP_2 )
 export Modele_MP_SWI_LOW is TResourceMesh( Mesh=RFA_PzGrenadier_LOW )
+
+//StayBehind_SWI
+export Modele_StayBehind_SWI is TResourceMesh( Mesh=Civil1_Mullet )
+export Modele_StayBehind_SWI_02 is TResourceMesh( Mesh=Civil2_Trucker )
+export Modele_StayBehind_SWI_03 is TResourceMesh( Mesh=Civil10_Punk_Male )
+export Modele_StayBehind_SWI_04 is TResourceMesh( Mesh=Civil4_Suit )
+export Modele_StayBehind_SWI_05 is TResourceMesh( Mesh=Civil5_DoubleDenim )
+export Modele_StayBehind_SWI_06 is TResourceMesh( Mesh=Civil6_Miami )
+export Modele_StayBehind_SWI_07 is TResourceMesh( Mesh=Civil7_Pastel_Male )
+export Modele_StayBehind_SWI_08 is TResourceMesh( Mesh=Civil8_Princess )
+export Modele_StayBehind_SWI_09 is TResourceMesh( Mesh=Civil9_Punk_Female )
+export Modele_StayBehind_SWI_LOW is TResourceMesh( Mesh=Civil1_Mullet_LOW )
 
 //-------------------------------------------------------------------------------
 //-----------------------------------CIVILIANS-----------------------------------

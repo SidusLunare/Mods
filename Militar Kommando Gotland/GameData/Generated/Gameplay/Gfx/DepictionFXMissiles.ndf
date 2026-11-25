@@ -121,6 +121,7 @@ FXWeapon_ATGM_9M119M_Invar is FXWeapon_4
 FXWeapon_ATGM_9M119M_Refleks is FXWeapon_4
 FXWeapon_ATGM_9M119M_Svir is FXWeapon_4
 FXWeapon_ATGM_9M128_Agona is FXWeapon_2
+FXWeapon_ATGM_9M14_MalyutkaM1 is FXWeapon_8
 FXWeapon_ATGM_9M14_MalyutkaP_IFV is FXWeapon_8
 FXWeapon_ATGM_9M14_MalyutkaP_x2 is FXWeapon_8
 FXWeapon_ATGM_9M14_MalyutkaP_x6 is FXWeapon_8
@@ -139,8 +140,10 @@ FXWeapon_ATGM_BGM71D_TOW_2A_x2_IFV is FXWeapon_2
 FXWeapon_ATGM_BGM71D_TOW_2_x2 is FXWeapon_2
 FXWeapon_ATGM_BGM71D_TOW_2_x2_IFV is FXWeapon_2
 FXWeapon_ATGM_BGM71_TOW is FXWeapon_2
+FXWeapon_ATGM_Bantam is FXWeapon_8
 FXWeapon_ATGM_Bantam_x9 is FXWeapon_8
 FXWeapon_ATGM_Eryx is FXWeapon_2
+FXWeapon_ATGM_HJ73 is FXWeapon_8
 FXWeapon_ATGM_HJ8A is FXWeapon_4
 FXWeapon_ATGM_HOT1 is FXWeapon_2
 FXWeapon_ATGM_HOT2_x4 is FXWeapon_2

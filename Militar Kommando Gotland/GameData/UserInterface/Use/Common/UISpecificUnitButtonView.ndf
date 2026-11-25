@@ -211,8 +211,8 @@ private UnitTexturePixelWitdh is -2.0
 private UnitNameContainerMagnifiableHeight is 16.0
 private AddRemoveButtonSize is 30.0
 
-UnitButtonPixelBorderSize is 4
-UnitButtonPixelBorderSizeAsString is "4"
+UnitButtonBorderSize is 2
+UnitButtonBorderSizeAsString is "4"
 
 // Main Unit Button
 private template MainUnitButton
@@ -234,8 +234,11 @@ is BUCKButtonDescriptor
 
     ComponentFrame = TUIFramePropertyRTTI
     (
-        MagnifiableWidthHeight = [UnitButtonMagnifiableWidth + (<ShowXPButtons> ? UnitButtonXPAreaWidth : 0.0), UnitButtonMagnifiableHeight]
-        PixelWidthHeight = [2*UnitButtonPixelBorderSize, 2*UnitButtonPixelBorderSize]
+        MagnifiableWidthHeight =
+        [
+            UnitButtonMagnifiableWidth + 2*~/UnitButtonBorderSize + (<ShowXPButtons> ? UnitButtonXPAreaWidth : 0.0),
+            UnitButtonMagnifiableHeight + 2*~/UnitButtonBorderSize
+        ]
     )
 
     IsTogglable = <IsTogglable>
@@ -251,7 +254,7 @@ is BUCKButtonDescriptor
 
     HasBorder = true
     BorderLineColorToken = "BoutonVignetteAchatArmory"
-    BorderThicknessToken = UnitButtonPixelBorderSizeAsString
+    BorderThicknessToken = UnitButtonBorderSizeAsString
 
     Components =
     [

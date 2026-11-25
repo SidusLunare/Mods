@@ -9346,12 +9346,12 @@ unnamed TacticAerialDepictionRegistration
                     ),
                     THelix
                     (
-                        BladeCount = 2
+                        BladeCount = 3
                         BladesBoneName = "helice_ls_2"
                         BlurActionId = "FX_Helice_2"
-                        Clockwise = false
+                        Clockwise = true
                         HelixBoneName = "bloc_moteur_2"
-                        RotationAxis = 1
+                        RotationAxis = 2
                         RotationSpeed = 242
                     ),
                 ]
@@ -9364,8 +9364,8 @@ unnamed TacticAerialDepictionRegistration
         Actions = MAP[
                 ]
                 + DepictionAction_Stress_And_Wrecked_Helicopter
-                + MAP [ ('FX_Helice_1', Template_DepictionAction_Rotor( PaleLength = 1700 PaleCount = 3 RotationAxis = float3[0, 0, 1] SousMobile = "bloc_moteur_1" ))]
-                + MAP [ ('FX_Helice_2', Template_DepictionAction_Rotor( PaleLength = 300 PaleCount = 2 RotationAxis = float3[0, 1, 0] SousMobile = "bloc_moteur_2" ))]
+                + MAP [ ('FX_Helice_1', Template_DepictionAction_Rotor( PaleLength = 1385 PaleCount = 3 RotationAxis = float3[0, 0, 1] SousMobile = "bloc_moteur_1" ))]
+                + MAP [ ('FX_Helice_2', Template_DepictionAction_Rotor( PaleLength = 1418 PaleCount = 3 RotationAxis = float3[0, 0, 1] SousMobile = "bloc_moteur_2" ))]
                 + DepictionAction_CriticalFX_Helicopter
 
         SubDepictions = 
@@ -9450,42 +9450,18 @@ unnamed TacticAerialDepictionRegistration
             ),
         ]        
 )
-// Dépiction de l'unité Ka_27PV_SOV
-Op_Ka_27PV_SOV_Weapon1 is DepictionOperator_WeaponMissileCarriageFire
-(
-    Connoisseur = MissileCarriage_Ka_27PV_SOV
-    FireEffectTag = "weapon_effet_tag1"
-    NbProj = 1
-    WeaponIndex = 1
-    WeaponShootDataPropertyName = 
-    [
-        "WeaponShootData_0_1",
-    ]
-)
-Op_Ka_27PV_SOV_Weapon2 is DepictionOperator_WeaponMissileCarriageFire
-(
-    Connoisseur = MissileCarriage_Ka_27PV_SOV
-    FireEffectTag = "weapon_effet_tag2"
-    NbProj = 1
-    WeaponIndex = 3
-    WeaponShootDataPropertyName = 
-    [
-        "WeaponShootData_0_2",
-    ]
-)
+// Dépiction de l'unité Ka_27_SOV
 unnamed TacticAerialDepictionRegistration
 (
     AdditionalTextures = $/M3D/Shader/HelicoDestTextures
     Selector = SpecificMechanicalDepictionSelector
-    BlackHoleKey = 'Ka_27PV_SOV'
-    Alternatives = Alternatives_Ka_27PV_SOV
+    BlackHoleKey = 'Ka_27_SOV'
+    Alternatives = Alternatives_Ka_27_SOV
 
     Operators = 
         [
             $/GFX/Sound/DepictionOperator_MovementSound_SM_Helico_Mi17,
             DepictionOperator_SoundProbe,
-            Op_Ka_27PV_SOV_Weapon1,
-            Op_Ka_27PV_SOV_Weapon2,
             DepictionOperator_CriticalEffects,
             DepictionOperator_HelicopterLanding,
             DepictionOperator_GroundPuff_Helico,
@@ -9522,8 +9498,6 @@ unnamed TacticAerialDepictionRegistration
             DepictionOperator_EjectableProps_Helico,
         ]
         Actions = MAP[
-                    ( "weapon_effet_tag1", Weapon_RocketAir_B8_80mm_x20 ),
-                    ( "weapon_effet_tag2", Weapon_RocketAir_B8_80mm_x20 ),
                 ]
                 + DepictionAction_Stress_And_Wrecked_Helicopter
                 + MAP [ ('FX_Helice_1', Template_DepictionAction_Rotor( PaleLength = 1809 PaleCount = 3 RotationAxis = float3[0, 0, 1] SousMobile = "bloc_moteur_1" ))]
@@ -9543,8 +9517,6 @@ unnamed TacticAerialDepictionRegistration
                 Depiction = Pilot_Pilote_Helico_SOV
             ),
         ]        
-
-        SubDepictionGenerators = [ SubGenerators_Ka_27PV_SOV ]
 )
 // Dépiction de l'unité Ka_29_SOV
 Op_Ka_29_SOV_Weapon1 is DepictionOperator_WeaponContinuousFire
@@ -45214,7 +45186,7 @@ unnamed TacticAerialDepictionRegistration
         ]
         Actions = MAP[
                     ( "weapon_effet_tag1", Weapon_GatlingAir_NR30_30mm_x3 ),
-                    ( "weapon_effet_tag2", Weapon_AA_PL2 ),
+                    ( "weapon_effet_tag2", Weapon_RocketAirAir_Type57_57mm_x8 ),
                 ]
                 + DepictionAction_Stress_And_Wrecked_Avion
                 + DepictionAction_CriticalFX_Airplane
@@ -58932,29 +58904,6 @@ unnamed TacticAerialDepictionRegistration
         SubDepictionGenerators = [ SubGenerators_Pilatus_PC9_reco_CYP ]
 )
 // Dépiction de l'unité Pilatus_PC9_reco_SWI
-Op_Pilatus_PC9_reco_SWI_Weapon1 is DepictionOperator_WeaponContinuousFire
-(
-    Anchors = 
-    [
-        "fx_tourelle1_tir_01",
-    ]
-    FireEffectTag = "weapon_effet_tag1"
-    NbFX = 1
-    WeaponActiveAndCanShootPropertyName = "WeaponActiveAndCanShoot_1"
-    WeaponShootDataPropertyName = "WeaponShootData_0_1"
-)
-Op_Pilatus_PC9_reco_SWI_Weapon2 is DepictionOperator_WeaponMissileCarriageFire
-(
-    Connoisseur = MissileCarriage_Pilatus_PC9_reco_SWI
-    FireEffectTag = "weapon_effet_tag2"
-    NbProj = 2
-    WeaponIndex = 2
-    WeaponShootDataPropertyName = 
-    [
-        "WeaponShootData_0_2",
-        "WeaponShootData_1_2",
-    ]
-)
 unnamed TacticAerialDepictionRegistration
 (
     Deviator = DepictionDeviator_Airplane
@@ -58967,9 +58916,6 @@ unnamed TacticAerialDepictionRegistration
         [
             $/GFX/Sound/DepictionOperator_MovementSound_SM_SD_avion_Tucano,
             DepictionOperator_SoundProbe,
-            DepictionOperator_Turret_1_Aim,
-            Op_Pilatus_PC9_reco_SWI_Weapon1,
-            Op_Pilatus_PC9_reco_SWI_Weapon2,
             DepictionOperator_CriticalEffects,
             DepictionOperator_AirplaneParts,
             DepictionOperator_Airplane,
@@ -58997,8 +58943,6 @@ unnamed TacticAerialDepictionRegistration
             DepictionOperator_Flares,
         ]
         Actions = MAP[
-                    ( "weapon_effet_tag1", Weapon_GatlingAir_M2_12_7mm_x2 ),
-                    ( "weapon_effet_tag2", Weapon_RocketAir_Hydra_70mm_x14_avion ),
                 ]
                 + DepictionAction_Stress_And_Wrecked_Avion
                 + MAP [ ('FX_Helice_1', Template_DepictionAction_Rotor( PaleLength = 267 PaleCount = 4 RotationAxis = float3[1, 0, 0] SousMobile = "bloc_moteur_1" ))]
@@ -59019,8 +58963,6 @@ unnamed TacticAerialDepictionRegistration
                 Depiction = Pilot_Pilote_US
             ),
         ]        
-
-        SubDepictionGenerators = [ SubGenerators_Pilatus_PC9_reco_SWI ]
 )
 // Dépiction de l'unité RF4E_Phantom_HE_RFA
 Op_RF4E_Phantom_HE_RFA_Weapon2 is DepictionOperator_WeaponMissileCarriageFire
@@ -60396,7 +60338,7 @@ unnamed TacticAerialDepictionRegistration
         ]
         Actions = MAP[
                     ( "weapon_effet_tag1", Weapon_GatlingAir_NR30_30mm_x2 ),
-                    ( "weapon_effet_tag2", Weapon_Bomb_RBK_AO_clusterHE_500kg_x2 ),
+                    ( "weapon_effet_tag2", Weapon_Bomb_RBK_AO_clusterHE_500kg_x4 ),
                 ]
                 + DepictionAction_Stress_And_Wrecked_Avion
                 + DepictionAction_CriticalFX_Airplane
@@ -69607,6 +69549,17 @@ Op_Yak_38M_AA_SOV_Weapon2 is DepictionOperator_WeaponMissileCarriageFire
         "WeaponShootData_0_2",
     ]
 )
+Op_Yak_38M_AA_SOV_Weapon3 is DepictionOperator_WeaponMissileCarriageFire
+(
+    Connoisseur = MissileCarriage_Yak_38M_AA_SOV
+    FireEffectTag = "weapon_effet_tag3"
+    NbProj = 1
+    WeaponIndex = 3
+    WeaponShootDataPropertyName = 
+    [
+        "WeaponShootData_0_3",
+    ]
+)
 unnamed TacticAerialDepictionRegistration
 (
     Deviator = DepictionDeviator_Airplane
@@ -69622,6 +69575,7 @@ unnamed TacticAerialDepictionRegistration
             DepictionOperator_Turret_1_Aim,
             Op_Yak_38M_AA_SOV_Weapon1,
             Op_Yak_38M_AA_SOV_Weapon2,
+            Op_Yak_38M_AA_SOV_Weapon3,
             DepictionOperator_CriticalEffects,
             DepictionOperator_AirplaneParts,
             DepictionOperator_Airplane,
@@ -69634,7 +69588,8 @@ unnamed TacticAerialDepictionRegistration
         ]
         Actions = MAP[
                     ( "weapon_effet_tag1", Weapon_GatlingAir_GSh_23_23mm_x2 ),
-                    ( "weapon_effet_tag2", Weapon_AA_R60M_Vympel_x2 ),
+                    ( "weapon_effet_tag2", Weapon_AA_R60M_Vympel ),
+                    ( "weapon_effet_tag3", Weapon_AA_R60M_Vympel ),
                 ]
                 + DepictionAction_Stress_And_Wrecked_Avion
                 + DepictionAction_CriticalFX_Airplane

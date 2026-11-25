@@ -5932,8 +5932,8 @@ unnamed ShowroomAerialDepictionRegistration
         TCosmeticFixedBoneRotationOperatorDesc
         (
             BoneName = "bloc_moteur_2"
-            RotationAxis = float3[0, 1, 0]
-            RotationInDegree = -30
+            RotationAxis = float3[0, 0, 1]
+            RotationInDegree = 30
         ),
     ]
 )
@@ -5960,8 +5960,8 @@ unnamed ShowroomAerialDepictionRegistration
 )
 unnamed ShowroomAerialDepictionRegistration
 (
-    BlackHoleKey = "showroom_Ka_27PV_SOV"
-    MeshDescriptor = $/GFX/DepictionResources/Modele_Ka_27PV_SOV
+    BlackHoleKey = "showroom_Ka_27_SOV"
+    MeshDescriptor = $/GFX/DepictionResources/Modele_Ka_27_SOV
     Operators = 
     [
         DepictionOperator_Reset_Generic,
@@ -5977,10 +5977,6 @@ unnamed ShowroomAerialDepictionRegistration
             RotationAxis = float3[0, 0, 1]
             RotationInDegree = 30
         ),
-    ]
-    SubDepictionGenerators = 
-    [
-        SubGenerators_Showroom_Ka_27PV_SOV,
     ]
 )
 unnamed ShowroomAerialDepictionRegistration
@@ -12136,10 +12132,6 @@ unnamed ShowroomAerialDepictionRegistration
 (
     BlackHoleKey = "showroom_Pilatus_PC9_reco_SWI"
     MeshDescriptor = $/GFX/DepictionResources/Modele_Pilatus_PC9_reco_SWI
-    SubDepictionGenerators = 
-    [
-        SubGenerators_Showroom_Pilatus_PC9_reco_SWI,
-    ]
     SubDepictions = 
     [
         ShowroomLandingGear

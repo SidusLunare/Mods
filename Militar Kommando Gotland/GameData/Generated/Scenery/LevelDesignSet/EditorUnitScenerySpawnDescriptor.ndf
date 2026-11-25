@@ -779,14 +779,6 @@ unnamed Template_SceneryDescriptorSpawn
 )
 unnamed Template_SceneryDescriptorSpawn
 (
-    RegistrationName      = 'AMX_13_VCI_FAO_CYP'
-    ClassName             = '$/GFX/Unit/Descriptor_Unit_AMX_13_VCI_FAO_CYP'
-    AutoNameBase          = 'AMX_13_VCI_FAO_CYP'
-    ModelResource         = $/GFX/DepictionResources/Modele_AMX_13_VCI_FAO_CYP
-    ThumbstackScale       = 20
-)
-unnamed Template_SceneryDescriptorSpawn
-(
     RegistrationName      = 'AMX_13_VCI_supply_CYP'
     ClassName             = '$/GFX/Unit/Descriptor_Unit_AMX_13_VCI_supply_CYP'
     AutoNameBase          = 'AMX_13_VCI_supply_CYP'
@@ -1355,6 +1347,14 @@ unnamed Template_SceneryDescriptorSpawn
 )
 unnamed Template_SceneryDescriptorSpawn
 (
+    RegistrationName      = 'ATteam_Bantam_SWI'
+    ClassName             = '$/GFX/Unit/Descriptor_Unit_ATteam_Bantam_SWI'
+    AutoNameBase          = 'ATteam_Bantam_SWI'
+    ModelResource         = $/GFX/DepictionResources/Modele_ATteam_Bantam_SWI
+    ThumbstackScale       = 20
+)
+unnamed Template_SceneryDescriptorSpawn
+(
     RegistrationName      = 'ATteam_Fagot_Cuba_SOV'
     ClassName             = '$/GFX/Unit/Descriptor_Unit_ATteam_Fagot_Cuba_SOV'
     AutoNameBase          = 'ATteam_Fagot_Cuba_SOV'
@@ -1399,6 +1399,14 @@ unnamed Template_SceneryDescriptorSpawn
     ClassName             = '$/GFX/Unit/Descriptor_Unit_ATteam_Fagot_TCH'
     AutoNameBase          = 'ATteam_Fagot_TCH'
     ModelResource         = $/GFX/DepictionResources/Modele_ATteam_Fagot_TCH
+    ThumbstackScale       = 20
+)
+unnamed Template_SceneryDescriptorSpawn
+(
+    RegistrationName      = 'ATteam_HJ73_ALB'
+    ClassName             = '$/GFX/Unit/Descriptor_Unit_ATteam_HJ73_ALB'
+    AutoNameBase          = 'ATteam_HJ73_ALB'
+    ModelResource         = $/GFX/DepictionResources/Modele_ATteam_HJ73_ALB
     ThumbstackScale       = 20
 )
 unnamed Template_SceneryDescriptorSpawn
@@ -1495,6 +1503,62 @@ unnamed Template_SceneryDescriptorSpawn
     ClassName             = '$/GFX/Unit/Descriptor_Unit_ATteam_Konkurs_TTsko_SOV'
     AutoNameBase          = 'ATteam_Konkurs_TTsko_SOV'
     ModelResource         = $/GFX/DepictionResources/Modele_ATteam_Konkurs_TTsko_SOV
+    ThumbstackScale       = 20
+)
+unnamed Template_SceneryDescriptorSpawn
+(
+    RegistrationName      = 'ATteam_Malyutka_CUB'
+    ClassName             = '$/GFX/Unit/Descriptor_Unit_ATteam_Malyutka_CUB'
+    AutoNameBase          = 'ATteam_Malyutka_CUB'
+    ModelResource         = $/GFX/DepictionResources/Modele_ATteam_Malyutka_CUB
+    ThumbstackScale       = 20
+)
+unnamed Template_SceneryDescriptorSpawn
+(
+    RegistrationName      = 'ATteam_Malyutka_DDR'
+    ClassName             = '$/GFX/Unit/Descriptor_Unit_ATteam_Malyutka_DDR'
+    AutoNameBase          = 'ATteam_Malyutka_DDR'
+    ModelResource         = $/GFX/DepictionResources/Modele_ATteam_Malyutka_DDR
+    ThumbstackScale       = 20
+)
+unnamed Template_SceneryDescriptorSpawn
+(
+    RegistrationName      = 'ATteam_Malyutka_POL'
+    ClassName             = '$/GFX/Unit/Descriptor_Unit_ATteam_Malyutka_POL'
+    AutoNameBase          = 'ATteam_Malyutka_POL'
+    ModelResource         = $/GFX/DepictionResources/Modele_ATteam_Malyutka_POL
+    ThumbstackScale       = 20
+)
+unnamed Template_SceneryDescriptorSpawn
+(
+    RegistrationName      = 'ATteam_Malyutka_Para_POL'
+    ClassName             = '$/GFX/Unit/Descriptor_Unit_ATteam_Malyutka_Para_POL'
+    AutoNameBase          = 'ATteam_Malyutka_Para_POL'
+    ModelResource         = $/GFX/DepictionResources/Modele_ATteam_Malyutka_Para_POL
+    ThumbstackScale       = 20
+)
+unnamed Template_SceneryDescriptorSpawn
+(
+    RegistrationName      = 'ATteam_Malyutka_Reserve_SOV'
+    ClassName             = '$/GFX/Unit/Descriptor_Unit_ATteam_Malyutka_Reserve_SOV'
+    AutoNameBase          = 'ATteam_Malyutka_Reserve_SOV'
+    ModelResource         = $/GFX/DepictionResources/Modele_ATteam_Malyutka_Reserve_SOV
+    ThumbstackScale       = 20
+)
+unnamed Template_SceneryDescriptorSpawn
+(
+    RegistrationName      = 'ATteam_Malyutka_SOV'
+    ClassName             = '$/GFX/Unit/Descriptor_Unit_ATteam_Malyutka_SOV'
+    AutoNameBase          = 'ATteam_Malyutka_SOV'
+    ModelResource         = $/GFX/DepictionResources/Modele_ATteam_Malyutka_SOV
+    ThumbstackScale       = 20
+)
+unnamed Template_SceneryDescriptorSpawn
+(
+    RegistrationName      = 'ATteam_Malyutka_TCH'
+    ClassName             = '$/GFX/Unit/Descriptor_Unit_ATteam_Malyutka_TCH'
+    AutoNameBase          = 'ATteam_Malyutka_TCH'
+    ModelResource         = $/GFX/DepictionResources/Modele_ATteam_Malyutka_TCH
     ThumbstackScale       = 20
 )
 unnamed Template_SceneryDescriptorSpawn
@@ -2759,6 +2823,14 @@ unnamed Template_SceneryDescriptorSpawn
     ClassName             = '$/GFX/Unit/Descriptor_Unit_BJ212_MLRS_ALB'
     AutoNameBase          = 'BJ212_MLRS_ALB'
     ModelResource         = $/GFX/DepictionResources/Modele_BJ212_MLRS_ALB
+    ThumbstackScale       = 20
+)
+unnamed Template_SceneryDescriptorSpawn
+(
+    RegistrationName      = 'BJ212_MP_ALB'
+    ClassName             = '$/GFX/Unit/Descriptor_Unit_BJ212_MP_ALB'
+    AutoNameBase          = 'BJ212_MP_ALB'
+    ModelResource         = $/GFX/DepictionResources/Modele_BJ212_MP_ALB
     ThumbstackScale       = 20
 )
 unnamed Template_SceneryDescriptorSpawn
@@ -15259,6 +15331,14 @@ unnamed Template_SceneryDescriptorSpawn
 )
 unnamed Template_SceneryDescriptorSpawn
 (
+    RegistrationName      = 'MP_ALB'
+    ClassName             = '$/GFX/Unit/Descriptor_Unit_MP_ALB'
+    AutoNameBase          = 'MP_ALB'
+    ModelResource         = $/GFX/DepictionResources/Modele_MP_ALB
+    ThumbstackScale       = 20
+)
+unnamed Template_SceneryDescriptorSpawn
+(
     RegistrationName      = 'MP_AT_NL'
     ClassName             = '$/GFX/Unit/Descriptor_Unit_MP_AT_NL'
     AutoNameBase          = 'MP_AT_NL'
@@ -17671,14 +17751,6 @@ unnamed Template_SceneryDescriptorSpawn
     ClassName             = '$/GFX/Unit/Descriptor_Unit_PSzH_CMD_HON'
     AutoNameBase          = 'PSzH_CMD_HON'
     ModelResource         = $/GFX/DepictionResources/Modele_PSzH_CMD_HON
-    ThumbstackScale       = 20
-)
-unnamed Template_SceneryDescriptorSpawn
-(
-    RegistrationName      = 'PSzH_FDC_HON'
-    ClassName             = '$/GFX/Unit/Descriptor_Unit_PSzH_FDC_HON'
-    AutoNameBase          = 'PSzH_FDC_HON'
-    ModelResource         = $/GFX/DepictionResources/Modele_PSzH_FDC_HON
     ThumbstackScale       = 20
 )
 unnamed Template_SceneryDescriptorSpawn
@@ -21406,7 +21478,7 @@ unnamed Template_SceneryDescriptorSpawn
     RegistrationName      = 'StayBehind_SWI'
     ClassName             = '$/GFX/Unit/Descriptor_Unit_StayBehind_SWI'
     AutoNameBase          = 'StayBehind_SWI'
-    ModelResource         = $/GFX/DepictionResources/Modele_StayBehind_BEL
+    ModelResource         = $/GFX/DepictionResources/Modele_StayBehind_SWI
     ThumbstackScale       = 20
 )
 unnamed Template_SceneryDescriptorSpawn
@@ -25291,10 +25363,10 @@ unnamed Template_SceneryDescriptorSpawn
 )
 unnamed Template_SceneryDescriptorSpawn
 (
-    RegistrationName      = 'Ka_27PV_SOV'
-    ClassName             = '$/GFX/Unit/Descriptor_Unit_Ka_27PV_SOV'
-    AutoNameBase          = 'Ka_27PV_SOV'
-    ModelResource         = $/GFX/DepictionResources/Modele_Ka_27PV_SOV
+    RegistrationName      = 'Ka_27_SOV'
+    ClassName             = '$/GFX/Unit/Descriptor_Unit_Ka_27_SOV'
+    AutoNameBase          = 'Ka_27_SOV'
+    ModelResource         = $/GFX/DepictionResources/Modele_Ka_27_SOV
     ThumbstackScale       = 20
 )
 unnamed Template_SceneryDescriptorSpawn

@@ -1035,6 +1035,8 @@ UnitGridNameFilter is BUCKSpecificEditableTextDescriptor
 
 //-------------------------------------------------------------------------------------
 
+UnitGridSizeLineHeight is 88.0
+
 ArmoryUnitListContainer is BUCKSpecificScrollingContainerDescriptor
 (
     ElementName = "UnitDivisionScrollingContainer"
@@ -1066,35 +1068,57 @@ ArmoryUnitListContainer is BUCKSpecificScrollingContainerDescriptor
             )
 
             Axis = ~/ListAxis/Vertical
-            InterItemMargin = TRTTILength( Magnifiable = 1.0 )
+            InterItemMargin = TRTTILength( Magnifiable = 8.0 )
 
             BladeDescriptor = BUCKContainerDescriptor
             (
                 ComponentFrame = TUIFramePropertyRTTI
                 (
                     RelativeWidthHeight = [1.0, 0.0]
-                    MagnifiableWidthHeight = [0.0, 96.0]
+                    MagnifiableWidthHeight = [0.0, ~/UnitGridSizeLineHeight]
                 )
 
                 Components =
                 [
-                    BUCKGridDescriptor
-                    (
-                        ElementName = "PackList"
-
-                        ComponentFrame = TUIFramePropertyRTTI()
-                        FirstElementMargin = TRTTILength2( Magnifiable = [16.0, 0.0] )
-                        InterElementMargin = TRTTILength2( Magnifiable = [1.0, 1.0] )
-                        LastElementMargin = TRTTILength2( Magnifiable = [24.0, 0.0] )
-
-                        MaxElementsPerDimension = [~/MaxUnitByLineInUnitDivisionGridArmory, 0]
-
-                        // envoie UnitPackDescriptor
-                    )
+                    ~/UnitListPackGrid
                 ]
             )
         ),
     ]
+)
+
+//------------------------------------------------
+
+private UnitListPackGrid is BUCKGridDescriptor
+(
+    ElementName = "PackList"
+
+    ComponentFrame = TUIFramePropertyRTTI()
+    FirstElementMargin = TRTTILength2( Magnifiable = [16.0, 0.0] )
+    LastElementMargin = TRTTILength2( Magnifiable = [24.0, 0.0] )
+    NextRowsExtraFirstMargin = TRTTILength( Magnifiable = 30.0 )
+
+    MaxElementsPerDimension = [~/MaxUnitByLineInUnitDivisionGridArmory, 0]
+
+    BackgroundComponents =
+    [
+        BUCKContainerDescriptor
+        (
+            ComponentFrame = TUIFramePropertyRTTI
+            (
+                RelativeWidthHeight = [0.0, 1.0]
+                MagnifiableWidthHeight = [6.0, -88.0]
+                MagnifiableOffset = [31.0, -2.0]
+                AlignementToFather = [0.0, 1.0]
+                AlignementToAnchor = [0.0, 1.0]
+            )
+
+            HasBackground = true
+            BackgroundBlockColorToken = "ShowroomGray"
+        )
+    ]
+
+    // envoie UnitPackDescriptor
 )
 
 //------------------------------------------------
@@ -1365,17 +1389,15 @@ ArmoryComponentDescriptor is TUISpecificShowRoomArmoryComponentDescriptor
     (
         ComponentFrame = TUIFramePropertyRTTI
         (
-            MagnifiableWidthHeight = [0.0, 96.0]
+            MagnifiableWidthHeight = [0.0, ~/UnitGridSizeLineHeight]
         )
+        Axis = ~/ListAxis/Horizontal
 
         MagnifierMultiplication = 1
         ClipContent = true
         InterItemMargin = TRTTILength( Magnifiable = 1.0 )
-        Axis = ~/ListAxis/Horizontal
 
         BackgroundBlockColorToken = 'Blanc'
-        FirstMargin = TRTTILength( Magnifiable = 2.0 )
-        LastMargin = TRTTILength( Magnifiable = 2.0 )
      )
 
     UnitSpecialtiesContainer = ~/UnitSpecialties

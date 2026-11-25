@@ -4706,7 +4706,7 @@ Ammo_AGM_AGM65E_Maverick is TAmmunitionDescriptor
     TimeBetweenTwoShots               = 1.0
     TimeBetweenTwoFx                  = 1.0
     MinimumRangeGRU                   = 707
-    MaximumRangeGRU                   = 3500
+    MaximumRangeGRU                   = 4075
     MinimumRangeHelicopterGRU         = 0
     MaximumRangeHelicopterGRU         = 0
     MinimumRangeAirplaneGRU           = 0
@@ -4922,7 +4922,7 @@ Ammo_AGM_AJ_168_x2 is TAmmunitionDescriptor
     TimeBetweenTwoShots               = 2.0
     TimeBetweenTwoFx                  = 2.0
     MinimumRangeGRU                   = 707
-    MaximumRangeGRU                   = 3500
+    MaximumRangeGRU                   = 4400
     MinimumRangeHelicopterGRU         = 0
     MaximumRangeHelicopterGRU         = 0
     MinimumRangeAirplaneGRU           = 0
@@ -6277,7 +6277,7 @@ Ammo_AGM_Kh23M is TAmmunitionDescriptor
     TimeBetweenTwoShots               = 1.0
     TimeBetweenTwoFx                  = 1.0
     MinimumRangeGRU                   = 707
-    MaximumRangeGRU                   = 3500
+    MaximumRangeGRU                   = 4225
     MinimumRangeHelicopterGRU         = 0
     MaximumRangeHelicopterGRU         = 0
     MinimumRangeAirplaneGRU           = 0
@@ -6564,7 +6564,7 @@ Ammo_AGM_Kh25MR is TAmmunitionDescriptor
     TimeBetweenTwoShots               = 1.0
     TimeBetweenTwoFx                  = 1.0
     MinimumRangeGRU                   = 707
-    MaximumRangeGRU                   = 3500
+    MaximumRangeGRU                   = 4225
     MinimumRangeHelicopterGRU         = 0
     MaximumRangeHelicopterGRU         = 0
     MinimumRangeAirplaneGRU           = 0
@@ -6707,7 +6707,7 @@ Ammo_AGM_Kh29L is TAmmunitionDescriptor
     TimeBetweenTwoShots               = 1.0
     TimeBetweenTwoFx                  = 1.0
     MinimumRangeGRU                   = 707
-    MaximumRangeGRU                   = 3500
+    MaximumRangeGRU                   = 4225
     MinimumRangeHelicopterGRU         = 0
     MaximumRangeHelicopterGRU         = 0
     MinimumRangeAirplaneGRU           = 0
@@ -6923,7 +6923,7 @@ Ammo_AGM_Kh66 is TAmmunitionDescriptor
     TimeBetweenTwoShots               = 1.0
     TimeBetweenTwoFx                  = 1.0
     MinimumRangeGRU                   = 707
-    MaximumRangeGRU                   = 3500
+    MaximumRangeGRU                   = 4225
     MinimumRangeHelicopterGRU         = 0
     MaximumRangeHelicopterGRU         = 0
     MinimumRangeAirplaneGRU           = 0
@@ -8404,6 +8404,77 @@ Ammo_ATGM_9M128_Agona is TAmmunitionDescriptor
     MissileTimeBetweenCorrections     = 1.0
     MissileDescriptor                 = ~/Descriptor_Missile_ATGM_9M128_Agona
 )
+Ammo_ATGM_9M14_MalyutkaM1 is TAmmunitionDescriptor
+(
+    DescriptorId                      = GUID:{7cdd1a6e-26cd-4ca1-b1df-2bc89fcb54a0}
+    WeaponCursorType                  = Weapon_Cursor_GroundMissile
+    MinMaxCategory                    = MinMax_ATGM
+    Arme                              = TDamageTypeRTTI(Family=DamageFamily_ap_missile Index=17)
+    ProjectileType                    = EProjectileType/GuidedMissile
+    ImpactHappening                   = 'MissileATGMGen1'
+    FxPower                           = EFXPower/UltraLourd
+    TimeBetweenTwoShots               = 1.0
+    TimeBetweenTwoFx                  = 1.0
+    MinimumRangeGRU                   = 353
+    MaximumRangeGRU                   = 2625
+    MinimumRangeHelicopterGRU         = 0
+    MaximumRangeHelicopterGRU         = 0
+    MinimumRangeAirplaneGRU           = 0
+    MaximumRangeAirplaneGRU           = 0
+    MinimumRangeProjectileGRU         = 0
+    MaximumRangeProjectileGRU         = 0
+    AngleDispersion                   = 0.0020001473227855013
+    DispersionAtMaxRangeGRU           = 18
+    DispersionAtMinRangeGRU           = 16
+    SalvoShotsSorted                  = True
+    RadiusSplashPhysicalDamagesGRU    = 2
+    PhysicalDamages                   = 1.0
+    ShowDamageInUI                    = True
+    RadiusSplashSuppressDamagesGRU    = 38
+    SuppressDamages                   = 225.0
+    AllowSuppressDamageWhenNoImpact   = True
+    DisplaySalveAccuracy              = False
+    TirIndirect                       = False
+    TirReflexe                        = True
+    ReflexShotDisabledIfPriorityTarget = True
+    ProjectileSpeedGRU                = 310
+    MaxAccelerationGRU                = 176
+    NoiseDissimulationMalus           = 2.0
+    ShotsBeforeMaxNoise               = 2
+    TargetOnlyOneUnitInDistrict       = False
+    HitRollRuleDescriptor = TDiceHitRollRuleDescriptor
+    (
+        BaseCriticModifier = 0
+        BaseHitValueModifiers =
+        [
+            (EBaseHitValueModifier/Base, 0),
+            (EBaseHitValueModifier/Idling, 40),
+            (EBaseHitValueModifier/Moving, 0),
+            (EBaseHitValueModifier/Targeted, 0),
+        ]
+        DistanceToTarget = True
+    )
+    MaxSuccessiveHitCount             = 3
+    AimingTime                        = 2.2
+    TimeBetweenTwoSalvos              = 6.0
+    TimeBetweenTwoSalvos_Min          = -1.0
+    TimeBetweenTwoSalvos_Max          = -1.0
+    ShotsCountPerSalvo                = 1
+    SupplyCost                        = 30
+    CanShootOnPosition                = False
+    CanShootWhileMoving               = False
+    HasDeploymentTime                 = False
+    SimultaneousShotsCount            = 1
+    AffichageMunitionParSalve         = 1
+    SmokeDescriptor                   = nil
+    FireDescriptor                    = nil
+    IsHarmlessForAllies               = False
+    PiercingWeapon                    = True
+    TandemCharge                      = False
+    DamageTypeEvolutionOverRangeDescriptor  = nil
+    MissileTimeBetweenCorrections     = 2.0
+    MissileDescriptor                 = ~/Descriptor_Missile_ATGM_9M14_MalyutkaM1
+)
 Ammo_ATGM_9M14_MalyutkaP_IFV is TAmmunitionDescriptor
 (
     DescriptorId                      = GUID:{e4b1a8d0-e4c2-4b8b-bd47-60a6e3e7293c}
@@ -9682,6 +9753,77 @@ Ammo_ATGM_BGM71_TOW is TAmmunitionDescriptor
     MissileTimeBetweenCorrections     = 1.0
     MissileDescriptor                 = ~/Descriptor_Missile_ATGM_BGM71_TOW
 )
+Ammo_ATGM_Bantam is TAmmunitionDescriptor
+(
+    DescriptorId                      = GUID:{bbe62c73-3e69-46dc-9d0b-7244377f1718}
+    WeaponCursorType                  = Weapon_Cursor_GroundMissile
+    MinMaxCategory                    = MinMax_ATGM
+    Arme                              = TDamageTypeRTTI(Family=DamageFamily_ap_missile Index=17)
+    ProjectileType                    = EProjectileType/GuidedMissile
+    ImpactHappening                   = 'MissileATGMGen1'
+    FxPower                           = EFXPower/UltraLourd
+    TimeBetweenTwoShots               = 1.0
+    TimeBetweenTwoFx                  = 1.0
+    MinimumRangeGRU                   = 353
+    MaximumRangeGRU                   = 2450
+    MinimumRangeHelicopterGRU         = 0
+    MaximumRangeHelicopterGRU         = 0
+    MinimumRangeAirplaneGRU           = 0
+    MaximumRangeAirplaneGRU           = 0
+    MinimumRangeProjectileGRU         = 0
+    MaximumRangeProjectileGRU         = 0
+    AngleDispersion                   = 0.0020001473227855013
+    DispersionAtMaxRangeGRU           = 18
+    DispersionAtMinRangeGRU           = 16
+    SalvoShotsSorted                  = True
+    RadiusSplashPhysicalDamagesGRU    = 2
+    PhysicalDamages                   = 1.0
+    ShowDamageInUI                    = True
+    RadiusSplashSuppressDamagesGRU    = 38
+    SuppressDamages                   = 225.0
+    AllowSuppressDamageWhenNoImpact   = True
+    DisplaySalveAccuracy              = False
+    TirIndirect                       = False
+    TirReflexe                        = True
+    ReflexShotDisabledIfPriorityTarget = True
+    ProjectileSpeedGRU                = 310
+    MaxAccelerationGRU                = 176
+    NoiseDissimulationMalus           = 2.0
+    ShotsBeforeMaxNoise               = 2
+    TargetOnlyOneUnitInDistrict       = False
+    HitRollRuleDescriptor = TDiceHitRollRuleDescriptor
+    (
+        BaseCriticModifier = 0
+        BaseHitValueModifiers =
+        [
+            (EBaseHitValueModifier/Base, 0),
+            (EBaseHitValueModifier/Idling, 45),
+            (EBaseHitValueModifier/Moving, 0),
+            (EBaseHitValueModifier/Targeted, 0),
+        ]
+        DistanceToTarget = True
+    )
+    MaxSuccessiveHitCount             = 3
+    AimingTime                        = 2.2
+    TimeBetweenTwoSalvos              = 15.0
+    TimeBetweenTwoSalvos_Min          = -1.0
+    TimeBetweenTwoSalvos_Max          = -1.0
+    ShotsCountPerSalvo                = 9
+    SupplyCost                        = 270
+    CanShootOnPosition                = False
+    CanShootWhileMoving               = False
+    HasDeploymentTime                 = False
+    SimultaneousShotsCount            = 1
+    AffichageMunitionParSalve         = 9
+    SmokeDescriptor                   = nil
+    FireDescriptor                    = nil
+    IsHarmlessForAllies               = False
+    PiercingWeapon                    = True
+    TandemCharge                      = False
+    DamageTypeEvolutionOverRangeDescriptor  = nil
+    MissileTimeBetweenCorrections     = 2.0
+    MissileDescriptor                 = ~/Descriptor_Missile_ATGM_Bantam
+)
 Ammo_ATGM_Bantam_x9 is TAmmunitionDescriptor
 (
     DescriptorId                      = GUID:{61807429-c146-4156-aea6-d3b0fb31c382}
@@ -9694,7 +9836,7 @@ Ammo_ATGM_Bantam_x9 is TAmmunitionDescriptor
     TimeBetweenTwoShots               = 1.0
     TimeBetweenTwoFx                  = 1.0
     MinimumRangeGRU                   = 353
-    MaximumRangeGRU                   = 2100
+    MaximumRangeGRU                   = 2450
     MinimumRangeHelicopterGRU         = 0
     MaximumRangeHelicopterGRU         = 0
     MinimumRangeAirplaneGRU           = 0
@@ -9823,6 +9965,77 @@ Ammo_ATGM_Eryx is TAmmunitionDescriptor
     DamageTypeEvolutionOverRangeDescriptor  = nil
     MissileTimeBetweenCorrections     = 1.0
     MissileDescriptor                 = ~/Descriptor_Missile_ATGM_Eryx
+)
+Ammo_ATGM_HJ73 is TAmmunitionDescriptor
+(
+    DescriptorId                      = GUID:{d38fc26a-9711-4ff0-8ff1-16545467c521}
+    WeaponCursorType                  = Weapon_Cursor_GroundMissile
+    MinMaxCategory                    = MinMax_ATGM
+    Arme                              = TDamageTypeRTTI(Family=DamageFamily_ap_missile Index=16)
+    ProjectileType                    = EProjectileType/GuidedMissile
+    ImpactHappening                   = 'MissileATGMGen1'
+    FxPower                           = EFXPower/UltraLourd
+    TimeBetweenTwoShots               = 1.0
+    TimeBetweenTwoFx                  = 1.0
+    MinimumRangeGRU                   = 353
+    MaximumRangeGRU                   = 2625
+    MinimumRangeHelicopterGRU         = 0
+    MaximumRangeHelicopterGRU         = 0
+    MinimumRangeAirplaneGRU           = 0
+    MaximumRangeAirplaneGRU           = 0
+    MinimumRangeProjectileGRU         = 0
+    MaximumRangeProjectileGRU         = 0
+    AngleDispersion                   = 0.0020001473227855013
+    DispersionAtMaxRangeGRU           = 18
+    DispersionAtMinRangeGRU           = 16
+    SalvoShotsSorted                  = True
+    RadiusSplashPhysicalDamagesGRU    = 2
+    PhysicalDamages                   = 1.0
+    ShowDamageInUI                    = True
+    RadiusSplashSuppressDamagesGRU    = 38
+    SuppressDamages                   = 225.0
+    AllowSuppressDamageWhenNoImpact   = True
+    DisplaySalveAccuracy              = False
+    TirIndirect                       = False
+    TirReflexe                        = True
+    ReflexShotDisabledIfPriorityTarget = True
+    ProjectileSpeedGRU                = 310
+    MaxAccelerationGRU                = 176
+    NoiseDissimulationMalus           = 2.0
+    ShotsBeforeMaxNoise               = 2
+    TargetOnlyOneUnitInDistrict       = False
+    HitRollRuleDescriptor = TDiceHitRollRuleDescriptor
+    (
+        BaseCriticModifier = 0
+        BaseHitValueModifiers =
+        [
+            (EBaseHitValueModifier/Base, 0),
+            (EBaseHitValueModifier/Idling, 40),
+            (EBaseHitValueModifier/Moving, 0),
+            (EBaseHitValueModifier/Targeted, 0),
+        ]
+        DistanceToTarget = True
+    )
+    MaxSuccessiveHitCount             = 3
+    AimingTime                        = 2.2
+    TimeBetweenTwoSalvos              = 6.0
+    TimeBetweenTwoSalvos_Min          = -1.0
+    TimeBetweenTwoSalvos_Max          = -1.0
+    ShotsCountPerSalvo                = 1
+    SupplyCost                        = 30
+    CanShootOnPosition                = False
+    CanShootWhileMoving               = False
+    HasDeploymentTime                 = False
+    SimultaneousShotsCount            = 1
+    AffichageMunitionParSalve         = 1
+    SmokeDescriptor                   = nil
+    FireDescriptor                    = nil
+    IsHarmlessForAllies               = False
+    PiercingWeapon                    = True
+    TandemCharge                      = False
+    DamageTypeEvolutionOverRangeDescriptor  = nil
+    MissileTimeBetweenCorrections     = 2.0
+    MissileDescriptor                 = ~/Descriptor_Missile_ATGM_HJ73
 )
 Ammo_ATGM_HJ8A is TAmmunitionDescriptor
 (

@@ -585,12 +585,6 @@ unnamed GhostVehicleDepictionRegistration
 )
 unnamed GhostVehicleDepictionRegistration
 (
-    Alternatives = Alternatives_AMX_13_VCI_FAO_CYP
-    BlackHoleKey = "AMX_13_VCI_FAO_CYP"
-    Selector = SpecificMechanicalDepictionSelector
-)
-unnamed GhostVehicleDepictionRegistration
-(
     Alternatives = Alternatives_AMX_13_VCI_supply_CYP
     BlackHoleKey = "AMX_13_VCI_supply_CYP"
     Selector = SpecificMechanicalDepictionSelector
@@ -1011,6 +1005,12 @@ unnamed GhostVehicleDepictionRegistration
 )
 unnamed GhostVehicleDepictionRegistration
 (
+    Alternatives = Alternatives_ATteam_Bantam_SWI
+    BlackHoleKey = "ATteam_Bantam_SWI"
+    Selector = SpecificMechanicalDepictionSelector
+)
+unnamed GhostVehicleDepictionRegistration
+(
     Alternatives = Alternatives_ATteam_Fagot_Cuba_SOV
     BlackHoleKey = "ATteam_Fagot_Cuba_SOV"
     Selector = SpecificMechanicalDepictionSelector
@@ -1043,6 +1043,12 @@ unnamed GhostVehicleDepictionRegistration
 (
     Alternatives = Alternatives_ATteam_Fagot_TCH
     BlackHoleKey = "ATteam_Fagot_TCH"
+    Selector = SpecificMechanicalDepictionSelector
+)
+unnamed GhostVehicleDepictionRegistration
+(
+    Alternatives = Alternatives_ATteam_HJ73_ALB
+    BlackHoleKey = "ATteam_HJ73_ALB"
     Selector = SpecificMechanicalDepictionSelector
 )
 unnamed GhostVehicleDepictionRegistration
@@ -1115,6 +1121,48 @@ unnamed GhostVehicleDepictionRegistration
 (
     Alternatives = Alternatives_ATteam_Konkurs_TTsko_SOV
     BlackHoleKey = "ATteam_Konkurs_TTsko_SOV"
+    Selector = SpecificMechanicalDepictionSelector
+)
+unnamed GhostVehicleDepictionRegistration
+(
+    Alternatives = Alternatives_ATteam_Malyutka_CUB
+    BlackHoleKey = "ATteam_Malyutka_CUB"
+    Selector = SpecificMechanicalDepictionSelector
+)
+unnamed GhostVehicleDepictionRegistration
+(
+    Alternatives = Alternatives_ATteam_Malyutka_DDR
+    BlackHoleKey = "ATteam_Malyutka_DDR"
+    Selector = SpecificMechanicalDepictionSelector
+)
+unnamed GhostVehicleDepictionRegistration
+(
+    Alternatives = Alternatives_ATteam_Malyutka_POL
+    BlackHoleKey = "ATteam_Malyutka_POL"
+    Selector = SpecificMechanicalDepictionSelector
+)
+unnamed GhostVehicleDepictionRegistration
+(
+    Alternatives = Alternatives_ATteam_Malyutka_Para_POL
+    BlackHoleKey = "ATteam_Malyutka_Para_POL"
+    Selector = SpecificMechanicalDepictionSelector
+)
+unnamed GhostVehicleDepictionRegistration
+(
+    Alternatives = Alternatives_ATteam_Malyutka_Reserve_SOV
+    BlackHoleKey = "ATteam_Malyutka_Reserve_SOV"
+    Selector = SpecificMechanicalDepictionSelector
+)
+unnamed GhostVehicleDepictionRegistration
+(
+    Alternatives = Alternatives_ATteam_Malyutka_SOV
+    BlackHoleKey = "ATteam_Malyutka_SOV"
+    Selector = SpecificMechanicalDepictionSelector
+)
+unnamed GhostVehicleDepictionRegistration
+(
+    Alternatives = Alternatives_ATteam_Malyutka_TCH
+    BlackHoleKey = "ATteam_Malyutka_TCH"
     Selector = SpecificMechanicalDepictionSelector
 )
 unnamed GhostVehicleDepictionRegistration
@@ -1829,6 +1877,12 @@ unnamed GhostVehicleDepictionRegistration
 (
     Alternatives = Alternatives_BJ212_MLRS_ALB
     BlackHoleKey = "BJ212_MLRS_ALB"
+    Selector = SpecificMechanicalDepictionSelector
+)
+unnamed GhostVehicleDepictionRegistration
+(
+    Alternatives = Alternatives_BJ212_MP_ALB
+    BlackHoleKey = "BJ212_MP_ALB"
     Selector = SpecificMechanicalDepictionSelector
 )
 unnamed GhostVehicleDepictionRegistration
@@ -10162,12 +10216,6 @@ unnamed GhostVehicleDepictionRegistration
 )
 unnamed GhostVehicleDepictionRegistration
 (
-    Alternatives = Alternatives_PSzH_FDC_HON
-    BlackHoleKey = "PSzH_FDC_HON"
-    Selector = SpecificMechanicalDepictionSelector
-)
-unnamed GhostVehicleDepictionRegistration
-(
     Alternatives = Alternatives_PSzH_IV_20mm_HON
     BlackHoleKey = "PSzH_IV_20mm_HON"
     Selector = SpecificMechanicalDepictionSelector
@@ -13636,8 +13684,8 @@ unnamed GhostAerialDepictionRegistration
 )
 unnamed GhostAerialDepictionRegistration
 (
-    Alternatives = Alternatives_Ka_27PV_SOV
-    BlackHoleKey = "Ka_27PV_SOV"
+    Alternatives = Alternatives_Ka_27_SOV
+    BlackHoleKey = "Ka_27_SOV"
     Selector = SpecificMechanicalDepictionSelector
 )
 unnamed GhostAerialDepictionRegistration

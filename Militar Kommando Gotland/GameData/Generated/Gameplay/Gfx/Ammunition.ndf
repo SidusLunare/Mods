@@ -20,7 +20,6 @@ Ammo_AutoCanon_AP_20mm_M204GK is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 99
     DispersionAtMinRangeGRU           = 18
@@ -88,7 +87,6 @@ Ammo_AutoCanon_AP_20mm_M621_GIAT is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 106
     DispersionAtMinRangeGRU           = 18
@@ -156,7 +154,6 @@ Ammo_AutoCanon_AP_20mm_M621_GIAT_AMX30 is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 99
     DispersionAtMinRangeGRU           = 18
@@ -224,7 +221,6 @@ Ammo_AutoCanon_AP_20mm_MK_20_Rh_202 is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 99
     DispersionAtMinRangeGRU           = 18
@@ -292,7 +288,6 @@ Ammo_AutoCanon_AP_20mm_RH202 is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 106
     DispersionAtMinRangeGRU           = 18
@@ -360,7 +355,6 @@ Ammo_AutoCanon_AP_23mm_Bitube_Gsh23L is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 106
     DispersionAtMinRangeGRU           = 18
@@ -428,7 +422,6 @@ Ammo_AutoCanon_AP_23mm_NS23 is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 106
     DispersionAtMinRangeGRU           = 18
@@ -496,7 +489,6 @@ Ammo_AutoCanon_AP_25mm_KBA is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 99
     DispersionAtMinRangeGRU           = 18
@@ -564,7 +556,6 @@ Ammo_AutoCanon_AP_25mm_M242_Bushmaster_Late is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 99
     DispersionAtMinRangeGRU           = 18
@@ -632,7 +623,6 @@ Ammo_AutoCanon_AP_30mm_24A2 is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 106
     DispersionAtMinRangeGRU           = 18
@@ -700,7 +690,6 @@ Ammo_AutoCanon_AP_30mm_24A2_BMP2 is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 99
     DispersionAtMinRangeGRU           = 18
@@ -768,7 +757,6 @@ Ammo_AutoCanon_AP_30mm_2A72_BMP3 is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 99
     DispersionAtMinRangeGRU           = 18
@@ -836,7 +824,6 @@ Ammo_AutoCanon_AP_30mm_Bitube_Gsh30k is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 106
     DispersionAtMinRangeGRU           = 18
@@ -904,7 +891,6 @@ Ammo_AutoCanon_AP_30mm_L21A1_RARDEN is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 99
     DispersionAtMinRangeGRU           = 18
@@ -972,7 +958,6 @@ Ammo_AutoCanon_AP_30mm_M230 is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 106
     DispersionAtMinRangeGRU           = 18
@@ -1040,7 +1025,6 @@ Ammo_AutoCanon_AP_Kan48_73_20mm is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 99
     DispersionAtMinRangeGRU           = 18
@@ -1108,7 +1092,6 @@ Ammo_AutoCanon_AP_M693_F1_20mm is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 99
     DispersionAtMinRangeGRU           = 18
@@ -1176,7 +1159,6 @@ Ammo_AutoCanon_AP_Oerlikon_KAD_20mm is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 99
     DispersionAtMinRangeGRU           = 18
@@ -1244,7 +1226,6 @@ Ammo_AutoCanon_HE_20mm_M204GK is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 99
     DispersionAtMinRangeGRU           = 18
@@ -1314,7 +1295,6 @@ Ammo_AutoCanon_HE_20mm_M621_GIAT is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 106
     DispersionAtMinRangeGRU           = 18
@@ -1384,7 +1364,6 @@ Ammo_AutoCanon_HE_20mm_M621_GIAT_AMX30 is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 99
     DispersionAtMinRangeGRU           = 18
@@ -1454,7 +1433,6 @@ Ammo_AutoCanon_HE_20mm_MK_20_Rh_202 is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 99
     DispersionAtMinRangeGRU           = 18
@@ -1524,7 +1502,6 @@ Ammo_AutoCanon_HE_20mm_RH202 is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 106
     DispersionAtMinRangeGRU           = 18
@@ -1594,7 +1571,6 @@ Ammo_AutoCanon_HE_23mm_Bitube_Gsh23L is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 106
     DispersionAtMinRangeGRU           = 18
@@ -1664,7 +1640,6 @@ Ammo_AutoCanon_HE_23mm_NS23 is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 106
     DispersionAtMinRangeGRU           = 18
@@ -1734,7 +1709,6 @@ Ammo_AutoCanon_HE_25mm_KBA is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 99
     DispersionAtMinRangeGRU           = 18
@@ -1804,7 +1778,6 @@ Ammo_AutoCanon_HE_25mm_M242_Bushmaster_Late is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 99
     DispersionAtMinRangeGRU           = 18
@@ -1874,7 +1847,6 @@ Ammo_AutoCanon_HE_25mm_M242_Bushmaster_Late_BSV is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 99
     DispersionAtMinRangeGRU           = 18
@@ -1944,7 +1916,6 @@ Ammo_AutoCanon_HE_30mm_24A2 is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 106
     DispersionAtMinRangeGRU           = 18
@@ -2014,7 +1985,6 @@ Ammo_AutoCanon_HE_30mm_24A2_BMP2 is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 99
     DispersionAtMinRangeGRU           = 18
@@ -2084,7 +2054,6 @@ Ammo_AutoCanon_HE_30mm_2A72_BMP3 is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 99
     DispersionAtMinRangeGRU           = 18
@@ -2154,7 +2123,6 @@ Ammo_AutoCanon_HE_30mm_Bitube_Gsh30k is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 106
     DispersionAtMinRangeGRU           = 18
@@ -2224,7 +2192,6 @@ Ammo_AutoCanon_HE_30mm_L21A1_RARDEN is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 99
     DispersionAtMinRangeGRU           = 18
@@ -2294,7 +2261,6 @@ Ammo_AutoCanon_HE_30mm_M230 is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 106
     DispersionAtMinRangeGRU           = 18
@@ -2364,7 +2330,6 @@ Ammo_AutoCanon_HE_Kan48_73_20mm is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 99
     DispersionAtMinRangeGRU           = 18
@@ -2434,7 +2399,6 @@ Ammo_AutoCanon_HE_M693_F1_20mm is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 99
     DispersionAtMinRangeGRU           = 18
@@ -2504,7 +2468,6 @@ Ammo_AutoCanon_HE_Oerlikon_KAD_20mm is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 99
     DispersionAtMinRangeGRU           = 18
@@ -2573,7 +2536,6 @@ Ammo_AutoDefense_AntiATGM is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 80
     MaximumRangeProjectileGRU         = 200
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 150
     DispersionAtMinRangeGRU           = 100
@@ -2639,7 +2601,6 @@ Ammo_AutoDefense_AntiATGM_T2A2 is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 80
     MaximumRangeProjectileGRU         = 200
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 150
     DispersionAtMinRangeGRU           = 100
@@ -2706,7 +2667,6 @@ Ammo_AutocanonAir_Bofors_40mm_AC130 is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 105
     DispersionAtMinRangeGRU           = 15
@@ -3099,7 +3059,7 @@ Ammo_Bomb_BINC300_209kg_Napalm_x4 is TAmmunitionDescriptor
     SimultaneousShotsCount            = 1
     AffichageMunitionParSalve         = 4
     SmokeDescriptor                   = nil
-    FireDescriptor                    = $/GFX/Weapon/Descriptor_Fire_NapalmMoyen
+    FireDescriptor                    = $/GFX/Weapon/Descriptor_Fire_NapalmLourd
     FireTriggeringProbability         = 1.0
     IgnoreInflammabilityConditions    = True
     IsHarmlessForAllies               = False
@@ -3171,7 +3131,7 @@ Ammo_Bomb_BIN_375kg_Napalm_x6 is TAmmunitionDescriptor
     SimultaneousShotsCount            = 1
     AffichageMunitionParSalve         = 6
     SmokeDescriptor                   = nil
-    FireDescriptor                    = $/GFX/Weapon/Descriptor_Fire_NapalmMoyen
+    FireDescriptor                    = $/GFX/Weapon/Descriptor_Fire_NapalmLourd
     FireTriggeringProbability         = 1.0
     IgnoreInflammabilityConditions    = True
     IsHarmlessForAllies               = False
@@ -4102,7 +4062,7 @@ Ammo_Bomb_Bidons_Speciaux_Napalm_x4 is TAmmunitionDescriptor
     SimultaneousShotsCount            = 1
     AffichageMunitionParSalve         = 4
     SmokeDescriptor                   = nil
-    FireDescriptor                    = $/GFX/Weapon/Descriptor_Fire_NapalmMoyen
+    FireDescriptor                    = $/GFX/Weapon/Descriptor_Fire_NapalmLourd
     FireTriggeringProbability         = 1.0
     IgnoreInflammabilityConditions    = True
     IsHarmlessForAllies               = False
@@ -5542,8 +5502,9 @@ Ammo_Bomb_Cassino_181kg_x2 is TAmmunitionDescriptor
     SimultaneousShotsCount            = 1
     AffichageMunitionParSalve         = 2
     SmokeDescriptor                   = nil
-    FireDescriptor                    = $/GFX/Weapon/Descriptor_Fire_Incendie
-    FireTriggeringProbability         = 0.2
+    FireDescriptor                    = $/GFX/Weapon/Descriptor_Fire_NapalmLourd
+    FireTriggeringProbability         = 1.0
+    IgnoreInflammabilityConditions    = True
     IsHarmlessForAllies               = False
     PiercingWeapon                    = False
     TandemCharge                      = False
@@ -5817,14 +5778,14 @@ Ammo_Bomb_FAB_3000kg_x1 is TAmmunitionDescriptor
     TimeBetweenTwoSalvos              = 1.0
     TimeBetweenTwoSalvos_Min          = -1.0
     TimeBetweenTwoSalvos_Max          = -1.0
-    ShotsCountPerSalvo                = 2
-    SupplyCost                        = 60.0
+    ShotsCountPerSalvo                = 1
+    SupplyCost                        = 30.0
     NbSalvosShootOnPosition           = 1
     CanShootOnPosition                = True
     CanShootWhileMoving               = True
     HasDeploymentTime                 = False
     SimultaneousShotsCount            = 1
-    AffichageMunitionParSalve         = 2
+    AffichageMunitionParSalve         = 1
     SmokeDescriptor                   = nil
     FireDescriptor                    = $/GFX/Weapon/Descriptor_Fire_Incendie
     FireTriggeringProbability         = 0.2
@@ -7106,7 +7067,7 @@ Ammo_Bomb_Mk5_230kg_Incendiary_x2 is TAmmunitionDescriptor
     SimultaneousShotsCount            = 1
     AffichageMunitionParSalve         = 2
     SmokeDescriptor                   = nil
-    FireDescriptor                    = $/GFX/Weapon/Descriptor_Fire_NapalmMoyen
+    FireDescriptor                    = $/GFX/Weapon/Descriptor_Fire_NapalmLourd
     FireTriggeringProbability         = 1.0
     IgnoreInflammabilityConditions    = True
     IsHarmlessForAllies               = False
@@ -7178,7 +7139,7 @@ Ammo_Bomb_Mk5_230kg_Incendiary_x4 is TAmmunitionDescriptor
     SimultaneousShotsCount            = 1
     AffichageMunitionParSalve         = 4
     SmokeDescriptor                   = nil
-    FireDescriptor                    = $/GFX/Weapon/Descriptor_Fire_NapalmMoyen
+    FireDescriptor                    = $/GFX/Weapon/Descriptor_Fire_NapalmLourd
     FireTriggeringProbability         = 1.0
     IgnoreInflammabilityConditions    = True
     IsHarmlessForAllies               = False
@@ -7250,7 +7211,7 @@ Ammo_Bomb_Mk77_340kg_Napalm_x10 is TAmmunitionDescriptor
     SimultaneousShotsCount            = 1
     AffichageMunitionParSalve         = 10
     SmokeDescriptor                   = nil
-    FireDescriptor                    = $/GFX/Weapon/Descriptor_Fire_NapalmMoyen
+    FireDescriptor                    = $/GFX/Weapon/Descriptor_Fire_NapalmLourd
     FireTriggeringProbability         = 1.0
     IgnoreInflammabilityConditions    = True
     IsHarmlessForAllies               = False
@@ -7322,7 +7283,7 @@ Ammo_Bomb_Mk77_340kg_Napalm_x2 is TAmmunitionDescriptor
     SimultaneousShotsCount            = 1
     AffichageMunitionParSalve         = 2
     SmokeDescriptor                   = nil
-    FireDescriptor                    = $/GFX/Weapon/Descriptor_Fire_NapalmMoyen
+    FireDescriptor                    = $/GFX/Weapon/Descriptor_Fire_NapalmLourd
     FireTriggeringProbability         = 1.0
     IgnoreInflammabilityConditions    = True
     IsHarmlessForAllies               = False
@@ -7394,7 +7355,7 @@ Ammo_Bomb_Mk77_340kg_Napalm_x4 is TAmmunitionDescriptor
     SimultaneousShotsCount            = 1
     AffichageMunitionParSalve         = 4
     SmokeDescriptor                   = nil
-    FireDescriptor                    = $/GFX/Weapon/Descriptor_Fire_NapalmMoyen
+    FireDescriptor                    = $/GFX/Weapon/Descriptor_Fire_NapalmLourd
     FireTriggeringProbability         = 1.0
     IgnoreInflammabilityConditions    = True
     IsHarmlessForAllies               = False
@@ -7466,7 +7427,7 @@ Ammo_Bomb_Mk77_340kg_Napalm_x8 is TAmmunitionDescriptor
     SimultaneousShotsCount            = 1
     AffichageMunitionParSalve         = 8
     SmokeDescriptor                   = nil
-    FireDescriptor                    = $/GFX/Weapon/Descriptor_Fire_NapalmMoyen
+    FireDescriptor                    = $/GFX/Weapon/Descriptor_Fire_NapalmLourd
     FireTriggeringProbability         = 1.0
     IgnoreInflammabilityConditions    = True
     IsHarmlessForAllies               = False
@@ -8461,8 +8422,9 @@ Ammo_Bomb_Napalmbombe_200kg_x4 is TAmmunitionDescriptor
     SimultaneousShotsCount            = 1
     AffichageMunitionParSalve         = 4
     SmokeDescriptor                   = nil
-    FireDescriptor                    = $/GFX/Weapon/Descriptor_Fire_Incendie
-    FireTriggeringProbability         = 0.2
+    FireDescriptor                    = $/GFX/Weapon/Descriptor_Fire_NapalmLourd
+    FireTriggeringProbability         = 1.0
+    IgnoreInflammabilityConditions    = True
     IsHarmlessForAllies               = False
     PiercingWeapon                    = False
     TandemCharge                      = False
@@ -8532,8 +8494,9 @@ Ammo_Bomb_Napalmbombe_400kg is TAmmunitionDescriptor
     SimultaneousShotsCount            = 1
     AffichageMunitionParSalve         = 1
     SmokeDescriptor                   = nil
-    FireDescriptor                    = $/GFX/Weapon/Descriptor_Fire_Incendie
-    FireTriggeringProbability         = 0.2
+    FireDescriptor                    = $/GFX/Weapon/Descriptor_Fire_NapalmLourd
+    FireTriggeringProbability         = 1.0
+    IgnoreInflammabilityConditions    = True
     IsHarmlessForAllies               = False
     PiercingWeapon                    = False
     TandemCharge                      = False
@@ -8610,9 +8573,9 @@ Ammo_Bomb_ODAB_500PM_500kg_Thermobaric_x6 is TAmmunitionDescriptor
     TandemCharge                      = False
     DamageTypeEvolutionOverRangeDescriptor  = nil
 )
-Ammo_Bomb_RBK_AO_clusterHE_500kg_x2 is TAmmunitionDescriptor
+Ammo_Bomb_RBK_AO_clusterHE_500kg_x4 is TAmmunitionDescriptor
 (
-    DescriptorId                      = GUID:{5fa41e4e-f5a0-4815-956a-72c9e74a3f5b}
+    DescriptorId                      = GUID:{370ddd4c-d113-4da0-ab9f-f9f18c7267d6}
     WeaponCursorType                  = Weapon_Cursor_CorrectedArtillery
     MinMaxCategory                    = MinMax_Bombe
     Arme                              = TDamageTypeRTTI(Family=DamageFamily_he_cluster Index=1)
@@ -8667,14 +8630,14 @@ Ammo_Bomb_RBK_AO_clusterHE_500kg_x2 is TAmmunitionDescriptor
     TimeBetweenTwoSalvos              = 1.0
     TimeBetweenTwoSalvos_Min          = -1.0
     TimeBetweenTwoSalvos_Max          = -1.0
-    ShotsCountPerSalvo                = 2
-    SupplyCost                        = 60.0
+    ShotsCountPerSalvo                = 4
+    SupplyCost                        = 120.0
     NbSalvosShootOnPosition           = 1
     CanShootOnPosition                = True
     CanShootWhileMoving               = True
     HasDeploymentTime                 = False
     SimultaneousShotsCount            = 1
-    AffichageMunitionParSalve         = 2
+    AffichageMunitionParSalve         = 4
     SmokeDescriptor                   = nil
     FireDescriptor                    = nil
     IsHarmlessForAllies               = False
@@ -8960,7 +8923,7 @@ Ammo_Bomb_ZB500_500kg_Napalm_x2 is TAmmunitionDescriptor
     SimultaneousShotsCount            = 1
     AffichageMunitionParSalve         = 2
     SmokeDescriptor                   = nil
-    FireDescriptor                    = $/GFX/Weapon/Descriptor_Fire_NapalmMoyen
+    FireDescriptor                    = $/GFX/Weapon/Descriptor_Fire_NapalmLourd
     FireTriggeringProbability         = 1.0
     IgnoreInflammabilityConditions    = True
     IsHarmlessForAllies               = False
@@ -9032,7 +8995,7 @@ Ammo_Bomb_ZB500_500kg_Napalm_x4 is TAmmunitionDescriptor
     SimultaneousShotsCount            = 1
     AffichageMunitionParSalve         = 4
     SmokeDescriptor                   = nil
-    FireDescriptor                    = $/GFX/Weapon/Descriptor_Fire_NapalmMoyen
+    FireDescriptor                    = $/GFX/Weapon/Descriptor_Fire_NapalmLourd
     FireTriggeringProbability         = 1.0
     IgnoreInflammabilityConditions    = True
     IsHarmlessForAllies               = False
@@ -9104,7 +9067,7 @@ Ammo_Bomb_ZB500_500kg_Napalm_x6 is TAmmunitionDescriptor
     SimultaneousShotsCount            = 1
     AffichageMunitionParSalve         = 6
     SmokeDescriptor                   = nil
-    FireDescriptor                    = $/GFX/Weapon/Descriptor_Fire_NapalmMoyen
+    FireDescriptor                    = $/GFX/Weapon/Descriptor_Fire_NapalmLourd
     FireTriggeringProbability         = 1.0
     IgnoreInflammabilityConditions    = True
     IsHarmlessForAllies               = False
@@ -15992,12 +15955,79 @@ Ammo_Canon_AP_85mm_S53 is TAmmunitionDescriptor
     TandemCharge                      = False
     DamageTypeEvolutionOverRangeDescriptor  = nil
 )
+Ammo_Canon_AP_85mm_Type56_APFSDS is TAmmunitionDescriptor
+(
+    DescriptorId                      = GUID:{0737bd17-1195-4509-aa97-85aca4c51fc4}
+    WeaponCursorType                  = Weapon_Cursor_Canon
+    MinMaxCategory                    = MinMax_CanonAP
+    Arme                              = TDamageTypeRTTI(Family=DamageFamily_ap Index=26)
+    ProjectileType                    = EProjectileType/Obus
+    ImpactHappening                   = 'CanonMoyenAPPT76'
+    FxPower                           = EFXPower/Moyen
+    TimeBetweenTwoShots               = 1.0
+    TimeBetweenTwoFx                  = 1.0
+    MinimumRangeGRU                   = 35
+    MaximumRangeGRU                   = 1925
+    MinimumRangeHelicopterGRU         = 0
+    MaximumRangeHelicopterGRU         = 0
+    MinimumRangeAirplaneGRU           = 0
+    MaximumRangeAirplaneGRU           = 0
+    MinimumRangeProjectileGRU         = 0
+    MaximumRangeProjectileGRU         = 0
+    AngleDispersion                   = 0.0
+    DispersionAtMaxRangeGRU           = 106
+    DispersionAtMinRangeGRU           = 18
+    SalvoShotsSorted                  = False
+    RadiusSplashPhysicalDamagesGRU    = 1
+    PhysicalDamages                   = 1.0
+    ShowDamageInUI                    = False
+    RadiusSplashSuppressDamagesGRU    = 30
+    SuppressDamages                   = 57.0
+    AllowSuppressDamageWhenNoImpact   = False
+    DisplaySalveAccuracy              = False
+    TirIndirect                       = False
+    TirReflexe                        = True
+    ProjectileSpeedGRU                = 2088
+    NoiseDissimulationMalus           = 2.5
+    ShotsBeforeMaxNoise               = 2
+    TargetOnlyOneUnitInDistrict       = True
+    HitRollRuleDescriptor = TDiceHitRollRuleDescriptor
+    (
+        BaseCriticModifier = 0
+        BaseHitValueModifiers =
+        [
+            (EBaseHitValueModifier/Base, 0),
+            (EBaseHitValueModifier/Idling, 45),
+            (EBaseHitValueModifier/Moving, 0),
+            (EBaseHitValueModifier/Targeted, 0),
+        ]
+        DistanceToTarget = True
+    )
+    MaxSuccessiveHitCount             = 3
+    AimingTime                        = 3.0
+    TimeBetweenTwoSalvos              = 5.75
+    TimeBetweenTwoSalvos_Min          = -1.0
+    TimeBetweenTwoSalvos_Max          = -1.0
+    ShotsCountPerSalvo                = 1
+    SupplyCost                        = 12.0
+    CanShootOnPosition                = False
+    CanShootWhileMoving               = False
+    HasDeploymentTime                 = False
+    SimultaneousShotsCount            = 1
+    AffichageMunitionParSalve         = 1
+    SmokeDescriptor                   = nil
+    FireDescriptor                    = nil
+    IsHarmlessForAllies               = True
+    PiercingWeapon                    = True
+    TandemCharge                      = False
+    DamageTypeEvolutionOverRangeDescriptor  = ~/DamageTypeEvolutionOverRangeDescriptor_AP1_1Km
+)
 Ammo_Canon_AP_85mm_Type62 is TAmmunitionDescriptor
 (
     DescriptorId                      = GUID:{c324cfff-1dfe-4ab7-8bad-7efb62ece42a}
     WeaponCursorType                  = Weapon_Cursor_Canon
     MinMaxCategory                    = MinMax_CanonAP
-    Arme                              = TDamageTypeRTTI(Family=DamageFamily_ap_missile Index=13)
+    Arme                              = TDamageTypeRTTI(Family=DamageFamily_ap Index=26)
     ProjectileType                    = EProjectileType/Obus
     ImpactHappening                   = 'CanonMoyenAPPT76'
     FxPower                           = EFXPower/Moyen
@@ -16057,7 +16087,7 @@ Ammo_Canon_AP_85mm_Type62 is TAmmunitionDescriptor
     IsHarmlessForAllies               = True
     PiercingWeapon                    = True
     TandemCharge                      = False
-    DamageTypeEvolutionOverRangeDescriptor  = nil
+    DamageTypeEvolutionOverRangeDescriptor  = ~/DamageTypeEvolutionOverRangeDescriptor_AP1_1Km
 )
 Ammo_Canon_AP_85mm_Vz52 is TAmmunitionDescriptor
 (
@@ -24816,6 +24846,75 @@ Ammo_Canon_HE_85mm_S53 is TAmmunitionDescriptor
     TandemCharge                      = False
     DamageTypeEvolutionOverRangeDescriptor  = nil
 )
+Ammo_Canon_HE_85mm_Type56_APFSDS is TAmmunitionDescriptor
+(
+    DescriptorId                      = GUID:{5167ec6c-94ef-4edf-bf7c-b13413601fdc}
+    WeaponCursorType                  = Weapon_Cursor_Canon
+    MinMaxCategory                    = MinMax_CanonAP
+    Arme                              = TDamageTypeRTTI(Family=DamageFamily_he Index=1)
+    ProjectileType                    = EProjectileType/Obus
+    ImpactHappening                   = 'CanonMoyenHEPT76'
+    FxPower                           = EFXPower/Moyen
+    TimeBetweenTwoShots               = 1.0
+    TimeBetweenTwoFx                  = 1.0
+    MinimumRangeGRU                   = 35
+    MaximumRangeGRU                   = 1925
+    MinimumRangeHelicopterGRU         = 0
+    MaximumRangeHelicopterGRU         = 0
+    MinimumRangeAirplaneGRU           = 0
+    MaximumRangeAirplaneGRU           = 0
+    MinimumRangeProjectileGRU         = 0
+    MaximumRangeProjectileGRU         = 0
+    AngleDispersion                   = 0.0
+    DispersionAtMaxRangeGRU           = 106
+    DispersionAtMinRangeGRU           = 18
+    SalvoShotsSorted                  = False
+    RadiusSplashPhysicalDamagesGRU    = 15
+    PhysicalDamages                   = 0.85
+    ShowDamageInUI                    = True
+    RadiusSplashSuppressDamagesGRU    = 25
+    SuppressDamages                   = 115.0
+    AllowSuppressDamageWhenNoImpact   = False
+    DisplaySalveAccuracy              = False
+    TirIndirect                       = False
+    TirReflexe                        = True
+    ProjectileSpeedGRU                = 1767
+    NoiseDissimulationMalus           = 2.5
+    ShotsBeforeMaxNoise               = 2
+    TargetOnlyOneUnitInDistrict       = True
+    HitRollRuleDescriptor = TDiceHitRollRuleDescriptor
+    (
+        BaseCriticModifier = 25
+        BaseHitValueModifiers =
+        [
+            (EBaseHitValueModifier/Base, 0),
+            (EBaseHitValueModifier/Idling, 45),
+            (EBaseHitValueModifier/Moving, 0),
+            (EBaseHitValueModifier/Targeted, 0),
+        ]
+        DistanceToTarget = True
+    )
+    MaxSuccessiveHitCount             = 3
+    AimingTime                        = 3.0
+    TimeBetweenTwoSalvos              = 5.75
+    TimeBetweenTwoSalvos_Min          = -1.0
+    TimeBetweenTwoSalvos_Max          = -1.0
+    ShotsCountPerSalvo                = 1
+    SupplyCost                        = 2.0
+    NbSalvosShootOnPosition           = 1
+    CanShootOnPosition                = True
+    CanShootWhileMoving               = False
+    HasDeploymentTime                 = False
+    SimultaneousShotsCount            = 1
+    AffichageMunitionParSalve         = 1
+    SmokeDescriptor                   = nil
+    FireDescriptor                    = $/GFX/Weapon/Descriptor_Fire_Incendie
+    FireTriggeringProbability         = 0.05
+    IsHarmlessForAllies               = False
+    PiercingWeapon                    = False
+    TandemCharge                      = False
+    DamageTypeEvolutionOverRangeDescriptor  = nil
+)
 Ammo_Canon_HE_85mm_Type62 is TAmmunitionDescriptor
 (
     DescriptorId                      = GUID:{e4c26399-d316-4ef5-bd48-b727967be428}
@@ -26738,7 +26837,7 @@ Ammo_DCA_1_canon_53T2_20mm is TAmmunitionDescriptor
     AffichageMunitionParSalve         = 48
     SmokeDescriptor                   = nil
     FireDescriptor                    = $/GFX/Weapon/Descriptor_Fire_Incendie
-    FireTriggeringProbability         = 0.05
+    FireTriggeringProbability         = 0.025
     IsHarmlessForAllies               = False
     PiercingWeapon                    = False
     TandemCharge                      = False
@@ -26806,7 +26905,7 @@ Ammo_DCA_1_canon_53T2_20mm_TOWED is TAmmunitionDescriptor
     AffichageMunitionParSalve         = 48
     SmokeDescriptor                   = nil
     FireDescriptor                    = $/GFX/Weapon/Descriptor_Fire_Incendie
-    FireTriggeringProbability         = 0.05
+    FireTriggeringProbability         = 0.025
     IsHarmlessForAllies               = False
     PiercingWeapon                    = False
     TandemCharge                      = False
@@ -26874,7 +26973,7 @@ Ammo_DCA_1_canon_61K_37mm is TAmmunitionDescriptor
     AffichageMunitionParSalve         = 4
     SmokeDescriptor                   = nil
     FireDescriptor                    = $/GFX/Weapon/Descriptor_Fire_Incendie
-    FireTriggeringProbability         = 0.05
+    FireTriggeringProbability         = 0.025
     IsHarmlessForAllies               = False
     PiercingWeapon                    = False
     TandemCharge                      = False
@@ -26942,7 +27041,7 @@ Ammo_DCA_1_canon_Bofors_40mm is TAmmunitionDescriptor
     AffichageMunitionParSalve         = 6
     SmokeDescriptor                   = nil
     FireDescriptor                    = $/GFX/Weapon/Descriptor_Fire_Incendie
-    FireTriggeringProbability         = 0.05
+    FireTriggeringProbability         = 0.025
     IsHarmlessForAllies               = False
     PiercingWeapon                    = False
     TandemCharge                      = False
@@ -27010,7 +27109,7 @@ Ammo_DCA_1_canon_Bofors_40mm_L60 is TAmmunitionDescriptor
     AffichageMunitionParSalve         = 4
     SmokeDescriptor                   = nil
     FireDescriptor                    = $/GFX/Weapon/Descriptor_Fire_Incendie
-    FireTriggeringProbability         = 0.05
+    FireTriggeringProbability         = 0.025
     IsHarmlessForAllies               = False
     PiercingWeapon                    = False
     TandemCharge                      = False
@@ -27078,7 +27177,7 @@ Ammo_DCA_1_canon_Bofors_57mm is TAmmunitionDescriptor
     AffichageMunitionParSalve         = 4
     SmokeDescriptor                   = nil
     FireDescriptor                    = $/GFX/Weapon/Descriptor_Fire_Incendie
-    FireTriggeringProbability         = 0.05
+    FireTriggeringProbability         = 0.025
     IsHarmlessForAllies               = False
     PiercingWeapon                    = False
     TandemCharge                      = False
@@ -27146,7 +27245,7 @@ Ammo_DCA_1_canon_Bofors_Bofi_40mm is TAmmunitionDescriptor
     AffichageMunitionParSalve         = 6
     SmokeDescriptor                   = nil
     FireDescriptor                    = $/GFX/Weapon/Descriptor_Fire_Incendie
-    FireTriggeringProbability         = 0.05
+    FireTriggeringProbability         = 0.025
     IsHarmlessForAllies               = False
     PiercingWeapon                    = False
     TandemCharge                      = False
@@ -27214,7 +27313,7 @@ Ammo_DCA_1_canon_Bofors_upgrade_40mm_EagleEye is TAmmunitionDescriptor
     AffichageMunitionParSalve         = 6
     SmokeDescriptor                   = nil
     FireDescriptor                    = $/GFX/Weapon/Descriptor_Fire_Incendie
-    FireTriggeringProbability         = 0.05
+    FireTriggeringProbability         = 0.025
     IsHarmlessForAllies               = False
     PiercingWeapon                    = False
     TandemCharge                      = False
@@ -27282,7 +27381,7 @@ Ammo_DCA_1_canon_Bofors_upgrade_40mm_FILA is TAmmunitionDescriptor
     AffichageMunitionParSalve         = 6
     SmokeDescriptor                   = nil
     FireDescriptor                    = $/GFX/Weapon/Descriptor_Fire_Incendie
-    FireTriggeringProbability         = 0.05
+    FireTriggeringProbability         = 0.025
     IsHarmlessForAllies               = False
     PiercingWeapon                    = False
     TandemCharge                      = False
@@ -27350,7 +27449,7 @@ Ammo_DCA_1_canon_Bofors_upgrade_40mm_FPHE is TAmmunitionDescriptor
     AffichageMunitionParSalve         = 6
     SmokeDescriptor                   = nil
     FireDescriptor                    = $/GFX/Weapon/Descriptor_Fire_Incendie
-    FireTriggeringProbability         = 0.05
+    FireTriggeringProbability         = 0.025
     IsHarmlessForAllies               = False
     PiercingWeapon                    = False
     TandemCharge                      = False
@@ -27418,7 +27517,7 @@ Ammo_DCA_1_canon_Bofors_upgrade_40mm_autoloader is TAmmunitionDescriptor
     AffichageMunitionParSalve         = 150
     SmokeDescriptor                   = nil
     FireDescriptor                    = $/GFX/Weapon/Descriptor_Fire_Incendie
-    FireTriggeringProbability         = 0.05
+    FireTriggeringProbability         = 0.025
     IsHarmlessForAllies               = False
     PiercingWeapon                    = False
     TandemCharge                      = False
@@ -27486,7 +27585,7 @@ Ammo_DCA_1_canon_FK20_20mm is TAmmunitionDescriptor
     AffichageMunitionParSalve         = 48
     SmokeDescriptor                   = nil
     FireDescriptor                    = $/GFX/Weapon/Descriptor_Fire_Incendie
-    FireTriggeringProbability         = 0.05
+    FireTriggeringProbability         = 0.025
     IsHarmlessForAllies               = False
     PiercingWeapon                    = False
     TandemCharge                      = False
@@ -27554,7 +27653,7 @@ Ammo_DCA_1_canon_FK20_20mm_TOWED is TAmmunitionDescriptor
     AffichageMunitionParSalve         = 48
     SmokeDescriptor                   = nil
     FireDescriptor                    = $/GFX/Weapon/Descriptor_Fire_Incendie
-    FireTriggeringProbability         = 0.05
+    FireTriggeringProbability         = 0.025
     IsHarmlessForAllies               = False
     PiercingWeapon                    = False
     TandemCharge                      = False
@@ -27622,7 +27721,7 @@ Ammo_DCA_1_canon_GAI_BO1_20mm is TAmmunitionDescriptor
     AffichageMunitionParSalve         = 48
     SmokeDescriptor                   = nil
     FireDescriptor                    = $/GFX/Weapon/Descriptor_Fire_Incendie
-    FireTriggeringProbability         = 0.05
+    FireTriggeringProbability         = 0.025
     IsHarmlessForAllies               = False
     PiercingWeapon                    = False
     TandemCharge                      = False
@@ -27690,7 +27789,7 @@ Ammo_DCA_1_canon_GAI_BO1_20mm_TOWED is TAmmunitionDescriptor
     AffichageMunitionParSalve         = 48
     SmokeDescriptor                   = nil
     FireDescriptor                    = $/GFX/Weapon/Descriptor_Fire_Incendie
-    FireTriggeringProbability         = 0.05
+    FireTriggeringProbability         = 0.025
     IsHarmlessForAllies               = False
     PiercingWeapon                    = False
     TandemCharge                      = False
@@ -27825,7 +27924,7 @@ Ammo_DCA_1_canon_KS19M_100mm is TAmmunitionDescriptor
     AffichageMunitionParSalve         = 3
     SmokeDescriptor                   = nil
     FireDescriptor                    = $/GFX/Weapon/Descriptor_Fire_Incendie
-    FireTriggeringProbability         = 0.05
+    FireTriggeringProbability         = 0.025
     IsHarmlessForAllies               = False
     PiercingWeapon                    = False
     TandemCharge                      = False
@@ -27893,7 +27992,7 @@ Ammo_DCA_1_canon_KS19_100mm is TAmmunitionDescriptor
     AffichageMunitionParSalve         = 3
     SmokeDescriptor                   = nil
     FireDescriptor                    = $/GFX/Weapon/Descriptor_Fire_Incendie
-    FireTriggeringProbability         = 0.05
+    FireTriggeringProbability         = 0.025
     IsHarmlessForAllies               = False
     PiercingWeapon                    = False
     TandemCharge                      = False
@@ -27961,7 +28060,7 @@ Ammo_DCA_1_canon_KS30_130mm is TAmmunitionDescriptor
     AffichageMunitionParSalve         = 3
     SmokeDescriptor                   = nil
     FireDescriptor                    = $/GFX/Weapon/Descriptor_Fire_Incendie
-    FireTriggeringProbability         = 0.05
+    FireTriggeringProbability         = 0.025
     IsHarmlessForAllies               = False
     PiercingWeapon                    = False
     TandemCharge                      = False
@@ -28029,7 +28128,7 @@ Ammo_DCA_1_canon_S60_57mm is TAmmunitionDescriptor
     AffichageMunitionParSalve         = 4
     SmokeDescriptor                   = nil
     FireDescriptor                    = $/GFX/Weapon/Descriptor_Fire_Incendie
-    FireTriggeringProbability         = 0.05
+    FireTriggeringProbability         = 0.025
     IsHarmlessForAllies               = False
     PiercingWeapon                    = False
     TandemCharge                      = False
@@ -28097,7 +28196,7 @@ Ammo_DCA_1_canon_S60_57mm_noRadar is TAmmunitionDescriptor
     AffichageMunitionParSalve         = 4
     SmokeDescriptor                   = nil
     FireDescriptor                    = $/GFX/Weapon/Descriptor_Fire_Incendie
-    FireTriggeringProbability         = 0.05
+    FireTriggeringProbability         = 0.025
     IsHarmlessForAllies               = False
     PiercingWeapon                    = False
     TandemCharge                      = False
@@ -28165,7 +28264,7 @@ Ammo_DCA_1_canon_T20_20mm is TAmmunitionDescriptor
     AffichageMunitionParSalve         = 48
     SmokeDescriptor                   = nil
     FireDescriptor                    = $/GFX/Weapon/Descriptor_Fire_Incendie
-    FireTriggeringProbability         = 0.05
+    FireTriggeringProbability         = 0.025
     IsHarmlessForAllies               = False
     PiercingWeapon                    = False
     TandemCharge                      = False
@@ -28178,10 +28277,10 @@ Ammo_DCA_1_canon_TCM_20mm is TAmmunitionDescriptor
     MinMaxCategory                    = MinMax_DCA
     Arme                              = TDamageTypeRTTI(Family=DamageFamily_he_dca Index=1)
     ProjectileType                    = EProjectileType/Obus
-    ImpactHappening                   = 'CanonPetitFK20HEFI'
+    ImpactHappening                   = 'CanonPetitDualFK20HEFI'
     FxPower                           = EFXPower/Moyen
     TimeBetweenTwoShots               = 0.2
-    TimeBetweenTwoFx                  = 0.3
+    TimeBetweenTwoFx                  = 0.2
     MinimumRangeGRU                   = 250
     MaximumRangeGRU                   = 1200
     MinimumRangeHelicopterGRU         = 35
@@ -28197,7 +28296,7 @@ Ammo_DCA_1_canon_TCM_20mm is TAmmunitionDescriptor
     RadiusSplashPhysicalDamagesGRU    = 4
     PhysicalDamages                   = 0.5
     ShowDamageInUI                    = True
-    RadiusSplashSuppressDamagesGRU    = 15
+    RadiusSplashSuppressDamagesGRU    = 20
     SuppressDamages                   = 40.0
     AllowSuppressDamageWhenNoImpact   = True
     DisplaySalveAccuracy              = False
@@ -28233,7 +28332,7 @@ Ammo_DCA_1_canon_TCM_20mm is TAmmunitionDescriptor
     AffichageMunitionParSalve         = 64
     SmokeDescriptor                   = nil
     FireDescriptor                    = $/GFX/Weapon/Descriptor_Fire_Incendie
-    FireTriggeringProbability         = 0.05
+    FireTriggeringProbability         = 0.025
     IsHarmlessForAllies               = False
     PiercingWeapon                    = False
     TandemCharge                      = False
@@ -28246,10 +28345,10 @@ Ammo_DCA_1_canon_TCM_20mm_TOWED is TAmmunitionDescriptor
     MinMaxCategory                    = MinMax_DCA
     Arme                              = TDamageTypeRTTI(Family=DamageFamily_he_dca Index=1)
     ProjectileType                    = EProjectileType/Obus
-    ImpactHappening                   = 'CanonPetitFK20HEFI'
+    ImpactHappening                   = 'CanonPetitDualFK20HEFI'
     FxPower                           = EFXPower/Moyen
     TimeBetweenTwoShots               = 0.2
-    TimeBetweenTwoFx                  = 0.3
+    TimeBetweenTwoFx                  = 0.2
     MinimumRangeGRU                   = 250
     MaximumRangeGRU                   = 1200
     MinimumRangeHelicopterGRU         = 35
@@ -28265,7 +28364,7 @@ Ammo_DCA_1_canon_TCM_20mm_TOWED is TAmmunitionDescriptor
     RadiusSplashPhysicalDamagesGRU    = 4
     PhysicalDamages                   = 0.5
     ShowDamageInUI                    = True
-    RadiusSplashSuppressDamagesGRU    = 15
+    RadiusSplashSuppressDamagesGRU    = 20
     SuppressDamages                   = 40.0
     AllowSuppressDamageWhenNoImpact   = True
     DisplaySalveAccuracy              = False
@@ -28281,7 +28380,7 @@ Ammo_DCA_1_canon_TCM_20mm_TOWED is TAmmunitionDescriptor
         BaseHitValueModifiers =
         [
             (EBaseHitValueModifier/Base, 0),
-            (EBaseHitValueModifier/Idling, 15),
+            (EBaseHitValueModifier/Idling, 20),
             (EBaseHitValueModifier/Moving, 0),
             (EBaseHitValueModifier/Targeted, 0),
         ]
@@ -28301,7 +28400,7 @@ Ammo_DCA_1_canon_TCM_20mm_TOWED is TAmmunitionDescriptor
     AffichageMunitionParSalve         = 64
     SmokeDescriptor                   = nil
     FireDescriptor                    = $/GFX/Weapon/Descriptor_Fire_Incendie
-    FireTriggeringProbability         = 0.05
+    FireTriggeringProbability         = 0.025
     IsHarmlessForAllies               = False
     PiercingWeapon                    = False
     TandemCharge                      = False
@@ -28369,7 +28468,7 @@ Ammo_DCA_1_canon_Vz57mm is TAmmunitionDescriptor
     AffichageMunitionParSalve         = 4
     SmokeDescriptor                   = nil
     FireDescriptor                    = $/GFX/Weapon/Descriptor_Fire_Incendie
-    FireTriggeringProbability         = 0.05
+    FireTriggeringProbability         = 0.025
     IsHarmlessForAllies               = False
     PiercingWeapon                    = False
     TandemCharge                      = False
@@ -28437,7 +28536,7 @@ Ammo_DCA_1_canon_ZGU1_14_5mm is TAmmunitionDescriptor
     AffichageMunitionParSalve         = 48
     SmokeDescriptor                   = nil
     FireDescriptor                    = $/GFX/Weapon/Descriptor_Fire_Incendie
-    FireTriggeringProbability         = 0.05
+    FireTriggeringProbability         = 0.025
     IsHarmlessForAllies               = False
     PiercingWeapon                    = False
     TandemCharge                      = False
@@ -28505,7 +28604,7 @@ Ammo_DCA_2_canon_2M3_25mm is TAmmunitionDescriptor
     AffichageMunitionParSalve         = 64
     SmokeDescriptor                   = nil
     FireDescriptor                    = $/GFX/Weapon/Descriptor_Fire_Incendie
-    FireTriggeringProbability         = 0.05
+    FireTriggeringProbability         = 0.025
     IsHarmlessForAllies               = False
     PiercingWeapon                    = False
     TandemCharge                      = False
@@ -28573,7 +28672,7 @@ Ammo_DCA_2_canon_61K_37mm is TAmmunitionDescriptor
     AffichageMunitionParSalve         = 8
     SmokeDescriptor                   = nil
     FireDescriptor                    = $/GFX/Weapon/Descriptor_Fire_Incendie
-    FireTriggeringProbability         = 0.05
+    FireTriggeringProbability         = 0.025
     IsHarmlessForAllies               = False
     PiercingWeapon                    = False
     TandemCharge                      = False
@@ -28641,7 +28740,7 @@ Ammo_DCA_2_canon_76T2_20mm is TAmmunitionDescriptor
     AffichageMunitionParSalve         = 64
     SmokeDescriptor                   = nil
     FireDescriptor                    = $/GFX/Weapon/Descriptor_Fire_Incendie
-    FireTriggeringProbability         = 0.05
+    FireTriggeringProbability         = 0.025
     IsHarmlessForAllies               = False
     PiercingWeapon                    = False
     TandemCharge                      = False
@@ -28709,7 +28808,7 @@ Ammo_DCA_2_canon_76T2_20mm_SP is TAmmunitionDescriptor
     AffichageMunitionParSalve         = 64
     SmokeDescriptor                   = nil
     FireDescriptor                    = $/GFX/Weapon/Descriptor_Fire_Incendie
-    FireTriggeringProbability         = 0.05
+    FireTriggeringProbability         = 0.025
     IsHarmlessForAllies               = False
     PiercingWeapon                    = False
     TandemCharge                      = False
@@ -28777,7 +28876,7 @@ Ammo_DCA_2_canon_Bofors_40mm is TAmmunitionDescriptor
     AffichageMunitionParSalve         = 8
     SmokeDescriptor                   = nil
     FireDescriptor                    = $/GFX/Weapon/Descriptor_Fire_Incendie
-    FireTriggeringProbability         = 0.05
+    FireTriggeringProbability         = 0.025
     IsHarmlessForAllies               = False
     PiercingWeapon                    = False
     TandemCharge                      = False
@@ -28845,7 +28944,7 @@ Ammo_DCA_2_canon_Bofors_40mm_Duster is TAmmunitionDescriptor
     AffichageMunitionParSalve         = 8
     SmokeDescriptor                   = nil
     FireDescriptor                    = $/GFX/Weapon/Descriptor_Fire_Incendie
-    FireTriggeringProbability         = 0.05
+    FireTriggeringProbability         = 0.025
     IsHarmlessForAllies               = False
     PiercingWeapon                    = False
     TandemCharge                      = False
@@ -28914,7 +29013,7 @@ Ammo_DCA_2_canon_Bofors_40mm_York is TAmmunitionDescriptor
     AffichageMunitionParSalve         = 64
     SmokeDescriptor                   = nil
     FireDescriptor                    = $/GFX/Weapon/Descriptor_Fire_Incendie
-    FireTriggeringProbability         = 0.05
+    FireTriggeringProbability         = 0.025
     IsHarmlessForAllies               = False
     PiercingWeapon                    = False
     TandemCharge                      = False
@@ -28982,7 +29081,7 @@ Ammo_DCA_2_canon_Breda_Bofors_40mm is TAmmunitionDescriptor
     AffichageMunitionParSalve         = 222
     SmokeDescriptor                   = nil
     FireDescriptor                    = $/GFX/Weapon/Descriptor_Fire_Incendie
-    FireTriggeringProbability         = 0.05
+    FireTriggeringProbability         = 0.025
     IsHarmlessForAllies               = False
     PiercingWeapon                    = False
     TandemCharge                      = False
@@ -29050,7 +29149,7 @@ Ammo_DCA_2_canon_CETME_306_20mm is TAmmunitionDescriptor
     AffichageMunitionParSalve         = 64
     SmokeDescriptor                   = nil
     FireDescriptor                    = $/GFX/Weapon/Descriptor_Fire_Incendie
-    FireTriggeringProbability         = 0.05
+    FireTriggeringProbability         = 0.025
     IsHarmlessForAllies               = False
     PiercingWeapon                    = False
     TandemCharge                      = False
@@ -29118,7 +29217,7 @@ Ammo_DCA_2_canon_CETME_306_20mm_TOWED is TAmmunitionDescriptor
     AffichageMunitionParSalve         = 64
     SmokeDescriptor                   = nil
     FireDescriptor                    = $/GFX/Weapon/Descriptor_Fire_Incendie
-    FireTriggeringProbability         = 0.05
+    FireTriggeringProbability         = 0.025
     IsHarmlessForAllies               = False
     PiercingWeapon                    = False
     TandemCharge                      = False
@@ -29186,7 +29285,7 @@ Ammo_DCA_2_canon_FK20_20mm is TAmmunitionDescriptor
     AffichageMunitionParSalve         = 64
     SmokeDescriptor                   = nil
     FireDescriptor                    = $/GFX/Weapon/Descriptor_Fire_Incendie
-    FireTriggeringProbability         = 0.05
+    FireTriggeringProbability         = 0.025
     IsHarmlessForAllies               = False
     PiercingWeapon                    = False
     TandemCharge                      = False
@@ -29254,7 +29353,7 @@ Ammo_DCA_2_canon_Jod_SP_23mm is TAmmunitionDescriptor
     AffichageMunitionParSalve         = 64
     SmokeDescriptor                   = nil
     FireDescriptor                    = $/GFX/Weapon/Descriptor_Fire_Incendie
-    FireTriggeringProbability         = 0.05
+    FireTriggeringProbability         = 0.025
     IsHarmlessForAllies               = False
     PiercingWeapon                    = False
     TandemCharge                      = False
@@ -29322,7 +29421,7 @@ Ammo_DCA_2_canon_Jod_towed_23mm is TAmmunitionDescriptor
     AffichageMunitionParSalve         = 64
     SmokeDescriptor                   = nil
     FireDescriptor                    = $/GFX/Weapon/Descriptor_Fire_Incendie
-    FireTriggeringProbability         = 0.05
+    FireTriggeringProbability         = 0.025
     IsHarmlessForAllies               = False
     PiercingWeapon                    = False
     TandemCharge                      = False
@@ -29390,7 +29489,7 @@ Ammo_DCA_2_canon_M621_20mm is TAmmunitionDescriptor
     AffichageMunitionParSalve         = 64
     SmokeDescriptor                   = nil
     FireDescriptor                    = $/GFX/Weapon/Descriptor_Fire_Incendie
-    FireTriggeringProbability         = 0.05
+    FireTriggeringProbability         = 0.025
     IsHarmlessForAllies               = False
     PiercingWeapon                    = False
     TandemCharge                      = False
@@ -29415,7 +29514,6 @@ Ammo_DCA_2_canon_SCAT_7_62mm is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 53
     DispersionAtMinRangeGRU           = 18
@@ -29527,7 +29625,7 @@ Ammo_DCA_2_canon_Vz_53_59_30mm is TAmmunitionDescriptor
     AffichageMunitionParSalve         = 64
     SmokeDescriptor                   = nil
     FireDescriptor                    = $/GFX/Weapon/Descriptor_Fire_Incendie
-    FireTriggeringProbability         = 0.05
+    FireTriggeringProbability         = 0.025
     IsHarmlessForAllies               = False
     PiercingWeapon                    = False
     TandemCharge                      = False
@@ -29595,7 +29693,7 @@ Ammo_DCA_2_canon_Vz_53_59_30mm_TOWED is TAmmunitionDescriptor
     AffichageMunitionParSalve         = 64
     SmokeDescriptor                   = nil
     FireDescriptor                    = $/GFX/Weapon/Descriptor_Fire_Incendie
-    FireTriggeringProbability         = 0.05
+    FireTriggeringProbability         = 0.025
     IsHarmlessForAllies               = False
     PiercingWeapon                    = False
     TandemCharge                      = False
@@ -29663,7 +29761,7 @@ Ammo_DCA_2_canon_ZPU4_14_5mm is TAmmunitionDescriptor
     AffichageMunitionParSalve         = 64
     SmokeDescriptor                   = nil
     FireDescriptor                    = $/GFX/Weapon/Descriptor_Fire_Incendie
-    FireTriggeringProbability         = 0.05
+    FireTriggeringProbability         = 0.025
     IsHarmlessForAllies               = False
     PiercingWeapon                    = False
     TandemCharge                      = False
@@ -29731,7 +29829,7 @@ Ammo_DCA_2_canon_ZPU4_14_5mm_TOWED is TAmmunitionDescriptor
     AffichageMunitionParSalve         = 64
     SmokeDescriptor                   = nil
     FireDescriptor                    = $/GFX/Weapon/Descriptor_Fire_Incendie
-    FireTriggeringProbability         = 0.05
+    FireTriggeringProbability         = 0.025
     IsHarmlessForAllies               = False
     PiercingWeapon                    = False
     TandemCharge                      = False
@@ -29799,7 +29897,7 @@ Ammo_DCA_2_canon_ZU23_2_23mm is TAmmunitionDescriptor
     AffichageMunitionParSalve         = 64
     SmokeDescriptor                   = nil
     FireDescriptor                    = $/GFX/Weapon/Descriptor_Fire_Incendie
-    FireTriggeringProbability         = 0.05
+    FireTriggeringProbability         = 0.025
     IsHarmlessForAllies               = False
     PiercingWeapon                    = False
     TandemCharge                      = False
@@ -29867,7 +29965,7 @@ Ammo_DCA_2_canon_ZU23_2_23mm_TOWED is TAmmunitionDescriptor
     AffichageMunitionParSalve         = 64
     SmokeDescriptor                   = nil
     FireDescriptor                    = $/GFX/Weapon/Descriptor_Fire_Incendie
-    FireTriggeringProbability         = 0.05
+    FireTriggeringProbability         = 0.025
     IsHarmlessForAllies               = False
     PiercingWeapon                    = False
     TandemCharge                      = False
@@ -29936,7 +30034,7 @@ Ammo_DCA_2_canons_2A38M_30mm is TAmmunitionDescriptor
     AffichageMunitionParSalve         = 64
     SmokeDescriptor                   = nil
     FireDescriptor                    = $/GFX/Weapon/Descriptor_Fire_Incendie
-    FireTriggeringProbability         = 0.05
+    FireTriggeringProbability         = 0.025
     IsHarmlessForAllies               = False
     PiercingWeapon                    = False
     TandemCharge                      = False
@@ -30005,7 +30103,7 @@ Ammo_DCA_2_canons_HS_831_30mm is TAmmunitionDescriptor
     AffichageMunitionParSalve         = 64
     SmokeDescriptor                   = nil
     FireDescriptor                    = $/GFX/Weapon/Descriptor_Fire_Incendie
-    FireTriggeringProbability         = 0.05
+    FireTriggeringProbability         = 0.025
     IsHarmlessForAllies               = False
     PiercingWeapon                    = False
     TandemCharge                      = False
@@ -30073,7 +30171,7 @@ Ammo_DCA_2_canons_HS_831_30mm_TOWED is TAmmunitionDescriptor
     AffichageMunitionParSalve         = 64
     SmokeDescriptor                   = nil
     FireDescriptor                    = $/GFX/Weapon/Descriptor_Fire_Incendie
-    FireTriggeringProbability         = 0.05
+    FireTriggeringProbability         = 0.025
     IsHarmlessForAllies               = False
     PiercingWeapon                    = False
     TandemCharge                      = False
@@ -30141,7 +30239,7 @@ Ammo_DCA_2_canons_Oerlikon_GDF_002_35mm is TAmmunitionDescriptor
     AffichageMunitionParSalve         = 64
     SmokeDescriptor                   = nil
     FireDescriptor                    = $/GFX/Weapon/Descriptor_Fire_Incendie
-    FireTriggeringProbability         = 0.05
+    FireTriggeringProbability         = 0.025
     IsHarmlessForAllies               = False
     PiercingWeapon                    = False
     TandemCharge                      = False
@@ -30209,7 +30307,7 @@ Ammo_DCA_2_canons_Oerlikon_GDF_003_35mm is TAmmunitionDescriptor
     AffichageMunitionParSalve         = 64
     SmokeDescriptor                   = nil
     FireDescriptor                    = $/GFX/Weapon/Descriptor_Fire_Incendie
-    FireTriggeringProbability         = 0.05
+    FireTriggeringProbability         = 0.025
     IsHarmlessForAllies               = False
     PiercingWeapon                    = False
     TandemCharge                      = False
@@ -30277,7 +30375,7 @@ Ammo_DCA_2_canons_Oerlikon_GDF_005_35mm is TAmmunitionDescriptor
     AffichageMunitionParSalve         = 64
     SmokeDescriptor                   = nil
     FireDescriptor                    = $/GFX/Weapon/Descriptor_Fire_Incendie
-    FireTriggeringProbability         = 0.05
+    FireTriggeringProbability         = 0.025
     IsHarmlessForAllies               = False
     PiercingWeapon                    = False
     TandemCharge                      = False
@@ -30346,7 +30444,7 @@ Ammo_DCA_2_canons_Oerlikon_GDF_35mm is TAmmunitionDescriptor
     AffichageMunitionParSalve         = 64
     SmokeDescriptor                   = nil
     FireDescriptor                    = $/GFX/Weapon/Descriptor_Fire_Incendie
-    FireTriggeringProbability         = 0.05
+    FireTriggeringProbability         = 0.025
     IsHarmlessForAllies               = False
     PiercingWeapon                    = False
     TandemCharge                      = False
@@ -30415,7 +30513,7 @@ Ammo_DCA_2_canons_Oerlikon_GDF_35mm_NL is TAmmunitionDescriptor
     AffichageMunitionParSalve         = 64
     SmokeDescriptor                   = nil
     FireDescriptor                    = $/GFX/Weapon/Descriptor_Fire_Incendie
-    FireTriggeringProbability         = 0.05
+    FireTriggeringProbability         = 0.025
     IsHarmlessForAllies               = False
     PiercingWeapon                    = False
     TandemCharge                      = False
@@ -30483,7 +30581,7 @@ Ammo_DCA_2_canons_S60_57mm is TAmmunitionDescriptor
     AffichageMunitionParSalve         = 8
     SmokeDescriptor                   = nil
     FireDescriptor                    = $/GFX/Weapon/Descriptor_Fire_Incendie
-    FireTriggeringProbability         = 0.05
+    FireTriggeringProbability         = 0.025
     IsHarmlessForAllies               = False
     PiercingWeapon                    = False
     TandemCharge                      = False
@@ -30551,7 +30649,7 @@ Ammo_DCA_3_canon_HSS630_20mm is TAmmunitionDescriptor
     AffichageMunitionParSalve         = 72
     SmokeDescriptor                   = nil
     FireDescriptor                    = $/GFX/Weapon/Descriptor_Fire_Incendie
-    FireTriggeringProbability         = 0.05
+    FireTriggeringProbability         = 0.025
     IsHarmlessForAllies               = False
     PiercingWeapon                    = False
     TandemCharge                      = False
@@ -30619,7 +30717,7 @@ Ammo_DCA_3_canon_HSS630_20mm_SP is TAmmunitionDescriptor
     AffichageMunitionParSalve         = 72
     SmokeDescriptor                   = nil
     FireDescriptor                    = $/GFX/Weapon/Descriptor_Fire_Incendie
-    FireTriggeringProbability         = 0.05
+    FireTriggeringProbability         = 0.025
     IsHarmlessForAllies               = False
     PiercingWeapon                    = False
     TandemCharge                      = False
@@ -30687,7 +30785,7 @@ Ammo_DCA_3_canon_Hispano_43_57_20mm is TAmmunitionDescriptor
     AffichageMunitionParSalve         = 72
     SmokeDescriptor                   = nil
     FireDescriptor                    = $/GFX/Weapon/Descriptor_Fire_Incendie
-    FireTriggeringProbability         = 0.05
+    FireTriggeringProbability         = 0.025
     IsHarmlessForAllies               = False
     PiercingWeapon                    = False
     TandemCharge                      = False
@@ -30755,7 +30853,7 @@ Ammo_DCA_3_canon_M55_20mm is TAmmunitionDescriptor
     AffichageMunitionParSalve         = 72
     SmokeDescriptor                   = nil
     FireDescriptor                    = $/GFX/Weapon/Descriptor_Fire_Incendie
-    FireTriggeringProbability         = 0.05
+    FireTriggeringProbability         = 0.025
     IsHarmlessForAllies               = False
     PiercingWeapon                    = False
     TandemCharge                      = False
@@ -30823,7 +30921,7 @@ Ammo_DCA_3_canon_M55_20mm_SP is TAmmunitionDescriptor
     AffichageMunitionParSalve         = 72
     SmokeDescriptor                   = nil
     FireDescriptor                    = $/GFX/Weapon/Descriptor_Fire_Incendie
-    FireTriggeringProbability         = 0.05
+    FireTriggeringProbability         = 0.025
     IsHarmlessForAllies               = False
     PiercingWeapon                    = False
     TandemCharge                      = False
@@ -30891,7 +30989,7 @@ Ammo_DCA_3_canon_PL_vz53_towed_12_7mm is TAmmunitionDescriptor
     AffichageMunitionParSalve         = 72
     SmokeDescriptor                   = nil
     FireDescriptor                    = $/GFX/Weapon/Descriptor_Fire_Incendie
-    FireTriggeringProbability         = 0.05
+    FireTriggeringProbability         = 0.025
     IsHarmlessForAllies               = False
     PiercingWeapon                    = False
     TandemCharge                      = False
@@ -30959,7 +31057,7 @@ Ammo_DCA_4_canon_Maxson_SP_12_7mm is TAmmunitionDescriptor
     AffichageMunitionParSalve         = 80
     SmokeDescriptor                   = nil
     FireDescriptor                    = $/GFX/Weapon/Descriptor_Fire_Incendie
-    FireTriggeringProbability         = 0.05
+    FireTriggeringProbability         = 0.025
     IsHarmlessForAllies               = False
     PiercingWeapon                    = False
     TandemCharge                      = False
@@ -31027,7 +31125,7 @@ Ammo_DCA_4_canon_Maxson_towed_12_7mm is TAmmunitionDescriptor
     AffichageMunitionParSalve         = 80
     SmokeDescriptor                   = nil
     FireDescriptor                    = $/GFX/Weapon/Descriptor_Fire_Incendie
-    FireTriggeringProbability         = 0.05
+    FireTriggeringProbability         = 0.025
     IsHarmlessForAllies               = False
     PiercingWeapon                    = False
     TandemCharge                      = False
@@ -31095,7 +31193,7 @@ Ammo_DCA_4_canon_ZPU4_14_5mm is TAmmunitionDescriptor
     AffichageMunitionParSalve         = 80
     SmokeDescriptor                   = nil
     FireDescriptor                    = $/GFX/Weapon/Descriptor_Fire_Incendie
-    FireTriggeringProbability         = 0.05
+    FireTriggeringProbability         = 0.025
     IsHarmlessForAllies               = False
     PiercingWeapon                    = False
     TandemCharge                      = False
@@ -31163,7 +31261,7 @@ Ammo_DCA_4_canon_ZPU4_towed_14_5mm is TAmmunitionDescriptor
     AffichageMunitionParSalve         = 80
     SmokeDescriptor                   = nil
     FireDescriptor                    = $/GFX/Weapon/Descriptor_Fire_Incendie
-    FireTriggeringProbability         = 0.05
+    FireTriggeringProbability         = 0.025
     IsHarmlessForAllies               = False
     PiercingWeapon                    = False
     TandemCharge                      = False
@@ -31232,7 +31330,7 @@ Ammo_DCA_4_canons_APZ23_23mm is TAmmunitionDescriptor
     AffichageMunitionParSalve         = 80
     SmokeDescriptor                   = nil
     FireDescriptor                    = $/GFX/Weapon/Descriptor_Fire_Incendie
-    FireTriggeringProbability         = 0.05
+    FireTriggeringProbability         = 0.025
     IsHarmlessForAllies               = False
     PiercingWeapon                    = False
     TandemCharge                      = False
@@ -31300,7 +31398,7 @@ Ammo_DCA_4_canons_AZP_23_Amur_23mm_Afghan is TAmmunitionDescriptor
     AffichageMunitionParSalve         = 80
     SmokeDescriptor                   = nil
     FireDescriptor                    = $/GFX/Weapon/Descriptor_Fire_Incendie
-    FireTriggeringProbability         = 0.05
+    FireTriggeringProbability         = 0.025
     IsHarmlessForAllies               = False
     PiercingWeapon                    = False
     TandemCharge                      = False
@@ -31368,7 +31466,7 @@ Ammo_DCA_4_canons_AZP_23_Amur_23mm_PSNR is TAmmunitionDescriptor
     AffichageMunitionParSalve         = 80
     SmokeDescriptor                   = nil
     FireDescriptor                    = $/GFX/Weapon/Descriptor_Fire_Incendie
-    FireTriggeringProbability         = 0.05
+    FireTriggeringProbability         = 0.025
     IsHarmlessForAllies               = False
     PiercingWeapon                    = False
     TandemCharge                      = False
@@ -31437,7 +31535,7 @@ Ammo_DCA_4_canons_AZP_23_Amur_23mm_late is TAmmunitionDescriptor
     AffichageMunitionParSalve         = 80
     SmokeDescriptor                   = nil
     FireDescriptor                    = $/GFX/Weapon/Descriptor_Fire_Incendie
-    FireTriggeringProbability         = 0.05
+    FireTriggeringProbability         = 0.025
     IsHarmlessForAllies               = False
     PiercingWeapon                    = False
     TandemCharge                      = False
@@ -31702,11 +31800,11 @@ export Ammo_Degats_napalm_lourd is TAmmunitionDescriptor
     MaximumRangeProjectileGRU         = 0
     AngleDispersion                   = 0.0
     SalvoShotsSorted                  = True
-    RadiusSplashPhysicalDamagesGRU    = 177
-    PhysicalDamages                   = 1.0
+    RadiusSplashPhysicalDamagesGRU    = 150
+    PhysicalDamages                   = 0.5
     ShowDamageInUI                    = True
-    RadiusSplashSuppressDamagesGRU    = 177
-    SuppressDamages                   = 100.0
+    RadiusSplashSuppressDamagesGRU    = 150
+    SuppressDamages                   = 50.0
     AllowSuppressDamageWhenNoImpact   = False
     DisplaySalveAccuracy              = True
     TirIndirect                       = False
@@ -31960,7 +32058,6 @@ Ammo_FM_AKM is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 64
     SalvoShotsSorted                  = True
@@ -32028,7 +32125,6 @@ Ammo_FM_AKMS is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 64
     SalvoShotsSorted                  = True
@@ -32096,7 +32192,6 @@ Ammo_FM_AKS_74 is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 64
     SalvoShotsSorted                  = True
@@ -32164,7 +32259,6 @@ Ammo_FM_AK_63 is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 64
     SalvoShotsSorted                  = True
@@ -32232,7 +32326,6 @@ Ammo_FM_AK_63D is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 64
     SalvoShotsSorted                  = True
@@ -32300,7 +32393,6 @@ Ammo_FM_AK_74 is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 64
     SalvoShotsSorted                  = True
@@ -32368,7 +32460,6 @@ Ammo_FM_AMD_65 is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 64
     SalvoShotsSorted                  = True
@@ -32436,7 +32527,6 @@ Ammo_FM_BM59_TA is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 64
     SalvoShotsSorted                  = True
@@ -32504,7 +32594,6 @@ Ammo_FM_CETME_C is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 64
     SalvoShotsSorted                  = True
@@ -32572,7 +32661,6 @@ Ammo_FM_CETME_L is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 64
     SalvoShotsSorted                  = True
@@ -32640,7 +32728,6 @@ Ammo_FM_FAL is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 64
     SalvoShotsSorted                  = True
@@ -32708,7 +32795,6 @@ Ammo_FM_FAL_C1 is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 64
     SalvoShotsSorted                  = True
@@ -32776,7 +32862,6 @@ Ammo_FM_FAL_StG58 is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 64
     SalvoShotsSorted                  = True
@@ -32844,7 +32929,6 @@ Ammo_FM_FAMAS is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 64
     SalvoShotsSorted                  = True
@@ -32912,7 +32996,6 @@ Ammo_FM_FNC is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 64
     SalvoShotsSorted                  = True
@@ -32980,7 +33063,6 @@ Ammo_FM_FNC_Para is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 64
     SalvoShotsSorted                  = True
@@ -33048,7 +33130,6 @@ Ammo_FM_G3A3 is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 64
     SalvoShotsSorted                  = True
@@ -33116,7 +33197,6 @@ Ammo_FM_G3KA4 is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 64
     SalvoShotsSorted                  = True
@@ -33184,7 +33264,6 @@ Ammo_FM_Galil is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 64
     SalvoShotsSorted                  = True
@@ -33252,7 +33331,6 @@ Ammo_FM_Garand is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 64
     SalvoShotsSorted                  = True
@@ -33320,7 +33398,6 @@ Ammo_FM_K31 is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 64
     SalvoShotsSorted                  = True
@@ -33388,7 +33465,6 @@ Ammo_FM_KMS_72 is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 64
     SalvoShotsSorted                  = True
@@ -33456,7 +33532,6 @@ Ammo_FM_L1A1_SLR is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 64
     SalvoShotsSorted                  = True
@@ -33524,7 +33599,6 @@ Ammo_FM_L85A1 is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 64
     SalvoShotsSorted                  = True
@@ -33592,7 +33666,6 @@ Ammo_FM_M14 is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 64
     SalvoShotsSorted                  = True
@@ -33660,7 +33733,6 @@ Ammo_FM_M16 is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 64
     SalvoShotsSorted                  = True
@@ -33728,7 +33800,6 @@ Ammo_FM_M16A1 is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 64
     SalvoShotsSorted                  = True
@@ -33796,7 +33867,6 @@ Ammo_FM_M16A2_C7A1 is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 64
     SalvoShotsSorted                  = True
@@ -33864,7 +33934,6 @@ Ammo_FM_M1_Carbine is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 64
     DispersionAtMinRangeGRU           = 18
@@ -33933,7 +34002,6 @@ Ammo_FM_M70 is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 64
     SalvoShotsSorted                  = True
@@ -34001,7 +34069,6 @@ Ammo_FM_M75 is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 64
     SalvoShotsSorted                  = True
@@ -34069,7 +34136,6 @@ Ammo_FM_M77 is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 64
     SalvoShotsSorted                  = True
@@ -34137,7 +34203,6 @@ Ammo_FM_MAS_56 is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 64
     SalvoShotsSorted                  = True
@@ -34205,7 +34270,6 @@ Ammo_FM_MD2 is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 64
     SalvoShotsSorted                  = True
@@ -34273,7 +34337,6 @@ Ammo_FM_Mosin_Nagant is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 64
     SalvoShotsSorted                  = True
@@ -34341,7 +34404,6 @@ Ammo_FM_Mpi_AKS_74NK is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 64
     SalvoShotsSorted                  = True
@@ -34409,7 +34471,6 @@ Ammo_FM_Mpi_AK_74N is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 64
     SalvoShotsSorted                  = True
@@ -34477,7 +34538,6 @@ Ammo_FM_SIG_510 is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 64
     DispersionAtMinRangeGRU           = 5
@@ -34546,7 +34606,6 @@ Ammo_FM_SIG_540 is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 64
     SalvoShotsSorted                  = True
@@ -34614,7 +34673,6 @@ Ammo_FM_SIG_543 is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 64
     SalvoShotsSorted                  = True
@@ -34682,7 +34740,6 @@ Ammo_FM_SIG_550 is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 64
     SalvoShotsSorted                  = True
@@ -34750,7 +34807,6 @@ Ammo_FM_SKS is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 64
     SalvoShotsSorted                  = True
@@ -34818,7 +34874,6 @@ Ammo_FM_StG_941 is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 64
     SalvoShotsSorted                  = True
@@ -34886,7 +34941,6 @@ Ammo_FM_StG_942 is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 64
     SalvoShotsSorted                  = True
@@ -34954,7 +35008,6 @@ Ammo_FM_Steyr_AUG is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 64
     SalvoShotsSorted                  = True
@@ -35022,7 +35075,6 @@ Ammo_FM_Tantal is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 64
     SalvoShotsSorted                  = True
@@ -35090,7 +35142,6 @@ Ammo_FM_Type56_ALB is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 64
     SalvoShotsSorted                  = True
@@ -35158,7 +35209,6 @@ Ammo_FM_Vz58 is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 64
     SalvoShotsSorted                  = True
@@ -35226,7 +35276,6 @@ Ammo_FM_Vz58V is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 64
     SalvoShotsSorted                  = True
@@ -35294,7 +35343,6 @@ Ammo_FM_kbk_AK is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 64
     SalvoShotsSorted                  = True
@@ -35362,7 +35410,6 @@ Ammo_FM_kbk_AKM is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 64
     SalvoShotsSorted                  = True
@@ -35496,7 +35543,6 @@ Ammo_GatlingAir_AA52_7_5mm_x2 is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 71
     DispersionAtMinRangeGRU           = 35
@@ -35565,7 +35611,6 @@ Ammo_GatlingAir_ADEN_Mk4_30mm_x2 is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 3175
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 71
     DispersionAtMinRangeGRU           = 35
@@ -35634,7 +35679,6 @@ Ammo_GatlingAir_ADEN_Mk4_30mm_x4 is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 3175
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 71
     DispersionAtMinRangeGRU           = 35
@@ -35703,7 +35747,6 @@ Ammo_GatlingAir_AP_GAU8_30mm is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 71
     DispersionAtMinRangeGRU           = 35
@@ -35771,7 +35814,6 @@ Ammo_GatlingAir_AP_Gsh_30_2_30mm_x2 is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 71
     DispersionAtMinRangeGRU           = 35
@@ -35839,7 +35881,6 @@ Ammo_GatlingAir_AP_Gsh_30_6_30mm is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 71
     DispersionAtMinRangeGRU           = 35
@@ -35907,7 +35948,6 @@ Ammo_GatlingAir_AP_M197_20mm_Turret is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 106
     DispersionAtMinRangeGRU           = 18
@@ -35975,7 +36015,6 @@ Ammo_GatlingAir_Colt_Mk12_20mm is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 3175
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 71
     DispersionAtMinRangeGRU           = 35
@@ -36044,7 +36083,6 @@ Ammo_GatlingAir_Colt_Mk12_20mm_x2 is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 3175
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 71
     DispersionAtMinRangeGRU           = 35
@@ -36113,7 +36151,6 @@ Ammo_GatlingAir_DEFA_30mm_x1 is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 3175
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 71
     DispersionAtMinRangeGRU           = 35
@@ -36182,7 +36219,6 @@ Ammo_GatlingAir_DEFA_30mm_x2 is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 3175
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 71
     DispersionAtMinRangeGRU           = 35
@@ -36251,7 +36287,6 @@ Ammo_GatlingAir_GAU12_25mm is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 3175
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 71
     DispersionAtMinRangeGRU           = 35
@@ -36320,7 +36355,6 @@ Ammo_GatlingAir_GAU8_30mm is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 2275
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 71
     DispersionAtMinRangeGRU           = 35
@@ -36389,7 +36423,6 @@ Ammo_GatlingAir_GAU_2B_7_62mm is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 71
     DispersionAtMinRangeGRU           = 35
@@ -36458,7 +36491,6 @@ Ammo_GatlingAir_GSh_23_23mm is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 3175
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 71
     DispersionAtMinRangeGRU           = 35
@@ -36527,7 +36559,6 @@ Ammo_GatlingAir_GSh_23_23mm_x2 is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 3175
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 71
     DispersionAtMinRangeGRU           = 35
@@ -36596,7 +36627,6 @@ Ammo_GatlingAir_Gsh_23_6_23mm is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 3175
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 71
     DispersionAtMinRangeGRU           = 35
@@ -36665,7 +36695,6 @@ Ammo_GatlingAir_Gsh_30_1_30mm is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 3175
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 71
     DispersionAtMinRangeGRU           = 35
@@ -36734,7 +36763,6 @@ Ammo_GatlingAir_Gsh_30_2_30mm_x2 is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 2275
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 71
     DispersionAtMinRangeGRU           = 35
@@ -36803,7 +36831,6 @@ Ammo_GatlingAir_Gsh_30_6_30mm is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 2275
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 71
     DispersionAtMinRangeGRU           = 35
@@ -36872,7 +36899,6 @@ Ammo_GatlingAir_HE_M197_20mm_Turret is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 106
     DispersionAtMinRangeGRU           = 18
@@ -36942,7 +36968,6 @@ Ammo_GatlingAir_HS_MkV_AP_20mm_x4_avion is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 3175
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 71
     DispersionAtMinRangeGRU           = 35
@@ -37010,7 +37035,6 @@ Ammo_GatlingAir_HS_MkV_HE_20mm_x4_avion is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 3175
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 71
     DispersionAtMinRangeGRU           = 35
@@ -37079,7 +37103,6 @@ Ammo_GatlingAir_M2_12_7mm_x2 is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 3175
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 71
     DispersionAtMinRangeGRU           = 35
@@ -37148,7 +37171,6 @@ Ammo_GatlingAir_M39A2_20mm_x2 is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 3175
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 71
     DispersionAtMinRangeGRU           = 35
@@ -37217,7 +37239,6 @@ Ammo_GatlingAir_M61_Vulcan_20mm is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 3175
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 71
     DispersionAtMinRangeGRU           = 35
@@ -37286,7 +37307,6 @@ Ammo_GatlingAir_M61_Vulcan_20mm_AC130 is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 105
     DispersionAtMinRangeGRU           = 15
@@ -37354,7 +37374,6 @@ Ammo_GatlingAir_Mauser_BK_27mm is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 3175
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 71
     DispersionAtMinRangeGRU           = 35
@@ -37423,7 +37442,6 @@ Ammo_GatlingAir_Mauser_BK_27mm_x2 is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 3175
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 71
     DispersionAtMinRangeGRU           = 35
@@ -37492,7 +37510,6 @@ Ammo_GatlingAir_NR23_23mm_x2 is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 3175
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 71
     DispersionAtMinRangeGRU           = 35
@@ -37561,7 +37578,6 @@ Ammo_GatlingAir_NR23_23mm_x3 is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 3175
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 71
     DispersionAtMinRangeGRU           = 35
@@ -37630,7 +37646,6 @@ Ammo_GatlingAir_NR30_30mm_x1 is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 3175
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 71
     DispersionAtMinRangeGRU           = 35
@@ -37699,7 +37714,6 @@ Ammo_GatlingAir_NR30_30mm_x2 is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 3175
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 71
     DispersionAtMinRangeGRU           = 35
@@ -37768,7 +37782,6 @@ Ammo_GatlingAir_NR30_30mm_x3 is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 3175
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 71
     DispersionAtMinRangeGRU           = 35
@@ -37837,7 +37850,6 @@ Ammo_GatlingAir_NR37_37mm_x1 is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 3175
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 71
     DispersionAtMinRangeGRU           = 35
@@ -37906,7 +37918,6 @@ Ammo_Gatling_A12_7mm is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 106
     DispersionAtMinRangeGRU           = 18
@@ -37976,7 +37987,6 @@ Ammo_Gatling_AP_M197_20mm is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 106
     DispersionAtMinRangeGRU           = 18
@@ -38044,7 +38054,6 @@ Ammo_Gatling_GAU19_12_7mm is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 106
     DispersionAtMinRangeGRU           = 18
@@ -38114,7 +38123,6 @@ Ammo_Gatling_GshG_7_62mm is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 106
     DispersionAtMinRangeGRU           = 18
@@ -38184,7 +38192,6 @@ Ammo_Gatling_JakB_12_7mm is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 106
     DispersionAtMinRangeGRU           = 18
@@ -38254,7 +38261,6 @@ Ammo_Gatling_M197_20mm is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 106
     DispersionAtMinRangeGRU           = 18
@@ -38324,7 +38330,6 @@ Ammo_Gatling_M61_Vulcan_20mm_TOWED is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 2125
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 88
     DispersionAtMinRangeGRU           = 18
@@ -38368,7 +38373,7 @@ Ammo_Gatling_M61_Vulcan_20mm_TOWED is TAmmunitionDescriptor
     AffichageMunitionParSalve         = 80
     SmokeDescriptor                   = nil
     FireDescriptor                    = $/GFX/Weapon/Descriptor_Fire_Incendie
-    FireTriggeringProbability         = 0.05
+    FireTriggeringProbability         = 0.025
     IsHarmlessForAllies               = True
     PiercingWeapon                    = False
     TandemCharge                      = False
@@ -38393,7 +38398,6 @@ Ammo_Gatling_M61_Vulcan_20mm_late is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 2275
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 88
     DispersionAtMinRangeGRU           = 18
@@ -38437,7 +38441,7 @@ Ammo_Gatling_M61_Vulcan_20mm_late is TAmmunitionDescriptor
     AffichageMunitionParSalve         = 80
     SmokeDescriptor                   = nil
     FireDescriptor                    = $/GFX/Weapon/Descriptor_Fire_Incendie
-    FireTriggeringProbability         = 0.05
+    FireTriggeringProbability         = 0.025
     IsHarmlessForAllies               = True
     PiercingWeapon                    = False
     TandemCharge                      = False
@@ -38462,7 +38466,6 @@ Ammo_Gatling_M61_Vulcan_20mm_late_TOWED is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 2275
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 88
     DispersionAtMinRangeGRU           = 18
@@ -38506,7 +38509,7 @@ Ammo_Gatling_M61_Vulcan_20mm_late_TOWED is TAmmunitionDescriptor
     AffichageMunitionParSalve         = 80
     SmokeDescriptor                   = nil
     FireDescriptor                    = $/GFX/Weapon/Descriptor_Fire_Incendie
-    FireTriggeringProbability         = 0.05
+    FireTriggeringProbability         = 0.025
     IsHarmlessForAllies               = True
     PiercingWeapon                    = False
     TandemCharge                      = False
@@ -38531,7 +38534,6 @@ Ammo_Gatling_M61_Vulcan_20mm_noRadar is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 2125
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 88
     DispersionAtMinRangeGRU           = 18
@@ -38575,7 +38577,7 @@ Ammo_Gatling_M61_Vulcan_20mm_noRadar is TAmmunitionDescriptor
     AffichageMunitionParSalve         = 80
     SmokeDescriptor                   = nil
     FireDescriptor                    = $/GFX/Weapon/Descriptor_Fire_Incendie
-    FireTriggeringProbability         = 0.05
+    FireTriggeringProbability         = 0.025
     IsHarmlessForAllies               = True
     PiercingWeapon                    = False
     TandemCharge                      = False
@@ -38600,7 +38602,6 @@ Ammo_Gatling_m134_7_62mm is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 106
     DispersionAtMinRangeGRU           = 18
@@ -38670,7 +38671,6 @@ Ammo_Gatling_m134_7_62mm_x2 is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 106
     DispersionAtMinRangeGRU           = 18
@@ -38954,7 +38954,6 @@ Ammo_HMG_12_7_mm_Afanasyev is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 64
     DispersionAtMinRangeGRU           = 18
@@ -39023,7 +39022,6 @@ Ammo_HMG_12_7_mm_DShKM is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 64
     DispersionAtMinRangeGRU           = 18
@@ -39092,7 +39090,6 @@ Ammo_HMG_12_7_mm_M219_x1 is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 64
     DispersionAtMinRangeGRU           = 18
@@ -39161,7 +39158,6 @@ Ammo_HMG_12_7_mm_M219_x2 is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 64
     DispersionAtMinRangeGRU           = 18
@@ -39230,7 +39226,6 @@ Ammo_HMG_12_7_mm_M2HB is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 64
     DispersionAtMinRangeGRU           = 18
@@ -39299,7 +39294,6 @@ Ammo_HMG_12_7_mm_M2HB_CTRL is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 64
     DispersionAtMinRangeGRU           = 18
@@ -39368,7 +39362,6 @@ Ammo_HMG_12_7_mm_M85 is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 64
     DispersionAtMinRangeGRU           = 18
@@ -39437,7 +39430,6 @@ Ammo_HMG_12_7_mm_NSVT is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 64
     DispersionAtMinRangeGRU           = 18
@@ -39506,7 +39498,6 @@ Ammo_HMG_12_7_mm_NSV_x2 is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 64
     DispersionAtMinRangeGRU           = 18
@@ -39575,7 +39566,6 @@ Ammo_HMG_12_7_mm_Type54 is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 64
     DispersionAtMinRangeGRU           = 18
@@ -39644,7 +39634,6 @@ Ammo_HMG_12_7_mm_avenger_M3P is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 1775
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 64
     DispersionAtMinRangeGRU           = 18
@@ -39713,7 +39702,6 @@ Ammo_HMG_14_5_mm_KPVT is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 64
     DispersionAtMinRangeGRU           = 18
@@ -39782,7 +39770,6 @@ Ammo_HMG_14_5_mm_KPVT_Berkut is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 64
     DispersionAtMinRangeGRU           = 18
@@ -39851,7 +39838,6 @@ Ammo_HMG_14_5_mm_KPVT_coax is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 64
     DispersionAtMinRangeGRU           = 18
@@ -39920,7 +39906,6 @@ Ammo_HMG_team_12_7_mm_DSh is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 64
     DispersionAtMinRangeGRU           = 18
@@ -39989,7 +39974,6 @@ Ammo_HMG_team_12_7_mm_DSh_AA is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 64
     DispersionAtMinRangeGRU           = 18
@@ -40058,7 +40042,6 @@ Ammo_HMG_team_12_7_mm_M2HB is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 64
     DispersionAtMinRangeGRU           = 18
@@ -40127,7 +40110,6 @@ Ammo_HMG_team_12_7_mm_M2HB_M63 is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 64
     DispersionAtMinRangeGRU           = 18
@@ -40196,7 +40178,6 @@ Ammo_HMG_team_12_7_mm_NSV is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 64
     DispersionAtMinRangeGRU           = 18
@@ -40265,7 +40246,6 @@ Ammo_HMG_team_12_7_mm_NSV_6U6 is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 64
     DispersionAtMinRangeGRU           = 18
@@ -40334,7 +40314,6 @@ Ammo_HMG_team_12_7_mm_Type54 is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 64
     DispersionAtMinRangeGRU           = 18
@@ -40403,7 +40382,6 @@ Ammo_HMG_team_14_5_mm_KPVT is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 64
     DispersionAtMinRangeGRU           = 18
@@ -40467,12 +40445,11 @@ Ammo_HMG_team_14_5_mm_ZGU1 is TAmmunitionDescriptor
     MinimumRangeGRU                   = 53
     MaximumRangeGRU                   = 1400
     MinimumRangeHelicopterGRU         = 0
-    MaximumRangeHelicopterGRU         = 1225
+    MaximumRangeHelicopterGRU         = 2125
     MinimumRangeAirplaneGRU           = 0
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 64
     DispersionAtMinRangeGRU           = 18
@@ -52407,7 +52384,6 @@ Ammo_MMG_AA52_7_5mm is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 53
     DispersionAtMinRangeGRU           = 18
@@ -52476,7 +52452,6 @@ Ammo_MMG_AANF1_7_62mm is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 53
     DispersionAtMinRangeGRU           = 18
@@ -52545,7 +52520,6 @@ Ammo_MMG_AANF1_7_62mm_x2 is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 53
     DispersionAtMinRangeGRU           = 18
@@ -52614,7 +52588,6 @@ Ammo_MMG_DTM_7_62mm is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 53
     DispersionAtMinRangeGRU           = 18
@@ -52683,7 +52656,6 @@ Ammo_MMG_FN_MAG_7_62mm is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 53
     DispersionAtMinRangeGRU           = 18
@@ -52752,7 +52724,6 @@ Ammo_MMG_FN_MAG_7_62mm_Helo is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 53
     DispersionAtMinRangeGRU           = 18
@@ -52821,7 +52792,6 @@ Ammo_MMG_FN_MAG_7_62mm_x2 is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 53
     DispersionAtMinRangeGRU           = 18
@@ -52890,7 +52860,6 @@ Ammo_MMG_HK21_7_62mm is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 53
     DispersionAtMinRangeGRU           = 18
@@ -52959,7 +52928,6 @@ Ammo_MMG_L37A2_7_62mm is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 53
     DispersionAtMinRangeGRU           = 18
@@ -53028,7 +52996,6 @@ Ammo_MMG_L43A1_7_62mm is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 53
     DispersionAtMinRangeGRU           = 18
@@ -53097,7 +53064,6 @@ Ammo_MMG_L8A2_7_62mm is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 53
     DispersionAtMinRangeGRU           = 18
@@ -53166,7 +53132,6 @@ Ammo_MMG_L94A1_7_62mm is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 53
     DispersionAtMinRangeGRU           = 18
@@ -53235,7 +53200,6 @@ Ammo_MMG_M1919 is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 53
     DispersionAtMinRangeGRU           = 18
@@ -53304,7 +53268,6 @@ Ammo_MMG_M1919_C5 is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 53
     DispersionAtMinRangeGRU           = 18
@@ -53373,7 +53336,6 @@ Ammo_MMG_M240_7_62mm is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 53
     DispersionAtMinRangeGRU           = 18
@@ -53442,7 +53404,6 @@ Ammo_MMG_M240_abrams_7_62mm is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 53
     DispersionAtMinRangeGRU           = 18
@@ -53511,7 +53472,6 @@ Ammo_MMG_M240d_7_62mm is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 53
     DispersionAtMinRangeGRU           = 18
@@ -53580,7 +53540,6 @@ Ammo_MMG_M60C_7_62mm_x4 is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 53
     DispersionAtMinRangeGRU           = 18
@@ -53649,7 +53608,6 @@ Ammo_MMG_M60D_7_62mm is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 53
     DispersionAtMinRangeGRU           = 18
@@ -53718,7 +53676,6 @@ Ammo_MMG_M60E3_7_62mm is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 64
     DispersionAtMinRangeGRU           = 18
@@ -53787,7 +53744,6 @@ Ammo_MMG_M60_7_62mm is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 64
     DispersionAtMinRangeGRU           = 18
@@ -53856,7 +53812,6 @@ Ammo_MMG_M60_7_62mm_coax is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 53
     DispersionAtMinRangeGRU           = 18
@@ -53925,7 +53880,6 @@ Ammo_MMG_M60_7_62mm_helo is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 53
     DispersionAtMinRangeGRU           = 18
@@ -53994,7 +53948,6 @@ Ammo_MMG_M60_7_62mm_veh is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 53
     DispersionAtMinRangeGRU           = 18
@@ -54063,7 +54016,6 @@ Ammo_MMG_MAG_7_62mm_C6 is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 53
     DispersionAtMinRangeGRU           = 18
@@ -54132,7 +54084,6 @@ Ammo_MMG_MG1SA3_7_62mm is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 53
     DispersionAtMinRangeGRU           = 18
@@ -54201,7 +54152,6 @@ Ammo_MMG_MG3S_7_62mm is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 53
     DispersionAtMinRangeGRU           = 18
@@ -54270,7 +54220,6 @@ Ammo_MMG_MG3_7_62mm is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 53
     DispersionAtMinRangeGRU           = 18
@@ -54339,7 +54288,6 @@ Ammo_MMG_MG3_7_62mm_MG74 is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 53
     DispersionAtMinRangeGRU           = 18
@@ -54408,7 +54356,6 @@ Ammo_MMG_MG3_7_62mm_helo is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 53
     DispersionAtMinRangeGRU           = 18
@@ -54477,7 +54424,6 @@ Ammo_MMG_MG42_7_62mm_helo is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 53
     DispersionAtMinRangeGRU           = 18
@@ -54546,7 +54492,6 @@ Ammo_MMG_MG62_7_62mm is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 53
     DispersionAtMinRangeGRU           = 18
@@ -54615,7 +54560,6 @@ Ammo_MMG_MG_51_7_5mm is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 53
     DispersionAtMinRangeGRU           = 18
@@ -54684,7 +54628,6 @@ Ammo_MMG_PKM_7_62mm is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 64
     DispersionAtMinRangeGRU           = 18
@@ -54753,7 +54696,6 @@ Ammo_MMG_PKT_7_62mm is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 53
     DispersionAtMinRangeGRU           = 18
@@ -54822,7 +54764,6 @@ Ammo_MMG_PKT_7_62mm_x2 is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 53
     DispersionAtMinRangeGRU           = 18
@@ -54891,7 +54832,6 @@ Ammo_MMG_PKT_7_62mm_x3 is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 53
     DispersionAtMinRangeGRU           = 18
@@ -54960,7 +54900,6 @@ Ammo_MMG_PKT_7_62mm_x4 is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 53
     DispersionAtMinRangeGRU           = 18
@@ -55029,7 +54968,6 @@ Ammo_MMG_SGMB_7_62mm is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 53
     DispersionAtMinRangeGRU           = 18
@@ -55098,7 +55036,6 @@ Ammo_MMG_UK_vz59_7_62mm is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 53
     DispersionAtMinRangeGRU           = 18
@@ -55167,7 +55104,6 @@ Ammo_MMG_inf_AA52_7_5mm is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 64
     DispersionAtMinRangeGRU           = 18
@@ -55236,7 +55172,6 @@ Ammo_MMG_inf_AANF1_7_62mm is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 64
     DispersionAtMinRangeGRU           = 18
@@ -55305,7 +55240,6 @@ Ammo_MMG_inf_L7A2_7_62mm is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 64
     DispersionAtMinRangeGRU           = 18
@@ -55374,7 +55308,6 @@ Ammo_MMG_inf_M1919_7_62mm_C5 is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 64
     DispersionAtMinRangeGRU           = 18
@@ -55443,7 +55376,6 @@ Ammo_MMG_inf_M240B_7_62mm is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 64
     DispersionAtMinRangeGRU           = 18
@@ -55512,7 +55444,6 @@ Ammo_MMG_inf_MAG_7_62mm is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 64
     DispersionAtMinRangeGRU           = 18
@@ -55581,7 +55512,6 @@ Ammo_MMG_inf_MAG_7_62mm_C6 is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 64
     DispersionAtMinRangeGRU           = 18
@@ -55650,7 +55580,6 @@ Ammo_MMG_inf_MG_51_7_5mm is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 64
     DispersionAtMinRangeGRU           = 18
@@ -55719,7 +55648,6 @@ Ammo_MMG_inf_UK_Vz59L_7_62mm is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 64
     DispersionAtMinRangeGRU           = 18
@@ -55788,7 +55716,6 @@ Ammo_MMG_inf__MG3_7_62mm is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 64
     DispersionAtMinRangeGRU           = 18
@@ -55857,7 +55784,6 @@ Ammo_MMG_inf__MG3_7_62mm_MG74 is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 64
     DispersionAtMinRangeGRU           = 18
@@ -55926,7 +55852,6 @@ Ammo_MMG_inf__MG42_59_7_62mm is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 64
     DispersionAtMinRangeGRU           = 18
@@ -55995,7 +55920,6 @@ Ammo_MMG_inf__MG42_59_7_62mm_ITA is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 64
     DispersionAtMinRangeGRU           = 18
@@ -56064,7 +55988,6 @@ Ammo_MMG_inf__MG42_7_92mm is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 64
     DispersionAtMinRangeGRU           = 18
@@ -56133,7 +56056,6 @@ Ammo_MMG_inf__MG62_7_62mm is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 64
     DispersionAtMinRangeGRU           = 18
@@ -56202,7 +56124,6 @@ Ammo_MMG_team_7_62mm_AANF1 is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 53
     DispersionAtMinRangeGRU           = 18
@@ -56271,7 +56192,6 @@ Ammo_MMG_team_7_62mm_FN_MAG is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 53
     DispersionAtMinRangeGRU           = 18
@@ -56340,7 +56260,6 @@ Ammo_MMG_team_7_62mm_M1919 is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 53
     DispersionAtMinRangeGRU           = 18
@@ -56409,7 +56328,6 @@ Ammo_MMG_team_7_62mm_M60 is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 53
     DispersionAtMinRangeGRU           = 18
@@ -56478,7 +56396,6 @@ Ammo_MMG_team_7_62mm_MG3 is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 53
     DispersionAtMinRangeGRU           = 18
@@ -56547,7 +56464,74 @@ Ammo_MMG_team_7_62mm_MG42_59 is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
+    AngleDispersion                   = 0.0
+    DispersionAtMaxRangeGRU           = 53
+    DispersionAtMinRangeGRU           = 18
+    SalvoShotsSorted                  = False
+    RadiusSplashPhysicalDamagesGRU    = 1
+    PhysicalDamages                   = 0.1505
+    ShowDamageInUI                    = True
+    RadiusSplashSuppressDamagesGRU    = 2
+    SuppressDamages                   = 15.0
+    AllowSuppressDamageWhenNoImpact   = False
+    DisplaySalveAccuracy              = False
+    TirIndirect                       = False
+    TirReflexe                        = True
+    ProjectileSpeedGRU                = 662
+    NoiseDissimulationMalus           = 2.5
+    ShotsBeforeMaxNoise               = 3
+    TargetOnlyOneUnitInDistrict       = True
+    HitRollRuleDescriptor = TDiceHitRollRuleDescriptor
+    (
+        BaseCriticModifier = 25
+        BaseHitValueModifiers =
+        [
+            (EBaseHitValueModifier/Base, 0),
+            (EBaseHitValueModifier/Idling, 30),
+            (EBaseHitValueModifier/Moving, 0),
+            (EBaseHitValueModifier/Targeted, 0),
+        ]
+        DistanceToTarget = True
+    )
+    MaxSuccessiveHitCount             = 5
+    AimingTime                        = 2.2
+    TimeBetweenTwoSalvos              = 2.0
+    TimeBetweenTwoSalvos_Min          = -1.0
+    TimeBetweenTwoSalvos_Max          = -1.0
+    ShotsCountPerSalvo                = 5
+    SupplyCost                        = 5.0
+    NbSalvosShootOnPosition           = 3
+    CanShootOnPosition                = True
+    CanShootWhileMoving               = False
+    HasDeploymentTime                 = False
+    SimultaneousShotsCount            = 1
+    AffichageMunitionParSalve         = 20
+    SmokeDescriptor                   = nil
+    FireDescriptor                    = nil
+    IsHarmlessForAllies               = True
+    PiercingWeapon                    = False
+    TandemCharge                      = False
+    DamageTypeEvolutionOverRangeDescriptor  = nil
+)
+Ammo_MMG_team_7_62mm_MG42_59_ITA is TAmmunitionDescriptor
+(
+    DescriptorId                      = GUID:{1b6eb0be-3c2b-4e95-8096-8d417e2f3ba8}
+    WeaponCursorType                  = Weapon_Cursor_MachineGun
+    MinMaxCategory                    = MinMax_MMG_HMG
+    Arme                              = TDamageTypeRTTI(Family=DamageFamily_fmballe Index=1)
+    ProjectileType                    = EProjectileType/Obus
+    ImpactHappening                   = 'MitrailleuseMG3Inf'
+    FxPower                           = EFXPower/Moyen
+    TimeBetweenTwoShots               = 0.2
+    TimeBetweenTwoFx                  = 0.2
+    MinimumRangeGRU                   = 35
+    MaximumRangeGRU                   = 1200
+    MinimumRangeHelicopterGRU         = 0
+    MaximumRangeHelicopterGRU         = 0
+    MinimumRangeAirplaneGRU           = 0
+    MaximumRangeAirplaneGRU           = 0
+    MinimumRangeProjectileGRU         = 0
+    MaximumRangeProjectileGRU         = 0
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 53
     DispersionAtMinRangeGRU           = 18
@@ -56616,7 +56600,6 @@ Ammo_MMG_team_7_62mm_Maxim is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 53
     DispersionAtMinRangeGRU           = 18
@@ -56685,7 +56668,6 @@ Ammo_MMG_team_7_62mm_PKM is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 53
     DispersionAtMinRangeGRU           = 18
@@ -56754,7 +56736,6 @@ Ammo_MMG_team_7_62mm_SG43 is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 53
     DispersionAtMinRangeGRU           = 18
@@ -56823,7 +56804,6 @@ Ammo_MMG_team_7_62mm_UK_Vz59 is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 53
     DispersionAtMinRangeGRU           = 18
@@ -62763,7 +62743,6 @@ Ammo_PM_AKSU_74 is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 64
     DispersionAtMinRangeGRU           = 18
@@ -62832,7 +62811,6 @@ Ammo_PM_AS_Val is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 64
     DispersionAtMinRangeGRU           = 18
@@ -62901,7 +62879,6 @@ Ammo_PM_Beretta_M38_49 is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 64
     DispersionAtMinRangeGRU           = 18
@@ -62970,7 +62947,6 @@ Ammo_PM_C8_Carbine is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 64
     DispersionAtMinRangeGRU           = 18
@@ -63039,7 +63015,6 @@ Ammo_PM_Colt_M635 is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 64
     DispersionAtMinRangeGRU           = 18
@@ -63108,7 +63083,6 @@ Ammo_PM_GreaseGun is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 64
     DispersionAtMinRangeGRU           = 18
@@ -63177,7 +63151,6 @@ Ammo_PM_HK53A3_DK is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 64
     DispersionAtMinRangeGRU           = 18
@@ -63246,7 +63219,6 @@ Ammo_PM_Hovea is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 64
     DispersionAtMinRangeGRU           = 18
@@ -63315,7 +63287,6 @@ Ammo_PM_Husqvarna_M37 is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 64
     DispersionAtMinRangeGRU           = 18
@@ -63384,7 +63355,6 @@ Ammo_PM_M12 is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 64
     DispersionAtMinRangeGRU           = 18
@@ -63453,7 +63423,6 @@ Ammo_PM_M4_Carbine is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 64
     DispersionAtMinRangeGRU           = 18
@@ -63522,7 +63491,6 @@ Ammo_PM_MAT_49 is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 64
     DispersionAtMinRangeGRU           = 18
@@ -63591,7 +63559,6 @@ Ammo_PM_MP40 is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 64
     DispersionAtMinRangeGRU           = 18
@@ -63660,7 +63627,6 @@ Ammo_PM_MP_5A3 is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 64
     DispersionAtMinRangeGRU           = 18
@@ -63729,7 +63695,6 @@ Ammo_PM_MP_5SD is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 64
     DispersionAtMinRangeGRU           = 18
@@ -63798,7 +63763,6 @@ Ammo_PM_MPi_AKSU_74NK is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 64
     DispersionAtMinRangeGRU           = 18
@@ -63867,7 +63831,6 @@ Ammo_PM_MiniUzi is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 64
     DispersionAtMinRangeGRU           = 18
@@ -63936,7 +63899,6 @@ Ammo_PM_PM63_RAK is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 64
     DispersionAtMinRangeGRU           = 18
@@ -64005,7 +63967,6 @@ Ammo_PM_PPS_43 is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 64
     DispersionAtMinRangeGRU           = 18
@@ -64074,7 +64035,6 @@ Ammo_PM_RWD2 is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 64
     DispersionAtMinRangeGRU           = 18
@@ -64143,7 +64103,6 @@ Ammo_PM_Skorpion is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 64
     DispersionAtMinRangeGRU           = 18
@@ -64212,7 +64171,6 @@ Ammo_PM_Sterling is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 64
     DispersionAtMinRangeGRU           = 18
@@ -64281,7 +64239,6 @@ Ammo_PM_Sterling_C1 is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 64
     DispersionAtMinRangeGRU           = 18
@@ -64350,7 +64307,6 @@ Ammo_PM_Suomi_KP31_SWI is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 64
     DispersionAtMinRangeGRU           = 18
@@ -64419,7 +64375,6 @@ Ammo_PM_Uru is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 64
     DispersionAtMinRangeGRU           = 18
@@ -64488,7 +64443,6 @@ Ammo_PM_Vigneron_M2 is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 64
     DispersionAtMinRangeGRU           = 18
@@ -64557,7 +64511,6 @@ Ammo_PM_Wz_43_52 is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 64
     DispersionAtMinRangeGRU           = 18
@@ -64626,7 +64579,6 @@ Ammo_PM_Z70B is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 64
     DispersionAtMinRangeGRU           = 18
@@ -64695,7 +64647,6 @@ Ammo_PM_uzi is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 64
     DispersionAtMinRangeGRU           = 18
@@ -64764,7 +64715,6 @@ Ammo_PM_uzi_Steyr is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 64
     DispersionAtMinRangeGRU           = 18
@@ -64833,7 +64783,6 @@ Ammo_Pave_Claw_AP_30mm is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 150
     DispersionAtMinRangeGRU           = 35
@@ -64900,7 +64849,6 @@ Ammo_Pave_Claw_HE_30mm is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 150
     DispersionAtMinRangeGRU           = 35
@@ -64969,7 +64917,6 @@ Ammo_Pod_ADEN_Mk4_30mm_x1 is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 2500
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 71
     DispersionAtMinRangeGRU           = 35
@@ -65038,7 +64985,6 @@ Ammo_Pod_GPU_2A_AP_20mm is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 106
     DispersionAtMinRangeGRU           = 18
@@ -65106,7 +65052,6 @@ Ammo_Pod_GPU_2A_HE_20mm is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 106
     DispersionAtMinRangeGRU           = 18
@@ -65244,7 +65189,6 @@ Ammo_Pod_GUV_Gatling_7_62mm_12_7mm_x2 is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 35
     DispersionAtMinRangeGRU           = 18
@@ -65314,7 +65258,6 @@ Ammo_Pod_HMG_Browning_12_7mm_x2 is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 35
     DispersionAtMinRangeGRU           = 18
@@ -65384,7 +65327,6 @@ Ammo_Pod_HMG_FN_HMP400_12_7mm_x2 is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 35
     DispersionAtMinRangeGRU           = 18
@@ -65454,7 +65396,6 @@ Ammo_Pod_HMG_M3P_12_7mm is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 35
     DispersionAtMinRangeGRU           = 18
@@ -65524,7 +65465,6 @@ Ammo_Pod_UPK_23_250_AP_23mm_x2 is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 106
     DispersionAtMinRangeGRU           = 18
@@ -65592,7 +65532,6 @@ Ammo_Pod_UPK_23_250_AP_23mm_x2_avion is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 2500
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 71
     DispersionAtMinRangeGRU           = 35
@@ -65659,7 +65598,6 @@ Ammo_Pod_UPK_23_250_HE_23mm_x2 is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 106
     DispersionAtMinRangeGRU           = 18
@@ -65729,7 +65667,6 @@ Ammo_Pod_UPK_23_250_HE_23mm_x2_avion is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 2500
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 35
     DispersionAtMinRangeGRU           = 35
@@ -65775,6 +65712,74 @@ Ammo_Pod_UPK_23_250_HE_23mm_x2_avion is TAmmunitionDescriptor
     FireDescriptor                    = $/GFX/Weapon/Descriptor_Fire_Incendie
     FireTriggeringProbability         = 0.05
     IsHarmlessForAllies               = False
+    PiercingWeapon                    = False
+    TandemCharge                      = False
+    DamageTypeEvolutionOverRangeDescriptor  = nil
+)
+Ammo_RocketAirAir_Type57_57mm_x8 is TAmmunitionDescriptor
+(
+    DescriptorId                      = GUID:{4ec548ea-0b05-4295-9835-5c5087bbbd90}
+    WeaponCursorType                  = Weapon_Cursor_UnguidedMissile
+    MinMaxCategory                    = MinMax_Roquette_AS
+    Arme                              = TDamageTypeRTTI(Family=DamageFamily_roquette_ap Index=1)
+    ProjectileType                    = EProjectileType/Obus
+    ImpactHappening                   = 'RoquetteM261Hydras'
+    FxPower                           = EFXPower/Moyen
+    TimeBetweenTwoShots               = 0.3
+    TimeBetweenTwoFx                  = 0.2
+    MinimumRangeGRU                   = 530
+    MaximumRangeGRU                   = 2100
+    MinimumRangeHelicopterGRU         = 0
+    MaximumRangeHelicopterGRU         = 2825
+    MinimumRangeAirplaneGRU           = 0
+    MaximumRangeAirplaneGRU           = 3175
+    MinimumRangeProjectileGRU         = 0
+    MaximumRangeProjectileGRU         = 0
+    AngleDispersion                   = 0.0
+    DispersionAtMaxRangeGRU           = 145
+    DispersionAtMinRangeGRU           = 15
+    SalvoShotsSorted                  = False
+    RadiusSplashPhysicalDamagesGRU    = 8
+    PhysicalDamages                   = 0.8
+    ShowDamageInUI                    = True
+    RadiusSplashSuppressDamagesGRU    = 16
+    SuppressDamages                   = 80.0
+    AllowSuppressDamageWhenNoImpact   = True
+    DisplaySalveAccuracy              = False
+    TirIndirect                       = False
+    TirReflexe                        = True
+    ProjectileSpeedGRU                = 2000
+    NoiseDissimulationMalus           = 2.0
+    ShotsBeforeMaxNoise               = 2
+    TargetOnlyOneUnitInDistrict       = True
+    HitRollRuleDescriptor = TDiceHitRollRuleDescriptor
+    (
+        BaseCriticModifier = 25
+        BaseHitValueModifiers =
+        [
+            (EBaseHitValueModifier/Base, 0),
+            (EBaseHitValueModifier/Idling, 20),
+            (EBaseHitValueModifier/Moving, 20),
+            (EBaseHitValueModifier/Targeted, 0),
+        ]
+        DistanceToTarget = True
+    )
+    MaxSuccessiveHitCount             = 1
+    AimingTime                        = 0.0
+    TimeBetweenTwoSalvos              = 1.0
+    TimeBetweenTwoSalvos_Min          = 0.75
+    TimeBetweenTwoSalvos_Max          = 1.5
+    ShotsCountPerSalvo                = 8
+    SupplyCost                        = 16.0
+    CanShootOnPosition                = False
+    CanShootWhileMoving               = True
+    HasDeploymentTime                 = False
+    SimultaneousShotsCount            = 1
+    AffichageMunitionParSalve         = 8
+    SmokeDescriptor                   = nil
+    FireDescriptor                    = $/GFX/Weapon/Descriptor_Fire_Incendie
+    FireTriggeringProbability         = 0.05
+    IsHarmlessForAllies               = True
     PiercingWeapon                    = False
     TandemCharge                      = False
     DamageTypeEvolutionOverRangeDescriptor  = nil
@@ -70320,11 +70325,11 @@ Ammo_RocketArt_LAR_160mm_x36_cluster is TAmmunitionDescriptor
     DispersionAtMaxRangeGRU           = 450
     DispersionAtMinRangeGRU           = 200
     SalvoShotsSorted                  = False
-    RadiusSplashPhysicalDamagesGRU    = 178
-    PhysicalDamages                   = 1.76
+    RadiusSplashPhysicalDamagesGRU    = 131
+    PhysicalDamages                   = 1.6
     ShowDamageInUI                    = True
-    RadiusSplashSuppressDamagesGRU    = 221
-    SuppressDamages                   = 224.0
+    RadiusSplashSuppressDamagesGRU    = 143
+    SuppressDamages                   = 176.0
     AllowSuppressDamageWhenNoImpact   = True
     DisplaySalveAccuracy              = True
     IsSubAmmunition                   = True
@@ -70931,7 +70936,7 @@ Ammo_RocketArt_M21OF_122mm_napalm is TAmmunitionDescriptor
     )
     MaxSuccessiveHitCount             = 1
     AimingTime                        = 20.0
-    TimeBetweenTwoSalvos              = 330.0
+    TimeBetweenTwoSalvos              = 270.0
     TimeBetweenTwoSalvos_Min          = -1.0
     TimeBetweenTwoSalvos_Max          = -1.0
     ShotsCountPerSalvo                = 40
@@ -77946,7 +77951,6 @@ Ammo_SAW_AMELI_5_56mm is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 64
     DispersionAtMinRangeGRU           = 18
@@ -78015,7 +78019,6 @@ Ammo_SAW_BAR is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 64
     DispersionAtMinRangeGRU           = 18
@@ -78084,7 +78087,6 @@ Ammo_SAW_Bren_L4A4 is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 64
     DispersionAtMinRangeGRU           = 18
@@ -78153,7 +78155,6 @@ Ammo_SAW_DP28_7_62mm is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 64
     DispersionAtMinRangeGRU           = 18
@@ -78222,7 +78223,6 @@ Ammo_SAW_FALO is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 64
     DispersionAtMinRangeGRU           = 18
@@ -78291,7 +78291,6 @@ Ammo_SAW_FALO_C2 is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 64
     DispersionAtMinRangeGRU           = 18
@@ -78360,7 +78359,6 @@ Ammo_SAW_FALO_FAP is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 64
     DispersionAtMinRangeGRU           = 18
@@ -78421,15 +78419,14 @@ Ammo_SAW_HK11_7_62mm is TAmmunitionDescriptor
     FxPower                           = EFXPower/Moyen
     TimeBetweenTwoShots               = 1.0
     TimeBetweenTwoFx                  = 1.0
-    MinimumRangeGRU                   = 0
+    MinimumRangeGRU                   = 35
     MaximumRangeGRU                   = 850
     MinimumRangeHelicopterGRU         = 0
-    MaximumRangeHelicopterGRU         = 525
+    MaximumRangeHelicopterGRU         = 700
     MinimumRangeAirplaneGRU           = 0
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 64
     DispersionAtMinRangeGRU           = 18
@@ -78453,15 +78450,15 @@ Ammo_SAW_HK11_7_62mm is TAmmunitionDescriptor
         BaseHitValueModifiers =
         [
             (EBaseHitValueModifier/Base, 0),
-            (EBaseHitValueModifier/Idling, 25),
+            (EBaseHitValueModifier/Idling, 30),
             (EBaseHitValueModifier/Moving, 10),
             (EBaseHitValueModifier/Targeted, 0),
         ]
         DistanceToTarget = True
     )
     MaxSuccessiveHitCount             = 5
-    AimingTime                        = 1.4
-    TimeBetweenTwoSalvos              = 1.9
+    AimingTime                        = 1.5
+    TimeBetweenTwoSalvos              = 1.8
     TimeBetweenTwoSalvos_Min          = -1.0
     TimeBetweenTwoSalvos_Max          = -1.0
     ShotsCountPerSalvo                = 1
@@ -78471,7 +78468,7 @@ Ammo_SAW_HK11_7_62mm is TAmmunitionDescriptor
     CanShootWhileMoving               = True
     HasDeploymentTime                 = False
     SimultaneousShotsCount            = 1
-    AffichageMunitionParSalve         = 10
+    AffichageMunitionParSalve         = 8
     SmokeDescriptor                   = nil
     FireDescriptor                    = nil
     IsHarmlessForAllies               = True
@@ -78498,7 +78495,6 @@ Ammo_SAW_HK21_7_62mm is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 64
     DispersionAtMinRangeGRU           = 18
@@ -78567,7 +78563,6 @@ Ammo_SAW_L86A1_5_56mm is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 64
     DispersionAtMinRangeGRU           = 18
@@ -78636,7 +78631,6 @@ Ammo_SAW_LMG_25_7_5mm is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 64
     DispersionAtMinRangeGRU           = 18
@@ -78705,7 +78699,6 @@ Ammo_SAW_M16A1_LMG is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 64
     DispersionAtMinRangeGRU           = 18
@@ -78774,7 +78767,6 @@ Ammo_SAW_M249_5_56mm is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 64
     DispersionAtMinRangeGRU           = 18
@@ -78843,7 +78835,6 @@ Ammo_SAW_MG85_5_56mm is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 64
     DispersionAtMinRangeGRU           = 18
@@ -78912,7 +78903,6 @@ Ammo_SAW_Madsen is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 64
     DispersionAtMinRangeGRU           = 18
@@ -78981,7 +78971,6 @@ Ammo_SAW_Minimi_5_56mm is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 64
     DispersionAtMinRangeGRU           = 18
@@ -79050,7 +79039,6 @@ Ammo_SAW_Minimi_5_56mm_C9 is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 64
     DispersionAtMinRangeGRU           = 18
@@ -79119,7 +79107,6 @@ Ammo_SAW_RPK_74_5_56mm is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 64
     DispersionAtMinRangeGRU           = 18
@@ -79188,7 +79175,6 @@ Ammo_SAW_RPK_7_62mm is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 64
     DispersionAtMinRangeGRU           = 18
@@ -79257,7 +79243,6 @@ Ammo_SAW_RPK_7_62mm_ALB is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 64
     DispersionAtMinRangeGRU           = 18
@@ -79326,7 +79311,6 @@ Ammo_SAW_RP_46_7_62mm is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 64
     DispersionAtMinRangeGRU           = 18
@@ -79395,7 +79379,6 @@ Ammo_SAW_Vz_52_57 is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 64
     DispersionAtMinRangeGRU           = 18
@@ -79464,7 +79447,6 @@ Ammo_SAW_lMG_K_7_62mm is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 64
     DispersionAtMinRangeGRU           = 18
@@ -79533,7 +79515,6 @@ Ammo_SHOT_KS_23 is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 64
     DispersionAtMinRangeGRU           = 18
@@ -79737,7 +79718,6 @@ Ammo_SniperHvy_Barret_M82 is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 35
     DispersionAtMinRangeGRU           = 18
@@ -79805,7 +79785,6 @@ Ammo_SniperHvy_Catatumbo is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 35
     DispersionAtMinRangeGRU           = 18
@@ -79873,7 +79852,6 @@ Ammo_SniperHvy_Gepard_M1 is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 35
     DispersionAtMinRangeGRU           = 18
@@ -79941,7 +79919,6 @@ Ammo_Sniper_ASH78_Tip3 is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 35
     DispersionAtMinRangeGRU           = 18
@@ -80009,7 +79986,6 @@ Ammo_Sniper_C3A1 is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 35
     DispersionAtMinRangeGRU           = 18
@@ -80077,7 +80053,6 @@ Ammo_Sniper_CETME_C is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 35
     DispersionAtMinRangeGRU           = 18
@@ -80145,7 +80120,6 @@ Ammo_Sniper_FAL is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 35
     DispersionAtMinRangeGRU           = 18
@@ -80213,7 +80187,6 @@ Ammo_Sniper_FAL_ZF4 is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 35
     DispersionAtMinRangeGRU           = 18
@@ -80281,7 +80254,6 @@ Ammo_Sniper_FN_Model_3011 is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 35
     DispersionAtMinRangeGRU           = 18
@@ -80349,7 +80321,6 @@ Ammo_Sniper_FRF1 is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 35
     DispersionAtMinRangeGRU           = 18
@@ -80417,7 +80388,6 @@ Ammo_Sniper_FRF2 is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 35
     DispersionAtMinRangeGRU           = 18
@@ -80485,7 +80455,6 @@ Ammo_Sniper_G150 is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 35
     DispersionAtMinRangeGRU           = 18
@@ -80553,7 +80522,6 @@ Ammo_Sniper_G3A3ZF is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 35
     DispersionAtMinRangeGRU           = 18
@@ -80621,7 +80589,6 @@ Ammo_Sniper_Kar98 is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 35
     DispersionAtMinRangeGRU           = 18
@@ -80689,7 +80656,6 @@ Ammo_Sniper_L42A1 is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 35
     DispersionAtMinRangeGRU           = 18
@@ -80757,7 +80723,6 @@ Ammo_Sniper_L96A1 is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 35
     DispersionAtMinRangeGRU           = 18
@@ -80825,7 +80790,6 @@ Ammo_Sniper_M14 is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 35
     DispersionAtMinRangeGRU           = 18
@@ -80893,7 +80857,6 @@ Ammo_Sniper_M16A1_DMR is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 35
     DispersionAtMinRangeGRU           = 18
@@ -80961,7 +80924,6 @@ Ammo_Sniper_M1C_Garand is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 35
     DispersionAtMinRangeGRU           = 18
@@ -81029,7 +80991,6 @@ Ammo_Sniper_M21_silenced is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 35
     DispersionAtMinRangeGRU           = 18
@@ -81097,7 +81058,6 @@ Ammo_Sniper_M24 is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 35
     DispersionAtMinRangeGRU           = 18
@@ -81165,7 +81125,6 @@ Ammo_Sniper_M40A1 is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 35
     DispersionAtMinRangeGRU           = 18
@@ -81233,7 +81192,6 @@ Ammo_Sniper_M43 is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 35
     DispersionAtMinRangeGRU           = 18
@@ -81301,7 +81259,6 @@ Ammo_Sniper_M66 is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 35
     DispersionAtMinRangeGRU           = 18
@@ -81369,7 +81326,6 @@ Ammo_Sniper_MSG90 is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 35
     DispersionAtMinRangeGRU           = 18
@@ -81437,7 +81393,6 @@ Ammo_Sniper_Mosin_Nagant is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 35
     DispersionAtMinRangeGRU           = 18
@@ -81505,7 +81460,6 @@ Ammo_Sniper_Mosin_Nagant_PEM is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 35
     DispersionAtMinRangeGRU           = 18
@@ -81573,7 +81527,6 @@ Ammo_Sniper_PSG1 is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 35
     DispersionAtMinRangeGRU           = 18
@@ -81641,7 +81594,6 @@ Ammo_Sniper_Remington_700 is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 35
     DispersionAtMinRangeGRU           = 18
@@ -81709,7 +81661,6 @@ Ammo_Sniper_SSG_69 is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 35
     DispersionAtMinRangeGRU           = 18
@@ -81777,7 +81728,6 @@ Ammo_Sniper_SVD_Dragunov is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 35
     DispersionAtMinRangeGRU           = 18
@@ -81845,7 +81795,6 @@ Ammo_Sniper_SZVD_Dragunov is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 35
     DispersionAtMinRangeGRU           = 18
@@ -81913,7 +81862,6 @@ Ammo_Sniper_VSS_Vintorez is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 35
     DispersionAtMinRangeGRU           = 18
@@ -81981,7 +81929,6 @@ Ammo_Sniper_ZfK_55 is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 35
     DispersionAtMinRangeGRU           = 18
@@ -82049,7 +81996,6 @@ Ammo_Sniper_Zf_Kar31 is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 35
     DispersionAtMinRangeGRU           = 18
@@ -82738,7 +82684,6 @@ Ammo_hmg_20mm_GAI_BO1 is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 1950
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 64
     DispersionAtMinRangeGRU           = 18
@@ -82783,7 +82728,7 @@ Ammo_hmg_20mm_GAI_BO1 is TAmmunitionDescriptor
     AffichageMunitionParSalve         = 24
     SmokeDescriptor                   = nil
     FireDescriptor                    = $/GFX/Weapon/Descriptor_Fire_Incendie
-    FireTriggeringProbability         = 0.05
+    FireTriggeringProbability         = 0.025
     IsHarmlessForAllies               = True
     PiercingWeapon                    = False
     TandemCharge                      = False
@@ -82808,7 +82753,6 @@ Ammo_FM_Ak4 is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 64
     SalvoShotsSorted                  = True
@@ -82877,7 +82821,6 @@ Ammo_MMG_ksp_m58_7_62mm is TAmmunitionDescriptor
     MaximumRangeAirplaneGRU           = 0
     MinimumRangeProjectileGRU         = 0
     MaximumRangeProjectileGRU         = 0
-    AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 53
     DispersionAtMinRangeGRU           = 18

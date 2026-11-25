@@ -1,14 +1,14 @@
 export Modele_BJ212_ALB is TResourceMesh
 (
-    Mesh="GameData:/Assets/3D/Units/US/Vehicule/M151_MUTT_CMD/M151_MUTT_CMD.fbx"
+    Mesh="GameData:/Assets/3D/Units/ALB/Vehicule/BJ212/BJ212.fbx"
 )
 
 export Modele_BJ212_ALB_MID is TResourceMesh
 (
-    Mesh="GameData:/Assets/3D/Units/US/Vehicule/M151_MUTT_CMD_MID/M151_MUTT_CMD_MID.fbx"
+    Mesh="GameData:/Assets/3D/Units/ALB/Vehicule/BJ212/BJ212.fbx"
 )
 
 export Modele_BJ212_ALB_LOW is TResourceMesh
 (
-    Mesh="GameData:/Assets/3D/Units/US/Vehicule/M151_MUTT_CMD_LOW/M151_MUTT_CMD_LOW.fbx"
+    Mesh="GameData:/Assets/3D/Units/ALB/Vehicule/BJ212/BJ212.fbx"
 )

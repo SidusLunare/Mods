@@ -1,16 +1,16 @@
 export Modele_Pilatus_PC9_reco_SWI is TResourceMesh
 (
-    Mesh="GameData:/Assets/3D/Units/SWI/Avion/Pilatus_PC9_reco/Pilatus_PC9_reco.fbx"
+    Mesh="GameData:/Assets/3D/Units/SWI/Avion/Pilatus_PC9_reco/Pilatus_PC9_reco_SWI.fbx"
 )
 
 export Modele_Pilatus_PC9_reco_SWI_MID is TResourceMesh
 (
-    Mesh="GameData:/Assets/3D/Units/SWI/Avion/Pilatus_PC9_reco/Pilatus_PC9_reco.fbx"
+    Mesh="GameData:/Assets/3D/Units/SWI/Avion/Pilatus_PC9_reco/Pilatus_PC9_reco_SWI.fbx"
 )
 
 export Modele_Pilatus_PC9_reco_SWI_LOW is TResourceMesh
 (
-    Mesh="GameData:/Assets/3D/Units/SWI/Avion/Pilatus_PC9_reco/Pilatus_PC9_reco.fbx"
+    Mesh="GameData:/Assets/3D/Units/SWI/Avion/Pilatus_PC9_reco/Pilatus_PC9_reco_SWI.fbx"
 )
 
 export Modele_Pilatus_PC9_reco_SWI_train is TResourceMesh

@@ -127,7 +127,7 @@ export Descriptor_Fire_NapalmLourd is TEntityDescriptor
             ReferenceMesh  = $/GFX/DepictionResources/Rien
             Depiction  = TTimelyDepictionReceiverFactory( DepictionDescriptor = Template_DescriptorFire_Depiction
             (
-                Radius               = 177 * 26 * 2.83
+                Radius               = 150 * 26 * 2.83
                 FX                   = $/GFX/GameFx/fx_binder_fire_Napalm_Lourd
                 Density              = 1
             ))
@@ -140,7 +140,7 @@ export Descriptor_Fire_NapalmLourd is TEntityDescriptor
             TimeBeforeSpreadAttempt        = 1
             SpreadProbability              = 1.0
             IsNewFireProbability           = 0.5
-            RadiusGRU                      = 177
+            RadiusGRU                      = 150
             AmmunitionForBurn              = $/GFX/Weapon/Ammo_Degats_napalm_lourd
             TimeBetweenBurns               = 1
             IgniteDistricts                = False

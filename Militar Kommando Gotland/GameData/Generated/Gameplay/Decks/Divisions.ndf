@@ -154,9 +154,14 @@ export Descriptor_Deck_Division_CUB_MTT_multi is TDeckDivisionDescriptor
     CostMatrix = MatrixCostName_CUB_MTT_multi
     EmblemTexture     = "Texture_Division_Emblem_CUB_MTT"
     TypeToken        = "INFANREG"
+    SummaryTextToken = "SUMCUBMTT"
+    HistoryTextToken = "HISCUBMTT"
     CountryId = "CUB"
     StandoutUnits =
     [
+        $/GFX/Unit/Descriptor_Unit_Frontera_MLRS_CUB,
+        $/GFX/Unit/Descriptor_Unit_HvyScout_Militia_CUB,
+        $/GFX/Unit/Descriptor_Unit_Mi_14PL_RKT_CUB,
     ]
 )
 export Descriptor_Deck_Division_CYP_NationalGuard_multi is TDeckDivisionDescriptor
@@ -1764,9 +1769,14 @@ export Descriptor_Deck_Division_US_26th_Inf_multi is TDeckDivisionDescriptor
     CostMatrix = MatrixCostName_US_26th_Inf_multi
     EmblemTexture     = "Texture_Division_Emblem_US_26ID"
     TypeToken        = "MECHANIZ"
+    SummaryTextToken = "SUMUS26ID"
+    HistoryTextToken = "HISUS26ID"
     CountryId = "US"
     StandoutUnits =
     [
+        $/GFX/Unit/Descriptor_Unit_M247_SergeantYork_US,
+        $/GFX/Unit/Descriptor_Unit_Mountaineers_Dragon_US,
+        $/GFX/Unit/Descriptor_Unit_FB111A_HE1_US,
     ]
 )
 export Descriptor_Deck_Division_US_2nd_Marine_multi is TDeckDivisionDescriptor
