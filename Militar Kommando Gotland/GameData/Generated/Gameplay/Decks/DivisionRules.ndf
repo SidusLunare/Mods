@@ -627,6 +627,24 @@ Descriptor_Deck_Division_SWE_MilitarKommando_Gotland_multi is TDeckDivisionRule
         ),
         TDeckUniteRule
         (
+            UnitDescriptor = $/GFX/Unit/Descriptor_Unit_Pansarskytte_G_CMD_SWE
+            AvailableWithoutTransport = False
+            AvailableTransportList = [ $/GFX/Unit/Descriptor_Unit_Ltgb_934F_trans_SWE, $/GFX/Unit/Descriptor_Unit_Tgb_m42D_trans_SWE ]
+            MaxPackNumber = 2
+            NumberOfUnitInPack = 2
+            NumberOfUnitInPackXPMultiplier = [0.0, 1.0, 0.5, 0.0]
+        ),
+        TDeckUniteRule
+        (
+            UnitDescriptor = $/GFX/Unit/Descriptor_Unit_Pansarskytte_G_SWE
+            AvailableWithoutTransport = False
+            AvailableTransportList = [ $/GFX/Unit/Descriptor_Unit_Ltgb_934F_trans_SWE, $/GFX/Unit/Descriptor_Unit_Tgb_m42D_trans_SWE ]
+            MaxPackNumber = 3
+            NumberOfUnitInPack = 9
+            NumberOfUnitInPackXPMultiplier = [1.0, 0.6, 0.34, 0.0]
+        ),
+        TDeckUniteRule
+        (
             UnitDescriptor = $/GFX/Unit/Descriptor_Unit_Strv_102_CMD_SWE
             AvailableWithoutTransport = True
             MaxPackNumber = 2

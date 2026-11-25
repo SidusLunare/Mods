@@ -1,0 +1,3 @@
+export Modele_ATteam_HJ8_ALB is TResourceMesh( Mesh="GameData:/Assets/3D/Units/ALB/Canon/ATteam_HJ8/ATteam_HJ8.fbx")
+export Modele_ATteam_HJ8_ALB_MID is TResourceMesh( Mesh="GameData:/Assets/3D/Units/ALB/Canon/ATteam_HJ8/ATteam_HJ8.fbx")
+export Modele_ATteam_HJ8_ALB_LOW is TResourceMesh( Mesh="GameData:/Assets/3D/Units/ALB/Canon/ATteam_HJ8/ATteam_HJ8.fbx")

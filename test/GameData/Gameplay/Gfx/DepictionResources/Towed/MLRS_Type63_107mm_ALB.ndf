@@ -1,0 +1,3 @@
+export Modele_MLRS_Type63_107mm_ALB is TResourceMesh( Mesh="GameData:/Assets/3D/Units/ALB/Canon/MLRS_Type63_107mm/MLRS_Type63_107mm.fbx")
+export Modele_MLRS_Type63_107mm_ALB_MID is TResourceMesh( Mesh="GameData:/Assets/3D/Units/ALB/Canon/MLRS_Type63_107mm/MLRS_Type63_107mm.fbx")
+export Modele_MLRS_Type63_107mm_ALB_LOW is TResourceMesh( Mesh="GameData:/Assets/3D/Units/ALB/Canon/MLRS_Type63_107mm/MLRS_Type63_107mm.fbx")

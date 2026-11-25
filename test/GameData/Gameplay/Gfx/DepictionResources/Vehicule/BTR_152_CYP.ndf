@@ -1,0 +1,14 @@
+export Modele_BTR_152_CYP is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/CYP/Vehicule/BTR_152/BTR_152.fbx"
+)
+
+export Modele_BTR_152_CYP_MID is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/CYP/Vehicule/BTR_152_MID/BTR_152_MID.fbx"
+)
+
+export Modele_BTR_152_CYP_LOW is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/CYP/Vehicule/BTR_152_LOW/BTR_152_LOW.fbx"
+)

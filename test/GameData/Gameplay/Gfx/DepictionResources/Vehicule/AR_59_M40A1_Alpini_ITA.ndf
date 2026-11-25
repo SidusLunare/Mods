@@ -1,0 +1,14 @@
+export Modele_AR_59_M40A1_Alpini_ITA is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/ITA/Vehicule/AR59_M40A1/AR59_M40A1.fbx"
+)
+
+export Modele_AR_59_M40A1_Alpini_ITA_MID is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/ITA/Vehicule/AR59_M40A1_MID/AR59_M40A1_MID.fbx"
+)
+
+export Modele_AR_59_M40A1_Alpini_ITA_LOW is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/ITA/Vehicule/AR59_M40A1_LOW/AR59_M40A1_LOW.fbx"
+)

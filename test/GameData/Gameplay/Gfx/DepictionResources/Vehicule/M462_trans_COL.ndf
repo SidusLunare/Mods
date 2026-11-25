@@ -1,0 +1,14 @@
+export Modele_M462_trans_COL is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/COL/Vehicule/M462_trans/M462_trans.fbx"
+)
+
+export Modele_M462_trans_COL_MID is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/COL/Vehicule/M462_trans_MID/M462_trans_MID.fbx"
+)
+
+export Modele_M462_trans_COL_LOW is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/COL/Vehicule/M462_trans_LOW/M462_trans_LOW.fbx"
+)

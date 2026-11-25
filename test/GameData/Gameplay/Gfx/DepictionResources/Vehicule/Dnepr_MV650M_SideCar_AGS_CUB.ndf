@@ -1,0 +1,14 @@
+export Modele_Dnepr_MV650M_SideCar_AGS_CUB is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/CUBA/Vehicule/Dnepr_MV650M_SideCar_AGS/Dnepr_MV650M_SideCar_AGS.fbx"
+)
+
+export Modele_Dnepr_MV650M_SideCar_AGS_CUB_MID is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/CUBA/Vehicule/Dnepr_MV650M_SideCar_AGS_MID/Dnepr_MV650M_SideCar_AGS_MID.fbx"
+)
+
+export Modele_Dnepr_MV650M_SideCar_AGS_CUB_LOW is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/CUBA/Vehicule/Dnepr_MV650M_SideCar_AGS_LOW/Dnepr_MV650M_SideCar_AGS_LOW.fbx"
+)

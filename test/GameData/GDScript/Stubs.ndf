@@ -1,0 +1,39 @@
+template TGDBankObject
+[
+] is TBaseClass()
+
+template TGDBuildingType
+[
+] is TBaseClass()
+
+template TGDEffets
+[
+] is TBaseClass()
+
+template TGDEffetsSurUniteType
+[
+] is TBaseClass()
+
+template TGDEffetsTest
+[
+] is TBaseClass()
+
+template TGDObjectList
+[
+] is TBaseClass()
+
+template TGDSectionType
+[
+] is TBaseClass()
+
+template TGDTestType
+[
+] is TBaseClass()
+
+template Directory
+[
+] is TBaseClass()
+
+template Namespace
+[
+] is TBaseClass()

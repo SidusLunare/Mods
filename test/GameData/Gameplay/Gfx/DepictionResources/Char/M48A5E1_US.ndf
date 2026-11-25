@@ -1,0 +1,24 @@
+export Modele_M48A5E1_US is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/US/Char/M48A5E1/M48A5E1.fbx"
+)
+
+export Modele_M48A5E1_US_MID is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/US/Char/M48A5E1_MID/M48A5E1_MID.fbx"
+)
+
+export Modele_M48A5E1_US_LOW is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/US/Char/M48A5E1_LOW/M48A5E1_LOW.fbx"
+)
+
+export Modele_M48A5E1_US_Tourelle_02 is TResourceMesh
+(
+    Mesh=ModelFile_M60D_t2
+)
+
+export Modele_M48A5E1_US_Tourelle_03 is TResourceMesh
+(
+    Mesh=ModelFile_M60D_t3
+)

@@ -1,0 +1,17 @@
+export Modele_BAV_485_ALB is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/POL/Vehicule/BAV_485/BAV_485.fbx"
+    Textures="GameData:/Assets/3D/Units/ALB/Vehicule/BAV_485"
+)
+
+export Modele_BAV_485_ALB_MID is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/POL/Vehicule/BAV_485_MID/BAV_485_MID.fbx"
+    Textures="GameData:/Assets/3D/Units/ALB/Vehicule/BAV_485_MID"
+)
+
+export Modele_BAV_485_ALB_LOW is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/POL/Vehicule/BAV_485_LOW/BAV_485_LOW.fbx"
+    Textures="GameData:/Assets/3D/Units/ALB/Vehicule/BAV_485_LOW"
+)

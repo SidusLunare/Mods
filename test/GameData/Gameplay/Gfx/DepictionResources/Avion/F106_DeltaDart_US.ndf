@@ -1,0 +1,19 @@
+export Modele_F106_DeltaDart_US is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/US/Avion/F106_DeltaDart/F106_DeltaDart.fbx"
+)
+
+export Modele_F106_DeltaDart_US_MID is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/US/Avion/F106_DeltaDart_MID/F106_DeltaDart_MID.fbx"
+)
+
+export Modele_F106_DeltaDart_US_LOW is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/US/Avion/F106_DeltaDart_LOW/F106_DeltaDart_LOW.fbx"
+)
+
+export Modele_F106_DeltaDart_US_train is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/US/Avion/F106_DeltaDart/F106_DeltaDart_train.fbx"
+)

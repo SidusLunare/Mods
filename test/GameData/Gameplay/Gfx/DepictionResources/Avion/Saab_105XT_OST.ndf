@@ -1,0 +1,19 @@
+export Modele_Saab_105XT_OST is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/OST/Avion/Saab_105XT/Saab_105XT.fbx"
+)
+
+export Modele_Saab_105XT_OST_MID is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/OST/Avion/Saab_105XT/Saab_105XT.fbx"
+)
+
+export Modele_Saab_105XT_OST_LOW is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/OST/Avion/Saab_105XT/Saab_105XT.fbx"
+)
+
+export Modele_Saab_105XT_OST_train is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/OST/Avion/Saab_105XT/Saab_105XT_train.fbx"
+)

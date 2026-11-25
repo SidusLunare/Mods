@@ -1,0 +1,20 @@
+export Modele_Leclerc_MSC_FR is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/FR/Char/Leclerc_MSC/Leclerc_MSC.fbx"
+)
+
+export Modele_Leclerc_MSC_FR_MID is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/FR/Char/Leclerc_MSC_MID/Leclerc_MSC_MID.fbx"
+)
+
+export Modele_Leclerc_MSC_FR_LOW is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/FR/Char/Leclerc_MSC_LOW/Leclerc_MSC_LOW.fbx"
+)
+
+export Modele_Leclerc_MSC_FR_Tourelle_02 is TResourceMesh
+(
+    Mesh=ModelFile_AANF1_no_ammo
+)
+

@@ -1,0 +1,32 @@
+export ModelFile_BTR_60PA_Reserve_SOV is 'GameData:/Assets/3D/Units/URSS/APC/BTR_60_PA/BTR_60_PA.fbx'
+export Modele_BTR_60PA_Reserve_SOV is TResourceMesh
+(
+    Mesh=ModelFile_BTR_60PA_Reserve_SOV
+)
+
+export ModelFile_BTR_60PA_Reserve_SOV_MID is 'GameData:/Assets/3D/Units/URSS/APC/BTR_60_PA_MID/BTR_60_PA_MID.fbx'
+export Modele_BTR_60PA_Reserve_SOV_MID is TResourceMesh
+(
+    Mesh=ModelFile_BTR_60PA_Reserve_SOV_MID
+)
+
+export ModelFile_BTR_60PA_Reserve_SOV_LOW is 'GameData:/Assets/3D/Units/URSS/APC/BTR_60_PA_LOW/BTR_60_PA_LOW.fbx'
+export Modele_BTR_60PA_Reserve_SOV_LOW is TResourceMesh
+(
+    Mesh=ModelFile_BTR_60PA_Reserve_SOV_LOW
+)
+
+export Modele_BTR_60PA_Reserve_SOV_Tourelle_01 is TResourceMesh
+(
+    Mesh=ModelFile_DShK_127mm_t1
+)
+
+export Modele_BTR_60PA_Reserve_SOV_Tourelle_02 is TResourceMesh
+(
+    Mesh=ModelFile_DShK_127mm_t2
+)
+
+export Modele_BTR_60PA_Reserve_SOV_Tourelle_03 is TResourceMesh
+(
+    Mesh=ModelFile_DShK_127mm_t3
+)

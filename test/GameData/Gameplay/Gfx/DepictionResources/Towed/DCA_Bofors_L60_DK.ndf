@@ -1,0 +1,3 @@
+export Modele_DCA_Bofors_L60_DK is TResourceMesh( Mesh="GameData:/Assets/3D/Units/DK/DCA/DCA_Bofors_L60/DCA_Bofors_L60.fbx")
+export Modele_DCA_Bofors_L60_DK_MID is TResourceMesh( Mesh="GameData:/Assets/3D/Units/DK/DCA/DCA_Bofors_L60_MID/DCA_Bofors_L60_MID.fbx")
+export Modele_DCA_Bofors_L60_DK_LOW is TResourceMesh( Mesh="GameData:/Assets/3D/Units/DK/DCA/DCA_Bofors_L60_LOW/DCA_Bofors_L60_LOW.fbx")

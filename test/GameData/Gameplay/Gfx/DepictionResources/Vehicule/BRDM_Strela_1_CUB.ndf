@@ -1,0 +1,17 @@
+export Modele_BRDM_Strela_1_CUB is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/CUBA/Vehicule/BRDM_Strela_1/BRDM_Strela_1.fbx"
+)
+
+export Modele_BRDM_Strela_1_CUB_MID is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/CUBA/Vehicule/BRDM_Strela_1_MID/BRDM_Strela_1_MID.fbx"
+)
+
+export Modele_BRDM_Strela_1_CUB_LOW is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/CUBA/Vehicule/BRDM_Strela_1_LOW/BRDM_Strela_1_LOW.fbx"
+)
+
+
+

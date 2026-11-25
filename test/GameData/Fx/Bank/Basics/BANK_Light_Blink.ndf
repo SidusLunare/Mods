@@ -1,0 +1,49 @@
+export BANK_Light_Blink is SimultaneousActionDeclaration
+(
+    Params =
+    [
+        parRadiusLBU is Template_Param_Float(DefaultValue = 8.0),
+        parColor is Template_Param_Float3(DefaultValue = float3[0.8, 0.01, 0.005]),
+        parFallOff is Template_Param_Float(DefaultValue = 0.5),
+        parPeriodInSec is Template_Param_Float(DefaultValue = 2.0),
+        parOnTimeInSec is Template_Param_Float(DefaultValue = 0.5),
+    ]
+    Actions =
+    [
+        Template_WaitForEver(),
+        ParticleBombSpawner
+        (
+            ParticleMaxDurationForSpawnSkip = 0
+            Count = 1
+            Spawner = ParticleSpawner
+            (
+                Initialisers =
+                [
+                    Initialiser_SetMobileWrapper(),
+                    ParticleInitialiserList
+                    (
+                        Size = parRadiusLBU * 2 * getX[ParticleMobileWrapperScale]
+                        Position = float3[0, 0, 0]
+                        ColorRGB = parColor
+                        Alpha = parFallOff
+                        CustomFloat_1 = parRadiusLBU
+                        CustomFloat_2 = Max[parPeriodInSec, 0.02]
+                        CustomFloat_3 = Min[Max[parOnTimeInSec, 0.0] div Max[parPeriodInSec, 0.02], 1.0]
+                        CustomFloat3_1 = parColor
+                    ),
+                ]
+                ParticleDescriptor = ParticleDescriptor
+                (
+                    RenderInfo = LightRenderInfo
+                    Evolvers = ParticleStandardEvolverList
+                    (
+                        Size = ParticleCustomFloat_1 * 2 * getX[ParticleMobileWrapperScale]
+                        ColorRGB = ParticleCustomFloat3_1 * (Sawtooth[ParticleElapsedTime div ParticleCustomFloat_2] < ParticleCustomFloat_3 ? 1.0 : 0.0)
+                    )
+                    ParticleRenderer = $/VFX_Bank/PointLightRendererLBU
+                    InfiniteParticles = true
+                )
+            )
+        ),
+    ]
+)

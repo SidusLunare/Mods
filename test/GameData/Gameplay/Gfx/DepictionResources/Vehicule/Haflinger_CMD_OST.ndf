@@ -1,0 +1,14 @@
+export Modele_Haflinger_CMD_OST is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/OST/Vehicule/Haflinger_CMD/Haflinger_CMD.fbx"
+)
+
+export Modele_Haflinger_CMD_OST_MID is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/OST/Vehicule/Haflinger_CMD/Haflinger_CMD.fbx"
+)
+
+export Modele_Haflinger_CMD_OST_LOW is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/OST/Vehicule/Haflinger_CMD/Haflinger_CMD.fbx"
+)

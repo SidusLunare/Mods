@@ -1,0 +1,22 @@
+export Modele_AT33_ShootingStar_HE_COL is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/CAN/Avion/SilverStar_Mk3AT/SilverStar_Mk3AT.fbx"
+    Textures="GameData:/Assets/3D/Units/COL/Avion/SilverStar_Mk3AT"
+)
+
+export Modele_AT33_ShootingStar_HE_COL_MID is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/CAN/Avion/SilverStar_Mk3AT_MID/SilverStar_Mk3AT_MID.fbx"
+    Textures="GameData:/Assets/3D/Units/COL/Avion/SilverStar_Mk3AT_MID"
+)
+
+export Modele_AT33_ShootingStar_HE_COL_LOW is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/CAN/Avion/SilverStar_Mk3AT_LOW/SilverStar_Mk3AT_LOW.fbx"
+    Textures="GameData:/Assets/3D/Units/COL/Avion/SilverStar_Mk3AT_LOW"
+)
+
+export Modele_AT33_ShootingStar_HE_COL_train is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/CAN/Avion/SilverStar_Mk3AT/SilverStar_Mk3AT_train.fbx"
+)

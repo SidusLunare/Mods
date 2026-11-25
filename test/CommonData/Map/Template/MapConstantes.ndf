@@ -1,0 +1,241 @@
+private DatasMapDirectoryBase is 'DatasMap:/Output/'
+
+export Map_Size_InCases is int2[~/NbCaseX, ~/NbCaseY]
+export MapSizeX      is MapCellSize * ~/NbCaseX
+export MapSizeY      is MapCellSize * ~/NbCaseY
+export MapSizeXInLBU is MapCellSize * ~/NbCaseX div (1.0 * GameUnitsPerLBU)
+export MapSizeYInLBU is MapCellSize * ~/NbCaseY div (1.0 * GameUnitsPerLBU)
+export MapSizeZInLBU is MaxAltitudeInLBU
+export Map_Size is float3[MapSizeX, MapSizeY, MapSizeZInLBU * GameUnitsPerLBU]
+export Map_Size_InLBU is float3[MapSizeXInLBU, MapSizeYInLBU, MapSizeZInLBU]
+export Map_Size_2D_InLBU is float2[MapSizeXInLBU, MapSizeYInLBU]
+
+private NbCaseHighPerCaseLow is 2
+export HighDefNbCase   is ~/Map_Size_InCases * NbCaseHighPerCaseLow
+export HighDefCaseSize is MapCellSize div NbCaseHighPerCaseLow
+export LowDefNbCase    is ~/Map_Size_InCases
+export LowDefCaseSize  is MapCellSize
+
+//------------------------------------------------------------------------------
+export DecorSets is ~/MapDecorSets
++ [LevelDesignDecorSets/Common]
++ (MapJuncture == Juncture/OutGame   ? [LevelDesignDecorSets/OutGame]     : [])
++ (MapJuncture == Juncture/Tactic    ? [LevelDesignDecorSets/Tactical]    : [])
++ (MapJuncture == Juncture/Strategic ? [LevelDesignDecorSets/Strategical] : [])
+
++ (MapJuncture == Juncture/Tactic    ? [IAStratDecorSets/Tactical]    : [])
++ (MapJuncture == Juncture/Strategic ? [IAStratDecorSets/Strategical] : [])
+
+//------------------------------------------------------------------------------
+//******************************************************************************
+//------------------------------------------------------------------------------
+export ElevationManager is TElevationManager
+(
+    LayerGround = ~/MapJuncture == Juncture/Strategic ? WorldFloorOutMap : WorldFloorMainHeightField
+    LayerWater  = WorldFloorWaterMesh
+    LayerObject = WorldFloorStreamedMeshKdTreeObject
+    ProxyToSet = $/M3D/Scene/ElevationManagerProxy
+)
+//------------------------------------------------------------------------------
+//******************************************************************************
+//------------------------------------------------------------------------------
+export WorldFloorMainHeightField is TWorldFloorHeightField
+(
+    HeightFieldLoader = THeightFieldLoader
+    (
+        FileName = DatasMapDirectoryBase + 'HeightFieldWithDisplacement.tgv'
+        WorldSize = float2[MapSizeX, MapSizeY]
+        WorldSizeZInLBU = ~/MapSizeZInLBU
+    )
+
+    WorldFloorProxy = $/M3D/Scene/WorldFloorForOnlyGround
+)
+//------------------------------------------------------------------------------
+export WorldFloorStreamedMeshKdTreeObject is TWorldFloorStreamedMeshKdTree
+(
+    WorldSize = float2[MapSizeX, MapSizeY]
+    StreamedMeshKdTreeName = DatasMapDirectoryBase + '/OcclusionInfo_ObjectsOnly.Kdt'
+)
+//------------------------------------------------------------------------------
+export WorldFloorHighBuildingObjects is TWorldFloorStreamedMeshKdTree
+(
+    WorldSize = float2[MapSizeX, MapSizeY]
+    StreamedMeshKdTreeName = DatasMapDirectoryBase + '/HighBuildingObjects.Kdt'
+)
+//------------------------------------------------------------------------------
+export WorldFloorBuildingsWithSlope is TWorldFloorBoxArray
+(
+    FileName = DatasMapDirectoryBase + 'BuildingsBoxList.ndfbin'
+    SlopeAngleDeg = 45.0
+)
+//------------------------------------------------------------------------------
+export WorldFloorWaterMesh is TWorldFloorWaterMesh
+(
+    FileName = DatasMapDirectoryBase + 'WaterMeshes_v2.ndfbin'
+    PlayableAreaInLBU = Map_Size_2D_InLBU
+    CellSize = 4096
+)
+//------------------------------------------------------------------------------
+export WorldFloorHelico is TWorldFloorUnion
+(
+    WorldFloors =
+    [
+        WorldFloorMainHeightField,
+        WorldFloorWaterMesh,
+        WorldFloorStreamedMeshKdTreeObject,
+        WorldFloorBuildingsWithSlope,
+    ]
+
+    WorldFloorProxy               = $/M3D/Scene/WorldFloorForHelicoProxy
+)
+//------------------------------------------------------------------------------
+export WorldFloorRubble is TWorldFloorUnion
+(
+    WorldFloors =
+    [
+        WorldFloorMainHeightField,
+        WorldFloorStreamedMeshKdTreeObject,
+    ]
+
+    WorldFloorProxy               = $/M3D/Scene/WorldFloorForRubbleProxy
+)
+//------------------------------------------------------------------------------
+export WorldFloor is TWorldFloorUnion
+(
+    WorldFloors =
+    [
+        WorldFloorMainHeightField,
+        WorldFloorWaterMesh,
+        WorldFloorStreamedMeshKdTreeObject,
+    ]
+
+    WorldFloorProxy = $/M3D/Scene/WorldFloorForIAProxy
+    Registry = $/M3D/Scene/FloorRegistry
+)
+//------------------------------------------------------------------------------
+export WorldFloorUIMouse is TWorldFloorUnion //utilisé en tactique uniquement
+(
+    WorldFloors =
+    [
+        WorldFloorOutMap, //fallback de souris hors monde
+        WorldFloorMainHeightField,
+        WorldFloorWaterMesh,
+        WorldFloorStreamedMeshKdTreeObject,
+    ]
+
+    WorldFloorProxy = $/M3D/Scene/WorldFloorUIMouseProxy
+)
+//------------------------------------------------------------------------------
+export WorldFloorCameraFollow is TWorldFloorUnion
+(
+    WorldFloors =
+    [
+        WorldFloorMainHeightField,
+        WorldFloorWaterMesh,
+    ]
+)
+//------------------------------------------------------------------------------
+export WorldFloorCameraCollision is TWorldFloorUnion
+(
+    WorldFloors =
+    [
+        WorldFloorStreamedMeshKdTreeObject,
+        WorldFloorBuildingsWithSlope,
+    ]
+)
+//------------------------------------------------------------------------------
+export WorldFloorOutMap is TWorldFloorFlat
+(
+    OutMapMarginInLBU is float3[3721, 3721, 0]
+    OutMapWorldFloor = true
+    MinInLBU = float3[ 0, 0, WaterHeightInLBU ] - OutMapMarginInLBU
+    MaxInLBU = float3[ MapSizeXInLBU, MapSizeYInLBU, WaterHeightInLBU ] + OutMapMarginInLBU
+    Registry = $/M3D/Scene/FloorRegistry
+    WorldFloorProxy = $/M3D/Scene/WorldFloorOutMapProxy
+)
+//------------------------------------------------------------------------------
+export WorldFloorUnitLoS is TWorldFloorUnion
+(
+    WorldFloors =
+    [
+        WorldFloorMainHeightField,
+        WorldFloorStreamedMeshKdTreeObject,
+    ]
+
+    WorldFloorProxy = $/M3D/Scene/WorldFloorUnitLoSProxy
+)
+//------------------------------------------------------------------------------
+export WorldFloorTerrainHeight is TWorldFloorUnion
+(
+    WorldFloors =
+    [
+        WorldFloor,
+        WorldFloorHighBuildingObjects,
+    ]
+
+    WorldFloorProxy = $/M3D/Scene/WorldFloorTerrainHeightProxy
+)
+//------------------------------------------------------------------------------
+//******************************************************************************
+//------------------------------------------------------------------------------
+export GroundDepthMapInfoManager is TGroundDepthMapInfoManager
+(
+    WorldFloorProxy = $/M3D/Scene/WorldFloorForOnlyGround
+    PointCloudProviderForShadow = $/M3D/Scene/PointCloudProviderPrincipal
+    Camera = $/M3D/Misc/CameraPrincipale
+
+    ShadowFarClippingOption = $/GraphicOption/LevelBuild_Low * 1.4
+    FullPrecisionPickRange = Mid_Range
+
+    VerticalRaytraceCameraDirectionZTreshold = 1 //-0.4
+
+    SubColumnRayCount = 4
+
+    VerticalRayColumnCount = 8
+    SideVerticalRayCount = 10
+    SideEyeAxisRayCount = 10
+    BackRayCount = 10
+    BottomRayCount = 6
+    TopRayCount = 10
+
+    MapEpsilon = 1
+
+    MaxDisplacementInLBU = 10
+)
+//------------------------------------------------------------------------------
+//******************************************************************************
+//------------------------------------------------------------------------------
+export CameraSetter is TCameraMoverHelperUsingCameraAndWorldFloor
+(
+    MapSizeXInLBU    = MapSizeXInLBU
+    MapSizeYInLBU    = MapSizeYInLBU
+    WorldFloor       = WorldFloorCameraFollow
+    SecondWorldFloor = WorldFloorCameraCollision
+    Camera           = $/M3D/Misc/CameraPrincipale
+    CameraMoverProxy = $/M3D/Scene/IngameCameraMoverHelperProxy
+    MaxPickDistance  = HQ_Range
+)
+//------------------------------------------------------------------------------
+//******************************************************************************
+//------------------------------------------------------------------------------
+export LevelBuildStateGeoDatabase is TLevelBuildStateGeoDatabase
+(
+    AreaMinX          = 0
+    AreaMinY          = 0
+    AreaMaxX          = ( ( MapSizeX > MapSizeY ) ? MapSizeX : MapSizeY )
+    AreaMaxY          = ( ( MapSizeX > MapSizeY ) ? MapSizeX : MapSizeY )
+    MaxResolution     = 100
+    Proxy             = $/M3D/Scene/LevelBuildStateGeoDatabaseProxy
+    FileName          = 'DatasMap:Output/Output.sdb'
+)
+//------------------------------------------------------------------------------
+//******************************************************************************
+//------------------------------------------------------------------------------
+export WaterHeightInLBU_ForShaders is TEugBFloat
+(
+    Value = WaterHeightInLBU
+)
+
+export Map_FrameHooksContext is ~/MapJuncture == Juncture/Strategic
+    ? $/M3D/Scene/FrameHooksContext_InGameStrategic
+    : $/M3D/Scene/FrameHooksContext_InGame

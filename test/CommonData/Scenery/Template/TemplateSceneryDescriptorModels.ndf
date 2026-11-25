@@ -1,0 +1,593 @@
+HideMode is TBaseClass
+(
+    Never      is 0
+    Classic    is 1
+    Vegetation is 2
+)
+//-----------------------------------------------------------------------------
+BuildingType is TBaseClass
+(
+    None  is 0
+    Small is 1
+    Big   is 2
+    Ruin  is 3
+)
+//-----------------------------------------------------------------------------
+//*****************************************************************************
+//-----------------------------------------------------------------------------
+// Model
+//-----------------------------------------------------------------------------
+//*****************************************************************************
+//-----------------------------------------------------------------------------
+template SceneryDescriptor_Model_Steelman
+[
+    RegistrationName           : string,
+    Tags                       : LIST<string>     = [],
+    Model                      : TResourceMesh,
+
+    SymbolDatabaseProxy        : TLevelBuildSymbolDatabaseProxy = $/M3D/Scene/LevelBuildSymbolDatabaseProxy,
+] is TSceneryDescriptorMultiState
+(
+    RegistrationName = <RegistrationName>
+    Tags = <Tags>
+    SymbolDatabaseProxy = <SymbolDatabaseProxy>
+
+    StateMaskHidden = SDMask_Hidden
+
+    Fallback = TSceneryDescriptorModel3D
+    (
+        Resource = <Model>
+        ModeMask = SDMode_High + SDMode_Mid + SDMode_Low
+        MaterialTextureDico = $/M3D/Misc/MaterialTextureDico
+        SceneryMeshBucketHandlerDico = $/SceneryBase/SceneryMeshBucketHandlerDicoOpaque_Low
+        ContentTypeIfIndividualMesh = ContentType_IndividualMesh_LevelBuild_Low
+        HasNoBetterResolution = true
+    )
+)
+//-----------------------------------------------------------------------------
+//*****************************************************************************
+//-----------------------------------------------------------------------------
+template SceneryDescriptor_ModelImpl_Raytrace
+[
+    ModelRaytrace       : TResourceMesh,
+    ModeMask            : int,
+    TangentFloor        : bool,
+    TangentFloorForLine : bool,
+] is TSceneryDescriptorModel3D
+(
+    Resource = <ModelRaytrace>
+    ModeMask = <ModeMask>
+    MaterialTextureDico = $/M3D/Misc/MaterialTextureDico
+    RenderLayerSelector = $/M3D/Scene/OpaqueMobileRenderPlace
+    TangentFloor = <TangentFloor>
+    TangentFloorForLine = <TangentFloorForLine>
+    SceneryMeshBucketHandlerDico = nil
+    ContentTypeIfIndividualMesh = ContentType_IndividualMesh_LevelBuild_VeryLow
+)
+//-----------------------------------------------------------------------------
+template SceneryDescriptor_ModelImpl_High [
+    ModelHigh                  : TResourceMesh,
+    ModeMask                   : int,
+    TangentFloor               : bool,
+    TangentFloorForLine        : bool,
+    Animation                  : TSceneryMeshAnimation,
+    ProcessBoxAboveGround      : bool,
+    NavigationAspect           : TSceneryDescriptorNavigationAspect,
+] is TSceneryDescriptorModel3D
+(
+    Resource = <ModelHigh>
+    ModeMask = <ModeMask>
+    TangentFloor = <TangentFloor>
+    TangentFloorForLine = <TangentFloorForLine>
+    MaterialTextureDico = $/M3D/Misc/MaterialTextureDico
+    SceneryMeshBucketHandlerDico = $/SceneryBase/SceneryMeshBucketHandlerDicoOpaque_High
+    ContentTypeIfIndividualMesh = ContentType_IndividualMesh_LevelBuild_High
+    HasNoBetterResolution = true
+    Animation = <Animation>
+    ProcessBoxAboveGround = <ProcessBoxAboveGround>
+    NavigationAspect = <NavigationAspect>
+)
+//-----------------------------------------------------------------------------
+template SceneryDescriptor_ModelImpl_Mid [
+    ModelMid                   : TResourceMesh,
+    TangentFloor               : bool,
+    TangentFloorForLine        : bool,
+    Animation                  : TSceneryMeshAnimation,
+] is TSceneryDescriptorModel3D
+(
+    Resource = <ModelMid>
+    ModeMask = SDMode_Mid
+    TangentFloor = <TangentFloor>
+    TangentFloorForLine = <TangentFloorForLine>
+    MaterialTextureDico = $/M3D/Misc/MaterialTextureDico
+    SceneryMeshBucketHandlerDico = $/SceneryBase/SceneryMeshBucketHandlerDicoOpaque_Mid
+    HasNoBetterResolution = false
+    ContentTypeIfIndividualMesh = ContentType_IndividualMesh_LevelBuild_Mid
+    Animation = <Animation>
+)
+//-----------------------------------------------------------------------------
+template SceneryDescriptor_ModelImpl_Low [
+    ModelLow                : TResourceMesh,
+    ModeMask                : int,
+    TangentFloor            : bool,
+    TangentFloorForLine     : bool,
+    Animation               : TSceneryMeshAnimation,
+] is TSceneryDescriptorModel3D
+(
+    Resource = <ModelLow>
+    ModeMask = <ModeMask>
+    TangentFloor = <TangentFloor>
+    TangentFloorForLine = <TangentFloorForLine>
+    MaterialTextureDico = $/M3D/Misc/MaterialTextureDico
+    SceneryMeshBucketHandlerDico = $/SceneryBase/SceneryMeshBucketHandlerDicoOpaque_Low
+    HasNoBetterResolution = false
+    ContentTypeIfIndividualMesh = ContentType_IndividualMesh_LevelBuild_Low
+    Animation = <Animation>
+)
+//-----------------------------------------------------------------------------------
+//***********************************************************************************
+//-----------------------------------------------------------------------------------
+template SceneryDescriptor_MultiMode_Model
+[
+    ModelHigh                  : TResourceMesh = nil,
+    ModelMid                   : TResourceMesh = nil,
+    ModelLow                   : TResourceMesh = nil,
+    ModelProxy                 : TResourceMesh = nil,
+    BuildingType               : int    = BuildingType/None,
+    BlockVisionWhenDestructed  : bool       = false,
+    IsForDistrict              : bool       = false,
+    LodConfig                  : TLodConfig,
+    InfiniteLodRange           : bool       = false,
+    TangentFloor               : bool       = false,
+    TangentFloorForLine        : bool       = false,
+    FxDestruction              : TBaseClass = nil,
+    AnimationHigh              : TBaseClass = nil,
+    AnimationMid               : TBaseClass = nil,
+    AnimationLow               : TBaseClass = nil,
+] is TSceneryDescriptorMultiMode
+(
+    SymbolDatabaseProxy = $/M3D/Scene/LevelBuildSymbolDatabaseProxy
+
+    RaytraceModeMask is <BuildingType> == BuildingType/None ? 0 : (<BlockVisionWhenDestructed> ? SDMode_RaytraceBuilding | SDMode_RaytraceHighBuilding : SDMode_RaytraceBuilding)
+    NavigationModeMask is <IsForDistrict> ? SDMode_District : SDMode_Navigation
+    ModeHigh is SDMode_High_Baked | RaytraceModeMask | (<BuildingType> == BuildingType/None ? 0 : NavigationModeMask) | (<IsForDistrict> ? SDMode_District : 0)
+    High is SceneryDescriptor_ModelImpl_High
+    (
+        ModelHigh                  = <ModelHigh>
+        ModeMask                   = ModeHigh
+        TangentFloor               = <TangentFloor>
+        TangentFloorForLine        = <TangentFloorForLine>
+        Animation                  = <AnimationHigh>
+        ProcessBoxAboveGround      = <BuildingType> != BuildingType/None | <IsForDistrict>
+        NavigationAspect           = (<BuildingType> != BuildingType/None) ? TSceneryDescriptorNavigationAspect
+        (
+            TerrainType = (<BuildingType> == BuildingType/Small) ? ETerrainType/PetitBatiment :
+                          ((<BuildingType> == BuildingType/Ruin) ? ETerrainType/Ruin :
+                          ETerrainType/Batiment)
+        ) : nil
+    )
+
+    Mid is SceneryDescriptor_ModelImpl_Mid
+    (
+        ModelMid                   = <ModelMid>
+        TangentFloor               = <TangentFloor>
+        TangentFloorForLine        = <TangentFloorForLine>
+        Animation                  = <AnimationMid>
+    )
+
+
+    ModeLow is SDMode_Low | (<InfiniteLodRange> ? SDMode_StaticGeometry : 0)
+    Low is SceneryDescriptor_ModelImpl_Low
+    (
+        ModelLow                   = <ModelLow>
+        ModeMask                   = ModeLow
+        TangentFloor               = <TangentFloor>
+        TangentFloorForLine        = <TangentFloorForLine>
+        Animation                  = <AnimationLow>
+    )
+
+    RaytraceObject is SceneryDescriptor_ModelImpl_Raytrace
+    (
+        ModelRaytrace       = <ModelProxy>
+        ModeMask            = SDMode_RaytraceObject
+        TangentFloor        = <TangentFloor>
+        TangentFloorForLine = <TangentFloorForLine>
+    )
+
+    ModeEntry =
+    [
+        TSceneryDescriptorMultiLOD
+        (
+            LodConfig = <LodConfig>
+            High = (<ModelHigh> != nil) ? [ High ] : []
+            Mid = (<ModelMid> != nil) ? [ Mid ] : []
+            Low = (<ModelLow> != nil) ? [ Low ] : []
+        )
+    ]
+    +
+    ( <FxDestruction> != nil  ? [ <FxDestruction> ] : [] )
+    +
+    ( (<ModelProxy> != nil) ? [ RaytraceObject ] : [] )
+)
+//-----------------------------------------------------------------------------------
+//***********************************************************************************
+//-----------------------------------------------------------------------------------
+template SceneryDescriptor_Destroyable
+[
+    RegistrationName        : string            = '',
+    Tags                    : LIST<string>     = [],
+
+    StateMaskDestroyed      : int           = SDMask_SquashOrDestroy,
+    StateMaskHidden         : int           = SDMask_Hidden,
+
+    Fallback                : TBaseClass        = nil,
+    Destroyed               : TBaseClass        = nil,
+    FxDestruction           : TBaseClass        = nil,
+    Destroyable             : bool              = true,
+
+    SymbolDatabaseProxy     : TLevelBuildSymbolDatabaseProxy = $/M3D/Scene/LevelBuildSymbolDatabaseProxy,
+
+] is TSceneryDescriptorMultiState
+(
+    IsDestroyable               is (<Destroyable> | ( <Destroyed> != nil ))
+    IsDestroyableWithModel      is (IsDestroyable & ( <Destroyed> != nil ))
+    IsDestroyableWithFx         is (IsDestroyable & ( <FxDestruction> != nil ))
+    HideOnDestruction           is (IsDestroyable & ( <Destroyed> == nil ) & ( <FxDestruction> == nil ))
+
+    RegistrationName            = <RegistrationName>
+    Tags                        = <Tags>
+    SymbolDatabaseProxy         = <SymbolDatabaseProxy>
+
+    StateMaskHidden = <StateMaskHidden> + (HideOnDestruction ? SDMask_SquashOrDestroy : 0)
+    Alternatives = [] + (
+        (IsDestroyableWithModel | IsDestroyableWithFx) ?
+            [TSceneryDescriptorMultiStateEntry
+            (
+                StateMask = <StateMaskDestroyed>
+                SceneryDescriptors =
+                [
+                    TSceneryDescriptorMultiMode
+                    (
+                        ModeEntry = []
+                        + (IsDestroyableWithModel ?
+                        [
+                            <Destroyed>
+                        ] : [])
+                        + (IsDestroyableWithFx ?
+                        [
+                            <FxDestruction>
+                        ] : [])
+                    )
+                ]
+            )] : []
+        )
+
+    Fallback = <Fallback>
+)
+//-----------------------------------------------------------------------------------
+//***********************************************************************************
+//-----------------------------------------------------------------------------------
+template SceneryDescriptor_Model
+[
+    ModelHigh                  : TResourceMesh    = nil,
+    ModelHigh_dest             : TResourceMesh    = nil,
+    ModelMid                   : TResourceMesh    = nil,
+    ModelMid_dest              : TResourceMesh    = nil,
+    ModelLow                   : TResourceMesh    = nil,
+    ModelLow_dest              : TResourceMesh    = nil,
+    ModelProxy                 : TResourceMesh    = nil,
+    RegistrationName           : string           = '',
+    Tags                       : LIST<string>     = [],
+    Destroyable                : bool             = true,
+    HideMode                   : int          = HideMode/Classic,
+    BuildingType               : int          = BuildingType/None,
+    BlockVisionWhenDestructed  : bool             = false,
+    IsForDistrict              : bool             = false,
+    InfiniteLodRange           : bool             = false,
+    TangentFloor               : bool             = false,
+    TangentFloorForLine        : bool             = false,
+    FxDestruction              : TBaseClass       = nil,
+    SymbolDatabaseProxy        : TLevelBuildSymbolDatabaseProxy = $/M3D/Scene/LevelBuildSymbolDatabaseProxy,
+    LodConfig                  : TLodConfig        = nil,
+] is SceneryDescriptor_Destroyable
+(
+    RegistrationName = <RegistrationName>
+    Tags = <Tags>
+
+    LodConfig is (<LodConfig> != nil ? <LodConfig> : (<BuildingType> == BuildingType/Big ? $/SceneryDB/LodConfig_Building : $/SceneryDB/LodConfig_Medium))
+
+    Destroyed = (<ModelHigh_dest> != nil) ? SceneryDescriptor_MultiMode_Model
+    (
+        ModelHigh = <ModelHigh_dest>
+        ModelMid = <ModelMid_dest>
+        ModelLow = <ModelLow_dest>
+        ModelProxy = <ModelProxy>
+        LodConfig = LodConfig
+        InfiniteLodRange = <InfiniteLodRange>
+        TangentFloor = <TangentFloor>
+        TangentFloorForLine = <TangentFloorForLine>
+    ) : nil
+    FxDestruction = <FxDestruction>
+    Destroyable = <Destroyable>
+
+    StateMaskHidden = <HideMode> == HideMode/Vegetation ? (SDMask_Hidden + SDMask_HideVeget) : (<HideMode> == HideMode/Classic ? SDMask_Hidden : 0)
+
+    Fallback = SceneryDescriptor_MultiMode_Model
+    (
+        ModelHigh = <ModelHigh>
+        ModelMid = <ModelMid>
+        ModelLow = <ModelLow>
+        ModelProxy = <ModelProxy>
+        BuildingType = <BuildingType>
+        BlockVisionWhenDestructed = <BlockVisionWhenDestructed>
+        IsForDistrict = <IsForDistrict>
+        LodConfig = LodConfig
+        InfiniteLodRange = <InfiniteLodRange>
+        TangentFloor = <TangentFloor>
+        TangentFloorForLine = <TangentFloorForLine>
+    )
+
+    SymbolDatabaseProxy = <SymbolDatabaseProxy>
+)
+//-----------------------------------------------------------------------------------
+template SceneryDescriptor_Colossus
+[
+    ModelHigh                  : TResourceMesh    = nil,
+    ModelHigh_dest             : TResourceMesh    = nil,
+    ModelMid                   : TResourceMesh    = nil,
+    ModelMid_dest              : TResourceMesh    = nil,
+    ModelLow                   : TResourceMesh    = nil,
+    ModelLow_dest              : TResourceMesh    = nil,
+    ModelProxy                 : TResourceMesh    = nil,
+    RegistrationName           : string           = '',
+    Tags                       : LIST<string>     = [],
+    Destroyable                : bool             = false,
+    BuildingType               : int          = BuildingType/None,
+    IsForDistrict              : bool             = false,
+    TangentFloor               : bool             = false,
+    TangentFloorForLine        : bool             = false,
+    FxDestruction              : TBaseClass       = nil,
+    SymbolDatabaseProxy        : TLevelBuildSymbolDatabaseProxy = $/M3D/Scene/LevelBuildSymbolDatabaseProxy,
+] is SceneryDescriptor_Model
+(
+    ModelHigh                  = <ModelHigh>
+    ModelHigh_dest             = <ModelHigh_dest>
+    ModelMid                   = <ModelMid>
+    ModelMid_dest              = <ModelMid_dest>
+    ModelLow                   = <ModelLow>
+    ModelLow_dest              = <ModelLow_dest>
+    ModelProxy                 = <ModelProxy>
+    RegistrationName           = <RegistrationName>
+    Tags                       = <Tags>
+    Destroyable                = <Destroyable>
+    HideMode                   = HideMode/Never
+    BuildingType               = <BuildingType>
+    IsForDistrict              = <IsForDistrict>
+    InfiniteLodRange           = true
+    TangentFloor               = <TangentFloor>
+    TangentFloorForLine        = <TangentFloorForLine>
+    FxDestruction              = <FxDestruction>
+    SymbolDatabaseProxy        = <SymbolDatabaseProxy>
+    LodConfig                  = $/SceneryDB/LodConfig_Colossus
+)
+//-----------------------------------------------------------------------------------
+//***********************************************************************************
+//-----------------------------------------------------------------------------------
+template SceneryDescriptor_MultiMode_Model_AnimatedDestruction [
+
+    BuildingType               : int          = BuildingType/None,
+    BlockVisionWhenDestructed  : bool             = false,
+    IsForDistrict              : bool             = false,
+    LodConfig                  : TLodConfig,
+    InfiniteLodRange           : bool             = false,
+    TangentFloor               : bool             = false,
+    TangentFloorForLine        : bool             = false,
+
+    FxDestruction              : TBaseClass       = nil,
+
+    ModelHigh_AnimDest         : TResourceMesh    = nil,
+    ModelMid_AnimDest          : TResourceMesh    = nil,
+    ModelLow_AnimDest          : TResourceMesh    = nil,
+
+    ModelHigh_StaticDest       : TResourceMesh    = nil,
+    ModelMid_StaticDest        : TResourceMesh    = nil,
+    ModelLow_StaticDest        : TResourceMesh    = nil,
+
+    AnimationForceDuration     : float            = 0,
+] is SceneryDescriptor_MultiMode_Model
+(
+    HasModelHigh_AnimDest   is (<ModelHigh_AnimDest>   != nil)
+    HasModelMid_AnimDest    is (<ModelMid_AnimDest>    != nil)
+    HasModelLow_AnimDest    is (<ModelLow_AnimDest>    != nil)
+
+    HasModelHigh_StaticDest is (<ModelHigh_StaticDest> != nil)
+    HasModelMid_StaticDest  is (<ModelMid_StaticDest>  != nil)
+    HasModelLow_StaticDest  is (<ModelLow_StaticDest>  != nil)
+
+    FxDestruction = <FxDestruction>
+
+    BuildingType = <BuildingType>
+    BlockVisionWhenDestructed = <BlockVisionWhenDestructed>
+    IsForDistrict = <IsForDistrict>
+    LodConfig = <LodConfig>
+    InfiniteLodRange = <InfiniteLodRange>
+    TangentFloor = <TangentFloor>
+    TangentFloorForLine = <TangentFloorForLine>
+
+    ModelHigh = HasModelHigh_AnimDest ? <ModelHigh_AnimDest> : <ModelHigh_StaticDest>
+    AnimationHigh = HasModelHigh_AnimDest ? TSceneryMeshAnimation
+    (
+        AnimationRandomOffset = false
+        ResourceAnimation = TResourceMatrixArrayAnimation
+        (
+            FileName = <ModelHigh_AnimDest>.Mesh
+            PlayInLoop = false
+            ForceDuration = <AnimationForceDuration>
+        )
+        WhenFinished = HasModelHigh_StaticDest ? SceneryDescriptor_ModelImpl_High
+        (
+            ModelHigh = <ModelHigh_StaticDest>
+            ModeMask = SDMode_High_Baked
+            TangentFloor = <TangentFloor>
+            TangentFloorForLine = <TangentFloorForLine>
+            Animation = nil
+            ProcessBoxAboveGround = false
+            NavigationAspect = nil
+        ) : nil
+    ) : nil
+
+    ModelMid = HasModelMid_AnimDest ? <ModelMid_AnimDest> : <ModelMid_StaticDest>
+    AnimationMid = HasModelMid_AnimDest ? TSceneryMeshAnimation
+    (
+        AnimationRandomOffset = false
+        ResourceAnimation = TResourceMatrixArrayAnimation
+        (
+            FileName = <ModelMid_AnimDest>.Mesh
+            PlayInLoop = false
+            ForceDuration = <AnimationForceDuration>
+        )
+        WhenFinished = HasModelMid_StaticDest ? SceneryDescriptor_ModelImpl_Mid
+        (
+            ModelMid = <ModelMid_StaticDest>
+            TangentFloor = <TangentFloor>
+            TangentFloorForLine = <TangentFloorForLine>
+            Animation = nil
+        ) : nil
+    ) : nil
+
+    ModelLow = HasModelLow_AnimDest ? <ModelLow_AnimDest> : <ModelLow_StaticDest>
+    AnimationLow = HasModelLow_AnimDest ? TSceneryMeshAnimation
+    (
+        AnimationRandomOffset = false
+        ResourceAnimation = TResourceMatrixArrayAnimation
+        (
+            FileName = <ModelLow_AnimDest>.Mesh
+            PlayInLoop = false
+            ForceDuration = <AnimationForceDuration>
+        )
+        WhenFinished = HasModelLow_StaticDest ? SceneryDescriptor_ModelImpl_Low
+        (
+            ModelLow = <ModelLow_StaticDest>
+            ModeMask = SDMode_Low
+            TangentFloor = <TangentFloor>
+            TangentFloorForLine = <TangentFloorForLine>
+            Animation = nil
+        ) : nil
+    ) : nil
+)
+//------------------------------------------------------------------------------
+template SceneryDescriptor_Model_AnimatedDestruction [
+    RegistrationName           : string           = '',
+    Tags                       : LIST<string>     = [],
+
+    BuildingType               : int          = BuildingType/None,
+    BlockVisionWhenDestructed  : bool             = false,
+    IsForDistrict              : bool             = false,
+    InfiniteLodRange           : bool             = false,
+    TangentFloor               : bool             = false,
+    TangentFloorForLine        : bool             = false,
+
+    FxDestruction              : TBaseClass       = nil,
+
+    ModelHigh                  : TResourceMesh    = nil,
+    ModelMid                   : TResourceMesh    = nil,
+    ModelLow                   : TResourceMesh    = nil,
+
+    ModelHigh_AnimDest         : TResourceMesh    = nil,
+    ModelMid_AnimDest          : TResourceMesh    = nil,
+    ModelLow_AnimDest          : TResourceMesh    = nil,
+
+    ModelHigh_StaticDest       : TResourceMesh    = nil,
+    ModelMid_StaticDest        : TResourceMesh    = nil,
+    ModelLow_StaticDest        : TResourceMesh    = nil,
+
+    AnimationForceDuration     : float            = 0,
+
+    LodConfig                  : TLodConfig    = nil,
+] is SceneryDescriptor_Destroyable
+(
+    RegistrationName = <RegistrationName>
+    Tags = <Tags>
+
+    StateMaskHidden = SDMask_Hidden
+
+    LodConfig is (<LodConfig> != nil ? <LodConfig> : (<BuildingType> == BuildingType/Big ? $/SceneryDB/LodConfig_Building : $/SceneryDB/LodConfig_Medium))
+
+    Fallback = SceneryDescriptor_MultiMode_Model
+    (
+        ModelHigh = <ModelHigh>
+        ModelMid = <ModelMid>
+        ModelLow = <ModelLow>
+        BuildingType = <BuildingType>
+        BlockVisionWhenDestructed = <BlockVisionWhenDestructed>
+        IsForDistrict = <IsForDistrict>
+        LodConfig = LodConfig
+        InfiniteLodRange = <InfiniteLodRange>
+        TangentFloor = <TangentFloor>
+        TangentFloorForLine = <TangentFloorForLine>
+    )
+
+    Destroyable = true
+    Destroyed = SceneryDescriptor_MultiMode_Model_AnimatedDestruction
+    (
+        TangentFloor = <TangentFloor>
+        TangentFloorForLine = <TangentFloorForLine>
+
+        ModelHigh_AnimDest = <ModelHigh_AnimDest>
+        ModelMid_AnimDest = <ModelMid_AnimDest>
+        ModelLow_AnimDest = <ModelLow_AnimDest>
+
+        ModelHigh_StaticDest = <ModelHigh_StaticDest>
+        ModelMid_StaticDest = <ModelMid_StaticDest>
+        ModelLow_StaticDest = <ModelLow_StaticDest>
+
+        LodConfig = LodConfig
+
+        AnimationForceDuration = <AnimationForceDuration>
+    )
+    FxDestruction = <FxDestruction>
+)
+//------------------------------------------------------------------------------
+template SceneryDescriptor_Model_ArmoryAnimationLoop [
+    RegistrationName : string = '',
+    Tags : LIST<string> = [],
+    Model : TResourceMesh = nil,
+] is TSceneryDescriptorMultiState
+(
+    RegistrationName = <RegistrationName>
+    Tags = <Tags>
+    SymbolDatabaseProxy = $/M3D/Scene/LevelBuildSymbolDatabaseProxy
+    StateMaskHidden = SDMask_Hidden
+
+    Animation is TSceneryMeshAnimation
+    (
+        AnimationRandomOffset = true
+        ResourceAnimation = TResourceMatrixArrayAnimation
+        (
+            FileName = <Model>.Mesh
+            PlayInLoop = true
+            ForceDuration = 0
+        )
+    )
+
+    Fallback = TSceneryDescriptorModel3D
+    (
+        Resource = <Model>
+        ModeMask = SDMode_High + SDMode_Mid + SDMode_Low
+        SceneryMeshBucketHandlerDico = $/SceneryBase/SceneryMeshBucketHandlerDicoOpaque_Low
+        ContentTypeIfIndividualMesh = ContentType_IndividualMesh_LevelBuild_Low
+        MaterialTextureDico = $/M3D/Misc/MaterialTextureDico
+        HasNoBetterResolution = true
+        Animation = Animation
+    )
+)
+//-----------------------------------------------------------------------------
+//*****************************************************************************
+//-----------------------------------------------------------------------------
+template template_ShadeProperty
+[
+    Color : float3,
+] is TPropertyBlock
+(
+    ParameterDico = MAP [('DiffuseShade', TEugBFloat3(Value = <Color>))]
+)

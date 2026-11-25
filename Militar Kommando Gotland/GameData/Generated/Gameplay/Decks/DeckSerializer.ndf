@@ -4352,6 +4352,8 @@ unnamed TDeckSerializerEntries
         ($/GFX/Unit/Descriptor_Unit_Dtgb_953B_SWE, 10009),
         ($/GFX/Unit/Descriptor_Unit_Pltgb_903_SWE, 100010),
         ($/GFX/Unit/Descriptor_Unit_Pvpjtgb_1111_SWE, 10020),
+        ($/GFX/Unit/Descriptor_Unit_Pansarskytte_G_CMD_SWE, 10021),
+        ($/GFX/Unit/Descriptor_Unit_Pansarskytte_G_SWE, 10022),
         ($/GFX/Unit/Descriptor_Unit_Strv_102_CMD_SWE, 10040),
         ($/GFX/Unit/Descriptor_Unit_Strv_102_SWE, 10041),
         ($/GFX/Unit/Descriptor_Unit_Varnkanon_m42_SWE, 10042),

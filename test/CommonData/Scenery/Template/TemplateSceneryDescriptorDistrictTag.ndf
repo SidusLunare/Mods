@@ -1,0 +1,25 @@
+template TemplateSceneryDescriptor_DistrictDescription [
+    RegistrationName    : string,
+
+    SymbolDatabaseProxy             = $/M3D/Scene/LevelBuildSymbolDatabaseProxy,
+
+    Color                           = RGBA[255,0,0,255],
+    SideCount           : int       = 6,
+
+    UniteDescriptor     : string    = nil
+
+] is TSceneryDescriptorLineRegularPolygonWithRadius
+(
+    RegistrationName = <RegistrationName>
+    SymbolDatabaseProxy = <SymbolDatabaseProxy>
+    Tags = [ "District" ]
+    ModeMask = SDMode_District
+    RadiusInLBU = 2
+    SideCount = <SideCount>
+    Color = <Color>
+    MeshBucketHandler = $/SceneryBase/SceneryMeshBucketHandler_Lines
+    GameDesignAspect = TSceneryDescriptorGameDesignAspect_UniteDescriptor
+    (
+        UniteDescriptor = <UniteDescriptor>
+    )
+)

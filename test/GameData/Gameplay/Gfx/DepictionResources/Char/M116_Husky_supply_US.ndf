@@ -1,0 +1,14 @@
+export Modele_M116_Husky_supply_US is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/US/Vehicule/M116_Husky_supply/M116_Husky_supply.fbx"
+)
+
+export Modele_M116_Husky_supply_US_MID is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/US/Vehicule/M116_Husky_supply_MID/M116_Husky_supply_MID.fbx"
+)
+
+export Modele_M116_Husky_supply_US_LOW is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/US/Vehicule/M116_Husky_supply_LOW/M116_Husky_supply_LOW.fbx"
+)

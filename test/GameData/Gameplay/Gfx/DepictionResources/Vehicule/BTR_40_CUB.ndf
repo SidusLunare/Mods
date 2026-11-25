@@ -1,0 +1,17 @@
+export Modele_BTR_40_CUB is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/URSS/Vehicule/BTR_40/BTR_40.fbx"
+    Textures="GameData:/Assets/3D/Units/CUBA/APC/BTR_40"
+)
+
+export Modele_BTR_40_CUB_MID is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/URSS/Vehicule/BTR_40_MID/BTR_40_MID.fbx"
+    Textures="GameData:/Assets/3D/Units/CUBA/APC/BTR_40_MID"
+)
+
+export Modele_BTR_40_CUB_LOW is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/URSS/Vehicule/BTR_40_LOW/BTR_40_LOW.fbx"
+    Textures="GameData:/Assets/3D/Units/CUBA/APC/BTR_40_LOW"
+)

@@ -1,0 +1,4 @@
+export Modele_M35_Fenix_VEN is TResourceMesh(Mesh="GameData:/Assets/3D/Units/VEN/Vehicule/M35_Fenix/M35_Fenix.fbx")
+export Modele_M35_Fenix_VEN_MID is TResourceMesh(Mesh="GameData:/Assets/3D/Units/VEN/Vehicule/M35_Fenix_MID/M35_Fenix_MID.fbx")
+export Modele_M35_Fenix_VEN_LOW is TResourceMesh(Mesh="GameData:/Assets/3D/Units/VEN/Vehicule/M35_Fenix_LOW/M35_Fenix_LOW.fbx")
+export Modele_M35_Fenix_VEN_Tourelle_02 is TResourceMesh( Mesh=ModelFile_M60_cosmetic)

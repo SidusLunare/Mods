@@ -1,0 +1,84 @@
+template template_MultiLineEntry_Proxy
+[
+    SceneryDescriptorName           : string        ,
+    OffsetInMeters                  : float         = 0.0,
+    ReverseOrder                    : bool       = false,
+]
+is TSceneryDescriptorMultiLineEntry
+(
+    SceneryDescriptor               = TSceneryDescriptorProxy
+    (
+        AliasedRegistrationName         = <SceneryDescriptorName>
+        SymbolDatabaseProxy             = $/M3D/Scene/LevelBuildSymbolDatabaseProxy
+    )
+    OffsetInLBU                     = <OffsetInMeters>
+    ReverseOrder                    = <ReverseOrder>
+)
+//------------------------------------------------------------------------------
+template template_MultiLine
+[
+    RegistrationName                        : string,
+    Tags                                    : LIST<string> = [],
+    ColorCode                               : color = RGBA[0, 0, 0, 0],
+
+    Entries                                                 = [],
+
+    BezierMaxErrorInMeters                  : float         = 1.0,
+]
+is TSceneryDescriptorMultiLine
+(
+    RegistrationName                = <RegistrationName>
+    Tags                            = <Tags>
+    ColorCode                       = <ColorCode>
+    SymbolDatabaseProxy             = $/M3D/Scene/LevelBuildSymbolDatabaseProxy
+
+    Entries                         = <Entries>
+
+    BezierMaxErrorLBU               = <BezierMaxErrorInMeters>
+)
+//------------------------------------------------------------------------------
+//******************************************************************************
+//------------------------------------------------------------------------------
+template template_LineWithSpecificNodes
+[
+    RegistrationName : string,
+    Tags             : LIST<string> = [],
+    ColorCode        : color = RGBA[0, 0, 0, 0],
+
+    StartName        : string = '',
+    IntermediateName : string = '',
+    EndName          : string = '',
+    LineName         : string,
+
+    OrientExtremitiesOnZAxis : bool = false,
+]
+is TSceneryDescriptorLineWithSpecificNodes
+(
+    RegistrationName             = <RegistrationName>
+    Tags                         = <Tags>
+    ColorCode                    = <ColorCode>
+    SymbolDatabaseProxy          = $/M3D/Scene/LevelBuildSymbolDatabaseProxy
+
+    Start = (<StartName> == '') ? nil : TSceneryDescriptorProxy
+    (
+        AliasedRegistrationName  = <StartName>
+        SymbolDatabaseProxy      = $/M3D/Scene/LevelBuildSymbolDatabaseProxy
+    )
+    Intermediate = (<IntermediateName> == '') ? nil : TSceneryDescriptorProxy
+    (
+        AliasedRegistrationName  = <IntermediateName>
+        SymbolDatabaseProxy      = $/M3D/Scene/LevelBuildSymbolDatabaseProxy
+    )
+    End = (<EndName> == '') ? nil : TSceneryDescriptorProxy
+    (
+        AliasedRegistrationName  = <EndName>
+        SymbolDatabaseProxy      = $/M3D/Scene/LevelBuildSymbolDatabaseProxy
+    )
+    Line = TSceneryDescriptorProxy
+    (
+        AliasedRegistrationName  = <LineName>
+        SymbolDatabaseProxy      = $/M3D/Scene/LevelBuildSymbolDatabaseProxy
+    )
+
+    OrientExtremitiesOnZAxis = <OrientExtremitiesOnZAxis>
+)

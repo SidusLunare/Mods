@@ -1,0 +1,14 @@
+export Modele_AR_76_CMD_Alpini_ITA is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/ITA/Vehicule/AR76_CMD/AR76_CMD.fbx"
+)
+
+export Modele_AR_76_CMD_Alpini_ITA_MID is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/ITA/Vehicule/AR76_CMD_MID/AR76_CMD_MID.fbx"
+)
+
+export Modele_AR_76_CMD_Alpini_ITA_LOW is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/ITA/Vehicule/AR76_CMD_LOW/AR76_CMD_LOW.fbx"
+)

@@ -1,0 +1,30 @@
+export InGameHUDResource is TUISpecificInGameHUDResource
+(
+    MinimapResources            = ~/InGameMinimap
+
+    HUDReplayResource               = ~/HUDReplayResource
+    HUDAlertPanelDescriptor         = ~/UISpecificHUDAlertPanelViewDescriptor
+    CameraManipulator                   = $/Camera/CameraManipulator
+
+    PerformanceAlertViewDescriptor      = ~/PerformanceAlertViewDescriptor
+
+    ShowUnitInfosMapping       = $/KeyboardOption/Mapping_ShowUnitInfos
+    TurnOffWeaponsMapping      = $/KeyboardOption/Mapping_TurnOffWeapons
+    DisplayAllOrdersMapping    = $/KeyboardOption/Mapping_DisplayAllOrders
+
+    VideoModeValue                  = $/M3D/Scene/ShootVideoMode
+    HideInterfaceEscaperInputLayer  = $/M3D/Input/UserInputLayerHandler/InputLayer_HideInterfaceEscaper
+    HideInterfaceMapping            = $/KeyboardOption/Mapping_HideInterface
+    InterfaceLayersToHide           = ~/InterfaceLayers
+
+    OrderDisplayResources                   = ~/UIOrderDisplayResources
+
+    SelectionPanelDescriptor                 = ~/UISpecificUnitSelectionPanelViewDescriptor
+    SelectionWeaponPanelDescriptor           = ~/UISpecificUnitSelectionWeaponPanelViewDescriptor
+    SelectionRoeDescriptor                   = ~/UISpecificUnitSelectionRoeViewDescriptor
+
+    MiniMapInfoViewDescriptor               = ~/UISpecificMiniMapInfoViewDescriptor
+    ShortcutsForSelectionViewDescriptor     = ~/UISpecificShortcutsForSelectionViewDescriptor
+
+    PhasePanelElementNames = ~/PhasePanelElementNames
+)

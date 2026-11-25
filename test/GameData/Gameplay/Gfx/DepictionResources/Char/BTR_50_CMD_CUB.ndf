@@ -1,0 +1,17 @@
+export Modele_BTR_50_CMD_CUB is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/DDR/APC/BTR_50_CMD/BTR_50_CMD.fbx"
+    Textures="GameData:/Assets/3D/Units/CUBA/CMD/BTR_50_CMD"
+)
+
+export Modele_BTR_50_CMD_CUB_MID is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/DDR/APC/BTR_50_CMD_MID/BTR_50_CMD_MID.fbx"
+    Textures="GameData:/Assets/3D/Units/CUBA/CMD/BTR_50_CMD_MID"
+)
+
+export Modele_BTR_50_CMD_CUB_LOW is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/DDR/APC/BTR_50_CMD_LOW/BTR_50_CMD_LOW.fbx"
+    Textures="GameData:/Assets/3D/Units/CUBA/CMD/BTR_50_CMD_LOW"
+)

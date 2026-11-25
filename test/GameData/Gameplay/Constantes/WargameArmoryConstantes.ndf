@@ -1,0 +1,52 @@
+WargameArmoryConstantes is TWargameArmoryTunableConstante
+(
+    // /!\ MERCI DE RESPECTER L'ORDRE ALPHABETIQUE !
+    // Par catégories puis par constante.
+
+    // Facteur utilisé pour la transformation des Plating et APValue pour l'affichage en mm dans l'UI
+    PlatingAndApDisplayFactor = 1 //10 pour du mm
+
+    PaliersDAgiliteGRU = MAP
+    [
+        (600,   'Value_6'), //Exceptional
+        (900,  'Value_5'), //Very good
+        (1100,  'Value_4'), //Good
+        (1350,  'Value_3'), //Normal
+        (1700, 'Value_2'), //Mediocre
+        (3501,  'Value_1'), //Bad
+    ]
+
+    PaliersDeDissimulation = MAP
+    [
+        (1.0, 'Value_1'),
+        (1.5, 'Value_2'),
+        (2.0, 'Value_4'),
+        (4.0, 'Value_6'),
+    ]
+
+    PaliersDOptiqueDAltitudeGRU = MAP
+    [
+        (0, 'Value_3'),
+        (5301, 'Value_4'),
+        (10601, 'Value_5'),
+        (13250, 'Value_6'),
+
+    ]
+
+    PaliersDOptiqueGRU = MAP
+    [
+        (0, 'Value_1'),
+        (1768, 'Value_2'),
+        (2651, 'Value_3'),
+        (3535, 'Value_4'),
+        (5301, 'Value_5'),
+        (7068, 'Value_6'),
+    ]
+
+    PaliersDeResilience = MAP
+    [
+        (2, 'Value_1'),
+        (5, 'Value_2'),
+        (10, 'Value_3'),
+    ]
+)

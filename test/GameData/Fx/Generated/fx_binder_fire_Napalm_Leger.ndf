@@ -1,0 +1,93 @@
+// Ne pas éditer, ce fichier est généré
+
+export fx_binder_fire_Napalm_Leger is SimultaneousActionDeclaration
+(
+    Params =
+    [
+        private parDensityFire is TActionAlias( ExpectedType = 'float' DefaultValue = 0.5 ),
+        private parRadiusPhysical is TActionAlias( ExpectedType = 'float' DefaultValue = 1000 ),
+        private parPosition is TActionAlias( ExpectedType = 'float3' DefaultValue = float3[0,0,0] ),
+    ]
+    Actions = ActionList is
+    [
+        TSimultaneousAction
+        (
+            Mobile = TMobileWithLocalRepereMatrixFactory
+            (
+                Position = float3[0,0,-137]
+            )
+            Actions =
+            [
+                TActionCall
+                (
+                    Action = $/VFX_Bank/FX_BANK_Binder_Fire_Simple
+                    NamedParams = MAP[
+                        ( 'parDensity', parDensityFire ),
+                        ( 'parHeight', 0 ),
+                        ( 'parRadius', parRadiusPhysical ),
+                        ( 'parSmokeColor', float3[0.09411766,0.09411766,0.09411766] ),
+                        ( 'parSmokeDensity', 0.8 ),
+                        ( 'parSmokeDuration', 8 ),
+                        ( 'parSmokeOpacity', 0.8 ),
+                        ( 'parSmokeSize', 3500 ),
+                        ( 'parSmokeSpeed', 400 ),
+                        ( 'parSpreadingTime', 10 ),
+                    ]
+                ),
+            ]
+        ),
+        TSimultaneousAction
+        (
+            Mobile = TMobileWithLocalRepereMatrixFactory
+            (
+                Position = float3[471,204,-137]
+            )
+            Actions =
+            [
+                TActionCall
+                (
+                    Action = $/VFX_Bank/FX_BANK_Binder_Fire_Simple
+                    NamedParams = MAP[
+                        ( 'parDensity', 0.05 ),
+                        ( 'parHeight', 0 ),
+                        ( 'parRadius', 2000 ),
+                        ( 'parSmokeColor', float3[0.07450981,0.07450981,0.07450981] ),
+                        ( 'parSmokeDensity', 0.8 ),
+                        ( 'parSmokeDuration', 2 ),
+                        ( 'parSmokeOpacity', 0.8 ),
+                        ( 'parSmokeSize', 2500 ),
+                        ( 'parSmokeSpeed', 30 ),
+                        ( 'parSpreadingTime', 10 ),
+                    ]
+                ),
+            ]
+        ),
+        TSimultaneousAction
+        (
+            Mobile = TMobileWithLocalRepereMatrixFactory
+            (
+                Position = parPosition
+            )
+            Actions =
+            [
+                TSequentialAction
+                (Actions =
+                    [
+                        TWaitInSec( Duration = 4 ),
+                        TActionCall
+                        (
+                            Action = $/VFX_Bank/BANK_Ground_Sticker_Burned_Simple
+                            NamedParams = MAP[
+                                ( 'parColor', float3[1,1,1] ),
+                                ( 'parDeltaPosition', 0 ),
+                                ( 'parFadeInTime', 1 ),
+                                ( 'parLifetime', 500 ),
+                                ( 'parSize', parRadiusPhysical ),
+                            ]
+                        ),
+                    ]
+                ),
+            ]
+        ),
+    ]
+)

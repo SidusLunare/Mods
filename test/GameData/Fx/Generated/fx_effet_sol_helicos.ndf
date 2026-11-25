@@ -1,0 +1,63 @@
+// Ne pas éditer, ce fichier est généré
+
+export fx_effet_sol_helicos is SimultaneousActionDeclaration
+(
+    Params =
+    [
+        private parInitialShotDelay is TActionAlias( ExpectedType = 'float' DefaultValue = 0 ),
+    ]
+    Actions = ActionList is
+    [
+        TSimultaneousAction
+        (
+            Mobile = nil
+            Actions =
+            [
+                TActionCall
+                (
+                    Action = $/VFX_Bank/SmokeCircle_Simple
+                    NamedParams = MAP[
+                        ( 'parAccelerationZ', 500 ),
+                        ( 'parCircularArcRatio', 1 ),
+                        ( 'parColor1', float3[0.6313726,0.4980392,0.3882353] ),
+                        ( 'parColor2', float3[0.7725491,0.7725491,0.7725491] ),
+                        ( 'parFluidFriction', 1.5 ),
+                        ( 'parInitialDelay', parInitialShotDelay ),
+                        ( 'parLifetime', 2 ),
+                        ( 'parOpacity1', 0.05 ),
+                        ( 'parOpacity2', 0.03 ),
+                        ( 'parParticleRotationSpeed', 5 ),
+                        ( 'parSize1', 100 ),
+                        ( 'parSize2', 2800 ),
+                        ( 'parSpawnCount', 40 ),
+                        ( 'parSpawnDuration', 0.6 ),
+                        ( 'parSpawnRadius', 500 ),
+                        ( 'parSpeed', 4000 ),
+                    ]
+                ),
+                TActionCall
+                (
+                    Action = $/VFX_Bank/SmokeCircle_Simple
+                    NamedParams = MAP[
+                        ( 'parAccelerationZ', 500 ),
+                        ( 'parCircularArcRatio', 1 ),
+                        ( 'parColor1', float3[0.6313726,0.4980392,0.3882353] ),
+                        ( 'parColor2', float3[0.5333334,0.5333334,0.5333334] ),
+                        ( 'parFluidFriction', 1.5 ),
+                        ( 'parInitialDelay', parInitialShotDelay ),
+                        ( 'parLifetime', 3 ),
+                        ( 'parOpacity1', 0.05 ),
+                        ( 'parOpacity2', 0.03 ),
+                        ( 'parParticleRotationSpeed', 8 ),
+                        ( 'parSize1', 100 ),
+                        ( 'parSize2', 2000 ),
+                        ( 'parSpawnCount', 35 ),
+                        ( 'parSpawnDuration', 0.6 ),
+                        ( 'parSpawnRadius', 500 ),
+                        ( 'parSpeed', 5000 ),
+                    ]
+                ),
+            ]
+        ),
+    ]
+)

@@ -1,0 +1,5 @@
+export Modele_RBY_Mk1_VEN is TResourceMesh( Mesh="GameData:/Assets/3D/Units/VEN/Vehicule/RBY_Mk1/RBY_Mk1.fbx")
+export Modele_RBY_Mk1_VEN_MID is TResourceMesh( Mesh="GameData:/Assets/3D/Units/VEN/Vehicule/RBY_Mk1_MID/RBY_Mk1_MID.fbx")
+export Modele_RBY_Mk1_VEN_LOW is TResourceMesh( Mesh="GameData:/Assets/3D/Units/VEN/Vehicule/RBY_Mk1_LOW/RBY_Mk1_LOW.fbx")
+export Modele_RBY_Mk1_VEN_Tourelle_01 is TResourceMesh( Mesh=ModelFile_M60_cosmetic)
+export Modele_RBY_Mk1_VEN_Tourelle_02 is TResourceMesh( Mesh=ModelFile_M60_cosmetic)

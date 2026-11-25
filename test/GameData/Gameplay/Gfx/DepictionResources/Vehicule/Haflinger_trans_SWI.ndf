@@ -1,0 +1,14 @@
+export Modele_Haflinger_trans_SWI is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/SWI/Vehicule/Haflinger_trans/Haflinger_trans.fbx"
+)
+
+export Modele_Haflinger_trans_SWI_MID is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/SWI/Vehicule/Haflinger_trans/Haflinger_trans.fbx"
+)
+
+export Modele_Haflinger_trans_SWI_LOW is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/SWI/Vehicule/Haflinger_trans/Haflinger_trans.fbx"
+)

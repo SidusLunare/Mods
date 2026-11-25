@@ -1,0 +1,19 @@
+export Modele_F14A_Tomcat_AA_US is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/US/Avion/F14A_TOMCAT/F14A_TOMCAT.fbx"
+)
+
+export Modele_F14A_Tomcat_AA_US_MID is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/US/Avion/F14A_TOMCAT_MID/F14A_TOMCAT_MID.fbx"
+)
+
+export Modele_F14A_Tomcat_AA_US_LOW is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/US/Avion/F14A_TOMCAT_LOW/F14A_TOMCAT_LOW.fbx"
+)
+
+export Modele_F14A_Tomcat_AA_US_train is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/US/Avion/F14A_TOMCAT/F14A_TOMCAT_train.fbx"
+)

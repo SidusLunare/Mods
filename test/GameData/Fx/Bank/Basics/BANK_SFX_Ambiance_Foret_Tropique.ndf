@@ -1,0 +1,32 @@
+export SFX_Ambiance_Foret_Tropique is SimultaneousActionDeclaration
+(
+    Params = []
+    Actions =
+    [
+        Ambiance_Foret_Tropique_OneShot,
+    ]
+)
+
+export Ambiance_Foret_Tropique_OneShot is Template_RepeatSimultaneous
+(
+    Actions =
+    [
+        Template_RepeatSequential
+        (
+           TimeServer = Zoom_1_2_3_4_RenderTime
+           Actions =
+           [
+              WaitInSec
+              (
+                  Duration = RandomRange [10,20]
+              ),
+              TActionDescriptorPlaySoundList
+              (
+                  SoundDescriptor = $/GFX/Sound/Sound_ForetAmbiance_Tropique_Evenements
+              ),
+
+           ]
+           Forever = true
+        )
+    ]
+)

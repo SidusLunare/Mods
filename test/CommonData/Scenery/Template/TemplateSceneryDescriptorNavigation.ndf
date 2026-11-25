@@ -1,0 +1,51 @@
+template TemplateNavigationLine
+[
+    RegistrationName                ,
+    Tags                            : LIST<string> = [],
+    ColorCode                       : color = RGBA[0, 0, 0, 0],
+    Color                           ,
+    TerrainType                     ,
+    ThicknessInLBU                  ,
+] is TSceneryDescriptorBezierTriangleString
+(
+    SymbolDatabaseProxy         = $/M3D/Scene/LevelBuildSymbolDatabaseProxy
+    RegistrationName            = <RegistrationName>
+    Tags                        = <Tags>
+    ColorCode                   = <ColorCode>
+
+    BezierMaxErrorInLBU         = 0.23255813953
+    MeshBucketHandler           = $/SceneryBase/SceneryMeshBucketHandler_TriangleString
+    Mode                        = SDMode_Navigation
+    Color                       = <Color>
+    WidthInLBU                  = <ThicknessInLBU>
+    NavigationAspect            = TSceneryDescriptorNavigationAspect_Line
+    (
+        TerrainType             = <TerrainType>
+        ThicknessInLBU          = <ThicknessInLBU>
+    )
+)
+//------------------------------------------------------------------------------
+//******************************************************************************
+//------------------------------------------------------------------------------
+template TemplateNavigationArea
+[
+    RegistrationName                ,
+    Tags                            : LIST<string> = [],
+    ColorCode                       : color = RGBA[0, 0, 0, 0],
+    Color                           ,
+    TerrainType                     ,
+] is TSceneryDescriptorTriangleSurface
+(
+    SymbolDatabaseProxy         = $/M3D/Scene/LevelBuildSymbolDatabaseProxy
+    RegistrationName            = <RegistrationName>
+    Tags                        = <Tags>
+    ColorCode                   = <ColorCode>
+
+    MeshBucketHandler           = $/SceneryBase/SceneryMeshBucketHandler_VectorielArea
+    Mode                        = SDMode_Navigation
+    Color                       = <Color>
+    NavigationAspect            = TSceneryDescriptorNavigationAspect
+    (
+        TerrainType             = <TerrainType>
+    )
+)

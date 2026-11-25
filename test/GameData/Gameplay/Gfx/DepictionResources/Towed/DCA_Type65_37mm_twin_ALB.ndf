@@ -1,0 +1,14 @@
+export Modele_DCA_Type65_37mm_twin_ALB is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/ALB/Canon/DCA_Type65_37mm_twin/DCA_Type65_37mm_twin.fbx"
+)
+
+export Modele_DCA_Type65_37mm_twin_ALB_MID is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/ALB/Canon/DCA_Type65_37mm_twin_MID/DCA_Type65_37mm_twin_MID.fbx"
+)
+
+export Modele_DCA_Type65_37mm_twin_ALB_LOW is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/ALB/Canon/DCA_Type65_37mm_twin_LOW/DCA_Type65_37mm_twin_LOW.fbx"
+)

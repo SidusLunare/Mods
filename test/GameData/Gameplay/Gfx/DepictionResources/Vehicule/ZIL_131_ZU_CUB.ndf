@@ -1,0 +1,17 @@
+export Modele_ZIL_131_ZU_CUB is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/URSS/DCA/ZIL_131_ZU/ZIL_131_ZU.fbx"
+    Textures="GameData:/Assets/3D/Units/URSS/DCA/ZIL_131_ZU_SOV"
+)
+
+export Modele_ZIL_131_ZU_CUB_MID is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/URSS/DCA/ZIL_131_ZU_MID/ZIL_131_ZU_MID.fbx"
+    Textures="GameData:/Assets/3D/Units/URSS/DCA/ZIL_131_ZU_SOV_MID"
+)
+
+export Modele_ZIL_131_ZU_CUB_LOW is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/URSS/DCA/ZIL_131_ZU_LOW/ZIL_131_ZU_LOW.fbx"
+    Textures="GameData:/Assets/3D/Units/URSS/DCA/ZIL_131_ZU_SOV_LOW"
+)

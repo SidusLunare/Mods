@@ -1,0 +1,12 @@
+unnamed TLocalisationDicoResource
+(
+    DicoToken = ~/LocalisationConstantes/dico_companies
+    FileName = "GameData:/Localisation/SteelMan/companies.csv"
+)
+
+unnamed TLocalisationDicoResource
+(
+    DicoToken = ~/LocalisationConstantes/dico_platoons
+    FileName = "GameData:/Localisation/SteelMan/platoons.csv"
+)
+

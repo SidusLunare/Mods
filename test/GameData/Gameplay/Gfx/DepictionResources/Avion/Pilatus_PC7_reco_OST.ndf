@@ -1,0 +1,19 @@
+export Modele_Pilatus_PC7_reco_OST is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/OST/Avion/Pilatus_PC7_reco/Pilatus_PC7_reco.fbx"
+)
+
+export Modele_Pilatus_PC7_reco_OST_MID is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/OST/Avion/Pilatus_PC7_reco/Pilatus_PC7_reco.fbx"
+)
+
+export Modele_Pilatus_PC7_reco_OST_LOW is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/OST/Avion/Pilatus_PC7_reco/Pilatus_PC7_reco.fbx"
+)
+
+export Modele_Pilatus_PC7_reco_OST_train is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/OST/Avion/Pilatus_PC7_reco/Pilatus_PC7_reco_train.fbx"
+)

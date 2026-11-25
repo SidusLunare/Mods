@@ -1,0 +1,19 @@
+export Modele_F5E_TigerII_HE_BRZ is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/BRZ/Avion/F5E_TigerII_AA/F5E_TigerII_HE.fbx"
+)
+
+export Modele_F5E_TigerII_HE_BRZ_MID is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/BRZ/Avion/F5E_TigerII_AA_MID/F5E_TigerII_HE_MID.fbx"
+)
+
+export Modele_F5E_TigerII_HE_BRZ_LOW is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/BRZ/Avion/F5E_TigerII_AA_LOW/F5E_TigerII_HE_LOW.fbx"
+)
+
+export Modele_F5E_TigerII_HE_BRZ_train is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/BRZ/Avion/F5E_TigerII_AA/F5E_TigerII_AA_train.fbx"
+)

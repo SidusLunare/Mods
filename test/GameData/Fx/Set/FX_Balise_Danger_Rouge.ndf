@@ -1,0 +1,172 @@
+// Flashs à durée limitée : après l'arrêt de l'action du décor, le dernier flash expire naturellement.
+private BeaconLightDestructible is SimultaneousActionDeclaration
+(
+    Params =
+    [
+        parRadiusLBU is Template_Param_Float(DefaultValue = 8.0),
+        parColor is Template_Param_Float3(DefaultValue = float3[0.8, 0.01, 0.005]),
+        parFallOff is Template_Param_Float(DefaultValue = 0.5),
+        parPeriodInSec is Template_Param_Float(DefaultValue = 2.0),
+        parOnTimeInSec is Template_Param_Float(DefaultValue = 0.5),
+    ]
+    Actions =
+    [
+        ParticleSpraySpawnerWithEvaluable
+        (
+            Forever = true
+            Frequency = 1.0 div Max[parPeriodInSec, 0.02]
+            SpawnFirstParticleAtStart = true
+            Spawner = ParticleSpawner
+            (
+                ParticleLifetime = Min[Max[parOnTimeInSec, 0.01], Max[parPeriodInSec, 0.02]]
+                Initialisers =
+                [
+                    Initialiser_SetMobileWrapper(),
+                    ParticleInitialiserList
+                    (
+                        Size = parRadiusLBU * 2 * getX[ParticleMobileWrapperScale]
+                        Position = float3[0, 0, 0]
+                        ColorRGB = parColor
+                        Alpha = parFallOff
+                        CustomFloat_1 = parRadiusLBU
+                    ),
+                ]
+                ParticleDescriptor = ParticleDescriptor
+                (
+                    RenderInfo = LightRenderInfo
+                    Evolvers = ParticleStandardEvolverList
+                    (
+                        Size = ParticleCustomFloat_1 * 2 * getX[ParticleMobileWrapperScale]
+                    )
+                    ParticleRenderer = $/VFX_Bank/PointLightRendererLBU
+                    InfiniteParticles = false
+                )
+            )
+        ),
+    ]
+)
+
+// Une seule particule permanente par lumière, sans renouvellement ni fondu.
+// À la destruction, le nettoyage supprime les particules liées au centroïde de cette action.
+private ContinuousLightDestructible is SimultaneousActionDeclaration
+(
+    Params =
+    [
+        parRadiusLBU is Template_Param_Float(),
+        parColor is Template_Param_Float3(),
+        parFallOff is Template_Param_Float(),
+        parPeriodInSec is Template_Param_Float(DefaultValue = 0.5),
+        parOnTimeInSec is Template_Param_Float(DefaultValue = 0.5),
+    ]
+    Actions =
+    [
+        Template_WaitForEver(),
+        ContinuousLightBomb is ParticleBombSpawner
+        (
+            // Aucun filtre de retard pour cette particule permanente.
+            ParticleMaxDurationForSpawnSkip = nil
+            Count = 1
+            Spawner = ParticleSpawner
+            (
+                Initialisers =
+                [
+                    Initialiser_SetMobileWrapper(),
+                    ParticleInitialiserList
+                    (
+                        Size = parRadiusLBU * 2 * getX[ParticleMobileWrapperScale]
+                        Position = float3[0, 0, 0]
+                        ColorRGB = parColor
+                        Alpha = parFallOff
+                        CustomFloat_1 = parRadiusLBU
+                    ),
+                ]
+                ParticleDescriptor = ParticleDescriptor
+                (
+                    RenderInfo = LightRenderInfo
+                    Evolvers = ParticleStandardEvolverList
+                    (
+                        Size = ParticleCustomFloat_1 * 2 * getX[ParticleMobileWrapperScale]
+                    )
+                    ParticleRenderer = $/VFX_Bank/PointLightRendererLBU
+                    InfiniteParticles = true
+                )
+            )
+        ),
+        Template_WaitToKillBombParticle
+        (
+            Forever = true
+            BombSpawner = ContinuousLightBomb
+        ),
+    ]
+)
+
+private template Template_FX_Balise_Danger_Rouge
+[
+    LightAction : TActionDescriptor = $/VFX_Bank/BANK_Light_Blink,
+    PeriodInSec : float = 2.0,
+    OnTimeInSec : float = 0.5,
+    RadiusInMeters : float = 8.0,
+    Color : float3 = float3[0.8, 0.01, 0.005],
+    Intensity : float = 1.0,
+    Falloff : float = 0.5,
+] is SimultaneousActionDeclaration
+(
+    Params = []
+    Actions =
+    [
+        TActionCall
+        (
+            Action = <LightAction>
+            NamedParams = MAP[
+                ( 'parRadiusLBU', <RadiusInMeters> ),
+                ( 'parColor', <Color> * <Intensity> ),
+                ( 'parFallOff', <Falloff> ),
+                ( 'parPeriodInSec', <PeriodInSec> ),
+                ( 'parOnTimeInSec', <OnTimeInSec> ),
+            ]
+        ),
+    ]
+)
+
+// Réglages principaux de la balise rouge pouvant être placée sur la carte.
+export FX_Balise_Danger_Rouge is Template_FX_Balise_Danger_Rouge
+(
+    LightAction = BeaconLightDestructible
+    PeriodInSec = 2.0
+    OnTimeInSec = 0.5
+    RadiusInMeters = 26 // 8.0
+    Color = float3[0.8, 0.01, 0.005]
+    Intensity = 3 //1.0
+    Falloff = 0.8 // 0.5
+)
+
+export FX_Balise_Danger_Rouge_Destructible is Template_FX_Balise_Danger_Rouge
+(
+    LightAction = BeaconLightDestructible
+    PeriodInSec = 2.0
+    OnTimeInSec = 0.5
+    RadiusInMeters = 26 // 8.0
+    Color = float3[0.8, 0.01, 0.005]
+    Intensity = 3 //1.0
+    Falloff = 0.8 // 0.5
+)
+
+// Les lumières continues utilisent une particule permanente nettoyée à la destruction.
+// Couleur et intensité constantes pendant toute la durée de vie de la lumière.
+export Static_Light_Destructible is Template_FX_Balise_Danger_Rouge
+(
+    LightAction = ContinuousLightDestructible
+    RadiusInMeters = 20
+    Color = float3[0.5, 0.5, 0.5]
+    Intensity = 1.0
+    Falloff = 1.0
+)
+
+export Static_Light_Orange_Destructible is Template_FX_Balise_Danger_Rouge
+(
+    LightAction = ContinuousLightDestructible
+    RadiusInMeters = 8
+    Color = float3[0.2, 0.1, 0]
+    Intensity = 1.0
+    Falloff = 0.5
+)

@@ -1,0 +1,14 @@
+export Modele_M247_SergeantYork_US is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/US/DCA/M247_SergeantYork/M247_SergeantYork.fbx"
+)
+
+export Modele_M247_SergeantYork_US_MID is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/US/DCA/M247_SergeantYork_MID/M247_SergeantYork_MID.fbx"
+)
+
+export Modele_M247_SergeantYork_US_LOW is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/US/DCA/M247_SergeantYork_LOW/M247_SergeantYork_LOW.fbx"
+)

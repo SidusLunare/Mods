@@ -1,0 +1,27 @@
+template Template_PlaySoundWithStop
+[
+    SoundDescriptor     : TSoundDescriptor = nil,
+    Looping             : bool[GroupBy = "Looping"] = true,
+    DetachSoundPosition : bool = false,
+    SoundId             : int[>=0] = 0,
+
+    UseCustomPosition   : bool[GroupBy = "Position"] = false,
+    CustomPosition      : float3[GroupBy = "Position"] = float3[0, 0, 0],
+
+    FadeIn              : bool[GroupBy = "FadeIn"] = false,
+    FadeFrom            : float[GroupBy = "FadeIn"] = 0,
+    FadeVelocity        : float[GroupBy = "FadeIn"] = 0.1
+] is TActionDescriptorPlaySoundWithStop
+(
+    SoundDescriptor = <SoundDescriptor>
+    Looping = <Looping>
+    DetachSoundPosition = <DetachSoundPosition>
+    SoundId = <SoundId>
+
+    UseCustomPosition = <UseCustomPosition>
+    CustomPosition = <CustomPosition>
+
+    FadeIn = <FadeIn>
+    FadeFrom = <FadeFrom>
+    FadeVelocity = <FadeVelocity>
+)

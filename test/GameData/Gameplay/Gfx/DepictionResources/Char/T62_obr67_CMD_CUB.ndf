@@ -1,0 +1,17 @@
+export Modele_T62_obr67_CMD_CUB is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/URSS/Char/T62_CMD/T62_CMD.fbx"
+    Textures="GameData:/Assets/3D/Units/CUBA/Char/T62_CMD"
+)
+
+export Modele_T62_obr67_CMD_CUB_MID is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/URSS/Char/T62_CMD_MID/T62_CMD_MID.fbx"
+    Textures="GameData:/Assets/3D/Units/CUBA/Char/T62_CMD_MID"
+)
+
+export Modele_T62_obr67_CMD_CUB_LOW is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/URSS/Char/T62_CMD_LOW/T62_CMD_LOW.fbx"
+    Textures="GameData:/Assets/3D/Units/CUBA/Char/T62_CMD_LOW"
+)

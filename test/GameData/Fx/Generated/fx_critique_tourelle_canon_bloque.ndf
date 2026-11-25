@@ -1,0 +1,48 @@
+// Ne pas éditer, ce fichier est généré
+
+export fx_critique_tourelle_canon_bloque is Simultaneous
+(
+    Actions = ActionList is
+    [
+        TSimultaneousAction
+        (
+            Mobile = nil
+            Actions =
+            [
+                TActionCall
+                (
+                    Action = $/VFX_Bank/AoA_FX_BANK_FireAndDarkSmoke_Simple
+                    NamedParams = MAP[
+                        ( 'Feu_Size_Mul', 0 ),
+                        ( 'FireCountMul', 0 ),
+                        ( 'FireDuration', 0 ),
+                        ( 'Ground_Size', 0.25 ),
+                        ( 'SmokeCountMul', 4 ),
+                        ( 'SmokeDuration', 6 ),
+                        ( 'SmokeOpacity', 1 ),
+                        ( 'SmokeSpeed', 0.1 ),
+                        ( 'Smoke_Size_Mul', 0.35 ),
+                        ( 'SparksCountMul', 0 ),
+                        ( 'SparksDuration', 0 ),
+                    ]
+                ),
+                TActionCall
+                (
+                    Action = $/VFX_Bank/BANK_VerticalSmoke_Simple
+                    NamedParams = MAP[
+                        ( 'parColor', float3[1,1,1] ),
+                        ( 'parDensity', 10 ),
+                        ( 'parFluidFriction', 1 ),
+                        ( 'parLifetime', 2 ),
+                        ( 'parOpacity', 0.25 ),
+                        ( 'parSize', 500 ),
+                        ( 'parSizeMultiplier', 2 ),
+                        ( 'parSpeed', 400 ),
+                        ( 'parVerticalAcceleration', 500 ),
+                        ( 'parWindFactor', 3 ),
+                    ]
+                ),
+            ]
+        ),
+    ]
+)

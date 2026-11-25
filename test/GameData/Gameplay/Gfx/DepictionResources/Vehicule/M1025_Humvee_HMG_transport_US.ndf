@@ -1,0 +1,17 @@
+export Modele_M1025_Humvee_HMG_transport_US is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/US/Vehicule/M1025_Humvee_HMG/M1025_Humvee_HMG.fbx"
+    Textures="GameData:/Assets/3D/Units/US/Vehicule/M1025_Humvee_HMG_transport"
+)
+
+export Modele_M1025_Humvee_HMG_transport_US_MID is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/US/Vehicule/M1025_Humvee_HMG_MID/M1025_Humvee_HMG_MID.fbx"
+    Textures="GameData:/Assets/3D/Units/US/Vehicule/M1025_Humvee_HMG_transport_MID"
+)
+
+export Modele_M1025_Humvee_HMG_transport_US_LOW is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/US/Vehicule/M1025_Humvee_HMG_LOW/M1025_Humvee_HMG_LOW.fbx"
+    Textures="GameData:/Assets/3D/Units/US/Vehicule/M1025_Humvee_HMG_transport_LOW"
+)

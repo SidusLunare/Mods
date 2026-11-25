@@ -1,0 +1,9 @@
+// Sync with CommonData:/Gameplay/Constantes/EnumerationsNdf/GameDifficulty.ndf
+
+EGameDifficulty is TBaseClass
+(
+    //Classé du plus facile au plus difficile
+    Easy is 0
+    Medium is 1
+    Hard is 2
+)

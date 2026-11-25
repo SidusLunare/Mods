@@ -1,0 +1,23 @@
+//-----------------------------------------------------------------------------
+// A maintenir synchro avec les valeurs de CapaciteEnum.h
+//-----------------------------------------------------------------------------
+
+CapacityTriggerType_automatic              is 0
+CapacityTriggerType_order_target_only_once is 1
+
+CapaciteTargetFilter_tout                      is 0
+CapaciteTargetFilter_ennemi                    is 1
+CapaciteTargetFilter_allie                     is 2
+CapaciteTargetFilter_joueur                    is 3
+
+CapacityStackPolicy_always       is 0
+CapacityStackPolicy_never        is 1
+CapacityStackPolicy_other_caster is 2
+
+CapaciteFeedbackActivationMask_never       is 0
+CapaciteFeedbackActivationMask_allied      is 1
+CapaciteFeedbackActivationMask_enemy       is 2
+CapaciteFeedbackActivationMask_anyalliance is CapaciteFeedbackActivationMask_allied | CapaciteFeedbackActivationMask_enemy
+CapaciteFeedbackActivationMask_selected    is 4
+CapaciteFeedbackActivationMask_soloselected is 8
+CapaciteFeedbackActivationMask_always      is -1

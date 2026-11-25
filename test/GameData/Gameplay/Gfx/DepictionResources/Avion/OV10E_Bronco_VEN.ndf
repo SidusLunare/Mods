@@ -1,0 +1,22 @@
+export ModelFile_OV10E_Bronco_VEN is 'GameData:/Assets/3D/Units/VEN/Avion/OV10E_Bronco/OV10E_Bronco.fbx'
+export Modele_OV10E_Bronco_VEN is TResourceMesh
+(
+    Mesh=ModelFile_OV10E_Bronco_VEN
+)
+
+export ModelFile_OV10E_Bronco_VEN_MID is 'GameData:/Assets/3D/Units/VEN/Avion/OV10E_Bronco_MID/OV10E_Bronco_MID.fbx'
+export Modele_OV10E_Bronco_VEN_MID is TResourceMesh
+(
+    Mesh=ModelFile_OV10E_Bronco_VEN_MID
+)
+
+export ModelFile_OV10E_Bronco_VEN_LOW is 'GameData:/Assets/3D/Units/VEN/Avion/OV10E_Bronco_LOW/OV10E_Bronco_LOW.fbx'
+export Modele_OV10E_Bronco_VEN_LOW is TResourceMesh
+(
+    Mesh=ModelFile_OV10E_Bronco_VEN_LOW
+)
+export ModelFile_OV10E_Bronco_VEN_train is 'GameData:/Assets/3D/Units/VEN/Avion/OV10E_Bronco/OV10E_Bronco_train.fbx'
+export Modele_OV10E_Bronco_VEN_train is TResourceMesh
+(
+    Mesh=ModelFile_OV10E_Bronco_VEN_train
+)

@@ -1,0 +1,23 @@
+export Modele_F104G_Starfighter_Marine_RFA is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/RFA/Avion/F104G_Starfighter/F104G_Starfighter.fbx"
+    Textures="GameData:/Assets/3D/Units/RFA/Avion/F104G_Starfighter_Marineflieger"
+)
+
+export Modele_F104G_Starfighter_Marine_RFA_MID is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/RFA/Avion/F104G_Starfighter_MID/F104G_Starfighter_MID.fbx"
+    Textures="GameData:/Assets/3D/Units/RFA/Avion/F104G_Starfighter_Marineflieger_MID"
+)
+
+export Modele_F104G_Starfighter_Marine_RFA_LOW is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/RFA/Avion/F104G_Starfighter_LOW/F104G_Starfighter_LOW.fbx"
+    Textures="GameData:/Assets/3D/Units/RFA/Avion/F104G_Starfighter_Marineflieger_LOW"
+)
+
+export Modele_F104G_Starfighter_Marine_RFA_train is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/RFA/Avion/F104G_Starfighter/F104G_Starfighter_train.fbx"
+    Textures="GameData:/Assets/3D/Units/RFA/Avion/F104G_Starfighter_Marineflieger"
+)

@@ -396230,6 +396230,217 @@ export WeaponDescriptor_Pltgb_903_Ksp_SWE is TWeaponManagerModuleDescriptor
         ),
     ]
 )
+export WeaponDescriptor_Pansarskytte_G_CMD_SWE is TWeaponManagerModuleDescriptor
+(
+    AlwaysOrientArmorTowardsThreat = false
+    Salves = 
+    [
+        78,
+        3,
+    ]
+    TurretDescriptorList = 
+    [
+        TTurretInfanterieDescriptor
+        (
+            MountedWeaponDescriptorList = 
+            [
+                TMountedWeaponDescriptor
+                (
+                    AmmoBoxIndex = 0
+                    Ammunition = $/GFX/Weapon/Ammo_FM_Ak4
+                    AnimateOnlyOneSoldier = false
+                    Caliber = "ARZDNMYCBF"
+                    DispersionRadiusOffColor = RGBA[0,0,0,0]
+                    DispersionRadiusOffThickness = -0.1
+                    DispersionRadiusOnColor = RGBA[0,0,0,0]
+                    DispersionRadiusOnThickness = -0.1
+                    EffectTag = "FireEffect_FM_FAL"
+                    HandheldEquipmentKey = "WeaponAlternative_1"
+                    InterfaceWeaponTexture = "Texture_Interface_Weapon_L1A1_SLR"
+                    Name = "AK4"
+                    NbWeapons = 6
+                    ShowDispersion = false
+                    TraitsToken = 
+                    [
+                        "MOTION",
+                        "CAC",
+                    ]
+                    TypeCategoryName = "THRUBJLEUJ"
+                    WeaponActiveAndCanShootPropertyName = "WeaponActiveAndCanShoot_1"
+                    WeaponDescriptionToken = "KQYZKDFEAI"
+                    WeaponIgnoredPropertyName = "WeaponIgnored_1"
+                    WeaponShootDataPropertyName = 
+                    [
+                        "WeaponShootData_0_1",
+                    ]
+                ),
+            ]
+            YulBoneOrdinal = 1
+        ),
+        TTurretInfanterieDescriptor
+        (
+            MountedWeaponDescriptorList = 
+            [
+                TMountedWeaponDescriptor
+                (
+                    AmmoBoxIndex = 1
+                    Ammunition = $/GFX/Weapon/Ammo_Grenade_SMOKE
+                    AnimateOnlyOneSoldier = true
+                    Caliber = "smoke"
+                    DispersionRadiusOffColor = RGBA[0,0,0,0]
+                    DispersionRadiusOffThickness = -0.1
+                    DispersionRadiusOnColor = RGBA[0,0,0,0]
+                    DispersionRadiusOnThickness = -0.1
+                    EffectTag = "FireEffect_Grenade_SMOKE"
+                    HandheldEquipmentKey = "WeaponAlternative_4"
+                    InterfaceWeaponTexture = "Texture_Interface_Weapon_Smoke_Grenade"
+                    Name = "GrenSMK"
+                    NbWeapons = 1
+                    ShowDispersion = false
+                    TraitsToken = 
+                    [
+                        "MOTION",
+                        "CAC",
+                        "smoke",
+                    ]
+                    TypeCategoryName = "QOYCTTAUEL"
+                    WeaponActiveAndCanShootPropertyName = "WeaponActiveAndCanShoot_4"
+                    WeaponDescriptionToken = "LZZCUILBCY"
+                    WeaponIgnoredPropertyName = "WeaponIgnored_4"
+                    WeaponShootDataPropertyName = 
+                    [
+                        "WeaponShootData_0_4",
+                    ]
+                ),
+            ]
+            YulBoneOrdinal = 4
+        ),
+    ]
+)
+export WeaponDescriptor_Pansarskytte_G_SWE is TWeaponManagerModuleDescriptor
+(
+    AlwaysOrientArmorTowardsThreat = false
+    Salves = 
+    [
+        156,
+        92,
+        6,
+    ]
+    TurretDescriptorList = 
+    [
+        TTurretInfanterieDescriptor
+        (
+            MountedWeaponDescriptorList = 
+            [
+                TMountedWeaponDescriptor
+                (
+                    AmmoBoxIndex = 0
+                    Ammunition = $/GFX/Weapon/Ammo_FM_Ak4
+                    AnimateOnlyOneSoldier = false
+                    Caliber = "ARZDNMYCBF"
+                    DispersionRadiusOffColor = RGBA[0,0,0,0]
+                    DispersionRadiusOffThickness = -0.1
+                    DispersionRadiusOnColor = RGBA[0,0,0,0]
+                    DispersionRadiusOnThickness = -0.1
+                    EffectTag = "FireEffect_FM_FAL"
+                    HandheldEquipmentKey = "WeaponAlternative_1"
+                    InterfaceWeaponTexture = "Texture_Interface_Weapon_g3a4"
+                    Name = "AK4"
+                    NbWeapons = 6
+                    ShowDispersion = false
+                    TraitsToken = 
+                    [
+                        "MOTION",
+                        "CAC",
+                    ]
+                    TypeCategoryName = "THRUBJLEUJ"
+                    WeaponActiveAndCanShootPropertyName = "WeaponActiveAndCanShoot_1"
+                    WeaponDescriptionToken = "KQYZKDFEAI"
+                    WeaponIgnoredPropertyName = "WeaponIgnored_1"
+                    WeaponShootDataPropertyName = 
+                    [
+                        "WeaponShootData_0_1",
+                    ]
+                ),
+            ]
+            YulBoneOrdinal = 1
+        ),
+        TTurretInfanterieDescriptor
+        (
+            MountedWeaponDescriptorList = 
+            [
+                TMountedWeaponDescriptor
+                (
+                    AmmoBoxIndex = 1
+                    Ammunition = $/GFX/Weapon/Ammo_MMG_inf_ksp_m58_7_62mm
+                    AnimateOnlyOneSoldier = true
+                    Caliber = "ARZDNMYCBF"
+                    DispersionRadiusOffColor = RGBA[0,0,0,0]
+                    DispersionRadiusOffThickness = -0.1
+                    DispersionRadiusOnColor = RGBA[0,0,0,0]
+                    DispersionRadiusOnThickness = -0.1
+                    EffectTag = "FireEffect_MMG_inf_MAG_7_62mm"
+                    HandheldEquipmentKey = "WeaponAlternative_2"
+                    InterfaceWeaponTexture = "Texture_Interface_Weapon_M240B"
+                    Name = "KSPM58B"
+                    NbWeapons = 1
+                    ShowDispersion = false
+                    TraitsToken = 
+                    [
+                        "STAT",
+                    ]
+                    TypeCategoryName = "BBQBDWUTJX"
+                    WeaponActiveAndCanShootPropertyName = "WeaponActiveAndCanShoot_2"
+                    WeaponDescriptionToken = "FUQCRZJUJQ"
+                    WeaponIgnoredPropertyName = "WeaponIgnored_2"
+                    WeaponShootDataPropertyName = 
+                    [
+                        "WeaponShootData_0_2",
+                    ]
+                ),
+            ]
+            YulBoneOrdinal = 2
+        ),
+        TTurretInfanterieDescriptor
+        (
+            MountedWeaponDescriptorList = 
+            [
+                TMountedWeaponDescriptor
+                (
+                    AmmoBoxIndex = 2
+                    Ammunition = $/GFX/Weapon/Ammo_RocketInf_Carl_Gustav
+                    AnimateOnlyOneSoldier = true
+                    Caliber = "84mmHEAT"
+                    DispersionRadiusOffColor = RGBA[0,0,0,0]
+                    DispersionRadiusOffThickness = -0.1
+                    DispersionRadiusOnColor = RGBA[0,0,0,0]
+                    DispersionRadiusOnThickness = -0.1
+                    EffectTag = "FireEffect_RocketInf_Carl_Gustav"
+                    HandheldEquipmentKey = "WeaponAlternative_3"
+                    InterfaceWeaponTexture = "Texture_Interface_Weapon_carl_gustave"
+                    Name = "GRGM48"
+                    NbWeapons = 1
+                    ShowDispersion = false
+                    TraitsToken = 
+                    [
+                        "STAT",
+                        "HE",
+                        "HEAT",
+                    ]
+                    TypeCategoryName = "NZWXQNJFDX"
+                    WeaponActiveAndCanShootPropertyName = "WeaponActiveAndCanShoot_3"
+                    WeaponDescriptionToken = "YKOXTNOAFR"
+                    WeaponIgnoredPropertyName = "WeaponIgnored_3"
+                    WeaponShootDataPropertyName = 
+                    [
+                        "WeaponShootData_0_3",
+                    ]
+                ),
+            ]
+            YulBoneOrdinal = 3
+        ),
+    ]
+)
 export WeaponDescriptor_RCL_Pvpjtgb_1111_SWE is TWeaponManagerModuleDescriptor
 (
     AlwaysOrientArmorTowardsThreat = false

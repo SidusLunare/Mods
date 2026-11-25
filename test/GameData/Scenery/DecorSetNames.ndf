@@ -1,0 +1,13 @@
+LevelDesignDecorSets is TBaseClass
+(
+    Common      is "LevelDesignCommon"
+    OutGame     is "LevelDesignOutGame"
+    Tactical    is "LevelDesignTactical"
+    Strategical is "LevelDesignStrategical"
+)
+
+IAStratDecorSets is TBaseClass
+(
+    Tactical    is "IAStratTactical"
+    Strategical is "IAStratStrategical"
+)

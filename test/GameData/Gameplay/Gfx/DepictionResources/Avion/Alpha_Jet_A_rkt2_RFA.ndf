@@ -1,0 +1,23 @@
+export Modele_Alpha_Jet_A_rkt2_RFA is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/RFA/Avion/Alpha_Jet_A/Alpha_Jet_A_rkt.fbx"
+    Textures="GameData:/Assets/3D/Units/RFA/Avion/Alpha_Jet_A_JaboG_43"
+)
+
+export Modele_Alpha_Jet_A_rkt2_RFA_MID is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/RFA/Avion/Alpha_Jet_A_MID/Alpha_Jet_A_rkt_MID.fbx"
+    Textures="GameData:/Assets/3D/Units/RFA/Avion/Alpha_Jet_A_JaboG_43_MID"
+)
+
+export Modele_Alpha_Jet_A_rkt2_RFA_LOW is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/RFA/Avion/Alpha_Jet_A_LOW/Alpha_Jet_A_rkt_LOW.fbx"
+    Textures="GameData:/Assets/3D/Units/RFA/Avion/Alpha_Jet_A_JaboG_43_LOW"
+)
+
+export Modele_Alpha_Jet_A_rkt2_RFA_train is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/RFA/Avion/Alpha_Jet_A/Alpha_Jet_A_train.fbx"
+    Textures="GameData:/Assets/3D/Units/RFA/Avion/Alpha_Jet_A_JaboG_43"
+)

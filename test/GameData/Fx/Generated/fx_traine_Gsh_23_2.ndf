@@ -1,0 +1,477 @@
+// Ne pas éditer, ce fichier est généré
+
+export fx_traine_Gsh_23_2 is SimultaneousActionDeclaration
+(
+    Params =
+    [
+        private parBombTrajectory is TActionAlias( ExpectedType = 'bool' DefaultValue = false ),
+        private parDestination is TActionAlias( ExpectedType = 'float3' DefaultValue = float3[18000,0,0] ),
+        private parFlyDuration is TActionAlias( ExpectedType = 'float' DefaultValue = 0.5 ),
+        private parImpactOnGround is TActionAlias( ExpectedType = 'bool' DefaultValue = true ),
+        private parInitialShotDelay is TActionAlias( ExpectedType = 'float' DefaultValue = 0 ),
+        private parInitialSpeed is TActionAlias( ExpectedType = 'float3' DefaultValue = float3[1000,0,0] ),
+        private parPower is TActionAlias( ExpectedType = 'float' DefaultValue = 1 ),
+        private parShotCount is TActionAlias( ExpectedType = 'int' DefaultValue = 5 ),
+        private parShotOnGround is TActionAlias( ExpectedType = 'bool' DefaultValue = false ),
+        private parTirPhysic is TActionAlias( ExpectedType = 'bool' DefaultValue = true ),
+        private parTirTendu is TActionAlias( ExpectedType = 'bool' DefaultValue = false ),
+        private parWaitBetweenShot is TActionAlias( ExpectedType = 'float' DefaultValue = 0.2200001 ),
+    ]
+    Actions = ActionList is
+    [
+        TSimultaneousAction
+        (
+            Mobile = nil
+            Actions =
+            [
+                TSequentialAction
+                (Actions =
+                    [
+                        TWaitInSec( Duration = 0.6 ),
+                        TActionCall
+                        (
+                            Action = $/GFX/GameFx/BANK_Traine_Autocanon_Simple
+                            NamedParams = MAP[
+                                ( 'AbsoluteEndPosition', parDestination ),
+                                ( 'ColorModifier', float3[0.7921569,0.04313726,0.04313726] ),
+                                ( 'DurationInSec', parFlyDuration ),
+                                ( 'EmissivePowerScale', 1 ),
+                                ( 'FlameTipScale', 1 ),
+                                ( 'InitialSpeed', parInitialSpeed ),
+                                ( 'Opacity', 0.15 ),
+                                ( 'RadiusRandom', 0 ),
+                                ( 'TrailWidthScale', 1 ),
+                                ( 'parCurveHeight', 0.1 ),
+                                ( 'parInitialDelay', parInitialShotDelay ),
+                                ( 'parPinImpactOnGround', parImpactOnGround ),
+                                ( 'parPinPower', parPower ),
+                                ( 'parPinShotCount', 1 ),
+                                ( 'parPinShotOnGround', true ),
+                                ( 'parPinWaitBetweenShot', 1 ),
+                                ( 'parPojectileSpeedMult', 1 ),
+                                ( 'parRandomFrequency', 0.2 ),
+                                ( 'parRandomSize', 100 ),
+                                ( 'parRebondExplosion', 3 ),
+                            ]
+                        ),
+                    ]
+                ),
+                TSequentialAction
+                (Actions =
+                    [
+                        TWaitInSec( Duration = 0.1 ),
+                        TActionCall
+                        (
+                            Action = $/GFX/GameFx/BANK_Traine_Autocanon_Simple
+                            NamedParams = MAP[
+                                ( 'AbsoluteEndPosition', parDestination ),
+                                ( 'ColorModifier', float3[0.7921569,0.04313726,0.04313726] ),
+                                ( 'DurationInSec', parFlyDuration ),
+                                ( 'EmissivePowerScale', 1.5 ),
+                                ( 'FlameTipScale', 1.2 ),
+                                ( 'InitialSpeed', parInitialSpeed ),
+                                ( 'Opacity', 0.15 ),
+                                ( 'RadiusRandom', 0.01 ),
+                                ( 'TrailWidthScale', 1.1 ),
+                                ( 'parCurveHeight', 0.1 ),
+                                ( 'parInitialDelay', parInitialShotDelay ),
+                                ( 'parPinImpactOnGround', parImpactOnGround ),
+                                ( 'parPinPower', parPower ),
+                                ( 'parPinShotCount', 1 ),
+                                ( 'parPinShotOnGround', true ),
+                                ( 'parPinWaitBetweenShot', 1 ),
+                                ( 'parPojectileSpeedMult', 1 ),
+                                ( 'parRandomFrequency', 0.2 ),
+                                ( 'parRandomSize', 100 ),
+                                ( 'parRebondExplosion', 3 ),
+                            ]
+                        ),
+                    ]
+                ),
+                TSequentialAction
+                (Actions =
+                    [
+                        TWaitInSec( Duration = 0.05 ),
+                        TActionCall
+                        (
+                            Action = $/GFX/GameFx/BANK_Traine_Autocanon_Simple
+                            NamedParams = MAP[
+                                ( 'AbsoluteEndPosition', parDestination ),
+                                ( 'ColorModifier', float3[0.7921569,0.04313726,0.04313726] ),
+                                ( 'DurationInSec', parFlyDuration ),
+                                ( 'EmissivePowerScale', 1 ),
+                                ( 'FlameTipScale', 1 ),
+                                ( 'InitialSpeed', parInitialSpeed ),
+                                ( 'Opacity', 0.15 ),
+                                ( 'RadiusRandom', 0.01 ),
+                                ( 'TrailWidthScale', 1 ),
+                                ( 'parCurveHeight', 0.1 ),
+                                ( 'parInitialDelay', parInitialShotDelay ),
+                                ( 'parPinImpactOnGround', parImpactOnGround ),
+                                ( 'parPinPower', parPower ),
+                                ( 'parPinShotCount', 1 ),
+                                ( 'parPinShotOnGround', true ),
+                                ( 'parPinWaitBetweenShot', 1 ),
+                                ( 'parPojectileSpeedMult', 1 ),
+                                ( 'parRandomFrequency', 0.2 ),
+                                ( 'parRandomSize', 100 ),
+                                ( 'parRebondExplosion', 3 ),
+                            ]
+                        ),
+                    ]
+                ),
+                TActionCall
+                (
+                    Action = $/GFX/GameFx/BANK_Traine_Autocanon_Simple
+                    NamedParams = MAP[
+                        ( 'AbsoluteEndPosition', parDestination ),
+                        ( 'ColorModifier', float3[0.7921569,0.04313726,0.04313726] ),
+                        ( 'DurationInSec', parFlyDuration ),
+                        ( 'EmissivePowerScale', 1.25 ),
+                        ( 'FlameTipScale', 1.1 ),
+                        ( 'InitialSpeed', parInitialSpeed ),
+                        ( 'Opacity', 0.15 ),
+                        ( 'RadiusRandom', 0.01 ),
+                        ( 'TrailWidthScale', 1.05 ),
+                        ( 'parCurveHeight', 0.1 ),
+                        ( 'parInitialDelay', parInitialShotDelay ),
+                        ( 'parPinImpactOnGround', parImpactOnGround ),
+                        ( 'parPinPower', parPower ),
+                        ( 'parPinShotCount', 1 ),
+                        ( 'parPinShotOnGround', true ),
+                        ( 'parPinWaitBetweenShot', 1 ),
+                        ( 'parPojectileSpeedMult', 1 ),
+                        ( 'parRandomFrequency', 0.2 ),
+                        ( 'parRandomSize', 100 ),
+                        ( 'parRebondExplosion', 3 ),
+                    ]
+                ),
+                TSequentialAction
+                (Actions =
+                    [
+                        TWaitInSec( Duration = 0.2 ),
+                        TActionCall
+                        (
+                            Action = $/GFX/GameFx/BANK_Traine_Autocanon_Simple
+                            NamedParams = MAP[
+                                ( 'AbsoluteEndPosition', parDestination ),
+                                ( 'ColorModifier', float3[0.7921569,0.04313726,0.04313726] ),
+                                ( 'DurationInSec', parFlyDuration ),
+                                ( 'EmissivePowerScale', 1 ),
+                                ( 'FlameTipScale', 1 ),
+                                ( 'InitialSpeed', parInitialSpeed ),
+                                ( 'Opacity', 0.25 ),
+                                ( 'RadiusRandom', 0 ),
+                                ( 'TrailWidthScale', 1 ),
+                                ( 'parCurveHeight', 0.1 ),
+                                ( 'parInitialDelay', parInitialShotDelay ),
+                                ( 'parPinImpactOnGround', parImpactOnGround ),
+                                ( 'parPinPower', parPower ),
+                                ( 'parPinShotCount', 1 ),
+                                ( 'parPinShotOnGround', true ),
+                                ( 'parPinWaitBetweenShot', 1 ),
+                                ( 'parPojectileSpeedMult', 1 ),
+                                ( 'parRandomFrequency', 0.2 ),
+                                ( 'parRandomSize', 100 ),
+                                ( 'parRebondExplosion', 3 ),
+                            ]
+                        ),
+                    ]
+                ),
+                TSequentialAction
+                (Actions =
+                    [
+                        TWaitInSec( Duration = 0.15 ),
+                        TActionCall
+                        (
+                            Action = $/GFX/GameFx/BANK_Traine_Autocanon_Simple
+                            NamedParams = MAP[
+                                ( 'AbsoluteEndPosition', parDestination ),
+                                ( 'ColorModifier', float3[0.7921569,0.04313726,0.04313726] ),
+                                ( 'DurationInSec', parFlyDuration ),
+                                ( 'EmissivePowerScale', 1.5 ),
+                                ( 'FlameTipScale', 1.2 ),
+                                ( 'InitialSpeed', parInitialSpeed ),
+                                ( 'Opacity', 0.25 ),
+                                ( 'RadiusRandom', 0 ),
+                                ( 'TrailWidthScale', 1.1 ),
+                                ( 'parCurveHeight', 0.1 ),
+                                ( 'parInitialDelay', parInitialShotDelay ),
+                                ( 'parPinImpactOnGround', parImpactOnGround ),
+                                ( 'parPinPower', parPower ),
+                                ( 'parPinShotCount', 1 ),
+                                ( 'parPinShotOnGround', true ),
+                                ( 'parPinWaitBetweenShot', 1 ),
+                                ( 'parPojectileSpeedMult', 1 ),
+                                ( 'parRandomFrequency', 0.2 ),
+                                ( 'parRandomSize', 100 ),
+                                ( 'parRebondExplosion', 3 ),
+                            ]
+                        ),
+                    ]
+                ),
+                TSequentialAction
+                (Actions =
+                    [
+                        TWaitInSec( Duration = 0.35 ),
+                        TActionCall
+                        (
+                            Action = $/GFX/GameFx/BANK_Traine_Autocanon_Simple
+                            NamedParams = MAP[
+                                ( 'AbsoluteEndPosition', parDestination ),
+                                ( 'ColorModifier', float3[0.7921569,0.04313726,0.04313726] ),
+                                ( 'DurationInSec', parFlyDuration ),
+                                ( 'EmissivePowerScale', 1 ),
+                                ( 'FlameTipScale', 1 ),
+                                ( 'InitialSpeed', parInitialSpeed ),
+                                ( 'Opacity', 0.25 ),
+                                ( 'RadiusRandom', 0 ),
+                                ( 'TrailWidthScale', 1 ),
+                                ( 'parCurveHeight', 0.1 ),
+                                ( 'parInitialDelay', parInitialShotDelay ),
+                                ( 'parPinImpactOnGround', parImpactOnGround ),
+                                ( 'parPinPower', parPower ),
+                                ( 'parPinShotCount', 1 ),
+                                ( 'parPinShotOnGround', true ),
+                                ( 'parPinWaitBetweenShot', 1 ),
+                                ( 'parPojectileSpeedMult', 1 ),
+                                ( 'parRandomFrequency', 0.2 ),
+                                ( 'parRandomSize', 100 ),
+                                ( 'parRebondExplosion', 3 ),
+                            ]
+                        ),
+                    ]
+                ),
+                TSequentialAction
+                (Actions =
+                    [
+                        TWaitInSec( Duration = 0.3 ),
+                        TActionCall
+                        (
+                            Action = $/GFX/GameFx/BANK_Traine_Autocanon_Simple
+                            NamedParams = MAP[
+                                ( 'AbsoluteEndPosition', parDestination ),
+                                ( 'ColorModifier', float3[0.7921569,0.04313726,0.04313726] ),
+                                ( 'DurationInSec', parFlyDuration ),
+                                ( 'EmissivePowerScale', 1.25 ),
+                                ( 'FlameTipScale', 1.1 ),
+                                ( 'InitialSpeed', parInitialSpeed ),
+                                ( 'Opacity', 0.25 ),
+                                ( 'RadiusRandom', 0 ),
+                                ( 'TrailWidthScale', 1.05 ),
+                                ( 'parCurveHeight', 0.1 ),
+                                ( 'parInitialDelay', parInitialShotDelay ),
+                                ( 'parPinImpactOnGround', parImpactOnGround ),
+                                ( 'parPinPower', parPower ),
+                                ( 'parPinShotCount', 1 ),
+                                ( 'parPinShotOnGround', true ),
+                                ( 'parPinWaitBetweenShot', 1 ),
+                                ( 'parPojectileSpeedMult', 1 ),
+                                ( 'parRandomFrequency', 0.2 ),
+                                ( 'parRandomSize', 100 ),
+                                ( 'parRebondExplosion', 3 ),
+                            ]
+                        ),
+                    ]
+                ),
+                TSequentialAction
+                (Actions =
+                    [
+                        TWaitInSec( Duration = 0.25 ),
+                        TActionCall
+                        (
+                            Action = $/GFX/GameFx/BANK_Traine_Autocanon_Simple
+                            NamedParams = MAP[
+                                ( 'AbsoluteEndPosition', parDestination ),
+                                ( 'ColorModifier', float3[0.7921569,0.04313726,0.04313726] ),
+                                ( 'DurationInSec', parFlyDuration ),
+                                ( 'EmissivePowerScale', 1 ),
+                                ( 'FlameTipScale', 1 ),
+                                ( 'InitialSpeed', parInitialSpeed ),
+                                ( 'Opacity', 0.15 ),
+                                ( 'RadiusRandom', 0.01 ),
+                                ( 'TrailWidthScale', 1 ),
+                                ( 'parCurveHeight', 0.1 ),
+                                ( 'parInitialDelay', parInitialShotDelay ),
+                                ( 'parPinImpactOnGround', parImpactOnGround ),
+                                ( 'parPinPower', parPower ),
+                                ( 'parPinShotCount', 1 ),
+                                ( 'parPinShotOnGround', true ),
+                                ( 'parPinWaitBetweenShot', 1 ),
+                                ( 'parPojectileSpeedMult', 1 ),
+                                ( 'parRandomFrequency', 0.2 ),
+                                ( 'parRandomSize', 100 ),
+                                ( 'parRebondExplosion', 3 ),
+                            ]
+                        ),
+                    ]
+                ),
+                TSequentialAction
+                (Actions =
+                    [
+                        TWaitInSec( Duration = 0.45 ),
+                        TActionCall
+                        (
+                            Action = $/GFX/GameFx/BANK_Traine_Autocanon_Simple
+                            NamedParams = MAP[
+                                ( 'AbsoluteEndPosition', parDestination ),
+                                ( 'ColorModifier', float3[0.7921569,0.04313726,0.04313726] ),
+                                ( 'DurationInSec', parFlyDuration ),
+                                ( 'EmissivePowerScale', 1.5 ),
+                                ( 'FlameTipScale', 1.2 ),
+                                ( 'InitialSpeed', parInitialSpeed ),
+                                ( 'Opacity', 0.15 ),
+                                ( 'RadiusRandom', 0 ),
+                                ( 'TrailWidthScale', 1.1 ),
+                                ( 'parCurveHeight', 0.1 ),
+                                ( 'parInitialDelay', parInitialShotDelay ),
+                                ( 'parPinImpactOnGround', parImpactOnGround ),
+                                ( 'parPinPower', parPower ),
+                                ( 'parPinShotCount', 1 ),
+                                ( 'parPinShotOnGround', true ),
+                                ( 'parPinWaitBetweenShot', 1 ),
+                                ( 'parPojectileSpeedMult', 1 ),
+                                ( 'parRandomFrequency', 0.2 ),
+                                ( 'parRandomSize', 100 ),
+                                ( 'parRebondExplosion', 3 ),
+                            ]
+                        ),
+                    ]
+                ),
+                TSequentialAction
+                (Actions =
+                    [
+                        TWaitInSec( Duration = 0.4 ),
+                        TActionCall
+                        (
+                            Action = $/GFX/GameFx/BANK_Traine_Autocanon_Simple
+                            NamedParams = MAP[
+                                ( 'AbsoluteEndPosition', parDestination ),
+                                ( 'ColorModifier', float3[0.7921569,0.04313726,0.04313726] ),
+                                ( 'DurationInSec', parFlyDuration ),
+                                ( 'EmissivePowerScale', 1 ),
+                                ( 'FlameTipScale', 1 ),
+                                ( 'InitialSpeed', parInitialSpeed ),
+                                ( 'Opacity', 0.25 ),
+                                ( 'RadiusRandom', 0 ),
+                                ( 'TrailWidthScale', 1 ),
+                                ( 'parCurveHeight', 0.1 ),
+                                ( 'parInitialDelay', parInitialShotDelay ),
+                                ( 'parPinImpactOnGround', parImpactOnGround ),
+                                ( 'parPinPower', parPower ),
+                                ( 'parPinShotCount', 1 ),
+                                ( 'parPinShotOnGround', true ),
+                                ( 'parPinWaitBetweenShot', 1 ),
+                                ( 'parPojectileSpeedMult', 1 ),
+                                ( 'parRandomFrequency', 0.2 ),
+                                ( 'parRandomSize', 100 ),
+                                ( 'parRebondExplosion', 3 ),
+                            ]
+                        ),
+                    ]
+                ),
+                TSequentialAction
+                (Actions =
+                    [
+                        TWaitInSec( Duration = 0.5 ),
+                        TActionCall
+                        (
+                            Action = $/GFX/GameFx/BANK_Traine_Autocanon_Simple
+                            NamedParams = MAP[
+                                ( 'AbsoluteEndPosition', parDestination ),
+                                ( 'ColorModifier', float3[0.7921569,0.04313726,0.04313726] ),
+                                ( 'DurationInSec', parFlyDuration ),
+                                ( 'EmissivePowerScale', 1.25 ),
+                                ( 'FlameTipScale', 1.1 ),
+                                ( 'InitialSpeed', parInitialSpeed ),
+                                ( 'Opacity', 0.25 ),
+                                ( 'RadiusRandom', 0 ),
+                                ( 'TrailWidthScale', 1.05 ),
+                                ( 'parCurveHeight', 0.1 ),
+                                ( 'parInitialDelay', parInitialShotDelay ),
+                                ( 'parPinImpactOnGround', parImpactOnGround ),
+                                ( 'parPinPower', parPower ),
+                                ( 'parPinShotCount', 1 ),
+                                ( 'parPinShotOnGround', true ),
+                                ( 'parPinWaitBetweenShot', 1 ),
+                                ( 'parPojectileSpeedMult', 1 ),
+                                ( 'parRandomFrequency', 0.2 ),
+                                ( 'parRandomSize', 100 ),
+                                ( 'parRebondExplosion', 3 ),
+                            ]
+                        ),
+                    ]
+                ),
+                TSequentialAction
+                (Actions =
+                    [
+                        TWaitInSec( Duration = 0.55 ),
+                        TActionCall
+                        (
+                            Action = $/GFX/GameFx/BANK_Traine_Autocanon_Simple
+                            NamedParams = MAP[
+                                ( 'AbsoluteEndPosition', parDestination ),
+                                ( 'ColorModifier', float3[0.7921569,0.04313726,0.04313726] ),
+                                ( 'DurationInSec', parFlyDuration ),
+                                ( 'EmissivePowerScale', 1 ),
+                                ( 'FlameTipScale', 1 ),
+                                ( 'InitialSpeed', parInitialSpeed ),
+                                ( 'Opacity', 0.25 ),
+                                ( 'RadiusRandom', 0 ),
+                                ( 'TrailWidthScale', 1 ),
+                                ( 'parCurveHeight', 0.1 ),
+                                ( 'parInitialDelay', parInitialShotDelay ),
+                                ( 'parPinImpactOnGround', parImpactOnGround ),
+                                ( 'parPinPower', parPower ),
+                                ( 'parPinShotCount', 1 ),
+                                ( 'parPinShotOnGround', true ),
+                                ( 'parPinWaitBetweenShot', 1 ),
+                                ( 'parPojectileSpeedMult', 1 ),
+                                ( 'parRandomFrequency', 0.2 ),
+                                ( 'parRandomSize', 100 ),
+                                ( 'parRebondExplosion', 3 ),
+                            ]
+                        ),
+                    ]
+                ),
+                TActionCall
+                (
+                    Action = $/GFX/GameFx/BANK_Traine_Mitrailleuse_Simple
+                    NamedParams = MAP[
+                        ( 'AbsoluteEndPosition', parDestination ),
+                        ( 'ColorModifier', float3[0.9764706,0.03529412,0.03529412] ),
+                        ( 'DurationInSec', parFlyDuration ),
+                        ( 'EmissivePowerScale', 5 ),
+                        ( 'FlameTipScale', 3 ),
+                        ( 'Opacity', 0.15 ),
+                        ( 'RadiusRandom', 0 ),
+                        ( 'parInitialDelay', parInitialShotDelay ),
+                        ( 'parMaxStretch', 50 ),
+                        ( 'parPinImpactOnGround', parImpactOnGround ),
+                        ( 'parPinShotCount', parShotCount ),
+                        ( 'parPinWaitBetweenShot', parWaitBetweenShot ),
+                        ( 'parRebondExplosion', 3 ),
+                    ]
+                ),
+                TActionCall
+                (
+                    Action = $/VFX_Bank/Dummy_Traine
+                    NamedParams = MAP[
+                        ( 'parDummyBombTrajectory', parBombTrajectory ),
+                        ( 'parDummyDestination', parDestination ),
+                        ( 'parDummyFlyDuration', parFlyDuration ),
+                        ( 'parDummyImpactOnGround', parImpactOnGround ),
+                        ( 'parDummyInitialSpeed', parInitialSpeed ),
+                        ( 'parDummyPower', parPower ),
+                        ( 'parDummyShotCount', parShotCount ),
+                        ( 'parDummyShotOnGround', parShotOnGround ),
+                        ( 'parDummyTirPhysic', parTirPhysic ),
+                        ( 'parDummyTirTendu', parTirTendu ),
+                        ( 'parDummyTraineInitialShotDelay', parInitialShotDelay ),
+                        ( 'parDummyWaitBetweenShot', parWaitBetweenShot ),
+                    ]
+                ),
+            ]
+        ),
+    ]
+)

@@ -1,0 +1,20 @@
+export Modele_ZSU_57_2_CUB is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/DDR/DCA/ZSU_57_2/ZSU_57_2.fbx"
+    Textures="GameData:/Assets/3D/Units/CUBA/DCA/ZSU_57_2"
+)
+
+export Modele_ZSU_57_2_CUB_MID is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/DDR/DCA/ZSU_57_2_MID/ZSU_57_2_MID.fbx"
+    Textures="GameData:/Assets/3D/Units/CUBA/DCA/ZSU_57_2_MID"
+)
+
+export Modele_ZSU_57_2_CUB_LOW is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/DDR/DCA/ZSU_57_2_LOW/ZSU_57_2_LOW.fbx"
+    Textures="GameData:/Assets/3D/Units/CUBA/DCA/ZSU_57_2_LOW"
+)
+
+
+

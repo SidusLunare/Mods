@@ -1,0 +1,493 @@
+template VegetationParticleBombSpawner
+[
+    Count                           : TEvaluable,
+    Spawner                         : TParticleSpawner,
+    ParticleMaxDurationForSpawnSkip : float
+] is TParticleSpawnerActionBomb
+(
+    Count = <Count>
+    CountMultiplier = $/GraphicOption/ParticleMultiplier
+    Spawner = <Spawner>
+    TimeServer = nil
+    ParticleMaxDurationForSpawnSkip = <ParticleMaxDurationForSpawnSkip>
+)
+
+template Template_VegetationMeshResource
+[
+    Value : TFileName
+] is TConstant
+(
+    Value = TResourceMesh( Mesh=<Value> )
+)
+
+template VegetationParticleRenderInfo
+[
+    TextureName : TFileName,
+] is TFxElementRenderInfo
+(
+    MeshMaterial = TMeshMaterial
+    (
+        TextureDico = MAP[('OARTexture0', <TextureName>)]
+        MaterialType = 'Particle'
+        Tags = ['ZTest', 'NoZWrite', 'OpaqueParticle']
+    )
+
+    RenderLayerSelector = $/GFX/GameFx/FXRenderLayerSelector
+    ContentType = ContentType_Texture_FX
+)
+
+template VegetationParticleInitialiserList
+[
+    Position        : TEvaluable = nil,
+    Direction       : TEvaluable = nil,
+    Speed           : TEvaluable = nil,
+    Size            : TEvaluable = nil,
+    ColorModifier   : TEvaluable = nil,
+    Alpha           : TEvaluable = nil,
+    RotationSpeed   : TEvaluable = nil,
+    Rotation        : TEvaluable = nil,
+    Count           : TEvaluable = nil,
+    DynamicMesh     : TEvaluable = nil,
+    ScaleForMesh    : TEvaluable = nil,
+] is TParticleInitialiserList
+(
+    Initialisers =
+        [] +
+        (<Position> == nil ? []         : [TParticleInitialiserWithEvaluable(Field = $/Particle/Position        InitFunction = <Position>)]) +
+        (<Direction> == nil ? []        : [TParticleInitialiserWithEvaluable(Field = $/Particle/Direction       InitFunction = <Direction>)]) +
+        (<Speed> == nil ? []            : [TParticleInitialiserWithEvaluable(Field = $/Particle/Speed           InitFunction = <Speed>)]) +
+        (<Size> == nil ? []             : [TParticleInitialiserWithEvaluable(Field = $/Particle/Size            InitFunction = <Size>)]) +
+        (<ColorModifier> == nil ? []    : [TParticleInitialiserWithEvaluable(Field = $/Particle/ColorModifier   InitFunction = <ColorModifier>)]) +
+        (<Alpha> == nil ? []            : [TParticleInitialiserWithEvaluable(Field = $/Particle/Alpha           InitFunction = <Alpha>)]) +
+        (<Rotation> == nil ? []         : [TParticleInitialiserWithEvaluable(Field = $/Particle/Rotation        InitFunction = (2 * 3.141 * <Rotation>))]) +
+        (<RotationSpeed> == nil ? []    : [TParticleInitialiserWithEvaluable(Field = $/Particle/RotationSpeed   InitFunction = (2 * 3.141 * <RotationSpeed>))]) +
+        (<Count> == nil ? []            : [TParticleInitialiserWithEvaluable(Field = $/Particle/Count           InitFunction = <Count>)]) +
+        (<DynamicMesh> == nil ? []      : [TParticleInitialiserWithEvaluable(Field = $/Particle/DynamicMesh     InitFunction = <DynamicMesh>)]) +
+        (<ScaleForMesh> == nil ? []     : [TParticleInitialiserWithEvaluable(Field = $/Particle/ScaleForMesh    InitFunction = <ScaleForMesh>)])
+)
+
+template VegetationParticleStandardEvolverListWithPhysic
+[
+    FluidFriction               : TEvaluable,
+    PhysicWindField             : TEvaluable,
+    Opacity                     : TEvaluable,
+] is TParticleEvolver_List
+(
+    Evolvers =
+    [
+        TParticleEvolver_Physics
+        (
+            FluidFriction = <FluidFriction>
+            WindField = <PhysicWindField>
+            ForceSlicing = false
+            WorldFloorProxy = $/M3D/Scene/WorldFloorForRubbleProxy
+        ),
+        TVersatileParticleEvolver(Field = $/Particle/Opacity EvolveFunction = <Opacity>),
+    ]
+)
+
+
+template Template_FX_Tree_Dest
+[
+    TrunkModel          : TFileName[Mesh] = "",
+    FoliageModel        : TFileName[Mesh, required],
+    FoliageTexture      : TFileName[Texture] = '',
+    FoliagePosition     : TEvaluable = float3[0.00, 0.00, 0.00],
+    FoliageSize         : TEvaluable = float3[0.00, 0.00, 0.00],
+    FoliageDensity      : TEvaluable = 0,
+    LeafSize            : TEvaluable = 500,
+    LeafDisplayTime     : float = 10,
+] is TSimultaneousActionWithMultiLaunchLimit
+(
+    RadiusForMultiLaunchSkip = 8000
+    DurationForMultiLaunchSkip = 10
+    MaxLaunchInRadius = 1
+    Actions =
+    (
+    (<TrunkModel> != "" ?
+    [
+        private Tronc is Template_ArbreMeshParticleSpawner
+        (
+            AuthorizedMeshes = <TrunkModel>
+            Duration = 10
+        ),
+    ] : []) +
+    [
+        private Feuilles is Template_ArbreMeshParticleSpawner
+        (
+            AuthorizedMeshes = <FoliageModel>
+            Duration = <LeafDisplayTime>
+            OverrideMeshMaterial = $/M3D/Shader/MeshMaterial_Shader_Scenery_Foliage
+            SortTriangles = true
+            RenderLayerSelector = TRenderLayerSelector( RenderLayerName = 'Calque_Vegetation' )
+        ),
+        private DustAndRubbles is TSequentialAction
+        (
+            Actions =
+            [
+                private Wait is TWaitInSec
+                (
+                    Duration = 1.8  //1.5
+                ),
+                private Dust is TActionCall
+                (
+                    Action = $/VFX_Bank/BANK_WasteGroundDust
+                    NamedParams = MAP[
+                        ('BANK_ParticleLifetime', $/VFX_Bank/RandomRange[4, 8] ),
+                        ('BANK_InitRotation', $/VFX_Bank/RandomUnit ),
+                        ('BANK_ParticuleStartSize', 800),
+                        ('BANK_ParticuleEndSize', 1600),
+                        ('BANK_ParticleCount', 10),
+                        ('BANK_ParticleRotationFactor', $/VFX_Bank/RandomRange[0.5, 1.5]),
+                        ('BANK_InitRGBcolor', float3[115 , 85, 90] div 255.0),
+                        ('BANK_EndRGBcolor', float3[35, 25, 20] div 255.0),
+                        ('BANK_OffsetPos', float3[0,0,0]),
+                        ('BANK_InitPosition', float3[0, 1000, 0] + float3[200, 1000, 200] * $/VFX_Bank/MinusOneToOneRandomHemisphereVolume),
+                        ('BANK_InitSpeed', $/VFX_Bank/MinusOneToOneRandomDisc * 1500 ),
+                        ('BANK_AlphaMul', $/VFX_Bank/RandomRange[3, 7]  ),
+                        ('BANK_AlphaStartDecayValue', 0.1 ),
+                        ('BANK_FluidFriction', 1.5 ),
+                        ('BANK_AccelerationField', $/VFX_Bank/MapWind + float3[0.00, 0.00, 100.00] ),
+                        ('BANK_ParticuleScaleSizeFactor', $/VFX_Bank/RandomRange[1, 3] )
+                    ]
+                ),
+                private Leaves is VegetationParticleBombSpawner
+                (
+                    Count = <FoliageDensity>
+                    ParticleMaxDurationForSpawnSkip = 3
+                    Spawner = TParticleSpawner
+                    (
+                        ParticleLifetime = 3
+                        Initialisers =
+                        [
+                            VegetationParticleInitialiserList
+                            (
+                                ColorModifier = float3[1, 1, 1]
+                                Alpha = 1.0
+
+                                Position = <FoliagePosition> + $/VFX_Bank/MinusOneToOneRandomSphereVolume * <FoliageSize>
+                                Speed = $/VFX_Bank/MinusOneToOneRandomHemisphereVolume * float3[1,1,-1] * 500
+                                Size = $/VFX_Bank/RandomRange[0.8, 1.2] * <LeafSize>
+                                RotationSpeed = $/VFX_Bank/MinusOneToOneRandomHemisphereVolume * 0.5
+                                Rotation = $/VFX_Bank/RandomUnit
+                                Direction = $/VFX_Bank/MinusOneToOneRandomSphereSurface
+                            ),
+                        ]
+                        ParticleDescriptor = TParticleDescriptor
+                        (
+                            RenderInfo = VegetationParticleRenderInfo
+                            (
+                                TextureName = <FoliageTexture>
+                            )
+                            Evolver = VegetationParticleStandardEvolverListWithPhysic
+                            (
+                                FluidFriction = 0.25
+                                PhysicWindField = $/VFX_Bank/MapWind + float3[0, 0, -9000]
+                                Opacity = $/VFX_Bank/AttackDecay[$/VFX_Bank/ParticleLifeRatio, 0.1]
+                            )
+                            ParticleRenderer = $/VFX_Bank/LitParticleRenderer
+                            FxStickerTracker = $/M3D/Scene/TerrainCDLODFxStickerTracker
+                        )
+                    )
+                ),
+            ]
+        ),
+        TWaitInSec(Duration = 15),
+    ])
+)
+
+template Template_ArbreMeshParticleSpawner
+[
+    AuthorizedMeshes        : TFileName[Mesh, required],
+    OverrideMeshMaterial    : TMeshMaterial = nil,
+    RenderLayerSelector   : TRenderLayerSelector = nil,
+    SortTriangles           : bool = false,
+    Duration                : float[required]
+]
+is VegetationParticleBombSpawner
+(
+    private MeshDescriptor is Template_VegetationMeshResource ( Value = <AuthorizedMeshes>)
+    Count = 1
+    ParticleMaxDurationForSpawnSkip = <Duration>
+    Spawner  = TParticleSpawner
+    (
+        ParticleLifetime = <Duration> * $/GraphicOption/ParticleLifeTimeMultiplier
+        Initialisers =
+        [
+            TParticleInitialiserWithEvaluable
+            (
+                InitFunction = $/VFX_Bank/MobileWrapper
+                Field = $/Particle/MobileWrapper
+            ),
+            VegetationParticleInitialiserList
+            (
+                DynamicMesh = MeshDescriptor
+                Direction = $/VFX_Bank/ParticleMobileWrapperAxeX
+                Alpha = 1
+                ScaleForMesh = $/VFX_Bank/ParticleMobileWrapperScale
+            )
+        ]
+        ParticleDescriptor = TParticleDescriptor
+        (
+            RenderInfo = TFxElementRenderInfo
+            (
+                MeshMaterial = TMeshMaterial
+                (
+                    TextureDico = MAP[('OARTexture0', 'GameData:/Assets/2D/Fx/spot.png')]
+                    MaterialType = 'SurfaceStandard'
+                )
+                SortTriangles = false
+                Use3DRotation = false
+                RenderLayerSelector = $/M3D/Scene/DefaultFxParticleOpaqueRenderPlace
+                ContentType = ContentType_Texture_FX
+            )
+            Evolver = TParticleEvolver_List
+            (
+                private abs is $/System/EvaluableIntrinsics/abs
+                private pow is $/System/EvaluableIntrinsics/pow
+                private cos is $/System/EvaluableIntrinsics/cos
+                private sin is $/System/EvaluableIntrinsics/sin
+                private normalized is $/System/EvaluableIntrinsics/normalized
+
+                private value is $/VFX_Bank/MapToLinearSmoothStep[$/VFX_Bank/ParticleElapsedTime, 0, 2]
+                private advance is ($/VFX_Bank/PI div 2 - $/VFX_Bank/PI div 24) * (1 - (1 - pow[value, 4]) * abs[cos[pow[value, 5]*2]])
+                private position is $/VFX_Bank/ParticleMobileWrapperPosition + float3[0, 0, -1000] * $/VFX_Bank/MapToLinearSmoothStep[$/VFX_Bank/ParticleElapsedTime, <Duration> * 0.66, <Duration>]
+                private rotationAxisForMesh is cos[advance] * normalized[$/VFX_Bank/ParticleMobileWrapperAxeZ] + sin[advance] * normalized[$/VFX_Bank/ParticleMobileWrapperAxeY]
+                Evolvers =
+                [
+                    TVersatileParticleEvolver(Field = $/Particle/Position EvolveFunction = position),
+                    TVersatileParticleEvolver(Field = $/Particle/RotationAxisForMesh EvolveFunction = rotationAxisForMesh ),
+                    TVersatileParticleEvolver(Field = $/Particle/ScaleForMesh EvolveFunction = $/VFX_Bank/ParticleMobileWrapperScale ),
+                ]
+            )
+            ParticleRenderer = TParticleRenderer_DynamicMesh
+            (
+                AuthorizedMeshes = [ MeshDescriptor ]
+                DynamicMeshHelperManager = $/VFX_Bank/DynamicMeshManager
+                OverrideMeshMaterial = <OverrideMeshMaterial>
+            )
+            FxStickerTracker = $/M3D/Scene/TerrainCDLODFxStickerTracker
+        )
+    )
+)
+
+template Template_FX_Bush_Dest
+[
+    TrunkModel          : TFileName[Mesh] = "",
+    FoliageModel        : TFileName[Mesh, required],
+    FoliageTexture      : TFileName[Texture] = '',
+    FoliagePosition     : TEvaluable = float3[0.00, 0.00, 0.00],
+    FoliageSize         : TEvaluable = float3[0.00, 0.00, 0.00],
+    FoliageDensity      : TEvaluable = 0,
+    LeafSize            : TEvaluable = 500,
+    LeafDisplayTime     : float = 10,
+] is TSimultaneousActionWithMultiLaunchLimit
+(
+    RadiusForMultiLaunchSkip = 8000
+    DurationForMultiLaunchSkip = 10
+    MaxLaunchInRadius = 1
+    Actions =
+    (
+    (<TrunkModel> != "" ?
+    [
+        private Tronc is Template_ArbreMeshParticleSpawner
+        (
+            AuthorizedMeshes = <TrunkModel>
+            Duration = 10
+        ),
+    ] : []) +
+    [
+        private Feuilles is Template_ArbreMeshParticleSpawner
+        (
+            AuthorizedMeshes = <FoliageModel>
+            Duration = <LeafDisplayTime>
+            OverrideMeshMaterial = $/M3D/Shader/MeshMaterial_Shader_Scenery_Foliage
+            SortTriangles = true
+            RenderLayerSelector = TRenderLayerSelector( RenderLayerName = 'Calque_Vegetation' )
+        ),
+        private DustAndRubbles is TSequentialAction
+        (
+            Actions =
+            [
+                private Wait is TWaitInSec
+                (
+                    Duration = 1.8  //1.5
+                ),
+                private Dust is TActionCall
+                (
+                    Action = $/VFX_Bank/BANK_WasteGroundDust
+                    NamedParams = MAP[
+                        ('BANK_ParticleLifetime', $/VFX_Bank/RandomRange[4, 8] ),
+                        ('BANK_InitRotation', $/VFX_Bank/RandomUnit ),
+                        ('BANK_ParticuleStartSize', 800),
+                        ('BANK_ParticuleEndSize', 1600),
+                        ('BANK_ParticleCount', 8),
+                        ('BANK_ParticleRotationFactor', $/VFX_Bank/RandomRange[0.5, 1.5]),
+                        ('BANK_InitRGBcolor', float3[105, 80, 85] div 255.0),
+                        ('BANK_EndRGBcolor', float3[30, 20, 15] div 255.0),
+                        ('BANK_OffsetPos', float3[0,0,0]),
+                        ('BANK_InitPosition', float3[0, 1000, 0] + float3[200, 1000, 200] * $/VFX_Bank/MinusOneToOneRandomHemisphereVolume),
+                        ('BANK_InitSpeed', $/VFX_Bank/MinusOneToOneRandomDisc * 800 ),
+                        ('BANK_AlphaMul', $/VFX_Bank/RandomRange[1, 5]  ),
+                        ('BANK_AlphaStartDecayValue', 0.1 ),
+                        ('BANK_FluidFriction', 2 ),
+                        ('BANK_AccelerationField', $/VFX_Bank/MapWind + float3[0.00, 0.00, 100.00] ),
+                        ('BANK_ParticuleScaleSizeFactor', $/VFX_Bank/RandomRange[0.5, 2] )
+                    ]
+                ),
+                private Leaves is VegetationParticleBombSpawner
+                (
+                    Count = <FoliageDensity>
+                    ParticleMaxDurationForSpawnSkip = 3
+                    Spawner = TParticleSpawner
+                    (
+                        ParticleLifetime = 3
+                        Initialisers =
+                        [
+                            VegetationParticleInitialiserList
+                            (
+                                ColorModifier = float3[1, 1, 1]
+                                Alpha = 1.0
+
+                                Position = <FoliagePosition> + $/VFX_Bank/MinusOneToOneRandomSphereVolume * <FoliageSize>
+                                Speed = $/VFX_Bank/MinusOneToOneRandomHemisphereVolume * float3[1,1,-1] * 500
+                                Size = $/VFX_Bank/RandomRange[0.8, 1.2] * <LeafSize>
+                                RotationSpeed = $/VFX_Bank/MinusOneToOneRandomHemisphereVolume * 0.5
+                                Rotation = $/VFX_Bank/RandomUnit
+                                Direction = $/VFX_Bank/MinusOneToOneRandomSphereSurface
+                            ),
+                        ]
+                        ParticleDescriptor = TParticleDescriptor
+                        (
+                            RenderInfo = VegetationParticleRenderInfo
+                            (
+                                TextureName = <FoliageTexture>
+                            )
+                            Evolver = VegetationParticleStandardEvolverListWithPhysic
+                            (
+                                FluidFriction = 0.25
+                                PhysicWindField = $/VFX_Bank/MapWind + float3[0, 0, -9000]
+                                Opacity = $/VFX_Bank/AttackDecay[$/VFX_Bank/ParticleLifeRatio, 0.1]
+                            )
+                            ParticleRenderer = $/VFX_Bank/LitParticleRenderer
+                            FxStickerTracker = $/M3D/Scene/TerrainCDLODFxStickerTracker
+                        )
+                    )
+                ),
+            ]
+        ),
+        TWaitInSec(Duration = 15),
+    ])
+)
+
+template Template_FX_Tree_Impact
+[
+    FoliageTexture    : TFileName[Texture] = '',
+    FoliagePosition  : TEvaluable = float3[0.00, 0.00, 0.00],
+    FoliageSize         : TEvaluable = float3[0.00, 0.00, 0.00],
+    FoliageDensity      : TEvaluable = 0,
+    LeafSize            : TEvaluable = 500,
+] is TSimultaneousActionWithMultiLaunchLimit
+(
+    RadiusForMultiLaunchSkip = 7000
+    DurationForMultiLaunchSkip = 3
+    MaxLaunchInRadius = 1
+    Actions =
+    [
+        private Leaves is VegetationParticleBombSpawner
+        (
+            Count = <FoliageDensity>
+            ParticleMaxDurationForSpawnSkip = 2.5
+            Spawner = TParticleSpawner
+            (
+                ParticleLifetime = 2.5
+                Initialisers =
+                [
+                    VegetationParticleInitialiserList
+                    (
+                        ColorModifier = float3[1, 1, 1]
+                        Alpha = 1.0
+
+                        Position = <FoliagePosition> + $/VFX_Bank/MinusOneToOneRandomSphereVolume * <FoliageSize>
+                        Speed = $/VFX_Bank/MinusOneToOneRandomHemisphereVolume * float3[1,1,-1] * 500
+                        Size = $/VFX_Bank/RandomRange[0.8, 1.2] * <LeafSize>
+                        RotationSpeed = $/VFX_Bank/MinusOneToOneRandomHemisphereVolume * 0.5
+                        Rotation = $/VFX_Bank/RandomUnit
+                        Direction = $/VFX_Bank/MinusOneToOneRandomSphereSurface
+                    ),
+                ]
+                ParticleDescriptor = TParticleDescriptor
+                (
+                    RenderInfo = VegetationParticleRenderInfo
+                    (
+                        TextureName = <FoliageTexture>
+                    )
+                    Evolver = VegetationParticleStandardEvolverListWithPhysic
+                    (
+                        FluidFriction = 0.25
+                        PhysicWindField = $/VFX_Bank/MapWind + float3[0, 0, -9000]
+                        Opacity = $/VFX_Bank/AttackDecay[$/VFX_Bank/ParticleLifeRatio, 0.1]
+                    )
+                    ParticleRenderer = $/VFX_Bank/LitParticleRenderer
+                    FxStickerTracker = $/M3D/Scene/TerrainCDLODFxStickerTracker
+                )
+            )
+        ),
+    ]
+)
+
+template Template_FX_Bush_Impact
+[
+    FoliageTexture    : TFileName[Texture] = '',
+    FoliagePosition  : TEvaluable = float3[0.00, 0.00, 0.00],
+    FoliageSize         : TEvaluable = float3[0.00, 0.00, 0.00],
+    FoliageDensity      : TEvaluable = 0,
+    LeafSize            : TEvaluable = 500,
+] is TSimultaneousActionWithMultiLaunchLimit
+(
+    RadiusForMultiLaunchSkip = 7000
+    DurationForMultiLaunchSkip = 3
+    MaxLaunchInRadius = 1
+    Actions =
+    [
+        private Leaves is VegetationParticleBombSpawner
+        (
+            Count = <FoliageDensity>
+            ParticleMaxDurationForSpawnSkip = 2.5
+            Spawner = TParticleSpawner
+            (
+                ParticleLifetime = 2.5
+                Initialisers =
+                [
+                    VegetationParticleInitialiserList
+                    (
+                        ColorModifier = float3[1, 1, 1]
+                        Alpha = 1.0
+
+                        Position = <FoliagePosition> + $/VFX_Bank/MinusOneToOneRandomSphereVolume * <FoliageSize>
+                        Speed = $/VFX_Bank/MinusOneToOneRandomHemisphereVolume * float3[1,1,-1] * 500
+                        Size = $/VFX_Bank/RandomRange[0.8, 1.2] * <LeafSize>
+                        RotationSpeed = $/VFX_Bank/MinusOneToOneRandomHemisphereVolume * 0.5
+                        Rotation = $/VFX_Bank/RandomUnit
+                        Direction = $/VFX_Bank/MinusOneToOneRandomSphereSurface
+                    ),
+                ]
+                ParticleDescriptor = TParticleDescriptor
+                (
+                    RenderInfo = VegetationParticleRenderInfo
+                    (
+                        TextureName = <FoliageTexture>
+                    )
+                    Evolver = VegetationParticleStandardEvolverListWithPhysic
+                    (
+                        FluidFriction = 0.25
+                        PhysicWindField = $/VFX_Bank/MapWind + float3[0, 0, -9000]
+                        Opacity = $/VFX_Bank/AttackDecay[$/VFX_Bank/ParticleLifeRatio, 0.1]
+                    )
+                    ParticleRenderer = $/VFX_Bank/LitParticleRenderer
+                    FxStickerTracker = $/M3D/Scene/TerrainCDLODFxStickerTracker
+                )
+            )
+        ),
+    ]
+)

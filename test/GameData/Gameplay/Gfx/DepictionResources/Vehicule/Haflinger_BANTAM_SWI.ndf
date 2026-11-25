@@ -1,0 +1,14 @@
+export Modele_Haflinger_BANTAM_SWI is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/SWI/Vehicule/Haflinger_BANTAM/Haflinger_BANTAM.fbx"
+)
+
+export Modele_Haflinger_BANTAM_SWI_MID is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/SWI/Vehicule/Haflinger_BANTAM/Haflinger_BANTAM.fbx"
+)
+
+export Modele_Haflinger_BANTAM_SWI_LOW is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/SWI/Vehicule/Haflinger_BANTAM/Haflinger_BANTAM.fbx"
+)

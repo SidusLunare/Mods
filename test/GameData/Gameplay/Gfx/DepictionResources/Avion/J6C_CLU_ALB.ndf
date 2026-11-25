@@ -1,0 +1,20 @@
+export ModelFile_J6C_CLU_ALB is "GameData:/Assets/3D/Units/ALB/Avion/J6C/J6C.fbx"
+export Modele_J6C_CLU_ALB is TResourceMesh
+(
+    Mesh=ModelFile_J6C_ALB
+)
+export ModelFile_J6C_CLU_ALB_MID is "GameData:/Assets/3D/Units/ALB/Avion/J6C_MID/J6C_MID.fbx"
+export Modele_J6C_CLU_ALB_MID is TResourceMesh
+(
+    Mesh=ModelFile_J6C_ALB_MID
+)
+export ModelFile_J6C_CLU_ALB_LOW is "GameData:/Assets/3D/Units/ALB/Avion/J6C_LOW/J6C_LOW.fbx"
+export Modele_J6C_CLU_ALB_LOW is TResourceMesh
+(
+    Mesh=ModelFile_J6C_ALB_LOW
+)
+export ModelFile_J6C_CLU_ALB_train is "GameData:/Assets/3D/Units/ALB/Avion/J6C/J6C_train.fbx"
+export Modele_J6C_CLU_ALB_train is TResourceMesh
+(
+    Mesh=ModelFile_J6C_ALB_train
+)

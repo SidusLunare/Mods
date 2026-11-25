@@ -1,0 +1,13 @@
+export Zoom_1_2_3_4_IATime is Template_TimeServerWithVisibilityRange
+(
+    VisibilityRange = $/GFX/Visibility/AllRanges/Zoom1234ForFx
+    DebugInfo = "1_2_3_4"
+    UpdateTimeMode = UpdateTimeModeUseIATime
+)
+
+export Zoom_1_2_3_4_RenderTime is Template_TimeServerWithVisibilityRange
+(
+    VisibilityRange = $/GFX/Visibility/AllRanges/Zoom1234ForFx
+    DebugInfo = "1_2_3_4"
+    UpdateTimeMode = UpdateTimeModeUseRenderTime
+)

@@ -1,0 +1,9 @@
+template WaitInSec
+[
+    Duration    : TEvaluable[required] = TConstantFloat(Value = 1.0),
+    Disabled    : TEvaluable = nil,
+] is TWaitInSec
+(
+    Duration = <Duration>
+    Disabled = <Disabled>
+)

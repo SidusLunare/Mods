@@ -1,0 +1,19 @@
+export Modele_F5E_TigerII_SWI is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/SWI/Avion/F5E_TigerII/F5E_TigerII.fbx"
+)
+
+export Modele_F5E_TigerII_SWI_MID is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/SWI/Avion/F5E_TigerII_MID/F5E_TigerII_MID.fbx"
+)
+
+export Modele_F5E_TigerII_SWI_LOW is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/SWI/Avion/F5E_TigerII_LOW/F5E_TigerII_LOW.fbx"
+)
+
+export Modele_F5E_TigerII_SWI_train is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/SWI/Avion/F5E_TigerII/F5E_TigerII_train.fbx"
+)

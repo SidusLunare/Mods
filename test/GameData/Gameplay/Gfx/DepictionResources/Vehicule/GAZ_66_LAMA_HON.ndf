@@ -1,0 +1,17 @@
+export Modele_GAZ_66_LAMA_HON is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/FR/DCA/VLRA_Mistral/VLRA_Mistral.fbx"
+)
+
+export Modele_GAZ_66_LAMA_HON_MID is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/FR/DCA/VLRA_Mistral_MID/VLRA_Mistral_MID.fbx"
+)
+
+export Modele_GAZ_66_LAMA_HON_LOW is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/FR/DCA/VLRA_Mistral_LOW/VLRA_Mistral_LOW.fbx"
+)
+
+
+

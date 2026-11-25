@@ -1,0 +1,14 @@
+export Modele_Barkas_B1000_MP_DDR is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/DDR/Vehicule/Barkas_B1000_MP/Barkas_B1000_MP.fbx"
+)
+
+export Modele_Barkas_B1000_MP_DDR_MID is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/DDR/Vehicule/Barkas_B1000_MP_MID/Barkas_B1000_MP_MID.fbx"
+)
+
+export Modele_Barkas_B1000_MP_DDR_LOW is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/DDR/Vehicule/Barkas_B1000_MP_LOW/Barkas_B1000_MP_LOW.fbx"
+)

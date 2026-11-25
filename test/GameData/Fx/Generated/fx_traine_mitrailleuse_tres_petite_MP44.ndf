@@ -1,0 +1,67 @@
+// Ne pas éditer, ce fichier est généré
+
+export fx_traine_mitrailleuse_tres_petite_MP44 is SimultaneousActionDeclaration
+(
+    Params =
+    [
+        private parBombTrajectory is TActionAlias( ExpectedType = 'bool' DefaultValue = false ),
+        private parDestination is TActionAlias( ExpectedType = 'float3' DefaultValue = float3[20000,0,0] ),
+        private parFlyDuration is TActionAlias( ExpectedType = 'float' DefaultValue = 0.45 ),
+        private parImpactOnGround is TActionAlias( ExpectedType = 'bool' DefaultValue = false ),
+        private parInitialShotDelay is TActionAlias( ExpectedType = 'float' DefaultValue = 0 ),
+        private parInitialSpeed is TActionAlias( ExpectedType = 'float3' DefaultValue = float3[1000,0,0] ),
+        private parPower is TActionAlias( ExpectedType = 'float' DefaultValue = 10 ),
+        private parShotCount is TActionAlias( ExpectedType = 'int' DefaultValue = 5 ),
+        private parShotOnGround is TActionAlias( ExpectedType = 'bool' DefaultValue = false ),
+        private parTirPhysic is TActionAlias( ExpectedType = 'bool' DefaultValue = true ),
+        private parTirTendu is TActionAlias( ExpectedType = 'bool' DefaultValue = false ),
+        private parWaitBetweenShot is TActionAlias( ExpectedType = 'float' DefaultValue = 0.4 ),
+    ]
+    Actions = ActionList is
+    [
+        TSimultaneousAction
+        (
+            Mobile = nil
+            Actions =
+            [
+                TActionCall
+                (
+                    Action = $/GFX/GameFx/BANK_Traine_Mitrailleuse_Simple
+                    NamedParams = MAP[
+                        ( 'AbsoluteEndPosition', parDestination ),
+                        ( 'ColorModifier', float3[0.909804,0.07058824,0.07058824] ),
+                        ( 'DurationInSec', parFlyDuration ),
+                        ( 'EmissivePowerScale', 6 ),
+                        ( 'FlameTipScale', 1.5 ),
+                        ( 'Opacity', 0.5 ),
+                        ( 'RadiusRandom', 0.01 ),
+                        ( 'parInitialDelay', parInitialShotDelay ),
+                        ( 'parMaxStretch', 50 ),
+                        ( 'parPinImpactOnGround', parImpactOnGround ),
+                        ( 'parPinShotCount', parShotCount ),
+                        ( 'parPinWaitBetweenShot', parWaitBetweenShot ),
+                        ( 'parRebondExplosion', 0 ),
+                    ]
+                ),
+                TActionCall
+                (
+                    Action = $/VFX_Bank/Dummy_Traine
+                    NamedParams = MAP[
+                        ( 'parDummyBombTrajectory', parBombTrajectory ),
+                        ( 'parDummyDestination', parDestination ),
+                        ( 'parDummyFlyDuration', parFlyDuration ),
+                        ( 'parDummyImpactOnGround', parImpactOnGround ),
+                        ( 'parDummyInitialSpeed', parInitialSpeed ),
+                        ( 'parDummyPower', parPower ),
+                        ( 'parDummyShotCount', parShotCount ),
+                        ( 'parDummyShotOnGround', parShotOnGround ),
+                        ( 'parDummyTirPhysic', parTirPhysic ),
+                        ( 'parDummyTirTendu', parTirTendu ),
+                        ( 'parDummyTraineInitialShotDelay', parInitialShotDelay ),
+                        ( 'parDummyWaitBetweenShot', parWaitBetweenShot ),
+                    ]
+                ),
+            ]
+        ),
+    ]
+)

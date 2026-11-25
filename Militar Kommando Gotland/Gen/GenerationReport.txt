@@ -1,4 +1,4 @@
---- Generation times (total: 0.418403 s) --
-                  Read catalog: 0.397 s
+--- Generation times (total: 0.434699 s) --
+                  Read catalog: 0.398 s
                         Assets: 0.003 s
-                         Packs: 0.018 s
+                         Packs: 0.034 s

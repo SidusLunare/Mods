@@ -1,0 +1,3 @@
+export Modele_ATteam_Malyutka_Para_POL is TResourceMesh( Mesh="GameData:/Assets/3D/Units/URSS/Antichar/Malyutka_Launcher/Malyutka.fbx")
+export Modele_ATteam_Malyutka_Para_POL_MID is TResourceMesh( Mesh="GameData:/Assets/3D/Units/URSS/Antichar/Malyutka_Launcher_MID/Malyutka_MID.fbx")
+export Modele_ATteam_Malyutka_Para_POL_LOW is TResourceMesh( Mesh="GameData:/Assets/3D/Units/URSS/Antichar/Malyutka_Launcher_LOW/Malyutka_LOW.fbx")

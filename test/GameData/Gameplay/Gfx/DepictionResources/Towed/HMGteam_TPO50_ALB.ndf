@@ -1,0 +1,3 @@
+export Modele_HMGteam_TPO50_ALB is TResourceMesh ( Mesh="GameData:/Assets/3D/Units/ALB/Canon/HMGteam_TPO50/HMGteam_TPO50.fbx")
+export Modele_HMGteam_TPO50_ALB_MID is TResourceMesh ( Mesh="GameData:/Assets/3D/Units/ALB/Canon/HMGteam_TPO50_MID/HMGteam_TPO50_MID.fbx")
+export Modele_HMGteam_TPO50_ALB_LOW is TResourceMesh ( Mesh="GameData:/Assets/3D/Units/ALB/Canon/HMGteam_TPO50_LOW/HMGteam_TPO50_LOW.fbx")

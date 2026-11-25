@@ -1,0 +1,3 @@
+export ModelFile_Mortier_PM43_120mm_CUB is "GameData:/Assets/3D/Units/DDR/Canon/PM43_120mm/PM43_120mm.fbx"export Modele_Mortier_PM43_120mm_CUB is TResourceMesh( Mesh=ModelFile_Mortier_PM43_120mm_CUB)
+export ModelFile_Mortier_PM43_120mm_CUB_MID is "GameData:/Assets/3D/Units/DDR/Canon/PM43_120mm_MID/PM43_120mm_MID.fbx"export Modele_Mortier_PM43_120mm_CUB_MID is TResourceMesh( Mesh=ModelFile_Mortier_PM43_120mm_CUB_MID)
+export ModelFile_Mortier_PM43_120mm_CUB_LOW is "GameData:/Assets/3D/Units/DDR/Canon/PM43_120mm_LOW/PM43_120mm_LOW.fbx"export Modele_Mortier_PM43_120mm_CUB_LOW is TResourceMesh( Mesh=ModelFile_Mortier_PM43_120mm_CUB_LOW)

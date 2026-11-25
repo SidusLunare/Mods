@@ -1,0 +1,3 @@
+export Modele_AT_Type56_85mm_ALB is TResourceMesh ( Mesh="GameData:/Assets/3D/Units/ALB/Canon/AT_Type56_85mm/AT_Type56_85mm.fbx")
+export Modele_AT_Type56_85mm_ALB_MID is TResourceMesh ( Mesh="GameData:/Assets/3D/Units/ALB/Canon/AT_Type56_85mm_MID/AT_Type56_85mm_MID.fbx")
+export Modele_AT_Type56_85mm_ALB_LOW is TResourceMesh ( Mesh="GameData:/Assets/3D/Units/ALB/Canon/AT_Type56_85mm_LOW/AT_Type56_85mm_LOW.fbx")

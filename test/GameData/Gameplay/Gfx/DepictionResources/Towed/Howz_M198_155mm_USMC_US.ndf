@@ -1,0 +1,3 @@
+export Modele_Howz_M198_155mm_USMC_US is TResourceMesh( Mesh="GameData:/Assets/3D/Units/US/Canon/Howz_M198_155mm/Howz_M198_155mm.fbx" Textures='GameData:/Assets/3D/Units/US/Canon/Howz_M198_155mm_USMC')
+export Modele_Howz_M198_155mm_USMC_US_MID is TResourceMesh( Mesh="GameData:/Assets/3D/Units/US/Canon/Howz_M198_155mm_MID/Howz_M198_155mm_MID.fbx" Textures='GameData:/Assets/3D/Units/US/Canon/Howz_M198_155mm_USMC_MID')
+export Modele_Howz_M198_155mm_USMC_US_LOW is TResourceMesh( Mesh="GameData:/Assets/3D/Units/US/Canon/Howz_M198_155mm_LOW/Howz_M198_155mm_LOW.fbx" Textures='GameData:/Assets/3D/Units/US/Canon/Howz_M198_155mm_USMC_LOW')

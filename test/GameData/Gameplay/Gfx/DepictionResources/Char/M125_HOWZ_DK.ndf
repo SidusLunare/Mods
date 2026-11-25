@@ -1,0 +1,15 @@
+export Modele_M125_HOWZ_DK is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/DK/Artillerie/M125_Howz/M125_Howz.fbx"
+)
+
+export Modele_M125_HOWZ_DK_MID is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/DK/Artillerie/M125_Howz_MID/M125_Howz_MID.fbx"
+)
+
+export Modele_M125_HOWZ_DK_LOW is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/DK/Artillerie/M125_Howz_LOW/M125_Howz_LOW.fbx"
+)
+

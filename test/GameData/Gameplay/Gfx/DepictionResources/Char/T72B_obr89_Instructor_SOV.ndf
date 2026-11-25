@@ -1,0 +1,19 @@
+export Modele_T72B_obr89_Instructor_SOV is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/URSS/Char/T72B_obr89/T72B_obr89.fbx"
+)
+
+export Modele_T72B_obr89_Instructor_SOV_MID is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/URSS/Char/T72B_obr89_MID/T72B_obr89_MID.fbx"
+)
+
+export Modele_T72B_obr89_Instructor_SOV_LOW is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/URSS/Char/T72B_obr89_LOW/T72B_obr89_LOW.fbx"
+)
+
+export Modele_T72B_obr89_Instructor_SOV_Tourelle_02 is TResourceMesh
+(
+    Mesh=ModelFile_NSVT_no_ammo
+)

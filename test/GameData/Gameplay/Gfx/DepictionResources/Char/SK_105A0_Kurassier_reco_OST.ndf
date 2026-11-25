@@ -1,0 +1,3 @@
+export Modele_SK_105A0_Kurassier_reco_OST     is TResourceMesh( Mesh="GameData:/Assets/3D/Units/OST/Char/SK_105A0_Kurassier/SK_105A0_Kurassier.fbx" )
+export Modele_SK_105A0_Kurassier_reco_OST_MID is TResourceMesh( Mesh="GameData:/Assets/3D/Units/OST/Char/SK_105A0_Kurassier/SK_105A0_Kurassier.fbx" )
+export Modele_SK_105A0_Kurassier_reco_OST_LOW is TResourceMesh( Mesh="GameData:/Assets/3D/Units/OST/Char/SK_105A0_Kurassier/SK_105A0_Kurassier.fbx" )

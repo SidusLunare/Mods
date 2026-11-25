@@ -1,0 +1,11 @@
+
+WorldInterfaceTactical is TWorldInterfaceDescriptor
+(
+    GamePhaseManagerDescriptor = ~/tacticalGamePhaseManagerDescriptor
+    ZoneManagerDescriptors =
+    [
+        ~/deploiementZoneManagerDescriptor,
+        ~/commandementZoneManagerDescriptor,
+        ~/zoneManagerForIAStratDescriptor,
+    ]
+)

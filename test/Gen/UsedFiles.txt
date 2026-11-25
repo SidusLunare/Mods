@@ -1,0 +1,5 @@
+GameData:/Localisation/test/COMPANIES.csv
+GameData:/Localisation/test/INTERFACE_INGAME.csv
+GameData:/Localisation/test/INTERFACE_OUTGAME.csv
+GameData:/Localisation/test/PLATOONS.csv
+GameData:/Localisation/test/UNITS.csv

@@ -1,0 +1,14 @@
+export Modele_Berliet_GBC_8KT_jammer_FR is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/FR/Vehicule/Berliet_GBC_8KT_jammer/Berliet_GBC_8KT_jammer.fbx"
+)
+
+export Modele_Berliet_GBC_8KT_jammer_FR_MID is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/FR/Vehicule/Berliet_GBC_8KT_jammer_MID/Berliet_GBC_8KT_jammer_MID.fbx"
+)
+
+export Modele_Berliet_GBC_8KT_jammer_FR_LOW is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/FR/Vehicule/Berliet_GBC_8KT_jammer_LOW/Berliet_GBC_8KT_jammer_LOW.fbx"
+)

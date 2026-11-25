@@ -1,0 +1,19 @@
+export Modele_Su_7BKL_HE_POL is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/POL/Avion/Su_7BKL_HE/Su_7BKL_HE.fbx"
+)
+
+export Modele_Su_7BKL_HE_POL_MID is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/POL/Avion/Su_7BKL_HE_MID/Su_7BKL_HE_MID.fbx"
+)
+
+export Modele_Su_7BKL_HE_POL_LOW is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/POL/Avion/Su_7BKL_HE_LOW/Su_7BKL_HE_LOW.fbx"
+)
+
+export Modele_Su_7BKL_HE_POL_train is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/POL/Avion/Su_7BKL_HE/Su_7BKL_HE_train.fbx"
+)

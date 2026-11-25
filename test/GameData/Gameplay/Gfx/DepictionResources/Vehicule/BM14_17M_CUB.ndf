@@ -1,0 +1,14 @@
+export Modele_BM14_17M_CUB is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/CUBA/Artillerie/BM14_17M/BM14_17M.fbx"
+)
+
+export Modele_BM14_17M_CUB_MID is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/CUBA/Artillerie/BM14_17M_MID/BM14_17M_MID.fbx"
+)
+
+export Modele_BM14_17M_CUB_LOW is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/CUBA/Artillerie/BM14_17M_LOW/BM14_17M_LOW.fbx"
+)

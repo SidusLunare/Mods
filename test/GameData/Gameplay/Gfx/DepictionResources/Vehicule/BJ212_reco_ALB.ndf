@@ -1,0 +1,14 @@
+export Modele_BJ212_reco_ALB is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/ALB/Vehicule/BJ212_reco/BJ212_reco.fbx"
+)
+
+export Modele_BJ212_reco_ALB_MID is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/ALB/Vehicule/BJ212_reco/BJ212_reco.fbx"
+)
+
+export Modele_BJ212_reco_ALB_LOW is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/ALB/Vehicule/BJ212_reco/BJ212_reco.fbx"
+)

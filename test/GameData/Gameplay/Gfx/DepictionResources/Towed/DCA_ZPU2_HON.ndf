@@ -1,0 +1,3 @@
+export Modele_DCA_ZPU2_HON is TResourceMesh( Mesh="GameData:/Assets/3D/Units/HON/DCA/DCA_ZPU2/DCA_ZPU2.fbx")
+export Modele_DCA_ZPU2_HON_MID is TResourceMesh( Mesh="GameData:/Assets/3D/Units/HON/DCA/DCA_ZPU2_MID/DCA_ZPU2_MID.fbx")
+export Modele_DCA_ZPU2_HON_LOW is TResourceMesh( Mesh="GameData:/Assets/3D/Units/HON/DCA/DCA_ZPU2_LOW/DCA_ZPU2_LOW.fbx")

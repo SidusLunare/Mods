@@ -1,0 +1,14 @@
+export Modele_EE25_trans_VEN is TResourceMesh
+(
+    Mesh=ModelFile_EE25_supply_VEN
+)
+
+export Modele_EE25_trans_VEN_MID is TResourceMesh
+(
+    Mesh=ModelFile_EE25_supply_VEN_MID
+)
+
+export Modele_EE25_trans_VEN_LOW is TResourceMesh
+(
+    Mesh=ModelFile_EE25_supply_VEN_LOW
+)

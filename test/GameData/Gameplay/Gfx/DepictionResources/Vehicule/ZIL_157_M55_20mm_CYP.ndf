@@ -1,0 +1,14 @@
+export Modele_ZIL_157_M55_20mm_CYP is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/CYP/Vehicule/ZIL_157_M55_20mm/ZIL_157_M55_20mm.fbx"
+)
+
+export Modele_ZIL_157_M55_20mm_CYP_MID is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/CYP/Vehicule/ZIL_157_M55_20mm_MID/ZIL_157_M55_20mm_MID.fbx"
+)
+
+export Modele_ZIL_157_M55_20mm_CYP_LOW is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/CYP/Vehicule/ZIL_157_M55_20mm_LOW/ZIL_157_M55_20mm_LOW.fbx"
+)

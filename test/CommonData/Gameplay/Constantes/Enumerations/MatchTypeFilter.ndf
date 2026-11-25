@@ -1,0 +1,7 @@
+//A maintenir synchro avec les valeur correspondantes dans GDUnitConstraint.h
+EMatchTypeFilter is TBaseClass
+(
+    MatchAll is 0
+    MatchOne is 1
+    MatchNone is 2
+)

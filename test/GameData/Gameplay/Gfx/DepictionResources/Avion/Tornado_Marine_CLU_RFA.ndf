@@ -1,0 +1,23 @@
+export Modele_Tornado_Marine_CLU_RFA is TResourceMesh
+(
+    Mesh=ModelFile_Tornado_IDS_RFA
+    Textures="GameData:/Assets/3D/Units/RFA/Avion/Tornado_IDS_Marineflieger"
+)
+
+export Modele_Tornado_Marine_CLU_RFA_MID is TResourceMesh
+(
+    Mesh=ModelFile_Tornado_IDS_RFA_MID
+    Textures="GameData:/Assets/3D/Units/RFA/Avion/Tornado_IDS_Marineflieger_MID"
+)
+
+export Modele_Tornado_Marine_CLU_RFA_LOW is TResourceMesh
+(
+    Mesh=ModelFile_Tornado_IDS_RFA_LOW
+    Textures="GameData:/Assets/3D/Units/RFA/Avion/Tornado_IDS_Marineflieger_LOW"
+)
+
+export Modele_Tornado_Marine_CLU_RFA_train is TResourceMesh
+(
+    Mesh=ModelFile_Tornado_IDS_RFA_train
+    Textures="GameData:/Assets/3D/Units/RFA/Avion/Tornado_IDS_Marineflieger"
+)

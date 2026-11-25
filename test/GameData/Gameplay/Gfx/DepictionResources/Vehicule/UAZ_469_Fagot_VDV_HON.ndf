@@ -1,0 +1,20 @@
+export Modele_UAZ_469_Fagot_VDV_HON is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/URSS/Vehicule/UAZ_469_Konkurs/UAZ_469_Konkurs.fbx"
+    Textures="GameData:/Assets/3D/Units/POL/Vehicule/UAZ_469_Konkurs"
+)
+
+export Modele_UAZ_469_Fagot_VDV_HON_MID is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/URSS/Vehicule/UAZ_469_Konkurs_MID/UAZ_469_Konkurs_MID.fbx"
+    Textures="GameData:/Assets/3D/Units/POL/Vehicule/UAZ_469_Konkurs_MID"
+)
+
+export Modele_UAZ_469_Fagot_VDV_HON_LOW is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/URSS/Vehicule/UAZ_469_Konkurs_LOW/UAZ_469_Konkurs_LOW.fbx"
+    Textures="GameData:/Assets/3D/Units/POL/Vehicule/UAZ_469_Konkurs_LOW"
+)
+
+
+

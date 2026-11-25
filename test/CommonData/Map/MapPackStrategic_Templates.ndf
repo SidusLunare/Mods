@@ -1,0 +1,44 @@
+template ScenarioStrategicMap
+[
+    GUID,
+    EnvironmentSettings : TEnvironmentGraphicSettings,
+    Name,
+    ShortName,
+    ChapterPack,
+    DescriptionType,
+    DescriptionTextElements,
+    DescriptionTextureElements,
+    Duration = ~/EGameDuration/NotSpecified,
+    DefaultPlayerAlliance,
+    LobbyLeftSideAlliance,
+    OrderToChainMission,
+]
+is TStrategicMapInfo
+(
+    GUID = <GUID>
+
+    EnvironmentSettings = <EnvironmentSettings>
+
+    Name = <Name>
+
+    ShortName = <ShortName>
+
+    ChapterPack = <ChapterPack>
+
+    OrderToChainMission = <OrderToChainMission>
+    Duration = <Duration>
+
+    DescriptionType = <DescriptionType>
+    DescriptionTextElements = <DescriptionTextElements>
+
+    DefaultPlayerAlliance = <DefaultPlayerAlliance>
+    LobbyLeftSideAlliance = <LobbyLeftSideAlliance>
+
+    GameModeHintTitle = "GRL_ATTP"
+    GameModeHintBody = "GRL_ATTPB"
+    GameModeHintExtended = "GRL_ATTPE"
+
+    DescriptionTextureElements = <DescriptionTextureElements>
+
+    UITags = [ "StrategicScenario" ]
+)

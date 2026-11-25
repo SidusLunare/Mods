@@ -1,0 +1,16 @@
+export Modele_Saab_35F_Draken_RKT1_DK is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/DK/Avion/F35_Draken/F35_Draken_RKT.fbx"
+)
+export Modele_Saab_35F_Draken_RKT1_DK_MID is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/DK/Avion/F35_Draken_MID/F35_Draken_RKT_MID.fbx"
+)
+export Modele_Saab_35F_Draken_RKT1_DK_LOW is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/DK/Avion/F35_Draken_LOW/F35_Draken_RKT_LOW.fbx"
+)
+export Modele_Saab_35F_Draken_RKT1_DK_train is TResourceMesh
+(
+    Mesh=ModelFile_Saab_35F_Draken_HE_CLU_DK_train
+)

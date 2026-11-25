@@ -1,0 +1,3 @@
+export Modele_DCA_I_Hawk_RFA is TResourceMesh( Mesh=ModelFile_DCA_I_Hawk_US)
+export Modele_DCA_I_Hawk_RFA_MID is TResourceMesh( Mesh=ModelFile_DCA_I_Hawk_US_MID)
+export Modele_DCA_I_Hawk_RFA_LOW is TResourceMesh( Mesh=ModelFile_DCA_I_Hawk_US_LOW)

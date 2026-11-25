@@ -1,0 +1,23 @@
+// Used by trail FX from editor
+
+export ProjectileMover is Template_ActionWithParameters
+(
+    Params =
+    [
+        private AbsoluteEndPosition is Template_Param_Float3(),
+        private InitialSpeed        is Template_Param_Float3(),
+        private DurationInSec       is Template_Param_Float (),
+        private BombTrajectory      is Template_Param_Bool (),
+        private UsePhysicSolver     is Template_Param_Bool (),
+        private UseTirTendu         is Template_Param_Bool (),
+    ]
+    Action = TProjectileInterpolatorActionDescriptor
+    (
+        AbsoluteEndPosition = AbsoluteEndPosition
+        InitialSpeed = InitialSpeed
+        DurationInSec = DurationInSec
+        BombTrajectory = BombTrajectory
+        UsePhysicSolver = UsePhysicSolver
+        UseTirTendu = UseTirTendu
+    )
+)

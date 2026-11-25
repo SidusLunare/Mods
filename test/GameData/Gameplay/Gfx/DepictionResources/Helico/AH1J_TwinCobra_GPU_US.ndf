@@ -1,0 +1,24 @@
+export Modele_AH1J_TwinCobra_GPU_US is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/US/Helico/AH1J_TwinCobra_RKT/AH1J_TwinCobra_RKT.fbx"
+)
+
+export Modele_AH1J_TwinCobra_GPU_US_MID is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/US/Helico/AH1J_TwinCobra_RKT_MID/AH1J_TwinCobra_RKT_MID.fbx"
+)
+
+export Modele_AH1J_TwinCobra_GPU_US_LOW is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/US/Helico/AH1J_TwinCobra_RKT_LOW/AH1J_TwinCobra_RKT_LOW.fbx"
+)
+
+export Modele_AH1J_TwinCobra_GPU_US_Tourelle_02 is TResourceMesh
+(
+    Mesh='GameData:/Assets/3D/Ammo/Tourelles/GPU_2A_20mm/GPU_2A_20mm_t2.fbx'
+)
+
+export Modele_AH1J_TwinCobra_GPU_US_Tourelle_03 is TResourceMesh
+(
+    Mesh='GameData:/Assets/3D/Ammo/Tourelles/GPU_2A_20mm/GPU_2A_20mm_t3.fbx'
+)

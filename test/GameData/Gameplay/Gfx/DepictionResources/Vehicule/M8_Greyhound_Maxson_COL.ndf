@@ -1,0 +1,14 @@
+export Modele_M8_Greyhound_Maxson_COL is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/COL/Vehicule/M8_Greyhound_Maxton/M8_Greyhound_Maxton.fbx"
+)
+
+export Modele_M8_Greyhound_Maxson_COL_MID is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/COL/Vehicule/M8_Greyhound_Maxton_MID/M8_Greyhound_Maxton_MID.fbx"
+)
+
+export Modele_M8_Greyhound_Maxson_COL_LOW is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/COL/Vehicule/M8_Greyhound_Maxton_LOW/M8_Greyhound_Maxton_LOW.fbx"
+)

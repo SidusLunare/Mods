@@ -1,0 +1,17 @@
+export Modele_M1A1HA_Abrams_CMD_US is TResourceMesh
+(
+    Mesh=ModelFile_M1A1HA_Abrams_US
+    Textures="GameData:/Assets/3D/Units/US/Char/M1A1HA_Abrams_CMD"
+)
+
+export Modele_M1A1HA_Abrams_CMD_US_MID is TResourceMesh
+(
+    Mesh=ModelFile_M1A1HA_Abrams_US_MID
+    Textures="GameData:/Assets/3D/Units/US/Char/M1A1HA_Abrams_CMD_MID"
+)
+
+export Modele_M1A1HA_Abrams_CMD_US_LOW is TResourceMesh
+(
+    Mesh=ModelFile_M1A1HA_Abrams_US_LOW
+    Textures="GameData:/Assets/3D/Units/US/Char/M1A1HA_Abrams_CMD_LOW"
+)

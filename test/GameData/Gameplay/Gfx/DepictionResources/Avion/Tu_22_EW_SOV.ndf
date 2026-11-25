@@ -1,0 +1,19 @@
+export Modele_Tu_22_EW_SOV is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/URSS/Avion/Tu22_EW/Tu22_EW.fbx"
+)
+
+export Modele_Tu_22_EW_SOV_MID is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/URSS/Avion/Tu22_EW_MID/Tu22_EW_MID.fbx"
+)
+
+export Modele_Tu_22_EW_SOV_LOW is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/URSS/Avion/Tu22_EW_LOW/Tu22_EW_LOW.fbx"
+)
+
+export Modele_Tu_22_EW_SOV_train is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/URSS/Avion/Tu22_EW/Tu22_EW_train.fbx"
+)

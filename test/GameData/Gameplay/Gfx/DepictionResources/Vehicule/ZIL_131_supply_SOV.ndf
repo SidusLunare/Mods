@@ -1,0 +1,14 @@
+export Modele_ZIL_131_supply_SOV is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/URSS/Vehicule/ZIL_131/ZIL_131.fbx"
+)
+
+export Modele_ZIL_131_supply_SOV_MID is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/URSS/Vehicule/ZIL_131_MID/ZIL_131_MID.fbx"
+)
+
+export Modele_ZIL_131_supply_SOV_LOW is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/URSS/Vehicule/ZIL_131_LOW/ZIL_131_LOW.fbx"
+)

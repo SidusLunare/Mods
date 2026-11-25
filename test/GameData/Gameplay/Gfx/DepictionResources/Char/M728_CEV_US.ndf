@@ -1,0 +1,15 @@
+export ModeFile_M728_CEV_US is "GameData:/Assets/3D/Units/US/Char/M728_CEV/M728_CEV.fbx"
+export Modele_M728_CEV_US is TResourceMesh
+(
+    Mesh=ModeFile_M728_CEV_US
+)
+export ModeFile_M728_CEV_US_MID is "GameData:/Assets/3D/Units/US/Char/M728_CEV_MID/M728_CEV_MID.fbx"
+export Modele_M728_CEV_US_MID is TResourceMesh
+(
+    Mesh=ModeFile_M728_CEV_US_MID
+)
+export ModeFile_M728_CEV_US_LOW is "GameData:/Assets/3D/Units/US/Char/M728_CEV_LOW/M728_CEV_LOW.fbx"
+export Modele_M728_CEV_US_LOW is TResourceMesh
+(
+    Mesh=ModeFile_M728_CEV_US_LOW
+)

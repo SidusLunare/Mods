@@ -1,0 +1,19 @@
+export Modele_AR_76_reco_Alpini_ITA is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/ITA/Vehicule/AR76_reco/AR76_reco.fbx"
+)
+
+export Modele_AR_76_reco_Alpini_ITA_MID is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/ITA/Vehicule/AR76_reco_MID/AR76_reco_MID.fbx"
+)
+
+export Modele_AR_76_reco_Alpini_ITA_LOW is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/ITA/Vehicule/AR76_reco_LOW/AR76_reco_LOW.fbx"
+)
+
+export Modele_AR_76_reco_Alpini_ITA_Tourelle_01 is TResourceMesh
+(
+    Mesh=ModelFile_M2HB_12_7mm_cosmetic
+)

@@ -1,0 +1,29 @@
+export FX_Splash_Water_RandomLoop is SimultaneousActionDeclaration
+(
+    Params = []
+    Actions =
+    [
+        FX_Splash_Water_OneShot,
+    ]
+)
+
+export FX_Splash_Water_OneShot is Template_RepeatSequential
+(
+    TimeServer = Zoom_1_2_3_4_RenderTime
+    Actions =
+    [
+        WaitInSec
+        (
+            Duration = RandomRange [0,5]
+        ),
+        TActionCall
+        (
+            Action = $/GFX/GameFx/fx_splash_water_diorama
+            NamedParams = MAP[
+                ( 'parDirection', float3[0,0,1] ),
+                ( 'parPosition', float3[0,0,0] ),
+            ]
+        ),
+    ]
+    Forever = true
+)

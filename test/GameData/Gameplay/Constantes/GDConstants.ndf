@@ -1,0 +1,318 @@
+///!\ MERCI DE RESPECTER L'ORDRE ALPHABETIQUE !
+// Par catégories puis par constante.
+
+//---------------------------------------------------------------------------------------//
+//---------------------------------------------------------------------------------------//
+//----------------------------------- COMMON --------------------------------------------//
+//---------------------------------------------------------------------------------------//
+//---------------------------------------------------------------------------------------//
+
+Constantes is TTunableConstante
+(
+    // /!\ MERCI DE RESPECTER L'ORDRE ALPHABETIQUE !
+    // Par catégories puis par constante.
+
+//--------------------------- Constantes Affichage ---------------------------------------//
+
+    EliminationWarningsDuration = 5.0
+
+//------------------------ Constantes AutomaticBehavior ----------------------------------//
+
+    AutoCover_DistanceMaxEntreLesChecksDeTerrainsGRU = 21 // distance entre les échantillonnages de terrain pour savoir si on fait un autocover.
+    AutoCover_TagEmpechantLAutocover = "Infanterie_Cowering"
+    MaxPullDistanceGRU = 353
+    MaxPullDistanceForAirplaneGRU = 17667
+    TagBloquantLeMoveAndAttack = "Bloque_MoveAndAttack" // Lorsque ce tag est levé, l'unité stoppe son move and attaque, et le reprend lorsque le tag est supprimé
+    TempsEnSecondesEntreDeuxSmokeAutomatiques = 1
+    AutoSmokeQuandRatioPvInferieurA = 1.0
+    RatioPuissancePourRetaliation = 1.0
+    TireursIgnoreesPourLaFuite = ["Artillerie", "Avion"]
+
+
+//----------------------------- Constantes Avion -----------------------------------------//
+
+    CadaverOffsetMax = 0.3  // 0.33
+    CadaverOffsetMin = 0.1 // 0.18
+
+//--------------------------- Constantes Bâtiments ---------------------------------------//
+
+    UnitPositionVerticalOffsetFromRoofGRU = -21
+
+//--------------------------- Constantes Beacon ---------------------------------------//
+    BeaconAlphaGhost = 0.3
+    BeaconMaxCount = 4
+    BeaconTimeout = 60.0
+
+//----------------------------- Constantes Combat -----------------------------------------//
+
+    ReductionDegatsSuppressDansVehicule = 0.50 // Pourcentage des dégats de suppress reçus par un véhicule appliqués aux unités transportées
+    TagRadioArtillerie = "Radio"
+    TagRadioJammed = "RadioJammed"
+    PorteeRadioArtillerieGRU = 2120
+    EfficiencyShotSearchDistanceTolerance = 100.0
+    PerteDeSuppressParPointDeVieEntierPerdu = 0.0
+    StunEffectDuration = 4.0
+
+//----------------------------- Constantes Commander -----------------------------------------//
+
+    CommanderEffect = $/GFX/EffectCapacity/UnitEffect_Gain_un_niveau_XP
+
+    CommanderRadiusEffectByLevelGRU =
+    [
+        424,
+        565,
+        636,
+    ]
+
+//------------------------------ Constantes Corridors ------------------------------------//
+    CanUseAlliedAllianceCorridors = false
+
+//------------------------------ Constantes Gameplay --------------------------------------//
+
+    Persistance_Bruit = 16.5
+
+//---------------------------- Constantes GameRules ---------------------------------------//
+
+    // Convention qui determine quelle alliance est l'alliance attaquante, lorsque le mode de jeu s'y prete.
+    // Si, au debut d'une partie, l'alliance attaquante n'est pas celle indiquee ici, alors il faudra sans doute ajuster les points de spawn
+    BaseAttackingAllianceNum = 0
+
+    DefaultAIDifficultyForPlayerReplacement = EIADifficulty/Normal
+
+    SuddenDeathTime = 5 * 60
+    MinimumNumberOfUnitToStayInGameWithoutCmdOrProductionInDestructionMode = 5
+
+    TacticVictoryLevelConstantes = ~/TacticVictoryLevelConstantes
+
+//------------------------- Constantes GestionFormation -----------------------------------//
+
+    DistanceCoherenceGRU = 1766
+
+//-------------------------- Constantes Helicopters --------------------------------------//
+    // Angle max avec la direction (0,0,1) EN DEGRES -- DOIT ETRE > 0 (sinon je pense que ça va être la daube) -- VOIR AVEC UN DEV POUR CHANGER LA VALEUR C'EST TRES SENSIBLE !!!
+    // Si on dépasse cette valeur l'hélico peut avoir du mal à s'orienter dans la bonne direction pour atterrir et ne jamais trouver la bonne série de commande pour atterrir.
+    // Une solution serait de reset les commandes pour recommencer l'algo, mais ça peut aussi avoir des conséquences sur d'autre mouvement ce truc, donc à faire uniquement si on sent le besoin.
+    MaxTerrainAngleForLanding = 8
+
+    // Distance pour petits déplacements (en mètres). Définie la distance max de déplacement d'un hélico pour:
+    // - Rester en très basse altitude.
+    DistanceMaxSmallMovementsInMeters = 150
+
+    // Temps utilisé pour prédire la position de landing des hélicos. Pour les hélicos lourd, ils font quand même demi tour, mais je n'ai pas moyen de savoir combien de temps il faut à l'hélico pour se stopper en vitesse linéaire
+    // sans faire des calculs à con. Donc j'utilise une heuristique à la place, et si on dépasse ben tant pis... Je ferais mieux si ça va vraiment pas
+    LandingPositionTimePredictionInSeconds = 3.2
+
+//-------------------------- Constantes Infantry --------------------------------------//
+// nombre de soldat dans l'affichage des pions de Steelman
+    ShowroomOffsetBetweenLines = 518.0
+    ShowroomOffsetBetweenSoldiers = 500.0
+    ShowroomNumberOfLines = 2
+    ShowroomMinSoldiersPerLine = 4
+
+
+//-------------------------- Constantes Interface ---------------------------------------//
+
+    //Couleur par défaut des ghosts
+    DefaultGhostColors = TGhostColors(
+        GhostColor = [255, 255, 255, 255]
+        GhostAlphas = [0.4, 0.2]
+        GhostBlends = [1, 0.1]
+    )
+
+//----------------------------- Constantes Missile --------------------------------------//
+
+    TempsAutoriseHorsMondePourMissileSansCible = 5.0
+
+//----------------------------- Constantes Mouvement --------------------------------------//
+
+    AngleArrierePourMarcheArriereEnDegre = 120
+    DistancePourDeclencherMarcheArriereGRU = 706
+    ForcerMarcheAvantPourAttaquer       = true
+    LargeurRouteGRU                        = 21 // les trajectoires des véhicules sont décalées de 0.5 * LargeurRoute d'un côté ou de l'autre
+    ToleranceLargeurRoutePourMouvementsRapidesShiftes = 2 // multiplicateur de LargeurRoute pour vérifier si la destination d'un movefast est sur la route
+    DecalageDepuisLeCentreDansCouloirGRU   = 3 // décalage des waypoints des unités par rapport au milieu du couloir quand une unité en traverse un
+    TagDecrochage                       = "Retraite"  // tag utilisé pour determiner si on affiche l'etiquette decrochage pendant la retraite
+
+//----------------------------- Constantes Resale -----------------------------------------//
+
+    ResaleDistanceGRU = 88
+    CooldownBeforeKillInSeconds = 2 // secondes
+
+//----------------------------- Constantes Selection -----------------------------------------//
+
+    AllowGhostCrossUnitSelection = true // Selection d'unités pré-placées et de ghost en même temps
+    AllowMixedSelection = false // Selection d'unités ET bâtiments en même temps ?
+    AllowMultipleBuildingSelection = false // Selection multiple de bâtiments (et quartiers)
+
+//------------------------- Constantes Unités hors carte ----------------------------------//
+
+    OutmapShootPositionPitch = 69.0
+    OutmapShootPositionRelativeAltitude = 100000.0
+    OutmapShootPositionYaw = 42.0
+
+//---------------------------- Constantes Visibilite --------------------------------------//
+
+    RelativeScanningHeightGRU = 7.0
+)
+
+//------------------------------ Constantes Victoire --------------------------------------//
+
+TacticVictoryLevelConstantes is TVictoryLevelConstantes
+(
+    MinorVictoryLimit = 0.05  // Ratio entre le score du vainqueur et le deuxieme meilleur score
+    MajorVictoryLimit = 0.55  // Ratio entre le score du vainqueur et le deuxieme meilleur score
+    TotalVictoryLimit = 0.75  // Ratio entre le score du vainqueur et le deuxieme meilleur score
+)
+
+//---------------------------------------------------------------------------------------//
+//---------------------------------------------------------------------------------------//
+//------------------------ Spécifiques MODERNWARFARE ------------------------------------//
+//---------------------------------------------------------------------------------------//
+//---------------------------------------------------------------------------------------//
+
+ModernWarfareConstantes is TModernWarfareTunableConstante
+(
+    LinkToCommonConstantes = ~/Constantes // DEV
+
+    // /!\ MERCI DE RESPECTER L'ORDRE ALPHABETIQUE !
+    // Par catégories puis par constante.
+
+//---------------------------- Constantes Combat ------------------------------------------//
+
+    DistanceInfanterieEnnemiDetectionGRU = 70
+    DistanceRelaunchMouvementForMoveAndAttackGRU = 530 // Distance pour laquelle une unité en MoveAndAttackTarget doit relancer le mouvement si sa cible s'est déplacée de cette distance (diminuer cette valeur baisse la perf)
+    DistanceToAddToEnnemiDetectionForAAWeaponGRU = 1400
+    DistanceToAddToEnnemiDetectionForAntiProjectileWeaponGRU = 0 // grosso merdo la porté max d'une arme anti-missile
+    DistanceToAddToEnnemiDetectionForOtherWeaponGRU = 350
+    DureeDeRevelationApresAttaque = 10.0
+    FacteurMinTempsViseeReel = 0.75 // Le temps de visée réel est un random entre cette valeur et la valeur de temps de visee théorique située dans l'ODS
+
+    // Portee Min pour considerer qu'une arme est une artillerie. Les unités ne cherche pas a fuir les armes considéré comme des artilleries
+    PorteeMinArmeEstConsidereCommeArtillerieGRU = 2296
+
+    // Nombre de points de suppression récupérés par seconde. Multiplié par "<TypeUnite>_SuppressDamagesRegenRatioList" dans DamageModules.ndf.
+    RegenStressParSeconde = 0.5
+
+    // Une unité ne sera ravitaillée que si elle n'a pas reçu #SeuilStressPourRegen# durant les dernières #TempsSansStressPourRegen# secondes.
+    TempsSansStressPourRegen = 10 // 10 secondes
+
+    TempsSansTirNiDamagePourPasserHorsCombat = 30 // 1, passage à 2 pour limiter bug graphique
+
+    TagStunned = "Stunned"
+    TagUberstress = "Uberstress"
+
+//---------------------------- Constantes District ----------------------------------------//
+
+    FuirDistrictEnFeu = true
+    MargePourLesTestsDeSortieDeDistrictLBU = 2
+    DurationForLeavingDistrict = 3.0        // Durée de l'action de sortie de district.
+
+//---------------------------- Constantes Gameplay ----------------------------------------//
+
+    TransformerAttackEnMoveSiPasDArmeAdaptee = false
+
+//---------------------------- Constantes GroupedMovement ---------------------------------//
+
+    ClustersDimensionMaxGRU = 353     // Taille des clusters d'unités pour le choix d'une route commune pour les mouvements de groupe.
+
+//------------------------ Constantes IAStratModernWarfare --------------------------------//
+
+    // bonus en pourcentage donné à l'argent de départ
+    RelativeBonusMoneyByIADifficulty = MAP
+    [
+        (EIADifficulty/TresFacile,       0.0),
+        (EIADifficulty/Facile,           0.0),
+        (EIADifficulty/Normal,           0.0),
+        (EIADifficulty/Difficile,        0.0),
+        (EIADifficulty/TresDifficile,    0.5),
+        (EIADifficulty/PlusDifficile,    0.8),
+    ]
+
+//---------------------------- Constantes Mouvement ---------------------------------------//
+
+    MoteurHelicos_TempsArret = 8
+    MoteurHelicos_TempsDemarrage = 4
+    MultiplicateurConsommationUnitesArretees = 0.0 // Entre 0 et 1
+
+//---------------------------- Constantes TandemCharge / ExplosiveReactiveArmor ---------------------------------------//
+    // Bonus des charges tandem contre les armures réactives
+    TandemModifierValue = 2.0
+    TandemModifierType = ModifierType_Additionnel
+
+//----------------------------- Constantes Weapons ----------------------------------------//
+
+    AdditionalSuppressDamagePerLostPhysicalDamage = 25 // c'est un multiplicateur des degats physiques qu'on va appliquer en stress.
+
+    // http://dl.uncw.edu/digilib/mathematics/algebra/mat111hb/functions/equations/equations.html
+    DistanceFriendlyFireGRU = 1  // distance entre un ennemi et un allié en dessous de laquelle une tourelle ne tire pas (1000)
+    DistanceMinFleeFireGRU = 17 // Distance minimal d'éloignement d'une unité dans les flammes (en plus du radius de l'unité)
+
+    FrontSideAngleInDeg = 60
+    RearSideAngleInDeg = 120
+
+    IgnoreTirPenetrantSiAucunBlindage = true
+
+    ShootingAdjustmentAngleMax = 0.4 //20°
+    SplashRatioDamage = [0.35, 0.35, 0.25] // Enum EDamageType damages (entre 0 et 1). ratio des dégâts en périphérie du cercle de splash
+    SplashRatioDistance = [0.35, 0.35, 0.30] // Enum EDamageType damages (entre 0 et 1). Ratio du rayon de splash où les dégâts commencent à être amoindris. Ex: 0.25 si DistanceImpact / SplashRadius > 0.25
+
+    TagAllowedForMissileRoE = "AllowedForMissileRoE"
+    TagNonRadarTargetable = "Non_Radar_Targetable"
+
+    // Lorsqu'un projectile explose sur un plan et fait des dégats de splash, on définit quels plans sont affectés
+    SplashCollisionPlanes = MAP
+    [
+        (
+            ~/TCollisionPlane/NoCollision,
+            [
+                ~/TCollisionPlane/NoCollision,
+                ~/TCollisionPlane/Ground,
+                ~/TCollisionPlane/NearGround,
+                ~/TCollisionPlane/LowAltitude,
+                ~/TCollisionPlane/HighAltitude,
+                ~/TCollisionPlane/ProjectileAltitude,
+            ]
+        ),
+        (
+            ~/TCollisionPlane/Ground,
+            [
+                ~/TCollisionPlane/Ground,
+                ~/TCollisionPlane/NearGround,
+                ~/TCollisionPlane/ProjectileAltitude,
+            ]
+        ),
+        (
+            ~/TCollisionPlane/NearGround,
+            [
+                ~/TCollisionPlane/Ground,
+                ~/TCollisionPlane/NearGround,
+                ~/TCollisionPlane/LowAltitude,
+                ~/TCollisionPlane/ProjectileAltitude,
+            ]
+        ),
+        (
+            ~/TCollisionPlane/LowAltitude,
+            [
+                ~/TCollisionPlane/NearGround,
+                ~/TCollisionPlane/LowAltitude,
+                ~/TCollisionPlane/HighAltitude,
+                ~/TCollisionPlane/ProjectileAltitude,
+            ]
+        ),
+        (
+            ~/TCollisionPlane/HighAltitude,
+            [
+                ~/TCollisionPlane/LowAltitude,
+                ~/TCollisionPlane/HighAltitude,
+            ]
+        ),
+        (
+            ~/TCollisionPlane/ProjectileAltitude,
+            [
+                ~/TCollisionPlane/Ground,
+                ~/TCollisionPlane/NearGround,
+                ~/TCollisionPlane/ProjectileAltitude,
+            ]
+        ),
+    ]
+)

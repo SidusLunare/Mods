@@ -1,0 +1,14 @@
+export Modele_Steyr_680_RM51_OST is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/TCH/Artillerie/RM51/RM51.fbx"
+)
+
+export Modele_Steyr_680_RM51_OST_MID is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/TCH/Artillerie/RM51_MID/RM51_MID.fbx"
+)
+
+export Modele_Steyr_680_RM51_OST_LOW is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/TCH/Artillerie/RM51_LOW/RM51_LOW.fbx"
+)

@@ -1,0 +1,19 @@
+export Modele_Mirage_50_EV_VEN is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/VEN/Avion/Mirage_50_EV/Mirage_50_EV.fbx"
+)
+
+export Modele_Mirage_50_EV_VEN_MID is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/VEN/Avion/Mirage_50_EV_MID/Mirage_50_EV_MID.fbx"
+)
+
+export Modele_Mirage_50_EV_VEN_LOW is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/VEN/Avion/Mirage_50_EV_LOW/Mirage_50_EV_LOW.fbx"
+)
+
+export Modele_Mirage_50_EV_VEN_train is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/VEN/Avion/Mirage_50_EV/Mirage_50_EV_train.fbx"
+)

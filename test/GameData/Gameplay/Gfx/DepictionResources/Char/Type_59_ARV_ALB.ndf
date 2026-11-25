@@ -1,0 +1,14 @@
+export Modele_Type_59_ARV_ALB is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/URSS/DCA/BTS_4A_ZU/BTS_4A_ZU.fbx"
+)
+
+export Modele_Type_59_ARV_ALB_MID is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/URSS/DCA/BTS_4A_ZU_MID/BTS_4A_ZU_MID.fbx"
+)
+
+export Modele_Type_59_ARV_ALB_LOW is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/URSS/DCA/BTS_4A_ZU_LOW/BTS_4A_ZU_LOW.fbx"
+)

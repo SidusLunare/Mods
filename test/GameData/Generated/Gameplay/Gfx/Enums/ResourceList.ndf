@@ -1,0 +1,8 @@
+// Ne pas éditer, ce fichier est généré par ResourceListEnumNDFFileWriter
+
+EnumResourceList is TBaseClass
+(
+    Resource_Invalid is 0
+    Resource_CommandPoints is 1
+    Resource_Tickets is 2
+)

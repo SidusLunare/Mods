@@ -1,0 +1,9 @@
+
+WorldInterfaceStrategic is TWorldInterfaceDescriptor
+(
+    GamePhaseManagerDescriptor = ~/strategicGamePhaseManagerDescriptor
+    ZoneManagerDescriptors =
+    [
+        ~/strategicZoneManagerForIAStratDescriptor,
+    ]
+)

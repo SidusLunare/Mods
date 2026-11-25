@@ -1,0 +1,19 @@
+export Modele_J7A_ALB is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/ALB/Avion/J7A/J7A.fbx"
+)
+
+export Modele_J7A_ALB_MID is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/ALB/Avion/J7A_MID/J7A_MID.fbx"
+)
+
+export Modele_J7A_ALB_LOW is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/ALB/Avion/J7A_LOW/J7A_LOW.fbx"
+)
+
+export Modele_J7A_ALB_train is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/ALB/Avion/J7A/J7A_train.fbx"
+)

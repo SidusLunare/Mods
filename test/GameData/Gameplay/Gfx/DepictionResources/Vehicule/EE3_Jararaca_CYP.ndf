@@ -1,0 +1,19 @@
+export Modele_EE3_Jararaca_CYP is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/CYP/Vehicule/EE3_Jararaca/EE3_Jararaca.fbx"
+)
+
+export Modele_EE3_Jararaca_CYP_MID is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/CYP/Vehicule/EE3_Jararaca_MID/EE3_Jararaca_MID.fbx"
+)
+
+export Modele_EE3_Jararaca_CYP_LOW is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/CYP/Vehicule/EE3_Jararaca_LOW/EE3_Jararaca_LOW.fbx"
+)
+
+export Modele_EE3_Jararaca_CYP_Tourelle_01 is TResourceMesh
+(
+    Mesh=ModelFile_M2HB_12_7mm_no_ammo
+)

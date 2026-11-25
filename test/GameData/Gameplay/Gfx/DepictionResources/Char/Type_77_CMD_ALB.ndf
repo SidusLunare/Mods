@@ -1,0 +1,14 @@
+export Modele_Type_77_CMD_ALB is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/DDR/APC/BTR_50/BTR_50.fbx"
+)
+
+export Modele_Type_77_CMD_ALB_MID is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/DDR/APC/BTR_50_MID/BTR_50_MID.fbx"
+)
+
+export Modele_Type_77_CMD_ALB_LOW is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/DDR/APC/BTR_50_LOW/BTR_50_LOW.fbx"
+)

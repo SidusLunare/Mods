@@ -1,0 +1,18 @@
+export Modele_BRDM_2_Canimar57_CUB is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/CUBA/Vehicule/BRDM_2_Canimar57/BRDM_2_Canimar57.fbx"
+
+)
+
+export Modele_BRDM_2_Canimar57_CUB_MID is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/CUBA/Vehicule/BRDM_2_Canimar57_MID/BRDM_2_Canimar57_MID.fbx"
+)
+
+export Modele_BRDM_2_Canimar57_CUB_LOW is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/CUBA/Vehicule/BRDM_2_Canimar57_LOW/BRDM_2_Canimar57_LOW.fbx"
+)
+
+
+

@@ -1,0 +1,34 @@
+// Ces raccourcis sont accessibles aux moddeurs via la ligne de commande "-devmode" de l'exe.
+unnamed TKeyboardKeyEventHandler
+(
+    UserInputLayer = $/M3D/Input/DEBUG_GLOBAL_InputLayer
+    Name = "Dev Tools"
+    ScancodeKeyEvents =
+    [
+        TKeyShowSpawnMenu
+        (
+            KeyMapping = TKeyMapping
+            (
+                KeyAsString = "F1"
+            )
+        ),
+        TKeyShowMenuBar
+        (
+            KeyMapping = TKeyMapping
+            (
+                KeyAsString = "F1"
+                Shift = true
+            )
+        ),
+        TKeyExecuteNamedEvent
+        (
+            KeyMapping = TKeyMapping
+            (
+                Ctrl = true
+                Shift = true
+                KeyAsString = "F2"
+            )
+            EventName = "ForceReloadUI"
+        ),
+    ]
+)

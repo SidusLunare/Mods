@@ -1,0 +1,14 @@
+export Modele_AAVP_7_AAK_USMCR_US is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/US/APC/AAVP_7_AAK_USMCR/AAVP_7_AAK_USMCR.fbx"
+)
+
+export Modele_AAVP_7_AAK_USMCR_US_MID is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/US/APC/AAVP_7_AAK_USMCR_MID/AAVP_7_AAK_USMCR_MID.fbx"
+)
+
+export Modele_AAVP_7_AAK_USMCR_US_LOW is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/US/APC/AAVP_7_AAK_USMCR_LOW/AAVP_7_AAK_USMCR_LOW.fbx"
+)

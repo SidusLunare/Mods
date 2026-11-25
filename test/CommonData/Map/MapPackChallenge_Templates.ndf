@@ -1,0 +1,40 @@
+
+template ScenarioOperation
+[
+    GUID,
+    EnvironmentSettings : TEnvironmentGraphicSettings,
+    Name,
+    ChapterPack,
+    DescriptionType,
+    DescriptionTextElements,
+    DescriptionTextureElements,
+    DescriptionHintElements,
+    LocalPlayerDeck,
+    Duration = ~/EGameDuration/NotSpecified,
+    OrderToChainMission,
+]
+is TChallengeMapInfo
+(
+    GUID = <GUID>
+
+    EnvironmentSettings = <EnvironmentSettings>
+
+    Name = <Name>
+
+    ChapterPack = <ChapterPack>
+
+    OrderToChainMission = <OrderToChainMission>
+
+    DescriptionType = <DescriptionType>
+    DescriptionTextElements = <DescriptionTextElements>
+    DescriptionTextureElements = <DescriptionTextureElements>
+    DescriptionHintElements = <DescriptionHintElements>
+
+    Duration = <Duration>
+
+    LocalPlayerDeck = <LocalPlayerDeck>
+
+    GameModeHintTitle = "GRL_ATTP"
+    GameModeHintBody = "GRL_ATTPB"
+    GameModeHintExtended = "GRL_ATTPE"
+)

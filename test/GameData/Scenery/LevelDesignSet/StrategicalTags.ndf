@@ -1,0 +1,37 @@
+unnamed Template_SceneryDescriptorTagGD
+(
+    Name  = 'Tag_LabelOnMap'
+    Layer = $/SceneryDBEditor/Layer_Label
+    AddOn = TGameDesignAddOn_LabelOnMap
+    (
+        Ranking = 'LabelOnMap'
+    )
+    ModelResource = $/Editor/Resource/Icone_Spawn_Unit
+)
+//-----------------------------------------------------------------------------
+unnamed Template_SceneryDescriptorTagGD
+(
+    Name  = 'Tag_SpecificStrategicBattleground'
+    AddOn = TGameDesignAddOn_SpecificStrategicBattleground
+    (
+        Ranking = 'SpecificStrategicBattleground'
+    )
+    ModelResource = $/Editor/Resource/Icone_Spawn_Unit
+)
+
+unnamed Template_SceneryDescriptorSpawn
+(
+    RegistrationName      = 'TestAirport'
+    ClassName             = '$/GFX/Pawn/Descriptor_Unit_TestAirport'
+    AutoNameBase          = 'TestAirport'
+    ModelResource         = nil
+    ThumbstackScale       = 7
+)
+unnamed Template_SceneryDescriptorSpawn
+(
+    RegistrationName      = 'TestDepotRavitaillement'
+    ClassName             = '$/GFX/Pawn/Descriptor_Unit_TestDepotRavitaillement'
+    AutoNameBase          = 'TestDepotRavitaillement'
+    ModelResource         = nil
+    ThumbstackScale       = 7
+)

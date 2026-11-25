@@ -1,0 +1,19 @@
+export Modele_Centurion_Mk5_2_DK is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/DK/Char/Centurion_Mk5_2/Centurion_Mk5_2.fbx"
+)
+
+export Modele_Centurion_Mk5_2_DK_MID is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/DK/Char/Centurion_Mk5_2_MID/Centurion_Mk5_2_MID.fbx"
+)
+
+export Modele_Centurion_Mk5_2_DK_LOW is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/DK/Char/Centurion_Mk5_2_LOW/Centurion_Mk5_2_LOW.fbx"
+)
+
+export Modele_Centurion_Mk5_2_DK_Tourelle_02 is TResourceMesh
+(
+    Mesh=ModelFile_M2HB_12_7mm_no_ammo
+)

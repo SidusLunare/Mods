@@ -1,0 +1,70 @@
+
+//-------------------------------------------------------------------------------------
+
+// Conteneur pour les beacons
+UIInGameBeaconPanelViewMainComponent is BUCKListDescriptor
+(
+    Axis = ~/ListAxis/Vertical
+    ComponentFrame = TUIFramePropertyRTTI
+    (
+        RelativeWidthHeight = [1.0, 0.0]
+        AlignementToFather = [0.5, 0.0]
+        AlignementToAnchor = [0.5, 0.0]
+    )
+    BreadthComputationMode = ~/BreadthComputationMode/ComputeBreadthFromFrameProperty
+
+    FirstMargin = TRTTILength(Magnifiable = 5.0)
+    InterItemMargin = TRTTILength( Magnifiable = 4.0 )
+    LastMargin = TRTTILength(Magnifiable = 5.0)
+
+    Elements =
+    [
+        BUCKListElementDescriptor
+        (
+            ComponentDescriptor = AllVisibleBeacons
+        )
+    ]
+
+    ForegroundComponents =
+    [
+        BeaconCustomEditableText()
+    ]
+
+    BackgroundComponents =
+    [
+        PanelRoundedCorner()
+    ]
+)
+
+AllVisibleBeacons is BUCKListDescriptor
+(
+    ComponentFrame = TUIFramePropertyRTTI
+    (
+        AlignementToAnchor = [0.5, 0.0]
+        AlignementToFather = [0.5, 0.0]
+        MagnifiableWidthHeight = [0.0, 24.0]
+    )
+
+    InterItemMargin = TRTTILength(Magnifiable = 8.0)
+    Axis = ~/ListAxis/Horizontal
+
+    HidePointerEvents = true
+
+    Elements =
+    [
+        BUCKListElementDescriptor(ComponentDescriptor = BeaconButtonNeedHelp()),
+        BUCKListElementDescriptor(ComponentDescriptor = BeaconButtonStrategyAttack()),
+        BUCKListElementDescriptor(ComponentDescriptor = BeaconButtonStrategyDefend()),
+        BUCKListElementDescriptor(ComponentDescriptor = BeaconButtonSupport()),
+        BUCKListElementDescriptor(ComponentDescriptor = BeaconButtonEnemySpotted()),
+        BUCKListElementDescriptor(ComponentDescriptor = BeaconButtonCustom()),
+    ]
+)
+//-------------------------------------------------------------------------------------
+
+UIInGameBeaconPanelViewDescriptor is TUIInGameBeaconPanelViewDescriptor
+(
+    MainComponentDescriptor = ~/UIInGameBeaconPanelViewMainComponent
+    MainComponentContainerUniqueName = "UICommonBeaconPanelViewMainContainer"
+)
+

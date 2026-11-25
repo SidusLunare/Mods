@@ -1,0 +1,17 @@
+export Modele_Ecureuil_reco_ALB is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/FR/Helico/Ecureuil_reco/Ecureuil_reco.fbx"
+    Textures="GameData:/Assets/3D/Units/ALB/Helico/Ecureuil_reco"
+)
+
+export Modele_Ecureuil_reco_ALB_MID is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/FR/Helico/Ecureuil_reco_MID/Ecureuil_reco_MID.fbx"
+    Textures="GameData:/Assets/3D/Units/ALB/Helico/Ecureuil_reco_MID"
+)
+
+export Modele_Ecureuil_reco_ALB_LOW is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/FR/Helico/Ecureuil_reco_LOW/Ecureuil_reco_LOW.fbx"
+    Textures="GameData:/Assets/3D/Units/ALB/Helico/Ecureuil_reco_LOW"
+)

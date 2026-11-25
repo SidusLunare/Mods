@@ -1,0 +1,16 @@
+export Modele_AT26_Xavante_CLU_BRZ is TResourceMesh
+(
+    Mesh=ModelFile_AT26_Xavante_HE_BRZ
+)
+export Modele_AT26_Xavante_CLU_BRZ_MID is TResourceMesh
+(
+    Mesh=ModelFile_AT26_Xavante_HE_BRZ_MID
+)
+export Modele_AT26_Xavante_CLU_BRZ_LOW is TResourceMesh
+(
+    Mesh=ModelFile_AT26_Xavante_HE_BRZ_LOW
+)
+export Modele_AT26_Xavante_CLU_BRZ_train is TResourceMesh
+(
+    Mesh=ModelFile_AT26_Xavante_HE_BRZ_train
+)

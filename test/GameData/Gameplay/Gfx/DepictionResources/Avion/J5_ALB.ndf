@@ -1,0 +1,20 @@
+export ModelFile_J5_ALB is "GameData:/Assets/3D/Units/ALB/Avion/J5/J5.fbx"
+export Modele_J5_ALB is TResourceMesh
+(
+    Mesh=ModelFile_J5_ALB
+)
+export ModelFile_J5_ALB_MID is "GameData:/Assets/3D/Units/ALB/Avion/J5_MID/J5_MID.fbx"
+export Modele_J5_ALB_MID is TResourceMesh
+(
+    Mesh=ModelFile_J5_ALB_MID
+)
+export ModelFile_J5_ALB_LOW is "GameData:/Assets/3D/Units/ALB/Avion/J5_LOW/J5_LOW.fbx"
+export Modele_J5_ALB_LOW is TResourceMesh
+(
+    Mesh=ModelFile_J5_ALB_LOW
+)
+export ModelFile_J5_ALB_train is "GameData:/Assets/3D/Units/ALB/Avion/J5/J5_train.fbx"
+export Modele_J5_ALB_train is TResourceMesh
+(
+    Mesh=ModelFile_J5_ALB_train
+)

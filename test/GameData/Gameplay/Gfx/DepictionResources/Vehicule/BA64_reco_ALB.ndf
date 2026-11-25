@@ -1,0 +1,14 @@
+export Modele_BA64_reco_ALB is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/ALB/Vehicule/BA_64B/BA_64B.fbx"
+)
+
+export Modele_BA64_reco_ALB_MID is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/ALB/Vehicule/BA_64B_MID/BA_64B_MID.fbx"
+)
+
+export Modele_BA64_reco_ALB_LOW is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/ALB/Vehicule/BA_64B_LOW/BA_64B_LOW.fbx"
+)

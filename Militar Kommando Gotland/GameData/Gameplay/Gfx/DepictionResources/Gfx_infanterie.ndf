@@ -2780,6 +2780,19 @@ SWE_Natres_LOW is 'GameData:/Assets/3D/Units/NL/Infanterie/Natres/Natres_1_LOW.f
 //export Modele_x_02 is TResourceMesh( Mesh=SWE_x_2 )
 //export Modele_x_LOW is TResourceMesh( Mesh=SWE_x_LOW )
 
+//Mech_Rifles_Carl
+export Modele_Mech_Rifles_Carl_SWE is TResourceMesh( Mesh=SWE_Infanterie_NCO )
+export Modele_Mech_Rifles_Carl_SWE_02 is TResourceMesh( Mesh=SWE_Infanterie_2 )
+export Modele_Mech_Rifles_Carl_SWE_03 is TResourceMesh( Mesh=SWE_Infanterie_1 )
+export Modele_Mech_Rifles_Carl_SWE_LOW is TResourceMesh( Mesh=SWE_Infanterie_LOW )
+
+//Mech_Rifles_CMD_NL
+export Modele_Mech_Rifles_CMD_SWE is TResourceMesh( Mesh=SWE_Infanterie_Officer )
+export Modele_Mech_Rifles_CMD_SWE_02 is TResourceMesh( Mesh=SWE_Infanterie_NCO )
+export Modele_Mech_Rifles_CMD_SWE_03 is TResourceMesh( Mesh=SWE_Infanterie_1 )
+export Modele_Mech_Rifles_CMD_SWE_04 is TResourceMesh( Mesh=SWE_Infanterie_2 )
+export Modele_Mech_Rifles_CMD_SWE_LOW is TResourceMesh( Mesh=SWE_Infanterie_LOW )
+
 //MANPAD
 export Modele_MANPAD_SWE is TResourceMesh( Mesh=SWE_Infanterie_1 )
 export Modele_MANPAD_SWE_02 is TResourceMesh( Mesh=SWE_Infanterie_2 )

@@ -1,0 +1,19 @@
+export Modele_M151A2_CAV_US is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/US/Vehicule/M151A2_CAV/M151A2_CAV.fbx"
+)
+
+export Modele_M151A2_CAV_US_MID is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/US/Vehicule/M151A2_CAV_MID/M151A2_CAV_MID.fbx"
+)
+
+export Modele_M151A2_CAV_US_LOW is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/US/Vehicule/M151A2_CAV_LOW/M151A2_CAV_LOW.fbx"
+)
+
+export Modele_M151A2_CAV_US_Tourelle_01 is TResourceMesh
+(
+    Mesh=ModelFile_M2HB_12_7mm_no_ammo
+)

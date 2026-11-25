@@ -82801,6 +82801,74 @@ Ammo_FM_Ak4 is TAmmunitionDescriptor
     TandemCharge                      = False
     DamageTypeEvolutionOverRangeDescriptor  = ~/DamageTypeEvolutionOverRangeDescriptor_AP1_1Km
 )
+Ammo_MMG_inf_ksp_m58_7_62mm is TAmmunitionDescriptor
+(
+    DescriptorId                      = GUID:{46he6b20-ac69-4485-8cb4-e7c7d90fcccb}
+    WeaponCursorType                  = Weapon_Cursor_MachineGun
+    MinMaxCategory                    = MinMax_inf_MMG
+    Arme                              = TDamageTypeRTTI(Family=DamageFamily_fmballe Index=1)
+    ProjectileType                    = EProjectileType/Obus
+    ImpactHappening                   = 'MitrailleuseMMGInf'
+    FxPower                           = EFXPower/Moyen
+    TimeBetweenTwoShots               = 1.0
+    TimeBetweenTwoFx                  = 1.0
+    MinimumRangeGRU                   = 35
+    MaximumRangeGRU                   = 850
+    MinimumRangeHelicopterGRU         = 0
+    MaximumRangeHelicopterGRU         = 700
+    MinimumRangeAirplaneGRU           = 0
+    MaximumRangeAirplaneGRU           = 0
+    MinimumRangeProjectileGRU         = 0
+    MaximumRangeProjectileGRU         = 0
+    AngleDispersion                   = 0.0
+    DispersionAtMaxRangeGRU           = 64
+    DispersionAtMinRangeGRU           = 18
+    SalvoShotsSorted                  = False
+    RadiusSplashPhysicalDamagesGRU    = 4
+    PhysicalDamages                   = 0.147
+    ShowDamageInUI                    = True
+    RadiusSplashSuppressDamagesGRU    = 11
+    SuppressDamages                   = 15.0
+    AllowSuppressDamageWhenNoImpact   = False
+    DisplaySalveAccuracy              = True
+    TirIndirect                       = False
+    TirReflexe                        = True
+    ProjectileSpeedGRU                = 662
+    NoiseDissimulationMalus           = 2.5
+    ShotsBeforeMaxNoise               = 3
+    TargetOnlyOneUnitInDistrict       = True
+    HitRollRuleDescriptor = TDiceHitRollRuleDescriptor
+    (
+        BaseCriticModifier = 25
+        BaseHitValueModifiers =
+        [
+            (EBaseHitValueModifier/Base, 0),
+            (EBaseHitValueModifier/Idling, 35),
+            (EBaseHitValueModifier/Moving, 0),
+            (EBaseHitValueModifier/Targeted, 0),
+        ]
+        DistanceToTarget = True
+    )
+    MaxSuccessiveHitCount             = 5
+    AimingTime                        = 1.9
+    TimeBetweenTwoSalvos              = 2.3
+    TimeBetweenTwoSalvos_Min          = -1.0
+    TimeBetweenTwoSalvos_Max          = -1.0
+    ShotsCountPerSalvo                = 1
+    SupplyCost                        = 1.0
+    NbSalvosShootOnPosition           = 4
+    CanShootOnPosition                = True
+    CanShootWhileMoving               = False
+    HasDeploymentTime                 = False
+    SimultaneousShotsCount            = 1
+    AffichageMunitionParSalve         = 10
+    SmokeDescriptor                   = nil
+    FireDescriptor                    = nil
+    IsHarmlessForAllies               = True
+    PiercingWeapon                    = False
+    TandemCharge                      = False
+    DamageTypeEvolutionOverRangeDescriptor  = ~/DamageTypeEvolutionOverRangeDescriptor_AP1_1Km
+)
 Ammo_MMG_ksp_m58_7_62mm is TAmmunitionDescriptor
 (
     DescriptorId                      = GUID:{74115c14-2da8-4c90-a36d-2869e9c0a1ee}

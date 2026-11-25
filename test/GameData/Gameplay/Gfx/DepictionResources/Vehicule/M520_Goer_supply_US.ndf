@@ -1,0 +1,14 @@
+export Modele_M520_Goer_supply_US is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/US/Vehicule/M520_Goer_supply/M520_Goer_supply.fbx"
+)
+
+export Modele_M520_Goer_supply_US_MID is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/US/Vehicule/M520_Goer_supply_MID/M520_Goer_supply_MID.fbx"
+)
+
+export Modele_M520_Goer_supply_US_LOW is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/US/Vehicule/M520_Goer_supply_LOW/M520_Goer_supply_LOW.fbx"
+)

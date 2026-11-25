@@ -1,0 +1,22 @@
+export Modele_EE11_Urutu_COL is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/BRZ/Vehicule/EE11_Urutu/EE11_Urutu.fbx"
+    Textures="GameData:/Assets/3D/Units/COL/Vehicule/EE11_Urutu"
+)
+
+export Modele_EE11_Urutu_COL_MID is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/BRZ/Vehicule/EE11_Urutu_MID/EE11_Urutu_MID.fbx"
+    Textures="GameData:/Assets/3D/Units/COL/Vehicule/EE11_Urutu_MID"
+)
+
+export Modele_EE11_Urutu_COL_LOW is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/BRZ/Vehicule/EE11_Urutu_LOW/EE11_Urutu_LOW.fbx"
+    Textures="GameData:/Assets/3D/Units/COL/Vehicule/EE11_Urutu_LOW"
+)
+
+export Modele_EE11_Urutu_COL_Tourelle_01 is TResourceMesh
+(
+    Mesh=ModelFile_M2HB_12_7mm_no_ammo
+)

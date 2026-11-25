@@ -1,0 +1,14 @@
+export Modele_Pinzgauer_710_SWI is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/OST/Vehicule/Pinzgauer_710/Pinzgauer_710.fbx"
+)
+
+export Modele_Pinzgauer_710_SWI_MID is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/OST/Vehicule/Pinzgauer_710_MID/Pinzgauer_710_MID.fbx"
+)
+
+export Modele_Pinzgauer_710_SWI_LOW is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/OST/Vehicule/Pinzgauer_710_LOW/Pinzgauer_710_LOW.fbx"
+)

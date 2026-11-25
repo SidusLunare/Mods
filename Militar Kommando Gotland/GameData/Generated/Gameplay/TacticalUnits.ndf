@@ -957439,6 +957439,510 @@ export Descriptor_Unit_Pltgb_903_Ksp_SWE is TEntityDescriptor
         ),
     ]
 )
+export Descriptor_Unit_Pansarskytte_G_CMD_SWE is TEntityDescriptor
+(
+    DescriptorId       = GUID:{01772f68-36be-435c-855e-f33hb4705d90}
+    ClassNameForDebug  = 'Unit_Pansarskytte_G_CMD_SWE'
+    ModulesDescriptors = [
+        TTypeUnitModuleDescriptor
+        (
+            Coalition                        = TWargameCoalition/NATO
+            MotherCountry                    = 'SWE'
+            AcknowUnitTypes = [
+                ~/TAcknowUnitType_Command,
+            ]
+        ),
+        TFormationModuleDescriptor(TypeUnitFormation = 'Supply'),
+        InfantryFlagsModuleDescriptor,
+        $/GFX/CriticalEffects/CriticalEffectModule_Infanterie,
+        ~/TargetCoordinatorModuleDescriptor,
+        ~/UnitPositionModuleDescriptor,
+        ~/PlayerMissionModuleDescriptor,
+        TCommanderModuleDescriptor(),
+        ~/LinkTeamModuleDescriptor,
+        TTagsModuleDescriptor
+        (
+            TagSet = [
+                "AllUnits",
+                "AllowedForMissileRoE",
+                "Commandant",
+                "Crew",
+                "GroundUnits",
+                "Inf_quartier_ok",
+                "Infanterie",
+                "Infanterie_CMD",
+                "InfmapCommander",
+                "UNITE_Pansarskytte_G_CMD_SWE",
+                "Unite",
+            ]
+        ),
+        TExperienceModuleDescriptor
+        (
+            ExperienceLevelsPackDescriptor = ~/ExperienceLevelsPackDescriptor_XP_pack_simple_v3
+            ExperienceMultiplierBonusOnKill = ~/ExperienceMultiplierBonusOnKill
+        ),
+        TVisibilityModuleDescriptor
+        (
+            UnitConcealmentBonus = 2.0
+        ),
+        InfantryApparenceModuleDescriptor
+        (
+            MimeticName = "squad_Pansarskytte_G_CMD_SWE"
+        ),
+        TAutoCoverModuleDescriptor
+        (
+            AutoCoverRangeGRU          = 123.0
+            OccupationRadiusGRU        = 35.0
+            TerrainList                = [~/ETerrainType/Batiment, ~/ETerrainType/Ruin, ~/ETerrainType/ForetLegere, ]
+            UseTerrainsForEscape       = True
+        ),
+        $/GFX/Weapon/WeaponDescriptor_Pansarskytte_G_CMD_SWE,
+        TBaseDamageModuleDescriptor
+        (
+            MaxPhysicalDamages = 4
+            MaxSuppressionDamages = ~/Infanterie_MaxSuppressionDamages
+            MaxStunDamages = ~/Infanterie_MaxStunDamages
+            PhysicalDamageLevelsPack = ~/DamageLevelsPackDescriptor_Default_pack_paliers_degats_phy
+            SuppressDamageLevelsPack = ~/DamageLevelsPackDescriptor_GroundUnits_packSupp
+            StunDamageLevelsPack = ~/DamageLevelsPackDescriptor_Unit_packStun
+        ),
+        TDamageModuleDescriptor
+        (
+            SuppressDamagesRegenRatio = ~/Infanterie_SuppressDamagesRegenRatioList
+            StunDamagesRegen = ~/Infanterie_StunDamagesRegen
+            BlindageProperties = TBlindageProperties
+            (
+                ResistanceFront = TResistanceTypeRTTI(Family=ResistanceFamily_infanterie Index=1)
+                ResistanceSides = TResistanceTypeRTTI(Family=ResistanceFamily_infanterie Index=1)
+                ResistanceRear = TResistanceTypeRTTI(Family=ResistanceFamily_infanterie Index=1)
+                ResistanceTop = TResistanceTypeRTTI(Family=ResistanceFamily_infanterie Index=1)
+                ExplosiveReactiveArmor = False
+            )
+            KillWhenDamagesReachMax = True
+            HitRollECM = 0.0
+            UseTopArmorAgainstFire = True
+        ),
+        TDangerousnessModuleDescriptor(Dangerousness  = 17),
+        TRoutModuleDescriptor(MoralLevel = 0),
+        TInfantrySquadModuleDescriptor
+        (
+            SoldierCount = 6
+            SquadDataDescriptor = ~/SoldierSquadDataDescriptor
+            SoldierBlackHoleKey = 'Pansarskytte_G_CMD_SWE'
+            MimeticDescriptor   = Descriptor_Unit_MimeticUnit
+            (
+                DescriptorId = GUID:{65820637-d39a-4614-bbj7-d8cddf3302a2}
+                BlackHoleKey = 'Pansarskytte_G_CMD_SWE'
+            )
+        ),
+        ~/LineInfantrySquadSlotPositionsModuleDescriptor,
+        ~/FacingInfosModuleDescriptor,
+        TGenericMovementModuleDescriptor
+        (
+            MaxSpeedInKmph = 24
+            PathfindType = $/Pathfind/PathfindTypes/Infantry
+        ),
+        TLandMovementModuleDescriptor
+        (
+            UnitMovingType = EUnitMovingType/Infantry
+            SpeedBonusFactorOnRoad = 1.00
+            MaxAccelerationGRU = 11.0
+            MaxDecelerationGRU = 155.0
+            TempsDemiTour = 0.1
+            EngineCooldownTime = 0
+            TerrainSpeedFactors = $/GFX/Terrains/InfantryTerrainSpeedFactors
+        ),
+        TScannerConfigurationDescriptor
+        (
+            VisionRangesGRU = MAP [
+                ( EVisionRange/Standard, 3500.0 ),
+                ( EVisionRange/LowAltitude, 4947.0 ),
+                ( EVisionRange/HighAltitude, 5654.0 ),
+            ]
+            OpticalStrengths = MAP [
+                ( EOpticalStrength/Standard, 3180.0 ),
+                ( EOpticalStrength/LowAltitude, 3180.0 ),
+                ( EOpticalStrength/HighAltitude, 706.0 ),
+            ]
+        ),
+        TReverseScannerWithIdentificationDescriptor
+        (
+            IdentifyBaseProbability     = 0.3
+            TimeBetweenEachIdentifyRoll = 10.0
+            VisibilityRuleDescriptor    = $/GFX/VisionRules/StandardWargameVisibilityRollRule
+        ),
+        TTransportableModuleDescriptor
+        (
+            TransportedTexture                     = "UseInGame_Transport_COMMAND"
+            TransportedSoldier                     = 'Pansarskytte_G_CMD_SWE'
+            NbSeatsOccupied                        = 1
+            TimeToLoad                             = 0
+            IsTowable                              = False
+        ),
+        UnitCadaverGeneratorModuleDescriptor
+        (
+            KillMode = EKillMode/Infantry
+            CadaverDuration = ~/CadaverDuration_Infanterie
+            DeathExplosionAmmo = $/GFX/Weapon/Ammo_Mort_Unite_infanterie
+        ),
+        TIAStratModuleDescriptor
+        (
+            DatabaseId = 0
+            GameplayBehavior = EGameplayBehavior/Nothing | EGameplayBehavior/TacticalAttackInCover
+        ),
+        ~/IAStratZoneIndexModuleDescriptor,
+        ~/UnitStateEngineUnitModuleDescriptor,
+        ~/UnitStateEngineSubUnitModuleDescriptor,
+        ~/SelectionModuleDescriptor,
+        ~/EffectApplierModuleDescriptor,
+        TProductionModuleDescriptor
+        (
+            FactoryType        = Factory/Infantry
+            ProductionTime     = 5
+            ProductionRessourcesNeeded = MAP [
+                ($/GFX/Resources/Resource_CommandPoints, 45),
+                ($/GFX/Resources/Resource_Tickets, 1),
+            ]
+        ),
+        ~/InfluencePositionModuleDescriptor,
+        TInfluenceMapModuleDescriptor
+        (
+            InfluenceStrength = 1.0
+            MinimumInfluenceStrength = 1.0
+            StrengthDecayPerSecond = 0.01
+            PreventsDecayInZone = True
+        ),
+        TInfluenceScoutModuleDescriptor(),
+        ~/InfluenceDataModuleDescriptor,
+        TAttackReactionModuleDescriptor
+        (
+            CanAssist = False
+            AssistRequestBroadcastRadiusGRU = 0.0
+            DistanceToFleeGRU = 353
+            MaxDistanceForOffensiveReactionGRU = 353
+            MaxDistanceForEngagementGRU = 0.0
+            SearchedTagsInEngagementTarget = [
+               "AllUnits",
+            ]
+        ),
+        TMinimapDisplayModuleDescriptor
+        (
+            Texture = "Texture_Minimap_Unit_inf"
+            FollowUnitOrientation = False
+        ),
+        TOrderConfigModuleDescriptor
+        (
+            ValidOrders = ~/Descriptor_OrderAvailability_Pansarskytte_G_CMD_SWE
+        ),
+        TOrderableModuleDescriptor
+        (
+            UnlockableOrders = ~/Descriptor_OrderAvailability_Pansarskytte_G_CMD_SWE
+        ),
+        ~/OrderDisplayModuleDescriptor,
+        ~/GroupableUnitModuleDescriptor,
+        TTacticalLabelModuleDescriptor
+        (
+            MultiSelectionSortingOrder = 20045
+            IdentifiedTexture = TBUCKToolAlternativeValues_TUIValueTextureNameFromTEugBMutableInteger
+            (
+                CommandNameTrigger = ~/SpecificCommandName/UpdateGUIFromIconType
+                Alterator = $/GUIOption/IconType
+                Values =
+                [
+                    "Texture_RTS_H_CMD_inf",
+                    "Texture_CMD_inf"
+                ]
+            )
+            UnidentifiedTexture = TBUCKToolAlternativeValues_TUIValueTextureNameFromTEugBMutableInteger
+            (
+                CommandNameTrigger = ~/SpecificCommandName/UpdateGUIFromIconType
+                Alterator = $/GUIOption/IconType
+                Values =
+                [
+                    "Texture_RTS_H_infantry_nonIdentifie",
+                    "Texture_infantry_nonIdentifie"
+                ]
+            )
+            PositionHeightOffset = 1000.0
+        ),
+        ~/LinkToDistrictModuleDescriptor,
+        ~/TargetDataModuleDescriptor,
+        TStrategicDataModuleDescriptor
+        (
+            UnitAttackValue = 1
+            UnitDefenseValue = 36
+            UnitBonusXpPerLevelValue = 1
+        ),
+        TUnitUIModuleDescriptor
+        (
+            PriceCategory = 'tank_D'
+            UnitRole = 'hq_inf'
+            SpecialtiesList = [
+                '_leader',
+            ]
+            NameToken = 'RYEXVNAZSC'
+            InfoPanelConfigurationToken = 'Infantry'
+            MenuIconTexture = 'Texture_RTS_H_CMD_inf'
+            ButtonTexture = 'Texture_Button_Unit_Mech_Rifles_CMD_NL'
+            TypeStrategicCount = ETypeStrategicDetailedCount/CMD_Inf
+        ),
+        TUnitUpkeepModuleDescriptor( UpkeepPercentage = 1.0 ),
+        TVisualShootPositionsModuleDescriptor(),
+        TCameraShowroomModuleDescriptor
+        (
+            SpawnType = EShowroomSpawnType/Infantry
+            ShowRoomBlackHoleIdentifier = "squad_Pansarskytte_G_CMD_SWE"
+            HasServants = False
+        ),
+    ]
+)
+export Descriptor_Unit_Pansarskytte_G_SWE is TEntityDescriptor
+(
+    DescriptorId       = GUID:{62ea55d3-6u76-4322-808f-2b5281b6a308}
+    ClassNameForDebug  = 'Unit_Pansarskytte_G_SWE'
+    ModulesDescriptors = [
+        TTypeUnitModuleDescriptor
+        (
+            Coalition                        = TWargameCoalition/NATO
+            MotherCountry                    = 'SWE'
+            AcknowUnitTypes = [
+                ~/TAcknowUnitType_Inf,
+            ]
+        ),
+        TFormationModuleDescriptor(TypeUnitFormation = 'Char'),
+        InfantryFlagsModuleDescriptor,
+        $/GFX/CriticalEffects/CriticalEffectModule_Infanterie,
+        ~/TargetCoordinatorModuleDescriptor,
+        ~/UnitPositionModuleDescriptor,
+        ~/PlayerMissionModuleDescriptor,
+        ~/LinkTeamModuleDescriptor,
+        TTagsModuleDescriptor
+        (
+            TagSet = [
+                "AllUnits",
+                "AllowedForMissileRoE",
+                "Crew",
+                "GroundUnits",
+                "Inf_instructed",
+                "Inf_quartier_ok",
+                "Infanterie",
+                "Infanterie_Standard",
+                "Steelman_infanterie_autoresolve",
+                "UNITE_Pansarskytte_G_SWE",
+                "Unite",
+            ]
+        ),
+        TExperienceModuleDescriptor
+        (
+            ExperienceLevelsPackDescriptor = ~/ExperienceLevelsPackDescriptor_XP_pack_simple_v3
+            ExperienceMultiplierBonusOnKill = ~/ExperienceMultiplierBonusOnKill
+        ),
+        TVisibilityModuleDescriptor
+        (
+            UnitConcealmentBonus = 2.0
+        ),
+        InfantryApparenceModuleDescriptor
+        (
+            MimeticName = "squad_Pansarskytte_G_SWE"
+        ),
+        TAutoCoverModuleDescriptor
+        (
+            AutoCoverRangeGRU          = 123.0
+            OccupationRadiusGRU        = 35.0
+            TerrainList                = [~/ETerrainType/Batiment, ~/ETerrainType/Ruin, ~/ETerrainType/ForetLegere, ]
+            UseTerrainsForEscape       = True
+        ),
+        $/GFX/Weapon/WeaponDescriptor_Pansarskytte_G_SWE,
+        TBaseDamageModuleDescriptor
+        (
+            MaxPhysicalDamages = 7
+            MaxSuppressionDamages = ~/Infanterie_MaxSuppressionDamages
+            MaxStunDamages = ~/Infanterie_MaxStunDamages
+            PhysicalDamageLevelsPack = ~/DamageLevelsPackDescriptor_Default_pack_paliers_degats_phy
+            SuppressDamageLevelsPack = ~/DamageLevelsPackDescriptor_GroundUnits_packSupp
+            StunDamageLevelsPack = ~/DamageLevelsPackDescriptor_Unit_packStun
+        ),
+        TDamageModuleDescriptor
+        (
+            SuppressDamagesRegenRatio = ~/Infanterie_SuppressDamagesRegenRatioList
+            StunDamagesRegen = ~/Infanterie_StunDamagesRegen
+            BlindageProperties = TBlindageProperties
+            (
+                ResistanceFront = TResistanceTypeRTTI(Family=ResistanceFamily_infanterie Index=1)
+                ResistanceSides = TResistanceTypeRTTI(Family=ResistanceFamily_infanterie Index=1)
+                ResistanceRear = TResistanceTypeRTTI(Family=ResistanceFamily_infanterie Index=1)
+                ResistanceTop = TResistanceTypeRTTI(Family=ResistanceFamily_infanterie Index=1)
+                ExplosiveReactiveArmor = False
+            )
+            KillWhenDamagesReachMax = True
+            HitRollECM = 0.0
+            UseTopArmorAgainstFire = True
+        ),
+        TDangerousnessModuleDescriptor(Dangerousness  = 10),
+        TRoutModuleDescriptor(MoralLevel = 0),
+        TInfantrySquadModuleDescriptor
+        (
+            SoldierCount = 7
+            SquadDataDescriptor = ~/SoldierSquadDataDescriptor
+            SoldierBlackHoleKey = 'Pansarskytte_G_SWE'
+            MimeticDescriptor   = Descriptor_Unit_MimeticUnit
+            (
+                DescriptorId = GUID:{e1bkad0d-c72e-45c5-b94c-f3851552e8a4}
+                BlackHoleKey = 'Pansarskytte_G_SWE'
+            )
+        ),
+        ~/ColumnInfantrySquadSlotPositionsModuleDescriptor,
+        ~/FacingInfosModuleDescriptor,
+        TGenericMovementModuleDescriptor
+        (
+            MaxSpeedInKmph = 24
+            PathfindType = $/Pathfind/PathfindTypes/Infantry
+        ),
+        TLandMovementModuleDescriptor
+        (
+            UnitMovingType = EUnitMovingType/Infantry
+            SpeedBonusFactorOnRoad = 1.00
+            MaxAccelerationGRU = 11.0
+            MaxDecelerationGRU = 155.0
+            TempsDemiTour = 0.1
+            EngineCooldownTime = 0
+            TerrainSpeedFactors = $/GFX/Terrains/InfantryTerrainSpeedFactors
+        ),
+        TScannerConfigurationDescriptor
+        (
+            VisionRangesGRU = MAP [
+                ( EVisionRange/Standard, 3500.0 ),
+                ( EVisionRange/LowAltitude, 4947.0 ),
+                ( EVisionRange/HighAltitude, 5654.0 ),
+            ]
+            OpticalStrengths = MAP [
+                ( EOpticalStrength/Standard, 3180.0 ),
+                ( EOpticalStrength/LowAltitude, 3180.0 ),
+                ( EOpticalStrength/HighAltitude, 1413.0 ),
+            ]
+        ),
+        TReverseScannerWithIdentificationDescriptor
+        (
+            IdentifyBaseProbability     = 0.3
+            TimeBetweenEachIdentifyRoll = 10.0
+            VisibilityRuleDescriptor    = $/GFX/VisionRules/StandardWargameVisibilityRollRule
+        ),
+        TTransportableModuleDescriptor
+        (
+            TransportedTexture                     = "UseInGame_Transport_REGINF"
+            TransportedSoldier                     = 'Pansarskytte_G_SWE'
+            NbSeatsOccupied                        = 1
+            TimeToLoad                             = 0
+            IsTowable                              = False
+        ),
+        UnitCadaverGeneratorModuleDescriptor
+        (
+            KillMode = EKillMode/Infantry
+            CadaverDuration = ~/CadaverDuration_Infanterie
+            DeathExplosionAmmo = $/GFX/Weapon/Ammo_Mort_Unite_infanterie
+        ),
+        TIAStratModuleDescriptor
+        (
+            DatabaseId = 0
+            GameplayBehavior = EGameplayBehavior/Nothing | EGameplayBehavior/TacticalAttackInCover
+        ),
+        ~/IAStratZoneIndexModuleDescriptor,
+        ~/UnitStateEngineUnitModuleDescriptor,
+        ~/UnitStateEngineSubUnitModuleDescriptor,
+        ~/SelectionModuleDescriptor,
+        ~/EffectApplierModuleDescriptor,
+        TProductionModuleDescriptor
+        (
+            FactoryType        = Factory/Infantry
+            ProductionTime     = 5
+            ProductionRessourcesNeeded = MAP [
+                ($/GFX/Resources/Resource_CommandPoints, 40),
+                ($/GFX/Resources/Resource_Tickets, 1),
+            ]
+        ),
+        ~/InfluencePositionModuleDescriptor,
+        ~/InfluenceDataModuleDescriptor,
+        TAttackReactionModuleDescriptor
+        (
+            CanAssist = False
+            AssistRequestBroadcastRadiusGRU = 0.0
+            DistanceToFleeGRU = 353
+            MaxDistanceForOffensiveReactionGRU = 353
+            MaxDistanceForEngagementGRU = 0.0
+            SearchedTagsInEngagementTarget = [
+               "AllUnits",
+            ]
+        ),
+        TMinimapDisplayModuleDescriptor
+        (
+            Texture = "Texture_Minimap_Unit_inf"
+            FollowUnitOrientation = False
+        ),
+        TOrderConfigModuleDescriptor
+        (
+            ValidOrders = ~/Descriptor_OrderAvailability_Pansarskytte_G_SWE
+        ),
+        TOrderableModuleDescriptor
+        (
+            UnlockableOrders = ~/Descriptor_OrderAvailability_Pansarskytte_G_SWE
+        ),
+        ~/OrderDisplayModuleDescriptor,
+        ~/GroupableUnitModuleDescriptor,
+        TTacticalLabelModuleDescriptor
+        (
+            MultiSelectionSortingOrder = 13040
+            IdentifiedTexture = TBUCKToolAlternativeValues_TUIValueTextureNameFromTEugBMutableInteger
+            (
+                CommandNameTrigger = ~/SpecificCommandName/UpdateGUIFromIconType
+                Alterator = $/GUIOption/IconType
+                Values =
+                [
+                    "Texture_RTS_H_Infantry",
+                    "Texture_Infantry"
+                ]
+            )
+            UnidentifiedTexture = TBUCKToolAlternativeValues_TUIValueTextureNameFromTEugBMutableInteger
+            (
+                CommandNameTrigger = ~/SpecificCommandName/UpdateGUIFromIconType
+                Alterator = $/GUIOption/IconType
+                Values =
+                [
+                    "Texture_RTS_H_infantry_nonIdentifie",
+                    "Texture_infantry_nonIdentifie"
+                ]
+            )
+            PositionHeightOffset = 1000.0
+        ),
+        ~/LinkToDistrictModuleDescriptor,
+        ~/TargetDataModuleDescriptor,
+        TStrategicDataModuleDescriptor
+        (
+            UnitAttackValue = 21
+            UnitDefenseValue = 21
+            UnitBonusXpPerLevelValue = 1
+        ),
+        TUnitUIModuleDescriptor
+        (
+            PriceCategory = 'tank_C'
+            UnitRole = 'infantry'
+            SpecialtiesList = []
+            NameToken = 'PSSG'
+            InfoPanelConfigurationToken = 'Infantry'
+            UpgradeFromUnit = Descriptor_Unit_Pansarskytte_G_CMD_SWE
+            MenuIconTexture = 'Texture_RTS_H_Infantry'
+            ButtonTexture = 'Texture_Button_Unit_Mech_Rifles_Carl_NL'
+            TypeStrategicCount = ETypeStrategicDetailedCount/Infantry
+        ),
+        TUnitUpkeepModuleDescriptor( UpkeepPercentage = 1.0 ),
+        TVisualShootPositionsModuleDescriptor(),
+        TCameraShowroomModuleDescriptor
+        (
+            SpawnType = EShowroomSpawnType/Infantry
+            ShowRoomBlackHoleIdentifier = "squad_Pansarskytte_G_SWE"
+            HasServants = False
+        ),
+    ]
+)
 export Descriptor_Unit_Pvpjtgb_1111_SWE is TEntityDescriptor
 (
     DescriptorId       = GUID:{291fe627-9f90-43ae-96a7-3dce598a2d49}

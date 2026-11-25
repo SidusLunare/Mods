@@ -127,6 +127,7 @@
 "GameData:/Localisation/Militar Kommando Gotland/UNITS.csv";"75mm";"75 mm";;;;;
 "GameData:/Localisation/Militar Kommando Gotland/UNITS.csv";"90mm";"90 mm";;;;;
 "GameData:/Localisation/Militar Kommando Gotland/UNITS.csv";"HKP4";"Hkp-4";;;;;
+"GameData:/Localisation/Militar Kommando Gotland/UNITS.csv";"PSSG";"Pansarskytte G.";;;;;
 "GameData:/Localisation/Militar Kommando Gotland/UNITS.csv";"105mm";"105 mm";;;;;
 "GameData:/Localisation/Militar Kommando Gotland/UNITS.csv";"108mm";"108 mm";;;;;
 "GameData:/Localisation/Militar Kommando Gotland/UNITS.csv";"152mm";"152 mm";;;;;
@@ -136,6 +137,7 @@
 "GameData:/Localisation/Militar Kommando Gotland/UNITS.csv";"CtrSWE";"Sweden";;;;;
 "GameData:/Localisation/Militar Kommando Gotland/UNITS.csv";"DIRECT";"DIRECT FIRE";;;;;
 "GameData:/Localisation/Militar Kommando Gotland/UNITS.csv";"FOBSWE";"Ammunitionsupplag";;;;;
+"GameData:/Localisation/Militar Kommando Gotland/UNITS.csv";"GRGM48";"Grg m/48";;;;;
 "GameData:/Localisation/Militar Kommando Gotland/UNITS.csv";"GRKM62";"Grk m/62";;;;;
 "GameData:/Localisation/Militar Kommando Gotland/UNITS.csv";"KSPM39";"Ksp m/39";;;;;
 "GameData:/Localisation/Militar Kommando Gotland/UNITS.csv";"KSPM58";"Ksp M/58";;;;;
@@ -144,7 +146,11 @@
 "GameData:/Localisation/Militar Kommando Gotland/UNITS.csv";"LOREM3";"HOWITZER NAMES \/";;;;;
 "GameData:/Localisation/Militar Kommando Gotland/UNITS.csv";"LOREM4";"HOWITZER GUNS NAMES \/";;;;;
 "GameData:/Localisation/Militar Kommando Gotland/UNITS.csv";"LOREM5";"ANTI-AIR NAMES \/";;;;;
+"GameData:/Localisation/Militar Kommando Gotland/UNITS.csv";"LOREM9";"Vehicle Gun NAMES \/";;;;;
 "GameData:/Localisation/Militar Kommando Gotland/UNITS.csv";"KPJSM65";"Kapjäs m/65";;;;;
+"GameData:/Localisation/Militar Kommando Gotland/UNITS.csv";"KSPM58B";"Ksp M/58B";;;;;
+"GameData:/Localisation/Militar Kommando Gotland/UNITS.csv";"LOREM33";"Infantry Gun NAMES \/";;;;;
+"GameData:/Localisation/Militar Kommando Gotland/UNITS.csv";"LOREM62";"Infantry NAMES \/";;;;;
 "GameData:/Localisation/Militar Kommando Gotland/UNITS.csv";"LVKMM36";"Lvakan m/36";;;;;
 "GameData:/Localisation/Militar Kommando Gotland/UNITS.csv";"LVKMM48";"Lvakan m/48";;;;;
 "GameData:/Localisation/Militar Kommando Gotland/UNITS.csv";"PV444MP";"PV 444 MP";;;;;
@@ -162,6 +168,7 @@
 "GameData:/Localisation/Militar Kommando Gotland/UNITS.csv";"LVKM4070";"Lvakan m/40-70";;;;;
 "GameData:/Localisation/Militar Kommando Gotland/UNITS.csv";"LVS75M40";"LVS-75M 40mm";;;;;
 "GameData:/Localisation/Militar Kommando Gotland/UNITS.csv";"PLTGB903";"Pltgb 903";;;;;
+"GameData:/Localisation/Militar Kommando Gotland/UNITS.csv";"PSSSTABG";"Pansarskytte-stab G.";;;;;
 "GameData:/Localisation/Militar Kommando Gotland/UNITS.csv";"PTgb1111";"Pvpj Terrängbil 1111";;;;;
 "GameData:/Localisation/Militar Kommando Gotland/UNITS.csv";"PTgb9031";"Pvpj Terrängbil 9031 Spanning";;;;;
 "GameData:/Localisation/Militar Kommando Gotland/UNITS.csv";"Pvpj1110";"Pansarvärnspjäs 1110";;;;;

@@ -1,0 +1,12 @@
+template AirRecoMissionLaunchSettingHolderTemplate
+[
+    MaxAirplaneCountOnBattlefield:int = 1,
+    TicksBetweenTwoLaunch:int = 0,
+    TicksBetweenTwoMissions:int = 0,
+]
+is TAirRecoMissionLaunchSettingHolder
+(
+    MaxAirplaneCountOnBattlefield = <MaxAirplaneCountOnBattlefield>
+    TicksBetweenTwoLaunch = <TicksBetweenTwoLaunch>
+    TicksBetweenTwoMissions = <TicksBetweenTwoMissions>
+)

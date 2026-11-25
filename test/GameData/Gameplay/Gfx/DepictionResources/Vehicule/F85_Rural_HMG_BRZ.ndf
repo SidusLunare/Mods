@@ -1,0 +1,19 @@
+export Modele_F85_Rural_HMG_BRZ is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/BRZ/Vehicule/F85_Rural_HMG/F85_Rural_HMG.fbx"
+)
+
+export Modele_F85_Rural_HMG_BRZ_MID is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/BRZ/Vehicule/F85_Rural_HMG_MID/F85_Rural_HMG_MID.fbx"
+)
+
+export Modele_F85_Rural_HMG_BRZ_LOW is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/BRZ/Vehicule/F85_Rural_HMG_LOW/F85_Rural_HMG_LOW.fbx"
+)
+
+export Modele_F85_Rural_HMG_BRZ_Tourelle_01 is TResourceMesh
+(
+    Mesh=ModelFile_M2HB_12_7mm_no_ammo
+)

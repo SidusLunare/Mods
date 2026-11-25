@@ -1,0 +1,14 @@
+export Modele_Berliet_GBC_8KT_supply_FR is TResourceMesh
+(
+    Mesh=ModelFile_Berliet_GBC_8KT_FR
+)
+
+export Modele_Berliet_GBC_8KT_supply_FR_MID is TResourceMesh
+(
+    Mesh=ModelFile_Berliet_GBC_8KT_FR_MID
+)
+
+export Modele_Berliet_GBC_8KT_supply_FR_LOW is TResourceMesh
+(
+    Mesh=ModelFile_Berliet_GBC_8KT_FR_LOW
+)

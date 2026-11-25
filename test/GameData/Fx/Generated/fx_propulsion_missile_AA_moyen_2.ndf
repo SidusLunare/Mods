@@ -1,0 +1,95 @@
+// Ne pas éditer, ce fichier est généré
+
+export fx_propulsion_missile_AA_moyen_2 is Simultaneous
+(
+    Actions = ActionList is
+    [
+        TSimultaneousAction
+        (
+            Mobile = nil
+            Actions =
+            [
+                TActionCall
+                (
+                    Action = $/VFX_Bank/BANK_Propulsion_Missile_Simple
+                    NamedParams = MAP[
+                        ( 'parDisableFlame', false ),
+                        ( 'parDisableLight', false ),
+                        ( 'parDisableSFX', false ),
+                        ( 'parFlameColorMultiplier', 20 ),
+                        ( 'parFlameFrequency', 20 ),
+                        ( 'parFlameIntensity', 5 ),
+                        ( 'parFlameOffset', -300 ),
+                        ( 'parFlameOpacity', 0 ),
+                        ( 'parFlameSize', 600 ),
+                        ( 'parFlameStretch', 15 ),
+                        ( 'parLightColor', float3[1,1,1] ),
+                        ( 'parLightPower', 4 ),
+                        ( 'parLightPowerJittering', 0.1 ),
+                        ( 'parLightSize', 250 ),
+                        ( 'parLightSizeJittering', 0.55 ),
+                        ( 'parSFXId', 1 ),
+                    ]
+                ),
+                TActionCall
+                (
+                    Action = $/VFX_Bank/Smoke_Trail_Simple
+                    NamedParams = MAP[
+                        ( 'DurationInSec', 2 ),
+                        ( 'parColor1', float3[0.8941177,0.8941177,0.8941177] ),
+                        ( 'parColor2', float3[0.6784314,0.6745098,0.6745098] ),
+                        ( 'parColor3', float3[0.7058824,0.7058824,0.7058824] ),
+                        ( 'parColorKey1', 0.5 ),
+                        ( 'parColorKey2', 0.5 ),
+                        ( 'parDispersion', 200 ),
+                        ( 'parDistance', 200 ),
+                        ( 'parLifeDuration', 0.75 ),
+                        ( 'parOpacity', 0.5 ),
+                        ( 'parSize1', 1000 ),
+                        ( 'parSize2', 3000 ),
+                        ( 'parStopSpawnerRatio', 0.5 ),
+                    ]
+                ),
+                TActionCall
+                (
+                    Action = $/VFX_Bank/Smoke_Trail_Simple
+                    NamedParams = MAP[
+                        ( 'DurationInSec', 2 ),
+                        ( 'parColor1', float3[0.8941177,0.8941177,0.8941177] ),
+                        ( 'parColor2', float3[0.6784314,0.6745098,0.6745098] ),
+                        ( 'parColor3', float3[0.7058824,0.7058824,0.7058824] ),
+                        ( 'parColorKey1', 0.5 ),
+                        ( 'parColorKey2', 0.5 ),
+                        ( 'parDispersion', 400 ),
+                        ( 'parDistance', 200 ),
+                        ( 'parLifeDuration', 3.5 ),
+                        ( 'parOpacity', 0.1 ),
+                        ( 'parSize1', 2000 ),
+                        ( 'parSize2', 5000 ),
+                        ( 'parStopSpawnerRatio', 1 ),
+                    ]
+                ),
+                TActionCall
+                (
+                    Action = $/VFX_Bank/Smoke_Trail_Simple
+                    NamedParams = MAP[
+                        ( 'DurationInSec', 2 ),
+                        ( 'parColor1', float3[0.9882354,0.654902,0.3176471] ),
+                        ( 'parColor2', float3[1,0.8745099,0.7725491] ),
+                        ( 'parColor3', float3[1,1,1] ),
+                        ( 'parColorKey1', 0.5 ),
+                        ( 'parColorKey2', 0.5 ),
+                        ( 'parDispersion', 100 ),
+                        ( 'parDistance', 100 ),
+                        ( 'parLifeDuration', 0.04 ),
+                        ( 'parOpacity', 1 ),
+                        ( 'parSize1', 500 ),
+                        ( 'parSize2', 1300 ),
+                        ( 'parStopSpawnerRatio', 0.4 ),
+                    ]
+                ),
+                TWaitInSec( Duration = 2),
+            ]
+        ),
+    ]
+)

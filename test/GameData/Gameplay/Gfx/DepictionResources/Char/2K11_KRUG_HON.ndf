@@ -1,0 +1,17 @@
+export ModelFile_2K11_KRUG_HON is 'GameData:/Assets/3D/Units/DDR/DCA/2K11_KRUG/2K11_KRUG.fbx'
+export Modele_2K11_KRUG_HON is TResourceMesh
+(
+    Mesh=ModelFile_2K11_KRUG_HON
+)
+
+export ModelFile_2K11_KRUG_HON_MID is 'GameData:/Assets/3D/Units/DDR/DCA/2K11_KRUG_MID/2K11_KRUG_MID.fbx'
+export Modele_2K11_KRUG_HON_MID is TResourceMesh
+(
+    Mesh=ModelFile_2K11_KRUG_HON_MID
+)
+
+export ModelFile_2K11_KRUG_HON_LOW is 'GameData:/Assets/3D/Units/DDR/DCA/2K11_KRUG_LOW/2K11_KRUG_LOW.fbx'
+export Modele_2K11_KRUG_HON_LOW is TResourceMesh
+(
+    Mesh=ModelFile_2K11_KRUG_HON_LOW
+)

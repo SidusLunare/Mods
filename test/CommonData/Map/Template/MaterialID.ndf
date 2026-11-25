@@ -1,0 +1,19 @@
+
+// doit matcher avec Engine\Data\Shader\Cg\Libs\GBuffer\MaterialID.cg :
+TerrainMaterialID is TBaseClass
+(
+    Invalid         is -1 // Utilisé comme valeur par défaut pour les materialID optionnels.
+
+    Default         is 0
+
+    Vegetation0     is 2
+    Vegetation1     is 3
+    Vegetation2     is 4
+    Vegetation3     is 5
+
+    Baking          is 6
+    NoPostProcess   is 8
+    Foliage         is 9
+    CDLod           is 10
+    StickerFX       is 12
+)

@@ -1,0 +1,19 @@
+export Modele_Panzer_55_SWI is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/NL/Char/Centurion_Mk5_2/Centurion_Mk5_2.fbx"
+)
+
+export Modele_Panzer_55_SWI_MID is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/NL/Char/Centurion_Mk5_2_MID/Centurion_Mk5_2_MID.fbx"
+)
+
+export Modele_Panzer_55_SWI_LOW is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/NL/Char/Centurion_Mk5_2_LOW/Centurion_Mk5_2_LOW.fbx"
+)
+
+export Modele_Panzer_55_SWI_Tourelle_02 is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/UK/Char/Chieftain_Mk11/L37_t2.fbx"
+)
